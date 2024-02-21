@@ -124,14 +124,29 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       style="pointer-events: none; position: absolute; top: 0; left: 0; width: 96vw; height: 96vh; max-width: 99vw; max-height: 99vh;"
       src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+"
     >
+{% if request.page_type != 'index' %}
 
+ <style>
+    @font-face {
+      font-family: Monarcha W01 Bold;
+      src: url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot");
+      src: url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot?#iefix")format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff2")format("woff2"),
+      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff")format("woff"),
+      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.ttf")format("truetype"),
+      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.svg#Monarcha W01 Bold")format("svg");
+      font-display:swap;
+    }
+    </style> 
+
+    {% endif %}
     <!-- Kwikpass added the core functions script - [Starts] -->
     <script src="https://pdp.gokwik.co/kwikpass/kwikpass-core-functions.js"></script>
     <!-- Kwikpass added the core functions script - [Ends] -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script>
+    <script async>
       let _0x5ffe5 = [
         '\x6E\x61\x76\x69\x67\x61\x74\x6F\x72',
         '\x75\x73\x65\x72\x41\x67\x65\x6E\x74',
@@ -333,10 +348,10 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
     {%- render 'head_assets', t_name: t_name, isRTL: isRTL -%}
 
-    <script
+    {% comment %} <script
       async
       src="https://api.engagebud.com/sdk/script/v1/main.min.js?shop=foxtale-consumer.myshopify.com"
-    ></script>
+    ></script> {% endcomment %}
 
     {% if request.page_type == 'index' %}
       <script type="application/ld+json">
