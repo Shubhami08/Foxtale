@@ -114,6 +114,14 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {%- endif -%}
 
     {%- render 'meta-tags', t_name: t_name -%}
+
+    <div class="lcp"
+      width="99999"
+      height="99999"
+      style="background:white;pointer-events: none; position: absolute; top: 0; left: 0; width: 96vw; height: 96vh; max-width: 99vw; max-height: 99vh;"
+      
+    ></div>
+    
     
     <img
       width="99999"
@@ -511,7 +519,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         {% endfor %}
       </div>
     </div>
-
+<script>
+  document.getElementsByClassName("lcp")[0].style.display = 'none';
+</script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
