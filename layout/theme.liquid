@@ -1794,47 +1794,62 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     </script>
     {% comment %} Kwikpass added the below file {% endcomment %}
     {% render 'kwikpass' %}
-    <script async>
-          var lazyaloadScripts = document.createElement('script');
-         lazyaloadScripts.src = '/cdn/shop/t/401/assets/global.min.js';
-         document.head.appendChild(lazyaloadScripts);
-        
-      setTimeout(function() {
-        document.getElementsByClassName("hide-com")[0].style.opacity = 1;
-      }, 2000);
+   <script>
+    function loadScript(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.onload = function() {
+            console.log('Script loaded successfully: ' + src);
+        };
+        script.onerror = function() {
+            console.error('Error loading script: ' + src);
+        };
+        document.head.appendChild(script);
+    }
 
-      function loadScripts() {
-          setTimeout(function() {
-           loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
-            loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-           
-            loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
-             loadStyle("/cdn/shop/t/401/assets/icon-social.css");
-            loadStyle('/cdn/shop/t/401/assets/theme.css')
-             loadStyle("/cdn/shop/t/401/assets/bt-ig.css");
-            loadStyle("/cdn/shop/t/406/assets/custom.css");
-            loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
-            loadStyle("/cdn/shop/t/401/assets/style.min.css");
-          }, 10);
-          document.removeEventListener('click', loadScripts);
-          document.removeEventListener('mouseover', loadScripts);
-          document.removeEventListener('scroll', loadScripts);
-      }
-          document.addEventListener('mouseover', loadScripts);
-      document.addEventListener('click', loadScripts);
-      document.addEventListener('scroll', loadScripts);
+    function loadStyle(src) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = src;
+        link.onload = function() {
+            console.log('Stylesheet loaded successfully: ' + src);
+        };
+        link.onerror = function() {
+            console.error('Error loading stylesheet: ' + src);
+        };
+        document.head.appendChild(link);
+    }
 
-      function loadScript(src) {
-          var script = document.createElement('script');
-          script.src = src;
-          document.head.appendChild(script);
-      }
-        function loadStyle(src) {
-          var link = document.createElement('link');
-          link.href = src;
-          document.head.appendChild(link);
-      }
-    </script>
-    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    function loadScripts() {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
+        loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+        loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
+        loadStyle("/cdn/shop/t/401/assets/icon-social.css");
+        loadStyle('/cdn/shop/t/401/assets/theme.css');
+        loadStyle("/cdn/shop/t/401/assets/bt-ig.css");
+        loadStyle("/cdn/shop/t/406/assets/custom.css");
+        loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
+        loadStyle("/cdn/shop/t/401/assets/style.min.css");
+
+        document.removeEventListener('click', loadScripts);
+        document.removeEventListener('mouseover', loadScripts);
+        document.removeEventListener('scroll', loadScripts);
+    }
+
+    document.addEventListener('mouseover', loadScripts);
+    document.addEventListener('click', loadScripts);
+    document.addEventListener('scroll', loadScripts);
+
+    // Ensure that DOM elements exist before accessing them
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var hideCom = document.getElementsByClassName("hide-com")[0];
+            if (hideCom) {
+                hideCom.style.opacity = 1;
+            }
+        }, 2000);
+    });
+</script>
+
   </body>
 </html>
