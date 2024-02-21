@@ -58,6 +58,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}">
     <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}">
+     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
 
       <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
     <!--      <link rel="stylesheet" href="{{ 'icon-social.css' | asset_url }}">
@@ -399,19 +400,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       </script>
     {% endif %}
     {% render 'gsf-conversion-pixels' %}
-    <style>
-      @font-face {
-        font-family: Monarcha W01 Bold;
-        src: url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot');
-        src: url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot?#iefix')
-            format('embedded-opentype'),
-          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff2') format('woff2'),
-          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff') format('woff'),
-          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.ttf') format('truetype'),
-          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.svg#Monarcha W01 Bold') format('svg');
-        font-display: swap;
-      }
-    </style>
+    
+    
   </head>
 
   {% assign free_gift_claim_list = settings.free_product_list %}
