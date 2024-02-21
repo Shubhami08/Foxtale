@@ -435,7 +435,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     free-gift-remove="{{ settings.variant_list_for_remove }}"
     free-gift-list="{%- for item in free_gift_claim_list -%}{% if gift_prod_1.id != item.id and gift_prod_2.id != item.id %}{{ item.selected_or_first_available_variant.id }}{% if forloop.last != true %},{% endif %}{% endif %}{% endfor %}"
   >
-    {% render 'banana-stand-footer' %}
     <div id="magic_link_wrap" style="display:none !important;">
       <div id="for_cart">
         {% for i in (1..10) %}
@@ -551,6 +550,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
 
+    {% render 'banana-stand-footer' %}
     {% render 'stamped-rewards-init' %}
 
     <!-- google dynamic remarketing tag for theme.liquid -->

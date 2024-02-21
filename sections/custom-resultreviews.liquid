@@ -1,537 +1,569 @@
-<script defer fetchpriority="low" aria-checkedsrc="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script
+  defer
+  fetchpriority="low"
+  aria-checkedsrc="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <style>
-/* Swiper Css */ 
-.custom-container {
-  height: 100%;
-  position: relative;
-  /* background-color: #E85A28; */
-  background-color: #dc693a;
-  padding: 0 25px;
-  margin: 65px 28px 32px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.swiper-container {
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;  
-/* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-  display: none;
-}
-span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
-  height: 8px;
-  width: 30px;
-  border-radius: 5px;
-  background-color: #222222;
-  transform: scale(1);
-  margin: 0 5px;
-}
-span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev {
-  background-color: #222222;
-  opacity: .5;
-  width: 8px;
-  height: 8px;
-  transform: scale(1);
-}
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transform: scale(0);
-}
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
-  width: 100% !important;
-}
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-  display: none;
-}
-/* Swiper Css End */ 
-  
-.testimonials-wrapper {
-}
-.testimonials-heading {
-  padding: 18px 0 10px 0;
-}
-.testimonials-heading h3 {
-  color: #ffffff;
-  padding: 0;
-  font-size: 35px;
-  font-weight: 500;
-}
-.testimonials-content {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  grid-gap: 8rem;
-  /* background-color: #E85A28; */
-  background-color: #dc693a;
-  padding-bottom: 3rem;
-}
-.testimonials-beforeafter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 25px;
-}
-.testimonials-beforeafter a img {
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-}
-.round-productimg {
-  display: flex;
-  flex-direction: column;
-}
-.round-productimg a img {
-  margin: 0 auto 8px;
-  width: 190px;
-  height: 190px;
-  object-fit: contain;
-  border-radius: 50%;
-}
-.testimonials-two {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-column-gap: 7.5rem;
-  margin-bottom: 5rem;
-  position: relative;
-  top: -25px;
-}
-.testreview {
-  position: relative;
-  max-width: 300px;
-}
-.cstmhtm {
-  position: relative;
-  top: 12px;
-  text-align: left;
-}
-.revw {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.quoter {
-  position: absolute;
-  top: 0;
-  left: -70px;
-}
-.quoter svg {
-  width: 40px;
-  height: 40px;
-}
-.prod-name {
-  font-size: 18px;
-  padding-top: 10px;
-  color: #ffffff;
-  height: 30px;
-  display: block;
-} 
-.cstmhtm {
-  position: relative;
-  top: 12px;
-}
-.nam-st {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 17px;
-  margin-bottom: 0;
-}
-.revw {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 17px;
-  margin-bottom: 30px;
-}
-.cus-btnz {
-  cursor: pointer !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
-  line-height: 30px !important;
-  padding: 7px 40px !important;
-  letter-spacing: 2px;
-  border-radius: 4px !important;
-  text-transform: uppercase;
-}
-.cus-btnz:hover {
-  color: #5353b9 !important;
-  background-color: #000000 !important;
-}
-
-@media (max-width: 475px) {
-  .nam-st {
-    font-size: 11px;
-    font-weight: 500;
+  .flickity-prev-next-button.previous,
+  .flickity-prev-next-button.next {
+    background: black;
   }
-  .revw {
-    font-size: 12px;
-    font-weight: 300;
-    margin-bottom: 15px;
-  }
-  .testimonials-rev {
-    margin-bottom: 1.8rem;
-  }
-  .testimonials-two {
-    align-items: flex-start !important;
-    grid-template-columns: 1fr 1.2fr !important;
-    grid-column-gap: 1.5rem !important;
-  }
-  .testimonials-content {
-    padding-bottom: 1rem !important;
-  }
-  .testimonials-beforeafter {
-    grid-column-gap: 15px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .testimonials-content {
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-    padding-bottom: 3rem;
-  }
+  /* Swiper Css */
   .custom-container {
-    padding: 0 20px;
+    height: 100%;
+    position: relative;
+    /* background-color: #E85A28; */
+    background-color: #dc693a;
+    padding: 0 25px;
+    margin: 65px 28px 32px;
     border-radius: 8px;
-    margin: 24px 6px 18px;
+    overflow: hidden;
   }
-  .testimonials-heading h3 {
-    font-size: 20px;
+  .swiper-container {
   }
-  .testimonials-two {
-    grid-template-columns: 0.8fr 1.2fr;
-    grid-column-gap: 1rem;
-    margin-bottom: 3rem;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
-    top: 0px;
   }
-  .quoter svg {
-    width: 24px;
-    height: 24px;
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    display: none;
   }
-  .quoter {
-    left: -33px;
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+    height: 8px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #222222;
+    transform: scale(1);
+    margin: 0 5px;
   }
-  .round-productimg a img {
-    width: 100px;
-    height: 100px;
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active-next,
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev {
+    background-color: #222222;
+    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    transform: scale(1);
   }
-  .prod-name {
-    font-size: 12px;
-    font-weight: 300;
-    height: 18px;
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transform: scale(0);
+  }
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+    width: 100% !important;
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    display: none;
+  }
+  /* Swiper Css End */
+
+  .testimonials-wrapper {
   }
   .testimonials-heading {
-    padding: 10px 0 10px 0;
-  }
-  .cus-btnz {
-    font-weight: 600 !important;
-    font-size: 12px !important;
-    line-height: 36px !important;
-    padding: 5px 30px !important;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 768px) and (min-width: 475px) {
-  .custom-container {
-    padding: 0 10px;
-  }
-  .revw {
-    font-size: 18px !important;
-  }
-  .nam-st {
-    font-size: 18px !important;
-    font-weight: 500 !important;
-  }
-  .round-productimg a img {
-    width: 150px;
-    height: 150px;
-  }
-  .quoter {
-    left: -45px;
-  }
-  .quoter svg {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (max-width: 1000px) and (min-width: 768px) {
-  .custom-container {
-    padding: 0 10px;
+    padding: 18px 0 10px 0;
   }
   .testimonials-heading h3 {
+    color: #ffffff;
+    padding: 0;
     font-size: 35px;
-  }
-  .revw {
-    font-size: 18px !important;
-  }
-  .nam-st {
-    font-size: 14px;
     font-weight: 500;
   }
-  .cus-btnz {
-    font-size: 15px !important;
-    line-height: 36px !important;
-    padding: 7px 70px !important;
-    letter-spacing: 1px;
-  }
-  .round-productimg a img {
-    width: 150px !important;
-    height: 150px !important;
-  }
-  .prod-name {
-    font-size: 16px;
-  }
-  .testimonials-two {
-    grid-template-columns: 1fr 1fr !important;
-    grid-column-gap: 0rem !important;
-  }
-  .quoter {
-    left: -68px;
-  }
-  .quoter svg {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1000px) {
-  .round-productimg a img {
-    width: 150px;
-    height: 150px;
-  }
   .testimonials-content {
-    grid-gap: 3rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-gap: 8rem;
+    /* background-color: #E85A28; */
+    background-color: #dc693a;
+    padding-bottom: 3rem;
   }
-  .custom-container {
-    padding: 0 10px;
+  .testimonials-beforeafter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  .testimonials-beforeafter a img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .round-productimg {
+    display: flex;
+    flex-direction: column;
+  }
+  .round-productimg a img {
+    margin: 0 auto 8px;
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 50%;
   }
   .testimonials-two {
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    grid-column-gap: 2.5rem;
+    grid-template-columns: 0.5fr 1fr;
+    grid-column-gap: 7.5rem;
     margin-bottom: 5rem;
+    position: relative;
+    top: -25px;
+  }
+  .testreview {
+    position: relative;
+    max-width: 300px;
+  }
+  .cstmhtm {
+    position: relative;
+    top: 12px;
+    text-align: left;
+  }
+  .revw {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 30px;
   }
   .quoter {
-    left: -58px;
+    position: absolute;
+    top: 0;
+    left: -70px;
+  }
+  .quoter svg {
+    width: 40px;
+    height: 40px;
+  }
+  .prod-name {
+    font-size: 18px;
+    padding-top: 10px;
+    color: #ffffff;
+    height: 30px;
+    display: block;
+  }
+  .cstmhtm {
+    position: relative;
+    top: 12px;
+  }
+  .nam-st {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+  .revw {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 30px;
   }
   .cus-btnz {
-    font-size: 15px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
     line-height: 30px !important;
-    padding: 7px 30px !important;
-    letter-spacing: 1px;
+    padding: 7px 40px !important;
+    letter-spacing: 2px;
+    border-radius: 4px !important;
+    text-transform: uppercase;
   }
-}
-</style>
- 
-<div class="custom-container">  
+  .cus-btnz:hover {
+    color: #5353b9 !important;
+    background-color: #000000 !important;
+  }
 
+  @media (max-width: 475px) {
+    .nam-st {
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .revw {
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+    .testimonials-rev {
+      margin-bottom: 1.8rem;
+    }
+    .testimonials-two {
+      align-items: flex-start !important;
+      grid-template-columns: 1fr 1.2fr !important;
+      grid-column-gap: 1.5rem !important;
+    }
+    .testimonials-content {
+      padding-bottom: 1rem !important;
+    }
+    .testimonials-beforeafter {
+      grid-column-gap: 15px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .testimonials-content {
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+      padding-bottom: 3rem;
+    }
+    .custom-container {
+      padding: 0 20px;
+      border-radius: 8px;
+      margin: 24px 6px 18px;
+    }
+    .testimonials-heading h3 {
+      font-size: 20px;
+    }
+    .testimonials-two {
+      grid-template-columns: 0.8fr 1.2fr;
+      grid-column-gap: 1rem;
+      margin-bottom: 3rem;
+      align-items: center;
+      top: 0px;
+    }
+    .quoter svg {
+      width: 24px;
+      height: 24px;
+    }
+    .quoter {
+      left: -33px;
+    }
+    .round-productimg a img {
+      width: 100px;
+      height: 100px;
+    }
+    .prod-name {
+      font-size: 12px;
+      font-weight: 300;
+      height: 18px;
+    }
+    .testimonials-heading {
+      padding: 10px 0 10px 0;
+    }
+    .cus-btnz {
+      font-weight: 600 !important;
+      font-size: 12px !important;
+      line-height: 36px !important;
+      padding: 5px 30px !important;
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 475px) {
+    .custom-container {
+      padding: 0 10px;
+    }
+    .revw {
+      font-size: 18px !important;
+    }
+    .nam-st {
+      font-size: 18px !important;
+      font-weight: 500 !important;
+    }
+    .round-productimg a img {
+      width: 150px;
+      height: 150px;
+    }
+    .quoter {
+      left: -45px;
+    }
+    .quoter svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (max-width: 1000px) and (min-width: 768px) {
+    .custom-container {
+      padding: 0 10px;
+    }
+    .testimonials-heading h3 {
+      font-size: 35px;
+    }
+    .revw {
+      font-size: 18px !important;
+    }
+    .nam-st {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .cus-btnz {
+      font-size: 15px !important;
+      line-height: 36px !important;
+      padding: 7px 70px !important;
+      letter-spacing: 1px;
+    }
+    .round-productimg a img {
+      width: 150px !important;
+      height: 150px !important;
+    }
+    .prod-name {
+      font-size: 16px;
+    }
+    .testimonials-two {
+      grid-template-columns: 1fr 1fr !important;
+      grid-column-gap: 0rem !important;
+    }
+    .quoter {
+      left: -68px;
+    }
+    .quoter svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    .round-productimg a img {
+      width: 150px;
+      height: 150px;
+    }
+    .testimonials-content {
+      grid-gap: 3rem;
+    }
+    .custom-container {
+      padding: 0 10px;
+    }
+    .testimonials-two {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      grid-column-gap: 2.5rem;
+      margin-bottom: 5rem;
+    }
+    .quoter {
+      left: -58px;
+    }
+    .cus-btnz {
+      font-size: 15px !important;
+      line-height: 30px !important;
+      padding: 7px 30px !important;
+      letter-spacing: 1px;
+    }
+  }
+</style>
+
+<div class="custom-container">
   <div class="testimonials-heading">
     <h3>{{ section.settings.heading }}</h3>
   </div>
-   
-    <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-           {% assign product = block.settings.produkt %}
-            <div class="swiper-slide">
 
-              <div class="testimonials-content">
-                <div class="testimonials-beforeafter">
-                  <a href="{{ block.settings.bfrlnk }}">
-                    {%- if block.settings.bfr != blank -%}
-                      <img data-src="{{ block.settings.bfr | img_url: '330x' }}" class="lazyload" loading="lazy"
-                               alt="product-img" height="100%" width="100%"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
-               >
-                    {%- endif -%}
-                  </a>
-                  <a href="{{ block.settings.aftrlnk }}">
-                    {%- if block.settings.aftr != blank -%}
-                      <img data-src="{{ block.settings.aftr | img_url: '330x' }}" class="lazyload" loading="lazy"
-                               alt="product-img" height="100%" width="100%"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
-               >
-                    {%- endif -%}
-                  </a>
-                </div>        
-                <div class="testimonials-rev">
-                    <div class="testimonials-two">
-                      <div class="round-productimg">
-                        <a href="{{ product.url }}">
-                          {%- if block.settings.aftr != blank -%}
-                            <img  class="lazyload" loading="lazy"
-                               alt="product-img" height="100%" width="100%"
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% assign product = block.settings.produkt %}
+        <div class="swiper-slide">
+          <div class="testimonials-content">
+            <div class="testimonials-beforeafter">
+              <a href="{{ block.settings.bfrlnk }}">
+                {%- if block.settings.bfr != blank -%}
+                  <img
+                    data-src="{{ block.settings.bfr | img_url: '330x' }}"
+                    class="lazyload"
+                    loading="lazy"
+                    alt="product-img"
+                    height="100%"
+                    width="100%"
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
-             data-src="{{ block.settings.mdlpik | img_url: '550x550' }}"
-                              >
-                          {%- endif -%}
-                        </a>
-                        <a href="{{ product.url }}" class="prod-name">{{ product.title }}</a>
-                      </div>
-                      <div class="testreview">
-                        <div class="cstmhtm">{{ block.settings.quote }}</div>
-                        <span class="quoter">{% render 'andiquote' %}</span>
-                      </div>
-                    </div>
-                    <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn" data-handle="{{ product.handle }}">
-                      <a
-                        href="javascript:void(0)"
-                        class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart cus-btnz"
-                        data-variant-id="{{product.first_available_variant.id}}"
-                        data-action-atc
-                        rel="nofollow">
-                        <span class="t4s-svg-pr-icon"></span>
-                        <span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span>
-                      </a>
-                    </div>    
+                  >
+                {%- endif -%}
+              </a>
+              <a href="{{ block.settings.aftrlnk }}">
+                {%- if block.settings.aftr != blank -%}
+                  <img
+                    data-src="{{ block.settings.aftr | img_url: '330x' }}"
+                    class="lazyload"
+                    loading="lazy"
+                    alt="product-img"
+                    height="100%"
+                    width="100%"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+                  >
+                {%- endif -%}
+              </a>
+            </div>
+            <div class="testimonials-rev">
+              <div class="testimonials-two">
+                <div class="round-productimg">
+                  <a href="{{ product.url }}">
+                    {%- if block.settings.aftr != blank -%}
+                      <img
+                        class="lazyload"
+                        loading="lazy"
+                        alt="product-img"
+                        height="100%"
+                        width="100%"
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+                        data-src="{{ block.settings.mdlpik | img_url: '550x550' }}"
+                      >
+                    {%- endif -%}
+                  </a>
+                  <a href="{{ product.url }}" class="prod-name">{{ product.title }}</a>
+                </div>
+                <div class="testreview">
+                  <div class="cstmhtm">{{ block.settings.quote }}</div>
+                  <span class="quoter">{% render 'andiquote' %}</span>
                 </div>
               </div>
-              
+              <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn" data-handle="{{ product.handle }}">
+                <a
+                  href="javascript:void(0)"
+                  class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart cus-btnz"
+                  data-variant-id="{{product.first_available_variant.id}}"
+                  data-action-atc
+                  rel="nofollow"
+                >
+                  <span class="t4s-svg-pr-icon"></span>
+                  <span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span>
+                </a>
+              </div>
             </div>
-          {% endfor %}
+          </div>
         </div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-next"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385"></div>
-        <div class="swiper-button-prev"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385"></div>
-        <div class="swiper-pagination"></div>
+      {% endfor %}
     </div>
-</div>   
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-next">
+      <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385">
+    </div>
+    <div class="swiper-button-prev">
+      <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385">
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
 
 <script async>
-  $(document).ready(function() {
-      new Swiper('.swiper-container', {
-          loop: false,
+  $(document).ready(function () {
+    new Swiper('.swiper-container', {
+      loop: false,
+      slidesPerView: 1,
+      clickable: true,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
+      },
+      breakpoints: {
+        1920: {
           slidesPerView: 1,
-          clickable: true,
-          spaceBetween: 20,
-          pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            clickable: true,
-          },
-          breakpoints: {
-              1920: {
-                  slidesPerView: 1,
-                  spaceBetween: 30
-              },
-              1028: {
-                  slidesPerView: 1,
-                  spaceBetween: 30
-              },
-              480: {
-                  slidesPerView: 1,
-                  spaceBetween: 10
-              }
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-      });
+          spaceBetween: 30,
+        },
+        1028: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   });
 </script>
 
 <!-- Growlytics -->
 <script>
-$(document).ready(function () {
-    $( '.shop-all-qty-cart-btn').on("click", function(){
-     var prodName = $(this).data("title");
-     Growlytics.events.track("Befor After ATC N",{
-          'clicks': "Clicks",                    
-          'Product Name': prodName
-     });
+  $(document).ready(function () {
+    $('.shop-all-qty-cart-btn').on('click', function () {
+      var prodName = $(this).data('title');
+      Growlytics.events.track('Befor After ATC N', {
+        clicks: 'Clicks',
+        'Product Name': prodName,
+      });
     });
-     });
+  });
 </script>
 
 <script>
-$(document).ready(function () {
-    $( '.round-productimg').on("click", function(){
-     var prodName = $(this).data("data-handle");
-     Growlytics.events.track("Befor After Image Clicks N",{
-        'clicks': "Clicks",
-      'Product Name': prodName
-     });
+  $(document).ready(function () {
+    $('.round-productimg').on('click', function () {
+      var prodName = $(this).data('data-handle');
+      Growlytics.events.track('Befor After Image Clicks N', {
+        clicks: 'Clicks',
+        'Product Name': prodName,
+      });
     });
-     });
+  });
 </script>
 <!-- end -->
 
 {% schema %}
-  {
-    "name": "Custom Works Wonders",
-    "settings": [
-      {
-        "id": "heading",
-        "type": "text",
-        "label": "Section Heading"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Content",
-        "type": "text",
-        "settings": [
-          {
-            "id": "produkt",
-            "type": "product",
-            "label": "Add Product"
-          },
-          {
-            "id": "bfr",
-            "type": "image_picker",
-            "label": "Before Image"
-          },
-          {
-            "id": "bfrlnk",
-            "type": "url",
-            "label": "Add Before Image Link"
-          },
-          {
-            "id": "aftr",
-            "type": "image_picker",
-            "label": "After Image"
-          }, {
-            "id": "aftrlnk",
-            "type": "url",
-            "label": "Add After Image Link"
-          }, {
-            "id": "mdlpik",
-            "type": "image_picker",
-            "label": "Round Image"
-          }, {
-            "id": "quote",
-            "type": "html",
-            "label": "Write Quote"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Custom Works Wonders",
-        "category": "Any"
-      }
-    ]
-  }
+{
+  "name": "Custom Works Wonders",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Section Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Content",
+      "type": "text",
+      "settings": [
+        {
+          "id": "produkt",
+          "type": "product",
+          "label": "Add Product"
+        },
+        {
+          "id": "bfr",
+          "type": "image_picker",
+          "label": "Before Image"
+        },
+        {
+          "id": "bfrlnk",
+          "type": "url",
+          "label": "Add Before Image Link"
+        },
+        {
+          "id": "aftr",
+          "type": "image_picker",
+          "label": "After Image"
+        },
+        {
+          "id": "aftrlnk",
+          "type": "url",
+          "label": "Add After Image Link"
+        },
+        {
+          "id": "mdlpik",
+          "type": "image_picker",
+          "label": "Round Image"
+        },
+        {
+          "id": "quote",
+          "type": "html",
+          "label": "Write Quote"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Works Wonders",
+      "category": "Any"
+    }
+  ]
+}
 {% endschema %}
