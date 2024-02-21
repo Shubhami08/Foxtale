@@ -1,18 +1,12 @@
-<script
+ <script defer
   src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
 ></script>
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-  integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
->
+> 
 {% assign inc_pr = section.settings.pr_des %}
-<div id="custom_routine_slider_main" class="routine_slider_main">
+<div id="custom_routine_slider_main" class="routine_slider_main kk">
   <section>
     <div class="container custom_design_{{inc_pr}} foxtale_scroll">
       {% if section.settings['slider-title'] != blank %}
@@ -49,12 +43,7 @@
                   {% if collection != blank %}
                     <div class="products-grid-item-main pdp-custom-collection-{{inc_pr}}" data-id : {{ product.id }}>
                       {%- for product in collection.products limit: 10 -%}
-                        <script
-                          src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-                          integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-                          crossorigin="anonymous"
-                          referrerpolicy="no-referrer"
-                        ></script>
+                        
                         <div class="products-grid-item">
                           <div class="product-innr">
                             {% if product.metafields.custom.pr_excerpt != blank %}
@@ -67,13 +56,17 @@
                                 {%- render 'product_labels', on: 'singe', product: product -%}
                                 <img
                                   class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
-                                  src="{{ product.images[0] | product_img_url: "1000x1000" }}"
-                                  alt=""
+                                  data-src="{{ product.images[0] | product_img_url: "1000x1000" }}"
+                                   loading="lazy"
+                                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                                  alt="product-image"
                                 >
                                 <img
                                   class="pr-img-second lazyload" loading="lazy" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
-                                  src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
-                                  alt=""
+                                   data-src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
+                                          src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                                loading="lazy"
+                                  alt="product-image"
                                 >
                               </a>
                               <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
@@ -177,13 +170,15 @@
                                 {%- render 'product_labels', on: 'singe', product: product -%}
                                 <img
                                   class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
-                                  src="{{ product.images[0] | product_img_url: "1000x1000" }}"
-                                  alt=""
+                                  data-src="{{ product.images[0] | product_img_url: "1000x1000" }}"
+                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                                  alt="img"
                                 >
                                 <img
+                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
                                   class="pr-img-second lazyload" loading="lazy" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
-                                  src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
-                                  alt=""
+                                  data-src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
+                                  alt="img"
                                 >
                               </a>
                               <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
@@ -590,7 +585,8 @@
   // });
 </script>
 
-<script>
+<script async>
+   $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -619,6 +615,7 @@
     $(".owl-prev").addClass('slick-arrow');
     $(".owl-next").addClass('slick-arrow');
     $('.owl-next').addClass('slick-next');
+   });
   //   $('.pdp-custom-collection').slick({
   //   dots: false,
   //   infinite: true,

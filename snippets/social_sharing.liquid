@@ -31,14 +31,14 @@
   {%- unless follow_social -%}  
     {%- if settings.share_facebook -%}
     <div class="t4s-col-item t4s-col-auto">
-     <a title='{{ 'socials.share_fb' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="https://www.facebook.com/sharer/sharer.php?u={{ permalinkURL }}" target="{{target}}" class="facebook" data-tooltip="{{class_tooltip}}">
+     <a rel="dofollow" title='{{ 'socials.share_fb' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="https://www.facebook.com/sharer/sharer.php?u={{ permalinkURL }}" target="{{target}}" class="facebook" data-tooltip="{{class_tooltip}}">
         {%- render 'icon_socials',icon_name:'facebook' -%} 
      </a>
     </div>
     {%- endif -%}
     {%- if settings.share_twitter -%}
       <div class="t4s-col-item t4s-col-auto">
-        <a title='{{ 'socials.share_tw' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://twitter.com/share?text={{ permaTitle }}&amp;url={{ permalinkURL }}" target="{{target}}" class="twitter" data-tooltip="{{class_tooltip}}">
+        <a rel="dofollow" title='{{ 'socials.share_tw' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://twitter.com/share?text={{ permaTitle }}&amp;url={{ permalinkURL }}" target="{{target}}" class="twitter" data-tooltip="{{class_tooltip}}">
             {%- render 'icon_socials',icon_name:'twitter' -%} 
         </a>
       </div>
@@ -46,14 +46,14 @@
     {%- if permaImage != blank -%}
       {%- if settings.share_pinterest -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{ 'socials.share_pr' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{{permaImage}}&amp;description={{ permaTitle }}" target="{{target}}" class="pinterest" data-tooltip="{{class_tooltip}}">
+          <a rel="dofollow" title='{{ 'socials.share_pr' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="http://pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{{permaImage}}&amp;description={{ permaTitle }}" target="{{target}}" class="pinterest" data-tooltip="{{class_tooltip}}">
             {%- render 'icon_socials',icon_name:'pinterest' -%} 
           </a>
         </div>
       {%- endif -%}        
       {%- if settings.share_tumblr -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{ 'socials.share_tu' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" data-content="http:{{permaImage}}" href="//tumblr.com/widgets/share/tool?canonicalUrl={{ permalinkURL }}" target="{{target}}" class="tumblr" data-tooltip="{{class_tooltip}}">
+          <a rel="dofollow" title='{{ 'socials.share_tu' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" data-content="http:{{permaImage}}" href="//tumblr.com/widgets/share/tool?canonicalUrl={{ permalinkURL }}" target="{{target}}" class="tumblr" data-tooltip="{{class_tooltip}}">
             {%- render 'icon_socials',icon_name:'tumblr' -%} 
           </a>
         </div>
@@ -61,21 +61,21 @@
     {%- endif -%}
       {%- if settings.share_telegram -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{ 'socials.share_tl' | t | escape }}' data-no-instant rel="nofollow" target="{{target}}" class="telegram" href="https://telegram.me/share/url?url={{ permalinkURL }}" data-tooltip="{{class_tooltip}}"> 
+          <a rel="dofollow" title='{{ 'socials.share_tl' | t | escape }}' data-no-instant rel="nofollow" target="{{target}}" class="telegram" href="https://telegram.me/share/url?url={{ permalinkURL }}" data-tooltip="{{class_tooltip}}"> 
              {%- render 'icon_socials',icon_name:'telegram' -%} 
           </a>
         </div>
       {%- endif -%}
       {%- if settings.share_email -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{ 'socials.share_em' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="mailto:?subject={{ permaTitle }}&amp;body={{ permalinkURL }}" target="{{target}}" class="email" data-tooltip="{{class_tooltip}}">
+          <a rel="dofollow" title='{{ 'socials.share_em' | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="mailto:?subject={{ permaTitle }}&amp;body={{ permalinkURL }}" target="{{target}}" class="email" data-tooltip="{{class_tooltip}}">
             {%- render 'icon_socials',icon_name:'mail' -%} 
           </a>
         </div>
       {%- endif -%}
       {%- if settings.share_whatsapp -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{ 'socials.share_wa' | t | escape }}' data-no-instant rel="nofollow" target="{{target}}" class="whatsapp" href="https://wa.me/?text={{ permaTitle }}&#x20;{{ permalinkURL }}" data-tooltip="{{class_tooltip}}"> 
+          <a rel="dofollow" title='{{ 'socials.share_wa' | t | escape }}' data-no-instant rel="nofollow" target="{{target}}" class="whatsapp" href="https://wa.me/?text={{ permaTitle }}&#x20;{{ permalinkURL }}" data-tooltip="{{class_tooltip}}"> 
              {%- render 'icon_socials',icon_name:'whatsapp' -%} 
           </a>
         </div>
@@ -84,7 +84,7 @@
     {%- if social_icons -%}
       {%- for social_link in socials -%} {% if settings[social_link] != blank -%}
         <div class="t4s-col-item t4s-col-auto">
-          <a title='{{socials_txt[forloop.index0] | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="{{ settings[social_link] | escape }}" target="{{target}}" class="{{socials_icon[forloop.index0] }}" data-tooltip="{{class_tooltip}}">{%- render 'icon_socials',icon_name:socials_icon[forloop.index0] -%} </a>
+          <a rel="dofollow" title='{{socials_txt[forloop.index0] | t | escape }}' data-no-instant rel="noopener noreferrer nofollow" href="{{ settings[social_link] | escape }}" target="{{target}}" class="{{socials_icon[forloop.index0] }}" data-tooltip="{{class_tooltip}}">{%- render 'icon_socials',icon_name:socials_icon[forloop.index0] -%} </a>
         </div>
       {%- endif -%} {% endfor -%}
     {%- endif -%}

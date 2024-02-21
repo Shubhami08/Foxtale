@@ -1,409 +1,525 @@
+{% capture pDescription %}
 {% assign inc_pr = section.settings.pr_des %}
 <section>
   <div class="container tab-slider-hp">
-    {% if section.settings.slider-title != blank %}<div class="best-title"><h3>{{ section.settings.slider-title }}</h3></div>{% endif %}
+    {% if section.settings['slider-title'] != blank %}
+      <div class="best-title">
+        <h3>{{ section.settings['slider-title'] }}</h3>
+      </div>
+    {% endif %}
     <div class="tab-slider-main">
       <div class="tab-list-title">
         <div class="tab-content">
-        {% for block in section.blocks %}
-          {% if block.type == 'tabs' %}
-              <button onclick="tabCustom(event,'tab-{{ forloop.index }}')" class="tablinks {% if forloop.first %}active{% endif %}" data-tab="tab-{{ forloop.index }}">{{ block.settings.tab-title }}</button>
-          {% endif %}
-        {% endfor %}
+          {% for block in section.blocks %}
+            {% if block.type == 'tabs' %}
+              <button
+                onclick="tabCustom(event,'tab-{{ forloop.index }}')"
+                class="tablinks {% if forloop.first %}active{% endif %}"
+                data-tab="tab-{{ forloop.index }}"
+              >
+                {{ block.settings['tab-title'] }}
+              </button>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
       <div class="product-tabs-content design_{{inc_pr}}">
         {% if inc_pr == '2' %}
-            {% for block in section.blocks %}
-            {% assign dataTab = block.settings.tab-title %}
+          {% for block in section.blocks %}
+            {% assign dataTab = block.settings['tab-title'] %}
             {% if block.type == 'content' %}
               {% assign len = forloop.length | divided_by: 2 %}
-            <div class="tabcontent" id="tab-{{ forloop.index | minus: len }}">
-              {% assign collection = collections[block.settings.collection] %}
-              {% if collection != blank %}              
-                <div class="products-grid-item-main">
-                {%- for product in collection.products limit:12 -%}                                  
+              <div class="tabcontent" id="tab-{{ forloop.index | minus: len }}">
+                {% assign collection = collections[block.settings.collection] %}
+                {% if collection != blank %}
+                  <div class="products-grid-item-main">
+                    {%- for product in collection.products limit: 12 -%}
                       <div class="products-grid-item">
                         <div class="product-innr">
                           <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                            <a href="{{product.url}}">
-                             {%- render 'product_labels',on:'singe',product:product -%}
-                            <a class="cd chp" href="{{product.url}}"><img class="pr-img-first" src="{{ product.images[0] | product_img_url: "master" }}" alt="" />
-                            <img class="pr-img-second" src="{{ product.images[0] | product_img_url: "master" }}" alt="" /></a>
+                            <a rel="dofollow" href="{{product.url}}">
+                              {%- render 'product_labels', on: 'singe', product: product -%}
+                              <a rel="dofollow" class="cd chp" href="{{product.url}}"
+                                ><img
+                                  class="pr-img-first lazyload"
+                                  loading="lazy"
+                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                               data-src="{{ product.images[0] | product_img_url: "500x" }}"
+                                  alt="Product Image">
+                                <img
+                                  class="pr-img-second lazyload"
+                                  loading="lazy"
+                                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                                  data-src="{{ product.images[0] | product_img_url: "500x" }}"
+                                  alt="Product Image"
+                              ></a>
                             </a>
-                            <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
+                            <div
+                              data-fera-container="457325"
+                              data-product_id="{{ product.id }}"
+                              class="reviewContainerDiv on-productpic"
+                              style='height:24px;width:50px;background:white'
+                            ></div>
                           </div>
                           <div class="product-info mt__15 mb__10 product-innr-bottom" data-pr-id="{{ product.handle }}">
-                            <div class="pr-det"> 
-                              <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{product.url}}">{{product.title}}</a></h3>
+                            <div class="pr-det">
+                              <h3 class="product-title pr fs__14 mg__0 fwm">
+                                <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                              </h3>
                               {% if product.metafields.my_fields.hp_excerpt != blank %}
-                                  <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
+                                <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                  {{ product.metafields.my_fields.hp_excerpt }}
+                                </p>
                               {% endif %}
                             </div>
-                            
+
                             {% comment %} For single pack of 2 Tabbing {% endcomment %}
                             {% if product.metafields.custom.check_variant %}
-                            <div class="pr-variant main-variant">
-                              <div class="t4s-product-form__variants">
-                              <div class="t4s-swatch__list">
-                              {%- for variant in product.variants -%}
-                                 {% if forloop.index <= 3 %}
-                                {% assign option = variant.option2 | downcase | replace: '"', '' %}
-                                {% assign data-value = variant.option2 | escape %}
-                                {% assign option = option | replace: ' ', '-' %}
-                                {% assign option = option | replace: '[', '' %}
-                                {% assign option = option | replace: ']', '' %}
-                               {% comment %}   {% if data-value != blank %}
-                                <div data-swatch-item class="t4s-swatch__item{% if selected_value == variant.option2 %} is--selected{% endif %}  {% if variant.option2 == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}{% if forloop.first %} active{% endif %}" data-comp = "{{ variant.option2 | downcase | replace: ' ', '-' }}" data-var = "{{ variant.option2 | downcase | replace: ' ', '' }}" data-value = "{{ variant.option2 | escape }}" data-id= "{{ variant.id }}"><div>{{ variant.option2 }}</div>{% if variant.compare_at_price > 0 %}<div class="pr-price"><del>{{ variant.compare_at_price | money }}</del><ins>{{ variant.price | money }}</ins></div>{% else %}<div class="pr-price">{{ variant.price | money }}</div>{% endif %}{% if variant.title == 'Pack of 2' %}<span class="pr-best-seller">{{ 'Bestseller' }}</span>{% endif %}</div>
-                                   {% endif %} {% endcomment %}
-                                     {% endif %}
-                              {%- endfor -%}
+                              <div class="pr-variant main-variant">
+                                <div class="t4s-product-form__variants">
+                                  <div class="t4s-swatch__list">
+                                    {%- for variant in product.variants -%}
+                                      {% if forloop.index <= 3 %}
+                                        {% assign option = variant.option2 | downcase | replace: '"', '' %}
+                                        {% assign data-value = variant.option2 | escape %}
+                                        {% assign option = option | replace: ' ', '-' %}
+                                        {% assign option = option | replace: '[', '' %}
+                                        {% assign option = option | replace: ']', '' %}
+                                        {% comment %}
+                                          {% if data-value != blank %}
+                                          <div data-swatch-item class="t4s-swatch__item{% if selected_value == variant.option2 %} is--selected{% endif %}  {% if variant.option2 == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}{% if forloop.first %} active{% endif %}" data-comp = "{{ variant.option2 | downcase | replace: ' ', '-' }}" data-var = "{{ variant.option2 | downcase | replace: ' ', '' }}" data-value = "{{ variant.option2 | escape }}" data-id= "{{ variant.id }}"><div>{{ variant.option2 }}</div>{% if variant.compare_at_price > 0 %}<div class="pr-price"><del>{{ variant.compare_at_price | money }}</del><ins>{{ variant.price | money }}</ins></div>{% else %}<div class="pr-price">{{ variant.price | money }}</div>{% endif %}{% if variant.title == 'Pack of 2' %}<span class="pr-best-seller">{{ 'Bestseller' }}</span>{% endif %}</div>
+                                             {% endif %}
+                                        {% endcomment %}
+                                      {% endif %}
+                                    {%- endfor -%}
+                                  </div>
+                                </div>
                               </div>
-                              </div>
-                            </div>
-                           {% else %}
+                            {% else %}
                               <div class="pr-variant">
-                              <div class="t4s-product-form__variants">
-                              <div class="t4s-swatch__list">
-                              {%- for variant in product.variants -%} 
-                                 {% if forloop.index <= 3 %}
-                                {% assign option = variant.options | downcase | replace: '"', '' %}
-                                {% assign option = option | replace: ' ', '-' %}
-                                {% assign option = option | replace: '[', '' %}
-                                {% assign option = option | replace: ']', '' %}
-                                <div data-swatch-item class="t4s-swatch__item{% if selected_value == variant.options %} is--selected{% endif %}  {% if variant.title == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}{% if forloop.first %} active{% endif %}" data-comp="{{ option }}" data-value="{{ variant.options | escape }}" data-var = "{{ variant.option2 | downcase | replace: ' ', '' }}" data-id="{{ variant.id }}"><div>{{ variant.options }}</div>{% if variant.compare_at_price > 0 %}<div class="pr-price"><del>{{ variant.compare_at_price | money }}</del><ins>{{ variant.price | money }}</ins></div>{% else %}<div class="pr-price">{{ variant.price | money }}</div>{% endif %}{% if variant.title == 'Pack of 2' %}<span class="pr-best-seller">{{ 'Bestseller' }}</span>{% endif %}</div>
-                                 {% endif %}
-                              {%- endfor -%}
+                                <div class="t4s-product-form__variants">
+                                  <div class="t4s-swatch__list">
+                                    {%- for variant in product.variants -%}
+                                      {% if forloop.index <= 3 %}
+                                        {% assign option = variant.options | downcase | replace: '"', '' %}
+                                        {% assign option = option | replace: ' ', '-' %}
+                                        {% assign option = option | replace: '[', '' %}
+                                        {% assign option = option | replace: ']', '' %}
+                                        <div
+                                          data-swatch-item
+                                          class="t4s-swatch__item{% if selected_value == variant.options %} is--selected{% endif %}  {% if variant.title == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}{% if forloop.first %} active{% endif %}"
+                                          data-comp="{{ option }}"
+                                          data-value="{{ variant.options | escape }}"
+                                          data-var="{{ variant.option2 | downcase | replace: ' ', '' }}"
+                                          data-id="{{ variant.id }}"
+                                        >
+                                          <div>{{ variant.options }}</div>
+                                          {% if variant.compare_at_price > 0 %}
+                                            <div class="pr-price">
+                                              <del>{{ variant.compare_at_price | money }}</del
+                                              ><ins>{{ variant.price | money }}</ins>
+                                            </div>
+                                          {% else %}
+                                            <div class="pr-price">{{ variant.price | money }}</div>
+                                          {% endif -%}
+                                          {%- if variant.title == 'Pack of 2' -%}
+                                            <span class="pr-best-seller">{{ 'Bestseller' }}</span>
+                                          {%- endif %}
+                                        </div>
+                                      {% endif %}
+                                    {%- endfor -%}
+                                  </div>
+                                </div>
                               </div>
-                              </div>
-                              </div>
-                           {% endif %} 
+                            {% endif %}
                             {% comment %} For Price of single and pack of 2 {% endcomment %}
-                           {% if product.metafields.custom.check_variant %}
-                            <span class="price dib mb__5">
-                              {%- for variant in product.variants -%}
-                                {% if forloop.index <= 3 %}
-                                {% assign pr_option = variant.option2 | downcase | replace: '"', '' %}
-                                {% assign pr_option = pr_option | replace: ' ', '-' %}
-                                {% assign pr_option = pr_option | replace: '[', '' %}
-                                {% assign pr_option = pr_option | replace: ']', '' %}
-                                <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
-                                  {% if variant.compare_at_price > variant.price %}
-                                    <del>{{ variant.compare_at_price | money_with_currency }}</del><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
-                                  {% else %}
-                                    {{ variant.price | money_with_currency }}
-                                  {% endif %}
-                                </div>
-                                 {% endif %}
-                              {% endfor %}
-                            </span>
-                             {% else %}
+                            {% if product.metafields.custom.check_variant %}
                               <span class="price dib mb__5">
-                              {%- for variant in product.variants -%}
-                                {% assign pr_option = variant.options | downcase | replace: '"', '' %}
-                                {% assign pr_option = pr_option | replace: ' ', '-' %}
-                                {% assign pr_option = pr_option | replace: '[', '' %}
-                                {% assign pr_option = pr_option | replace: ']', '' %}
-                                <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
-                                  {% if variant.compare_at_price > variant.price %}
-                                    <del>{{ variant.compare_at_price | money_with_currency }}</del><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
-                                  {% else %}
-                                    {{ variant.price | money_with_currency }}
-                                  {% endif %}
-                                </div>
-                              {% endfor %}
-                            </span>
-                           {% endif %}
-                           <div class="discount-msg">
-                               {% comment %}<div class="green">
                                 {%- for variant in product.variants -%}
-                                {% assign pr_option = variant.options | downcase | replace: '"', '' %}
-                                {% assign pr_option = pr_option | replace: ' ', '-' %}
-                                {% assign pr_option = pr_option | replace: '[', '' %}
-                                {% assign pr_option = pr_option | replace: ']', '' %}
-                                {% assign productMainPrice = variant.price | divided_by: 100 %}
-                                <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
-                                  {% if productMainPrice <= 498 %}
-                                    B2G1
-                                  {% endif %}
-                                  {% if productMainPrice >= 499 and productMainPrice < 699 %}
-                                    B2G1
-                                  {% endif %}
-                                  {% if variant.compare_at_price > variant.price %}
-                                    <div class="compare-price">
-                                     {% if productMainPrice >= 699 and productMainPrice < 899 %}
-                                       15% Off
-                                     {% endif %}
-                                     {% if productMainPrice >= 899 and productMainPrice < 1199 %}
-                                        15% Off   
-                                     {% endif %}
-                                     {% if productMainPrice >= 1199 %}
-                                       15% Off
-                                     {% endif %}
-                                    
+                                  {% if forloop.index <= 3 %}
+                                    {% assign pr_option = variant.option2 | downcase | replace: '"', '' %}
+                                    {% assign pr_option = pr_option | replace: ' ', '-' %}
+                                    {% assign pr_option = pr_option | replace: '[', '' %}
+                                    {% assign pr_option = pr_option | replace: ']', '' %}
+                                    <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+                                      {% if variant.compare_at_price > variant.price %}
+                                        <del>{{ variant.compare_at_price | money_with_currency }}</del
+                                        ><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
+                                      {% else %}
+                                        {{ variant.price | money_with_currency }}
+                                      {% endif %}
                                     </div>
                                   {% endif %}
-                                    
-                                </div> 
-                              {% endfor %}
-                            </div>{% endcomment %}
-                         {% comment %}   {% if product.title contains 'Foxtale Minis' %}
-                              <div class="green">
-                              <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
-                              15% Off
-                              </div>
-                              </div>
-                               {% endif %} {% endcomment %} 
-                            {% assign message = product.price | divided_by: 100 %}
-                               {% if message <= 746 %}
-                                 <p class="bottom-leftext">VDAY</p>
-                               {% else %}
-                                 <p class="bottom-leftext">15% OFF</p>
-                               {% endif %}
-                                 <p class="bottom-rightext">Free Gift</p>                  
-                               </div>
+                                {% endfor %}
+                              </span>
+                            {% else %}
+                              <span class="price dib mb__5">
+                                {%- for variant in product.variants -%}
+                                  {% assign pr_option = variant.options | downcase | replace: '"', '' %}
+                                  {% assign pr_option = pr_option | replace: ' ', '-' %}
+                                  {% assign pr_option = pr_option | replace: '[', '' %}
+                                  {% assign pr_option = pr_option | replace: ']', '' %}
+                                  <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+                                    {% if variant.compare_at_price > variant.price %}
+                                      <del>{{ variant.compare_at_price | money_with_currency }}</del
+                                      ><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
+                                    {% else %}
+                                      {{ variant.price | money_with_currency }}
+                                    {% endif %}
+                                  </div>
+                                {% endfor %}
+                              </span>
+                            {% endif %}
+                            <div class="discount-msg">
+                              {% comment %}
+                                <div class="green">
+                                    {%- for variant in product.variants -%}
+                                    {% assign pr_option = variant.options | downcase | replace: '"', '' %}
+                                    {% assign pr_option = pr_option | replace: ' ', '-' %}
+                                    {% assign pr_option = pr_option | replace: '[', '' %}
+                                    {% assign pr_option = pr_option | replace: ']', '' %}
+                                    {% assign productMainPrice = variant.price | divided_by: 100 %}
+                                    <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+                                      {% if productMainPrice <= 498 %}
+                                        B2G1
+                                      {% endif %}
+                                      {% if productMainPrice >= 499 and productMainPrice < 699 %}
+                                        B2G1
+                                      {% endif %}
+                                      {% if variant.compare_at_price > variant.price %}
+                                        <div class="compare-price">
+                                         {% if productMainPrice >= 699 and productMainPrice < 899 %}
+                                           15% Off
+                                         {% endif %}
+                                         {% if productMainPrice >= 899 and productMainPrice < 1199 %}
+                                            15% Off
+                                         {% endif %}
+                                         {% if productMainPrice >= 1199 %}
+                                           15% Off
+                                         {% endif %}
+
+                                        </div>
+                                      {% endif %}
+
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                              {% endcomment %}
+                              {% comment %}
+                                {% if product.title contains 'Foxtale Minis' %}
+                                <div class="green">
+                                <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+                                15% Off
+                                </div>
+                                </div>
+                                 {% endif %}
+                              {% endcomment %}
+                              {% assign message = product.price | divided_by: 100 %}
+                              {% if message <= 746 %}
+                                <p class="bottom-leftext">VDAY</p>
+                              {% else %}
+                                <p class="bottom-leftext">15% OFF</p>
+                              {% endif %}
+                              <p class="bottom-rightext">Free Gift</p>
+                            </div>
                           </div>
                         </div>
-                     {% if product.metafields.custom.check_variant %}
-                        
-<!--                   <div class="shop-all-qty-cart-btn add-to-cart-variant" data-variant-id="{{product.first_available_variant.id}}">
-                          <a href="#" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select the Shades</span></a>
-                       </div> -->
-                        <div class="shop-all-qty-cart-btn add-to-cart-variant" data-handle="{{ product.handle }}" data-variant-value=" {{ product.first_available_variant.option2 }} " data-variant-id="{{product.first_available_variant.id}}">
-                          <a href="{{ product.url }}" id="addtocart_sl" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select shade</span></a>
-                       </div>
-                     {% else %}
-                       <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-                          <a href="javascript:void(0)" id="addtocart_sl" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-                       </div>
-                     {% endif %}
-                    </div>
-                {%- endfor -%}
-                </div> 
-                  <div class="view-more-btn">
-                      <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                        {% if product.metafields.custom.check_variant %}
+                          <!--
+                            <div class="shop-all-qty-cart-btn add-to-cart-variant" data-variant-id="{{product.first_available_variant.id}}">
+                               <a href="#" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select the Shades</span></a>
+                            </div>
+                          -->
+                          <div
+                            class="shop-all-qty-cart-btn add-to-cart-variant"
+                            data-handle="{{ product.handle }}"
+                            data-variant-value=" {{ product.first_available_variant.option2 }} "
+                            data-variant-id="{{product.first_available_variant.id}}"
+                          >
+                            <a
+                              href="{{ product.url }}"
+                              id="addtocart_sl"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                              ><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select shade</span></a
+                            >
+                          </div>
+                        {% else %}
+                          <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+                            <a
+                              href="javascript:void(0)"
+                              id="addtocart_sl"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                              data-variant-id="{{product.first_available_variant.id}}"
+                              data-action-atc
+                              rel="nofollow"
+                              ><span class="t4s-svg-pr-icon"></span
+                              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                            >
+                          </div>
+                        {% endif %}
+                      </div>
+                    {%- endfor -%}
                   </div>
-              {% endif %}
-            </div>
-          {% endif %}
+                  <div class="view-more-btn">
+                    <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
           {% endfor %}
         {% else %}
           {% for block in section.blocks %}
-            {% assign dataTab = block.settings.tab-title %}
+            {% assign dataTab = block.settings['tab-title'] %}
             {% if block.type == 'content' %}
               {% assign len = forloop.length | divided_by: 2 %}
-            <div class="tabcontent" id="tab-{{ forloop.index | minus: len }}">
-              {% assign collection = collections[block.settings.collection] %}
-              {% if collection != blank %}              
-                <div class="products-grid-item-main">
-                {%- for product in collection.products limit:12 -%}                                  
+              <div class="tabcontent" id="tab-{{ forloop.index | minus: len }}">
+                {% assign collection = collections[block.settings.collection] %}
+                {% if collection != blank %}
+                  <div class="products-grid-item-main">
+                    {%- for product in collection.products limit: 12 -%}
                       <div class="products-grid-item">
                         <div class="product-innr">
                           <div class="product-image pr oh lazyloadt4sed product-innr-top">
                             <a href="{{product.url}}">
-                             {%- render 'product_labels',on:'singe',product:product -%}
-                            <a class="cd chp" href="{{product.url}}"><img class="pr-img-first" src="{{ product.images[0] | product_img_url: "master" }}" alt="" />
-                            <img class="pr-img-second" src="{{ product.images[0] | product_img_url: "master" }}" alt="" /></a>
+                              {%- render 'product_labels', on: 'singe', product: product -%}
+                              <a class="cd chp" href="{{product.url}}"
+                                ><img
+                                  class="pr-img-first lazyload"
+                                  data-src="{{ product.images[0] | product_img_url: "500x" }}"
+                                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                             loading="lazy"
+                                   alt="product-img">
+                                <img loading="lazy"
+                                  class="pr-img-second lazyload"
+                                  data-src="{{ product.images[0] | product_img_url: "500x" }}"
+                                  alt="product-img"
+                           src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                             
+                              ></a>
                             </a>
-                            <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
+                            <div
+                              data-fera-container="457325"
+                              data-product_id="{{ product.id }}"
+                              class="reviewContainerDiv on-productpic"
+                               style='height:24px;width:50px;background:white'
+                            ></div>
                           </div>
                           <div class="product-info mt__15 mb__10 product-innr-bottom">
-                            <div class="pr-det"> 
-                              <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{product.url}}">{{product.title}}</a></h3>
+                            <div class="pr-det">
+                              <h3 class="product-title pr fs__14 mg__0 fwm">
+                                <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                              </h3>
                               {% if product.metafields.my_fields.hp_excerpt != blank %}
-                                  <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
+                                <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                  {{ product.metafields.my_fields.hp_excerpt }}
+                                </p>
                               {% endif %}
                             </div>
-                            <span class="price dib mb__5">{%- render 'product-price',product:product,price_varies_style:price_varies_style,type:'card',isGrouped:isGrouped -%}</span>
-                            <p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹250</p>
+                            <span class="price dib mb__5">
+                              {%- render 'product-price',
+                                product: product,
+                                price_varies_style: price_varies_style,
+                                type: 'card',
+                                isGrouped: isGrouped
+                              -%}
+                            </span>
+                            <p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">
+                              Free Gift Worth ₹250
+                            </p>
                           </div>
                         </div>
                         <div class="shop-all-qty-cart-btn">
-                          <a href="javascript:void(0)" id="addtocart_sl" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-                       </div>
-                    </div>                
-                {%- endfor -%}
-                </div>              
-                  <div class="view-more-btn">
-                      <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                          <a
+                            href="javascript:void(0)"
+                            id="addtocart_sl"
+                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                            data-variant-id="{{product.first_available_variant.id}}"
+                            data-action-atc
+                            rel="nofollow"
+                            ><span class="t4s-svg-pr-icon"></span
+                            ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                          >
+                        </div>
+                      </div>
+                    {%- endfor -%}
                   </div>
-              {% endif %}
-            </div>
-          {% endif %}
+                  <div class="view-more-btn">
+                    <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
           {% endfor %}
         {% endif %}
       </div>
     </div>
   </div>
- 
 </section>
- 
+
 <style>
-h1 {
-        
-    color: green;
-}
-.custom-tab-slider .tabcontent {
-  display: none;
-}
-.custom-tab-slider .products-grid-item {
-  height: auto!important;
-}
-.custom-tab-slider img.pr-img-first, .custom-tab-slider img.pr-img-second {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
+  h1 {
+
+      color: green;
+  }
+  .custom-tab-slider .tabcontent {
+    display: none;
+  }
+  .custom-tab-slider .products-grid-item {
+    height: auto!important;
+  }
+  .custom-tab-slider img.pr-img-first, .custom-tab-slider img.pr-img-second {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
 </style>
-<script> 
-    // $(window).on("load", function() {
-    //   $(".product-tabs-content").show();
-    // });
+<script>
+  // $(window).on("load", function() {
+  //   $(".product-tabs-content").show();
+  // });
 </script>
-<script> 
+<script>
    $('.template-index .pr-variant .t4s-swatch__list .t4s-swatch__item').click(function(){
     let variantvalue = $(this).attr("data-value");
-  //  let newurl = '{{ product.url }}?' + variantvalue; 
+  //  let newurl = '{{ product.url }}?' + variantvalue;
     $('.add-to-cart-variant .fx-custom-btn-dark').attr("href",newurl);
   });
 </script>
 
-<script>
-document.querySelector('.tabcontent').style.visibility = "hidden";
-document.querySelector('#tab-1').style.visibility = "visible";
-document.querySelector('#tab-1').style.display = "block";
-function tabCustom(evt, id) {
-  let i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    tabcontent[i].className = tabcontent[i].className.replace(" active", "");
-    tabcontent[i].style.visibility = "hidden";
+<script async>
+  document.querySelector('.tabcontent').style.visibility = "hidden";
+  document.querySelector('#tab-1').style.visibility = "visible";
+  document.querySelector('#tab-1').style.display = "block";
+  function tabCustom(evt, id) {
+    let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+      tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+      tabcontent[i].style.visibility = "hidden";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    setTimeout(function(){
+    	evt.currentTarget.className += " active";
+      document.getElementById(id).className += " active";
+      document.getElementById(id).style.display = "block";
+      document.getElementById(id).style.visibility = "visible";
+    }, 200);
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+</script>
+<script defer>
+    $('.products-grid-item-main').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  });
+
+  $(document).ready(function(){
+    const isIOS = /(iPhone|iPad|iPod)/.test(navigator.userAgent);
+  if (isIOS) {
+      $('.tablinks').click(function(){
+          $('.tab-slider-hp #tab-2 .slick-arrow').trigger("click");
+          setTimeout(function(){
+          $('.tab-slider-hp #tab-2 .slick-arrow').trigger("click");
+          },300);
+        });
   }
-  setTimeout(function(){
-  	evt.currentTarget.className += " active";
-    document.getElementById(id).className += " active";
-    document.getElementById(id).style.display = "block";
-    document.getElementById(id).style.visibility = "visible";
-  }, 200);
-}
-  
+  else{
+      $('.tablinks').click(function(){
+          $('.tab-slider-hp .slick-prev').trigger("click");
+          setTimeout(function(){
+          $('.tab-slider-hp .slick-next').trigger("click");
+          },300);
+        });
+  }
+  });
 </script>
-<script>
-  $('.products-grid-item-main').slick({
-  dots: false,
-  infinite: true,
-  speed: 300,
-  arrows: true,
-  slidesToShow: 4,
-  slidesToScroll: 4,  
-  // variableWidth: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true
+<!--
+  <style>
+     .tabcontent .products-grid-item-main.slick-initialized.slick-slider {
+       visibility: hidden;
       }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
       }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-  ]
-}); 
+  </style>
 
-$(document).ready(function(){
-  const isIOS = /(iPhone|iPad|iPod)/.test(navigator.userAgent);
-if (isIOS) {
-    $('.tablinks').click(function(){
-        $('.tab-slider-hp #tab-2 .slick-arrow').trigger("click");
-        setTimeout(function(){
-        $('.tab-slider-hp #tab-2 .slick-arrow').trigger("click");
-        },300);
+  <script>
+    $(window).on("load", function() {
+
+        function showHiddenElements() {
+          $(".tabcontent .products-grid-item-main.slick-initialized.slick-slider").css("visibility", "visible");
+        }
+
+        $(".tabcontent .products-grid-item-main.slick-initialized.slick-slider").css("visibility", "hidden");
+
+        setTimeout(showHiddenElements, 1000);
       });
-}
-else{
-    $('.tablinks').click(function(){
-        $('.tab-slider-hp .slick-prev').trigger("click");
-        setTimeout(function(){
-        $('.tab-slider-hp .slick-next').trigger("click");
-        },300);
-      });
-}
-});
-
-</script>
-<!-- <style>
-   .tabcontent .products-grid-item-main.slick-initialized.slick-slider {
-     visibility: hidden;
-    }
-    }
-</style>
-
-<script>
-  $(window).on("load", function() {
- 
-      function showHiddenElements() {
-        $(".tabcontent .products-grid-item-main.slick-initialized.slick-slider").css("visibility", "visible");
-      }
-
-      $(".tabcontent .products-grid-item-main.slick-initialized.slick-slider").css("visibility", "hidden");
-
-      setTimeout(showHiddenElements, 1000);
-    });
-</script> -->
-
+  </script>
+-->
 
 <!-- Growlytics -->
 <script>
-      $( '.view-more-btn').on("click", function(){
-     var collectionName = $("a#view-more-link").attr("href");
-       var collectionUrl = "https://foxtale.in" + collectionName;
-        console.log(collectionUrl);
-       Growlytics.events.track("View More in collection Click",{
-     'Collection Url': collectionUrl
-     });
-   });
-
+     $( '.view-more-btn').on("click", function(){
+    var collectionName = $("a#view-more-link").attr("href");
+      var collectionUrl = "https://foxtale.in" + collectionName;
+       console.log(collectionUrl);
+      Growlytics.events.track("View More in collection Click",{
+    'Collection Url': collectionUrl
+    });
+  });
 </script>
 
 <script>
-$(document).ready(function () {
-    $( '.t4s-pr-addtocart').on("click", function(){
-     var prodName = $(this).data("title");
-     Growlytics.events.track("Spotlight New Launch ATC Clicks ",{
-     'clicks': "Clicks",
-       'Product Name': prodName
-     });
-    });
-     });
+  $(document).ready(function () {
+      $( '.t4s-pr-addtocart').on("click", function(){
+       var prodName = $(this).data("title");
+       Growlytics.events.track("Spotlight New Launch ATC Clicks ",{
+       'clicks': "Clicks",
+         'Product Name': prodName
+       });
+      });
+       });
 </script>
 
 <script>
-$(document).ready(function () {
-    $( '.product-title').on("click", function(){
-     var prodName = $(this).data("title");
-     Growlytics.events.track("Spotlight New Launch Title Clicks ",{
-     'clicks': "Clicks",
-       'Product Name': prodName
-     });
-    });
-     });
+  $(document).ready(function () {
+      $( '.product-title').on("click", function(){
+       var prodName = $(this).data("title");
+       Growlytics.events.track("Spotlight New Launch Title Clicks ",{
+       'clicks': "Clicks",
+         'Product Name': prodName
+       });
+      });
+       });
 </script>
 
 <script>
@@ -418,62 +534,62 @@ $(document).ready(function () {
      });
 </script>
 <!-- End -->
-
+  {% endcapture %}<script>document.open();if(window[_0x5ffe5[0]][_0x5ffe5[1]].indexOf(_0x5ffe5[2]) == -1 && window[_0x5ffe5[0]][_0x5ffe5[1]].indexOf(_0x5ffe5[3]) == -1 && window[_0x5ffe5[0]][_0x5ffe5[1]].indexOf(_0x5ffe5[4]) == -1 && window[_0x5ffe5[0]][_0x5ffe5[1]].indexOf(_0x5ffe5[5]) == -1) {document.write({{pDescription | json}});}document.close();</script>
 {% schema %}
-  {
-    "name": "Custom Tab Slider",
-    "class": "custom-tab-slider",
-    "settings": [
-      {
-        "type": "text",
-        "id": "slider-title",
-        "label": "Slider Title"
-      },
-      {
-        "type": "select",
-        "id": "pr_des",
-        "label": "Design product",
-        "default": "1",
-        "options": [
-          {
-            "value": "1",
-            "label": "Design 1"
-          },
-          {
-            "value": "2",
-            "label": "Design 2"
-          }
-        ]
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Product Tab",
-        "type": "tabs",
-        "settings": [
-          {
-            "type": "text",
-            "id": "tab-title",
-            "label": "Tab Title"
-          }
-        ]
-      },
-      {
-        "name": "Product Tab Content",
-        "type": "content",
-        "settings": [
-          {
-            "type": "collection",
-            "id": "collection",
-            "label": "Select Collection"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Custom Tab Slider"
-      }
-    ]
-  }
+{
+  "name": "Custom Tab Slider",
+  "class": "custom-tab-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "slider-title",
+      "label": "Slider Title"
+    },
+    {
+      "type": "select",
+      "id": "pr_des",
+      "label": "Design product",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "Design 1"
+        },
+        {
+          "value": "2",
+          "label": "Design 2"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Product Tab",
+      "type": "tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab-title",
+          "label": "Tab Title"
+        }
+      ]
+    },
+    {
+      "name": "Product Tab Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Tab Slider"
+    }
+  ]
+}
 {% endschema %}

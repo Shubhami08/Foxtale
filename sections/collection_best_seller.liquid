@@ -120,7 +120,7 @@
             </div>
             <div class="product-info mt__15">
               <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 500;font-size:18px;-webkit-line-clamp:2;">
-                <a class="cd chp" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
+                <a rel="dofollow" class="cd chp" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
               </h3>
               {% if  pairProduct.metafields.my_fields.hp_excerpt != blank %}
                 <p class="fx-tags-shop fx-{{  pairProduct.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{  pairProduct.metafields.my_fields.hp_excerpt }}</p>
@@ -187,7 +187,7 @@
                   {% elsif collection.title == "Affiliate Valentine Sale" %}
                     <p class="bottom-leftext">CUPID</p>
                   {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">VDAY</p>
                   {% elsif collection.title == "Birthday Special Sale" %}
                     <p class="bottom-leftext">B2G4</p>
                   {% elsif collection.title == "Birthday Sale" %}

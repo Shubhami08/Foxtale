@@ -1,4 +1,5 @@
 {%- comment %}{%- if product.available == false and product.price == 0 %}{% continue %}{% endif -%}{%- endcomment %}
+
 {%- liquid 
   assign pr_id = product.id
   assign pr_options = product.options_with_values
@@ -47,8 +48,10 @@
 </div>{% endcomment %}
 <div class="product-innr">
 <div class="product-image pr oh lazyloadt4sed">
-   <a class="cd chp" href="{{pr_url}}"><img class="first-img" src="{{ product.images[0] | product_img_url: 'master' }}" />
-   <img class="second-img" src="{{ product.images[1] | product_img_url: 'master' }}" /></a>
+   <a rel="dofollow" class="cd chp" href="{{pr_url}}"><img class="first-img lazyload" loading="lazy"    src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                           data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="Product Image" />
+   <img class="second-img lazyload" loading="lazy"               src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+                           data-src="{{ product.images[1] | product_img_url: 'master' }}" alt="Product Image" /></a>
    <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
 </div>
 {%- endif -%}
@@ -57,7 +60,7 @@
    <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
    {%- endif -%}
    <div class="pr-det prlg-3">
-      <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{pr_url}}">{{product.title}}</a></h3>
+      <h3 class="product-title pr fs__14 mg__0 fwm"><a rel="dofollow" class="cd chp" href="{{pr_url}}">{{product.title}}</a></h3>
       {% if product.metafields.my_fields.hp_excerpt != blank %}
       <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
       {% endif %}

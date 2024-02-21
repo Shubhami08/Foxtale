@@ -25,195 +25,208 @@
 {% if section.settings.collection != blank %}
   <h2 class="hdng-vwmr">{{ section.settings.mainheading }}</h2>
   {% assign collection = collections[section.settings.collection] %}
-     {% if collection != blank %}
-        <div class="products-grid-item-main pdp-custom-collection custom-collection-product-grid-item">
-          {%- for product in collection.products -%}
-            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 4 %}style="display: none;"{% endif %}>
-              <div class="product-innr vmg">
-                <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                  <a href="{{product.url}}">
-                     {%- render 'product_labels', on: 'singe', product: product -%}
-                     <img 
-                        class="pr-img-first"
-                        src="{{ product.images[0] | product_img_url: "master" }}"
-                        alt=""
+  {% if collection != blank %}
+    <div class="products-grid-item-main pdp-custom-collection custom-collection-product-grid-item">
+      {%- for product in collection.products -%}
+        <div
+          class="products-grid-item custom-collection-product-grid-item-sub vm-vl"
+          {% if forloop.index > 4 %}
+            style="display: none;"
+          {% endif %}
+        >
+          <div class="product-innr vmg">
+            <div class="product-image pr oh lazyloadt4sed product-innr-top">
+              <a rel="dofollow" href="{{product.url}}">
+                {%- render 'product_labels', on: 'singe', product: product -%}
+                <img
+                  class="pr-img-first lazyload"
+                  loading="lazy"
+                  data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+                  src="{{ product.images[0] | product_img_url: "master" }}"
+                  alt="Product Image"
+                >
+                <img
+                  class="pr-img-second lazyload"
+                  loading="lazy"
+                  data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+                  src="{{ product.images[1] | product_img_url: "master" }}"
+                  alt="Product Image"
+                >
+              </a>
+              <div
+                data-fera-container="457325"
+                data-product_id="{{ product.id }}"
+                class="reviewContainerDiv on-productpic"
+              ></div>
+            </div>
+            <div class="product-info mt__15 mb__10 product-innr-bottom vmgrid" data-pr-id="{{ product.handle }}">
+              <div class="pr-det">
+                <h3 class="product-title pr fs__14 mg__0 fwm">
+                  <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                </h3>
+                {% if product.metafields.my_fields.hp_excerpt != blank %}
+                  <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                    {{ product.metafields.my_fields.hp_excerpt }}
+                  </p>
+                {% endif %}
+              </div>
+              {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #FC2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+              <div class="pr-variant">
+                <div class="t4s-product-form__variants pr-variants">
+                  <div class="t4s-swatch__list">
+                    {%- for value in option.values -%}
+                      <div
+                        data-swatch-item
+                        class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}  {% if value == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}"
+                        data-value="{{ value | escape }}"
+                        data-price="{{ product.variants[forloop.index0].price | divided_by: 100 }}"
                       >
-                      <img
-                        class="pr-img-second"
-                        src="{{ product.images[1] | product_img_url: "master" }}"
-                        alt=""
-                      >
-                  </a>
-                  <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
-                </div>
-                <div class="product-info mt__15 mb__10 product-innr-bottom vmgrid" data-pr-id="{{ product.handle }}">
-                    <div class="pr-det">
-                        <h3 class="product-title pr fs__14 mg__0 fwm">
-                          <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
-                        </h3>
-                        {% if product.metafields.my_fields.hp_excerpt != blank %}
-                          <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
-                             {{ product.metafields.my_fields.hp_excerpt }}
-                          </p>
-                        {% endif %}
-                    </div>
-                    {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #FC2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
-                    <div class="pr-variant">
-                        <div class="t4s-product-form__variants pr-variants">
-                          <div class="t4s-swatch__list">
-                            {%- for value in option.values -%}
-                              <div
-                                data-swatch-item
-                                class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}  {% if value == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}"
-                                data-value="{{ value | escape }}"
-                                data-price="{{ product.variants[forloop.index0].price | divided_by: 100 }}"
-                              >
-                                <div>{{ value }}</div>
-                                {% if product.variants[forloop.index0].compare_at_price > 0 %}
-                                  <div class="pr-price">
-                                    <del>{{ product.variants[forloop.index0].compare_at_price | money }}</del>
-                                    <ins>{{ product.variants[forloop.index0].price | money }}</ins>
-                                  </div>
-                                {% else -%}
-                                  {{- product.variants[forloop.index0].price | money -}}
-                                {%- endif -%}
-                                {%- if value == 'Pack of 2' -%}
-                                    <span class="pr-best-seller">{{ 'Save Extra' }}</span>
-                                {%- endif %}
-                                </div>
-                            {%- endfor -%}
+                        <div>{{ value }}</div>
+                        {% if product.variants[forloop.index0].compare_at_price > 0 %}
+                          <div class="pr-price">
+                            <del>{{ product.variants[forloop.index0].compare_at_price | money }}</del>
+                            <ins>{{ product.variants[forloop.index0].price | money }}</ins>
                           </div>
-                        </div>
-                        </div>
-                          <span class="price dib mb__5">
-                              {%- render 'product-price',
-                                product: product,
-                                price_varies_style: price_varies_style,
-                                type: 'card',
-                                isGrouped: isGrouped
-                              -%}
-                          </span>
-                        <div class="discount-msg">
-                          <p class="bottom-leftext">VDAY</p>
-                          <p class="bottom-rightext">Free Gift</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-                          <a
-                            href="{{ product.url }}"
-                            id="addtocart_r"
-                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
-                            data-variant-id="{{product.first_available_variant.id}}"
-                            data-action-atc
-                            rel="nofollow"
-                            ><span class="t4s-svg-pr-icon"></span
-                            ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
-                          >
-                    </div>
+                        {% else -%}
+                          {{- product.variants[forloop.index0].price | money -}}
+                        {%- endif -%}
+                        {%- if value == 'Pack of 2' -%}
+                          <span class="pr-best-seller">{{ 'Save Extra' }}</span>
+                        {%- endif %}
+                      </div>
+                    {%- endfor -%}
+                  </div>
                 </div>
-           {%- endfor -%}
+              </div>
+              <span class="price dib mb__5">
+                {%- render 'product-price',
+                  product: product,
+                  price_varies_style: price_varies_style,
+                  type: 'card',
+                  isGrouped: isGrouped
+                -%}
+              </span>
+              <div class="discount-msg">
+                <p class="bottom-leftext">VDAY</p>
+                <p class="bottom-rightext">Free Gift</p>
+              </div>
+            </div>
+          </div>
+          <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+            <a
+              href="{{ product.url }}"
+              id="addtocart_r"
+              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+              data-variant-id="{{product.first_available_variant.id}}"
+              data-action-atc
+              rel="dofollow"
+              ><span class="t4s-svg-pr-icon"></span
+              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+            >
+          </div>
         </div>
-        <div class="custom-collection-view-more">view more</div>
-         <div class="custom-collection-view-less" style="display: none;">view less</div>
-{% endif %}
+      {%- endfor -%}
+    </div>
+    <div class="custom-collection-view-more">view more</div>
+    <div class="custom-collection-view-less" style="display: none;">view less</div>
+  {% endif %}
 {% endif %}
 <style>
-.hdng-vwmr {
-  margin: 20px 0 20px 32px;
-  font-size: 35px;
-  font-weight: 500;
-}
-.custom-collection-product-grid-item {
-  grid-column-gap: 12px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 20px;
-  padding: 0 32px;
-}
-.custom-collection-view-more, .custom-collection-view-less {
-  color: #1877F2;
-  font-size: 14px;
-  font-weight: 400;
-  text-decoration-line: underline;
-  text-align: center;
-  cursor: pointer;
-  margin: 10px 0 15px 0;
-}
-.shop-all-qty-cart-btn {
-  margin-top: 0px;
-}
-.template-collection .vm-vl .price .t4s-product-price {
-  display: block;
-  padding: 0 8px;
-}
-.vm-vl {
-  padding: 0;
-}
-.vmgrid {
-  margin: 0;
-}
-.vm-vl:hover .product-image img.pr-img-second {
-  opacity: 1;
-  -webkit-transform: scale(1.09);
-  transform: scale(1.09);
-  transition: ease-in 0.8s;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
-.product-image img {
-  -webkit-transform: scale(1.005);
-  transform: scale(1.005);
-  -webkit-transition: opacity .3s, -webkit-transform 8s cubic-bezier(.25, .46, .45, .94);
-  transition: opacity .3s, transform 8s cubic-bezier(.25, .46, .45, .94), -webkit-transform 8s cubic-bezier(.25, .46, .45, .94);
-}
-.product-image img.pr-img-second {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: opacity .5s, -webkit-transform 2s cubic-bezier(0, 0, .44, 1.18);
-  transition: opacity .5s, transform 2s cubic-bezier(0, 0, .44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, .44, 1.18);
-}
-.vmg {
-  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.25);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-.pr-img-first, .pr-img-second {
-  -webkit-animation: 1.25s cubic-bezier(.26, .54, .32, 1) forwards ani-fadeIn;
-  animation: 1.25s cubic-bezier(.26, .54, .32, 1) forwards ani-fadeIn;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-@media (max-width: 1024px) and (min-width: 769px ) {
-  .custom-collection-product-grid-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
   .hdng-vwmr {
-    margin: 0px 0 8px 12px;
-    font-size: 20px;
+    margin: 20px 0 20px 32px;
+    font-size: 35px;
+    font-weight: 500;
   }
   .custom-collection-product-grid-item {
+    grid-column-gap: 12px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 8px;
-    padding: 0 12px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    padding: 0 32px;
   }
-  .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-stars-rating {
-    font-size: 11px !important;
-    line-height: 17px;
+  .custom-collection-view-more, .custom-collection-view-less {
+    color: #1877F2;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0 15px 0;
   }
-  .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-avgRating {
-    margin-left: 0px;
+  .shop-all-qty-cart-btn {
+    margin-top: 0px;
   }
-}
+  .template-collection .vm-vl .price .t4s-product-price {
+    display: block;
+    padding: 0 8px;
+  }
+  .vm-vl {
+    padding: 0;
+  }
+  .vmgrid {
+    margin: 0;
+  }
+  .vm-vl:hover .product-image img.pr-img-second {
+    opacity: 1;
+    -webkit-transform: scale(1.09);
+    transform: scale(1.09);
+    transition: ease-in 0.8s;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  .product-image img {
+    -webkit-transform: scale(1.005);
+    transform: scale(1.005);
+    -webkit-transition: opacity .3s, -webkit-transform 8s cubic-bezier(.25, .46, .45, .94);
+    transition: opacity .3s, transform 8s cubic-bezier(.25, .46, .45, .94), -webkit-transform 8s cubic-bezier(.25, .46, .45, .94);
+  }
+  .product-image img.pr-img-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: opacity .5s, -webkit-transform 2s cubic-bezier(0, 0, .44, 1.18);
+    transition: opacity .5s, transform 2s cubic-bezier(0, 0, .44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, .44, 1.18);
+  }
+  .vmg {
+    box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .pr-img-first, .pr-img-second {
+    -webkit-animation: 1.25s cubic-bezier(.26, .54, .32, 1) forwards ani-fadeIn;
+    animation: 1.25s cubic-bezier(.26, .54, .32, 1) forwards ani-fadeIn;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  @media (max-width: 1024px) and (min-width: 769px ) {
+    .custom-collection-product-grid-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hdng-vwmr {
+      margin: 0px 0 8px 12px;
+      font-size: 20px;
+    }
+    .custom-collection-product-grid-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 10px;
+      grid-column-gap: 8px;
+      padding: 0 12px;
+    }
+    .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-stars-rating {
+      font-size: 11px !important;
+      line-height: 17px;
+    }
+    .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-avgRating {
+      margin-left: 0px;
+    }
+  }
 </style>
 <script>
   $(document).ready(function(){

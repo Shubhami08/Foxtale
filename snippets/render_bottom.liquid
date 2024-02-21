@@ -54,7 +54,7 @@ endif -%}
   </symbol>
 </defs></svg>
 
-<script>
+<script async>
   {%- comment -%}
    - Disable remove unavailable (false), will show all variant unavailable, soldout. Even when soldout remove enable
   {%- endcomment -%}
@@ -255,7 +255,6 @@ endif -%}
 
 {%- if admin_sp -%}
    <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left t4s-dn{% if is_page_index %} t4s-page-index-{{page.id}}{% endif %}" aria-hidden="true">
-    <link rel="stylesheet" href="{{ 'drawer.min.css' | asset_url }}" media="all">
     <link rel="stylesheet" href="{{ 'mobile_nav.css' | asset_url }}" media="all">
      {%- if mobile_nav_type == '1' or mobile_nav_type == '2' -%}
      <div class="t4s-drawer__header"><span>{% if mobile_nav_type == '1' %}{%- assign navActive = 'is--active' -%}{{ 'general.mobile_menu.menu' | t }}{% else %}{%- assign catActive = 'is--active' -%}{{ 'general.mobile_menu.categories' | t }}{% endif %}</span></div>
@@ -342,16 +341,14 @@ endif
 echo '<div id="t4s-snow_ef" class="t4s-dn"></div><div id="t4s-assets-pre" class="t4s-d-none"></div><div id="t4s-append-component" class="t4s-d-none"></div>' -%}
 <template id="t4s-style-popup">
 {%- if enable_quickview -%}
-{{ 'pre_flickityt4s.min.css' | asset_url | stylesheet_tag }}
 {{ 'main-product.css' | asset_url | stylesheet_tag }}
 {{ 'qv-product.css' | asset_url | stylesheet_tag }}
-{{ 'drawer.min.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 {%- if enable_quickshop %}{{ 'qs-product.css' | asset_url | stylesheet_tag }}{% endif -%}
 </template>
-<link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'drawer.min.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'line-awesome.min.css' | asset_url }}" media="print" onload="this.media='all'">
+<!-- <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'drawer.min.css' | asset_url }}" media="print" onload="this.media='all'"> -->
+<!-- <link rel="stylesheet" href="{{ 'line-awesome.min.css' | asset_url }}" media="print" onload="this.media='all'"> -->
 {%- if settings.colors_css %}<link rel="stylesheet" href="{{ 'colors.css' | asset_url }}" media="print" onload="this.media='all'">{% endif -%} 
 {%- if settings.custom_css_t4s %}{{- 'custom.css' | asset_url | stylesheet_tag:preload:true -}}{% endif -%}
 {%- if admin_sp %}<style>.t4s-section-admn-fixed { position: fixed;top: 100px;pointer-events: none; z-index: -1;opacity: 0; }.t4s-section-admn2-fixed { position: fixed;top: 100px;z-index: 468; }</style>{% endif -%}
