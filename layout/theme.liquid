@@ -428,6 +428,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
+    data-instant-allow-query-string
     {% endif -%}
 
     trigger-price-1="{{ settings.trigger_price_1 }}"
