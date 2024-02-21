@@ -1,0 +1,145 @@
+<div class="container mt__60 mb__60 rtet4">
+  {{ page.content }}
+    <div class="career-heading">
+      	<h1 class="tc">Careers</h1>
+        <h3 class="heading">Let's Swap Stories </h3>
+    </div>
+    <div class="career-sub-heading">
+        <p class="sub-heading">Join us for a conversation on skincare, wellness and all things growth!</p>
+    </div>
+    <div class="contact-form form-vertical">
+            {%- assign formId = 'ContactForm' -%}
+            {% form 'contact', id: formId %}
+              {% include 'form-status', form: form, form_id: formId %}
+              <div class="career-first-name-contact-section">
+                <div class="career-customer-name">
+                  <label for="name"></label>
+                  <input type="text" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="career-customer-phone">
+                  <label for="phone"></label>
+                  <input type="tel" id="phone" name="contact[{{ 'contact.form.phone' | t }}]" placeholder="Phone" pattern="[0-9]{10}" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}" required>
+                </div>
+              </div>
+
+            <div>
+                <div class="career-email">
+                    <label for="{{ formId }}-email"></label>
+                    <input
+                      type="email"
+                      id="{{ formId }}-email"
+                      name="contact[email]"
+                      placeholder="Email"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                      aria-required="true" 
+                      {%- if form.errors contains 'email' -%}
+                        class="input--error"
+                        aria-invalid="true"
+                        aria-describedby="{{ formId }}-email-error"
+                      {%- endif -%}
+                      >
+                    {%- if form.errors contains 'email' -%}
+                      <span id="{{ formId}}-email-error" class="input-error-message">
+                        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                        {% include 'icon-error' %}
+                        <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                      </span>
+                    {%- endif -%}
+                  </div>
+                  <div class="career-apply-for">
+                    <label for="apply"></label>
+                    <select id="apply" name="Applying for">
+                      <option style='display:none'>
+                        Applying For
+                      </option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Sales">Sales</option>
+                      <option value="Tech & Product">Tech & Product</option>
+                      <option value="Content & Design">Content & Design</option>
+                      <option value="Operations">Operations</option>
+                      <option value="Admin & HR">Admin & HR</option>
+                    </select>
+                  </div>
+            </div>
+
+            <label for="custom-contact-text"></label>
+            <input type="text" id="custom-contact-text" name="contact[custom contact text]" placeholder="Do not see your match?">
+
+            <label for="subject"></label>
+            <textarea id="subject" name="subject" placeholder="Tell us what you’d like to do at Foxtale..." style="height:200px"></textarea>
+			<p>5000/5000</p>
+      
+             <div class="career-below-buttons">
+               <div class="col-lg-6 col-sm-6 col-12">
+                  <div class="input-group">  
+                      <form>
+                        <input type="file" id="file-upload" multiple required />
+                        <label for="file-upload">Attach Resume</label>
+                        <div id="file-upload-filename"></div>
+                      </form>
+                  </div>
+               </div>
+               <div class="career-submit-button">
+                <input type="submit" class="btn" value="SUBMIT">
+               </div>
+            </div>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+	</div>
+</div>
+
+<style>
+  input[type="file"] { 
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+input:focus + label {
+  outline: 2px solid;
+}
+</style>
+
+<script>
+  var input = document.getElementById( 'file-upload' );
+var infoArea = document.getElementById( 'file-upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  // the change event gives us the input it occurred in 
+  var input = event.srcElement;
+  
+  // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+  var fileName = input.files[0].name;
+  
+  // use fileName however fits your app best, i.e. add it into a div
+  infoArea.textContent = 'File name: ' + fileName;
+}
+</script>
+
+{% schema %}
+  {
+    "name": "Careers",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Careers"      
+      }
+    ],
+    "templates": [
+      "page"
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

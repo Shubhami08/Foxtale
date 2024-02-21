@@ -1,0 +1,491 @@
+<style>
+    #orderHistory {display: none;padding-top: 100px;}
+    #refSection {display: none;padding-top: 100px;}  
+    #rewardActivity {display: none;padding-top: 75px;}
+   #terms {display: none;padding-top: 75px;} 
+    #earn {display: none;padding-top: 75px;} 
+
+.stamped-rewards-widget-heading-main {font-weight:500 !important;font-size: 23px !important;margin-bottom:22px !important;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-number {background-color: #e85a28 !important;}
+  .stamped-rewards-widget-campaigns-earnings {text-align: left!important}
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i:before, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i:before {color: #e85a28 !important;}
+  [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-title {margin-bottom: 5px !important; font-weight: bold !important;color: black !important}
+      [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-sub, [data-widget-type="rewards-referral"] div[data-target-id="section-email-customer"], [data-widget-type="rewards-referral"] div[data-target-id="section-email-friend"], [data-widget-type="rewards-referral"] .stamped-rewards-widget-description, [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-main {display: none !important;}
+</style>
+{%- section 'acc_heading' -%}
+<div class="container mt__60 mb__60">
+  <div class="row">
+     <div class="col-12 col-md-3 sp-myaccount-sidebar is_sticky_sidebar">
+        <nav class="sp-myaccount-nav mb__30 theiaStickySidebar">
+           <ul class="ul_none is_sticky_inner">
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--dashboard">
+                 <a class="js_add_ld" href="{{ routes.account_url }}">{{ 'customer.account.dashboard' | t }}</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="myFunction()">
+                <a  href="#orderHistory">Order History</a>
+               </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--dashboard is-active pe_none">
+                 <a class="js_add_ld" href="{{ order.customer_url }}">{{ 'customer.order.title' | t: name: order.name }}</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address">
+                 <a class="js_add_ld" href="{{ routes.account_addresses_url }}">{{ 'customer.addresses.title' | t }} ({{ customer.addresses_count }})</a>
+              </li>
+             <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="earnFunct()">
+               <a  href="#earn">Earn Coins</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="rewardFunct()" >
+               <a  href="#rewardActivity">Reward Activity</a>
+              </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="showrefSection()">
+               <a  href="#referSection">Refer and Earn</a>
+              </li>
+            <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="termsFunct()">
+               <a  href="#terms">Rewards Terms & Conditions</a>
+              </li>
+{% comment %}  {%- if settings.wishlist_type != '0' -%}
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--wishlist">
+                 <a class="js_link_wis" href="{{ routes.search_url }}/?view=wish">{{ 'customer.account.wishlist' | t }} (<span class="jswcount">0</span>)</a>
+              </li>
+              {%- endif -%} {% endcomment %}
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--customer-logout custom-logout-button">
+                <a class="js_add_ld" href="{{routes.account_logout_url}}" data-no-instant>{{ 'customer.account.log_out' | t }}</a>
+              </li>
+           </ul>
+        </nav>
+     </div>
+     <div class="col-12 col-md-9 sp-myaccount-content is_sticky_content">
+       <div class="rewards-content" id="terms">
+    <div class="reward-box">
+      <p>Hey!</p>
+      <p>Here are some things you need to know to make this rewards program work for you :)</p>
+      <ul>
+        <li>Coins earned on each purchase will be credited to your account once the order is shipped</li>
+        <li>Only 1000 coins can be redeemed in one go.</li>
+        <li>There is a one-month blackout period after signing up for a new account when the earning rule for "Celebrate a birthday" will not be awarded to customers. This is to prevent any potential abuse of the rewards program, by setting a fake birthday to gain additional points.</li>
+        <li>While submitting the review form, please make sure you use the same email address you have used to sign up for the rewards program. It takes 24 hours for the review to be verified and processed</li>
+        <li>If you have redeemed a coupon, but in the process forget to copy the coupon code at checkout, you can always retrieve it from your <a aria-label="REWARDS HISTORY">Rewards History</a> section in your account page</li>
+        <li>If you would like to know more or have any questions regarding our rewards program, please reach out to our Customer team on Whatsapp and Team will be happy to help</li>
+        <li>The Reward Program Coupons cannot be combined with any other discount coupons</li>
+      </ul>
+    </div>
+  </div>
+              <div id="earn">
+        <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+       </div>
+       
+        <div id="rewardActivity">
+         <div id="stamped-rewards-widget" data-widget-type="rewards-activities"></div>
+       </div>
+        <div id="refSection">
+            <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
+             <h2 class="referal-heading-main">Refer and Earn</h2>
+            <p class="stamped-rewards-page-text stamped-rewards-widget-description" style="font-size: 16px; font-weight: 600;">Refer your friends and family to Foxtale and Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and start cashing in the rewards.</p>
+            <div id="stamped-rewards-widget" data-widget-type="rewards-referral"></div>
+            </div>
+          </div>
+            <div id="orderHistory">
+                {%- if customer.orders.size != 0 -%}
+                {%- paginate customer.orders by 20 -%}
+                   <table class="responsive-table orders-table" >
+                      <thead>
+                        <tr>
+                          <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                          <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                          <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                          <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                          <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                          <th scope="col">{{ 'customer.order.track_shipment' | t }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {%- for order in customer.orders -%}
+                          <tr>
+                            <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                              <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small js_add_ld" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                            </th>
+                            <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                            <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                            <td>
+                            {% for line_item in order.line_items %}
+                              {% if line_item.fulfillment.tracking_number %}
+                                <a href="{{ line_item.fulfillment.tracking_url }}">
+                                <p style ="border: 2px solid black; background-color: black; color: white; text-align: center;" >Track Here: #{{ line_item.fulfillment.tracking_number}}</p>
+                               </a>
+                              {% break %}
+                              {% endif %}
+                            {% endfor %}
+                            </td>
+                            </td>
+                          </tr>
+                        {%- endfor -%}
+                      </tbody>
+                   </table>
+                  {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, cl_a:' js_add_ld' %}{%- endif -%}
+                {%- endpaginate -%}
+             {%- else -%}
+                <div class="shopify-message"><i class="facl facl-ok"></i><a class="btn_link fwsb tu mr__10" href="{{routes.all_products_collection_url | sort_by: 'best-selling'}}">{{ 'customer.orders.make_order' | t }}</a> {{ 'customer.orders.none' | t }}</div>
+             {%- endif -%}
+            </div>
+     <div class="theiaStickySidebar" id="orderSection">
+       <div class="grid__item myaccount__order-history">
+         <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
+
+         {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
+         <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
+
+         {%- if order.cancelled -%}
+           <div class="order--cancelled">
+             {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
+             <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+             <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason }}</p>
+           </div>
+         {%- endif -%}
+
+         <table class="order-table">
+           <thead>
+             <tr>
+               <th scope="col">{{ 'customer.order.product' | t }}</th>
+               <th scope="col">{{ 'customer.order.sku' | t }}</th>
+               <th class="tr" scope="col">{{ 'customer.order.price' | t }}</th>
+               <th class="tr" scope="col">{{ 'customer.order.quantity' | t }}</th>
+               <th class="tr" scope="col">{{ 'customer.order.total' | t }}</th>
+             </tr>
+           </thead>
+           <tbody>
+             {%- comment -%}line_item.product.url{%- endcomment -%}
+             {%- for line_item in order.line_items -%}
+               <tr id="{{ line_item.key }}">
+                 <th class="order-table__product" scope="row" data-label="{{ 'customer.order.product' | t }}">
+                   <div>
+                     {{ line_item.title | link_to: line_item.url }}
+                     {%- if line_item.line_level_discount_allocations != blank -%}
+                       <ul class="ul_none order-discount order-discount--list order-discount--title" aria-label="{{ 'customer.order.discount' | t }}">
+                         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                           <li class="order-discount__item">
+                             <i class="facl facl-tags"></i> {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+                           </li>
+                         {%- endfor -%}
+                       </ul>
+                     {%- endif -%}
+                   </div>
+                   {%- if line_item.fulfillment -%}
+                     <div class="note">
+                       {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%}
+                       {{ 'customer.order.fulfilled_at_html' | t: date: created_at }}
+                       <div>
+                         {%- if line_item.fulfillment.tracking_url -%}
+                           <a href="{{ line_item.fulfillment.tracking_url }}">
+                             {{ 'customer.order.track_shipment' | t }}
+                           </a>
+                         {%- endif -%}
+                         <div>
+                           {{ line_item.fulfillment.tracking_company }}
+                           {%- if line_item.fulfillment.tracking_number -%} #{{ line_item.fulfillment.tracking_number }} {%- endif -%}
+                         </div>
+                       </div>
+                     </div>
+                   {%- endif -%}
+                 </th>
+                 <td data-label="{{ 'customer.order.sku' | t }}">{{ line_item.sku }}</td>
+                 <td class="tr" data-label="{{ 'customer.order.price' | t }}">
+                   <dl>
+                     {%- if line_item.original_price != line_item.final_price -%}
+                       <dt></dt>
+                       <dd>
+                         <s>{{ line_item.original_price | money }}</s>
+                       </dd>
+                       <dt></dt>
+                       <dd>
+                         <span class="order-discount">{{ line_item.final_price | money }}</span>
+                       </dd>
+                     {%- else -%}
+                       <dt></dt>
+                       <dd>
+                         {{ line_item.original_price | money }}
+                       </dd>
+                     {%- endif -%}
+
+                     {%- if line_item.unit_price_measurement -%}
+                       <dt></dt>
+                       <dd>
+                         <span class="price-unit-price">
+                           {%- capture unit_price_separator -%}
+                             <span aria-hidden="true">/</span>
+                           {%- endcapture -%}
+                           {%- capture unit_price_base_unit -%}
+                             {%- if line_item.unit_price_measurement.reference_value != 1 -%}
+                               {{- line_item.unit_price_measurement.reference_value -}}
+                             {%- endif -%}
+                             {{ line_item.unit_price_measurement.reference_unit }}
+                           {%- endcapture -%}
+
+                           <span data-unit-price>{{ line_item.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
+                         </span>
+                       </dd>
+                     {%- endif -%}
+                   </dl>
+                 </td>
+                 <td class="tr" data-label="{{ 'customer.order.quantity' | t }}">{{ line_item.quantity }}</td>
+                 <td class="tr" data-label="{{ 'customer.order.total' | t }}">
+                   {%- if line_item.original_line_price != line_item.final_line_price -%}
+                     <dl>
+                       <dt></dt>
+                       <dd>
+                         <s>{{ line_item.original_line_price | money }}</s>
+                       </dd>
+                       <dt></dt>
+                       <dd>
+                         <span class="order-discount">{{ line_item.final_line_price | money }}</span>
+                       </dd>
+                     </dl>
+                   {%- else -%}
+                     {{ line_item.original_line_price | money }}
+                   {%- endif -%}
+                 </td>
+               </tr>
+             {%- endfor -%}
+           </tbody>
+           <tfoot>
+             <tr>
+               <th class="small--hide" scope="row" colspan="4">{{ 'customer.order.subtotal' | t }}</th>
+               <td class="tr" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</td>
+             </tr>
+
+             {%- if order.cart_level_discount_applications != blank -%}
+               <tr>
+                 {%- for discount_application in order.cart_level_discount_applications -%}
+                   <th class="small--hide" scope="row" colspan="4">
+                     {{ 'customer.order.discount' | t }}
+                     <span class="order-discount order-discount--title">
+                       <i class="facl facl-tags"></i> {{- discount_application.title -}}
+                     </span>
+                   </th>
+                   <td class="tr" data-label="{{ 'customer.order.discount' | t }}">
+                     <div class="order-discount-wrapper">
+                       <span class="order-discount order-discount--title tl dn_md">
+                         <i class="facl facl-tags"></i> {{- discount_application.title -}}
+                       </span>
+                       <span class="order-discount">-{{ discount_application.total_allocated_amount | money }}</span>
+                     </div>
+                   </td>
+                 {%- endfor -%}
+               </tr>
+             {%- endif -%}
+
+             {%- for shipping_method in order.shipping_methods -%}
+               <tr>
+                 <th class="small--hide" scope="row" colspan="4">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</th>
+                 <td class="tr" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</td>
+               </tr>
+             {%- endfor -%}
+
+             {%- for tax_line in order.tax_lines -%}
+               <tr>
+                 <th class="small--hide" scope="row" colspan="4">{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</th>
+                 <td class="tr" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</td>
+               </tr>
+             {%- endfor -%}
+
+             <tr>
+               <th class="small--hide cd tu" scope="row" colspan="4">{{ 'customer.order.total' | t }}</th>
+               <td class="tr cd fwsb tu" data-label="{{ 'customer.order.total' | t }}">
+                   {%- if order.total_price != order.total_net_amount -%}
+                     <dl>
+                       <dt></dt>
+                       <dd>
+                         <s>{{ order.total_price | money_with_currency }}</s>
+                       </dd>
+                       <dt></dt>
+                       <dd>
+                         <span class="order-discount">{{ order.total_net_amount | money_with_currency }}</span>
+                       </dd>
+                     </dl>
+                   {%- else -%}
+                     {{ order.total_price | money_with_currency }}
+                   {%- endif -%}
+               </td>
+             </tr>
+           </tfoot>
+         </table>
+       </div>
+
+       {%- if order.note != blank or order.attributes.gift-note != blank -%}
+       <hr>
+         <div class="col-12 offset-md-2 col-md-8 login-form tc">
+            {%- if order.note != blank -%}
+            <h2>{{ 'customer.order.note' | t }}</h2>
+            <p>{{ order.note }}</p>
+            {%- endif -%}
+            {%- if order.attributes.gift-note != blank -%}
+            <h2>{{ 'customer.order.gift_note' | t }}</h2>
+            <p>{{ order.attributes.gift-note }}</p>
+            {%- endif -%}
+         </div>
+       {%- endif -%}
+
+      <hr>
+       <div class="row myaccount__account-details tl_md tc">
+         <div class="col-md-6 col-12 login-form mb__40">
+            <h2>{{ 'customer.order.billing_address' | t }}</h2>
+            <p><strong>{{ 'customer.order.payment_status' | t }}:</strong> {{ order.financial_status_label }}</p>
+            {{ order.billing_address | format_address }}
+         </div>
+         <div class="col-md-6 col-12 login-form mb__40">
+            <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+            <p><strong>{{ 'customer.order.fulfillment_status' | t }}:</strong> {{ order.fulfillment_status_label }}</p>
+            {{ order.shipping_address | format_address }}
+         </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>
+<script>
+    var b = document.getElementById("orderSection")
+    var x = document.getElementById("orderHistory");
+    var y = document.getElementById("refSection");
+    var r = document.getElementById("rewardActivity");
+    var e = document.getElementById("earn");
+    var t = document.getElementById("terms");
+
+
+  function myFunction() {
+    if (!x.style.display || x.style.display === "none") {
+      x.style.display = "block";
+    } if(b.style.display = "block"){
+        b.style.display = "none";
+    } if(y.style.display = "block"){
+        y.style.display = "none";
+    }if (r.style.display = "block"){
+    r.style.display = "none"
+  }  if (t.style.display = "block"){
+    t.style.display = "none"
+  }  if (e.style.display = "block"){
+    e.style.display = "none"
+  } else {
+      x.style.display = "none";
+    }
+  }
+  
+    function showrefSection() {
+    if (!y.style.display || y.style.display === "none") {
+      y.style.display = "block";
+    } if ( x.style.display === "block") {
+      x.style.display = "none";
+    } if(b.style.display = "block"){
+        b.style.display = "none";
+    } if (r.style.display = "block"){
+    r.style.display = "none"
+  }  if (t.style.display = "block"){
+    t.style.display = "none"
+  }  if (e.style.display = "block"){
+    e.style.display = "none"
+  } else {
+      y.style.display = "none";
+    }
+  }
+   function rewardFunct() {
+    if (!r.style.display || r.style.display === "none") {
+    r.style.display = "block";
+  }  if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if (b.style.display = "block"){
+    b.style.display = "none"
+  }  if (t.style.display = "block"){
+    t.style.display = "none"
+  }  if (e.style.display = "block"){
+    e.style.display = "none"
+  } else {
+    r.style.display = "none";
+  }
+}
+
+   function termsFunct() {
+  var t = document.getElementById("terms");
+    if (!t.style.display || t.style.display === "none") {
+    t.style.display = "block";
+  } if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if (e.style.display = "block"){
+    e.style.display = "none"
+  } if(b.style.display = "block"){
+        b.style.display = "none";
+    } if (r.style.display = "block"){
+    r.style.display = "none"
+  } 
+  else {
+    t.style.display = "none";
+  }
+}
+
+   function earnFunct() {
+  var e = document.getElementById("earn");
+    if (!e.style.display || e.style.display === "none") {
+    e.style.display = "block";
+  }  if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if (t.style.display = "block"){
+    t.style.display = "none"
+  } if(b.style.display = "block"){
+        b.style.display = "none";
+    } if (r.style.display = "block"){
+    r.style.display = "none"
+  } 
+  else {
+    r.style.display = "none";
+  }
+}
+
+  
+$(document).ready(function() {
+  $(".custom-logout-button").on("click", function() {
+    clearCache();
+    clearCookies();
+    clearSessionStorage(); // Uncomment this line if you want to clear session storage too
+    refreshPage();
+  });
+});
+
+function clearCache() {
+  // Force reload the page and clear the cache by appending a unique query string
+  location.reload(true);
+}
+
+function clearCookies() {
+  const cookies = document.cookie.split(";");
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    const eqPos = cookie.indexOf("=");
+    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+  }
+}
+
+function clearSessionStorage() {
+  sessionStorage.clear();
+}
+
+function refreshPage() {
+  location.reload();
+}
+
+</script>
+
+
+
+{%- schema -%}
+{
+  "name": "Addresses",
+  "tag": "section",
+  "class": "t4s-section t4s-section-customers t4s-container"
+}
+{% endschema %}

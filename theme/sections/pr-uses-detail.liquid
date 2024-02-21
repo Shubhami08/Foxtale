@@ -1,0 +1,18 @@
+{% if product.metafields.custom.combo_overview != blank %}
+  <div class="container mt__20 mb__50">
+    {{ product.metafields.custom.combo_overview }}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Product Uses",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Product Uses",
+            "category": "Collection"
+        }
+    ]
+  }
+{% endschema %}

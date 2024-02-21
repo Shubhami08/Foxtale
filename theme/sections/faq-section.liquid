@@ -1,0 +1,74 @@
+{% if product.metafields.global['faq-section'] != blank %}
+    <div class="faq_section">
+      {{ product.metafields.global['faq-section'] }}
+    </div>
+{% endif %}
+<script>
+  const metaaa= `{{ product.metafields.global.faq-section }}`;
+const parser = new DOMParser();
+const doc = parser.parseFromString(metaaa, 'text/html');
+
+const faqList = [];
+
+const questions = doc.querySelectorAll('h4');
+const answers = doc.querySelectorAll('p');
+
+questions.forEach((question, index) => {
+    const questionText = question.textContent.trim();
+    const answerText = answers[index].textContent.trim();
+
+    const faq = {
+        "@type": "Question",
+        "name": `Question ${index + 1}`,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": answerText
+        }
+    };
+
+    faqList.push(faq);
+});
+
+   const ldJsonScriptt = document.createElement('script');
+    ldJsonScriptt.type = 'application/ld+json';
+    ldJsonScriptt.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+     "@type": "FAQPage",
+      "mainEntity": faqList
+    });
+console.log("ldJsonScript",ldJsonScriptt);
+    document.body.appendChild(ldJsonScriptt);
+  
+  
+
+</script>
+
+  <script>
+     $(document).ready(function () {
+    $( '.faq_que h3').on("click", function(){
+    var faq = $(this).text();
+     //console.log(faq);
+       Growlytics.events.track("Product information section Clicks",{
+      'Tab Name': faq
+     });
+    });
+     });
+ </script>
+{% schema %}
+  {
+    "name": "Faq section",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Faq section",
+            "category": "Collection"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,287 @@
+<style>
+  .cus-collswrapper {
+    position: relative;
+    padding: 10px 0 30px;
+    width: 100%;
+  }
+  .sbc {
+    padding: 0 66px;
+  }
+  .cus-pik {
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 0;
+    padding: 0;
+    display: block;
+  }
+  .cus-single {
+    margin: 0 6px;
+  }
+  .cus-single a img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .cus-title {
+    display: block;
+    text-decoration: none;
+    background-color: #000000;
+    border: 0.5px solid #000000;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .cus-title p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 6px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .cus-collswrapper .slick-disabled {
+    display: none !important;
+  }
+  .cus-collswrapper .slick-prev {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+  }
+  .cus-collswrapper .slick-prev:before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385');
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    content: "";
+    display: none;
+  }
+  .cus-collswrapper .slick-next {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    color: transparent;
+  }
+  .cus-collswrapper .slick-next:before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385');
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    content: "";
+    display: none;
+  }
+
+  @media(max-width: 1200px) and (min-width: 768px) {
+    .cus-collswrapper .slick-next {
+      width: 30px;
+      height: 30px;
+      top: 35%;
+      right: 70px;
+    }
+    .cus-collswrapper .slick-prev {
+      width: 30px;
+      height: 30px;
+      top: 35%;
+      left: 42px;
+    }
+    .cus-collswrapper .slick-prev:before {
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+    .cus-collswrapper .slick-next:before {
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .cus-collswrapper {
+      padding: 0px 0 15px 0;
+    }
+    .cus-head {
+      font-size: 24px;
+      line-height: 36px;
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+    .cus-collswrapper .slick-next {
+      width: 25px;
+      height: 25px;
+      top: 33%;
+      right: 20px;
+    }
+    .cus-collswrapper .slick-prev {
+      width: 25px;
+      height: 25px;
+      top: 33%;
+      left: -8px;
+    }
+    .cus-collswrapper .slick-prev:before {
+      background-size: 25px 25px;
+      width: 25px;
+      height: 25px;
+      display: block;
+    }
+    .cus-collswrapper .slick-next:before {
+      background-size: 25px 25px;
+      width: 25px;
+      height: 25px;
+      display: block;
+    }
+    .sbc {
+      padding: 0 12px;
+    }
+    .cus-title p {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  @media(max-width: 500px) {
+    .cus-title p {
+      margin: 5px 0;
+      font-size: 10px;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  @media(max-width: 380px) {
+    .cus-title p {
+      margin: 3px 0;
+      font-size: 8px;
+      letter-spacing: 0;
+    }
+  }
+</style>
+
+<div class="cus-collswrapper">
+  <div class="heading-all"><h3>{{ section.settings.heading }}</h3></div>
+  <div class="cus-colselect sbc">
+    {% for block in section.blocks %}
+      <div class="cus-single">
+        {% assign collection = block.settings.collectionmain %}
+        {% if block.settings.collectionimg != blank %}
+           <a class="cus-pik" href="{{ collection.url }}"><img class="lazyload" loading="lazy" src="{{ block.settings.collectionimg | img_url: '700x700' }}"></a>
+       {% endif %}
+        <a class="cus-title" href="{{ collection.url }}">
+          <p>{{ collection.title }}&nbsp></p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  <!--
+  <div class="cus-btnlr">
+  <button class="slik-left">{% render 'left-small' %}</button>
+  <button class="slik-right">{% render 'right-small' %}</button>
+  </div>
+  --></div>
+
+<script>
+  $('.cus-colselect').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true
+        }
+      }
+    ]
+  });
+
+// $(document).ready(function(){
+// $('.slik-right').click(function(){
+//     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
+// });
+// $('.slik-left').click(function(){
+//     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
+// });
+// });
+</script>
+
+{% schema %}
+  {
+    "name": "Collections Slider Custom",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Collection",
+        "type": "text",
+        "settings": [
+          {
+            "id": "collectionmain",
+            "type": "collection",
+            "label": "Select Collection"
+          }, {
+            "id": "collectionimg",
+            "type": "image_picker",
+            "label": "Collection Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collections Slider Custom",
+        "category": "Any"
+      }
+    ]
+  }
+{% endschema %}

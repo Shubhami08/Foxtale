@@ -1,0 +1,51 @@
+{% assign collection = collections[section.settings.collection] %}
+<section>
+  <div>
+    <div>{{ section.settings.coll-title }}</div>
+    <div>
+      {% if collection != blank %}
+        {% for product in collection.products %}
+          {%- render 'pr_loop_grid_custom',product:product,use_cdt:use_cdt,txt_cd:txt_cd, col:col, col_tb:col_tb, col_mb:col_mb,url_cat:url_cat,sett_equal:sett_equal,show_vendor:show_vendor,inc_price:inc_price,use_rating:use_rating,inc_rating:inc_rating,show_color:show_color,show_cl_type:show_cl_type,show_size:show_size -%}
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div><a href="{{ section.settings.link }}">{{ section.settings.view-more }}</a></div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Collection Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "coll-title",
+        "label": "Collection Title",
+        "info": "Add collection Title"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection",
+        "info": "Add collection"
+      },
+      {
+        "type": "text",
+        "id": "view-more",
+        "label": "Button Text",
+        "info": "Add Button"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "View More link",
+        "info": "Add collection link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Collection Slider"
+      }
+    ]
+  }
+{% endschema %}

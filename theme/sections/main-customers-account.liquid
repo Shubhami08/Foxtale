@@ -1,0 +1,405 @@
+{% comment %}{%- section 'acc_heading' -%}{% endcomment %}
+<div class="container mt__60 mb__60">
+  <style>
+    body {color: #000;}
+    .container.mt__60 {margin-top: 0;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-number {background-color: #e85a28 !important;}
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i:before, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i:before {color: #e85a28 !important;}
+    [data-widget-type="rewards-referral"] {margin-bottom: 50px !important;}
+    [data-widget-type="rewards-summary"] {padding: 0 0 50px !important;}
+    [data-widget-type="rewards-summary"] .stamped-rewards-widget-text {font-size: 18px !important;}
+    [data-widget-type="rewards-summary"] .stamped-rewards-widget-title {font-weight: 500;}
+    [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-sub, [data-widget-type="rewards-referral"] div[data-target-id="section-email-customer"], [data-widget-type="rewards-referral"] div[data-target-id="section-email-friend"], [data-widget-type="rewards-referral"] .stamped-rewards-widget-description, [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-main {display: none !important;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-activities"] .stamped-rewards-widget-heading-main {font-size: 23px !important; font-weight: 500; margin-bottom: 20px !important;}
+    .stamped-rewards-widget-how-it-works {padding: 0 0 50px !important;}
+    .stamped-rewards-widget-btn {border: 3px solid transparent !important; padding: 15px 29px !important;}
+    .stamped-rewards-widget-btn.stamped-rewards-widget-btn-sign-up, .stamped-rewards-widget-btn.stamped-rewards-widget-btn-redeem {color: #fff;}
+    .stamped-rewards-widget-btn.stamped-rewards-widget-btn-sign-in, .stamped-rewards-widget-btn.stamped-rewards-widget-btn-rewards-history {border: 3px solid #000 !important;}
+    .rewards-content {text-align: left;}
+    .rewards-content .reward-box {max-width: 1200px; width: 100%; margin: 0 auto; padding: 20px 20px;}
+    .referal-heading-main, .rewards-heading-main {font-size: 36px; text-align: center; margin: 50px auto 20px; text-transform: initial; letter-spacing: 1px;}
+    #orderHistory {display: none;padding-top: 100px;}
+    #referSection {display: none;padding-top: 75px;} 
+    #rewardActivity {display: none;padding-top: 75px;} 
+    #terms {display: none;padding-top: 75px;} 
+    #earn {display: none;padding-top: 75px;} 
+    
+  </style>
+  {% if customer %}{% else %}
+    <div class="oh pr nt_img_txt" style="margin-left: -15px; margin-right: -15px; padding-bottom: 50px;">
+      <a href="/account/register">
+        <div class="dek_img_slide">
+            <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Refer_and_Earn_Banner-01_1_8fdc03f0-0cd8-43f5-b44b-ab3523721abb.jpg?v=1654858602" alt="Referral and Rewards" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="mb_img_slide">
+            <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Refer_and_Earn_Banner-02_1_8bbaf51c-72fc-4acd-a35c-0b06d8011fb2.jpg?v=1654858646" alt="Referral and Rewards" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  <div id="stamped-rewards-widget" data-widget-type="rewards-summary" data-label-greeting-anonymous="Hello, fellow skincare enthusiast!" data-label-greeting-description="Get amazing discounts on purchases by redeeming your rewards points."></div>
+ {% comment %} <h2 class="referal-heading-main">Refer and Earn</h2>
+  {% if customer %}
+    <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">Get ready to get amazing discounts, exclusive offers and first dibs at all our new launches with this reward program.</p>
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description" style="font-size: 16px; font-weight: 600;">Refer your friends and family to Foxtale and Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and start cashing in the rewards.</p>
+    </div>
+    <div id="stamped-rewards-widget" data-widget-type="rewards-referral"></div>
+  {% else %}
+    <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">Get ready to get amazing discounts, exclusive offers and first dibs at all our new launches with this reward program.</p>
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">If you don’t have an account with us, sign up or if you are an existing customer, just log in, and refer your friends and family to Foxtale.</p>
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description" style="font-size: 16px; font-weight: 600;">You Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and start cashing in the rewards.</p>
+    </div>
+  {% endif %}
+  <h2 class="rewards-heading-main">Rewards Program</h2>
+  <div id="stamped-rewards-widget" data-widget-type="rewards-how-it-works"></div>
+  <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+  <div id="stamped-rewards-widget" data-widget-type="rewards-spendings" data-label-description="1.Sign-in &amp; Click the redeem button&lt;br&gt;2.Copy &amp; Paste your code at checkout&lt;br&gt;3.Claim Rewards"></div>
+  {% if customer %}<div id="stamped-rewards-widget" data-widget-type="rewards-activities"></div>{% endif %}
+  <div class="rewards-content">
+    <div class="reward-box">
+      <p>Hey!</p>
+      <p>Here are some things you need to know to make this rewards program work for you :)</p>
+      <ul>
+        <li>Coins earned on each purchase will be credited to your account once the order is shipped</li>
+        <li>Only 1000 coins can be redeemed in one go.</li>
+        <li>There is a one-month blackout period after signing up for a new account when the earning rule for "Celebrate a birthday" will not be awarded to customers. This is to prevent any potential abuse of the rewards program, by setting a fake birthday to gain additional points.</li>
+        <li>While submitting the review form, please make sure you use the same email address you have used to sign up for the rewards program. It takes 24 hours for the review to be verified and processed</li>
+        <li>If you have redeemed a coupon, but in the process forget to copy the coupon code at checkout, you can always retrieve it from your <a aria-label="REWARDS HISTORY">Rewards History</a> section in your account page</li>
+        <li>If you would like to know more or have any questions regarding our rewards program, please reach out to our Customer team on Whatsapp and Team will be happy to help</li>
+        <li>The Reward Program Coupons cannot be combined with any other discount coupons</li>
+      </ul>
+    </div>
+  </div> {% endcomment %}
+  <div class="row">
+     <div class="col-12 col-md-3 sp-myaccount-sidebar is_sticky_sidebar">
+        <nav class="sp-myaccount-nav mb__30 theiaStickySidebar">
+           <ul class="ul_none is_sticky_inner">
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--dashboard">
+                 <a class="js_add_ld" href="{{ routes.account_url }}">{{ 'customer.account.dashboard' | t }}</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="myFunction()">
+                <a  href="#orderHistory">Order History</a>
+               </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address">
+                 <a class="js_add_ld" href="{{ routes.account_addresses_url }}">{{ 'customer.addresses.title' | t }} ({{ customer.addresses_count }})</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="earnFunct()">
+               <a  href="#earn">Earn Coins</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="rewardFunct()">
+               <a  href="#rewardActivity">Reward Activity</a>
+              </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="showFunction()">
+               <a  href="#referSection">Refer and Earn</a>
+              </li>
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="termsFunct()">
+               <a  href="#terms">Rewards Terms & Conditions</a>
+              </li>
+         {% comment %}  {%- if settings.wishlist_type != '0' -%}
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--wishlist">
+                 <a class="js_link_wis" href="{{ routes.search_url }}/?view=wish">{{ 'customer.account.wishlist' | t }} (<span class="jswcount">0</span>)</a>
+              </li>
+              {%- endif -%} {% endcomment %}
+              {% comment %} kwikpass removed the class "custom-logout-button" from logout button to add kwikpass functionality {% endcomment %}
+              <li class="sp-myaccount-nav-link sp-myaccount-nav-link--customer-logout">
+                <a class="js_add_ld" href="{{routes.account_logout_url}}" data-no-instant>{{ 'customer.account.log_out' | t }}</a>
+              </li> 
+           </ul>
+        </nav>
+     </div>
+     <div class="col-12 col-md-9 sp-myaccount-content is_sticky_content">
+       <div id="earn">
+        <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+       </div>
+        <div class="rewards-content" id="terms">
+    <div class="reward-box">
+      <p>Hey!</p>
+      <p>Here are some things you need to know to make this rewards program work for you :)</p>
+      <ul>
+        <li>Coins earned on each purchase will be credited to your account once the order is shipped</li>
+        <li>Only 1000 coins can be redeemed in one go.</li>
+        <li>There is a one-month blackout period after signing up for a new account when the earning rule for "Celebrate a birthday" will not be awarded to customers. This is to prevent any potential abuse of the rewards program, by setting a fake birthday to gain additional points.</li>
+        <li>While submitting the review form, please make sure you use the same email address you have used to sign up for the rewards program. It takes 24 hours for the review to be verified and processed</li>
+        <li>If you have redeemed a coupon, but in the process forget to copy the coupon code at checkout, you can always retrieve it from your <a aria-label="REWARDS HISTORY">Rewards History</a> section in your account page</li>
+        <li>If you would like to know more or have any questions regarding our rewards program, please reach out to our Customer team on Whatsapp and Team will be happy to help</li>
+        <li>The Reward Program Coupons cannot be combined with any other discount coupons</li>
+      </ul>
+    </div>
+  </div>
+       <div id="rewardActivity">
+         <div id="stamped-rewards-widget" data-widget-type="rewards-activities"></div>
+       </div>
+       <div id="referSection">
+         <h2 class="referal-heading-main">Refer and Earn</h2>
+         <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;" tabindex="0">
+        <p class="stamped-rewards-page-text stamped-rewards-widget-description" style="font-size: 16px; font-weight: 600;">Refer your friends and family to Foxtale and Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and start cashing in the rewards.</p>
+        <div id="stamped-rewards-widget" data-widget-type="rewards-referral"></div>
+        </div>
+      </div>
+       <div id="rewardHistory"></div>
+     <div class="theiaStickySidebar">{%- assign customer_name = customer.name |default:customer.default_address.name |default:customer.email -%}
+         {% comment %}<p>{{ 'customer.account.hello_html' | t:name:customer_name,link:routes.account_logout_url }}</p>{% endcomment %}
+         {%- if settings.enable_sub_reCharge -%}   
+         <!-- Begin ReCharge code -->
+         <p clas="mt__30" id="rc_link_container"><a href="/tools/recurring/login">{{ 'customer.account.manage_subs' | t }}</a></p>
+         <!-- End ReCharge code -->
+         {%- endif -%}
+<!--          <p clas="mt__30"><strong>{{ 'customer.orders.title' | t }}</strong></p> -->
+        <div id="orderHistory">
+         {%- if customer.orders.size != 0 -%}
+            {%- paginate customer.orders by 20 -%}
+               <table class="responsive-table orders-table" tabindex="0">
+                  <thead>
+                    <tr>
+                      <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                      <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                      <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                      <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                      <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                      <th scope="col">{{ 'customer.order.track_shipment' | t }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {%- for order in customer.orders -%}
+                      <tr>
+                        <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                          <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small js_add_ld" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                        </th>
+                        <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                        <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                        <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                        <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                        <td>
+                        {% for line_item in order.line_items %}
+                          {% if line_item.fulfillment.tracking_number %}
+                            <a href="{{ line_item.fulfillment.tracking_url }}">
+                            <p style ="border: 2px solid black; background-color: black; color: white; text-align: center;" >Track Here: #{{ line_item.fulfillment.tracking_number}}</p>
+                           </a>
+                          {% break %}
+                          {% endif %}
+                        {% endfor %}
+                        </td>
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+                  </tbody>
+               </table>
+              {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, cl_a:' js_add_ld' %}{%- endif -%}
+            {%- endpaginate -%}
+         {%- else -%}
+            <div class="shopify-message"><i class="fa fa-check" aria-hidden="true"></i><a class="btn_link fwsb tu mr__10" href="{{routes.all_products_collection_url | sort_by: 'best-selling'}}">{{ 'customer.make_order' | t }}</a> {{ 'customer.orders.none' | t }}</div>
+         {%- endif -%}
+        </div>
+            <div class="table-responsive"  id="dash-board">   
+              <p class="mt__40"><strong>{{ 'customer.account.details' | t }}</strong></p>
+               <table>
+                 <tbody>
+                   <tr>
+                     <td class="text-left"><strong>{{ 'customer.account.name' | t }}</strong></td>
+                     <td>{{ customer_name }}</td>
+                   </tr>
+                   <tr>
+                     <td class="text-left"><strong>{{ 'customer.account.email' | t }}</strong></td>
+                     <td>{{ customer.default_address.email |default:customer.email }}</td>
+                   </tr>
+                   
+                   {%- if customer.default_address != nil -%}
+                      <tr>
+                        <td class="text-left"><strong>{{ 'customer.account.address' | t }}</strong></td>
+                        <td>{{ customer.default_address.address1 }}</td>
+                      </tr>
+                      {%- if customer.default_address.address2 != "" -%}
+                      <tr>
+                        <td class="text-left"><strong>{{ 'customer.account.address_2' | t }}</strong></td>
+                        <td>{{ customer.default_address.address2 }}</td>
+                      </tr>
+                      {%- endif -%}
+                      {%- if customer.default_address.city != blank -%}
+                      <tr>
+                        <td class="text-left"><strong>{{ 'customer.account.country' | t }}</strong></td>
+                        <td>{{ customer.default_address.city}}, {% if address.province_code %}{{customer.default_address.province_code}}, {% endif %}{{customer.default_address.country}}</td>
+                      </tr>
+                      {%- endif -%}
+                      {%- if customer.default_address.zip != blank -%}
+                      <tr>
+                        <td class="text-left"><strong>{{ 'customer.account.zip' | t }}</strong></td>
+                        <td>{{ customer.default_address.zip }}</td>
+                      </tr>
+                      {%- endif -%}
+                      {%- if customer.default_address.phone != blank -%}
+                      <tr>
+                        <td class="text-left"><strong>{{ 'customer.account.phone' | t }}</strong></td>
+                        <td>{{ customer.default_address.phone }}</td>
+                      </tr>
+                      {%- endif -%}
+                   {%- endif -%}
+                 </tbody>
+               </table>
+            </div>
+     </div>
+     </div>
+  </div>
+</div>
+<script>
+
+    var dashboardSection= document.getElementById("dash-board");
+    var orderHistory = document.getElementById("orderHistory");
+    var referSection = document.getElementById("referSection");
+    var rewardActivity = document.getElementById("rewardActivity");
+    var termsSection = document.getElementById("terms");
+    var earnSection = document.getElementById("earn");
+
+
+function myFunction() {
+  var x = document.getElementById("orderHistory");
+
+  if (!orderHistory.style.display || orderHistory.style.display === "none") {
+    orderHistory.style.display = "block";
+  }  if(dashboardSection.style.display = "block"){
+    dashboardSection.style.display = "none";
+  } if (referSection.style.display = "block"){
+    referSection.style.display = "none"
+  }  if (rewardActivity.style.display = "block"){
+    rewardActivity.style.display = "none"
+  }  if (termsSection.style.display = "block"){
+    termsSection.style.display = "none"
+  }  if (earnSection.styleearnSectiondisplay = "block"){
+    earnSection.style.display = "none"
+  } 
+  else {
+    orderHistory.style.display = "none";
+  }
+}
+
+  function showFunction() {
+  var y = document.getElementById("referSection");
+    if (!referSection.style.display || referSection.style.display === "none") {
+    referSection.style.display = "block";
+  }  if(dashboardSection.style.display = "block"){
+    dashboardSection.style.display = "none";
+  }  if (orderHistory.style.display = "block"){
+    orderHistory.style.display = "none"
+  }  if (rewardActivity.style.display = "block"){
+    rewardActivity.style.display = "none"
+  } if (termsSection.style.display = "block"){
+    termsSection.style.display = "none"
+  }  if (earnSection.style.display = "block"){
+    earnSection.style.display = "none"
+  } 
+  else {
+    y.style.display = "none";
+  }
+}
+
+   function rewardFunct() {
+  var r = document.getElementById("rewardActivity");
+    if (!rewardActivity.style.display || rewardActivity.style.display === "none") {
+    rewardActivity.style.display = "block";
+  }  if(dashboardSection.style.display = "block"){
+    dashboardSection.style.display = "none";
+  }  if (orderHistory.style.display = "block"){
+    orderHistory.style.display = "none"
+  }  if (referSection.style.display = "block"){
+    referSection.style.display = "none"
+  }  if (termsSection.style.display = "block"){
+    termsSection.style.display = "none"
+  }  if (earnSection.style.display = "block"){
+    earnSection.style.display = "none"
+  } 
+  else {
+    rewardActivity.style.display = "none";
+  }
+}
+   function termsFunct() {
+  var t = document.getElementById("terms");
+    if (!termsSection.style.display || termsSection.style.display === "none") {
+    termsSection.style.display = "block";
+  }  if(dashboardSection.style.display = "block"){
+    dashboardSection.style.display = "none";
+  }  if (orderHistory.style.display = "block"){
+    orderHistory.style.display = "none"
+  }  if (referSection.style.display = "block"){
+    referSection.style.display = "none"
+  }  if (earnSection.style.display = "block"){
+    earnSection.style.display = "none"
+  } if (rewardActivity.style.display = "block"){
+    rewardActivity.style.display = "none"
+  } 
+  else {
+    termsSection.style.display = "none";
+  }
+}
+
+   function earnFunct() {
+  var e = document.getElementById("earn");
+    if (!earnSection.style.display || earnSection.style.display === "none") {
+      earnSection.style.display = "block";
+  }  if(dashboardSection.style.display = "block"){
+    dashboardSection.style.display = "none";
+  }  if (orderHistory.style.display = "block"){
+    orderHistory.style.display = "none"
+  }  if (referSection.style.display = "block"){
+    referSection.style.display = "none"
+  }  if (termsSection.style.display = "block"){
+    termsSection.style.display = "none"
+  } 
+  else {
+    rewardActivity.style.display = "none";
+  }
+}
+
+// $('#orderHistory').on('focusout', function(event){
+//     $('#orderHistory').hide();
+
+// });
+
+//   $('#referSection').on('focusout', function(event){
+//     $('#referSection').hide();
+// });
+
+
+
+$(document).ready(function() {
+  $(".custom-logout-button").on("click", function() {
+    clearCache();
+    clearCookies();
+    clearSessionStorage(); // Uncomment this line if you want to clear session storage too
+    refreshPage();
+  });
+});
+
+function clearCache() {
+  // Force reload the page and clear the cache by appending a unique query string
+  location.reload(true);
+}
+
+function clearCookies() {
+  const cookies = document.cookie.split(";");
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    const eqPos = cookie.indexOf("=");
+    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+  }
+}
+
+function clearSessionStorage() {
+  sessionStorage.clear();
+}
+
+function refreshPage() {
+  location.reload();
+}
+
+</script>
+
+{%- schema -%}
+{
+  "name": "Account",
+  "tag": "section",
+  "class": "t4s-section t4s-section-customers t4s-container"
+}
+{% endschema %}

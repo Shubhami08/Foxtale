@@ -1,0 +1,99 @@
+{% schema %}
+{
+"name": "Collection Image Banner",
+"blocks": [
+{
+"type": "image",
+"name": "Collection-Banner",
+"settings": [
+{
+"id": "image_desktop",
+"label": "Desktop Image",
+"type": "image_picker"
+},
+{
+"id": "image_mobile",
+"label": "Mobile Image",
+"type": "image_picker"
+},
+{
+"id": "collection_handle",
+"label": "Collection Handle",
+"type": "text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Collection-Image-Banner",
+"category": "Any"
+}
+]
+}
+{% endschema %}
+
+<div class="container-banner">
+  {% for block in section.blocks %}
+  {% if block.settings.collection_handle == collection.handle %}
+  <div class="banner desktop-banner">
+    {% if block.settings.image_desktop != blank %}
+    <img src="{{ block.settings.image_desktop | img_url: 'master' }}" alt="">
+    {% endif %}
+  </div>
+
+  <div class="banner mobile-banner">
+    {% if block.settings.image_mobile != blank %}
+    <img src="{{ block.settings.image_mobile | img_url: 'master' }}" alt="">
+    {% endif %}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  /* Hide mobile banner by default */
+  .mobile-banner {
+    display: none;
+  }
+
+  /* On mobile screens, hide desktop banner and show mobile banner */
+  @media (max-width: 767px) {
+    .desktop-banner {
+      display: none;
+    }
+
+    .mobile-banner {
+      display: block;
+    }
+  }
+
+  /* Banner styles */
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  @media screen and (min-width:319px) and (max-width:768px) {
+    .template-collection .banner {
+      margin: 8px 6px 0px 6px !important;
+    }
+  }
+
+  @media screen and (min-width:768px) and (max-width:2560px) {
+    .template-collection .banner {
+      margin: 28px 28px 0px 28px !important;
+    }
+  }
+
+  .template-collection .banner img {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+
+  /* margin: 8px 6px 0px 6px !important; */
+  /* border-radius: 4px; */
+</style>

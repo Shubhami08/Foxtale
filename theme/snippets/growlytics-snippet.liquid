@@ -1,0 +1,44 @@
+
+                <!---- Growlytics: Integration Script ---------->
+                <script src="https://static.growlytics.in/growlytics.min.js?shop=foxtale-consumer.myshopify.com&id=5ab58r86lckblif05ab58r86lckblif1" async></script>
+                <script>
+
+                    let growlyticsSyncInfo = {
+                        page: '{{request.page_type}}',
+                        cart: {{cart | json}}
+                    };
+
+                    <!---- Check product page ---------->
+                    {% if product %} 
+                        let prodInfo = {{ product | json }};
+                        prodInfo.url = "{{ shop.secure_url }}{{ product.url }}";
+                        prodInfo.price = {{product.price}}/100;
+                        prodInfo.imageUrl = "https:{{ product.featured_image.src|img_url:'grande' }}";
+                        growlyticsSyncInfo.product = prodInfo;
+                    {% endif %}
+
+                    <!---- Check collection page ---------->
+                    {% if collection %} 
+                    growlyticsSyncInfo.collection = {{collection|json}};
+                    {% endif %}
+
+                    <!---- Check for customer ---------->
+                    {% if customer %}
+                        growlyticsSyncInfo.customer = {
+                            id: '{{ customer.id }}', 
+                            info: {
+                            'name': '{{ customer.name }}' ? '{{customer.name}}' : null,
+                            'email': '{{ customer.email }}' ? '{{customer.email}}' : null,
+                            'mobile': '{{ customer.phone }}' ? '{{customer.phone}}' : null,	
+                            'firstName': '{{ customer.first_name }}' ? '{{customer.first_name}}' : null,
+                            'lastName': '{{ customer.last_name }}' ? '{{customer.last_name}}' : null,
+                            'totalOrders': {{ customer.orders_count }},
+                            'lastOrder': '{{ customer.last_order }}' ? '{{ customer.last_order }}' : null,
+                            'totalSpent': {{customer.total_spent }},
+                            'addressList': {{customer.addresses | json}}
+                        }
+                    };
+                    {% endif %}
+                    window.growlyticsShopifySync = growlyticsSyncInfo;
+                </script>
+            

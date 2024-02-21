@@ -1,0 +1,340 @@
+<style>
+.customSingle-template .offer-section-main {
+  background: #FCFCC8;
+  padding: 12px 13px 12px 18px;
+}
+.customSingle-template .offer-title {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 34px;
+  color: #000000;
+  padding-bottom: 12px;
+  padding-left: 16px;
+}
+.customSingle-template #offersectioncodeid {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 28px;
+  color: #2C2C2C;
+  padding-left: 3px;
+  text-align: right;
+}
+.customSingle-template .offer-section-code {
+  line-height: 28px;
+  color: #1877F2;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+}
+.customSingle-template .offer-section-innr {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+}
+.customSingle-template .offer-section-text {
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+  margin-top: 2px;
+}
+.customSingle-template img.offer-section-img {
+  width: 35px;
+  height: 21px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+.customSingle-template .table-custom{
+  margin-bottom : 5px !important;
+  border: none !important;
+}
+.customSingle-template .table-custom td{
+  padding: 2px !important;
+  border: none !important;
+}
+.customSingle-template #codeprime, .customSingle-template #codeseconde, .customSingle-template #codethirde {
+  text-align: right;
+}
+.customSingle-template span.offer-text-main.offer-section-text-custom, .customSingle-template span.offer-text-main.offer-section-text-upsell {
+  color: #2C2C2C;
+  font-size: 11px;
+  font-weight: 500;
+}
+.customSingle-template .newpp {
+  padding: 0;
+}
+.customSingle-template .newpdpxtra {
+  border-radius: 4px;
+  border: 1px solid #6E6E6E;
+  margin: 12px 0 12px 12px;
+  padding: 7px 18px 7px 18px;
+  align-items: baseline;
+}
+.customSingle-template .one-pik {
+  position: relative;
+  line-height: 0;
+}
+.customSingle-template .one-pik:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background-color: #FF5400;
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+  clip-path: circle(50% at 50% 50%);
+}  
+.customSingle-template .two-pik {
+  position: relative;
+  line-height: 0;
+}
+.customSingle-template .two-pik:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: 15px;
+  background-color: #FF5400;
+  width: 14px;
+  height: 14px;
+  opacity: 0.3;
+  clip-path: inset(5% 20% 15% 10%);
+}
+.customSingle-template .three-pik {
+  position: relative;
+  line-height: 0;
+}
+.customSingle-template .three-pik:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  background-color: #FF5400;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+  
+@media (min-width: 768px) and (max-width: 905px){
+  .customSingle-template .offer-text-main {
+   font-size: 90% !important; 
+  }
+}
+  
+@media (max-width: 767px){
+  .offer-title span {
+    height: 20px;
+    padding-right: 0px !important;
+    /* width: 20px; */
+    display: inline-block;
+  }
+  .customSingle-template .offer-title {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 34px !important;
+    color: #2c2c2c !important;
+    padding-bottom: 0px !important;
+    padding-left: 7px !important;
+  }
+  .customSingle-template .offer-text-main {
+    font-size: 95% !important; 
+  }
+  .customSingle-template #codeprime, .customSingle-template #codeseconde, .customSingle-template #codethirde {
+    text-align: right;
+  }
+  .customSingle-template .offer-text-main {
+      font-size: 12px !important;
+  }
+  .customSingle-template .offer-section-code {
+    font-size: 10px !important;
+  }
+  .customSingle-template .table-custom td {
+    padding: 0px !important;
+  }
+  .customSingle-template .pr-0px {
+    padding-right: 0px !important;
+  }
+  .customSingle-template .newpdpxtra {
+    margin: 0px 0 18px 0px !important;
+    padding: 13px 0px 13px 0px;
+    border-top: 3px solid #fafafa;
+    border-bottom: 3px solid #fafafa;
+    border-left: none;
+    border-right: none;
+  }
+  .customSingle-template .offer-section-text {
+    padding: 0 20px;
+  }
+  .customSingle-template #offersectioncodeid {
+    font-size: 10px;
+    line-height: 35px;
+    padding: 0;
+  }
+  .row.one-two1, .row.offer-2-row {
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
+
+<div class="offer-section-main new0ffer">
+  <div class="row">
+    <div class="col-6 offer-title">
+     <span style="line-height: 0; padding-right: 10px;">{% render 'offerz' %}</span>Offers</div>
+    <div class="col-6" id="offersectioncodeid">
+      Tap below to copy the coupon code
+    </div>
+  </div>
+  <div class="two-productscampaign">
+    <div class="row one-two1">
+    <div class="col-7 pr-0px">
+     <span class="offer-text-main offer-section-text-custom"><b>BUY 2</b> @ ₹799</span>
+    </div>
+    <div class="col-5 pr-0px" id="codeprime"> 
+  <span class="offer-section-code" id="offersectioncustom">CODE: <span id="offercustom" onclick="copyDivToClipboard()"></span></span><span id="codeCopyCust" class="copiedcode_text">Code Copied</span>
+      
+    </div>
+  </div>
+  <!-- <div class="row one-two2">
+    <div class="col-12">
+    <span class="or-text" style="padding-left:10px;font-size:12px;"><strong></strong></strong></span>
+    </div>
+  </div> -->
+  <div class="row offer-2-row">
+    <div class="col-7 pr-0px" style="padding-right:0px !important;">
+     <span class="offer-text-main offer-section-text-upsell"><b>BUY 3</b> @ ₹1099</span>    
+    </div>
+    <div class="col-5 pr-0px" id="codeseconde">
+      <span class="offer-section-code" id="offerupsellcode">CODE: <span id="offerupsell" onclick="copyDivToClipboard()"></span></span><span id="codeCopy" class="copiedcode_text" style="display:none;">Code Copied</span>    
+    </div>
+  </div>
+ </div>
+
+ <!-- <div class="row">
+    <div class="col-12">
+    <span class="or-text" style="padding-left:10px;font-size:12px;"><strong></strong></strong></span>
+    </div>
+  </div>  -->
+  <div class="row offer-2-row">
+    <div class="col-7 pr-0px" style="padding-right:0px !important;">
+     <span class="offer-text-main offer-section-text-upsell">15% Off *(10% + 5% on Prepaid)</span>     
+    </div>
+    <div class="col-5 pr-0px" id="codethirde">
+     <span class="offer-section-code" id="offerupsellcode1">CODE: <span id="offerupsell1" onclick="copyDivToClipboard()"></span></span><span id="codeCopy1" class="copiedcode_text" style="display:none;">Code Copied</span>
+      
+    </div>
+  </div>
+</div>
+
+<div class="row newpdpxtra">
+  <div class="col-4 newpp" style="border-right: 1px solid;">
+    <div class="offer-section-innr">
+        <span class="one-pik">{% render 'rupee' %}</span>
+        <span class="offer-section-text">REWARDS ON ALL ORDERS</span>
+      </div>
+  </div>
+  <div class="col-4 newpp">
+    <div class="offer-section-innr">
+      <span class="two-pik">{% render 'truck' %}</span>
+      <span class="offer-section-text">NO DELIVERY CHARGES</span>   
+    </div>
+  </div>
+  <div class="col-4 newpp" style="border-left: 1px solid;">
+    <div class="offer-section-innr">
+     <span class="three-pik">{% render 'gift' %}</span>
+     <span class="offer-section-text">FREE GIFT ON ALL ORDERS</span> 
+    </div>
+  </div>
+</div>
+
+<script>
+const span = document.getElementById("offersection1");
+  $('#offercustom').html('VDAY799');
+  $('#offerupsell').html('VDAY1099');
+  $('#offerupsell1').html('GLOW15');
+  $('#codeCopyCust').hide();
+ $('#offersectioncustom').click(function(){
+  var text = $("#offercustom").get(0)
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+       
+        document.execCommand('copy');
+ $('#codeCopyCust').show();
+ $('#offersectioncustom').hide();
+  setTimeout(function() {
+             // myText.innerHTML = span.innerHTML ;
+             $('#offersectioncustom').show();
+             $('#codeCopyCust').hide();
+          }, 1000)
+        
+});
+  
+ $('#offerupsellcode').click(function(){
+  var text = $("#offerupsell").get(0)
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+       
+        document.execCommand('copy');
+ $('#codeCopy').show();
+ $('#offerupsellcode').hide();
+  setTimeout(function() {
+             // myText.innerHTML = span.innerHTML ;
+             $('#offerupsellcode').show();
+             $('#codeCopy').hide();
+          }, 1000)
+        
+});
+
+ $('#offerupsellcode1').click(function(){
+  var text = $("#offerupsell1").get(0)
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+       
+        document.execCommand('copy');
+ $('#codeCopy1').show();
+ $('#offerupsellcode1').hide();
+  setTimeout(function() {
+             // myText.innerHTML = span.innerHTML ;
+             $('#offerupsellcode1').show();
+             $('#codeCopy1').hide();
+          }, 1000)
+        
+});
+
+</script>
+
+<!-- Growlytics -->
+<script>
+$(document).ready(function () {
+    $( '.offercustom').on("click", function(){
+     Growlytics.events.track("Copy Code 1",{
+       'clicks': "Clicks",                    
+      'Product Name': prodName
+     });
+    });
+     });
+</script>
+
+<script>
+$(document).ready(function () {
+    $( '#offerupsellcode').on("click", function(){
+     Growlytics.events.track("Copy Code 2",{
+       'clicks': "Clicks", 
+      'Product Name': prodName
+     });
+    });
+     });
+</script>
+<!-- end -->

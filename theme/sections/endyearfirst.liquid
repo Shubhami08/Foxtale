@@ -1,0 +1,393 @@
+<style>
+.head-yearend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.head-yearend h3 {
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.head-yearend img {
+/* width: 100%;
+   height: 100%; */
+}
+.second-yearend {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 3rem;
+}
+.second-yearend {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 3rem 5rem 5rem 5rem;
+  margin: 1.5rem 0 0 0;
+}
+.second-yearend h4 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+.second-yearend h6 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2c2c;
+  max-width: 775px;
+  margin: 0 auto;
+}
+.four-yearend {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 8rem 5rem 5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.four-yearend img {
+  width: 350px;
+  height: 350px;
+}
+.four-yearend h4 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  text-align: left;
+  max-width: 500px;
+  padding-left: 5rem;
+}
+.four-yearend h6 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #2c2c2c;
+  max-width: 365px;
+  margin: 0 auto 20px 0;
+  padding-left: 5rem;
+}
+.four-yearend a.button {
+  background-color: #fb99b3;
+  color: #ffffff;
+  border: none;
+  line-height: 28px;
+  border-radius: 0;
+  font-size: 20px;
+  padding: 10px 12px 10px 12px;
+  margin-left: -45px;
+}
+
+.main-yearend {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 45px;
+  padding: 5rem 8rem;
+}
+.head-yearend img {
+  width: 50%;
+  height: 50%;
+}
+.inner-yearend {
+  display: flex;
+  flex-direction: column;
+}
+.yearend-image img {
+  width: 100%;
+  height: 100%;
+}
+.yearend-text {
+
+}
+.yearend-text h4 {
+  padding: 1rem 6rem;
+}
+.yearend-text h6 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 3rem 3rem 3rem;
+}
+.lstyrbtn {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.lstyrbtn a.button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  line-height: 28px;
+  border-radius: 0;
+  font-size: 20px;
+  padding: 10px 12px 10px 12px;
+}
+.lstyrbtn a.button p {
+  margin: 0;
+  font-weight: 300;
+}
+.blk-1 {
+  background-color: #d5e4fd;
+}
+.blk-2 {
+  background-color: #fbd6b0;
+}
+.blk-3 {
+  background-color: #fdfcd5;
+}
+.blk-4 {
+  background-color: #fbe0c1;
+}
+.blk-5 {
+  background-color: #bdfabf;
+}
+.blk-6 {
+  background-color: #f1ddf4;
+}
+.blk-7 {
+  background-color: #fecfcd;
+}
+.blk-8 {
+  background-color: #b0effa;
+}
+.blk-9 {
+  background-color: #fbe0c1;
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .second-yearend h6 {
+    font-size: 14px;
+    max-width: 400px;
+  }
+  .main-yearend {
+      grid-template-columns: 1fr;
+      padding: 5rem 3rem;
+  }
+  .four-yearend {
+    background-color: #f7f7f7;
+    padding: 6rem 5rem 4rem 5rem;
+  }
+  .four-yearend h6 {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .main-yearend {
+    grid-gap: 20px;
+    padding: 5rem 5rem;
+  }
+  .yearend-text h4 {
+    padding: 2rem 2rem 1rem;
+  }
+  .yearend-text h6 {
+    font-size: 12px;
+    padding: 0 3rem 3rem 3rem;
+  }
+  .four-yearend h4 {
+    font-size: 22px;
+  }
+  .four-yearend h6 {
+    max-width: 600px;
+  }
+}
+  
+@media (max-width: 1000px) {
+  .head-yearend h3 {
+    font-size: 18px;
+  }
+  .head-yearend img {
+    width: 88%;
+    height: 50%;
+  }
+  .second-yearend {
+    background-color: #f7f7f7;
+    padding: 3rem 2rem 5rem 2rem;
+  }
+  .second-yearend h4 {
+    font-size: 24px;
+  }
+  .second-yearend h6 {
+    font-size: 14px;
+    max-width: 345px;
+  }
+  .main-yearend {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem;
+  }
+  .yearend-image img {
+    
+  }
+  .yearend-text h4 {
+    font-size: 22px;
+    padding: 3rem 3rem 1rem 3rem;
+  }
+  .yearend-text h6 {
+    letter-spacing: 0.6px;
+    padding: 0 4rem 3rem 4rem;
+  }
+  .four-yearend {
+    padding: 2rem 2rem 5rem 2rem;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .four-yearend h4 {
+    font-size: 21px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .four-yearend h6 {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    padding-left: 0;
+  }
+  .four-yearend a.button {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+</style>
+ 
+<div class="head-yearend">  
+  <h3>{{ section.settings.heading }}</h3>
+  {% if section.settings.blwmn != blank %}
+    <img src="{{ section.settings.blwmn | img_url: 'master' }}">
+  {% endif %}
+</div>
+<div class="second-yearend">
+  <h4>{{ section.settings.skndtcxtbld }}</h4>
+  <h6>{{ section.settings.skndtxtsml }}</h6>
+</div>
+<div class="main-yearend">
+  {% for block in section.blocks %}
+      <div class="inner-yearend blk-{{ forloop.index }}">
+        <div class="yearend-image">
+          <img src="{{ block.settings.mnimg | img_url: 'master' }}">
+        </div>
+        <div class="yearend-text">            
+              <h4>{{ block.settings.mntxt }}</h4>
+              <h6>{{ block.settings.mnprgrph }}</h6>           
+        </div>
+      </div>
+  {% endfor %}
+</div>
+<div class="four-yearend">
+  <div><img src="{{ section.settings.lstimg | img_url: 'master' }}"></div>
+  <div>
+    <h4>{{ section.settings.lsthd }}</h4>
+    <h6>{{ section.settings.lsttxt }}</h6>
+    <a class="button">{{ section.settings.btntxt }}</a>
+  </div>
+</div>
+<div class="lstyrbtn" style="background-color: #f7f7f7;">
+  <a class="button">{{ section.settings.rllastbtn }}</a>
+  <p style="text-align: center; margin-bottom: 0px; margin-top: 15px; color: #2c2c2c;">Apply code at checkout. Cannot be combined with other coupons.</p>
+</div>
+
+<!-- Growlytics -->
+<script>
+  $(document).ready(function () {
+    $( '.shop-all-qty-cart-btn').on("click", function(){
+    var prodName = $(this).data("data-handle");
+    Growlytics.events.track("Befor After ATC N",{
+        'clicks': "Clicks",                    
+    'Product Name': prodName
+    });
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $( '.round-productimg').on("click", function(){
+    var prodName = $(this).data("title");
+    Growlytics.events.track("Befor After Image Clicks N",{
+      'clicks': "Clicks",
+    'Product Name': prodName
+    });
+    });
+  });
+</script>
+<!-- end -->
+
+{% schema %}
+  {
+    "name": "End Year Ones",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      },
+      {
+        "id": "blwmn",
+        "type": "image_picker",
+        "label": "Select Image"
+      },
+      {
+        "id": "skndtcxtbld",
+        "type": "text",
+        "label": "Heading One"
+      },
+      {
+        "id": "skndtxtsml",
+        "type": "text",
+        "label": "Enter text"
+      },
+      {
+        "id": "lstimg",
+        "type": "image_picker",
+        "label": "Bottom Image"
+      },
+      {
+        "id": "lsthd",
+        "type": "text",
+        "label": "Bottom Goodbye Text"
+      },
+      {
+        "id": "lsttxt",
+        "type": "text",
+        "label": "Bottom Goodbye Paragraph"
+      },
+      {
+        "id": "btntxt",
+        "type": "text",
+        "label": "Bottom Button text"
+      },
+      {
+        "id": "rllastbtn",
+        "type": "richtext",
+        "label": "Last Button"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Content",
+        "type": "text",
+        "settings": [
+          {
+            "id": "mnimg",
+            "type": "image_picker",
+            "label": "Main Image"
+          },
+          {
+            "id": "mntxt",
+            "type": "text",
+            "label": "Heading Block"
+          },
+          {
+            "id": "mnprgrph",
+            "type": "text",
+            "label": "Enter Block text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "End Year Ones",
+        "category": "Any"
+      }
+    ]
+  }
+{% endschema %}

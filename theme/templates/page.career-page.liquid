@@ -1,0 +1,40 @@
+{% section 'slideshow' %}
+<div class="container-career">
+{% section 'text-button-section' %}
+{% section 'benefits-and-perks' %}
+{% section 'life-at-foxtale' %}
+{% section 'join-our-foxtale-squad' %}
+</div>
+{% section 'career-page-form' %}
+
+<style>
+  .container-career{
+      padding: 20px 60px;
+  }
+  .career-page-template .t4s-slideshow-item{
+      padding: 12px;
+  }
+  .career-page-template .t4s-slideshow-inner img{
+      border-radius: 4px;
+  }
+
+  /* Media querys */
+
+  @media screen and (max-width:768px){
+    .container-career {
+        padding: 0px 12px 12px 12px;
+    }
+    .career-page-template .t4s-slideshow-item{
+        padding: 6px;
+    }
+    .image-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .image-block h2 {
+        font-size: 12px;
+        font-weight: 400;
+    }   
+  }  
+</style>

@@ -1,0 +1,291 @@
+<div class="foxtale-squad-main">
+  <div class="foxtale-squad-container">
+   <div class="foxtale-squad-content"> 
+      <div class="foxtale-squad-heading">
+        <div class="foxtale-squad-main-heading">{{ section.settings.mainheading }}</div>
+        <div class="foxtale-squad-sub-heading">{{ section.settings.subheading }}</div>
+      </div>
+      <div class="foxtale-squad-job-main">
+       {% for block in section.blocks %} 
+        <div class="foxtale-squad-jobs" {% if forloop.index > 3 %}style="display: none;"{% endif %}>
+         <div class="foxtale-squad-jobs-inner">
+            <div class="foxtale-squad-jobrole-experience">
+              <div class="foxtale-squad-job-role">{{ block.settings.job-role }}</div>
+              <div class="foxtale-squad-work-experience">{{ block.settings.work-experience }}</div>
+            </div>
+            <div class="foxtale-squad-location">
+              <div class="foxtale-squad-location-heading">Location</div>
+              <div class="foxtale-squad-location-place">{{ block.settings.location }}</div>
+            </div>
+            <div class="foxtale-squad-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M8.94995 4.40646L15.47 10.9265C16.24 11.6965 16.24 12.9565 15.47 13.7265L8.94995 20.2465" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class='foxtale-squad-job-description' style='display:none'>
+            <div class='foxtale-squad-job-details'>
+             <h3 class="abt-job">{{ block.settings.hdngdet }}</h3>
+             <p>{{ block.settings.content }}</p>
+            </div>
+            <div class='foxtale-squad-cv-upload'>
+              {{ section.settings.form }}
+            </div>
+          </div>
+        </div>
+       {% endfor %}
+      </div>
+      {% assign block_count = section.blocks.size %}
+      {% if block_count > 3 %}
+         <div class=" foxtale-squad-view-more">View More</div>
+         <div class="foxtale-squad-view-less" style="display: none;">View Less</div>
+      {% endif %}
+   </div>  
+   <div class="foxtale-squad-image">
+     <img src="{{ section.settings.image | img_url: 'master' }}" class="foxtale-squad-image-main" alt="{{ section.settings.image }}" />
+   </div>
+  </div>
+</div>
+                
+{% stylesheet %}
+.foxtale-squad-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.foxtale-squad-main-heading {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.foxtale-squad-sub-heading {
+  color: #2C2C2C;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.foxtale-squad-heading {
+  margin-bottom: 18px;
+}
+.foxtale-squad-image {
+  display: none;
+}
+.foxtale-squad-jobs {
+  border-bottom: 1px solid #CBCBCB;
+  background: #FFF;
+  padding: 10px 16px;
+}
+.foxtale-squad-jobs-inner {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  align-items: center;
+}
+.foxtale-squad-jobrole-experience {
+  text-align: left;
+}
+.foxtale-squad-location {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.foxtale-squad-arrow {
+  text-align: right;
+}
+.foxtale-squad-view-more {
+  color: #4285F4;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 25px;
+}
+.foxtale-squad-view-less {
+  color: #4285F4;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 25px;
+}
+.foxtale-squad-job-role {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+.foxtale-squad-work-experience, .foxtale-squad-location-place {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.foxtale-squad-location-heading {
+  font-size: 10px;
+  font-weight: 400;
+  color: #000;
+}
+.abt-job {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+button.foxtale-squad-button {
+  padding: 8px 40px;
+  margin-top: 6px;
+}
+.foxtale-squad-job-details {
+  margin-top: 8px;
+}
+.foxtale-squad-job-details ul li {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: disc !important;
+}
+.foxtale-squad-job-details p strong, .foxtale-squad-job-details p {
+  color: #000;
+}
+  
+
+@media screen and (max-width:768px){
+  .foxtale-squad-jobs-inner {
+    align-items: end;
+  }
+  .foxtale-squad-container {
+    flex-direction: column;  
+  }
+  .foxtale-squad-main-heading {
+    font-size: 18px;
+  }
+  .foxtale-squad-job-role {
+    font-size: 12px;
+  }
+  .foxtale-squad-location-heading {
+    font-size: 9px;
+  }
+  .foxtale-squad-sub-heading {
+    font-size: 13px;
+  }
+  .foxtale-squad-image {
+    display: block;
+    padding-top: 12px;
+  }
+  .foxtale-squad-image img {
+    width: 100%;
+  }
+  .foxtale-squad-work-experience, .foxtale-squad-location-place {
+    font-size: 12px;
+  }
+  .foxtale-squad-view-more, .foxtale-squad-view-less{
+    padding-bottom: 12px;
+  }
+}
+   .foxtale-squad-jobs:nth-child(n+4) {
+    display: none;
+   }
+  .foxtale-squad-jobs-inner.active .foxtale-squad-arrow svg {
+    transform: rotate(90deg);
+  }
+{% endstylesheet %}
+{% javascript %}
+  $(document).ready(function(){
+    $('.foxtale-squad-jobs-inner').click(function(){
+      $(this).siblings().slideToggle();
+      $(this).toggleClass("active");
+    });
+  
+  });
+   //for view view more functionality
+   $(document).ready(function() {
+      const viewMoreButton = $('.foxtale-squad-view-more');
+      const viewLessButton = $('.foxtale-squad-view-less');
+
+      viewMoreButton.on('click', function() {
+        $('.foxtale-squad-jobs').show(); // show all jobs
+        viewMoreButton.hide();           // hide the "View More" button
+        viewLessButton.show();           // show the "View Less" button
+      });
+
+      viewLessButton.on('click', function() {
+        $('.foxtale-squad-jobs').each(function(index) {
+            if (index >= 3) {
+                $(this).hide();          // hide jobs beyond the third one
+            }
+        });
+        viewLessButton.hide();           // hide the "View Less" button
+        viewMoreButton.show();           // show the "View More" button
+      });
+   });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Join Our Foxtale Squad",
+  "settings": [
+     {
+      "type": "text",
+      "id": "mainheading",
+      "label": "Main Heading",
+      "default": "Default Heading"
+     },
+     {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub Heading",
+      "default": "Sub Heading"
+     },
+     {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Upload Image"
+     }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Job-fields",
+      "settings": [
+        {
+          "type": "text",
+          "id": "job-role",
+          "label": "Job Role",
+          "default": "JOb role"
+        },
+        {
+          "type": "text",
+          "id": "work-experience",
+          "label": "Work Experience",
+          "default": "Work Experience"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Job Location",
+          "default": "JOb Location"
+        },
+        {
+          "type": "text",
+          "id": "hdngdet",
+          "label": "Heading",
+          "default": "Heading Role"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "form",
+          "label": "Form"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+        "name": "Join Our Foxtale Squad"
+      }
+    ]
+}
+{% endschema %}

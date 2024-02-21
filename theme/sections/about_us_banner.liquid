@@ -1,0 +1,35 @@
+{% if section.settings.img_desk != blank %}
+  <div class="about-main-banner">
+    <div class="desktop-banner">
+      <img src="{{ section.settings.img_desk | img_url: 'master'}}" alt="{{ section.settings.img_desk | remove: 'files/' }}"/>
+    </div> 
+    {% if section.settings.img_mob != blank %}
+      <div class="mobile-banner">
+        <img src="{{ section.settings.img_mob | img_url: 'master'}}" alt="{{  section.settings.img_mob | remove: 'files/' }}"/>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "About Us Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img_desk",
+        "label": "Desktop Img"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_mob",
+        "label": "Mobile Img"
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Us banner"
+      }
+    ]
+  }
+{% endschema %}

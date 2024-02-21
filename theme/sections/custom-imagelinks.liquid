@@ -1,0 +1,373 @@
+<style>
+  .cus-collswrapperz {
+    position: relative;
+    padding: 15px 0 30px;
+  }
+  .mftt {
+    padding: 0 0 0 60px;
+  }
+  .cus-pikz {
+    background: #FFFFFF;
+    border-bottom: 0;
+    padding: 0;
+    display: block;
+  }
+  .cus-singlez {
+    /* margin: 0 27px; */
+    position: relative;
+    border-radius: 8px;
+  }
+  .cus-singlez a img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .cus-titlez {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    border-radius: 8px;
+  }
+  .inside-mft {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+  .inside-mft a {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 63px;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  .cus-collswrapperz .slick-list {
+    margin: 0 -3px;
+  }
+  .cus-collswrapperz .slick-slide {
+    margin: 0 3px;
+    overflow: hidden;
+  }
+  .cus-collswrapperz .slick-disabled {
+    display: none !important;
+  }
+  .cus-collswrapperz .slick-prev {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    left: 5rem;
+    padding: 0;
+    z-index: 1;
+    color: transparent;
+  }
+  .cus-collswrapperz .slick-prev:before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385');
+    background-size: 30px 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "";
+  }
+  .cus-collswrapperz .slick-next {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    padding: 0;
+    z-index: 1;
+    color: transparent;
+  }
+  .cus-collswrapperz .slick-next:before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385');
+    background-size: 30px 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "";
+  }
+  .cus-colselectz {
+    display: block !important;
+  }
+  .cusmall-colselectz {
+    display: none !important;
+  }
+  .cus-singlez:hover .cus-pikz img {
+    transform: scale(1.1);
+    transition: ease-in 0.5s;
+  }
+
+  @media(max-width: 1200px) and (min-width: 768px) {}
+
+  @media(max-width: 768px) {
+    .cus-colselectz {
+      display: none !important;
+    }
+    .cusmall-colselectz {
+      display: block !important;
+    }
+    .cus-collswrapperz {
+      padding: 0 0 32px;
+    }
+    .cus-headz {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      padding-left: 18px;
+      margin-bottom: 15px;
+    }
+    .inside-mft a {
+      line-height: 36px;
+      font-size: 16px;
+    }
+    .mftt {
+      padding: 0 0 0 12px;
+    }
+    .cus-collswrapperz .slick-list {
+      margin: 0 0 0 -6px !important;
+      padding: 0 40px 0 0 !important;
+    }
+    .cus-collswrapperz .slick-slide {
+      margin: 0 0 0 6px;
+    }
+    .cus-collswrapperz .slick-next {
+      width: 25px;
+      height: 25px;
+      top: 38%;
+      right: 18px;
+    }
+    .cus-collswrapperz .slick-prev {
+      width: 25px;
+      height: 25px;
+      top: 38%;
+      left: 0;
+    }
+    .cus-collswrapperz .slick-prev:before {
+      background-size: 25px 25px;
+      width: 25px;
+      height: 25px;
+      content: "";
+      display: none;
+    }
+    .cus-collswrapperz .slick-next:before {
+      background-size: 25px 25px;
+      width: 25px;
+      height: 25px;
+      content: "";
+      display: none;
+    }
+  }
+
+  @media(min-width: 1500px) {
+    .cus-collswrapperz .slick-prev:before {
+      background-size: 48px 48px;
+      width: 48px;
+      height: 48px;
+    }
+    .cus-collswrapperz .slick-next:before {
+      background-size: 48px 48px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>
+
+<div class="cus-collswrapperz">
+  <div class="heading-all"><h3>{{ section.settings.heading }}</h3></div>
+  <div class="cus-colselectz mftt">
+    {% for block in section.blocks %}
+      <div class="cus-singlez">
+        {% if block.settings.collectionimg != blank %}
+          <a class="cus-pikz" href="{{ block.settings.imglink }}"><img src="{{ block.settings.collectionimg | img_url: 'master' }}"></a>
+        {% endif %}
+        <a class="cus-titlez" href="{{ block.settings.imglink }}"></a>
+        <div class="inside-mft">
+          <a href="{{ block.settings.imglink }}">{{ block.settings.txtblw }}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="cusmall-colselectz mftt">
+    {% for block in section.blocks %}
+      <div class="cus-singlez">
+        {% if block.settings.collectionimgz != blank %}
+          <a class="cus-pikz" href="{{ block.settings.imglink }}"><img src="{{ block.settings.collectionimgz | img_url: 'master' }}"></a>
+        {% endif %}
+        <a class="cus-titlez" href="{{ block.settings.imglink }}"></a>
+        <div class="inside-mft">
+          <a href="{{ block.settings.imglink }}">{{ block.settings.txtblw }}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <!--   <div class="cus-btnlrz">
+  <button class="slik-leftz">{% render 'left-small' %}</button>
+  <button class="slik-rightz">{% render 'right-small' %}</button>
+  </div> --></div>
+
+<script>
+  $('.cus-colselectz').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true
+        }
+      }
+    ]
+  });
+
+  $('.cusmall-colselectz').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true
+        }
+      }
+    ]
+  });
+
+// $(document).ready(function(){
+// $('.slik-rightz').click(function(){
+//     $(this).parent('.cus-btnlrz').siblings('.cus-colselectz').children('.slick-next').click()
+// });
+// $('.slik-leftz').click(function(){
+//     $(this).parent('.cus-btnlrz').siblings('.cus-colselectz').children('.slick-prev').click()
+// });
+// });
+</script>
+
+<!-- Growlytics -->
+<!-- <script>
+$(document).ready(function () {
+    $( '.cus-title').on("click", function(){
+     var prodName = $(this).data("title");
+     Growlytics.events.track("Shop by concern HP,{
+      'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+     });
+</script> -->
+<!-- end -->
+
+{% schema %}
+  {
+    "name": "Custom FoxTales",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Image",
+        "type": "text",
+        "settings": [
+          {
+            "id": "imglink",
+            "type": "url",
+            "label": "Add Link"
+          }, {
+            "id": "collectionimg",
+            "type": "image_picker",
+            "label": "Add Image Desktop"
+          }, {
+            "id": "collectionimgz",
+            "type": "image_picker",
+            "label": "Add Image Mobile"
+          }, {
+            "id": "txtblw",
+            "type": "text",
+            "label": "Add Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom FoxTales",
+        "category": "Any"
+      }
+    ]
+  }
+{% endschema %}

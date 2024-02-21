@@ -1,0 +1,31 @@
+{% liquid 
+  assign mode = 'menu'
+  assign text_all_topics = 'All'
+%}
+
+<style>
+  .blog-filters-wrapper
+</style>
+
+<div class="blog-filters-wrapper">
+  {% if mode == 'menu' %}
+    <ul class="list-unstyled">
+      <li>
+        <a href="{{ blog.url }}" 
+        class="link link--text list-menu__item list-menu__item--link {% unless current_tags %}list-menu__item--active{% endunless %}"
+        aria-current="{% unless current_tags %}page{% endunless %}">
+          {{ text_all_topics }}
+        </a>
+      </li>
+      {% for tag in blog.all_tags %}
+        <li>
+          <a href="{{ blog.url }}/tagged/{{ tag | handleize }}" 
+          class="link link--text list-menu__item list-menu__item--link {% if current_tags contains tag %}list-menu__item--active{% endif %}"
+          aria-current="{% if current_tags contains tag %}page{% endif %}">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>      
+  {% endif %}
+</div>

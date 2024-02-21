@@ -1,0 +1,797 @@
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+>
+{% assign inc_pr = section.settings.pr_des %}
+<div id="custom_routine_slider_main" class="routine_slider_main">
+  <section>
+    <div class="container custom_design_{{inc_pr}} foxtale_scroll">
+      {% if section.settings['slider-title'] != blank %}
+        <div class="best-title">
+          <h3>{{ section.settings['slider-title'] }}</h3>
+        </div>
+      {% endif %}
+      <div class="tab-slider-main">
+        <div class="tab-list-title">
+          <span class="collection-name">Routines for </span>
+          <select class="tab-content" onchange="tabCustoms(event);this.dataset.chosen = this.value;">
+            {% for block in section.blocks %}
+              {% if block.type == 'tabs' %}
+                {% if block.settings['tab-title'] != blank %}
+                  <option
+                    class="tab-links{% if forloop.first %} active{% endif %}"
+                    data-tab="tabs-{{ forloop.index }}"
+                    value="val-{{ forloop.index }}"
+                  >{{ block.settings['tab-title'] }}</option>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </select>
+          <div class="tab-content-bg-icon" style="display:none !important"></div>
+        </div>
+        <div class="product-tabs-content design_{{inc_pr}}">
+          {% if inc_pr == '2' %}
+            {% for block in section.blocks %}
+              {% assign dataTab = block.settings['tab-title'] %}
+              {% if block.type == 'content' %}
+                {% assign len = forloop.length | divided_by: 2 %}
+                <div class="tabcontents" id="tabs-{{ forloop.index | minus: len }}">
+                  {% assign collection = collections[block.settings.collection] %}
+                  {% if collection != blank %}
+                    <div class="products-grid-item-main pdp-custom-collection-{{inc_pr}}" data-id : {{ product.id }}>
+                      {%- for product in collection.products limit: 10 -%}
+                        <script
+                          src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+                          integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+                          crossorigin="anonymous"
+                          referrerpolicy="no-referrer"
+                        ></script>
+                        <div class="products-grid-item">
+                          <div class="product-innr">
+                            {% if product.metafields.custom.pr_excerpt != blank %}
+                              <h6 class="pr-{{ product.metafields.custom.pr_excerpt }}">
+                                {{ product.metafields.custom.pr_excerpt }}
+                              </h6>
+                            {% endif %}
+                            <div class="product-image pr oh lazyloadt4sed product-innr-top">
+                              <a href="{{product.url}}">
+                                {%- render 'product_labels', on: 'singe', product: product -%}
+                                <img
+                                  class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
+                                  src="{{ product.images[0] | product_img_url: "1000x1000" }}"
+                                  alt=""
+                                >
+                                <img
+                                  class="pr-img-second lazyload" loading="lazy" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
+                                  src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
+                                  alt=""
+                                >
+                              </a>
+                              <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
+                            </div>
+                            <div
+                              class="product-info mt__15 mb__10 product-innr-bottom"
+                              data-pr-id="{{ product.handle }}"
+                            >
+                              <div class="pr-det">
+                                <h3 class="product-title pr fs__14 mg__0 fwm">
+                                  <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                </h3>
+                                {% if product.metafields.my_fields.hp_excerpt != blank %}
+                                  <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                    {{ product.metafields.my_fields.hp_excerpt }}
+                                  </p>
+                                {% endif %}
+                              </div>
+                              {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+                              <div class="pr-variant">
+                                <div class="t4s-product-form__variants pr-variants">
+                                  <div class="t4s-swatch__list">
+                                    {%- for value in option.values -%}
+                                      <div
+                                        data-swatch-item
+                                        class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}  {% if value == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}"
+                                        data-value="{{ value | escape }}"
+                                        data-price="{{ product.variants[forloop.index0].price | divided_by: 100 }}"
+                                      >
+                                        <div>{{ value }}</div>
+                                        {% if product.variants[forloop.index0].compare_at_price > 0 %}
+                                          <div class="pr-price">
+                                            <del>{{ product.variants[forloop.index0].compare_at_price | money }}</del
+                                            ><ins>{{ product.variants[forloop.index0].price | money }}</ins>
+                                          </div>
+                                        {% else -%}
+                                          {{- product.variants[forloop.index0].price | money -}}
+                                        {%- endif -%}
+                                        {%- if value == 'Pack of 2' -%}
+                                          <span class="pr-best-seller">{{ 'Save Extra' }}</span>
+                                        {%- endif %}
+                                      </div>
+                                    {%- endfor -%}
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="price dib mb__5">
+                                {%- render 'product-price',
+                                  product: product,
+                                  price_varies_style: price_varies_style,
+                                  type: 'card',
+                                  isGrouped: isGrouped
+                                -%}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+                            <a
+                              href="{{ product.url }}"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart lhm"
+                              data-variant-id="{{product.first_available_variant.id}}"
+                              data-action-atc
+                              rel="nofollow"
+                              ><span class="t4s-svg-pr-icon"></span
+                              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                            >
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                    <div class="view-more-btn">
+                      <a href="{{ section.settings.urlz }}">View more routines</a>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for block in section.blocks %}
+              {% assign dataTab = block.settings['tab-title'] %}
+              {% if block.type == 'content' %}
+                {% assign len = forloop.length | divided_by: 2 %}
+                <div
+                  class="tabcontents carousel-wrap"
+                  style="display: none;"
+                  id="tabs-{{ forloop.index | minus: len }}"
+                >
+                  {% assign collection = collections[block.settings.collection] %}
+                  {% if collection != blank %}
+                    <div class="products-grid-item-main owl-carousel pdp-custom-collection" data-id="{{ product.id }}">
+                      {%- for product in collection.products limit: 5 -%}
+                        <div class="products-grid-item item {% if forloop.index <= 4 %}first-four-items{% endif %}">
+                          <div class="product-innr">
+                            {% if product.metafields.custom.pr_excerpt != blank %}
+                              <h6 class="pr-{{ product.metafields.custom.pr_excerpt }}">
+                                {{ product.metafields.custom.pr_excerpt }}
+                              </h6>
+                            {% endif %}
+                            <div class="product-image pr oh lazyloadt4sed product-innr-top">
+                              <a href="{{product.url}}">
+                                {%- render 'product_labels', on: 'singe', product: product -%}
+                                <img
+                                  class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
+                                  src="{{ product.images[0] | product_img_url: "1000x1000" }}"
+                                  alt=""
+                                >
+                                <img
+                                  class="pr-img-second lazyload" loading="lazy" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
+                                  src="{{ product.images[1] | product_img_url: "1000x1000"  }}"
+                                  alt=""
+                                >
+                              </a>
+                              <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
+                            </div>
+                            <div class="product-info mt__15 mb__10 product-innr-bottom">
+                              <div class="pr-det">
+                                <h3 class="product-title pr fs__14 mg__0 fwm">
+                                  <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                </h3>
+                                {% if product.metafields.my_fields.hp_excerpt != blank %}
+                                  <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                    {{ product.metafields.my_fields.hp_excerpt }}
+                                  </p>
+                                {% endif %}
+                              </div>
+                              {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+                              <span class="price dib mb__5">
+                                {%- render 'product-price',
+                                  product: product,
+                                  price_varies_style: price_varies_style,
+                                  type: 'card',
+                                  isGrouped: isGrouped
+                                -%}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="shop-all-qty-cart-btn">
+                            <a
+                              href="{{ product.url }}"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart lhm"
+                              data-variant-id="{{product.first_available_variant.id}}"
+                              data-action-atc
+                              rel="nofollow"
+                              ><span class="t4s-svg-pr-icon"></span
+                              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                            >
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                    <div class="allAtToCart">
+                      <div class="shop-all-qty-cart-btn">
+                        <a
+                          class="fx-custom-btn-dark t4s-pr-item-btn addtocarthp"
+                          data-id="t-{{ forloop.index | minus: len }}"
+                          data-action-atc
+                          rel="nofollow"
+                          ><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">ADD ALL TO CART</span></a
+                        >
+                      </div>
+                    </div>
+                    <div class="rtn-btn">
+                      <a href="{{ section.settings.urlz }}">view more routines</a>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+    .carousel-wrap {
+    width: 100%;
+    position: relative;
+  }
+  .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev{
+      color: white;
+      background-color: black;
+      position: absolute;
+      right: 94%;
+  }
+    .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next{
+      color: white;
+      background-color: black;
+      position: absolute;
+      left: 94%;
+  }
+  /* fix blank or flashing items on carousel */
+  .owl-carousel .item {
+    position: relative;
+    z-index: 100;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* end fix */
+  .owl-nav > div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+  }
+
+  .owl-nav i {
+    font-size: 27px;
+    color :#000;
+  }
+
+  .owl-dots{
+    display : none;
+  }
+  .btn-container-cliked {
+      display: flex;
+      align-items: center;
+    }
+    .custom-tab-slider .tabcontent {
+      display: none;
+    }
+    .custom-tab-slider .products-grid-item {
+      height: auto !important;
+    }
+    @media screen and (max-width:376px) {
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next{
+          left: 88%;
+          top: 90px;
+      }
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev{
+          /* right: 92%; */
+          left: -7px;
+          top: 90px;
+      }
+    }
+
+    @media screen and (min-width:376px) and (max-width:426px) {
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next{
+          left: 91%;
+          top: 95px;
+      }
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev{
+          top: 95px;
+          left: -6px;
+        
+      }
+  }
+    @media screen and (min-width:426px) and (max-width:768px) {
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next{
+           left: 91%;
+           top: 32%;
+      }
+     .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev{
+          right: 96%;
+          top: 32%;
+      }
+  }
+    @media screen and (min-width:769px) {
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next{
+          left: 96%;
+      }
+      .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev{
+          /* right: 96%; */
+          left: 0%
+      }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-next {
+      top: 28%;
+    }
+    .template-index .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev {
+      top: 28%;
+    }
+  }
+   /* .template-index .routine_slider_main .owl-next, .owl-prev i{
+      display: none;
+  } 
+    .routine_slider_main .product-tabs-content .owl-carousel .owl-nav .owl-prev, .owl-next{
+      top: 41%;
+  } */
+   /* @media(max-width: 600px) {
+      select[data-chosen='val-2'] {
+        width: 42% !important;
+      }
+    }
+    @media(min-width: 768px) {
+      select[data-chosen='val-2'] {
+        width: 20% !important;
+      }
+    }
+    {% if product.url contains 'the-daily-duet-cleanser' or product.url contains 'finish-sunscreen' or product.url contains 'coverup-broad-spectrum-spf-50-pa' %}
+      @media(max-width: 600px) {
+        select {
+          width: 25% !important;
+        }
+        select[data-chosen='val-1'] {
+          width: 25% !important;
+        }
+        select[data-chosen='val-3'] {
+          width: auto !important;
+        }
+      }
+      @media(min-width: 768px) {
+        select[data-chosen='val-1'] {
+          width: 12% !important;
+        }
+      }
+    {% endif %} */
+    /* @media screen and (max-width:340px) {
+      select[data-chosen='val-2'] {
+        width: 56px !important;
+      }
+      select {
+        width: 106px !important;
+      }
+    }
+    @media screen and (min-width:341px) {
+      select[data-chosen='val-2'] {
+        width: 60px !important;
+      }
+      select {
+        width: 105px !important;
+      }
+    }
+    @media screen and (min-width:501px) {
+      select[data-chosen='val-2'] {
+        width: 70px !important;
+      }
+      select {
+        width: 125px !important;
+      }
+    }
+     @media screen and (min-width:769px) {
+      select[data-chosen='val-2'] {
+        width: 100px !important;
+      }
+      select {
+        width: 183px !important;
+      }
+    } */
+      .routine_slider_main .product-tabs-content .products-grid-item{
+      padding: 0 !important;
+  }
+</style>
+
+<script>
+  // document.querySelector('#tabs-1').style.display = "block";
+  // function tabCustom(evt, country_code) {
+  //   alert("yy");
+  //   var country_select = document.querySelector(".tab-content");
+  //   var country_code = country_select.options[country_select.selectedIndex].getAttribute('data-tab');
+  //   let i, tabcontent, tablinks;
+  //   tabcontent = document.getElementsByClassName("tabcontents");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //     tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+  //     tabcontent[i].style.visibility = "hidden";
+  //   }
+  //   tablinks = document.getElementsByClassName("tab-links");
+  //   // console.log(tablinks.length);
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   }
+  //   let variantActive = document.querySelectorAll('.tabcontents.active');
+  //   $('.t4s-swatch__item').removeClass('active');
+  //   if(variantActive){
+  //     $('.t4s-swatch__item:first-child').trigger("click");
+  //      $('.t4s-swatch__item:first-child').addClass('active');
+  //   }
+  //   document.getElementById(country_code).style.display = "block";
+  //   country_select.options[country_select.selectedIndex].className += " active";
+  //   document.getElementById(country_code).className += " active";
+  //   console.log("fefefe",country_select.options[country_select.selectedIndex].className);
+  //   setTimeout(function () {document.getElementById(country_code).style.visibility = "visible"}, 450);
+  // }
+  //   if ($('.tab-list-title > div.field-item:contains("Anti Ageing")').length > 0) {
+  //     $(".tab-list-title").addClass("thisClass");
+  // }
+
+  $(document).on('change', '#custom_routine_slider_main select.tab-content', function (e) {
+    var text = $(this).find('option:selected').text();
+    console.log(text,"%%%%%%ß")
+    $(".tab-content-bg-icon").html(text)
+    // var $aux = '<option class="tab-links selected_option">'+text+'</option>';
+    // $(this).append($aux)
+    $(this).width($(".tab-content-bg-icon").width() + 30)
+    // $(this).find("option.selected_option").remove();
+  });
+  
+</script>
+
+<script>
+    function updateMiniCartQuantityCount(quantity) {
+    $('#mini-cart .cart-quantity').text(quantity);
+    }
+   $(document).ready(function() {
+
+    $(document).on('click', 'a.fx-custom-btn-dark.t4s-pr-item-btn.addtocarthp', function(e) {
+      setTimeout(function() {
+        e.preventDefault();
+        var products = $('.tabcontents:visible').find('.products-grid-item');
+        var alertedProducts = new Set();
+        var productIds = [];
+        products.each(function(index) {
+          var productContainer = $(this);
+          var addToCartButton = productContainer.find('.t4s-pr-addtocart');
+          var variantId = addToCartButton.data('variant-id');
+
+          if (productContainer.is(':visible')) {
+            if (productIds.indexOf(variantId) === -1) {
+              productIds.push(variantId);
+              alertedProducts.add(productIds);
+            }
+          }
+        });
+
+        var quantity = 1;
+        var currentIndex = 0;
+
+        function addProductToCart() {
+          if (currentIndex >= productIds.length) {
+            // All products have been added to the cart
+            $.getJSON('/cart.js', function(cart)
+   {
+              updateMiniCartQuantityCount(cart.item_count);
+            });
+            return;
+          }
+
+          var productId = productIds[currentIndex];
+
+          $.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            dataType: 'json',
+            data: { id: productId, quantity: quantity },
+            success: function() {
+              currentIndex++;
+              addProductToCart();
+            }
+          });
+
+          setTimeout(function() {
+            jQuery.getJSON('/cart.js', function(cart)
+   {
+              let cartData = cart.items;
+              document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+              document.dispatchEvent(new CustomEvent('cart:refresh', {
+                bubbles: true,
+                detail: cartData
+              }));
+            });
+          }, 100);
+        }
+
+        addProductToCart();
+      }, 100);
+    });
+  })
+</script>
+<script>
+  //   $(document).ready(function(){
+  //     $(".addtocarthp").click(function(){
+  //         $("#t4s-notices__wrapper").hide();
+  //     });
+  // });
+</script>
+
+<script>
+  $('.tabcontents').css('visibility', 'hidden');
+  $('.routine_slider_main #tabs-1').css('display', 'block');
+  $('.routine_slider_main #tabs-1').css('visibility', 'visible');
+  $('.routine_slider_main #tabs-1').addClass('active');
+
+  function tabCustoms(evt, country_code) {
+    $('.tabcontents.active').css('visibility', 'hidden');
+
+  // alert('yyyy');
+    var country_select = $(".routine_slider_main .tab-content");
+    var country_code = country_select.find("option:selected").attr('data-tab');
+    $(".tabcontents").each(function() {
+      $(this).hide().removeClass("active").css('display', 'none');
+
+    });
+    $(".tab-links").removeClass("active");
+    var variantActive = $('.tabcontents.active');
+    $('.routine_slider_main .t4s-swatch__item').removeClass('active');
+    if (variantActive.length) {
+      setTimeout(function() {
+        $('.t4s-swatch__item:first-child').trigger("click").addClass('active');
+      }, 300);
+    }
+    $("#" + country_code).css('display', 'block');
+
+    country_select.find("option:selected").addClass("active");
+    $("#" + country_code).addClass("active");
+    console.log("fefefe", country_select.find("option:selected").attr('class'));
+
+  // setTimeout(function() {
+  // $("#" + country_code).css('display', 'block');
+  // }, 500);
+    setTimeout(function() {
+      $('.tabcontents.active').css('visibility', 'visible');
+    }, 400);
+  }
+
+
+  // $('.foxtale_scroll .tab-content').change(function() {
+  //   $('.foxtale_scroll .slick-prev').trigger("click");
+  //   setTimeout(function() {
+  //     $('.foxtale_scroll .slick-next').trigger("click");
+  //   }, 300);
+  // });
+</script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    // navText: [
+    //   "<i class='fa-chevron-circle-left'></i>",
+    //   "<i class='fa-chevron-circle-right'></i>"
+    // ],
+    // autoplay: false,
+    // autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1024: {
+        items: 4
+      }
+    }
+  })
+    $(".owl-prev span").hide();
+    $(".owl-next span").hide();
+    $(".owl-prev").addClass('slick-prev');
+    $(".owl-prev").addClass('slick-arrow');
+    $(".owl-next").addClass('slick-arrow');
+    $('.owl-next').addClass('slick-next');
+  //   $('.pdp-custom-collection').slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   arrows: true,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //  // variableWidth: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1800,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //         infinite: true
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         infinite: true
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2
+  //       }
+  //     }
+  //   ]
+  // });
+
+  // $('.tab-content').change(function(){
+  //   $('.slick-prev').trigger("click");
+  //   setTimeout(function(){
+  //     $('.slick-next').trigger("click");
+  //   },100);
+  // });
+</script>
+
+<!-- Growlytics -->
+<script>
+$(document).ready(function () {
+    $( '.shop-all-qty-cart-btn').on("click", function(){
+       var prodName = $(this).data("title");
+     Growlytics.events.track("Add all to cart HP",{
+        'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+     });
+</script>
+
+<script>
+$(document).ready(function () {
+    $( '.t4s-pr-addtocart').on("click", function(){
+       var prodName = $(this).data("title");
+     Growlytics.events.track("Routine PDP",{
+        'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+     });
+</script>
+
+<script>
+$(document).ready(function () {
+    $( '.tab-content').on("click", function(){
+     var prodName = $(this).data("data-tab");
+Growlytics.events.track(“HP Routine1",{
+‘Routine Name': ‘Glow’,
+'Timestamp': new Date()  
+});
+Growlytics.events.track(“HP Routine2",{
+‘Routine Name': ‘Anti-Ageing’,
+'Timestamp': new Date()  
+});
+Growlytics.events.track(“HP Routine3",{
+‘Routine Name': ‘Hyperpigmentation’,
+'Timestamp': new Date()
+});
+Growlytics.events.track(“HP Routine4",{
+‘Routine Name': ‘Anti Acne’,
+'Timestamp': new Date()  
+});
+Growlytics.events.track("HP Routine5",{
+'Routine Name': ‘IntenseHydration’,
+'Timestamp': new Date()
+});
+     });
+    });
+
+
+</script>
+
+<!-- End -->
+
+<style>
+    .slick-disabled {
+      opacity: 0;
+      pointer-events:none;
+  }
+</style>
+{% schema %}
+{
+  "name": "Custom Routine Slider",
+  "class": "custom-tab-slider custom-collection-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "slider-title",
+      "label": "Slider Title"
+    },
+    {
+      "type": "url",
+      "id": "urlz",
+      "label": "Routine Link"
+    },
+    {
+      "type": "select",
+      "id": "pr_des",
+      "label": "Design product",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "Design 1"
+        },
+        {
+          "value": "2",
+          "label": "Design 2"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Product Tab",
+      "type": "tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab-title",
+          "label": "Tab Title"
+        }
+      ]
+    },
+    {
+      "name": "Product Tab Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Routine Slider2"
+    }
+  ]
+}
+{% endschema %}

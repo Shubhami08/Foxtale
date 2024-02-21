@@ -1,0 +1,151 @@
+<style>
+  .btn-custm{
+    border-radius: 0px !important;
+    margin: 0px 0px 0px 12px !important;
+}
+  input:not([type=submit]):not([type=checkbox]), textarea {
+    font-size: 11px !important;
+    padding: 0 12px !important;
+}
+  button:hover{
+    background-color: black !important;
+    color: white !important;
+  }
+@media (max-width: 600px) {
+  #PostalCodeCheckerAvailability, #DeliveryTime{
+    font-size:12px;
+    margin-bottom:5px !important;
+  }
+}
+  @media (min-width: 600px) {
+  #PostalCodeCheckerAvailability, #DeliveryTime{
+    font-size:14px;
+    margin-bottom:5px !important;
+  }
+}
+</style>
+
+  {% assign del_available_message   = 'Estimated Delivery Date : ' %}
+  {% assign del_unavailable_message = 'Sorry! we dont deliver at this pincode' %}
+  {% assign del_error_message       = 'Please enter a valid pincode' %}
+  {% assign placeholder_message     = 'enter pincode to check delivery date' %}
+  {% assign check_button_text       = 'Check' %}
+  {% assign block_color             = '#000000' %}
+  {% assign success_color           = '#468847' %}
+  {% assign failure_color           = '#FF0000' %}
+ 
+  <div style='display: flex;margin-bottom:5px !important;'>
+    <input type='text' id='PostalCode' name='PostalCode' placeholder='{{ placeholder_message | escape }}' style='margin: 0 {{ spacing_in_pixels | divided_by: 2 | append: 'px' }} 0 0;' onkeypress='return event.keyCode != 13;' />
+    <button type='button' class='btn button btn-custm deliveryEstimate' onclick='checkPinAvailability()'>{{ check_button_text | escape }}</button>
+  </div>
+   <div style='display: flex;margin-bottom:0px !important;'>
+  <p id='PostalCodeCheckerAvailability' style='display: none;'></p>
+  <p id='DeliveryTime' style='display: none;margin-left:6px;'></p>
+  </div>
+
+<script type='text/javascript'>
+(function() {
+  $(".deliveryEstimate").on("click", function() {
+
+    var $this = $(this),
+    oldText = $this.text();
+    $this.text("Loading");
+    $this.attr("disabled", "disabled");
+    setTimeout(function() {
+      $this.text(oldText);
+      $this.removeAttr("disabled");
+    }, 1300);
+  });
+})();
+  
+  var checkPinAvailability = function() {
+    var url = 'https://j9nr1xsv61.execute-api.ap-south-1.amazonaws.com/proship/serv-tat-prd';
+    var box = document.getElementById('PostalCodeCheckerAvailability');
+    var deltime = document.getElementById('DeliveryTime');
+    var postalCode = document.getElementById('PostalCode').value;
+    box.style.display = 'block';
+    box.style.visibility = 'hidden';
+    deltime.style.display = 'block';
+    deltime.style.visibility = 'hidden';
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('tenant', 'tenant_38');
+    xhr.onreadystatechange = function() {
+      
+      if (xhr.readyState == 4) {
+        if(document.getElementById("PostalCode").value == "")
+          {
+            box.textContent = {{ del_error_message | json }};
+            box.style.color = {{ failure_color | json }};
+            box.style.visibility = 'visible';
+          }
+        var result = JSON.parse(xhr.responseText);
+        
+        var minTat = result.message.overallMinTAT;
+        var maxTat = result.message.overallMaxTAT;
+        var date = new Date();
+        var date1 = new Date();
+        
+        if (xhr.status == 200) { 
+          if (typeof result.message.overallMaxTAT != 'undefined') {
+            box.textContent = {{ del_available_message | json }};
+            box.style.color = {{ block_color | json }};
+            
+            date.setDate(date.getDate() + minTat);
+            var minday = date.getDate();
+            
+            date1.setDate(date1.getDate() + maxTat);
+            var maxday =  date1.getDate();
+
+            date.setDate(date1.getDate() + minTat);
+            var monthCurrent = date.toLocaleString('default', { month: 'short' });
+
+            date1.setDate(date1.getDate() + maxTat);
+            var month = date1.toLocaleString('default', { month: 'short' });
+              
+            deltime.textContent = minday + " " + monthCurrent + " - " + maxday + " " + month;
+            deltime.style.color = {{ success_color | json }};
+            deltime.style.visibility = 'visible';
+          } else {
+            if(document.getElementById("PostalCode").value < 9999){
+     box.textContent = {{ del_error_message | json }};
+    box.style.color = {{ failure_color | json }};
+    box.style.visibility = 'visible';
+     } else{
+            box.textContent = {{ del_unavailable_message | json }};
+            box.style.color = {{ failure_color | json }};
+          }
+        }
+        } 
+        box.style.visibility = 'visible';
+      }
+      else {
+          box.textContent = {{ del_error_message | json }};
+          box.style.color = {{ failure_color | json }};
+        }
+      box.style.visibility = 'visible';
+    }
+    var params = {
+      "queryStringParam": {
+            "drop_pincode": postalCode,
+            "merchantid": "635f80d20ebc3c3a36579ccc"
+          }
+    }
+    xhr.send(JSON.stringify(params));
+  }
+</script>
+
+<!-- Growlytics -->
+<script>
+$(document).ready(function () {
+    $( '.deliveryEstimate').on("click", function(){
+     var prodName = $(this).data("title");
+     Growlytics.events.track("Pincode Checker button",{
+         'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+     });
+</script>
+<!-- end -->

@@ -1,0 +1,211 @@
+{% if product.metafields.product_handle.pair_best_with != blank %}
+  <div class="pairs-best-with-main related product-extra container foxtale_scroll" id="best-with">
+    {% assign pairItemHandle = product.metafields.product_handle.pair_best_with | split: '@' %}
+    {% if template == 'product.valentine_special' %}
+      <div class="section-heading wrap_title">
+        <h3 class="tc">
+          <span>
+            {{-
+              section.settings.pair_section_heading
+              | replace: section.settings.pair_section_heading, 'You May Also Like'
+              | upcase
+            -}}
+          </span>
+        </h3>
+      </div>
+    {% else %}
+      <div class="section-heading wrap_title">
+        <h3 class="tc">
+          <span>{{ section.settings.pair_section_heading }}</span>
+        </h3>
+      </div>
+    {% endif %}
+    <div class="pairProducts-grid-items pair-with-slider">
+      {% for pairHandle in pairItemHandle %}
+        {% assign pairProduct = all_products[pairHandle] %}
+
+        <div
+          data-page=""
+          class="pairProduct-grid-item col-lg-6 pr_animated col-md-6 col-6 mt__30 pr_grid_item product nt_pr desgin__1 is-selected done"
+        >
+          <div class="product-inner pr">
+            <div
+              class="product-image pr oh lazyloadt4sed"
+              data-rendert4s="/products/{{pairProduct.handle}}/?view=imgfalse"
+              data-currentrendert4s=""
+            >
+              {% if pairProduct.compare_at_price_max > pairProduct.price %}
+                {% comment %}
+                  <span class="tc nt_labels pa pe_none cw">
+                       <span class="onsale nt_label">
+                           <span>- {{ pairProduct.compare_at_price_max | minus: pairProduct.price | times: 100.0 |divided_by: pairProduct.compare_at_price_max | round }}%</span>
+                       </span>
+                   </span>
+                   <span class="tc nt_labels pa pe_none cw">
+                       <span class="onsale nt_label">
+                           <span>- {{ pairProduct.compare_at_price_max | minus: pairProduct.price | times: 100.0 |divided_by: pairProduct.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
+                       </span>
+                   </span>
+                {% endcomment %}
+              {% endif %}
+              <a class="db" href="/products/{{pairProduct.handle}}?section=pdp-best-selling-combos">
+                <div
+                  class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed"
+                  data-id="{{ pairProduct.images[0].id }}"
+                  data-bgset="{{ pairProduct.images[0] | image_url }}"
+                  data-parent-fit="width"
+                  data-wiis=""
+                  data-ratio="1.0"
+                  style="padding-top: 100%; background-image: url('{{ pairProduct.images[0] | image_url }}');"
+                >
+                  <picture style="display: none;">
+                    <source
+                      data-srcset="{{ pairProduct.images[0] | image_url }}"
+                      sizes="570px"
+                      srcset="{{ pairProduct.images[0] | image_url }}"
+                    >
+                    <img
+                      alt=""
+                      class="lazyautosizes lazyloadt4sed ls-is-cached"
+                      data-sizes="auto"
+                      data-ratio="1.0"
+                      sizes="570px"
+                    >
+                  </picture>
+                </div>
+              </a>
+              {% if pairProduct.images.size > 1 %}
+                <div class="hover_img pa pe_none t__0 l__0 r__0 b__0 op__0">
+                  <div
+                    class="pr_lazy_img back-img pa nt_bg_lz lazyloadt4sed"
+                    data-id="{{ pairProduct.images[1].id }}"
+                    data-bgset="{{ pairProduct.images[1] | image_url }}"
+                    data-parent-fit="width"
+                    data-wiis=""
+                    data-ratio="1.0"
+                    style="padding-top: 100%; background-image: url('{{ pairProduct.images[1] | image_url }}');"
+                  >
+                    <picture style="display: none;">
+                      <source
+                        data-srcset="{{ pairProduct.images[1] | image_url }}"
+                        sizes="570px"
+                        srcset="{{ pairProduct.images[1] | image_url }}"
+                      >
+                      <img
+                        alt=""
+                        class="lazyautosizes lazyloadt4sed ls-is-cached"
+                        data-sizes="auto"
+                        data-ratio="1.0"
+                        sizes="570px"
+                      >
+                    </picture>
+                  </div>
+                </div>
+              {% endif -%}
+              {% comment %}
+                <div class="hover_button op__0 tc pa flex column ts__03 des_btns_pr_1 has_sizelistt4_ has_2btnst4_pr">
+                    <a class="pr nt_add_qv js_add_qv cd br__40 pl__25 pr__25 bgw tc dib ttip_nt tooltip_top_left"
+                        href="/products/{{pairProduct.handle}}" data-id="{{pairProduct.id}}" rel="nofollow">
+                        <span class="tt_txt">Quick view</span><i class="iccl iccl-eye"></i><span>Quick view</span>
+                    </a>
+                    <a href="/products/{{pairProduct.handle}}" class="pr pr_atc cd br__40 bgw tc dib js_addtc cb chp ttip_nt tooltip_top_left" data-id="{{pairProduct.variants.first.id}}" rel="nofollow">
+                        <span class="tt_txt">Add to cart</span><i class="iccl iccl-cart"></i><span>Add to cart</span>
+                    </a>
+                </div>
+              {% endcomment %}
+            </div>
+            <div class="product-info mt__15">
+              <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 600;">
+                <a class="cd chp" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
+              </h3>
+              {% if product.metafields.my_fields.hp_excerpt != blank %}
+                <p class="fx-tags-shop fx-{{ pairProduct.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                  {{ pairProduct.metafields.my_fields.hp_excerpt }}
+                </p>
+              {% endif %}
+              <span class="price dib mb__5" style="margin-top: 10px; font-size: 16px; font-weight: 800;"
+                ><del style="color: #6e6e6e !important;">{{ pairProduct.compare_at_price | money }}</del
+                ><ins>{{ pairProduct.price | money }}</ins></span
+              >
+              {% comment %}<div class="shopify-product-reviews-badge star-rating" data-id="{{pairProduct.id}}"></div>
+              <div class="pr-variant">{% render 'product-form', type:'main', product: product, bk_stts: bk_stts, pr_se_id: pr_se_id, isExternal:isExternal, external_title:external_title, external_link:external_link, isProductAvailable:isProductAvailable, isProductDefault:isProductDefault, current_variant:current_variant, remove_soldout: remove_soldout, PR_no_pick:PR_no_pick, isPreoder:isPreoder, is_fit_ratio_img:is_fit_ratio_img, first_ratio_img:first_ratio_img, name_sizeg:name_sizeg, html_sizeg:html_sizeg, advance_pr_type:advance_pr_type, advance_label:advance_label, html_price:html_price ,shopify_attributes:block.shopify_attributes, arr_properties: arr_properties, cus_qty: cus_qty %}</div>{% endcomment %}
+            </div>
+            <div class="shop-all-qty-cart-btn">
+              <a
+                href="javascript:void(0)"
+                class="fx-custom-btn-dark t4s-pr-item-btn btn-pairs-atc t4s-pr-addtocart"
+                data-variant-name="{{ pairProduct.title }}"
+                data-variant-id="{{pairProduct.first_available_variant.id}}"
+                data-action-atc
+                rel="nofollow"
+                ><span class="t4s-svg-pr-icon"></span
+                ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+              >
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  $(document).ready(function () {
+    $( '.btn-pairs-atc').on("click", function(){
+      var prodName = $(this).data("variant-name");
+      //console.log(prodName);
+      Growlytics.events.track("Best Selling Combos",{
+      'Product Name': prodName
+     });
+    });
+     });
+</script>
+
+{% if template.suffix == 'customproduct1' %}
+  <script>
+    
+  $('.pair-with-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,        
+        arrows: true,
+        centerMode: false,
+        prevArrow: `<svg focusable="false" style="width: 50px;  padding: 10px;" role="presentation" class="icon icon-chevron-left slick-arrow" viewBox="0 0 284.49 498.98" style=""><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>`,
+        nextArrow: `<svg focusable="false" style="width: 50px;  padding: 10px;" role="presentation" class="icon icon-chevron-right slick-arrow" viewBox="0 0 284.49 498.98" style=""><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>`,
+        responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.1,
+          slidesToScroll: 2,
+          infinite: false
+        }
+      }]
+    });
+
+  </script>
+{% endif %}
+
+{% schema %}
+ {
+   "name": "Pairs Best With",
+   "settings": [
+	{
+		"type": "text",
+		"id": "pair_section_heading",
+		"label": "Heading",
+		"default": "Pairs Best With"
+	}
+],
+   "presets": [
+       {
+           "name": "Pairs Best With",
+           "category": "Collection"
+       }
+   ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

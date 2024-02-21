@@ -1,0 +1,138 @@
+<div class="container mt__60 mb__60 rtet4">
+  <style>
+    body {color: #000;}
+    .container.mt__60 {margin-top: 0;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-number {background-color: #e85a28 !important;}
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i:before, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i:before {color: #e85a28 !important;}
+    [data-widget-type="rewards-referral"] {margin-bottom: 50px !important;}
+    [data-widget-type="rewards-summary"] {padding: 0 0 50px !important;}
+    [data-widget-type="rewards-summary"] .stamped-rewards-widget-text {font-size: 18px !important;}
+    [data-widget-type="rewards-summary"] .stamped-rewards-widget-title {font-weight: 500;}
+    [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-sub, [data-widget-type="rewards-referral"] div[data-target-id="section-email-customer"], [data-widget-type="rewards-referral"] div[data-target-id="section-email-friend"], [data-widget-type="rewards-referral"] .stamped-rewards-widget-description, [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-main {display: none !important;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-heading-main, [data-widget-type="rewards-activities"] .stamped-rewards-widget-heading-main {font-size: 23px !important; font-weight: 500; margin-bottom: 20px !important;}
+    .stamped-rewards-widget-how-it-works {padding: 0 0 50px !important;}
+    .stamped-rewards-widget-btn {border: 3px solid transparent !important; padding: 11px 56px !important;}
+    .stamped-rewards-widget-btn.stamped-rewards-widget-btn-sign-up, .stamped-rewards-widget-btn.stamped-rewards-widget-btn-redeem {color: #fff;}
+    .stamped-rewards-widget-btn.stamped-rewards-widget-btn-sign-in, .stamped-rewards-widget-btn.stamped-rewards-widget-btn-rewards-history {border: 3px solid #000 !important;}
+    .rewards-content {text-align: left;}
+    .rewards-content .reward-box {max-width: 1200px; width: 100%; margin: 0 auto; padding: 20px 20px;}
+    .referal-heading-main, .rewards-heading-main {font-size: 36px; text-align: center; margin: 50px auto 20px; text-transform: initial; letter-spacing: 1px;}
+  </style>
+  {% comment %}{% if customer %}{% else %}{% endif %}{% endcomment %}
+  <div class="oh pr nt_img_txt" style="margin-left: -15px; margin-right: -15px; padding-bottom: 50px;">
+    <div class="dek_img_slide">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/new_fox_charms_Banner_2.jpg?v=1671781683"
+        alt="Referral and Rewards"
+        style="display: block; margin-left: auto; margin-right: auto;"
+      >
+    </div>
+    <div class="mb_img_slide">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/new_fox_charms_Banner_2.jpg?v=1671781683"
+        alt="Referral and Rewards"
+        style="display: block; margin-left: auto; margin-right: auto;"
+      >
+    </div>
+  </div>
+  <div
+    id="stamped-rewards-widget"
+    data-widget-type="rewards-summary"
+    data-label-greeting-anonymous="Hello, fellow skincare enthusiast!"
+    data-label-greeting-description="Are you ready to become our friend with benefits? After all, being a part of the Foxtale community comes with some special rewards. Let’s get started."
+  ></div>
+  <h2 class="referal-heading-main">Refer and Earn</h2>
+  {% if customer %}
+    <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">
+        Get ready to get amazing discounts, exclusive offers and first dibs at all our new launches with this reward
+        program.
+      </p>
+      <p
+        class="stamped-rewards-page-text stamped-rewards-widget-description"
+        style="font-size: 16px; font-weight: 600;"
+      >
+        Refer your friends and family to Foxtale and Get ₹250 OFF on your next purchase and they Get a ₹100 discount
+        coupon. So, get your address book ready and start cashing in the rewards.
+      </p>
+    </div>
+    <div id="stamped-rewards-widget" data-widget-type="rewards-referral"></div>
+  {% else %}
+    <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">
+        Get ready to get amazing discounts, exclusive offers and first dibs at all our new launches with this reward
+        program.
+      </p>
+      <p class="stamped-rewards-page-text stamped-rewards-widget-description">
+        If you don’t have an account with us, sign up or if you are an existing customer, just log in, and refer your
+        friends and family to Foxtale.
+      </p>
+      <p
+        class="stamped-rewards-page-text stamped-rewards-widget-description"
+        style="font-size: 16px; font-weight: 600;"
+      >
+        You Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and
+        start cashing in the rewards.
+      </p>
+    </div>
+  {% endif %}
+  <h2 class="rewards-heading-main">Rewards Program</h2>
+  <div id="stamped-rewards-widget" data-widget-type="rewards-how-it-works"></div>
+  <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+  <div
+    id="stamped-rewards-widget"
+    data-widget-type="rewards-spendings"
+    data-label-description="1.Sign-in &amp; Click the redeem button&lt;br&gt;2.Copy &amp; Paste your code at checkout&lt;br&gt;3.Claim Rewards"
+  ></div>
+  {% if customer %}<div id="stamped-rewards-widget" data-widget-type="rewards-activities"></div>{% endif %}
+  <div class="rewards-content">
+    <div class="reward-box">
+      <p>Hey!</p>
+      <p>Here are some things you need to know to make this rewards program work for you :)</p>
+      <ul>
+        <li>Coins earned on each purchase will be credited to your account once the order is shipped</li>
+        <li>Only 1000 coins can be redeemed in one go.</li>
+        <li>
+          There is a one-month blackout period after signing up for a new account when the earning rule for "Celebrate a
+          birthday" will not be awarded to customers. This is to prevent any potential abuse of the rewards program, by
+          setting a fake birthday to gain additional points.
+        </li>
+        <li>
+          While submitting the review form, please make sure you use the same email address you have used to sign up for
+          the rewards program. It takes 24 hours for the review to be verified and processed
+        </li>
+        <li>
+          If you have redeemed a coupon, but in the process forget to copy the coupon code at checkout, you can always
+          retrieve it from your <a aria-label="REWARDS HISTORY">Rewards History</a> section in your account page
+        </li>
+        <li>
+          If you would like to know more or have any questions regarding our rewards program, please reach out to our
+          Customer team on Whatsapp and Team will be happy to help
+        </li>
+        <li>The Reward Program Coupons cannot be combined with any other discount coupons</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Rewards",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Rewards"
+      }
+    ],
+    "templates": [
+      "page"
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

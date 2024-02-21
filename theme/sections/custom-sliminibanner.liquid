@@ -1,0 +1,133 @@
+<style>
+  .custom-slimbwrapp {
+    padding: 0 28px;
+    margin: 38px 0 32px 0;
+  }
+  .custom-slimb {
+    display: block;
+  }
+  .custom-slimbinner {
+    background-color: #D9D9D9;
+    padding: 28px;
+    border-radius: 4px;
+  }
+  .custom-slimb a img {
+    border-radius: 8px;
+    width: 100%;
+  }
+  .custom-slimbinner a h4 {
+    font-weight: 500;
+    color: #000000;
+  }
+  .custom-smallslimb {
+    display: none;
+  }
+
+  @media(max-width: 768px) {
+    .custom-slimbwrapp {
+      padding: 1px 6px;
+      margin: 0px 0 18px 0;
+    }
+    .custom-slimb {
+      display: none;
+    }
+    .custom-smallslimb {
+      display: block;
+    }
+    .custom-smallslimb a img {
+      border: none;
+      border-radius: 4px;
+    }
+    .custom-smallslimbinner {
+      background-color: #D9D9D9;
+      padding: 22px 7px;
+      border-radius: 4px;
+    }
+    .custom-smallslimbinner a h4 {
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+
+  @media(max-width: 380px) {
+    .custom-smallslimbinner a h4 {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div class="custom-slimbwrapp">
+  <div class="custom-slimb">
+    {% if section.settings.txter != blank %}
+      <div class="custom-slimbinner">
+        <a href="{{ section.settings.linkz }}">
+          <h4>{{ section.settings.txter }}</h4>
+        </a>
+      </div>
+    {% else %}
+      <a href="{{ section.settings.linkz }}"><img src="{{ section.settings.imageselect | img_url: '2300x1400' }}" loading="lazy"></a>
+    {% endif %}
+  </div>
+  <div class="custom-smallslimb">
+    {% if section.settings.txtersml != blank %}
+      <div class="custom-smallslimbinner">
+        <a href="{{ section.settings.linkz }}">
+          <h4>{{ section.settings.txtersml }}</h4>
+        </a>
+      </div>
+    {% else %}
+      <a href="{{ section.settings.linkz }}"><img src="{{ section.settings.imageselectsml | img_url: '2300x1400' }}" loading="lazy"></a>
+    {% endif %}
+  </div>
+  <!-- <a href="{{ section.settings.ulr }}">{{ section.settings.btntxt }}</a> -->
+</div>
+
+<!-- Growlytics -->
+<script>
+     $(document).ready(function () {
+    $('.custom-smallslimb').on("click", function(){
+     Growlytics.events.track("JW Slim banner",{
+       'clicks': "Clicks",
+     });
+    });
+  });
+</script>
+<!-- End -->
+
+{% schema %}
+  {
+    "name": "Custom Slim-Mini Banner",
+    "settings": [
+      {
+        "id": "txter",
+        "type": "text",
+        "label": "Banner Text"
+      },
+      {
+        "id": "linkz",
+        "type": "url",
+        "label": "Add Banner Link"
+      },
+      {
+        "id": "imageselect",
+        "type": "image_picker",
+        "label": "Add Banner Image"
+      },
+      {
+        "id": "txtersml",
+        "type": "text",
+        "label": "Banner Text Mobile"
+      }, {
+        "id": "imageselectsml",
+        "type": "image_picker",
+        "label": "Add Banner Image Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Slim-Mini Banner",
+        "category": "Any"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,927 @@
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+>
+{% assign multi = section.settings.show_on_collection_handle | split: '@' %}
+{% for handles in multi %}
+  {% if handles == collection.handle or template contains 'index' or template contains 'product' %}
+    {% assign inc_pr = section.settings.pr_des %}
+    <section>
+      {% if template contains 'product' %}
+        <style>
+          .customproduct1-template .custom-tab-slider .products-grid-item{
+            background: transparent !important ;
+            box-shadow:none;
+          }
+        </style>
+      {% endif %}
+      <div class="container custom_design_{{inc_pr}} foxtale_scroll new-landingrtn pcnbr">
+        {% if section.settings['slider-title'] != blank %}
+          <div class="best-title">
+            <h3>{{ section.settings['slider-title'] }}</h3>
+          </div>
+        {% endif %}
+        <div class="tab-slider-main">
+          <div class="tab-list-title" style="flex-direction: column; align-items: flex-start;">
+            <span class="collection-name">Routines for </span>
+            <div class="tab-links-slider">
+              {% for block in section.blocks %}
+                {% if block.type == 'tabs' %}
+                  {% if block.settings['tab-title'] != blank %}
+                    <div
+                      class="glide__slide tab-link{% if forloop.first %} active{% endif %}"
+                      data-tab="tabs-{{ forloop.index }}"
+                      onclick="tabCustoms(event);"
+                      data-index="{{ forloop.index0 }}"
+                    >
+                      {{ block.settings['tab-title'] }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="product-tabs-content design_{{inc_pr}}">
+            {% if inc_pr == '2' %}
+              {% for block in section.blocks %}
+                {% assign dataTab = block.settings['tab-title'] %}
+                {% if block.type == 'content' %}
+                  {% assign len = forloop.length | divided_by: 2 %}
+                  <div class="tabcontents newy" id="tabs-{{ forloop.index | minus: len }}">
+                    {% assign collection = collections[block.settings.collection] %}
+                    {% if collection != blank %}
+                      <div class="products-grid-item-main owl-carousel pdp-custom-collection-{{inc_pr}}">
+                        {%- for product in collection.products limit: 4 -%}
+                          <div class="products-grid-item">
+                            <div class="product-innr">
+                                {% if product.metafields.custom.pr_excerpt != blank %}
+                                  <h6 class="pr-{{ product.metafields.custom.pr_excerpt }} obsulete">
+                                    {{ product.metafields.custom.pr_excerpt }}
+                                  </h6>
+                                {% endif %}
+                              <div class="product-image pr oh lazyloadt4sed product-innr-top">
+                                <a href="{{product.url}}">
+                                  {%- render 'product_labels', on: 'singe', product: product -%}
+                                  <img
+                                    class="pr-img-first"
+                                    src="{{ product.images[0] | product_img_url: "master" }}"
+                                    alt=""
+                                  >
+                                  <img
+                                    class="pr-img-second"
+                                    src="{{ product.images[0] | product_img_url: "master" }}"
+                                    alt=""
+                                  >
+                                </a>
+                                <div
+                                  data-fera-container="457325"
+                                  data-product_id="{{ product.id }}"
+                                  class="reviewContainerDiv on-productpic"
+                                ></div>
+                              </div>
+                              <div
+                                class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst"
+                                data-pr-id="{{ product.handle }}"
+                              >
+                                <div class="pr-det">
+                                  <h3 class="product-title pr fs__14 mg__0 fwm">
+                                    <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                  </h3>
+                                  {% if product.metafields.my_fields.hp_excerpt != blank %}
+                                    <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                      {{ product.metafields.my_fields.hp_excerpt }}
+                                    </p>
+                                  {% endif %}
+                                </div>
+                                {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+                                <div
+                                  data-fera-container="457325"
+                                  data-product_id="{{ product.id }}"
+                                  class="reviewContainerDiv"
+                                ></div>
+                                <div class="pr-variant">
+                                  <div class="t4s-product-form__variants pr-variants">
+                                    <div class="t4s-swatch__list">
+                                      {%- for value in option.values -%}
+                                        <div
+                                          data-swatch-item
+                                          class="t4s-swatch__item{% if selected_value == value %} is--selected{% endif %}  {% if value == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}"
+                                          data-value="{{ value | escape }}"
+                                          data-price="{{ product.variants[forloop.index0].price | divided_by: 100 }}"
+                                        >
+                                          <div>{{ value }}</div>
+                                          {% if product.variants[forloop.index0].compare_at_price > 0 %}
+                                            <div class="pr-price">
+                                              <del>{{ product.variants[forloop.index0].compare_at_price | money }}</del
+                                              ><ins>{{ product.variants[forloop.index0].price | money }}</ins>
+                                            </div>
+                                          {% else -%}
+                                            {{- product.variants[forloop.index0].price | money -}}
+                                          {%- endif -%}
+                                          {%- if value == 'Pack of 2' -%}
+                                            <span class="pr-best-seller">{{ 'Save Extra' }}</span>
+                                          {%- endif %}
+                                        </div>
+                                      {%- endfor -%}
+                                    </div>
+                                  </div>
+                                </div>
+                                <span class="price dib mb__5">
+                                  {%- render 'product-price',
+                                    product: product,
+                                    price_varies_style: price_varies_style,
+                                    type: 'card',
+                                    isGrouped: isGrouped
+                                  -%}
+                                </span>
+                              </div>
+                            </div>
+                            <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+                              <a
+                                href="{{ product.url }}"
+                                id="addtocart_r"
+                                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart s-atc"
+                                data-variant-id="{{product.first_available_variant.id}}"
+                                data-action-atc
+                                rel="nofollow"
+                                ><span class="t4s-svg-pr-icon"></span
+                                ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                              >
+                            </div>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                      <div class="rtn-btn">
+                        <a href="{{ collection.url }}">View more routines</a>
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              {% for block in section.blocks %}
+                {% assign dataTab = block.settings['tab-title'] %}
+                {% if block.type == 'content' %}
+                  {% assign len = forloop.length | divided_by: 2 %}
+                  <div class="tabcontents newy" id="tabs-{{ forloop.index | minus: len }}">
+                    {% assign collection = collections[block.settings.collection] %}
+                    {% if collection != blank %}
+                      <div class="products-grid-item-main owl-carousel pdp-custom-collection">
+                        {%- for product in collection.products limit: 4 -%}
+                          <div class="products-grid-item">
+                            <div class="product-innr">
+                                {% if product.metafields.custom.pr_excerpt != blank %}
+                                  <h6 class="pr-{{ product.metafields.custom.pr_excerpt }} obsulete">
+                                    {{ product.metafields.custom.pr_excerpt }}
+                                  </h6>
+                                {% endif %}
+                              <div class="product-image pr oh lazyloadt4sed product-innr-top">
+                                <a href="{{product.url}}">
+                                  {%- render 'product_labels', on: 'singe', product: product -%}
+                                  <img
+                                    class="pr-img-first"
+                                    src="{{ product.images[0] | product_img_url: "master" }}"
+                                    alt=""
+                                  >
+                                  <img
+                                    class="pr-img-second"
+                                    src="{{ product.images[0] | product_img_url: "master" }}"
+                                    alt=""
+                                  >
+                                </a>
+                                <div
+                                  data-fera-container="457325"
+                                  data-product_id="{{ product.id }}"
+                                  class="reviewContainerDiv on-productpic"
+                                ></div>
+                              </div>
+                              <div class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst">
+                                <div class="pr-det">
+                                  <h3 class="product-title pr fs__14 mg__0 fwm">
+                                    <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                  </h3>
+                                  {% if product.metafields.my_fields.hp_excerpt != blank %}
+                                    <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                                      {{ product.metafields.my_fields.hp_excerpt }}
+                                    </p>
+                                  {% endif %}
+                                </div>
+                                {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+                                <span class="price dib mb__5">
+                                  {%- render 'product-price',
+                                    product: product,
+                                    price_varies_style: price_varies_style,
+                                    type: 'card',
+                                    isGrouped: isGrouped
+                                  -%}
+                                </span>
+                              </div>
+                            </div>
+                            <div class="shop-all-qty-cart-btn">
+                              <a
+                                href="{{ product.url }}"
+                                id="addtocart_r"
+                                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart s-atc"
+                                data-variant-id="{{product.first_available_variant.id}}"
+                                data-action-atc
+                                rel="nofollow"
+                                ><span class="t4s-svg-pr-icon"></span
+                                ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                              >
+                            </div>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                      <div class="allAtToCart">
+                        <div class="shop-all-qty-cart-btn">
+                          <a
+                            class="fx-custom-btn-dark t4s-pr-item-btn aatcrtnone"
+                            data-id="t-{{ forloop.index | minus: len }}"
+                            data-action-atc
+                            rel="nofollow"
+                            ><span class="t4s-svg-pr-icon"></span
+                            ><span class="t4s-text-pr">
+                              {%- if template contains 'product' %}
+                                GET THIS ROUTINE
+                              {% else %}
+                                ADD ALL TO CART
+                              {% endif -%}
+                            </span></a
+                          >
+                        </div>
+                      </div>
+                      <div class="rtn-btn">
+                        <a href="{{ section.settings.urlz }}">View more routines</a>
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}
+
+<style>
+/* Homepage Redesign Change */
+ /* .template-index .foxtale_scroll .tab-slider-main .tab-list-title {
+    padding: 1rem 0 1rem 0px;
+    align-items: flex-start !important;
+  }
+  .template-index .new-landingrtn .collection-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+   .template-index .new-landingrtn .slick-track {
+    left: 50%;
+    transform: translateX(-50%) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  .template-index .new-landingrtn .slick-slide {
+    margin: 0 4px;
+  }
+  .template-index .new-landingrtn .glide__slide.tab-link {
+    padding: 2px 28px;
+    border: 1px solid #ddd;
+    color: #3E3E3E !important;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+  }
+  .template-index .new-landingrtn .tab-link.active {
+    color: #FFFFFF !important;
+  }
+  .template-index .new-landingrtn .obsulete {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #F3BF97;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1px 0 0 0;
+  }
+  .template-index .new-landingrtn .pr-det .product-title {   
+    text-align: center;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 26px;
+    text-transform: capitalize;
+  }
+  .template-index .new-landingrtn .fx-tags-shop {
+    padding-top: 1px!important;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .template-index .new-landingrtn .product-info span.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 35px;
+  }
+  .template-index .new-landingrtn .products-grid-item {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  .template-index .new-landingrtn .s-atc {
+    margin: 0 6px;
+    border-radius: 4px;
+  }
+  .template-index .new-landingrtn .shop-all-qty-cart-btn {
+    padding: 0px 0 8px 0 !important;
+  }
+  */
+/* Homepage Redesign Change End */
+  .new-landingrtn .glide__slide.tab-link {
+    background: #FFFFFF !important;
+    color: #6E6E6E !important;
+  }
+  .new-landingrtn .tab-link.active {
+    border: 1.5px solid #000000;
+    background: #000000 !important;
+    color: #FFFFFF !important;
+  }
+  .template-index.-template .container.custom_design_1.foxtale_scroll.new-landingrtn {
+    padding: 0 0px 20px 0 !important;
+  }
+  .tab-links-slider .owl-stage {
+    display: flex;
+  }
+  .tab-links-slider .slick-arrow {
+    display: none !important ;
+  }
+  .tab-links-slider{
+    width:100%;
+  }
+  .container.custom_design_1.foxtale_scroll .allAtToCart .aatcrtnone {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1.6px solid #000 !important;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    padding: 10px 58px;
+    border-radius: 6px;
+    width: max-content;
+    margin: 15px auto 0 auto;
+  }
+  .pcnbr .pr-img-first, .pcnbr .pr-img-second {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+  .customSingle-template .product-innr {
+    box-shadow: 0px 0px 3.11963px 0px rgba(0, 0, 0, 0.25) !important;
+  }
+  .customSingle-template .rtn-btn {
+    display: none;
+  }
+
+  @media (max-width: 1000px) and (min-width: 500px)
+  .container.custom_design_1.foxtale_scroll .allAtToCart .aatcrtnone {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 8px 42px;
+  }
+  .custom-tab-slider .tabcontent {
+    display: none;
+  }
+  .custom-tab-slider .products-grid-item {
+    height: auto!important;
+  }
+  .new-landingrtn .rtn-adjst {
+    margin: 0px;
+  }
+  .new-landingrtn .shop-all-qty-cart-btn {
+    padding: 0px 0 18px 0 !important;
+    margin-top: 0 !important;
+  }
+  .new-landingrtn .product-innr>h6 {
+    background: #000000;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    padding: 2px 5px 2px 10px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 500;
+    letter-spacing: 3.6px;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .new-landingrtn .products-grid-item {
+    padding: 0!important;
+  }
+  .new-landingrtn .collection-name {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+  .new-landingrtn .glide__slide.tab-link {
+    border-radius: 4px;
+    background: #F3F3F3;
+    color: #3E3E3E;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    border: 1.5px solid transparent;
+    text-transform: uppercase;
+    padding: 2px 30px;
+  }
+  .new-landingrtn .tab-link.active {
+    border: 1.5px solid #000000;
+    background: #000000;
+    color: #FFFFFF;
+  }
+  .new-landingrtn .products-grid-item-main button.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 20px) !important;
+    top: -webkit-calc(32% - 20px) !important;
+    -webkit-transform: scale(.7) !important;
+    transform: scale(.6) !important;
+    transition: .2s ease-in-out;
+    border-color: #000 !important;
+    font-size: 0 !important;
+    background-color: #000 !important;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #ffffff !important;
+  }
+  .new-landingrtn .owl-dots {
+    display: none !important;
+  }
+  .slick-disabled {
+    opacity: 0;
+    pointer-events:none;
+  }
+
+  @media (max-width: 768px) {
+    /* .template-index .new-landingrtn .collection-name {
+      font-size: 16px;
+      margin-bottom: 5px;
+    } */
+    .template-index .new-landingrtn .glide__slide.tab-link {
+      padding: 2px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+    .custom-tab-slider .tab-list-title {
+      column-gap: 11px;
+      flex-wrap: wrap;
+      row-gap: 8px;
+      margin-bottom: 10px;
+    }
+    .new-landingrtn .collection-name {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 0px;
+    }
+    .container.custom_design_1.foxtale_scroll.new-landingrtn {
+      padding: 0 12px !important;
+      margin: 30px 0 0 0 !important;
+    }
+    .new-landingrtn .glide__slide.tab-link {
+      font-size: 12px;
+      padding: 2px 20px;
+      margin: 0 6px;
+    }
+    .template-index .new-landingrtn .pr-det .product-title {   
+      /* font-size: 12px !important; */
+    }
+    .customSingle-template .tab-slider-main {
+      padding-left: 0px;
+    }
+    .customSingle-template .product-tabs-content .product-info .product-title {
+      font-size: 11px !important;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .template-index.-template .container.custom_design_1.foxtale_scroll.new-landingrtn {
+      padding: 0 0px 0px 0 !important;
+      margin: 4px 0 0 0 !important;
+    }
+    .template-index .foxtale_scroll.new-landingrtn .tab-slider-main .products-grid-item {
+      padding: 0 0px !important;
+      margin: 0 4px !important;
+    }
+    .container.custom_design_1.foxtale_scroll.new-landingrtn .allAtToCart .aatcrtnone {
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 8px 38px;
+      border: 1px solid #000 !important;
+    }
+    .customSingle-template .container.custom_design_1.foxtale_scroll.new-landingrtn .allAtToCart .aatcrtnone {
+      font-size: 12px !important;
+      letter-spacing: 1px !important;
+      padding: 8px 28px !important;
+      border: 1px solid #000 !important;
+      margin: 9px auto 18px auto;
+    }
+    .template-index.-template
+    /* .template-index.-template .new-landingrtn .owl-item {
+      margin-right: 0px !important;
+    }
+    .container.custom_design_1.foxtale_scroll.new-landingrtn {
+      padding: 0 12px !important;
+      margin: 0px 0 0 0 !important;
+    } */
+    .tab-links-slider.owl-loaded.owl-drag {
+      width: 100%;
+      z-index: 1;
+    }
+    .tab-links-slider .owl-stage-outer {
+      position: relative;
+      overflow: hidden;
+      -webkit-transform: translate3d(0,0,0);
+    }
+    .tab-links-slider .owl-stage {
+      margin-left: 0px;
+    }
+    .container.custom_design_1.foxtale_scroll .allAtToCart .aatcrtnone {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      padding: 8px 28px;
+      width: max-content;
+      margin: 9px auto 0 auto;
+    }
+    .new-landingrtn .tab-link.active {
+      margin-left: 6px !important;
+    }
+    .template-index .foxtale_scroll.new-landingrtn .tab-slider-main .tab-list-title {
+      padding-left: 10px !important;
+      margin-bottom: 10px;
+    }
+    .customSingle-template .foxtale_scroll.new-landingrtn .owl-item {
+      margin-right: 10px !important;
+    } 
+    .customSingle-template .custom-tab-slider .products-grid-item {
+      margin-right: 8px !important;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .customSingle-template .new-landingrtn .shop-all-qty-cart-btn {
+      padding: 0px 0 0px 0 !important;
+      margin-top: 0 !important;
+    }
+    .customSingle-template .custom-tab-slider .products-grid-item .product-innr>h6 {
+      font-weight: 500;
+      font-size: 11px;
+    }
+    button.owl-prev.slick-prev.slick-arrow, button.owl-next.slick-arrow.slick-next {
+      display: none;
+    }
+    .container.custom_design_1.foxtale_scroll.new-landingrtn.pcnbr .owl-stage-outer {
+        width: 99% !important;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1200px){
+    .new-landingrtn .glide__slide.tab-link {
+      padding: 2px 15px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .new-landingrtn .glide__slide.tab-link {
+      padding: 2px 60px;
+    }
+  }
+</style>
+
+<script>
+  console.log("templ",{{template |json}});
+  const curretntPageType= {{template |json}}
+  if(curretntPageType.includes('product'))
+  {
+  $(document).ready(function(){
+    $(".tabcontents").hide();
+    $(".product-tabs-content .tabcontents:first-child").show().addClass('active');
+
+    $(document).on('click', '.tab-link', function(e) {
+        var tab_id = $(this).attr('data-tab');
+
+ let modifiedString = tab_id.replace(/tabs-(\d+)/g, function(match, p1) {
+  let originalValue = parseInt(p1);
+  let newValue = originalValue - 2;
+
+  if (newValue <= 0) {
+    return `tabs--1`;
+  } else {
+    return `tabs-${newValue}`;
+  }
+});
+
+console.log("tab_id:", modifiedString);
+        if (!$(this).hasClass('active')) {
+            $(this).parents(".tab-links-slider").find('.tab-link').removeClass('active');
+            $(this).addClass('active');
+            var options = $(this).html();
+            $('.collection-selected').html(options);
+
+            $(this).parents(".tab-slider-main").find('.tabcontents').hide().removeClass('active');
+            $(this).parents(".tab-slider-main").find("#"+modifiedString).show().addClass('active');
+        }
+
+      
+    });
+});
+  }
+  else{
+    
+  
+  $(document).ready(function(){
+	$(".tabcontents").hide();
+    $(".product-tabs-content .tabcontents:first-child").show().addClass('active');
+    $(document).on('click', '.tab-link', function(e) {
+      var tab_id = $(this).attr('data-tab');
+      $(this).parents(".tab-links-slider").find('.tab-link').removeClass('active');
+      $(this).parents(".tab-links-slider").find('.tab-link[data-tab='+tab_id+']').addClass('active');
+      var options = $(this).html();
+      $('.collection-selected').html(options);
+      $(this).parents(".tab-slider-main").find('.tabcontents').hide().removeClass('active');
+      $(this).parents(".tab-slider-main").find("#"+tab_id).show().addClass('active');
+      // $('.tab-links-slider').trigger('to.owl.carousel', parseInt($(this).attr("data-index"), 300))
+	});
+});
+  }
+</script>
+<script>
+  // $('.tab-links-slider').owlCarousel({
+  //   loop: false,
+  //   nav: true,
+  //   margin: 10,
+  //   responsive: {
+  //     0: {
+  //       items: 3,
+  //       margin: 4,
+  //       autoWidth: true
+  //     },
+  //     600: {
+  //       items: 4
+  //     },
+  //     1024: {
+  //       items: 5
+  //     }
+  //   }
+  // })
+
+  $('.tab-links-slider').slick({
+     slidesToShow: 5,
+     slidesToScroll: 1,
+     dots: false,
+     variableWidth: true,
+     focusOnSelect: true,
+     infinite: true,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+         breakpoint: 600,
+         settings: {
+            slidesToShow: 3
+         }
+      },
+      {
+         breakpoint: 426,
+         settings: {
+            slidesToShow: 2
+         }
+      }
+                ]
+   });
+
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+          center: false, 
+          autoplay:false, 
+          autoplayTimeout:5000,
+          autoplayHoverPause:false,
+          stagePadding: 10,
+          loop:true, 
+          items: 2,  
+          margin:10,
+          animateOut: 'slideInLeft',
+          animateIn: 'slideOutRight'
+      },
+      600: {
+            items: 3
+      },
+      1024: {
+            items: 4
+      }
+    },
+      onInitialized : function(){
+          if($('.owl-item').first().hasClass('active'))
+              $('.owl-prev').hide();
+          else
+              $('.owl-prev').show();
+      } 
+  })
+  $(".owl-prev span").hide();
+  $(".owl-next span").hide();
+  $(".owl-prev").addClass('slick-prev');
+  $(".owl-prev").addClass('slick-arrow');
+  $(".owl-next").addClass('slick-arrow');
+  $('.owl-next').addClass('slick-next');
+</script>
+<script>
+    function updateMiniCartQuantityCount(quantity) {
+    $('#mini-cart .cart-quantity').text(quantity);
+    }
+   $(document).ready(function() {
+
+    // add all to cart button click start
+
+    $(document).on('click', 'a.fx-custom-btn-dark.t4s-pr-item-btn.aatcrtnone', function(e) {
+      e.preventDefault();
+      console.log($(this).parents('.tabcontents').find(".products-grid-item"), "111111");
+      var products = $(this).parents('.tabcontents').find(".products-grid-item");
+      setTimeout(function () {
+        var alertedProducts = new Set();
+        var productIds = [];
+        products.each(function (index) {
+          var productContainer = $(this);
+          var addToCartButton = productContainer.find('.t4s-pr-addtocart');
+          var variantId = addToCartButton.data('variant-id');
+
+          if (productContainer.is(':visible')) {
+            if (productIds.indexOf(variantId) === -1) {
+              productIds.push(variantId);
+              alertedProducts.add(productIds);
+            }
+          }
+        });
+
+        console.log(productIds,"productIds.......")
+
+        var quantity = 1;
+        var currentIndex = 0;
+
+        function addProductToCart() {
+          if (currentIndex >= productIds.length) {
+            // All products have been added to the cart
+            $.getJSON('/cart.js', function (cart) {
+              updateMiniCartQuantityCount(cart.item_count);
+            });
+            return;
+          }
+
+          var productId = productIds[currentIndex];
+
+          $.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            dataType: 'json',
+            data: { id: productId, quantity: quantity },
+            success: function () {
+              currentIndex++;
+              addProductToCart();
+            }
+          });
+
+          setTimeout(function () {
+            jQuery.getJSON('/cart.js', function (cart) {
+              let cartData = cart.items;
+              document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+              document.dispatchEvent(new CustomEvent('cart:refresh', {
+                bubbles: true,
+                detail: cartData
+              }));
+              console.log("@@@@@@@@@@@@@@@",cart);
+            });
+          }, 100);
+        }
+
+        addProductToCart();
+      }, 100);
+    });
+  })
+</script>
+
+<!-- Growlytics -->
+<script>
+  $(document).ready(function () {
+      $( '.tab-links-slider').on("click", function(){
+       Growlytics.events.track(" Collection routine ",{
+         'clicks': "Clicks",
+         'Product Name': prodName
+       });
+      });
+    });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $( '.addtocarthp').on("click", function(){
+     Growlytics.events.track("add all to cart button routine slider",{
+       'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+  });
+</script>
+<!-- End -->
+
+{% schema %}
+{
+  "name": "Routine Collection Slider",
+  "class": "custom-tab-slider custom-collection-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "slider-title",
+      "label": "Slider Title"
+    },
+    {
+      "type": "url",
+      "id": "urlz",
+      "label": "Routine Link"
+    },
+    {
+        "type": "text",
+        "id": "show_on_collection_handle",
+        "label": "Display on Collection (Enter Collection Handle)",
+        "default": "Plz enter collection handle"
+    },
+    {
+      "type": "select",
+      "id": "pr_des",
+      "label": "Design product",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "Design 1"
+        },
+        {
+          "value": "2",
+          "label": "Design 2"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Product Tab",
+      "type": "tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab-title",
+          "label": "Tab Title"
+        }
+      ]
+    },
+    {
+      "name": "Product Tab Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Routine Collection Slider"
+    }
+  ]
+}
+{% endschema %}

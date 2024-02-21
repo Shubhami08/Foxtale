@@ -1,0 +1,196 @@
+<section>
+  <div class="container">
+    {% if section.settings.slider-title != blank %}<div class="best-title"><h3>{{ section.settings.slider-title }}</h3></div>{% endif %}
+    <div class="tab-slider-main">
+      <div class="tab-list-title">
+        <span class="collection-name">Routines for </span>
+        <select class="tab-content" onchange="tabCustom(event);this.dataset.chosen = this.value;">
+        {% for block in section.blocks %}
+          {% if block.type == 'tabs' %}
+            <option class="tab-links{% if forloop.first %} active{% endif %}" data-tab="tabs-{{ forloop.index }}" value="val-{{ forloop.index }}">{{ block.settings.tab-title }}</option>
+          {% endif %}
+        {% endfor %}
+        </select>
+      </div>
+      <div class="product-tabs-content">
+        {% for block in section.blocks %}
+          {% assign dataTab = block.settings.tab-title %}
+          {% if block.type == 'content' %}
+            {% assign len = forloop.length | divided_by: 2 %}
+          <div class="tabcontents" id="tabs-{{ forloop.index | minus: len }}">
+            {{ product.metafields.custom.routines }}
+            {% assign collection = block.settings.collection %}
+            {% if collection != blank %}              
+              <div class="products-grid-item-main pdp-custom-collection">
+              {%- for product in collection.products limit:10 -%}                                  
+                    <div class="products-grid-item">
+                      <div class="product-innr">
+                        {% if product.metafields.custom.pr_excerpt != blank %}
+                          <h6 class="pr-{{ product.metafields.custom.pr_excerpt }}">{{ product.metafields.custom.pr_excerpt }}</h6>
+                        {% endif %}
+                        <div class="product-image pr oh lazyloadt4sed product-innr-top">
+                          <a href="{{product.url}}">
+                          {%- render 'product_labels',on:'singe',product:product -%}
+                          <img class="pr-img-first" src="{{ product.images[0] | product_img_url: "master" }}" alt="" />
+                          <img class="pr-img-second" src="{{ product.images[0] | product_img_url: "master" }}" alt="" />
+                          </a>
+                        </div>
+                        <div class="product-info mt__15 mb__10 product-innr-bottom">
+                          <div class="pr-det"> 
+                            <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{product.url}}">{{product.title}}</a></h3>
+                            {% if product.metafields.my_fields.hp_excerpt != blank %}
+                                <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
+                            {% endif %}
+                          </div>
+                          {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
+                          <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv"></div>
+                          <span class="price dib mb__5">{%- render 'product-price',product:product,price_varies_style:price_varies_style,type:'card',isGrouped:isGrouped -%}</span>
+                        </div>
+                      </div>
+                      <div class="shop-all-qty-cart-btn">
+                        <a href="{{ product.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+                     </div>
+                  </div>                
+              {%- endfor -%}
+              </div>              
+                <div class="view-more-btn">
+                    <a href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.custom-tab-slider .tabcontent {
+  display: none;
+}
+.custom-tab-slider .products-grid-item {
+  height: auto!important;
+}
+  @media (max-width: 600px) {
+  select[data-chosen='val-2'] { 
+    width:42% !important;
+}
+  }
+    @media (min-width: 768px) {
+  select[data-chosen='val-2'] { 
+    width:20% !important;
+}
+  }
+</style>
+
+<script>
+document.querySelector('#tabs-1').style.display = "block";
+function tabCustom(evt, country_code) {
+  var country_select = document.querySelector(".tab-content");
+  var country_code = country_select.options[country_select.selectedIndex].getAttribute('data-tab');
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontents");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+    tabcontent[i].style.visibility = "hidden";
+  }
+  tablinks = document.getElementsByClassName("tab-links");
+  // console.log(tablinks.length);
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(country_code).style.display = "block";
+  country_select.options[country_select.selectedIndex].className += " active";
+  document.getElementById(country_code).className += " active";
+  console.log("fefefe",country_select.options[country_select.selectedIndex].className);
+  setTimeout(function () {document.getElementById(country_code).style.visibility = "visible"}, 450);
+}
+  if ($('.tab-list-title > div.field-item:contains("Anti Ageing")').length > 0) {
+    $(".tab-list-title").addClass("thisClass");
+}
+</script>
+<script>
+  $('.pdp-custom-collection').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  arrows: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,  
+  //variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2.2,
+        slidesToScroll: 2,
+        infinite: false
+      }
+    }
+  ]
+});   
+$('.tab-content').change(function(){  
+  $('.slick-prev').trigger("click");
+  setTimeout(function(){
+    $('.slick-next').trigger("click");
+  },300);
+});
+</script>
+<style>
+  .slick-disabled {
+    opacity: 0;
+    pointer-events:none;
+}
+</style>
+{% schema %}
+  {
+    "name": "Custom Collection 1",
+    "class": "custom-tab-slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "slider-title",
+        "label": "Slider Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Product Tab",
+        "type": "tabs",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab-title",
+            "label": "Tab Title"
+          }
+        ]
+      },
+      {
+        "name": "Product Tab Content",
+        "type": "content",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Collection 1"
+      }
+    ]
+  }
+{% endschema %}

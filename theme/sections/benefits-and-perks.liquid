@@ -1,0 +1,112 @@
+{% schema %}
+{
+  "name": "Benefits and Perks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Our Images"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Image"
+        },
+        {
+          "type": "text",
+          "id": "image_title",
+          "label": "Image Title",
+          "default": "Default Title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="image-section">
+    <h1 class="main-heading">{{ section.settings.main_heading }}</h1>
+    <div class="image-row">
+        {% for block in section.blocks %}
+        <div class="image-block">
+            <img src="{{ block.settings.image | img_url: '300x300' }}" class="image-main" alt="{{ block.settings.image_title }}" />
+            <h2 class="image-text">{{ block.settings.image_title }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+div#shopify-section-benefits-and-perks {
+    margin: 45px 0 38px;
+}
+.image-section {
+    text-align: center;
+}
+.main-heading {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.image-block {
+    flex: 1; /* allows the blocks to grow and take up equal width */
+    margin: 0 10px; /* spacing between each image block */
+    text-align: center;
+}
+.image-block img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 14.2px;
+}
+.image-block h2 {
+    font-size: 14px;
+}
+.image-main{
+  width: 124px;
+  height: 124px;
+}
+.image-text{
+  color: #2C2C2C;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width:768px){
+  .image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-row-gap: 16px;
+  }
+  .image-block h2 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .image-row {
+    padding: 16px 0 0px;
+  }
+  div#shopify-section-benefits-and-perks {
+    margin: 32px 0;
+  }
+}  
+</style>

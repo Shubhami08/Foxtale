@@ -1,0 +1,172 @@
+{% schema %}
+  {
+    "name": "career-page-form",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Main Heading",
+        "default": "Default Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Sub Heading",
+        "default": "Default Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Upload Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.career-page-form-main {
+  padding: 35px 60px 35px 60px;
+  background-color: #F8F8F8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.career-page-form-main-heading {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  color: #000000;
+}
+.career-page-form-sub-heading {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2c2c2c;
+  max-width: 405px;
+}
+.career-page-form-img {
+  margin-top: 48px;
+}
+.template-page .contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.template-page .contact-form input:not([type=submit]):not([type=checkbox]) {
+  color: #8E8E8E;
+  font-size: 13px;
+  font-weight: 400;
+  border: none !important;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+.btns-sbmt {
+  padding: 8px 40px !important;
+}
+.career-submit-button {
+  margin-top: 8px;
+}
+.career-customer-file {
+  color: #8E8E8E;
+  font-size: 13px;
+  font-weight: 400;
+  border: none !important;
+  margin: 8px 0;
+  border-radius: 4px;
+  background-color: white;
+  padding: 10px 15px;
+  line-height: 18px;
+}
+img.career-page-form-image-main {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.one-note {
+  padding-left: 20px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+.bluenow {
+  color: #4285F4;
+  text-decoration: underline;
+}
+.desktp-show {
+  display: inherit !important;
+}
+.mob-hide, .new-hide {
+  display: none !important;
+}
+
+@media screen and (max-width:768px){
+  .career-page-form-main {
+    padding: 16px 17px 0px 12px;
+    grid-template-columns: 1fr;
+  }
+  .career-page-form-img {
+    margin-top: 48px;
+    display: none;
+  }
+  .career-page-form-main-heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .career-page-form-sub-heading {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  .career-page-form-heading {
+    margin-bottom: 16px;
+  }
+  .desktp-show {
+    display: none !important;
+  }
+  .mob-hide {
+    display: block !important;
+    margin-top: -72px;
+    padding-bottom: 16px;
+  }
+  .new-hide {
+    display: block !important;
+    margin: 0;
+    padding: 8px 0 8px 20px;
+  }
+}
+</style>
+
+<div class='career-page-form-main'>
+  <div class='career-page-form-heading'>
+    <div class='career-page-form-main-heading'>{{ section.settings.heading }}</div>
+    <div class='career-page-form-sub-heading'>{{ section.settings.subheading }}</div>
+    <div class='career-page-form-img desktp-show'>
+       <img src="{{ section.settings.image | img_url: 'master' }}" class="career-page-form-image-main" alt="{{ section.settings.image }}" />
+    </div>
+  </div>
+
+   <div class="contact-form form-vertical">
+     <div style="margin:0 auto;" class="pxFormGenerator" id="imSeC1I-Xq9hZq-_dOKNCA"></div>
+   </div>
+   <div class='career-page-form-img mob-hide'>
+     <img src="{{ section.settings.image | img_url: 'master' }}" class="career-page-form-image-main" alt="{{ section.settings.image }}" />
+   </div>
+</div>
+
+{% stylesheet %}
+input[type="file"] { 
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+input:focus + label {
+  outline: 2px solid;
+}
+{% endstylesheet %}
+
+{% javascript %}
+  $(document).ready(function(){
+    $('#file-upload').on('change', function(){
+        var fileName = $(this).prop('files')[0].name;
+        $('#file-upload-filename').text('File name: ' + fileName);
+    });
+});
+{% endjavascript %}

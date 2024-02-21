@@ -1,0 +1,131 @@
+{%- comment %}{%- if product.available == false and product.price == 0 %}{% continue %}{% endif -%}{%- endcomment %}
+{%- liquid 
+  assign pr_id = product.id
+  assign pr_options = product.options_with_values
+  assign color_count = 0
+  if pr_options.size > 0 and show_color
+    assign color_ck = settings.color_ck | append:',color,colors,couleur,colour'
+    assign get_color = color_ck | downcase | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+    for option in pr_options
+      assign name = option.name | downcase
+      if get_color contains name
+        assign color_count = option.values.size
+        if show_cl_type == '2'
+          assign pr_option = forloop.index
+          assign nt_option = 'option'| append:pr_option
+          assign color_variants = product.variants | where: "available" | map:nt_option | uniq
+          assign color_count = color_variants.size
+        endif
+        break
+      endif
+    endfor
+  endif
+  assign countdown = time_meta| default:product.metafields.meta.countdown
+  assign pr_hdl = product.handle
+  assign product_url = product.url
+  assign images_0 = product.images[0] | default:settings.placeholder_img
+  assign get_locale = product_url | split:'/products/' | first -%}
+  {%- capture pr_url %}{{get_locale}}{{url_cat}}/products/{{pr_hdl}}{% endcapture -%}
+
+<div data-page="{{page_t4}}" class="col-lg-{{col}} col-md-{{col_tb}} col-{{col_mb}} mt__30 pr_grid_item product nt_pr desgin__1 {{ product.metafields.my_fields.pr_tag | downcase | replace: " ", "-" }} jen-rtn">
+<div class="product-inner pr featured_product_slider">
+   {%- render 'product_labels',on:'singe',product:product -%}
+   {% if product.metafields.my_tag.pr_tag != blank %}
+   <span class="{{ product.metafields.my_tag.pr_tag | downcase | replace: ' ', '-' }}">{{ product.metafields.my_tag.pr_tag }}</span>
+   {% endif %}
+   {%- if countdown != blank and use_cdt -%}
+   <div class="pr_wr_dcimg pr oh">
+      <div class="product-image pr oh lazyloadt4s" data-rendert4s="{{pr_url}}/?view=img{{sett_equal}}"><div class="nt_bg_lz nt_fk_lz"{% unless sett_equal %} style="padding-top:{{ 1 | divided_by: images_0.aspect_ratio | times: 100}}%;"{% endunless %}></div>
+   </div>
+   <div class="pr_deal_dt pa pe_none op__0">
+      <span class="pr_title_dt">{{txt_cd}}</span> <span class="pr_coun_dt" data-date="{{countdown}}"></span>
+   </div>
+</div>
+{%- else -%}
+{% comment %}
+<div class="product-image pr oh lazyloadt4s" data-rendert4s="{{pr_url}}/?view=img{{sett_equal}}"><div class="nt_bg_lz nt_fk_lz"{% unless sett_equal %} style="padding-top:{{ 1 | divided_by: images_0.aspect_ratio | times: 100}}%;"{% endunless %}></div>
+</div>{% endcomment %}
+<div class="product-innr">
+  {% if product.metafields.custom.pr_excerpt != blank %}
+    <h6 class="pr-{{ product.metafields.custom.pr_excerpt }} top-rtn">
+      {{ product.metafields.custom.pr_excerpt }}
+    </h6>
+  {% endif %}
+<div class="product-image pr oh lazyloadt4sed">
+   <a class="cd chp" href="{{pr_url}}"><img class="first-img" src="{{ product.images[0] | product_img_url: 'master' }}" />
+   <img class="second-img" src="{{ product.images[1] | product_img_url: 'master' }}" /></a>
+   <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
+</div>
+{%- endif -%}
+<div class="product-info mt__15 mb__10 jen-rtn-adjst" data-pr-id="{{ product.handle }}" >
+   {%- if product.vendor.size > 0 and show_vendor -%}
+   <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
+   {%- endif -%}
+   <div class="pr-det">
+      <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{pr_url}}">{{product.title}}</a></h3>
+      {% if product.metafields.my_fields.hp_excerpt != blank %}
+      <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
+      {% endif %}
+   </div>
+   <div class="pr-variant">
+      <div class="t4s-product-form__variants">
+         <div class="t4s-swatch__list">
+            {%- for variant in product.variants -%}
+            {% assign option = variant.options | downcase | replace: '"', '' %}
+            {% assign option = option | replace: ' ', '-' %}
+            {% assign option = option | replace: '[', '' %}
+            {% assign option = option | replace: ']', '' %}
+            <div data-swatch-item class="t4s-swatch__item{% if selected_value == variant.options %} is--selected{% endif %}  {% if variant.title == 'Pack of 2' %}t4s-swatch-pack-2 {% endif %}{% if forloop.first %}active{% endif %}"  data-comp= "{{ option }}" data-value="{{ variant.options | escape }}" data-id="{{ variant.id }}">
+               <div>{{ variant.options }}</div>
+               {% if variant.compare_at_price > 0 %}
+               <div class="pr-price"><del>{{ variant.compare_at_price | money }}</del><ins>{{ variant.price | money }}</ins></div>
+               {% else %}
+               <div class="pr-price">{{ variant.price | money }}</div>
+               {% endif %}{% if variant.title == 'Pack of 2' %}<span class="pr-best-seller">{{ 'Bestseller' }}</span>{% endif %}
+            </div>
+            {%- endfor -%}
+         </div>
+      </div>
+   </div>
+  <span class="price dib mb__5">
+                                {%- for variant in product.variants -%}
+                                  {% assign pr_option = variant.options | downcase | replace: '"', '' %}
+                                  {% assign pr_option = pr_option | replace: ' ', '-' %}
+                                  {% assign pr_option = pr_option | replace: '[', '' %}
+                                  {% assign pr_option = pr_option | replace: ']', '' %}
+                                  <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+                                    {% if variant.compare_at_price > variant.price %}
+                                      <del>{{ variant.compare_at_price | money_with_currency }}</del
+                                      ><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
+                                    {% else %}
+                                      {{ variant.price | money_with_currency }}
+                                    {% endif %}
+                                  </div>
+                                {% endfor %}
+                              </span>
+   <div class="discount-msg">
+     {% assign message = product.price | divided_by: 100 %}
+        {% if message <= 750 %}
+          <p class="bottom-leftext">VDAY</p>
+        {% else %}
+            <p class="bottom-leftext">15% OFF</p>
+          {% endif %} 
+      <!-- {% if product.title contains 'Foxtale Minis' %}
+      <div class="bottom-leftext">
+         <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
+            B3@1099
+         </div>
+      </div>
+      {% endif %} -->
+      <p class="bottom-rightext">Free Gift</p>
+   </div>
+   {%- if color_count > 0 -%}
+   <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyloadt4s" data-colorCount="{{color_count}}" data-rendert4s="{{pr_url}}/?view=sw{{sett_equal}}"></div>
+   {%- endif -%}
+</div>
+</div>
+<div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+   <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+</div>
+</div>
+</div>

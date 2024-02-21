@@ -1,0 +1,424 @@
+<style>
+    #orderHistory {display: none;padding-top: 100px;}
+    #refSection {display: none;padding-top: 100px;}  
+    #rewardActivity {display: none;padding-top: 75px;} 
+    #earn {display: none;padding-top: 75px;} 
+    #terms {display: none;padding-top: 75px;} 
+  .stamped-rewards-widget-heading-main {font-weight:500 !important;font-size: 23px !important;margin-bottom:22px !important;}
+    [data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-number {background-color: #e85a28 !important;}
+  .stamped-rewards-widget-campaigns-earnings {text-align: left!important}
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image > i:before, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i, [data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image > i:before {color: #e85a28 !important;}
+  [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-title {margin-bottom: 5px !important; font-weight: bold !important;color: black !important}
+      [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-sub, [data-widget-type="rewards-referral"] div[data-target-id="section-email-customer"], [data-widget-type="rewards-referral"] div[data-target-id="section-email-friend"], [data-widget-type="rewards-referral"] .stamped-rewards-widget-description, [data-widget-type="rewards-referral"] .stamped-rewards-widget-heading-main {display: none !important;}
+  </style> 
+  <div class="container mt__60 mb__60">
+    <div class="row">
+       <div class="col-12 col-md-3 sp-myaccount-sidebar is_sticky_sidebar">
+          <nav class="sp-myaccount-nav mb__30 is_sticky theiaStickySidebar">
+             <ul class="ul_none is_sticky_inner">
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--dashboard">
+                   <a class="js_add_ld" href="{{ routes.account_url }}">{{ 'customer.account.dashboard' | t }}</a>
+                </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="myFunction()">
+                  <a  href="#orderHistory">Order History</a>
+                 </li>
+              {% comment %}  {%- if settings.wishlist_type != '0' -%}
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--wishlist">
+                   <a class="js_link_wis" href="{{ routes.search_url }}/?view=wish">{{ 'customer.account.wishlist' | t }} (<span class="jswcount">0</span>)</a>
+                </li>
+                {%- endif -%}  {% endcomment %}
+                 <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address">
+                   <a class="js_add_ld" href="{{ routes.account_addresses_url }}">{{ 'customer.addresses.title' | t }} ({{ customer.addresses_count }})</a>
+                </li> 
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="earnFunct()">
+               <a  href="#earn">Earn Coins</a>
+              </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="rewardFunct()">
+                 <a href="#rewardActivity">Reward Activity</a>
+                </li>
+                  <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="showrefSection()">
+                 <a  href="#refSection">Refer and Earn</a>
+                </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--edit-address" onclick="termsFunct()">
+               <a  href="#terms">Rewards Terms & Conditions</a>
+              </li>
+                <li class="sp-myaccount-nav-link sp-myaccount-nav-link--customer-logout custom-logout-button">
+                  <a class="js_add_ld" href="{{routes.account_logout_url}}" data-no-instant>{{ 'customer.account.log_out' | t }}</a>
+                </li>
+             </ul>
+          </nav>
+       </div>
+       <div class="col-12 col-md-9 sp-myaccount-content tc is_sticky_content">
+         <div id="earn">
+        <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+       </div>
+         <div class="rewards-content" id="terms" style="text-align:left">
+    <div class="reward-box">
+      <p>Hey!</p>
+      <p>Here are some things you need to know to make this rewards program work for you :)</p>
+      <ul>
+        <li>Coins earned on each purchase will be credited to your account once the order is shipped</li>
+        <li>Only 1000 coins can be redeemed in one go.</li>
+        <li>There is a one-month blackout period after signing up for a new account when the earning rule for "Celebrate a birthday" will not be awarded to customers. This is to prevent any potential abuse of the rewards program, by setting a fake birthday to gain additional points.</li>
+        <li>While submitting the review form, please make sure you use the same email address you have used to sign up for the rewards program. It takes 24 hours for the review to be verified and processed</li>
+        <li>If you have redeemed a coupon, but in the process forget to copy the coupon code at checkout, you can always retrieve it from your <a aria-label="REWARDS HISTORY">Rewards History</a> section in your account page</li>
+        <li>If you would like to know more or have any questions regarding our rewards program, please reach out to our Customer team on Whatsapp and Team will be happy to help</li>
+        <li>The Reward Program Coupons cannot be combined with any other discount coupons</li>
+      </ul>
+    </div>
+  </div>
+       <div id="rewardActivity">
+         <div id="stamped-rewards-widget" data-widget-type="rewards-activities"></div>
+       </div>
+         <div id="refSection">
+         <h2 class="referal-heading-main">Refer and Earn</h2>
+         <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;" tabindex="0"></div>
+        <p style="font-size: 16px; font-weight: 600;">Refer your friends and family to Foxtale and Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and start cashing in the rewards.</p>
+      <div id="stamped-rewards-widget" data-widget-type="rewards-referral"></div>
+      </div>
+          <div id="orderHistory">
+              {%- if customer.orders.size != 0 -%}
+              {%- paginate customer.orders by 20 -%}
+                 <table class="responsive-table orders-table" >
+                    <thead>
+                      <tr>
+                        <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                        <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                        <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                        <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                        <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                        <th scope="col">{{ 'customer.order.track_shipment' | t }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {%- for order in customer.orders -%}
+                        <tr>
+                          <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                            <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small js_add_ld" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                          </th>
+                          <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                          <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                          <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                          <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                          <td>
+                          {% for line_item in order.line_items %}
+                            {% if line_item.fulfillment.tracking_number %}
+                              <a href="{{ line_item.fulfillment.tracking_url }}">
+                              <p style ="border: 2px solid black; background-color: black; color: white; text-align: center;" >Track Here: #{{ line_item.fulfillment.tracking_number}}</p>
+                             </a>
+                            {% break %}
+                            {% endif %}
+                          {% endfor %}
+                          </td>
+                          </td>
+                        </tr>
+                      {%- endfor -%}
+                    </tbody>
+                 </table>
+                {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, cl_a:' js_add_ld' %}{%- endif -%}
+              {%- endpaginate -%}
+           {%- else -%}
+              <div class="shopify-message"><i class="fa fa-check" aria-hidden="true"></i><a class="btn_link fwsb tu mr__10" href="{{routes.all_products_collection_url | sort_by: 'best-selling'}}">{{ 'customer.make_order' | t }}</a> {{ 'customer.orders.none' | t }}</div>
+           {%- endif -%}
+          </div>
+       <div class="theiaStickySidebar" id="addrrSection">
+           <button type="button" class="button button_primary address-new-toggle mb__30 tu" id="AddressNewButton" aria-expanded="false" aria-owns="AddressNewForm">{{ 'customer.addresses.add_new' | t }}</button>
+           {%- comment -%}
+             Add address form, hidden by default
+           {%- endcomment -%}
+           <div id="AddressNewForm" class="mt__40 login-form hide">
+             {%- form 'customer_address', customer.new_address -%}
+               <h2>{{ 'customer.addresses.add_new' | t }}</h2>
+  
+               <div class="row mb__30 form-row tl">
+                 <div class="col-12 col-md-6">
+                   <label for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
+                   <input type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name">
+                 </div>
+  
+                  <div class="col-12 col-md-6">
+                   <label for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
+                   <input type="text" id="AddressLastNameNew" name="address[last_name]" value="{{ form.last_name }}" autocomplete="family-name">
+                 </div>
+               </div>
+  
+               <p class="form-row tl">
+                   <label for="AddressCompanyNew">{{ 'customer.addresses.company' | t }}</label>
+                   <input type="text" id="AddressCompanyNew" name="address[company]" value="{{ form.company }}" autocomplete="organization">
+                </p>
+                <p class="form-row tl">
+                   <label for="AddressAddress1New">{{ 'customer.addresses.address1' | t }}</label>
+                   <input type="text" id="AddressAddress1New" name="address[address1]" value="{{ form.address1 }}" autocomplete="street-address address-line1">
+                </p>
+                <p class="form-row tl">
+                   <label for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</label>
+                   <input type="text" id="AddressAddress2New" name="address[address2]" value="{{ form.address2 }}" autocomplete="street-address address-line2">
+                 </p>
+  
+               <div class="row mb__30 form-row tl">
+                 <div class="col-12 col-md-6">
+                   <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
+                   <input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2">
+                 </div>
+  
+                 <div class="col-12 col-md-6">
+                   <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
+                   <select id="AddressCountryNew" name="address[country]" data-default="{{ form.country }}" autocomplete="country">{{ all_country_option_tags }}</select>
+                 </div>
+               </div>
+               
+               <p class="form-row tl" id="AddressProvinceContainerNew" style="display:none">
+                 <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
+                 <select id="AddressProvinceNew" name="address[province]" data-default="{{ form.province }}" autocomplete="address-level1"></select>
+               </p>
+               <p class="form-row tl">
+                  <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
+                  <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code">
+               </p>
+               <p class="form-row tl">
+                  <label for="AddressPhoneNew">{{ 'customer.addresses.phone' | t }}</label>
+                  <input type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}" autocomplete="phone">
+               </p>
+               {{ form.set_as_default_checkbox }}
+               <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
+                <br>
+               <input type="submit" class="btn mt__20 mb__10 js_add_ld" value="{{ 'customer.addresses.add' | t }}">
+               <br>
+               <button type="button" class="text-link address-new-toggle">{{ 'customer.addresses.cancel' | t }}</button>
+             {%- endform -%}
+             <hr>
+           </div>
+           {%- comment -%}
+             List all customer addresses with a unique edit form.
+             Also add pagination in case they have a large number of addresses
+           {%- endcomment -%}
+           {%- paginate customer.addresses by 5 -%}
+              <ul class="ul_none row login-form pt__20">
+                {%- for address in customer.addresses -%}
+                  <li class="col-12 tc mb__40">
+                    <div class="address">
+                      {%- if address == customer.default_address -%}
+                        <h2 class="h4">{{ 'customer.addresses.default' | t }}</h2>
+                      {%- endif -%}
+                      {{ address | format_address }}
+                       <button id="EditFormButton_{{ address.id }}" type="button" class="btn btn--small address-edit-toggle" data-form-id="{{ address.id }}" aria-owns="EditAddress_{{ address.id }}" aria-expanded="false">{{ 'customer.addresses.edit' | t }}</button>
+                       <button type="button" class="mt__10 btn btn--secondary btn--small address-delete" data-target="{{ address.url }}" data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}">{{ 'customer.addresses.delete' | t }}</button>
+                    </div>
+  
+                    <div id="EditAddress_{{ address.id }}" class="login-form mt__50">
+                      {%- form 'customer_address', address -%}
+  
+                        <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
+  
+                       <div class="row mb__30 form-row tl">
+                          <div class="col-12 col-md-6">
+                            <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+                            <input type="text" id="AddressFirstName_{{ form.id }}" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name">
+                          </div>
+  
+                          <div class="col-12 col-md-6">
+                            <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
+                            <input type="text" id="AddressLastName_{{ form.id }}" name="address[last_name]" value="{{ form.last_name }}" autocomplete="family-name">
+                          </div>
+                        </div>
+                        <p class="form-row tl">
+                           <label for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label>
+                           <input type="text" id="AddressCompany_{{ form.id }}" name="address[company]" value="{{ form.company }}" autocomplete="organization">
+                        </p>
+                        <p class="form-row tl">
+                           <label for="AddressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
+                           <input type="text" id="AddressAddress1_{{ form.id }}" name="address[address1]" value="{{ form.address1 }}" autocomplete="street-address address-line1">
+                        </p>
+                        <p class="form-row tl">
+                           <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
+                           <input type="text" id="AddressAddress2_{{ form.id }}" name="address[address2]" value="{{ form.address2 }}" autocomplete="street-address address-line2">
+                        </p>
+                        <div class="row mb__30 form-row tl">
+                          <div class="col-12 col-md-6">
+                            <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+                            <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2">
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <label for="AddressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
+                            <select id="AddressCountry_{{ form.id }}" class="address-country-option" data-form-id="{{ form.id }}" name="address[country]" data-default="{{ form.country }}" autocomplete="country">{{ all_country_option_tags }}</select>
+                          </div>
+                        </div>
+                        <p class="form-row tl" id="AddressProvinceContainer_{{ form.id }}" style="display:none">
+                          <label for="AddressProvince_{{ form.id }}">{{ 'customer.addresses.province' | t }}</label>
+                          <select id="AddressProvince_{{ form.id }}" name="address[province]" data-default="{{ form.province }}" autocomplete="address-level1"></select>
+                        </p>
+  
+                        <p class="form-row tl">
+                            <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+                            <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code">
+                        </p>
+  
+                        <p class="form-row tl">
+                            <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+                            <input type="tel" id="AddressPhone_{{ form.id }}" name="address[phone]" value="{{ form.phone }}" autocomplete="phone">
+                        </p>
+                          {{ form.set_as_default_checkbox }}
+                          <label for="address_default_address_{{ form.id }}">{{ 'customer.addresses.set_default' | t }}</label>
+                          <br>
+                          <input type="submit" class="btn mt__20 mb__10 js_add_ld" value="{{ 'customer.addresses.update' | t }}">
+                          <br>
+                          <button type="button" class="text-link address-edit-toggle" data-form-id="{{ form.id }}">{{ 'customer.addresses.cancel' | t }}</button>
+                      {%- endform -%}
+                      <hr>
+                    </div>
+                  </li>
+                {%- endfor -%}
+              </ul>
+              {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, cl_a:' js_add_ld' %}{%- endif -%}
+           {%- endpaginate -%}
+       </div>
+       </div>
+    </div>
+  </div>
+  <script>
+      var x = document.getElementById("orderHistory");
+      var y = document.getElementById("refSection");
+      var a = document.getElementById("addrrSection");
+      var r = document.getElementById("rewardActivity");
+      var e = document.getElementById("earn");
+      var t = document.getElementById("terms");
+
+  function myFunction() {
+    if (!x.style.display || x.style.display === "none") {
+      x.style.display = "block";
+    } if(a.style.display = "block"){
+        a.style.display = "none";
+    } if(y.style.display = "block"){
+        y.style.display = "none";
+    }  if (r.style.display = "block"){
+    r.style.display = "none"
+    } if(e.style.display = "block"){
+        e.style.display = "none";
+    }  if (t.style.display = "block"){
+    t.style.display = "none"
+  }
+    else {
+      x.style.display = "none";
+    }
+  }
+  
+    function showrefSection() {
+    if (!y.style.display || y.style.display === "none") {
+      y.style.display = "block";
+    } if ( x.style.display === "block") {
+      x.style.display = "none";
+    } if(a.style.display = "block"){
+        a.style.display = "none";
+    }  if (r.style.display = "block"){
+    r.style.display = "none"
+  } if(e.style.display = "block"){
+        e.style.display = "none";
+    }  if (t.style.display = "block"){
+    t.style.display = "none"
+  }
+    else {
+      y.style.display = "none";
+    }
+  }
+
+       function rewardFunct() {
+  var r = document.getElementById("rewardActivity");
+    if (!r.style.display || r.style.display === "none") {
+    r.style.display = "block";
+  }  if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if(a.style.display = "block"){
+        a.style.display = "none";
+    } if(e.style.display = "block"){
+        e.style.display = "none";
+    } if (t.style.display = "block"){
+    t.style.display = "none"
+  }
+    else {
+    r.style.display = "none";
+  }
+}
+
+    function earnFunct() {
+  var e = document.getElementById("earn");
+    if (!e.style.display || e.style.display === "none") {
+    e.style.display = "block";
+  }  if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if (a.style.display = "block"){
+    a.style.display = "none"
+  }  if (r.style.display = "block"){
+    r.style.display = "none"
+  } if (t.style.display = "block"){
+    t.style.display = "none"
+  } else {
+    e.style.display = "none";
+  }
+}
+
+     function termsFunct() {
+  var t = document.getElementById("terms");
+    if (!t.style.display || t.style.display === "none") {
+    t.style.display = "block";
+  }  if (x.style.display = "block"){
+    x.style.display = "none"
+  }  if (y.style.display = "block"){
+    y.style.display = "none"
+  }  if (e.style.display = "block"){
+    e.style.display = "none"
+  }  if(a.style.display = "block"){
+        a.style.display = "none";
+    }
+  else {
+    t.style.display = "none";
+  }
+}
+  
+$(document).ready(function() {
+  $(".custom-logout-button").on("click", function() {
+    clearCache();
+    clearCookies();
+    clearSessionStorage(); // Uncomment this line if you want to clear session storage too
+    refreshPage();
+  });
+});
+
+function clearCache() {
+  // Force reload the page and clear the cache by appending a unique query string
+  location.reload(true);
+}
+
+function clearCookies() {
+  const cookies = document.cookie.split(";");
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    const eqPos = cookie.indexOf("=");
+    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+  }
+}
+
+function clearSessionStorage() {
+  sessionStorage.clear();
+}
+
+function refreshPage() {
+  location.reload();
+}
+
+  </script>
+  
+  
+
+{%- schema -%}
+{
+  "name": "Addresses",
+  "tag": "section",
+  "class": "t4s-section t4s-section-customers t4s-container"
+}
+{% endschema %}

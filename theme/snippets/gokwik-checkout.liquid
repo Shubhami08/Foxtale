@@ -1,0 +1,94 @@
+{% if settings.goEnable %}
+<div class="gokwik-checkout"{% if settings.hideFlow %} style="display:none !important;" {% endif %}>
+  <button type='button' class="" onclick="onCheckoutClick(this)">
+            <span class="btn-text" >
+                <span>{{ settings.main-titile }}</span>
+                <span>{{ settings.sub-titile }}</span>
+            </span>
+          <span class="pay-opt-icon">
+             <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_163.svg?v=1684908604">
+             <img src="https://cdn.gokwik.co/v4/images/right-arrow.svg">
+          </span>
+    <div style="display:none"  ><div class="cir-loader">Loading..</div></div>
+  </button>
+</div>
+
+
+<script>
+$(document).ready(function () {
+    $( '.gokwik-checkout').on("click", function(){
+     var prodName = $(this).data("title");
+     Growlytics.events.track("Place Order",{
+     'clicks': "Clicks",
+       'Product Name': prodName
+     });
+      $.ajax({
+        type: 'GET',
+        url: '/cart.js',
+        dataType: 'json',
+        success: function (cart) {
+            console.log('Cart Items:', cart.items,cart);
+   let trigger_price_1 = parseInt($("body").attr("trigger-price-1"));
+  let gift_product_1 = $("body").attr("gift-product-1");
+  let trigger_price_2 = parseInt($("body").attr("trigger-price-2"));
+  let gift_product_2 = $("body").attr("gift-product-2");
+let giftingId;
+          console.log("gifts",trigger_price_1,trigger_price_2,gift_product_1,gift_product_2)
+          if(cart.items_subtotal_price >= trigger_price_1* 100 && cart.items_subtotal_price >= trigger_price_2* 100)
+          {
+            console.log("1");
+            giftingId=gift_product_2;
+             cart.items = cart.items.filter(function (item) {
+                return item.id != gift_product_1;
+            });
+          }
+          if(cart.items_subtotal_price >= trigger_price_1* 100 && cart.items_subtotal_price <= trigger_price_2* 100){
+             console.log("2") 
+            giftingId=gift_product_1;
+             cart.items = cart.items.filter(function (item) {
+                return item.id != gift_product_2;
+            });
+          }
+          if(cart.items_subtotal_price <= trigger_price_1* 100)
+          { 
+             console.log("3")
+             giftingId=gift_product_1;
+            cart.items = cart.items.filter(function (item) {
+                return item.id != gift_product_1 && item.id == gift_product_2;
+            });
+            
+         }
+      const index = cart.items.findIndex(item => item.id == giftingId);
+
+if (index !== -1) {
+  console.log("index",index, cart.items[index].properties)
+  cart.items[index].quantity = 1;
+  cart.items[index].properties = {};
+}
+           console.log("carttt",cart.items)
+           updateCart(cart.items);
+        },
+        // error: function (error) {
+        //     console.error('Error fetching cart:', error);
+        // }
+        
+      });
+    });
+  function updateCart(cartItems) {
+        $.ajax({
+            type: 'POST',
+            url: '/cart/update.js',
+            data: { cart_items: cartItems },
+            dataType: 'json',
+            success: function () {
+                console.log('Cart updated successfully');
+            },
+            error: function (error) {
+                console.error('Error updating cart:', error);
+            }
+        });
+    }
+     });
+</script>
+
+{% endif %}

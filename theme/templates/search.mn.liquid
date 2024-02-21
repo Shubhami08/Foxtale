@@ -1,0 +1,101 @@
+<!-- Kwikpass start -->
+<script>
+  function kpNotLoggedinHandle(){
+    const event = new CustomEvent('open_login_modal')
+    window.dispatchEvent(event)
+  }
+  function autoLogin(token){
+    const loginElement = document.getElementById('kplogin')
+    const accountElement = document.getElementById('kpaccount')
+    if(token){
+       if(loginElement) loginElement.style.display = 'none';
+       if(accountElement) accountElement.style.display = 'inline-flex';
+    }
+    else{
+       if(loginElement) loginElement.style.display = 'block';
+       if(accountElement) accountElement.style.display = 'none';
+    }
+  }
+      window.addEventListener('user-loggedin', function(event) {
+         const { token } = event?.detail;
+           autoLogin(token);
+      });
+
+      var userToken = localStorage.getItem('KWIKSESSIONTOKEN');
+        autoLogin(userToken);
+
+</script>
+<!-- Kwikpass end -->
+{%- liquid
+ layout none
+ assign mobile_nav_type = settings.mobile_nav_type -%} 
+
+  <link rel="stylesheet" href="{{ 'drawer.min.css' | asset_url }}" media="all">
+  <link rel="stylesheet" href="{{ 'mobile_nav.css' | asset_url }}" media="all">
+  {%- if mobile_nav_type == '1' or mobile_nav_type == '2' -%}
+<div class="t4s-drawer__header">
+
+<span>{% if mobile_nav_type == '1' %}{%- assign navActive = 'is--active' -%}
+  {% comment %} Kwikpass commented the below code to add kwikpass login functionality
+  {% if customer %}
+<a href="https://foxtale.in/account" class="main-class-header">
+  <div class="menu-header-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 24C18.5529 24 24 18.5647 24 12C24 5.44707 18.5411 0 11.9882 0C5.42347 0 0 5.44707 0 12C0 18.5647 5.43527 24 12 24ZM12 16.0118C8.45877 16.0118 5.72937 17.2706 4.54113 18.6823C2.96467 16.9176 2.0117 14.5765 2.0117 12C2.0117 6.45882 6.43527 2.00001 11.9882 2.00001C17.5293 2.00001 21.9881 6.45882 22 12C22 14.5883 21.047 16.9294 19.4588 18.6941C18.2705 17.2823 15.5411 16.0118 12 16.0118ZM12 14.0118C14.2588 14.0353 16.0353 12.1059 16.0353 9.57649C16.0353 7.20001 14.247 5.22354 12 5.22354C9.74113 5.22354 7.94115 7.20001 7.96469 9.57649C7.97644 12.1059 9.72939 13.9882 12 14.0118Z" fill="black"/>
+    </svg>
+  </div>
+  <div class="menu-main-heading-customer">Hi, {{ customer.first_name }}!</div>
+</a>
+{% else %}
+<a href="https://foxtale.in/account/login" class="main-class-header">
+  <div class="menu-header-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 24C18.5529 24 24 18.5647 24 12C24 5.44707 18.5411 0 11.9882 0C5.42347 0 0 5.44707 0 12C0 18.5647 5.43527 24 12 24ZM12 16.0118C8.45877 16.0118 5.72937 17.2706 4.54113 18.6823C2.96467 16.9176 2.0117 14.5765 2.0117 12C2.0117 6.45882 6.43527 2.00001 11.9882 2.00001C17.5293 2.00001 21.9881 6.45882 22 12C22 14.5883 21.047 16.9294 19.4588 18.6941C18.2705 17.2823 15.5411 16.0118 12 16.0118ZM12 14.0118C14.2588 14.0353 16.0353 12.1059 16.0353 9.57649C16.0353 7.20001 14.247 5.22354 12 5.22354C9.74113 5.22354 7.94115 7.20001 7.96469 9.57649C7.97644 12.1059 9.72939 13.9882 12 14.0118Z" fill="black"/>
+    </svg>
+  </div>
+  <div class="menu-main-container">
+  <div class="menu-main-heading">Hi, Front Foxer!</div>
+  <div class="menu-sub-heading">Login to view account settings</div>
+  </div>
+</a>
+    {% endif %} 
+  {% endcomment %} 
+  {% comment %} Kwikpass changes - [Starts] {% endcomment %}
+  <a id="kpaccount" style="display:none" href="javascript:void(0);" onclick="handleShopifyLogin(event,'/account')" class="main-class-header">  
+    <div class="menu-header-svg">
+      {% render 'kp-icon-account' %}
+    </div>
+    <div class="menu-main-heading-customer" style="text-transform: initial">Hi, {{ customer.first_name }}</div>
+  </a>
+  
+
+<div id="kplogin" style="display:none">
+  <a href="javascript:void(0);" class="main-class-header" onclick="kpNotLoggedinHandle()">
+    <div class="menu-header-svg">
+    {% render 'kp-icon-account' %}
+    </div>
+    <div class="menu-main-container">
+    <div class="menu-main-heading">Hi, Front Foxer!</div>
+    <div class="menu-sub-heading">Login to view account settings</div>
+    </div>
+  </a>
+</div>
+{% comment %} Kwikpass changes - [Ends] {% endcomment %}
+{% else %}{%- assign catActive = 'is--active' -%}{{ 'general.mobile_menu.categories' | t }}{% endif %}</span>
+</div>  {%- else -%}
+   
+   {%- if mobile_nav_type == '3' -%}
+    {%- assign navActive = 'is--active' -%}
+    {%- assign catActive = '' -%}
+   {%- else -%}
+    {%- assign order1 = 't4s-order-2' -%}
+    {%- assign order2 = 't4s-order-1' -%}
+    {%- assign navActive = '' -%}
+    {%- assign catActive = 'is--active' -%}
+   {%- endif -%}
+   <div data-tab-mb-nav class="t4s-drawer__header t4s-mb-nav__tabs t4s-rows t4s-g-0 t4s-row-cols-2 t4s-text-center">
+      <div data-tab-mb-item class="t4s-mb-tab__title t4s-col-item t4s-pr t4s-d-flex t4s-align-items-center t4s-justify-content-center {{order1}} {{navActive}}" data-id="#shopify-mb_nav"><span class="t4s-d-block t4s-truncate">{{ 'general.mobile_menu.menu' | t }}</span></div>
+      <div data-tab-mb-item class="t4s-mb-tab__title t4s-col-item t4s-pr t4s-d-flex t4s-align-items-center t4s-justify-content-center {{order2}} {{catActive}}" data-id="#shopify-mb_cat"><span class="t4s-d-block t4s-truncate">{{ 'general.mobile_menu.categories' | t }}</span></div>
+   </div>
+  {%- endif -%}
+  <div data-tab-mb-content id="shopify-mb_nav" class="t4s-mb-tab__content {{navActive}}">{%- section 'mb_nav' -%}</div><div data-tab-mb-content id="shopify-mb_cat" class="t4s-mb-tab__content {{catActive}}">{%- section 'mb_cat' -%}</div>

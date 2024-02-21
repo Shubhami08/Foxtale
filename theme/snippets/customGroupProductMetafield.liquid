@@ -1,0 +1,35 @@
+{% if product.metafields.my_fields.group_product_items %}
+      {% assign itemHandle = product.metafields.my_fields.group_product_items | split: '@' %}
+      <div class="container">
+        <div class="row">
+          {% for handle in itemHandle %}
+            {% assign group_item = all_products[handle] %}
+            <div class="group-product-item-detail-newcombo mb__40 col-sm">
+              <div class="image-container lazyloadt4sed" style="max-width: 350px; margin: 0 auto;">
+                <a href="{{ group_item.url }}"><img
+                  class="lazyloadt4sed"
+                  src="{{group_item.images[0] | img_url: 'master' }}"
+                  alt="{{group_item.title}}"
+                ></a>
+              </div>
+              <div class="info-atc">
+               <div class="item-info">
+                  <a href="{{ group_item.url }}" class="item-title" style="color: #222; font-family: Poppins; font-size: 16px; font-style: normal; font-weight: 500; line-height: 37.626px;">
+                    {{ group_item.title }}
+                  </a>
+                <div
+                  class="item-description"
+                  style="color: #58595B; font-family: Poppins; font-size: 14px; font-style: normal; font-weight: 400; line-height: 21.501px;"
+                >
+                  {{ group_item.metafields.my_fields.combo_page_description_paragraph }}
+                </div>
+               </div>
+               <div class="shop-all-qty-cart-btn">
+                <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{group_item.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+               </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}

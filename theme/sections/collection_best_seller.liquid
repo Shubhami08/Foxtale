@@ -1,0 +1,359 @@
+<div class="col-lg-{{class_main}} col-12 pt__20 pb__20 collection-best-seller">
+{% if collection.metafields.custom.best_seller != blank %}
+  <div class="collection-best-seller related product-extra container">
+    {% assign pairItemHandle = collection.metafields.custom.best_seller | split: '@' %}
+
+    <div class="section-heading wrap_title">
+      <h3 class=" widget-title tc">
+        <span>{{ section.settings.best_seller_section_heading }}</span>
+      </h3>
+    </div>
+  
+    <div class="pairProducts-grid-items collection-best-seller-handle row">
+      {% for pairHandle in pairItemHandle %}
+        {% assign pairHandleArray = pairHandle | split: '#' %}
+        {% assign pairHandleUrl = pairHandleArray[0] %}
+        {% assign pairHandleExcerpt = pairHandleArray[1] %}
+        {% assign pairProduct = all_products[pairHandleUrl] %}
+        <div class='col-lg-4 col-md-6 col-6'>
+          <div class="product-inner pr">
+ {% assign productMainPrice = pairProduct.price | divided_by: 100 %}
+          <span class="tc nt_labels pa pe_none cw">
+             {% if productMainPrice <= 498 %}
+                <span
+                  class="nt_label new"
+                  style="width: auto; padding: 0 5px;  background-color: red; color: #fff; font-weight: 600;"
+                  >15% Off</span
+                >
+              {% endif %}
+              {% if productMainPrice >= 499 and productMainPrice < 678 %}
+                <span
+                  class="nt_label new"
+                  style="width: auto; padding: 0 5px;  background-color: red; color: #fff; font-weight: 600;"
+                  >15% Off</span
+                >
+              {% endif %}
+              {% if productMainPrice >= 678 and productMainPrice < 899 %}
+                <span
+                  class="nt_label new"
+                  style="width: auto; padding: 0 5px;  background-color: red; color: #fff; font-weight: 600;"
+                  >15% Off</span
+                >
+              {% endif %}
+              {% if productMainPrice >= 899 and productMainPrice < 1199 %}
+                <span
+                  class="nt_label new"
+                  style="width: auto; padding: 0 5px;  background-color: red; color: #fff; font-weight: 600;"
+                  >15% Off</span
+                >
+              {% endif %}
+               {% if productMainPrice >= 1199 %}
+                <span
+                  class="nt_label new"
+                  style="width: auto; padding: 0 5px;  background-color: red; color: #fff; font-weight: 600;"
+                  >15% Off</span
+                >
+              {% endif %}
+          </span>
+            <div
+              class="product-image pr oh lazyloadt4sed"
+              data-rendert4s="/products/{{pairProduct.handle}}/?view=imgfalse"
+              data-currentrendert4s=""
+            >
+              <a class="db" href="/products/{{pairProduct.handle}}">
+                <div
+                  class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed"
+                  data-id="{{ pairProduct.images[0].id }}"
+                  data-bgset="{{ pairProduct.images[0] | image_url }}"
+                  data-parent-fit="width"
+                  data-wiis=""
+                  data-ratio="1.0"
+                  style="padding-top: 100%; background-image: url('{{ pairProduct.images[0] | image_url }}');"
+                >
+                  <picture style="display: none;">
+                    <source
+                      data-srcset="{{ pairProduct.images[0] | image_url }}"
+                      sizes="570px"
+                      srcset="{{ pairProduct.images[0] | image_url }}"
+                    >
+                    <img
+                      alt=""
+                      class="lazyautosizes lazyloadt4sed ls-is-cached"
+                      data-sizes="auto"
+                      data-ratio="1.0"
+                      sizes="570px"
+                    >
+                  </picture>
+                </div>
+              </a>
+              {% if pairProduct.images.size > 1 %}
+                <div class="hover_img pa pe_none t__0 l__0 r__0 b__0 op__0">
+                  <div
+                    class="pr_lazy_img back-img pa nt_bg_lz lazyloadt4sed"
+                    data-id="{{ pairProduct.images[1].id }}"
+                    data-bgset="{{ pairProduct.images[1] | image_url }}"
+                    data-parent-fit="width"
+                    data-wiis=""
+                    data-ratio="1.0"
+                    style="padding-top: 100%; background-image: url('{{ pairProduct.images[1] | image_url }}');"
+                  >
+                    <picture style="display: none;">
+                      <source
+                        data-srcset="{{ pairProduct.images[1] | image_url }}"
+                        sizes="570px"
+                        srcset="{{ pairProduct.images[1] | image_url }}"
+                      >
+                      <img
+                        alt=""
+                        class="lazyautosizes lazyloadt4sed ls-is-cached"
+                        data-sizes="auto"
+                        data-ratio="1.0"
+                        sizes="570px"
+                      >
+                    </picture>
+                  </div>
+                </div>
+              {% endif -%}
+
+<div class="on-productpic" data-fera-container="457325" data-product_id="{{ pairProduct.id }}"></div>
+        
+            </div>
+            <div class="product-info mt__15">
+              <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 500;font-size:18px;-webkit-line-clamp:2;">
+                <a class="cd chp" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
+              </h3>
+              {% if  pairProduct.metafields.my_fields.hp_excerpt != blank %}
+                <p class="fx-tags-shop fx-{{  pairProduct.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{  pairProduct.metafields.my_fields.hp_excerpt }}</p>
+              {% endif %}
+        
+             
+            <!--  <span class="price dib mb__5" style="margin-top: 10px; font-size: 16px; font-weight: 800;"
+                ><ins>{{ pairProduct.price | money }}</ins></span
+              > -->
+               
+        </div>
+            <div class="shopify-product-reviews-badge star-rating " data-id="{{pairProduct.id}}"></div>
+             <span class="price dib mb__5" style=" font-size: 16px; font-weight: 800;">
+                               {%- liquid
+                assign variant_unit = pairProduct.variants.first
+                assign pid = pairProduct.id
+                assign hd_up = 'group-' |append:pid
+                assign nav_up = linklists[hd_up].links | where:'type','product_link'
+                assign nav_up_size = nav_up.size
+                assign tags_t4 = pairProduct.tags  | join: ', '-%}
+                
+                {%- unless tags_t4 contains 't4_hide_price' -%}
+                {%- if nav_up_size == 0 and variant_unit.unit_price_measurement -%}
+                   {%- if variant_unit.compare_at_price > variant_unit.price -%}<del>{{ variant_unit.compare_at_price  | money }}</del><ins class="dcba">{{ variant_unit.price | money }}</ins>{%- else -%}{{ variant_unit.price | money }}{%- endif -%}
+                   {%- capture unit_price_base_unit -%}
+                    <span class="unit_base">
+                      {%- if variant_unit.unit_price_measurement -%}
+                        {%- if variant_unit.unit_price_measurement.reference_value != 1 -%}
+                          {{- variant_unit.unit_price_measurement.reference_value -}}
+                        {%- endif -%}
+                        {{ variant_unit.unit_price_measurement.reference_unit }}
+                      {%- endif -%}
+                    </span>
+                   {%- endcapture -%}
+                   <div class="price__unit"><span class="unit_price">{{ variant_unit.unit_price | money }}</span><span>/</span>{{- unit_price_base_unit -}}</div>
+                
+                {%- elsif inc_price == '1' -%}
+                  {%- if nav_up_size > 0 -%}{{ pairProduct.price | money }}{%- if pairProduct.compare_at_price != blank -%} – {{ pairProduct.compare_at_price | money }}{%- endif -%}
+                  {%- else -%}
+                    {%- if pairProduct.price_varies -%}{{ pairProduct.price_min | money }} – {{ pairProduct.price_max | money }}
+                    {%- elsif pairProduct.compare_at_price > pairProduct.price -%}<del>{{ pairProduct.compare_at_price  | money }}</del><ins class="dcba">{{ pairProduct.price | money }}</ins>
+                    {%- else -%}{{ pairProduct.price | money }}
+                    {%- endif -%}
+                  {%- endif -%}
+                
+                {%- else -%}
+                
+                  {%- if nav_up_size > 0 -%} {{ pairProduct.price | money }}
+                  {%- else -%}
+                    {%- if pairProduct.price_varies -%} {{ pairProduct.price_min | money }}
+                    {%- elsif pairProduct.compare_at_price > pairProduct.price -%}<del>{{ pairProduct.compare_at_price  | money }}</del><ins class="dcba">{{ pairProduct.price | money }}</ins>
+                    {%- else -%}{{ pairProduct.price | money }}
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endif -%}
+                {%- endunless -%}
+             </span>
+              
+<!--          <p class="gift_para_main" style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0; padding: 0 0 0 7px;">Gift Worth ₹150</p>
+              <p class="gift_para_main" style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0; padding: 0 0 0 7px;">Gift Worth ₹150</p> -->
+               <div class="discount-msg">
+                  {% if collection.title == "Secret Sale" %}
+                    <p class="bottom-leftext">B2G2</p>
+                  {% elsif collection.title == "Affiliate Valentine Sale" %}
+                    <p class="bottom-leftext">CUPID</p>
+                  {% elsif collection.title == "Special Sale" %}
+                    <p class="bottom-leftext">B2G2</p>
+                  {% elsif collection.title == "Birthday Special Sale" %}
+                    <p class="bottom-leftext">B2G4</p>
+                  {% elsif collection.title == "Birthday Sale" %}
+                    <p class="bottom-leftext">B2G4</p>
+                  {% elsif collection.title == "New Sale" %}
+                    <p class="bottom-leftext">30% off</p>
+                  {% elsif collection.title == "Affiliate Secret Sale" %}
+                     <p class="bottom-leftext">CUPID</p>
+                  {% elsif collection.title == "Special Offer" %}
+                    <p class="bottom-leftext">B2G4</p>
+                  {% elsif collection.title == "New Exclusive Special" %}
+                    <p class="bottom-leftext">B2G4</p>
+                  {% elsif collection.title == "Midnight Sale" %}
+                     <p class="bottom-leftext">B1G1</p>
+                      {% elsif collection.title == "Free Eye Mask - Gpay" %}
+                    <p class="bottom-leftext">B1G1 Eye Mask Free</p>
+                  {% elsif collection.title == "Secret Flash Sale" %}
+                     <p class="bottom-leftext">B1G1</p>
+                  {% elsif collection.title == "Secret Party" %}
+                     <p class="bottom-leftext">B1G1</p>
+                  {% elsif collection.title == "Exclusive Sale" %}
+                    <p class="bottom-leftext">VDAY</p>
+                  {% elsif collection.title == "Paytm Flat 400 off" %}
+                    <p class="bottom-leftext">₹400 off</p>
+                  {% else %}
+                    <p class="bottom-leftext">15% OFF</p>
+                  {% endif %}
+                    <p class="bottom-rightext">Free Gift</p>            
+               </div>
+<!--             
+             <form
+              method="post"
+              action="/cart/add"
+              id="cart-form_ppr"
+              accept-charset="UTF-8"
+              class="nt_cart_form variations_form variations_form_ppr"
+              enctype="multipart/form-data"
+              data-productid="{{ product.id }}"
+            >
+              <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+              <input
+                name="id"
+                data-productid="{{ pairProduct.id }}"
+                value="{{ pairProduct.variants.first.id }}"
+                type="hidden"
+              >
+              <div class="variations_button in_flex column w__100 buy_qv_false" style="width:100% !important;">
+                <div class="wrap">
+                  {% comment %}
+                    <div class="quantity pr mr__10 order-1 qty__true" id="sp_qty_ppr">
+                        <input type="number" class="input-text qty text tc qty_pr_js" step="1" min="1"
+                            max="4968" name="quantity" value="1" size="4" pattern="[0-9]*" inputmode="numeric">
+                        <div class="qty tc fs__14">
+                            <button type="button" class="plus db cb pa pd__0 pr__15 tr r__0"><i
+                                    class="facl facl-plus"></i></button>
+                            <button type="button" class="minus db cb pa pd__0 pl__15 tl l__0"><i
+                                    class="facl facl-minus"></i></button>
+                        </div>
+                    </div>
+                  {% endcomment %}
+                  <a
+                    rel="nofollow"
+                    data-no-instant=""
+                    href="#"
+                    class="single_stt out_stock button pe_none order-2"
+                    id="out_stock_ppr"
+                    >Out of stock</a
+                  >
+                  <button
+                    type="submit"
+                    data-time="6000"
+                    data-ani="shake"
+                    class="fx-custom-best-btn-dark button truncate js_frm_cart w__100 order-4"
+                  >
+                    <span class="txt_add ">Add to cart</span><span class="txt_pre dn">Pre-order</span>
+                  </button>
+                </div>
+              </div>
+            </form>  -->
+            
+            <div class="shop-all-qty-cart-btn " data-handle="{{ pairProduct.handle }}">               
+               <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>            
+            </div>
+            
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+</div>
+<script>
+    $('.collection-best-seller-handle').slick({
+        mobileFirst: true, 
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 4
+          }
+         }
+        ],
+        slidesToShow: 2,
+        arrows: true,
+        centerMode: false,
+        prevArrow: `<svg focusable="false" style="width: 50px;  padding: 8px;" role="presentation" class="icon icon-chevron-left slick-arrow" viewBox="0 0 284.49 498.98" style=""><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>`,
+        nextArrow: `<svg focusable="false" style="width: 50px;  padding: 8px;" role="presentation" class="icon icon-chevron-right slick-arrow" viewBox="0 0 284.49 498.98" style=""><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>`
+    });
+  </script>
+  <style>
+        @media screen and (min-width: 1024px) {
+      .slick-track{
+        margin:auto;
+      }
+    }
+    
+    svg.icon.icon-chevron-right.slick-arrow {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    z-index: 9;
+    width: 28px !important;
+    background: #000000 !important;
+    border-radius: 50% !important;
+    color: #ffffff;
+    height: 28px;
+}
+svg.icon.icon-chevron-right.slick-arrow path, svg.icon.icon-chevron-left.slick-arrow {
+  fill: #ffffff;
+}
+    svg.icon.icon-chevron-left.slick-arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    width: 28px !important;
+    background: #000000 !important;
+    border-radius: 50% !important;
+    color: #ffffff;
+    height: 28px;
+}
+.fx-custom-best-btn-dark {
+    background-color: #000!important;
+    border: 2px solid!important;
+    border-radius: 0px;
+    border-color: #000!important;
+    color: #fff!important;
+    position: relative;
+    text-transform: uppercase;
+}
+  </style>
+
+  {% schema %}
+    {
+    "name": "Collection Best Seller",
+    "settings": [
+    {
+    "type": "text",
+    "id": "best_seller_section_heading",
+    "label": "Heading",
+    "default": "Best Seller Routines"
+    }
+    ],
+  "presets": [
+      {
+        "name": "Best Seller"
+      }
+    ]
+    }
+{% endschema %}

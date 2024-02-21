@@ -1,0 +1,223 @@
+{% schema %}
+{
+  "name": "Image Banner Slider",
+  "settings": [
+    {
+      "id": "slider_height_mobile",
+      "type": "text",
+      "label": "Slider Height for Mobile",
+      "default": "100%"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Collection-Banner-Slider",
+      "settings": [
+        {
+          "id": "image_1_desktop",
+          "label": "Desktop Image 1",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_1_mobile",
+          "label": "Mobile Image 1",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_2_desktop",
+          "label": "Desktop Image 2",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_2_mobile",
+          "label": "Mobile Image 2",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_3_desktop",
+          "label": "Desktop Image 3",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_3_mobile",
+          "label": "Mobile Image 3",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_4_desktop",
+          "label": "Desktop Image 4",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_4_mobile",
+          "label": "Mobile Image 4",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_5_desktop",
+          "label": "Desktop Image 5",
+          "type": "image_picker"
+        },
+        {
+          "id": "image_5_mobile",
+          "label": "Mobile Image 5",
+          "type": "image_picker"
+        },
+        {
+          "id": "collection_handle",
+          "label": "Collection Handle",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Banner Slider",
+      "category": "Any"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+<!-- Add Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% endstylesheet %}
+
+<div class="main-carousel-collection" style="visibility:hidden">
+{% for block in section.blocks %}
+  {% if block.settings.collection_handle == collection.handle %}
+    <div class="main-carousel desktop-carousel">
+      {% for i in (1..5) %}
+        {% assign img = "" %}
+        {% case i %}
+          {% when 1 %}
+            {% assign img = block.settings.image_1_desktop %}
+          {% when 2 %}
+            {% assign img = block.settings.image_2_desktop %}
+          {% when 3 %}
+            {% assign img = block.settings.image_3_desktop %}
+          {% when 4 %}
+            {% assign img = block.settings.image_4_desktop %}
+          {% when 5 %}
+            {% assign img = block.settings.image_5_desktop %}
+        {% endcase %}
+
+        {% if img != blank %}
+          <div class="carousel-cell">
+            <img src="{{ img | img_url: 'master' }}" alt="">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="main-carousel mobile-carousel" style="height:calc(100vw * 9 / 16);">
+      {% for i in (1..5) %}
+        {% assign img = "" %}
+        {% case i %}
+          {% when 1 %}
+            {% assign img = block.settings.image_1_mobile %}
+          {% when 2 %}
+            {% assign img = block.settings.image_2_mobile %}
+          {% when 3 %}
+            {% assign img = block.settings.image_3_mobile %}
+          {% when 4 %}
+            {% assign img = block.settings.image_4_mobile %}
+          {% when 5 %}
+            {% assign img = block.settings.image_5_mobile %}
+        {% endcase %}
+
+        {% if img != blank %}
+          <div class="carousel-cell">
+            <img src="{{ img | img_url: 'master' }}" alt="">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
+<style>
+  /* Hide mobile carousel by default */
+.mobile-carousel {
+  display: none;
+}
+
+/* On mobile screens, hide desktop carousel and show mobile carousel */
+@media (max-width: 767px) {
+  .desktop-carousel {
+    display: none;
+  }
+  .mobile-carousel {
+    display: block;
+  }
+  .mobile-carousel .flickity-viewport{
+    height:250px !important;
+  }
+}
+
+/* Flickity slider styles */
+.main-carousel {
+  margin: 0;
+  width: 100%;
+}
+
+.carousel-cell {
+  width: 100%;
+}
+ 
+.carousel-cell img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+  .main-carousel-collection {
+  height: {{ section.settings.slider_height }};
+}
+
+@media (max-width: 767px) {
+  .main-carousel-collection {
+    height: {{ section.settings.slider_height_mobile }};
+  }
+  
+}
+</style>
+<script>
+$(document).ready(function() {
+  setTimeout(function() {
+    $('.main-carousel-collection').css('visibility','visible');
+  }, 1500);
+  // Add Flickity JS
+  $.getScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")
+    .done(function() {
+    var $desktopCarousel = $('.desktop-carousel').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      adaptiveHeight: true
+    });
+    var $mobileCarousel = $('.mobile-carousel').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      adaptiveHeight: true
+    });
+    // Check number of slides after initializing for desktop
+if ( $desktopCarousel.data('flickity').cells.length <= 1 ) {
+  // If only one slide, hide previous-next button
+  $desktopCarousel.find('.flickity-prev-next-button').css('visibility','hidden');
+  $('.desktop-carousel').css('padding-bottom','32px');
+}
+// Check number of slides after initializing for mobile
+if ( $mobileCarousel.data('flickity').cells.length <= 1 ) {
+  // If only one slide, hide previous-next button
+  $mobileCarousel.find('.flickity-prev-next-button').css('visibility','hidden');
+}
+  });
+});
+</script>

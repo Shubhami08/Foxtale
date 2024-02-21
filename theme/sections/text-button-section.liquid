@@ -1,0 +1,132 @@
+{% schema %}
+{
+  "name": "Text Button Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "Default content here."
+    },
+    {
+      "type": "textarea",
+      "id": "contentunvisible",
+      "label": "Invisible Content",
+      "default": "Default invisible content here."
+    }
+  ],
+  "presets": [
+      {
+        "name": "Text Button Section"
+      }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.content-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-career .image-section .main-heading {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+}
+
+  .container-career .content-section .section-content{
+    color: #2C2C2C;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .section-content .section-content-unvisible{
+     display: none;
+  }
+  .section-content .section-content-unvisible.visible{
+     display: block;
+  }
+  .container-career .content-section .section-content p{
+    color: #2C2C2C;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+ .container-career .content-section .content-button{
+    display: flex;
+    padding: 8px 40px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #000;
+
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+ }
+  
+  
+   @media screen and (max-width:768px){
+     .container-career .content-section button{
+        margin : auto;
+     }
+     .container-career .content-section .section-content{
+        margin-bottom : 8px;
+        font-size: 12px;
+      }
+    .container-career .content-section .section-content p{
+       font-size: 14px;
+    }
+    .container-career .image-section .main-heading{
+       font-size: 18px;
+    }
+  }
+{% endstylesheet %}
+
+<section class="content-section">
+    <h1 class="main-heading">{{ section.settings.heading }}</h1>
+    <div class="section-content">
+      <p class="section-content-visible">{{ section.settings.content }}</p>
+      <!-- <p class="section-content-unvisible">{{ section.settings.contentunvisible }}</p> -->
+    </div>
+    
+    <!-- <button class="content-button">Learn More</button> -->
+</section>
+
+<script>
+//    let getPara2 = document.querySelector(".section-content-unvisible");
+// let getBtn = document.querySelector(".content-button");
+
+// getBtn.addEventListener("click", ()=>{
+//     getPara2.classList.toggle("visible");
+// })
+
+  $(document).ready(function(){
+    $(".content-button").click(function(){
+        $(".section-content-unvisible").slideToggle()
+    })
+})
+</script>

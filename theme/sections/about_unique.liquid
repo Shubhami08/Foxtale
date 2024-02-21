@@ -1,0 +1,15 @@
+{% if product.metafields.custom.unique != blank %}
+  {{ product.metafields.custom.unique }}
+{% endif %}
+
+{% schema %}
+  {
+    "name": "About Unique",
+    "settings": [],
+    "presets": [
+        {
+            "name": "About Unique"
+        }
+    ]
+  }
+{% endschema %}

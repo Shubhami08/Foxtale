@@ -1,0 +1,70 @@
+<div class="about-main-chapter">
+  {% for block in section.blocks %}    
+    {% if block.settings.chapter_img != blank %}
+    <div class="about-container">
+      <div class="about-chapter" data-id="tab-{{ forloop.index }}">
+        <img class="desktop-chapter" src="{{ block.settings.chapter_img | img_url: 'master' }}" alt="{{ block.settings.chapter_img | remove: 'files/' }}" />
+        <img class="mobile-chapter" src="{{ block.settings.chapter_img_mob | img_url: 'master' }}" alt="{{ block.settings.chapter_img_mob | remove: 'files/' }}" />
+      </div>
+      <div class="about-banner-mob">
+        <img src="{{ block.settings.chapter_banner_mob | img_url: 'master' }}"/>
+      </div>
+    </div>
+    {% endif %}    
+  {% endfor %}
+</div>
+<div class="about-main-chapter-banner">
+  {% for block in section.blocks %}
+    {% assign len = forloop.length | divided_by: 2 %}
+     {% if block.settings.chapter_banner != blank %}       
+    <div class="about-chapter-banner" id="tab-{{ forloop.index | minus: len }}">
+      <img class="desktop-chapter-banner" src="{{ block.settings.chapter_banner | img_url: 'master' }}" />
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "About Us Chapter",    
+    "blocks": [
+      {
+        "name": "Chapter Image",
+        "type": "image",
+        "settings": [
+          {
+             "type": "image_picker",
+             "id": "chapter_img",
+             "label": "Chapter Image Desktop"   
+          },
+          {
+             "type": "image_picker",
+             "id": "chapter_img_mob",
+             "label": "Chapter Image Mobile"   
+          },
+          {
+             "type": "image_picker",
+             "id": "chapter_banner_mob",
+             "label": "Chapter Banner Mobile"   
+          }
+        ]        
+      },
+      {
+        "name": "Chapter Banner",
+        "type": "image2",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "chapter_banner",
+            "label": "Selecting Chapter Banner"
+          }          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Us Chapter"
+      }
+    ]
+  }
+{% endschema %}

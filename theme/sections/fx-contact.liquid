@@ -1,0 +1,279 @@
+<style>
+.contact-uss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 52px 80px 52px 80px;
+}
+.con-left {
+  position: relative;
+}
+.con-left:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  background-color: #CACACA;
+  width: 2px;
+  height: 365px;
+}
+.con-left h3 {
+  color: #E85A28;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.con-left h5 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+.con-left h6 {
+  color: #2C2C2C;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.con-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.con-headstyle {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+.con-headstyle h4 {
+  color: #2C2C2C;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #CACACA;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.con-headstyle h4 span {
+  background: #fff;
+  padding: 0 20px;
+}
+.two-bnts {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 12px;
+}
+.two-bnts a {
+  padding: 12px;
+  width: 50%;
+  text-align: center;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.end-content {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.end-content h5 {
+  color: #2C2C2C;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 275px;
+  margin: 0 auto;
+}
+.end-content a {
+  color: #4285F4;
+  text-align: center;
+  font-size: 14px;
+  text-decoration-line: underline;
+}
+.front-pik {
+  width: 25px;
+  height: 15px;
+  display: inline-flex;
+  position: relative;
+  top: 1px;
+  padding: 0 3px;
+}
+.back-pik {
+  width: 25px;
+  height: 15px;
+  display: inline-flex;
+  position: relative;
+  top: 3px;
+  padding: 0 3px;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .contact-uss {
+    grid-template-columns: 1fr;
+  }
+  .con-left h3, .con-left h6 {
+    text-align: center;
+  }
+  .con-left h5 {
+    margin: 0 auto 25px auto;
+    text-align: center;
+  }
+  .con-left:after {
+    display: none;
+  }
+  .con-left {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-uss {
+    grid-template-columns: 1fr;
+    margin: 25px 12px 28px 12px;
+  }
+  .con-left h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .con-left h5 {
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .con-left h6 {
+    text-align: center;
+    max-width: 385px;
+    margin: 0 auto;
+  }
+  .con-left:after {
+    display: none;
+  }
+  .con-left {
+    margin-bottom: 15px;
+  }
+  .con-headstyle {
+    margin-bottom: 18px;
+  }
+  .jgd {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .two-bnts {
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    flex-direction: column-reverse;
+  }
+  .two-bnts a {
+    width: 100%;
+  }
+  .end-content h5 {
+    line-height: 20px;
+    max-width: 305px;
+  }
+}
+</style>
+<div class="contact-uss">
+  <div class="con-left">
+    <h3>{{ section.settings.textitle1 }}</h3>
+    <h5>{{ section.settings.contentcont }}</h5>
+    <h6>{{ section.settings.lastpara }}</h6>
+  </div>
+  <div class="con-right">
+    <div class="con-headstyle">
+      <h4>
+        <span>{{ section.settings.textitle2 }}</span>
+      </h4>
+    </div>
+    <div class="two-bnts">
+      <a href="{{ section.settings.mailink }}" rel="nofollow"
+        ><span class="front-pik">{% render 'gmailz' %}</span>Email Us<span class="back-pik">
+          {%- render 'linkz' -%}
+        </span></a
+      >
+    </div>
+    <div class="con-headstyle jgd">
+      <h4>
+        <span>{{ section.settings.textitle3 }}</span>
+      </h4>
+    </div>
+        <div class="two-bnts">
+      <a href="{{ section.settings.whasaplink }}" rel="nofollow"
+        ><span class="front-pik">{% render 'whtzap' %}</span>Whatsapp Us<span class="back-pik">
+          {%- render 'linkz' -%}
+        </span></a
+      >
+    </div>
+    <div class="end-content">
+      <h5>{{ section.settings.mntxt }}</h5>
+      <a href="{{ section.settings.contactlink }}">info@foxtale.in</a>
+      <!-- <a href="https://wa.me/918657867184?text=Hi">Send Message</a> -->
+    </div>
+  </div>
+</div>
+{% schema %}
+ {
+   "name": "FX Contact Us",
+   "settings": [
+     {
+       "id": "textitle1" ,
+       "label": "Title 1" ,
+       "type": "text"
+     },
+     {
+       "id": "contentcont" ,
+       "label": "Content Left" ,
+       "type": "richtext"
+     },
+     {
+       "id": "lastpara" ,
+       "label": "Left Paragraph" ,
+       "type": "textarea"
+     },
+     {
+       "id": "textitle2" ,
+       "label": "Title 2" ,
+       "type": "text"
+     },
+     {
+       "id": "whasaplink" ,
+       "label": "Whatsapp Link" ,
+       "type": "url"
+     },
+     {
+       "id": "mailink" ,
+       "label": "Email Link" ,
+       "type": "url"
+     },
+     {
+       "id": "textitle3" ,
+       "label": "Title 3" ,
+       "type": "text"
+     },
+     {
+       "id": "mntxt" ,
+       "label": "Last Content" ,
+       "type": "text"
+     },
+     {
+       "id": "contactlink" ,
+       "label": "Contact Link" ,
+       "type": "url"
+     }
+],
+   "presets": [
+     {
+       "name": "FX Contact Us"
+     }
+   ],
+   "templates": [
+     "page"
+   ]
+ }
+{% endschema %}

@@ -1,0 +1,26 @@
+{% if section.settings.reviews %}
+  <div class="container" id="pr-reviews">
+    <div data-fera-container="456746" data-product_id="{{ product.id }}"></div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Review Section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "reviews",
+        "label": "Show Reviews"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Review Section"
+      }
+    ],
+    "templates": [
+      "product"
+    ]
+  }
+{% endschema %}

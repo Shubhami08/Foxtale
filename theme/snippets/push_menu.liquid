@@ -1,0 +1,15 @@
+<a href="javascript:void(0)" data-menu-drawer data-drawer-options='{ "id":"#t4s-menu-drawer" }' class="t4s-push-menu-btn {{push_menu}} t4s-lh-1 t4s-d-flex t4s-align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+  <path d="M1 1H25" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M1 10H25" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M1 19H25" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg></a>
+
+  <script>
+     $(document).ready(function () {
+    $( '.t4s-push-menu-btn').on("click", function(){
+       Growlytics.events.track("Hamburger menu clicks",{
+      'Hamburger Menu Clicks': "Clicked"
+     });
+    });
+     });
+ </script>
