@@ -177,14 +177,23 @@
 </style>
 
 <div class="cus-collswrapper">
-  <div class="heading-all"><h3>{{ section.settings.heading }}</h3></div>
+  <div class="heading-all">
+    <h3>{{ section.settings.heading }}</h3>
+  </div>
   <div class="cus-colselect sbc">
     {% for block in section.blocks %}
       <div class="cus-single">
         {% assign collection = block.settings.collectionmain %}
         {% if block.settings.collectionimg != blank %}
-           <a class="cus-pik" href="{{ collection.url }}"><img class="lazyload" loading="lazy" src="{{ block.settings.collectionimg | img_url: '700x700' }}"></a>
-       {% endif %}
+          <a class="cus-pik" href="{{ collection.url }}"
+            ><img
+              class="lazyload"
+              loading="lazy"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+              data-src="{{ block.settings.collectionimg | img_url: '700x700' }}"
+              alt="Collection Image"
+          ></a>
+        {% endif %}
         <a class="cus-title" href="{{ collection.url }}">
           <p>{{ collection.title }}&nbsp></p>
         </a>
@@ -192,96 +201,97 @@
     {% endfor %}
   </div>
   <!--
-  <div class="cus-btnlr">
-  <button class="slik-left">{% render 'left-small' %}</button>
-  <button class="slik-right">{% render 'right-small' %}</button>
-  </div>
-  --></div>
+    <div class="cus-btnlr">
+    <button class="slik-left">{% render 'left-small' %}</button>
+    <button class="slik-right">{% render 'right-small' %}</button>
+    </div>
+  -->
+</div>
 
 <script>
-  $('.cus-colselect').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          arrows: true
+    $('.cus-colselect').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            arrows: true
+          }
+        }, {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            arrows: true
+          }
+        }, {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true
+          }
         }
-      }, {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          arrows: true
-        }
-      }, {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          arrows: true
-        }
-      }, {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          arrows: true
-        }
-      }
-    ]
-  });
+      ]
+    });
 
-// $(document).ready(function(){
-// $('.slik-right').click(function(){
-//     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
-// });
-// $('.slik-left').click(function(){
-//     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
-// });
-// });
+  // $(document).ready(function(){
+  // $('.slik-right').click(function(){
+  //     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
+  // });
+  // $('.slik-left').click(function(){
+  //     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
+  // });
+  // });
 </script>
 
 {% schema %}
-  {
-    "name": "Collections Slider Custom",
-    "settings": [
-      {
-        "id": "heading",
-        "type": "text",
-        "label": "Section Heading"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Collection",
-        "type": "text",
-        "settings": [
-          {
-            "id": "collectionmain",
-            "type": "collection",
-            "label": "Select Collection"
-          }, {
-            "id": "collectionimg",
-            "type": "image_picker",
-            "label": "Collection Image"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Collections Slider Custom",
-        "category": "Any"
-      }
-    ]
-  }
+{
+  "name": "Collections Slider Custom",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Section Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Collection",
+      "type": "text",
+      "settings": [
+        {
+          "id": "collectionmain",
+          "type": "collection",
+          "label": "Select Collection"
+        }, {
+          "id": "collectionimg",
+          "type": "image_picker",
+          "label": "Collection Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections Slider Custom",
+      "category": "Any"
+    }
+  ]
+}
 {% endschema %}

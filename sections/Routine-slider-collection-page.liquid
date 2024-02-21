@@ -72,14 +72,19 @@
                                 <a href="{{product.url}}">
                                   {%- render 'product_labels', on: 'singe', product: product -%}
                                   <img
-                                    class="pr-img-first"
-                                    src="{{ product.images[0] | product_img_url: "master" }}"
-                                    alt=""
+                                    class="pr-img-first lazyload"
+                                    data-src="{{ product.images[0] | product_img_url: "master" }}"
+                                     loading="lazy"
+                                    alt="product_img"
+                                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23282828'%3E%3Crect width='100' height='100'/%3E%3C/svg%3E"
+                            
                                   >
                                   <img
-                                    class="pr-img-second"
-                                    src="{{ product.images[0] | product_img_url: "master" }}"
-                                    alt=""
+                                    class="pr-img-second lazyload"
+                                    data-src="{{ product.images[0] | product_img_url: "master" }}"
+                                     alt="product_img"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23282828'%3E%3Crect width='100' height='100'/%3E%3C/svg%3E"
+                            loading="lazy"
                                   >
                                 </a>
                                 <div
@@ -185,18 +190,16 @@
                                   </h6>
                                 {% endif %}
                               <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                                <a href="{{product.url}}">
+                                <a rel="dofollow" href="{{product.url}}">
                                   {%- render 'product_labels', on: 'singe', product: product -%}
                                   <img
-                                    class="pr-img-first"
-                                    src="{{ product.images[0] | product_img_url: "master" }}"
-                                    alt=""
+                                    class="pr-img-first lazyload" 
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E"
+                                    loading="lazy"
+                                    data-src="{{ product.images[0] | product_img_url: "master" }}"
+                                    alt="Product--Image"
                                   >
-                                  <img
-                                    class="pr-img-second"
-                                    src="{{ product.images[0] | product_img_url: "master" }}"
-                                    alt=""
-                                  >
+                                  
                                 </a>
                                 <div
                                   data-fera-container="457325"
@@ -207,7 +210,7 @@
                               <div class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst">
                                 <div class="pr-det">
                                   <h3 class="product-title pr fs__14 mg__0 fwm">
-                                    <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                    <a rel="dofollow class="cd chp" href="{{product.url}}">{{ product.title }}</a>
                                   </h3>
                                   {% if product.metafields.my_fields.hp_excerpt != blank %}
                                     <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -233,7 +236,7 @@
                                 class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart s-atc"
                                 data-variant-id="{{product.first_available_variant.id}}"
                                 data-action-atc
-                                rel="nofollow"
+                                rel="dofollow"
                                 ><span class="t4s-svg-pr-icon"></span
                                 ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
                               >

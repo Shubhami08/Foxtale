@@ -105,7 +105,7 @@
   {% when 'page' %}
 
     <li>
-      <a href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+      <a rel="dofollow" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
     </li>
 
   {% when 'product' %}
@@ -145,7 +145,7 @@
     {% endif %}
 
     <li>
-      <a href="{{ product.url }}" aria-current="page" class="desk-prod">{{ product.title }}</a>
+      <a rel="dofollow" href="{{ product.url }}" aria-current="page" class="desk-prod">{{ product.title }}</a>
       <!-- <a href="{{ product.url }}" aria-current="page" class="mob-prod">{{ product.title | truncatewords: 2 }}</a> -->
         <script>
   const List =[];
@@ -224,7 +224,7 @@
      
     {% else %}
       <li>
-        <a href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+        <a rel="dofollow"  href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
       </li>
     <script>
   const List =[];
@@ -305,8 +305,8 @@
 
     <li>{{ blog.title | link_to: blog.url }}</li>
     <li>
-      <a href="{{ article.url }}" aria-current="page" class="desk-blog">{{ article.title }}</a>
-      <a href="{{ article.url }}" aria-current="page" class="mob-blog">{{ article.title | truncatewords: 3 }}</a>
+      <a rel="dofollow" href="{{ article.url }}" aria-current="page" class="desk-blog">{{ article.title }}</a>
+      <a rel="dofollow" href="{{ article.url }}" aria-current="page" class="mob-blog">{{ article.title | truncatewords: 3 }}</a>
     </li>
      <script>
   const List =[];

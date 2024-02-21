@@ -25,48 +25,47 @@
 {%- capture class_html -%}
 t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_style_{{settings.swatch_color_style}} pr_border_style_{{settings.pr_border_style}} pr_img_effect_{{settings.pr_img_effect}} enable_eff_img1_{{settings.enable_eff_img1}} badge_shape_{{settings.badge_shape}} css_for_wis_app_{{settings.enable_css_wis}}{% if settings.use_cus_lz and settings.cus_lz %} t4s-lzcus-true{% endif %} shadow_round_img_{{settings.enable_shadow_round_img}} t4s-header__{{settings.header_design}} is-remove-unavai-{{settings.variant_remove}} t4_compare_{{settings.enable_compe}}{% if settings.type_qv == '1' %} t4s-sidebar-qv{% endif %} t4s-cart-count-{{cart.item_count}} t4s-pr-ellipsis-{{settings.enable_pr_ellipsis}}
 {%- endcapture -%}
-<html class="{{class_html}} no-js" lang="{{ iso_code }}" {% if isRTL %}dir="rtl"{% endif %}>
+<html
+  class="{{class_html}} no-js"
+  lang="{{ iso_code }}"
+  {% if isRTL %}
+    dir="rtl"
+  {% endif %}
+>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, height=device-height, minimum-scale=1.0, maximum-scale=1.0"
+    >
     <meta name="theme-color" content="{{ settings.body_bg }}">
     <meta name="format-detection" content="telephone=no">
     <meta name="facebook-domain-verification" content="s5z0ta16xhbtvk47daov838gcw9ztp">
-    <meta name="google-site-verification" content="S3jr593RgK_oWCZHt9NHY2PLR2feZY71vYmXgejqgNI" />
+    <meta name="google-site-verification" content="S3jr593RgK_oWCZHt9NHY2PLR2feZY71vYmXgejqgNI">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     {% if handle contains 'copy-of-hyaluronic-acid-serum-10ml' %}
-     <meta name="robots" content="noindex">
-    {% endif %}
-    
-    {% if handle contains 'brightening-under-eye-mask' %}
-     <meta name="robots" content="noindex">
+      <meta name="robots" content="noindex">
     {% endif %}
 
-    <style>
-    @font-face {
-      font-family: Monarcha W01 Bold;
-      src: url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot");
-      src: url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot?#iefix")format("embedded-opentype"),
-      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff2")format("woff2"),
-      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff")format("woff"),
-      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.ttf")format("truetype"),
-      url("https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.svg#Monarcha W01 Bold")format("svg");
-    }
-    </style> 
-    
+    {% if handle contains 'brightening-under-eye-mask' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
     <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}">
     <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}">
     <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'icon-social.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'bt-ig.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'pe_ic.min.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'style.min.css' | asset_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--
+      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'icon-social.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'bt-ig.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'pe_ic.min.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'style.min.css' | asset_url }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 
     {%- if settings.favicon != blank -%}
@@ -85,10 +84,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       assign t_name = request.page_type
       assign body_img = settings.body_bg_image
       render 'social-meta-tags', t_name: t_name
-      render 'head_assets', t_name: t_name
-      capture class_body_theme
-        render 'class_body_theme', t_name: t_name, body_img: body_img
-      endcapture
     -%}
 
     {%- if settings.font_source == '1'
@@ -118,49 +113,80 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {%- endif -%}
 
     {%- render 'meta-tags', t_name: t_name -%}
+    <link
+      rel="prefetch"
+      href="https://foxtale.in/cdn/shop/files/Februray_saleV2-02.jpg?v=1707119370&width=1700"
+      fetchpriority="high"
+    >
+    <img
+      width="99999"
+      height="99999"
+      style="pointer-events: none; position: absolute; top: 0; left: 0; width: 96vw; height: 96vh; max-width: 99vw; max-height: 99vh;"
+      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+"
+    >
+
     <!-- Kwikpass added the core functions script - [Starts] -->
     <script src="https://pdp.gokwik.co/kwikpass/kwikpass-core-functions.js"></script>
     <!-- Kwikpass added the core functions script - [Ends] -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>let _0x5ffe5= ['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72','\x75\x73\x65\x72\x41\x67\x65\x6E\x74','\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65','\x58\x31\x31','\x47\x54\x6D\x65\x74\x72\x69\x78','\x70\x69\x6E\x67\x62\x6F\x74']</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
-    <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
-    <script src="{{ 'global.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'bt-custom.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'cat.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pre_flickity.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'nt_theme.min.js' | asset_url }}" defer="defer"></script>
 
-     {{ content_for_header }}
- 
+    <script>
+      let _0x5ffe5 = [
+        '\x6E\x61\x76\x69\x67\x61\x74\x6F\x72',
+        '\x75\x73\x65\x72\x41\x67\x65\x6E\x74',
+        '\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65',
+        '\x58\x31\x31',
+        '\x47\x54\x6D\x65\x74\x72\x69\x78',
+        '\x70\x69\x6E\x67\x62\x6F\x74',
+      ];
+    </script>
+    <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+    <script src="{{ 'bt-custom.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pre_flickity.min.js' | asset_url }}" defer="defer"></script>
+    <!--
+      <script src="{{ 'global.min.js' | asset_url }}" defer="defer"></script>
+         <script src="{{ 'cat.js' | asset_url }}" defer="defer"></script>
+         <script src="{{ 'nt_theme.min.js' | asset_url }}" defer="defer"></script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+    -->
+
     <div class="confetti_svg hide" id="confetti_svg_outer"></div>
     <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-MW5TFJM');
+    <script async>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MW5TFJM');
     </script>
     <!-- End Google Tag Manager -->
 
-    
-
     <!-- Global site tag (gtag.js) - Google Ads: 10819339486 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10819339486"></script>
-    <script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'AW-10819339486');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-214444346-1"></script>
-    <script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'UA-214444346-1');
@@ -169,32 +195,135 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
     {% render 'gokwik' %}
     <!-- Snap Pixel Code -->
-    <script type="text/javascript">
-      (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
-      {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
-      a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
-      r.src=n;var u=t.getElementsByTagName(s)[0];
-      u.parentNode.insertBefore(r,u);})(window,document,
-      'https://sc-static.net/scevent.min.js');
+    <script type="text/javascript" defer>
+      (function (e, t, n) {
+        if (e.snaptr) return;
+        var a = (e.snaptr = function () {
+          a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments);
+        });
+        a.queue = [];
+        var s = 'script';
+        r = t.createElement(s);
+        r.async = !0;
+        r.src = n;
+        var u = t.getElementsByTagName(s)[0];
+        u.parentNode.insertBefore(r, u);
+      })(window, document, 'https://sc-static.net/scevent.min.js');
       snaptr('init', 'd68c6eee-a5cb-47f2-9480-dd78574f30c4', {
-      'user_email': '__INSERT_USER_EMAIL__'
+        user_email: '__INSERT_USER_EMAIL__',
       });
       snaptr('track', 'PAGE_VIEW');
     </script>
     <!-- End Snap Pixel Code -->
 
     <!-- Start VWO Async SmartCode -->
-    <script type="text/javascript" id="vwoCode">
-      window._vwo_code=window._vwo_code || (function() {
-      var account_id=679471,
-      version=1.4,
-      settings_tolerance=2000,
-      library_tolerance=2500,
-      use_existing_jquery=false,
-      is_spa=1,
-      hide_element='body',
-      /* DO NOT EDIT BELOW THIS LINE */
-      f=false,d=document,vwoCodeEl=document.querySelector('#vwoCode'),code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){_vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){window.settings_timer=setTimeout(function(){_vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');vwoCodeEl&&e.setAttribute('nonce',vwoCodeEl.nonce);e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+ +is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer = code.init();return code;}());
+    <script type="text/javascript" id="vwoCode" defer>
+      window._vwo_code =
+        window._vwo_code ||
+        (function () {
+          var account_id = 679471,
+            version = 1.4,
+            settings_tolerance = 2000,
+            library_tolerance = 2500,
+            use_existing_jquery = false,
+            is_spa = 1,
+            hide_element = 'body',
+            /* DO NOT EDIT BELOW THIS LINE */
+            f = false,
+            d = document,
+            vwoCodeEl = document.querySelector('#vwoCode'),
+            code = {
+              use_existing_jquery: function () {
+                return use_existing_jquery;
+              },
+              library_tolerance: function () {
+                return library_tolerance;
+              },
+              finish: function () {
+                if (!f) {
+                  f = true;
+                  var e = d.getElementById('_vis_opt_path_hides');
+                  if (e) e.parentNode.removeChild(e);
+                }
+              },
+              finished: function () {
+                return f;
+              },
+              load: function (e) {
+                var t = d.createElement('script');
+                t.fetchPriority = 'high';
+                t.src = e;
+                t.type = 'text/javascript';
+                t.innerText;
+                t.onerror = function () {
+                  _vwo_code.finish();
+                };
+                d.getElementsByTagName('head')[0].appendChild(t);
+              },
+              getVersion: function () {
+                return version;
+              },
+              getMatchedCookies: function (e) {
+                var t = [];
+                if (document.cookie) {
+                  t = document.cookie.match(e) || [];
+                }
+                return t;
+              },
+              getCombinationCookie: function () {
+                var e = code.getMatchedCookies(/(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi);
+                e = e.map(function (e) {
+                  try {
+                    var t = decodeURIComponent(e);
+                    if (!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)) {
+                      return '';
+                    }
+                    return t;
+                  } catch (e) {
+                    return '';
+                  }
+                });
+                var i = [];
+                e.forEach(function (e) {
+                  var t = e.match(/([\d,]+)/g);
+                  t && i.push(t.join('-'));
+                });
+                return i.join('|');
+              },
+              init: function () {
+                window.settings_timer = setTimeout(function () {
+                  _vwo_code.finish();
+                }, settings_tolerance);
+                var e = d.createElement('style'),
+                  t = hide_element
+                    ? hide_element +
+                      '{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}'
+                    : '',
+                  i = d.getElementsByTagName('head')[0];
+                e.setAttribute('id', '_vis_opt_path_hides');
+                vwoCodeEl && e.setAttribute('nonce', vwoCodeEl.nonce);
+                e.setAttribute('type', 'text/css');
+                if (e.styleSheet) e.styleSheet.cssText = t;
+                else e.appendChild(d.createTextNode(t));
+                i.appendChild(e);
+                var n = this.getCombinationCookie();
+                this.load(
+                  'https://dev.visualwebsiteoptimizer.com/j.php?a=' +
+                    account_id +
+                    '&u=' +
+                    encodeURIComponent(d.URL) +
+                    '&f=' +
+                    +is_spa +
+                    '&vn=' +
+                    version +
+                    (n ? '&c=' + n : '')
+                );
+                return settings_timer;
+              },
+            };
+          window._vwo_settings_timer = code.init();
+          return code;
+        })();
     </script>
     <!-- End VWO Async SmartCode -->
 
@@ -208,144 +337,175 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       async
       src="https://api.engagebud.com/sdk/script/v1/main.min.js?shop=foxtale-consumer.myshopify.com"
     ></script>
-   <script defer data-domain="foxtale.in" src="https://plausible.io/js/script.js"></script>
 
     {% if request.page_type == 'index' %}
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Foxtale",
-  "url": "https://foxtale.in/",
-  "logo": "https://foxtale.in/cdn/shop/files/Favicon-02_1_1.png?v=1678945999&width=152",
-  "sameAs": [
-    "https://www.facebook.com/foxtaleskin",
-    "https://twitter.com/foxtaleskin",
-    "https://www.instagram.com/foxtaleskin/",
-    "https://www.youtube.com/c/FoxtaleSkin"
-  ]
-}
-</script>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Foxtale",
+          "url": "https://foxtale.in/",
+          "logo": "https://foxtale.in/cdn/shop/files/Favicon-02_1_1.png?v=1678945999&width=152",
+          "sameAs": [
+            "https://www.facebook.com/foxtaleskin",
+            "https://twitter.com/foxtaleskin",
+            "https://www.instagram.com/foxtaleskin/",
+            "https://www.youtube.com/c/FoxtaleSkin"
+          ]
+        }
+      </script>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "https://foxtale.in",  
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://foxtale.in/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "https://foxtale.in",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://foxtale.in/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-</script>
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "https://foxtale.in",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://foxtale.in/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      </script>
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "https://foxtale.in",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://foxtale.in/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+      </script>
+    {% endif %}
+    {% render 'gsf-conversion-pixels' %}
+    <style>
+      @font-face {
+        font-family: Monarcha W01 Bold;
+        src: url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot');
+        src: url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.eot?#iefix')
+            format('embedded-opentype'),
+          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff2') format('woff2'),
+          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.woff') format('woff'),
+          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.ttf') format('truetype'),
+          url('https://db.onlinewebfonts.com/t/1d859a0e1869200bc77c994b66d1c73f.svg#Monarcha W01 Bold') format('svg');
+        font-display: swap;
+      }
+    </style>
+  </head>
 
-{% endif %}
-  {% render 'gsf-conversion-pixels' %}
-</head>
-  
-{% assign free_gift_claim_list = settings.free_product_list %}
-{% assign gift_prod_1 = settings.gift_product_1 %}
-{% assign gift_prod_2 = settings.gift_product_2 %}
+  {% assign free_gift_claim_list = settings.free_product_list %}
+  {% assign gift_prod_1 = settings.gift_product_1 %}
+  {% assign gift_prod_2 = settings.gift_product_2 %}
 
-   <!-- Affise pixel -->
-<script language="javascript" type="text/javascript">function sc(v){if (v===null){return};var dateAf=new Date();dateAf.setTime(dateAf.getTime()+(365*24*60*60*1000));document.cookie="affclick="+v+";"+"expires="+dateAf.toUTCString()+";path=/";localStorage.setItem('affclick',v)}sc((new URLSearchParams(window.location.search)).get("clickid"))</script>
+  <!-- Affise pixel -->
+  <script language="javascript" type="text/javascript" async>
+    function sc(v) {
+      if (v === null) {
+        return;
+      }
+      var dateAf = new Date();
+      dateAf.setTime(dateAf.getTime() + 365 * 24 * 60 * 60 * 1000);
+      document.cookie = 'affclick=' + v + ';' + 'expires=' + dateAf.toUTCString() + ';path=/';
+      localStorage.setItem('affclick', v);
+    }
+    sc(new URLSearchParams(window.location.search).get('clickid'));
+  </script>
 
-   <!-- End -->
+  <!-- End -->
 
   <body
     class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     {% endif -%}
-    
+
     trigger-price-1="{{ settings.trigger_price_1 }}"
-    gift-product-1="{{ settings.gift_product_1.selected_or_first_available_variant.id }}" 
-    free-gift-v1-trigger-count-1="{{ settings.free_gift_v1_trigger_qty_1 }}" 
+    gift-product-1="{{ settings.gift_product_1.selected_or_first_available_variant.id }}"
+    free-gift-v1-trigger-count-1="{{ settings.free_gift_v1_trigger_qty_1 }}"
     trigger-price-2="{{ settings.trigger_price_2 }}"
     gift-product-2="{{ settings.gift_product_2.selected_or_first_available_variant.id }}"
-    free-gift-v1-trigger-count-2="{{ settings.free_gift_v1_trigger_qty_2 }}" 
+    free-gift-v1-trigger-count-2="{{ settings.free_gift_v1_trigger_qty_2 }}"
     tag-list="{{ settings.tag_list_for_free_gift }}"
     trigger-qty="{{ settings.free_gift_trigger_qty }}"
     free-gift-remove="{{ settings.variant_list_for_remove }}"
     free-gift-list="{%- for item in free_gift_claim_list -%}{% if gift_prod_1.id != item.id and gift_prod_2.id != item.id %}{{ item.selected_or_first_available_variant.id }}{% if forloop.last != true %},{% endif %}{% endif %}{% endfor %}"
   >
-
+    {% render 'banana-stand-footer' %}
     <div id="magic_link_wrap" style="display:none !important;">
       <div id="for_cart">
         {% for i in (1..10) %}
-          {% assign magic_enable = "magic_enable_" | append: i %}
-          {% assign magic_link_key = "magic_link_key_" | append: i %}
-          {% assign magic_trigger_price = "magic_trigger_price_" | append: i %}
-          {% assign magic_gift_product = "magic_gift_product_" | append: i %}
-          {% assign magic_link_lifetime = "magic_link_lifetime_" | append: i %}
+          {% assign magic_enable = 'magic_enable_' | append: i %}
+          {% assign magic_link_key = 'magic_link_key_' | append: i %}
+          {% assign magic_trigger_price = 'magic_trigger_price_' | append: i %}
+          {% assign magic_gift_product = 'magic_gift_product_' | append: i %}
+          {% assign magic_link_lifetime = 'magic_link_lifetime_' | append: i %}
           {% if settings[magic_enable] %}
-            <div data-id="{{ i }}" data-for="cart" 
-              data-link-key="{{ settings[magic_link_key] }}" 
-              data-trigger-price="{{ settings[magic_trigger_price] }}" 
-              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}" 
+            <div
+              data-id="{{ i }}"
+              data-for="cart"
+              data-link-key="{{ settings[magic_link_key] }}"
+              data-trigger-price="{{ settings[magic_trigger_price] }}"
+              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}"
               data-link-lifetime="{{ settings[magic_link_lifetime] }}"
-            >{{ i }}
+            >
+              {{ i }}
             </div>
           {% endif %}
         {% endfor %}
       </div>
       <div id="for_product">
-      {% for i in (11..12) %}
-          {% assign magic_enable = "magic_enable_" | append: i %}
-          {% assign magic_link_key = "magic_link_key_" | append: i %}
-          {% assign magic_trigger_product = "magic_trigger_product_" | append: i %}
-          {% assign magic_trigger_count = "magic_trigger_count_" | append: i %}
-          {% assign magic_gift_product = "magic_gift_product_" | append: i %}
-          {% assign magic_link_lifetime = "magic_link_lifetime_" | append: i %}
+        {% for i in (11..12) %}
+          {% assign magic_enable = 'magic_enable_' | append: i %}
+          {% assign magic_link_key = 'magic_link_key_' | append: i %}
+          {% assign magic_trigger_product = 'magic_trigger_product_' | append: i %}
+          {% assign magic_trigger_count = 'magic_trigger_count_' | append: i %}
+          {% assign magic_gift_product = 'magic_gift_product_' | append: i %}
+          {% assign magic_link_lifetime = 'magic_link_lifetime_' | append: i %}
           {% if settings[magic_enable] %}
-            <div data-id="{{ i }}" data-for="product" 
-              data-link-key="{{ settings[magic_link_key] }}" 
-              data-trigger-product="{{ settings[magic_trigger_product].id }}" 
-              data-trigger-count="{{ settings[magic_trigger_count] }}" 
-              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}" 
+            <div
+              data-id="{{ i }}"
+              data-for="product"
+              data-link-key="{{ settings[magic_link_key] }}"
+              data-trigger-product="{{ settings[magic_trigger_product].id }}"
+              data-trigger-count="{{ settings[magic_trigger_count] }}"
+              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}"
               data-link-lifetime="{{ settings[magic_link_lifetime] }}"
-            >{{ i }}
+            >
+              {{ i }}
             </div>
           {% endif %}
         {% endfor %}
       </div>
-      <div id="for_collection"> 
-      {% for i in (21..30) %}
-          {% assign magic_enable = "magic_enable_" | append: i %}
-          {% assign magic_link_key = "magic_link_key_" | append: i %}
-          {% assign magic_trigger_collection = "magic_trigger_collection_" | append: i %}
-          {% assign magic_trigger_count = "magic_trigger_count_" | append: i %}
-          {% assign magic_gift_product = "magic_gift_product_" | append: i %}
-          {% assign magic_link_lifetime = "magic_link_lifetime_" | append: i %}
+      <div id="for_collection">
+        {% for i in (21..30) %}
+          {% assign magic_enable = 'magic_enable_' | append: i %}
+          {% assign magic_link_key = 'magic_link_key_' | append: i %}
+          {% assign magic_trigger_collection = 'magic_trigger_collection_' | append: i %}
+          {% assign magic_trigger_count = 'magic_trigger_count_' | append: i %}
+          {% assign magic_gift_product = 'magic_gift_product_' | append: i %}
+          {% assign magic_link_lifetime = 'magic_link_lifetime_' | append: i %}
           {% if settings[magic_enable] %}
-            <div data-id="{{ i }}" data-for="collection" 
-              data-link-key="{{ settings[magic_link_key] }}" 
-              data-trigger-collection="{%- for product in settings[magic_trigger_collection].products -%}{{ product.id }}{% if forloop.last != true %},{% endif %}{% endfor %}" 
-              data-trigger-count="{{ settings[magic_trigger_count] }}" 
-              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}" 
+            <div
+              data-id="{{ i }}"
+              data-for="collection"
+              data-link-key="{{ settings[magic_link_key] }}"
+              data-trigger-collection="{%- for product in settings[magic_trigger_collection].products -%}{{ product.id }}{% if forloop.last != true %},{% endif %}{% endfor %}"
+              data-trigger-count="{{ settings[magic_trigger_count] }}"
+              data-gift-product="{{ settings[magic_gift_product].selected_or_first_available_variant.id }}"
               data-link-lifetime="{{ settings[magic_link_lifetime] }}"
-            >{{ i }}
+            >
+              {{ i }}
             </div>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-    
+
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -367,17 +527,18 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <div class="t4s-website-wrapper">
       {%- render 'header', t_name: t_name -%}
 
-        {% if settings.show_breadcrumb_nav %}
-          {% render 'breadkrumbs' %}
-        {% endif %}
-        {% comment %} Kwikpass added the below file {% endcomment %}
-        {% render 'kwikpass-add-button' %}
+      {% if settings.show_breadcrumb_nav %}
+        {% render 'breadkrumbs' %}
+      {% endif %}
+      {% comment %} Kwikpass added the below file {% endcomment %}
+      {% render 'kwikpass-add-button' %}
 
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
         {{ content_for_layout }}
         <div class="free_gift_popup_wrap" style="display:none;"></div>
       </main>
 
+      {{ content_for_header }}
       <footer id="t4s-footer">
         {%- section 'footer_top' -%}
         {%- section 'footer_bot' -%}
@@ -389,9 +550,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     </div>
 
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
-    {% render 'banana-stand-footer' %}
 
-    {% include 'stamped-rewards-init' %}
+    {% render 'stamped-rewards-init' %}
 
     <!-- google dynamic remarketing tag for theme.liquid -->
     {% if template contains 'product' %}
@@ -399,23 +559,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         var json_product = {{ product | json }};
       </script>
       <script>
-        var event_name="view_item"
-        var ecomm_prodid=[];
-        for(var i=0;i<json_product.variants.length;i++)
-          ecomm_prodid.push('shopify_IN_{{product.id}}_'+json_product.variants[i].id);
+        var event_name = 'view_item';
+        var ecomm_prodid = [];
+        for (var i = 0; i < json_product.variants.length; i++)
+          ecomm_prodid.push('shopify_IN_{{product.id}}_' + json_product.variants[i].id);
       </script>
       <script type="text/javascript">
         var google_tag_params = {
           ecomm_prodid: ecomm_prodid,
           ecomm_pagetype: 'product',
-          ecomm_totalvalue: parseFloat('{{ product.price | money_without_currency | remove: ","}}')
+          ecomm_totalvalue: parseFloat('{{ product.price | money_without_currency | remove: ","}}'),
         };
       </script>
     {% elsif template contains 'collection' %}
       <script type="text/javascript">
-        var event_name="view_item_list"
+        var event_name = 'view_item_list';
         var google_tag_params = {
-          ecomm_pagetype: 'category'
+          ecomm_pagetype: 'category',
         };
       </script>
     {% elsif template contains 'cart' %}
@@ -434,936 +594,941 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       </script>
     {% elsif template contains 'search' %}
       <script type="text/javascript">
-        var event_name="view_search_results"
+        var event_name = 'view_search_results';
         var google_tag_params = {
-          ecomm_pagetype: 'searchresults'
+          ecomm_pagetype: 'searchresults',
         };
       </script>
     {% elsif template contains 'index' %}
-      <script type="text/javascript">
-        var event_name="home"
+      <script type="text/javascript" async>
+        var event_name = 'home';
         var google_tag_params = {
-          ecomm_pagetype: 'home'
+          ecomm_pagetype: 'home',
         };
       </script>
     {% else %}
       <script type="text/javascript">
-        var event_name="other"
+        var event_name = 'other';
         var google_tag_params = {
-          ecomm_pagetype: 'other'
+          ecomm_pagetype: 'other',
         };
       </script>
     {% endif %}
-    <script>
-      gtag('event',event_name, {
-        'ecomm_prodid':window.google_tag_params.ecomm_prodid,
-        'ecomm_pagetype':window.google_tag_params.ecomm_pagetype,
-        'ecomm_totalvalue':window.google_tag_params.ecomm_totalvalue,
-        'id': google_tag_params.ecomm_prodid,
-        'google_business_vertical': 'retail',
-        'value': window.google_tag_params.ecomm_totalvalue
+    <script defer>
+      gtag('event', event_name, {
+        ecomm_prodid: window.google_tag_params.ecomm_prodid,
+        ecomm_pagetype: window.google_tag_params.ecomm_pagetype,
+        ecomm_totalvalue: window.google_tag_params.ecomm_totalvalue,
+        id: google_tag_params.ecomm_prodid,
+        google_business_vertical: 'retail',
+        value: window.google_tag_params.ecomm_totalvalue,
       });
     </script>
 
     <style>
-      .HYKmrks2vSDJIoZrcWcH, .timer-wrap-new {
-        display: none !important;
-      }
-      
-      .rewards-modal-referral-right-panel {
-        display: none !important;
-      }
+       .HYKmrks2vSDJIoZrcWcH, .timer-wrap-new {
+         display: none !important;
+       }
 
-      .rewards-modal-referral-left-panel{
-        float:none !important;
-        width:100% !important;
-        margin:0 auto;
-      }
+       .rewards-modal-referral-right-panel {
+         display: none !important;
+       }
 
-      .rewards-modal-referral-wrapper{
-        width:38%;
-        min-height:450px;
-      }
+       .rewards-modal-referral-left-panel{
+         float:none !important;
+         width:100% !important;
+         margin:0 auto;
+       }
 
-      {% if collection.url contains 'midnight-sale'%}
-        .timer-wrap-new {
-          display: block !important;
-        }
-      {%endif%}
+       .rewards-modal-referral-wrapper{
+         width:38%;
+         min-height:450px;
+       }
 
-     {% if collection.url contains 'new-frontpage'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "B2G2";
-        }
-      {%endif%}
-      
-     {% if collection.url contains 'buy-1-get-1-free-gpay-1'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "B1G1";
-        }
-      {%endif%}
+       {% if collection.url contains 'midnight-sale'%}
+         .timer-wrap-new {
+           display: block !important;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'shop-1'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "VDAY";
-          width: 150px;
-        }
-      {%endif%}
+      {% if collection.url contains 'new-frontpage'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'republic-day-b2g2'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "B2G2";
-          width: 200px;
-        }
-      {%endif%}
+      {% if collection.url contains 'buy-1-get-1-free-gpay-1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B1G1";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'google-pay-b2g2-1'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "B2G2";
-        }
-      {%endif%}
+       {% if collection.url contains 'shop-1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "VDAY";
+           width: 150px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'flat-400-off-gpay'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "₹400 Off";
-          width: 60px;
-        }
-      {%endif%}
+       {% if collection.url contains 'republic-day-b2g2'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+           width: 200px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'flat-200-off-gpay'%}
-        .bottom-leftext {
-          visibility: hidden;
-          position: relative;
-        } 
-        .bottom-leftext:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "₹200 Off";
-          width: 60px;
-        }
-      {%endif%}
+       {% if collection.url contains 'google-pay-b2g2-1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'products-1'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'flat-400-off-gpay'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "₹400 Off";
+           width: 60px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'products'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-        .template-collection .t4s-collection-header {
-          margin-top: -5px;
-        }
-      {%endif%}
-      
-      {% if collection.url contains 'affiliate-early-access'%}
-        #shopify-section-announcement-bar {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'flat-200-off-gpay'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "₹200 Off";
+           width: 60px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'frontpage'%}
-        #shopify-section-announcement-bar, .bottom-sheet-container, div#EngagebudUIPromptContainer {
-          display: none!important;
-        }
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-        } 
-        .widget-title span:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Get the Glow of Love";
-        }
-      {%endif%}
+       {% if collection.url contains 'products-1'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'birthday-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
+       {% if collection.url contains 'products'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+         .template-collection .t4s-collection-header {
+           margin-top: -5px;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'affiliate-early-access'%}
+         #shopify-section-announcement-bar {
+           display: none!important;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'frontpage'%}
+         #shopify-section-announcement-bar, .bottom-sheet-container, div#EngagebudUIPromptContainer {
+           display: none!important;
+         }
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+         }
+         .widget-title span:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Get the Glow of Love";
+         }
+       {%endif%}
+
+       {% if collection.url contains 'birthday-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+           font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
+
+       {% if collection.url contains 'gpay-free-eye-mask' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+           font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Bestsellers";
+         }
+       {%endif%}
+
+        {% if collection.url contains 'birthday-special-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
           font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Most-loved by Front Foxers";
-        }
-      {%endif%}
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'gpay-free-eye-mask' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
+       {% if collection.url contains 'exclusive-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
           font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Bestsellers";
-        }
-      {%endif%}
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Get the Glow of Love";
+         }
+       {%endif%}
 
-       {% if collection.url contains 'birthday-special-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Most-loved by Front Foxers";
-        }
-      {%endif%}
+         {% if collection.url contains 'new-exclusive-special' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'exclusive-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Get the Glow of Love";
-        }
-      {%endif%}
+       {% if collection.url contains 'frontpage' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Get the Glow of Love";
+         }
+       {%endif%}
 
-        {% if collection.url contains 'new-exclusive-special' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Most-loved by Front Foxers";
-        }
-      {%endif%}
+         {% if collection.url contains 'midnight-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Get the Glow of Love";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'frontpage' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Get the Glow of Love";
-        }
-      {%endif%}
 
-        {% if collection.url contains 'midnight-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Get the Glow of Love";
-        }
-      {%endif%}
-      
+       {% if collection.url contains 'exclusive-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Get the Glow of Love";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'exclusive-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Get the Glow of Love";
-        }
-      {%endif%}
+       {% if collection.url contains 'secret-flash-sale' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'secret-flash-sale' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Most-loved by Front Foxers";
-        }
-      {%endif%}
-      
 
-      {% if collection.url contains 'secret-party' %}
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .widget-title span:after {
-         font-size: 17px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Most-loved by Front Foxers";
-        }
-      {%endif%}
+       {% if collection.url contains 'secret-party' %}
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .widget-title span:after {
+          font-size: 17px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'serums' %}
-        .collection-tabbing-heading {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .collection-tabbing-heading:after {
-          font-family: 'Poppins';
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 36px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Serums & Treatments";
-        }
-      {%endif%}
+       {% if collection.url contains 'serums' %}
+         .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .collection-tabbing-heading:after {
+           font-family: 'Poppins';
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Serums & Treatments";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'moisturizers' %}
-        .collection-tabbing-heading {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .collection-tabbing-heading:after {
-          font-family: 'Poppins';
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 36px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Moisturizers";
-        }
-      {%endif%}
+       {% if collection.url contains 'moisturizers' %}
+         .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .collection-tabbing-heading:after {
+           font-family: 'Poppins';
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Moisturizers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'sunscreens' %}
-        .collection-tabbing-heading {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .collection-tabbing-heading:after {
-          font-family: 'Poppins';
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 36px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Sunscreens";
-        }
-      {%endif%}
-      
-      {% if collection.url contains 'cleanser-routines' %}
-        .collection-tabbing-heading {
-          visibility: hidden;
-          position: relative;
-          width: 100%;
-        } 
-        .collection-tabbing-heading:after {
-          font-family: 'Poppins';
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 36px;
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Cleansers";
-        }
-      {%endif%}
+       {% if collection.url contains 'sunscreens' %}
+         .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .collection-tabbing-heading:after {
+           font-family: 'Poppins';
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Sunscreens";
+         }
+       {%endif%}
 
-      @media screen (max-width: 425px) {
-      {% if collection.url contains 'serums' %}
-        .collection-tabbing-heading:after {
-          font-size: 20px;
-        }
-      {%endif%}
+       {% if collection.url contains 'cleanser-routines' %}
+         .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .collection-tabbing-heading:after {
+           font-family: 'Poppins';
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Cleansers";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'moisturizers' %}
-        .collection-tabbing-heading:after {
-          font-size: 20px;
-        }
-      {%endif%}
+       @media screen (max-width: 425px) {
+       {% if collection.url contains 'serums' %}
+         .collection-tabbing-heading:after {
+           font-size: 20px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'sunscreens' %}
-        .collection-tabbing-heading:after {
-          font-size: 20px;
-        }
-      {%endif%}
+       {% if collection.url contains 'moisturizers' %}
+         .collection-tabbing-heading:after {
+           font-size: 20px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'cleanser-routines' %}
-        .collection-tabbing-heading:after {
-          font-size: 20px;
-        }
-      {%endif%}
-    
-      {% if collection.url contains 'exclusive-sale' %}
-        .widget-title span:after {
-          font-size: 20px;
-        }
-      {%endif%}
-      
-      {% if collection.url contains 'birthday-sale' %}
-        .widget-title span:after {
-          font-size: 20px;
-        }
-      {%endif%}
-      }
-      
-      {% if collection.url contains 'paytm-flat-400-off'%}
-        #shopify-section-announcement-bar, .bottom-sheet-container {
-          display: none!important;
-        }
-        .widget-title span {
-          visibility: hidden;
-          position: relative;
-        } 
-        .widget-title span:after {
-          visibility: visible;
-          position: absolute;
-          top: 0;
-          left: 0;
-          content: "Festive Picks";
-        }
-      {%endif%}
+       {% if collection.url contains 'sunscreens' %}
+         .collection-tabbing-heading:after {
+           font-size: 20px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'dullness'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'cleanser-routines' %}
+         .collection-tabbing-heading:after {
+           font-size: 20px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'fine-lines'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'exclusive-sale' %}
+         .widget-title span:after {
+           font-size: 20px;
+         }
+       {%endif%}
 
-      {% if collection.url contains 'dehydration'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'birthday-sale' %}
+         .widget-title span:after {
+           font-size: 20px;
+         }
+       {%endif%}
+       }
 
-      {% if collection.url contains 'hyperpigmentation'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
-      
-      {% if collection.url contains 'early-access'%}
-        .engagebud-prompt-container {
-          display: none!important;
-        }
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-        #shopify-section-announcement-bar {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'paytm-flat-400-off'%}
+         #shopify-section-announcement-bar, .bottom-sheet-container {
+           display: none!important;
+         }
+         .widget-title span {
+           visibility: hidden;
+           position: relative;
+         }
+         .widget-title span:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Festive Picks";
+         }
+       {%endif%}
 
-      {% if collection.url contains 'new-exclusive-special' %}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
-      
-      {% if collection.url contains 'exclusive-sale'%}
-        .template-collection .bottom-sheet-container {
-          display: none!important;
-        }
-      {%endif%}
+       {% if collection.url contains 'dullness'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-      @media (max-width: 768px) {
-        {% if collection.url contains 'exclusive-sale'%}
-          .template-collection .t4s-dropdown__sortby {
-            display: none!important;
-          }
-        {%endif%}
-        {% if collection.url contains 'early-access'%}
-          .template-collection .t4s-dropdown__sortby {
-            display: none!important;
-          }
-        {%endif%}
-        {% if collection.url contains 'exclusive-sale'%}
-          .template-collection .discount-msg p {
-              font-size: 11px !important;
-          }
-        {%endif%}
-        {% if collection.url contains 'early-access'%}
-          .template-collection .discount-msg p {
-              font-size: 11px !important;
-          }
-        {%endif%}
-      }
+       {% if collection.url contains 'fine-lines'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-      @media screen and (min-width: 320px) and (max-width: 767px) {
-        {% if collection.url contains 'early-access'%}
-          .template-collection .pt__20 {
-            padding-top: 0px !important;
-          }
-        {%endif%}
+       {% if collection.url contains 'dehydration'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-        {% if collection.url contains 'affiliate-early-access'%}
-          .template-collection .pt__20 {
-            padding-top: 0px !important;
-          }
-        {%endif%}
+       {% if collection.url contains 'hyperpigmentation'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-        {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
-          .two-productscampaign:after {
-            font-size: 75% !important;
-          }
-          .two-productscampaign:before {
-            font-size: 80% !important;
-          }
-        {%endif%}
+       {% if collection.url contains 'early-access'%}
+         .engagebud-prompt-container {
+           display: none!important;
+         }
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+         #shopify-section-announcement-bar {
+           display: none!important;
+         }
+       {%endif%}
 
-        {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
-            .two-productscampaign:after {
-              font-size: 75% !important;
-            }
-            .two-productscampaign:before {
-              font-size: 80% !important;
-            }
-        {%endif%}       
-      }
+       {% if collection.url contains 'new-exclusive-special' %}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
-        .two-productscampaign {
-          visibility: hidden;
-          position: relative;
-        } 
-        .two-productscampaign:after {
-          visibility: visible;
-          position: absolute;
-          top: 42px;
-          left: 0;
-          content: "FLAT 50% off (included in price)";
-        }
-        .two-productscampaign:before {
-          visibility: visible;
-          position: absolute;
-          top: 42px;
-          right: 0;
-          content: "Code: NO CODE NECESSARY";
-          font-weight: 400;
-          font-size: 12px;
-          color: #E85A28;
-        }
-      {%endif%}
-      
-      {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
-        .two-productscampaign {
-          visibility: hidden;
-          position: relative;
-        } 
-        .two-productscampaign:after {
-          visibility: visible;
-          position: absolute;
-          top: 42px;
-          left: 0;
-          content: "FLAT 50% off (included in price)";
-        }
-        .two-productscampaign:before {
-          visibility: visible;
-          position: absolute;
-          top: 42px;
-          right: 0;
-          content: "Code: NO CODE NECESSARY";
-          font-weight: 400;
-          font-size: 12px;
-          color: #E85A28;
-        }
-      {%endif%}
-      
-      {% if product.handle contains 'multivitamin-toner-mist' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants, .faq_section, #pr-reviews, .customproduct1-template .custom-tab-slider, .offer-section-main, .customproduct1-template .t4s-product-form__variants .t4s-swatch__list, .result-section {
-          display: none !important;
-        }
-      {%endif%}
+       {% if collection.url contains 'exclusive-sale'%}
+         .template-collection .bottom-sheet-container {
+           display: none!important;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'foxtale-love-bomb-lip-mask' %}
-        .offer-section-main, .container.custom_design_1.foxtale_scroll, #pr-reviews {
-          display: none !important;
-        }
-      {%endif%}
+       @media (max-width: 768px) {
+         {% if collection.url contains 'exclusive-sale'%}
+           .template-collection .t4s-dropdown__sortby {
+             display: none!important;
+           }
+         {%endif%}
+         {% if collection.url contains 'early-access'%}
+           .template-collection .t4s-dropdown__sortby {
+             display: none!important;
+           }
+         {%endif%}
+         {% if collection.url contains 'exclusive-sale'%}
+           .template-collection .discount-msg p {
+               font-size: 11px !important;
+           }
+         {%endif%}
+         {% if collection.url contains 'early-access'%}
+           .template-collection .discount-msg p {
+               font-size: 11px !important;
+           }
+         {%endif%}
+       }
 
-      @media screen and (min-width: 1000px) and (max-width: 1800px) {
-        {% if product.handle contains 'multivitamin-toner-mist' %}
-          #London img, #Tokyo img {
-            width: 50%;
-            margin: 0 auto;
-            display: flex;
-          }
-        {%endif%}
-      
-        {% if product.handle contains 'glow-sunscreen' %}
-          #London img, #Tokyo img {
-            width: 50%;
-            margin: 0 auto;
-            display: flex;
-          }
-        {%endif%}
-      }
-      
-      {% if product.handle contains 'glow-sunscreen' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants, .faq_section, #pr-reviews, .customproduct1-template .custom-tab-slider, .offer-section-main, .customproduct1-template .t4s-product-form__variants .t4s-swatch__list, .result-section {
-          display: none !important;
-        }
-      {%endif%}
-       
-      {% if product.handle contains 'glow-toner-sunscreen' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .group-product-item-detail-newcombo .shop-all-qty-cart-btn, .offer-section-main {
-          display: none !important;
-        }
-        .t4s-product-form__variants, #pr-reviews {
-          display: none;
-        }
-      {%endif%}
+       @media screen and (min-width: 320px) and (max-width: 767px) {
+         {% if collection.url contains 'early-access'%}
+           .template-collection .pt__20 {
+             padding-top: 0px !important;
+           }
+         {%endif%}
 
-      {% if product.handle contains 'lip-mask' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+         {% if collection.url contains 'affiliate-early-access'%}
+           .template-collection .pt__20 {
+             padding-top: 0px !important;
+           }
+         {%endif%}
 
-      {% if product.handle contains 'habit-journal' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+         {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
+           .two-productscampaign:after {
+             font-size: 75% !important;
+           }
+           .two-productscampaign:before {
+             font-size: 80% !important;
+           }
+         {%endif%}
 
-      {% if product.handle contains 'speaker-lamp' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+         {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
+             .two-productscampaign:after {
+               font-size: 75% !important;
+             }
+             .two-productscampaign:before {
+               font-size: 80% !important;
+             }
+         {%endif%}
+       }
 
-      {% if product.handle contains 'jewellery-box' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
+         .two-productscampaign {
+           visibility: hidden;
+           position: relative;
+         }
+         .two-productscampaign:after {
+           visibility: visible;
+           position: absolute;
+           top: 42px;
+           left: 0;
+           content: "FLAT 50% off (included in price)";
+         }
+         .two-productscampaign:before {
+           visibility: visible;
+           position: absolute;
+           top: 42px;
+           right: 0;
+           content: "Code: NO CODE NECESSARY";
+           font-weight: 400;
+           font-size: 12px;
+           color: #E85A28;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'clock' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-      
-      {% if product.handle contains 'retailer-box' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
+         .two-productscampaign {
+           visibility: hidden;
+           position: relative;
+         }
+         .two-productscampaign:after {
+           visibility: visible;
+           position: absolute;
+           top: 42px;
+           left: 0;
+           content: "FLAT 50% off (included in price)";
+         }
+         .two-productscampaign:before {
+           visibility: visible;
+           position: absolute;
+           top: 42px;
+           right: 0;
+           content: "Code: NO CODE NECESSARY";
+           font-weight: 400;
+           font-size: 12px;
+           color: #E85A28;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'brightening-under-eye-mask' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-     
-      {% if product.handle contains 'free-gift-comb' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-   
-      {% if product.handle contains 'free-gift-candle-holder' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'multivitamin-toner-mist' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants, .faq_section, #pr-reviews, .customproduct1-template .custom-tab-slider, .offer-section-main, .customproduct1-template .t4s-product-form__variants .t4s-swatch__list, .result-section {
+           display: none !important;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'free-pouch' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-      
-      {% if product.handle contains 'free-gift' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'foxtale-love-bomb-lip-mask' %}
+         .offer-section-main, .container.custom_design_1.foxtale_scroll, #pr-reviews {
+           display: none !important;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'copy-of-hyaluronic-acid-serum-10ml' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-     
-      {% if product.handle contains 'daily-glow-face-wash' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-   
-      {% if product.handle contains 'daily-glow-moisturizer' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       @media screen and (min-width: 1000px) and (max-width: 1800px) {
+         {% if product.handle contains 'multivitamin-toner-mist' %}
+           #London img, #Tokyo img {
+             width: 50%;
+             margin: 0 auto;
+             display: flex;
+           }
+         {%endif%}
 
-      {% if product.handle contains 'daily-glow-sunscreen' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+         {% if product.handle contains 'glow-sunscreen' %}
+           #London img, #Tokyo img {
+             width: 50%;
+             margin: 0 auto;
+             display: flex;
+           }
+         {%endif%}
+       }
 
-      {% if product.handle contains 'hydrating-face-wash-30ml' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-     
-      {% if product.handle contains 'matte-finish-sunscreen-15ml' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-   
-      {% if product.handle contains 'milestone-pouch' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'glow-sunscreen' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants, .faq_section, #pr-reviews, .customproduct1-template .custom-tab-slider, .offer-section-main, .customproduct1-template .t4s-product-form__variants .t4s-swatch__list, .result-section {
+           display: none !important;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'soothing-green-tea-gel' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
+       {% if product.handle contains 'glow-toner-sunscreen' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .group-product-item-detail-newcombo .shop-all-qty-cart-btn, .offer-section-main {
+           display: none !important;
+         }
+         .t4s-product-form__variants, #pr-reviews {
+           display: none;
+         }
+       {%endif%}
 
-      {% if product.handle contains 'wave-candle' %}
-        .template-product .t4s-sticky-atc {
-          transform: none !important;
-          display: none;
-        }
-        .t4s-product-form__variants {
-          display: none;
-        }
-      {%endif%}
-      
+       {% if product.handle contains 'lip-mask' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
 
-      @media screen and (min-width: 768px) and (max-width: 1000px) {
-          {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
-          .two-productscampaign:after {
-            font-size: 10px !important;
-          }
-          .two-productscampaign:before {
-            font-size: 10px !important;
-          }
-        {%endif%}
+       {% if product.handle contains 'habit-journal' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
 
-        {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
-            .two-productscampaign:after {
-              font-size: 10px !important;
-            }
-            .two-productscampaign:before {
-              font-size: 10px !important;
-            }
-        {%endif%}   
-      }
+       {% if product.handle contains 'speaker-lamp' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'jewellery-box' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'clock' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'retailer-box' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'brightening-under-eye-mask' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'free-gift-comb' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'free-gift-candle-holder' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'free-pouch' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'free-gift' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'copy-of-hyaluronic-acid-serum-10ml' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'daily-glow-face-wash' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'daily-glow-moisturizer' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'daily-glow-sunscreen' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'hydrating-face-wash-30ml' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'matte-finish-sunscreen-15ml' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'milestone-pouch' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'soothing-green-tea-gel' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+       {% if product.handle contains 'wave-candle' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .t4s-product-form__variants {
+           display: none;
+         }
+       {%endif%}
+
+
+       @media screen and (min-width: 768px) and (max-width: 1000px) {
+           {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
+           .two-productscampaign:after {
+             font-size: 10px !important;
+           }
+           .two-productscampaign:before {
+             font-size: 10px !important;
+           }
+         {%endif%}
+
+         {% if product.handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' %}
+             .two-productscampaign:after {
+               font-size: 10px !important;
+             }
+             .two-productscampaign:before {
+               font-size: 10px !important;
+             }
+         {%endif%}
+       }
     </style>
-    
-    <script>
+
+    <script async>
       function addEventListenerStamped(el, eventName, handler) {
-      if (el.addEventListener) { el.addEventListener(eventName, handler); }
-      else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+        if (el.addEventListener) {
+          el.addEventListener(eventName, handler);
+        } else {
+          el.attachEvent('on' + eventName, function () {
+            handler.call(el);
+          });
+        }
       }
 
       // Example
       // Listening for launcher loaded event
-      addEventListenerStamped(document, 'stamped:launcher:loaded', function(e) {
-       StampedFn.setOptions({ is_rewards_code_copy: true });
+      addEventListenerStamped(document, 'stamped:launcher:loaded', function (e) {
+        StampedFn.setOptions({ is_rewards_code_copy: true });
       });
     </script>
 
@@ -1375,226 +1540,283 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       <script src="https://bot.orimon.ai/deploy/index.js" tenantId="11369d09-f6a7-4650-b5f8-988170a641d6"></script>
     -->
 
-<script>
+    <script async>
+      function setCookie(name, value, days) {
+        var expires = '';
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + (value || '') + expires + '; path=/';
+      }
+      function getCookie(name) {
+        var nameEQ = name + '=';
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      function eraseCookie(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      }
 
-  function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-      var date = new Date();
-      date.setTime(date.getTime() + (days*24*60*60*1000));
-      expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-  }
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-  }
-  function eraseCookie(name) {   
-    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
-  
-  var free_gift_claim_tags = $("body").attr("tag-list");
-  var prod_with_tag_ids = [];
-  var gift_claim_trigger_count = $("body").attr("trigger-qty");
-  var total_prod_with_tag = 0;
-  var free_gift_list = $("body").attr("free-gift-list");
-  var free_gift_prod_array = free_gift_list.split(',');
-  var gift_already_added = 0;
-  
-  if(free_gift_claim_tags){
-    var free_gift_claim_array = free_gift_claim_tags.split(',');
-  
-    jQuery.getJSON('/cart.js', function (cart) {
-        $.each(cart.items, function( index, value ) {
-          var current_product_url = value.url;
-          // console.log("**********************",value);
-          current_product_url = current_product_url.replace("?", ".json?");
-          // console.log("**********************",current_product_url);
+      var free_gift_claim_tags = $('body').attr('tag-list');
+      var prod_with_tag_ids = [];
+      var gift_claim_trigger_count = $('body').attr('trigger-qty');
+      var total_prod_with_tag = 0;
+      var free_gift_list = $('body').attr('free-gift-list');
+      var free_gift_prod_array = free_gift_list.split(',');
+      var gift_already_added = 0;
 
-            $.ajax({
+      if (free_gift_claim_tags) {
+        var free_gift_claim_array = free_gift_claim_tags.split(',');
+
+        jQuery
+          .getJSON('/cart.js', function (cart) {
+            $.each(cart.items, function (index, value) {
+              var current_product_url = value.url;
+              // console.log("**********************",value);
+              current_product_url = current_product_url.replace('?', '.json?');
+              // console.log("**********************",current_product_url);
+
+              $.ajax({
                 type: 'GET',
                 url: current_product_url,
                 dataType: 'json',
-                success: function(data) {
+                success: function (data) {
                   var current_product_tags = data['product'].tags;
-                  console.log("second success -------",current_product_tags);
-                  $.each(free_gift_claim_array, function( index, free_gift_tag ) {
-                    if(current_product_tags.includes(free_gift_tag)){
+                  console.log('second success -------', current_product_tags);
+                  $.each(free_gift_claim_array, function (index, free_gift_tag) {
+                    if (current_product_tags.includes(free_gift_tag)) {
                       // console.log( "second success 1111 *************",total_prod_with_tag );
-                      if(!prod_with_tag_ids.includes(data['product'].id)){
-                        prod_with_tag_ids.push(data['product'].id); 
+                      if (!prod_with_tag_ids.includes(data['product'].id)) {
+                        prod_with_tag_ids.push(data['product'].id);
                         total_prod_with_tag = total_prod_with_tag + value.quantity;
                         // console.log( "second success ------ *************",total_prod_with_tag );
                       }
                     }
                   });
                 },
-                complete:function(data) {}
+                complete: function (data) {},
+              });
+
+              if (free_gift_prod_array.includes(value.id.toString())) {
+                gift_already_added = 1;
+              }
             });
-
-          if(free_gift_prod_array.includes((value.id).toString())){
-            gift_already_added = 1;
-          }
-          
-        });
-    })
-    .done(function() {
-      setTimeout(function() {
-        console.log( "on load ------ second success",total_prod_with_tag , gift_already_added , "gift_already_added" );
-        if(total_prod_with_tag >= gift_claim_trigger_count && prod_with_tag_ids.length > 1){
-          if(gift_already_added != 1){
-            $("#t4s-mini_cart .free_gift_claim").show();  
-          }else{
-            $("#t4s-mini_cart .free_gift_claim").hide(); 
-          }
-        }else{
-          $("#t4s-mini_cart .free_gift_claim").hide();
-        }
-      }, 2000);
-    });
-  }
-  
-  // for chnage free gift remove on chnages gift product functionality start -------
-    var all_product_array = [];
-
-    jQuery.getJSON('/cart.js', function (cart) {
-      $.each(cart.items, function( index, value ) {
-        all_product_array.push( value.id.toString() );
-      });
-      var free_gift_remove_ids = $("body").attr("free-gift-remove");
-      let gift_product_1 = $("body").attr("gift-product-1") ? $("body").attr("gift-product-1") : '';
-      let gift_product_2 = $("body").attr("gift-product-2") ? $("body").attr("gift-product-2") : '';
-      var free_gift_remove_array = free_gift_remove_ids.split(',');
-      var variantObject4 = {};
-      var update_cart = false;
-    
-      $.each(free_gift_remove_array, function( index, free_gift_id ) {
-        if(all_product_array.includes(free_gift_id) && free_gift_id != gift_product_1 && free_gift_id != gift_product_2){
-          var removeproductId4 = free_gift_id;
-          variantObject4[removeproductId4] = 0;
-          update_cart = true;
-        }else if(all_product_array.includes(free_gift_id)){
-          var removeproductId4 = free_gift_id;
-          variantObject4[removeproductId4] = 1;
-          update_cart = true;
-        }
-      });
-      if(update_cart){
-        var jsonObject4 = {}
-        jsonObject4['updates'] = variantObject4;
-          $.ajax({
-            type: "post",
-            url: "/cart/update.js",
-            data: jsonObject4,
-            dataType: "json",
-            success: function(data) {
-            }
+          })
+          .done(function () {
+            setTimeout(function () {
+              console.log(
+                'on load ------ second success',
+                total_prod_with_tag,
+                gift_already_added,
+                'gift_already_added'
+              );
+              if (total_prod_with_tag >= gift_claim_trigger_count && prod_with_tag_ids.length > 1) {
+                if (gift_already_added != 1) {
+                  $('#t4s-mini_cart .free_gift_claim').show();
+                } else {
+                  $('#t4s-mini_cart .free_gift_claim').hide();
+                }
+              } else {
+                $('#t4s-mini_cart .free_gift_claim').hide();
+              }
+            }, 2000);
           });
       }
-      
-    });
-  // for chnage free gift remove on chnages gift product functionality end ---------
 
-  // ======================= for magiclink functionality start ============================
+      // for chnage free gift remove on chnages gift product functionality start -------
+      var all_product_array = [];
 
-  var view_url = new URL(window.location.href);
-  var magic_key = view_url.searchParams.get("magic_key");
-  var magic_link_lifetime_val = $('#magic_link_wrap div[data-link-key="'+magic_key+'"]').attr("data-link-lifetime");
-  if(magic_key && magic_link_lifetime_val){
-    var older_magic_key = getCookie("magic_key");
-    if(older_magic_key && $('#magic_link_wrap div[data-link-key="'+magic_key+'"]').length != 0){
-      if(older_magic_key == magic_key ){
-        setCookie("magic_key",magic_key,magic_link_lifetime_val);
-      }else{
+      jQuery.getJSON('/cart.js', function (cart) {
+        $.each(cart.items, function (index, value) {
+          all_product_array.push(value.id.toString());
+        });
+        var free_gift_remove_ids = $('body').attr('free-gift-remove');
+        let gift_product_1 = $('body').attr('gift-product-1') ? $('body').attr('gift-product-1') : '';
+        let gift_product_2 = $('body').attr('gift-product-2') ? $('body').attr('gift-product-2') : '';
+        var free_gift_remove_array = free_gift_remove_ids.split(',');
+        var variantObject4 = {};
+        var update_cart = false;
+
+        $.each(free_gift_remove_array, function (index, free_gift_id) {
+          if (
+            all_product_array.includes(free_gift_id) &&
+            free_gift_id != gift_product_1 &&
+            free_gift_id != gift_product_2
+          ) {
+            var removeproductId4 = free_gift_id;
+            variantObject4[removeproductId4] = 0;
+            update_cart = true;
+          } else if (all_product_array.includes(free_gift_id)) {
+            var removeproductId4 = free_gift_id;
+            variantObject4[removeproductId4] = 1;
+            update_cart = true;
+          }
+        });
+        if (update_cart) {
+          var jsonObject4 = {};
+          jsonObject4['updates'] = variantObject4;
+          $.ajax({
+            type: 'post',
+            url: '/cart/update.js',
+            data: jsonObject4,
+            dataType: 'json',
+            success: function (data) {},
+          });
+        }
+      });
+      // for chnage free gift remove on chnages gift product functionality end ---------
+
+      // ======================= for magiclink functionality start ============================
+
+      var view_url = new URL(window.location.href);
+      var magic_key = view_url.searchParams.get('magic_key');
+      var magic_link_lifetime_val = $('#magic_link_wrap div[data-link-key="' + magic_key + '"]').attr(
+        'data-link-lifetime'
+      );
+      if (magic_key && magic_link_lifetime_val) {
+        var older_magic_key = getCookie('magic_key');
+        if (older_magic_key && $('#magic_link_wrap div[data-link-key="' + magic_key + '"]').length != 0) {
+          if (older_magic_key == magic_key) {
+            setCookie('magic_key', magic_key, magic_link_lifetime_val);
+          } else {
+            $.ajax({
+              url: '/cart/clear.js',
+              method: 'POST',
+              dataType: 'json',
+              success: function () {},
+              Complete: function () {
+                console.log('Cart cleared successfully');
+                jQuery.getJSON('/cart.js', function (cart) {
+                  let cartData = cart.items;
+                  document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+                  document.dispatchEvent(
+                    new CustomEvent('cart:refresh:opend', {
+                      bubbles: true,
+                      detail: cartData,
+                    })
+                  );
+                });
+                $('span.t4s-count-box[data-cart-count]').html('0');
+              },
+            });
+          }
+          setCookie('magic_key', magic_key, magic_link_lifetime_val);
+        } else {
+          setCookie('magic_key', magic_key, magic_link_lifetime_val);
+        }
+        if ($('#magic_link_wrap div[data-link-key="' + magic_key + '"]').length == 0) {
+          $.ajax({
+            url: '/cart/clear.js',
+            method: 'POST',
+            dataType: 'json',
+            success: function () {},
+            Complete: function () {
+              console.log('Cart cleared successfully');
+              jQuery.getJSON('/cart.js', function (cart) {
+                let cartData = cart.items;
+                document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+                document.dispatchEvent(
+                  new CustomEvent('cart:refresh:opend', {
+                    bubbles: true,
+                    detail: cartData,
+                  })
+                );
+              });
+            },
+          });
+          eraseCookie('magic_key');
+        }
+      }
+
+      var older_magic_key_check = getCookie('magic_key');
+      if (
+        older_magic_key_check &&
+        $('#magic_link_wrap div[data-link-key="' + older_magic_key_check + '"]').length == 0
+      ) {
         $.ajax({
           url: '/cart/clear.js',
-          method: 'POST', 
+          method: 'POST',
           dataType: 'json',
-          success: function() {
-          },
-          Complete: function() {
+          success: function () {},
+          Complete: function () {
             console.log('Cart cleared successfully');
             jQuery.getJSON('/cart.js', function (cart) {
               let cartData = cart.items;
               document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-              document.dispatchEvent(new CustomEvent('cart:refresh:opend', {
-                bubbles: true,
-                detail: cartData
-              }));
+              document.dispatchEvent(
+                new CustomEvent('cart:refresh:opend', {
+                  bubbles: true,
+                  detail: cartData,
+                })
+              );
+              // const myInterval = setInterval(function () {
+              //   if($("span.t4s-count-box[data-cart-count]").length){
+              //     $("span.t4s-count-box[data-cart-count]").html('0');
+              //     clearInterval(myInterval);
+              //   }
+              //   console.log("myInterval......");
+              // }, 1000);
             });
-            $("span.t4s-count-box[data-cart-count]").html('0');
-          }
+          },
         });
+        eraseCookie('magic_key');
       }
-      setCookie("magic_key",magic_key,magic_link_lifetime_val);
-    }else{
-      setCookie("magic_key",magic_key,magic_link_lifetime_val);
-    }
-    if($('#magic_link_wrap div[data-link-key="'+magic_key+'"]').length == 0){
-      $.ajax({
-        url: '/cart/clear.js',
-        method: 'POST',
-        dataType: 'json',
-        success: function() {
-        },
-        Complete: function() {
-          console.log('Cart cleared successfully');
-          jQuery.getJSON('/cart.js', function (cart) {
-            let cartData = cart.items;
-            document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-            document.dispatchEvent(new CustomEvent('cart:refresh:opend', {
-              bubbles: true,
-              detail: cartData
-            }));
-          });
+
+      // ======================= for magiclink functionality end ============================
+    </script>
+    {% comment %} Kwikpass added the below file {% endcomment %}
+    {% render 'kwikpass' %}
+    <script async>
+        var page_type= {{ request.page_type | json}};
+        console.log("page_type",page_type)
+        if(page_type == 'collection')
+        { var lazyaloadScripts = document.createElement('script');
+         lazyaloadScripts.src = '/cdn/shop/t/401/assets/global.min.js';
+         document.head.appendChild(lazyaloadScripts);
         }
-      });
-    eraseCookie("magic_key");
-    }
-  }
+      setTimeout(function() {
+        document.getElementsByClassName("hide-com")[0].style.opacity = 1;
+      }, 2000);
 
-  var older_magic_key_check = getCookie("magic_key");
-  if(older_magic_key_check && $('#magic_link_wrap div[data-link-key="'+older_magic_key_check+'"]').length == 0){
-    $.ajax({
-        url: '/cart/clear.js',
-        method: 'POST',
-        dataType: 'json',
-        success: function() {
-        },
-        Complete: function() {
-          console.log('Cart cleared successfully');
-          jQuery.getJSON('/cart.js', function (cart) {
-            let cartData = cart.items;
-            document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-            document.dispatchEvent(new CustomEvent('cart:refresh:opend', {
-              bubbles: true,
-              detail: cartData
-            }));
-            // const myInterval = setInterval(function () {
-            //   if($("span.t4s-count-box[data-cart-count]").length){
-            //     $("span.t4s-count-box[data-cart-count]").html('0');
-            //     clearInterval(myInterval);
-            //   }
-            //   console.log("myInterval......");
-            // }, 1000);
-          });
+      function loadScripts() {
+          setTimeout(function() {
+           loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
+            loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+            if(page_type  != 'collection')
+            {loadScript('/cdn/shop/t/401/assets/global.min.js');
+          }
+            loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
+             loadStyle("/cdn/shop/t/401/assets/icon-social.css");
+             loadStyle("/cdn/shop/t/401/assets/bt-ig.css");
+            loadStyle("/cdn/shop/t/406/assets/custom.css");
+            loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
+            loadStyle("/cdn/shop/t/401/assets/style.min.css");
+          }, 10);
+          document.removeEventListener('click', loadScripts);
+          document.removeEventListener('mouseover', loadScripts);
+          document.removeEventListener('scroll', loadScripts);
+      }
+          document.addEventListener('mouseover', loadScripts);
+      document.addEventListener('click', loadScripts);
+      document.addEventListener('scroll', loadScripts);
 
-        }
-      });
-    eraseCookie("magic_key");
-  }
-
-  // ======================= for magiclink functionality end ============================
-</script>
-        {% comment %} Kwikpass added the below file {% endcomment %}
-        {% render 'kwikpass' %}
-
-</body>
+      function loadScript(src) {
+          var script = document.createElement('script');
+          script.src = src;
+          document.head.appendChild(script);
+      }
+        function loadStyle(src) {
+          var link = document.createElement('link');
+          link.href = src;
+          document.head.appendChild(link);
+      }
+    </script>
+  </body>
 </html>
