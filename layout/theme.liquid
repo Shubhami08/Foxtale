@@ -1794,11 +1794,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <script async>
         var page_type= {{ request.page_type | json}};
         console.log("page_type",page_type)
-        if(page_type == 'collection')
-        { var lazyaloadScripts = document.createElement('script');
+        //if(page_type == 'collection')
+       // { 
+          var lazyaloadScripts = document.createElement('script');
          lazyaloadScripts.src = '/cdn/shop/t/401/assets/global.min.js';
          document.head.appendChild(lazyaloadScripts);
-        }
+        //}
       setTimeout(function() {
         document.getElementsByClassName("hide-com")[0].style.opacity = 1;
       }, 2000);
