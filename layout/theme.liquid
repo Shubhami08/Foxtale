@@ -170,9 +170,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <script src="{{ 'global.min.js' | asset_url }}" defer="defer"></script>
     {% endif %}
     <script src="{{ 'bt-custom.js' | asset_url }}" defer="defer"></script>
-   <script src="{{ 'cat.js' | asset_url }}" defer="defer"></script>
+   <!-- <script src="{{ 'cat.js' | asset_url }}" defer="defer"></script> -->
     <script src="{{ 'pre_flickity.min.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'nt_theme.min.js' | asset_url }}" defer="defer"></script> 
+  <!-- <script src="{{ 'nt_theme.min.js' | asset_url }}" defer="defer"></script>  -->
 
     <div class="confetti_svg hide" id="confetti_svg_outer"></div>
     <!-- Google Tag Manager -->
@@ -413,7 +413,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
   {% assign gift_prod_2 = settings.gift_product_2 %}
 
   <!-- Affise pixel -->
-  <script language="javascript" type="text/javascript" async>
+  <!-- <script language="javascript" type="text/javascript" async>
     function sc(v) {
       if (v === null) {
         return;
@@ -424,7 +424,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       localStorage.setItem('affclick', v);
     }
     sc(new URLSearchParams(window.location.search).get('clickid'));
-  </script>
+  </script> -->
 
   <!-- End -->
 
@@ -1798,6 +1798,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     }
 
     function loadScripts() {
+      
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
         loadScript('/cdn/shop/t/401/assets/global.min.js')
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -1808,7 +1809,16 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadStyle("/cdn/shop/t/406/assets/custom.css");
         loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
         loadStyle("/cdn/shop/t/401/assets/style.min.css");
-
+var script = document.createElement('script');
+script.textContent = `var v = new URLSearchParams(window.location.search).get('clickid');
+if(v !== null) {
+  var dateAf = new Date();
+  dateAf.setTime(dateAf.getTime() + 365 * 24 * 60 * 60 * 1000);
+  document.cookie = 'affclick=' + v + '; expires=' + dateAf.toUTCString() + '; path=/';
+  localStorage.setItem('affclick', v);
+}`;
+document.head.appendChild(script);
+      
         // Remove event listeners after scripts and styles are loaded
         document.removeEventListener('click', loadScripts);
         document.removeEventListener('mouseover', loadScripts);
@@ -1828,8 +1838,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
             if (hideCom) {
                 hideCom.style.opacity = 1;
             }
-         
-        }, 3000);
+        }, 1000);
     });
 </script>
 
