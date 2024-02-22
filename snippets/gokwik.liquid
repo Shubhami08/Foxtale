@@ -4,7 +4,7 @@
 {% assign env = 'sandbox.pdp' %}
 {%endif%}
 
-<script rel="preload">
+<script rel="preload" defer>
 {% if settings.goEnable %}
 window.merchantInfo  = {
         mid: "{{ settings.mid }}",
@@ -62,7 +62,7 @@ var app=function(){"use strict";function t(e){return t="function"==typeof Symbol
    const observer1 = new MutationObserver(callback);
 observer1.observe(targetNode, config); 
 </script> -->
-<script>
+<script defer>
   let  targetNode = document.querySelector('html')
   let gkButtonCode = '<button type="button" onclick="onBuyNowClick(this)" id="gokwik-buy-now"{% if settings.hideFlow %} style="display:none !important;" {% endif %}>{{ settings.buynow-titile }}<div style="display:none"><div class="cir-loader">Loading..</div></div></button> '
   let buttonAdded = false
