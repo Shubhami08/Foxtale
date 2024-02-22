@@ -44,16 +44,16 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <meta name="facebook-domain-verification" content="s5z0ta16xhbtvk47daov838gcw9ztp">
     <meta name="google-site-verification" content="S3jr593RgK_oWCZHt9NHY2PLR2feZY71vYmXgejqgNI">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="dns-prefetch" fetchpriority="high" href="https://cdn.shopify.com" crossorigin>
 
-    {% if handle contains 'copy-of-hyaluronic-acid-serum-10ml' %}
+    {% if handle contains 'copy-of-hyaluronic-acid-serum-10ml' or 'brightening-under-eye-mask'%}
       <meta name="robots" content="noindex">
     {% endif %}
 
-    {% if handle contains 'brightening-under-eye-mask' %}
-      <meta name="robots" content="noindex">
+    {% if handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' or 'skin-repair-cream' or 'skin-barrier-duo' or 'daily-hydrating-serum-with-hyaluronic-acid-1' or 'aha-bha-exfoliating-serum-1'%}
+      <meta name="robots" content="index">
     {% endif %}
-
+    
     <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}">
     <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}">
     <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}">
