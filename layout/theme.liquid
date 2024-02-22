@@ -1792,16 +1792,10 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     </script>
     {% comment %} Kwikpass added the below file {% endcomment %}
     {% render 'kwikpass' %}
-   <script>
+<script async>
     function loadScript(src) {
         var script = document.createElement('script');
         script.src = src;
-        script.onload = function() {
-            console.log('Script loaded successfully: ' + src);
-        };
-        script.onerror = function() {
-            console.error('Error loading script: ' + src);
-        };
         document.head.appendChild(script);
     }
 
@@ -1809,18 +1803,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = src;
-        link.onload = function() {
-            console.log('Stylesheet loaded successfully: ' + src);
-        };
-        link.onerror = function() {
-            console.error('Error loading stylesheet: ' + src);
-        };
         document.head.appendChild(link);
     }
 
     function loadScripts() {
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
-      loadScript('/cdn/shop/t/401/assets/global.min.js')
+        loadScript('/cdn/shop/t/401/assets/global.min.js')
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
         loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
         loadStyle("/cdn/shop/t/401/assets/icon-social.css");
@@ -1830,25 +1818,29 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
         loadStyle("/cdn/shop/t/401/assets/style.min.css");
 
+        // Remove event listeners after scripts and styles are loaded
         document.removeEventListener('click', loadScripts);
         document.removeEventListener('mouseover', loadScripts);
         document.removeEventListener('scroll', loadScripts);
     }
 
-    document.addEventListener('mouseover', loadScripts);
-    document.addEventListener('click', loadScripts);
-    document.addEventListener('scroll', loadScripts);
+    // Call loadScripts directly on DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', loadScripts);
 
-    // Ensure that DOM elements exist before accessing them
+    // Optionally, you can call loadScripts directly here as well if you want to ensure they are loaded as soon as possible
+    // loadScripts();
+
+    // Optional: Add a delay to reveal elements with class "hide-com"
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             var hideCom = document.getElementsByClassName("hide-com")[0];
             if (hideCom) {
                 hideCom.style.opacity = 1;
             }
-        }, 2000);
+        }, 1000);
     });
 </script>
+
 
   </body>
 </html>
