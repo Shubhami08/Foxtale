@@ -1737,6 +1737,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {% comment %} Kwikpass added the below file {% endcomment %}
     {% render 'kwikpass' %}
 <script defer>
+  var page_type= {{ request.page_type | json}}
     function loadScript(src) {
         var script = document.createElement('script');
         script.src = src;
@@ -1754,7 +1755,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadScript('/cdn/shop/t/408/assets/ls.blur-up.min.js');
         loadScript('/cdn/shop/t/408/assets/lazysize.js');
         loadScript('/cdn/shop/t/408/assets/g_tag_manager.js');
-       loadScript('/cdn/shop/t/401/assets/global.min.js');
+      if(page_type == 'index')
+       {loadScript('/cdn/shop/t/401/assets/global.min.js');}
     }
 
     function loadScripts() {
