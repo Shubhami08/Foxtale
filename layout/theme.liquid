@@ -1781,14 +1781,10 @@ document.head.appendChild(script);
         document.removeEventListener('mouseover', loadScripts);
         document.removeEventListener('scroll', loadScripts);
     }
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(loadScripts, 2000);
+});
 
-    // Call loadScripts directly on DOMContentLoaded event
-   //document.addEventListener('DOMContentLoaded', loadScripts);
-
-    // Optionally, you can call loadScripts directly here as well if you want to ensure they are loaded as soon as possible
-    // loadScripts();
-
-    // Optional: Add a delay to reveal elements with class "hide-com"
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             var hideCom = document.getElementsByClassName("hide-com")[0];
