@@ -46,14 +46,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="dns-prefetch" fetchpriority="high" href="https://cdn.shopify.com" crossorigin>
    <link rel="dns-prefetch" fetchpriority="high" href="https://www.googletagmanager.com/" >
-    {% if handle contains 'copy-of-hyaluronic-acid-serum-10ml' or 'brightening-under-eye-mask'%}
-      <meta name="robots" content="noindex">
+    
+   {% if request.path contains 'daily-hydrating-serum-with-hyaluronic-acid-1' or request.path contains 'skin-repair-cream' or request.path contains 'skin-barrier-duo' or request.path contains 'daily-hydrating-serum-with-hyaluronic-acid-1' or request.path contains 'aha-bha-exfoliating-serum-1' %}
+   <meta name="robots" content="index">
     {% endif %}
-
-    {% if handle contains 'daily-hydrating-serum-with-hyaluronic-acid-1' or 'skin-repair-cream' or 'skin-barrier-duo' or 'daily-hydrating-serum-with-hyaluronic-acid-1' or 'aha-bha-exfoliating-serum-1'%}
-      <meta name="robots" content="index">
-    {% endif %}
-     {% if request.page_type != 'index' %}
+  
+    {% if request.page_type != 'index' %}
     <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}" >
     <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}" >
      {% endif %}
