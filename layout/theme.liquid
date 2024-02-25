@@ -141,15 +141,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <!-- Kwikpass added the core functions script - [Ends] -->
     <!-- <script  src="{{ 'jquery.js' | asset_url}}"></script>
     <script  type="text/javascript" src="{{ 'slick.js' | asset_url}}"></script> -->
-    <script async>
- var YETT_BLACKLIST = [
-    'https://s3-us-west-2.amazonaws.com/stamped.io/cdn/fontawesome/css/all-6.4.min.css'
-  ];
-    window.YETT_BLACKLIST=YETT_BLACKLIST;
- </script>
     
-    <script  async src="{{ 'block.js' | asset_url}}"> </script>
-
     <script defer>
       let _0x5ffe5 = [
         '\x6E\x61\x76\x69\x67\x61\x74\x6F\x72',
@@ -522,7 +514,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
 
     {% render 'banana-stand-footer' %}
+    {% if request.page_type!= 'index' %}
     {% render 'stamped-rewards-init' %}
+    {% endif %}
 
     <!-- google dynamic remarketing tag for theme.liquid -->
     {% if template contains 'product' %}
