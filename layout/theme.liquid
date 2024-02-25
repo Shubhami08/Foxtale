@@ -1750,18 +1750,19 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         document.head.appendChild(link);
     }
 
-   function loadScriptss() {
-      loadScript('/cdn/shop/t/408/assets/ls.blur-up.min.js')
-     loadScript('/cdn/shop/t/408/assets/lazysize.js');
-      loadScript('/cdn/shop/t/408/assets/g_tag_manager.js');
-   }
+    function loadScriptss() {
+        loadScript('/cdn/shop/t/408/assets/ls.blur-up.min.js');
+        loadScript('/cdn/shop/t/408/assets/lazysize.js');
+        loadScript('/cdn/shop/t/408/assets/g_tag_manager.js');
+    }
+
     function loadScripts() {
-      loadScript('https://www.googletagmanager.com/gtag/js?id=AW-10819339486');
-      loadScript('https://www.googletagmanager.com/gtag/js?id=UA-214444346-1');
-      loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
-        loadScript('/cdn/shop/t/401/assets/global.min.js')
-      loadStyle('/cdn/shop/t/401/assets/pre_theme.min.css');
-      loadStyle('/cdn/shop/t/401/assets/bt-common.css')
+        loadScript('https://www.googletagmanager.com/gtag/js?id=AW-10819339486');
+        loadScript('https://www.googletagmanager.com/gtag/js?id=UA-214444346-1');
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
+        loadScript('/cdn/shop/t/401/assets/global.min.js');
+        loadStyle('/cdn/shop/t/401/assets/pre_theme.min.css');
+        loadStyle('/cdn/shop/t/401/assets/bt-common.css');
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
         loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
         loadStyle("/cdn/shop/t/401/assets/icon-social.css");
@@ -1770,26 +1771,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadStyle("/cdn/shop/t/406/assets/custom.css");
         loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
         loadStyle("/cdn/shop/t/401/assets/style.min.css");
-var script = document.createElement('script');
-script.textContent = `var v = new URLSearchParams(window.location.search).get('clickid');
-if(v !== null) {
-  var dateAf = new Date();
-  dateAf.setTime(dateAf.getTime() + 365 * 24 * 60 * 60 * 1000);
-  document.cookie = 'affclick=' + v + '; expires=' + dateAf.toUTCString() + '; path=/';
-  localStorage.setItem('affclick', v);
-}`;
-document.head.appendChild(script);
-      
-        // Remove event listeners after scripts and styles are loaded
+        var v = new URLSearchParams(window.location.search).get('clickid');
+        if (v !== null) {
+            var dateAf = new Date();
+            dateAf.setTime(dateAf.getTime() + 365 * 24 * 60 * 60 * 1000);
+            document.cookie = 'affclick=' + v + '; expires=' + dateAf.toUTCString() + '; path=/';
+            localStorage.setItem('affclick', v);
+        }
         document.removeEventListener('click', loadScripts);
         document.removeEventListener('mouseover', loadScripts);
         document.removeEventListener('scroll', loadScripts);
     }
-document.addEventListener('DOMContentLoaded',loadScriptss);
-  document.addEventListener('click', loadScripts);
-        document.addEventListener('mouseover', loadScripts);
-        document.addEventListener('scroll', loadScripts);
-  
+
+    document.addEventListener('DOMContentLoaded', loadScriptss);
+    document.addEventListener('click', loadScripts, { once: true });
+    document.addEventListener('mouseover', loadScripts, { once: true });
+    document.addEventListener('scroll', loadScripts, { once: true });
+
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             var hideCom = document.getElementsByClassName("hide-com")[0];
