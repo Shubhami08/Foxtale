@@ -1,8 +1,8 @@
-<script
+{% comment %} <script
   src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
   integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
   crossorigin="anonymous"
-  referrerpolicy="no-referrer"
+  referrerpolicy="no-referrer"s
 ></script>
 <link
   rel="stylesheet"
@@ -10,7 +10,7 @@
   integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
->
+> {% endcomment %}
 {% assign multi = section.settings.show_on_collection_handle | split: '@' %}
 {% for handles in multi %}
   {% if handles == collection.handle or template contains 'index' or template contains 'product' %}
