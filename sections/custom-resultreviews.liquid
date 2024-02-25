@@ -352,6 +352,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
    
     <!-- Slider main container -->
     <div class="swiper-container you-want-lazyload">
+       <script defer fetchpriority="low" src="{{ 'swiper.js' | asset_url }}"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
