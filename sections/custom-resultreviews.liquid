@@ -1,5 +1,5 @@
-{% comment %} <script defer fetchpriority="low" src="{{ 'swiper.js' | asset_url }}"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> {% endcomment %}
+<script defer fetchpriority="low" src="{{ 'swiper.js' | asset_url }}"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <style>
   .flickity-prev-next-button.previous , .flickity-prev-next-button.next
@@ -351,9 +351,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
   </div>
    
     <!-- Slider main container -->
-    <div class="swiper-container you-want-lazyload">
-       <script defer fetchpriority="low" src="{{ 'swiper.js' | asset_url }}"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
@@ -423,16 +421,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
     </div>
 </div>   
 
-<script defer>
-  $('.you-want-lazyload').lazyload({
-  // before it appears on viewport. It should be greater or equal zero.
-  threshold: 200,
-
-  load: function(element) {},
-
-  trigger: "appear"
-});
-</script>
 <script async>
   $(document).ready(function() {
       new Swiper('.swiper-container', {
@@ -468,7 +456,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
 </script>
 
 <!-- Growlytics -->
-<script defer>
+<script>
 $(document).ready(function () {
     $( '.shop-all-qty-cart-btn').on("click", function(){
      var prodName = $(this).data("title");
@@ -480,7 +468,7 @@ $(document).ready(function () {
      });
 </script>
 
-<script defer>
+<script>
 $(document).ready(function () {
     $( '.round-productimg').on("click", function(){
      var prodName = $(this).data("data-handle");
