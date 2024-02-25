@@ -1791,7 +1791,9 @@ document.head.appendChild(script);
             }
           var hideComm = document.getElementsByClassName("lcp")[0];
           if (hideComm) {
-                hideComm.style.display = 'none';
+                hideComm.style.opacity = 0;
+               hideComm.style.position= 'absolute';
+     hideComm.style.zIndex= 0;
             }
         }, 1000);
     });
