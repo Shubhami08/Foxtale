@@ -1783,9 +1783,7 @@ document.head.appendChild(script);
         document.removeEventListener('mouseover', loadScripts);
         document.removeEventListener('scroll', loadScripts);
     }
-document.addEventListener('DOMContentLoaded', function() {
-   setTimeout(loadScriptss, 2000);
-});
+document.addEventListener('DOMContentLoaded',loadScriptss);
   document.addEventListener('click', loadScripts);
         document.addEventListener('mouseover', loadScripts);
         document.addEventListener('scroll', loadScripts);
