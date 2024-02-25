@@ -1750,11 +1750,13 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         document.head.appendChild(link);
     }
 
-    function loadScripts() {
-      loadScript('/cdn/shop/t/408/assets/lazysize.js');
+   function loadScriptss() {
       loadScript('/cdn/shop/t/408/assets/ls.blur-up.min.js')
+     loadScript('/cdn/shop/t/408/assets/lazysize.js');
       loadScript('/cdn/shop/t/408/assets/g_tag_manager.js');
-        loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
+   }
+    function loadScripts() {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
         loadScript('/cdn/shop/t/401/assets/global.min.js')
       loadStyle('/cdn/shop/t/401/assets/pre_theme.min.css');
       loadStyle('/cdn/shop/t/401/assets/bt-common.css')
@@ -1782,9 +1784,12 @@ document.head.appendChild(script);
         document.removeEventListener('scroll', loadScripts);
     }
 document.addEventListener('DOMContentLoaded', function() {
-   // setTimeout(loadScripts, 2000);
+   setTimeout(loadScriptss, 2000);
 });
-
+  document.addEventListener('click', loadScripts);
+        document.addEventListener('mouseover', loadScripts);
+        document.addEventListener('scroll', loadScripts);
+  
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             var hideCom = document.getElementsByClassName("hide-com")[0];
