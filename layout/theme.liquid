@@ -54,10 +54,10 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       <meta name="robots" content="index">
     {% endif %}
     
-    <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}">
-    <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}">
-    <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}">
+    <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}" media="print">
+    <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}" media="print">
+    <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}"media="print" >
+    <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}" media="print">
     {% if request.page_type != 'index' %}
      <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
@@ -68,7 +68,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       <link rel="stylesheet" href="{{ 'style.min.css' | asset_url }}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" media="print">
 
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" type="image/png" href="{{ settings.favicon | image_url: width:32 }}">
