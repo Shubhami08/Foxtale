@@ -55,9 +55,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {% endif %}
     <!-- 
     <link rel="stylesheet" as="style" href="{{ 'pre_theme.min.css' | asset_url }}" >
-    <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}" >
+    <link rel="stylesheet" as="style" href="{{ 'bt-common.css' | asset_url }}" > -->
     <link rel="stylesheet" as="style" href="{{ 'bt-custom.css' | asset_url }}" >
-    <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}" > -->
+    <link rel="stylesheet" href="{{ 'pre_flickityt4s.min.css' | asset_url }}" >
     {% if request.page_type != 'index' %}
      <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
@@ -514,9 +514,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
 
     {% render 'banana-stand-footer' %}
-    {% if request.page_type!= 'index' %}
     {% render 'stamped-rewards-init' %}
-    {% endif %}
 
     <!-- google dynamic remarketing tag for theme.liquid -->
     {% if template contains 'product' %}
