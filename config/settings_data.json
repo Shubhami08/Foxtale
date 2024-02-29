@@ -404,7 +404,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/shop",
-              "content": "<p><strong>10% Off  <\/strong>on all orders [Code: <strong>GLOW10<\/strong>]<\/p>",
+              "content": "<p><strong>10% Off  <\/strong>on all orders [Code: <strong>FOX10<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "",
               "dayx": 1
