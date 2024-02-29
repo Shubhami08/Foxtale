@@ -406,13 +406,12 @@
           var scroll_manage = -60;
       }
 
-  var tab_1_pos = $(".newshop-inwrapped#tab_1").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-  var tab_2_pos = $(".newshop-inwrapped#tab_2").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-  var tab_3_pos = $(".newshop-inwrapped#tab_3").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-  var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
 
   $(window).scroll(function(){
-    console.log($(window).scrollTop(),"111111111");
+    var tab_1_pos = $(".newshop-inwrapped#tab_1").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    var tab_2_pos = $(".newshop-inwrapped#tab_2").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    var tab_3_pos = $(".newshop-inwrapped#tab_3").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     if($(window).scrollTop() > tab_1_pos && $(window).scrollTop() < tab_2_pos){
       if(!$('.round-collectionimg[data-tab="tab_1"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");

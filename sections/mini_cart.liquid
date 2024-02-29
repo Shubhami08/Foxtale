@@ -462,13 +462,13 @@
                  {%- for discount_application in cart.cart_level_discount_applications -%}<li class="t4s-order_cart_discounts"><svg viewBox="0 0 24 24" width="20"><use href="#icon-cart-tag"/></svg> {{- discount_application.title -}} (-{{ discount_application.total_allocated_amount | money }})</li>{%- endfor -%}
                  </ul>
               {%- endif -%}
-            {% endcomment %}
+            
             {% if cart.items_subtotal_price > 69900 %}
               <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW20</b> at next step to avail the Offer.</p></div>
             {% else %}
               <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>20% off</strong></p></div>
             {% endif %}
-            
+            {% endcomment %}
 
              
             {% assign gift_product_total = 0 %}
@@ -506,6 +506,16 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + Lip Mask</strong></p></div>
               {% endif %}
             {% endcomment %}
+
+              {% if total_cart_prod > 3 %}
+                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1399</b> at next step to avail the Offer.</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to avail <strong>FOX799</strong></p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail <strong>FOX1399</strong></p></div>
+              {% elsif total_cart_prod == 3 %}
+                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <strong>FOX1399</strong></p></div>
+              {% endif %}
             
             </div>
             

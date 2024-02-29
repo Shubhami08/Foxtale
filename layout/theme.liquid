@@ -650,7 +650,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Upto 20% Off";
+           content: "BYOB";
            width: 150px;
          }
        {%endif%}
@@ -1638,6 +1638,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
             variantObject4[removeproductId4] = 1;
             update_cart = true;
           }
+          console.log(variantObject4,"variantObject4");
         });
         if (update_cart) {
           var jsonObject4 = {};
@@ -1651,6 +1652,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           });
         }
       });
+
+      // hard coded for no gift sale
+      
+        var removeproductId5 = "43565338427639";
+        var variantObject5 = {};
+        variantObject5[removeproductId5] = 0;
+
+        var jsonObject5 = {};
+        jsonObject5['updates'] = variantObject5;
+        $.ajax({
+          type: 'post',
+          url: '/cart/update.js',
+          data: jsonObject5,
+          dataType: 'json',
+          success: function (data) {},
+        });
+      
       // for chnage free gift remove on chnages gift product functionality end ---------
 
       // ======================= for magiclink functionality start ============================
