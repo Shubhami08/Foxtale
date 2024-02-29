@@ -365,7 +365,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
   {% assign gift_prod_2 = settings.gift_product_2 %}
 
   <!-- Affise pixel -->
-  <!-- <script language="javascript" type="text/javascript" async>
+  <script language="javascript" type="text/javascript" async>
     function sc(v) {
       if (v === null) {
         return;
@@ -376,8 +376,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       localStorage.setItem('affclick', v);
     }
     sc(new URLSearchParams(window.location.search).get('clickid'));
-  </script> -->
-
+  </script>
   <!-- End -->
 
   <body
@@ -912,6 +911,25 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            top: 0;
            left: 0;
            content: "Most-loved by Front Foxers";
+         }
+       {%endif%}
+
+       {% if collection.url contains 'routines' %}
+         .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           width: 100%;
+         }
+         .collection-tabbing-heading:after {
+           font-family: 'Poppins';
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Routines";
          }
        {%endif%}
 
@@ -1771,7 +1789,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
         loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
         loadStyle("/cdn/shop/t/401/assets/icon-social.css");
-        loadStyle('/cdn/shop/t/401/assets/theme.css');
+        loadStyle('/cdn/shop/t/411/assets/theme.css');
         loadStyle("/cdn/shop/t/401/assets/bt-ig.css");
         loadStyle("/cdn/shop/t/406/assets/custom.css");
         loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
