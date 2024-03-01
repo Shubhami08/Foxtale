@@ -234,10 +234,6 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-_Master-_Feb-04.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2-_Master-_Feb-02.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/B2G2-_Master-_Feb-11.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/B2G2-_Master-_Feb-05.jpg",
             "collection_handle": "frontpage"
           }
         },
