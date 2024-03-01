@@ -234,6 +234,14 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_Banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_Banner.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/sheet_mask_desktop.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/sheet_mask.jpg",
+            "image_3_desktop": "shopify:\/\/shop_images\/Eye_Mask_Desktop.jpg",
+            "image_3_mobile": "shopify:\/\/shop_images\/Eye_mask_mobile.jpg",
+            "image_4_desktop": "shopify:\/\/shop_images\/Routine_Banner_desktop.jpg",
+            "image_4_mobile": "shopify:\/\/shop_images\/Routine_Mobile.jpg",
             "collection_handle": "frontpage"
           }
         },
