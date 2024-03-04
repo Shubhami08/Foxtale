@@ -103,6 +103,14 @@
             "collection_handle": "early-access"
           }
         },
+        "image_rUk9y3": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/code-AFFILIATE_SUMMER_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Code-_AFFILIATE_SUMMER_BANNER-01.jpg",
+            "collection_handle": "affiliate-secret-sale"
+          }
+        },
         "387e416d-e96a-42bf-b73f-10452683ddf3": {
           "type": "image",
           "settings": {
@@ -325,6 +333,7 @@
         "52070fc7-449e-4643-b57f-57d8f07b467c",
         "293424e1-fafd-4849-96cf-d45d71201f14",
         "a6f55990-39a5-4ae9-957d-ba08788864d2",
+        "image_rUk9y3",
         "387e416d-e96a-42bf-b73f-10452683ddf3",
         "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
         "5957fc45-38e1-4660-b466-c79aa595062a",
