@@ -868,23 +868,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-
-       {% if collection.url contains 'exclusive-sale' %}
-         .widget-title span {
-           visibility: hidden;
-           position: relative;
-           width: 100%;
-         }
-         .widget-title span:after {
-          font-size: 17px;
-           visibility: visible;
-           position: absolute;
-           top: 0;
-           left: 0;
-           content: "Get the Glow of Love";
-         }
-       {%endif%}
-
        {% if collection.url contains 'secret-flash-sale' %}
          .widget-title span {
            visibility: hidden;
