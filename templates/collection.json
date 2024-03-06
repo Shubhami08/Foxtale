@@ -390,6 +390,7 @@
         },
         "c3324879-6720-465b-bbda-60eedf91a2ff": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/SLEEK-BANNERS-MARCH-24.jpg",
             "image_mobile": "shopify:\/\/shop_images\/SLEEK-BANNERS-sheet-mask-m.jpg",
