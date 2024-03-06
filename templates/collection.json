@@ -16,8 +16,6 @@
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/FOX_10_15_Jennifer_2-04.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/FOX_10_15_Jennifer_2-03.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Glow_10_Jennifer-DESKTOP.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Glow_10_Jennifer-MOBILE.jpg",
             "collection_handle": "shop"
           }
         },
