@@ -394,7 +394,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>15% Off  <\/strong>on all orders [Code: <strong>FOX15<\/strong>]<\/p>",
+              "content": "<p><strong>Buy 3 @ 1099<\/strong> [Use Code: <strong>FOX1099]<\/strong><\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
