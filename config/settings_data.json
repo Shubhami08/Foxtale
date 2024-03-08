@@ -68,7 +68,7 @@
     "free_product_list": [
 
     ],
-    "magic_enable_21": false,
+    "magic_enable_21": true,
     "magic_link_key_21": "lipmask",
     "magic_trigger_collection_21": "exclusive-sale",
     "magic_trigger_count_21": 3,

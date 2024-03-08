@@ -242,8 +242,10 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/FOX_10_15-02_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/FOX_10_15-01_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-Desktop-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_Mobile-1.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/B2G2-Desktop-2.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/B2G2-Mobile-2.jpg",
             "collection_handle": "frontpage"
           }
         },
