@@ -83,14 +83,14 @@
             "animation_delay": 30
           }
         },
-        "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95": {
+        "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brand_Banners-13.jpg",
-            "image_mb": "shopify:\/\/shop_images\/Brand_Banners-12.jpg",
+            "image": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2.jpg",
+            "image_mb": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2-04_1.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/shop",
+            "link_img1": "shopify:\/\/pages\/new-launch-sign-up",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -123,14 +123,14 @@
             "animation_delay": 30
           }
         },
-        "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
+        "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2.jpg",
-            "image_mb": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2-04_1.jpg",
+            "image": "shopify:\/\/shop_images\/Brand_Banners-13.jpg",
+            "image_mb": "shopify:\/\/shop_images\/Brand_Banners-12.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/pages\/new-launch-sign-up",
+            "link_img1": "shopify:\/\/collections\/shop",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -249,8 +249,8 @@
       "block_order": [
         "65500d1b-7a9b-4077-85dd-8287413d749c",
         "164602873867eb3815-0",
-        "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95",
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f",
+        "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95",
         "6876bcbc-8439-4320-8af0-f2fd8ec67ced",
         "aca13d02-fdca-4dd7-b455-cc71ffabb08a"
       ],
