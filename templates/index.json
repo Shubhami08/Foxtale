@@ -125,13 +125,12 @@
         },
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/BANNERS-2-SRC.jpg",
-            "image_mb": "shopify:\/\/shop_images\/BANNERS-1-SRC.jpg",
+            "image": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2.jpg",
+            "image_mb": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2-04_1.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/products\/skin-repair-cream",
+            "link_img1": "shopify:\/\/pages\/new-launch-sign-up",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
