@@ -1684,41 +1684,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           if (older_magic_key == magic_key) {
             setCookie('magic_key', magic_key, magic_link_lifetime_val);
           } else {
-            // $.ajax({
-            //   url: '/cart/clear.js',
-            //   method: 'POST',
-            //   dataType: 'json',
-            //   success: function () {},
-            //   Complete: function () {
-            //     console.log('Cart cleared successfully');
-            //     jQuery.getJSON('/cart.js', function (cart) {
-            //       let cartData = cart.items;
-            //       document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-            //       document.dispatchEvent(
-            //         new CustomEvent('cart:refresh:opend', {
-            //           bubbles: true,
-            //           detail: cartData,
-            //         })
-            //       );
-            //     });
-            //     $('span.t4s-count-box[data-cart-count]').html('0');
-            //   },
-            // });
-
-            $.getJSON('/cart.js', function(cart) {
-          var data = {
-            updates: {}
-          };
-          $.each(cart.items, function(index, item) {
-            data.updates[item.variant_id] = 0; 
-          });
             $.ajax({
-              type: 'POST',
-              url: '/cart/update.js',
-              data: data,
+              url: '/cart/clear.js',
+              method: 'POST',
               dataType: 'json',
               success: function () {},
-              Complete: function () {
+              complete: function () {
                 console.log('Cart cleared successfully');
                 jQuery.getJSON('/cart.js', function (cart) {
                   let cartData = cart.items;
@@ -1731,66 +1702,34 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
                   );
                 });
                 $('span.t4s-count-box[data-cart-count]').html('0');
-              }
+              },
             });
-          
-        });
             setCookie('magic_key', magic_key, magic_link_lifetime_val);
           }
         } else {
           setCookie('magic_key', magic_key, magic_link_lifetime_val);
         }
         if ($('#magic_link_wrap div[data-link-key="' + magic_key + '"]').length == 0) {
-          // $.ajax({
-          //   url: '/cart/clear.js',
-          //   method: 'POST',
-          //   dataType: 'json',
-          //   success: function () {},
-          //   Complete: function () {
-          //     console.log('Cart cleared successfully');
-          //     jQuery.getJSON('/cart.js', function (cart) {
-          //       let cartData = cart.items;
-          //       document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-          //       document.dispatchEvent(
-          //         new CustomEvent('cart:refresh:opend', {
-          //           bubbles: true,
-          //           detail: cartData,
-          //         })
-          //       );
-          //     });
-          //   },
-          // });
-
-          $.getJSON('/cart.js', function(cart) {
-          var data = {
-            updates: {}
-          };
-          $.each(cart.items, function(index, item) {
-            data.updates[item.variant_id] = 0; 
+          $.ajax({
+            url: '/cart/clear.js',
+            method: 'POST',
+            dataType: 'json',
+            success: function () {},
+            complete: function () {
+              console.log('Cart cleared successfully');
+              jQuery.getJSON('/cart.js', function (cart) {
+                let cartData = cart.items;
+                document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+                document.dispatchEvent(
+                  new CustomEvent('cart:refresh:opend', {
+                    bubbles: true,
+                    detail: cartData,
+                  })
+                );
+              });
+            },
           });
-            $.ajax({
-              type: 'POST',
-              url: '/cart/update.js',
-              data: data,
-              dataType: 'json',
-              success: function () {},
-              Complete: function () {
-                console.log('Cart cleared successfully');
-                jQuery.getJSON('/cart.js', function (cart) {
-                  let cartData = cart.items;
-                  document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-                  document.dispatchEvent(
-                    new CustomEvent('cart:refresh:opend', {
-                      bubbles: true,
-                      detail: cartData,
-                    })
-                  );
-                });
-                $('span.t4s-count-box[data-cart-count]').html('0');
-              }
-            });
-          
-        });
+
           eraseCookie('magic_key');
         }
       }
@@ -1800,63 +1739,33 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         older_magic_key_check &&
         $('#magic_link_wrap div[data-link-key="' + older_magic_key_check + '"]').length == 0
       ) {
-        // $.ajax({
-        //   url: '/cart/clear.js',
-        //   method: 'POST',
-        //   dataType: 'json',
-        //   success: function () {},
-        //   Complete: function () {
-        //     console.log('Cart cleared successfully');
-        //     jQuery.getJSON('/cart.js', function (cart) {
-        //       let cartData = cart.items;
-        //       document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-        //       document.dispatchEvent(
-        //         new CustomEvent('cart:refresh:opend', {
-        //           bubbles: true,
-        //           detail: cartData,
-        //         })
-        //       );
-        //       // const myInterval = setInterval(function () {
-        //       //   if($("span.t4s-count-box[data-cart-count]").length){
-        //       //     $("span.t4s-count-box[data-cart-count]").html('0');
-        //       //     clearInterval(myInterval);
-        //       //   }
-        //       //   console.log("myInterval......");
-        //       // }, 1000);
-        //     });
-        //   },
-        // });
-
-        $.getJSON('/cart.js', function(cart) {
-          var data = {
-            updates: {}
-          };
-          $.each(cart.items, function(index, item) {
-            data.updates[item.variant_id] = 0; 
-          });
-            $.ajax({
-              type: 'POST',
-              url: '/cart/update.js',
-              data: data,
-              dataType: 'json',
-              success: function () {},
-              Complete: function () {
-                console.log('Cart cleared successfully');
-                jQuery.getJSON('/cart.js', function (cart) {
-                  let cartData = cart.items;
-                  document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
-                  document.dispatchEvent(
-                    new CustomEvent('cart:refresh:opend', {
-                      bubbles: true,
-                      detail: cartData,
-                    })
-                  );
-                });
-                $('span.t4s-count-box[data-cart-count]').html('0');
-              }
+        $.ajax({
+          url: '/cart/clear.js',
+          method: 'POST',
+          dataType: 'json',
+          success: function () {},
+          complete: function () {
+            console.log('Cart cleared successfully');
+            jQuery.getJSON('/cart.js', function (cart) {
+              let cartData = cart.items;
+              document.dispatchEvent(new CustomEvent('cart:build', { bubbles: true }));
+              document.dispatchEvent(
+                new CustomEvent('cart:refresh:opend', {
+                  bubbles: true,
+                  detail: cartData,
+                })
+              );
+              // const myInterval = setInterval(function () {
+              //   if($("span.t4s-count-box[data-cart-count]").length){
+              //     $("span.t4s-count-box[data-cart-count]").html('0');
+              //     clearInterval(myInterval);
+              //   }
+              //   console.log("myInterval......");
+              // }, 1000);
             });
-          
+          },
         });
+
         
         eraseCookie('magic_key');
       }
