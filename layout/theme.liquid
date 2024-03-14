@@ -1684,6 +1684,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           if (older_magic_key == magic_key) {
             setCookie('magic_key', magic_key, magic_link_lifetime_val);
           } else {
+            console.log('Cart cleared starts');
             $.ajax({
               url: '/cart/clear.js',
               method: 'POST',
