@@ -148,10 +148,6 @@
         "c0529620-f32d-4d51-b4d1-61bc608923fd": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Flat_300-D_ab08a9bb-688b-47b1-81cb-d2a510b0f65d.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Flat_300-_M_74c7b5a9-d5d0-4d90-84ff-2b9118c94bcb.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Frame_2-D-22_de88fa8b-26e4-4280-ae70-ea66a388d899.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Frame_2-_M-23_f6fdd560-6e91-448f-b2b6-1a7f3f1d4aa7.jpg",
             "collection_handle": "flat-300-off-phonepe"
           }
         },
