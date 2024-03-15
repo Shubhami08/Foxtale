@@ -404,10 +404,6 @@
         "5a5e4eaf-e7bf-431c-b02d-534132ded685": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-13_2.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-14_2.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Partnership_Banners-03_cab34cb0-95e6-4a4f-9b8f-f836cfa9d16f.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Partnership_Banners-04_ded29b1f-fe67-442b-90f6-8338ef12b2d3.jpg",
             "collection_handle": "flat-400-off-gpay"
           }
         },
@@ -424,8 +420,6 @@
         "3e054972-6a13-4eda-9144-1cacc230d754": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-17.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-18.jpg",
             "collection_handle": "flat-200-off-gpay"
           }
         },
