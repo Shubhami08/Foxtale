@@ -191,8 +191,6 @@
         "e2161f4c-359d-4350-8a5a-decdd1235820": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FOX_10_15-02_1.jpg",
-            "image_mb": "shopify:\/\/shop_images\/FOX_10_15-01_1.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "",
@@ -232,8 +230,6 @@
           "type": "image_parent",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Glow__Jennifer-24_2.jpg",
-            "image_mb": "shopify:\/\/shop_images\/Glow__Jennifer-23_2.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "",
@@ -313,7 +309,7 @@
     "d464225e-4d53-46b4-838a-f69fb4df8272": {
       "type": "featured_collection_owl",
       "settings": {
-        "title": "Jennifer Winget’s Most Loved",
+        "title": "Most Loved",
         "sub_title": "",
         "sub_font": "2",
         "btn_title": "See all products",
@@ -364,15 +360,13 @@
       "settings": {
         "txter": "",
         "linkz": "",
-        "imageselect": "shopify:\/\/shop_images\/FESTIVE_CAMPAIGN-06_2_c56c6e4b-0ef8-4866-852c-94f5649e1cad.jpg",
-        "txtersml": "",
-        "imageselectsml": "shopify:\/\/shop_images\/FESTIVE_CAMPAIGN-06_2_c56c6e4b-0ef8-4866-852c-94f5649e1cad.jpg"
+        "txtersml": ""
       }
     },
     "caa6cbc8-8d3b-450a-8f50-14d092a7263a": {
       "type": "featured_collection_owl",
       "settings": {
-        "title": "Glowing Skin, Just Like Jennifer",
+        "title": "Glowing Skin",
         "sub_title": "",
         "sub_font": "2",
         "btn_title": "See all products",
@@ -427,6 +421,7 @@
     },
     "de79515a-9460-4a52-af14-421dbb8fcff0": {
       "type": "video_featured",
+      "disabled": true,
       "settings": {
         "se_height": "t4s_ratio_cuspx",
         "custom_dk": true,
