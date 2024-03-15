@@ -119,16 +119,22 @@
             "collection_handle": "affiliate-early-access"
           }
         },
-        "26003c4f-26c3-4086-9cb0-b7c059dd74a7": {
+        "image_AGT3Fx": {
           "type": "image",
           "settings": {
-            "collection_handle": "flat-400-off-gpay"
+            "collection_handle": "gpay-free-eye-mask"
           }
         },
         "5957fc45-38e1-4660-b466-c79aa595062a": {
           "type": "image",
           "settings": {
             "collection_handle": "free-face-wash-gpay"
+          }
+        },
+        "26003c4f-26c3-4086-9cb0-b7c059dd74a7": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flat-400-off-gpay"
           }
         },
         "b12ee519-3c23-4b62-b07e-45bb584fce0b": {
@@ -155,6 +161,12 @@
           "type": "image",
           "settings": {
             "collection_handle": "phonepe-flat-400-off"
+          }
+        },
+        "image_8DhKzB": {
+          "type": "image",
+          "settings": {
+            "collection_handle": ""
           }
         },
         "cd1def4f-3372-48b8-9243-a308be778a94": {
@@ -288,12 +300,6 @@
             "image_1_mobile": "shopify:\/\/shop_images\/Mobile_10.jpg",
             "collection_handle": "secret-party"
           }
-        },
-        "image_AGT3Fx": {
-          "type": "image",
-          "settings": {
-            "collection_handle": "gpay-free-eye-mask"
-          }
         }
       },
       "block_order": [
@@ -309,12 +315,14 @@
         "a6f55990-39a5-4ae9-957d-ba08788864d2",
         "image_rUk9y3",
         "387e416d-e96a-42bf-b73f-10452683ddf3",
-        "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
+        "image_AGT3Fx",
         "5957fc45-38e1-4660-b466-c79aa595062a",
+        "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
         "b12ee519-3c23-4b62-b07e-45bb584fce0b",
         "c0529620-f32d-4d51-b4d1-61bc608923fd",
         "e370bd45-9005-4f18-9d4f-a36cfaa962f6",
         "a224c502-f6dd-449b-9851-0323713ff2d4",
+        "image_8DhKzB",
         "cd1def4f-3372-48b8-9243-a308be778a94",
         "c3847c8b-b98d-4d16-a83f-a048462d953e",
         "3dc3c72d-6f4a-4601-a52a-38f7fd83601a",
@@ -329,8 +337,7 @@
         "1ed0757d-1e6a-4d93-86b6-96a3aaeee593",
         "35952e72-8bd4-4162-8485-8e4d3072771e",
         "image_DcEBMA",
-        "image_hHzUFn",
-        "image_AGT3Fx"
+        "image_hHzUFn"
       ],
       "settings": {
         "slider_height_mobile": "100%"
