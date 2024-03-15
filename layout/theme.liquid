@@ -645,6 +645,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'new-frontpage'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B3@1099";
+         }
+       {%endif%}
+
       {% if collection.url contains 'buy-1-get-1-free-gpay-1'%}
          .bottom-leftext {
            visibility: hidden;
