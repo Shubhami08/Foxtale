@@ -140,6 +140,8 @@
         "c0529620-f32d-4d51-b4d1-61bc608923fd": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01.jpg",
             "collection_handle": "flat-300-off-phonepe"
           }
         },
