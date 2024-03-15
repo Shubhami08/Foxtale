@@ -388,10 +388,8 @@
         "cd98f790-df57-40d4-8b04-7e959afda723": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-01_8497fd84-12e6-4fb2-94fe-bbb52dd7d004.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-02_d384ce7c-f302-46f3-b95b-deccdae454a4.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Partnership_Banners-03_cab34cb0-95e6-4a4f-9b8f-f836cfa9d16f.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Partnership_Banners-04_ded29b1f-fe67-442b-90f6-8338ef12b2d3.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
             "collection_handle": "google-pay-b2g2-1"
           }
         },
