@@ -152,26 +152,22 @@
         "a224c502-f6dd-449b-9851-0323713ff2d4": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Flat400-D_77191a9a-11f2-45e5-89c5-3ab3ae6f769f.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Flat_400-M_4523d440-5c37-4ceb-a0a1-a1da186b1751.jpg",
             "collection_handle": "phonepe-flat-400-off"
           }
         },
         "cd1def4f-3372-48b8-9243-a308be778a94": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-D_2f6d0849-caf8-4049-b142-807c9b02310e.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2-M_4682c34f-7d19-4bfa-ba0c-649738417965.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/B1G1-Frame2_D_3ecb49f5-92ff-4d54-8102-1bb491d38c8d.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/B1G1-Frame2_M_a31b870a-8972-455c-8969-b1766c298e80.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
             "collection_handle": "gpay-b2g2"
           }
         },
         "c3847c8b-b98d-4d16-a83f-a048462d953e": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-15.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-16.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg",
             "collection_handle": "buy-1-get-1-free-gpay"
           }
         },
