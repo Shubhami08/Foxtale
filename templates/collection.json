@@ -258,6 +258,8 @@
         "e4200243-e18e-45ee-a588-07aa2db63a66": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/WEB_BANNER_FOX10.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/FOX10_MOBILE.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
