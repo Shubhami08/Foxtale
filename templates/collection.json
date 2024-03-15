@@ -174,24 +174,20 @@
         "3dc3c72d-6f4a-4601-a52a-38f7fd83601a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop-Banner-PaytmB2G2_e6a0f770-78e8-4f46-94dc-0093fa8c4655.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-banner-PaytmB2G2_d83aa92e-d567-4d3a-8b56-4df378f8d796.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_B2G2-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_B2G2-01.jpg",
             "collection_handle": "paytm-b2g2"
           }
         },
         "201e8bcf-2465-4228-81fe-317ca78d387a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-05_339165c5-1c77-4d23-bca9-189cf35bfd0d.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-06_35659687-cc93-434c-b2d4-82674b0d8304.jpg",
             "collection_handle": "phonepe-b2g2"
           }
         },
         "d5a2ffe9-14a6-4651-be91-d3d378b6b7ee": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership_Banners-07_28236217-0b87-4ddb-9c32-dfbe9f4afc2a.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership_Banners-08_838a94ba-1901-4eff-9bc5-8f72aed66c5f.jpg",
             "collection_handle": "buy-1-get-1-phonepe"
           }
         },
