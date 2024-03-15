@@ -258,12 +258,6 @@
         "e4200243-e18e-45ee-a588-07aa2db63a66": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_ca243d02-b4b5-406e-a522-3d55aee51095.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_2739c8a0-304d-4d2d-8cc1-cc83a0274492.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Free-minis_Desktop_a57d84c4-f647-42df-846f-d40c78a4cb26.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Free-minis_Mobile_c811655d-b156-4458-80e1-c53d729ac212.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/B2g2-_web_bd512397-4940-4722-b031-27a831e269ac.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/B2g2-_mobile_-01_ef06e404-294a-4033-a797-22f64bfa4fb5.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
