@@ -68,12 +68,12 @@
     "free_product_list": [
 
     ],
-    "magic_enable_21": false,
-    "magic_link_key_21": "",
-    "magic_trigger_collection_21": "",
-    "magic_trigger_count_21": 1,
-    "magic_gift_product_21": "",
-    "magic_link_lifetime_21": 5,
+    "magic_enable_21": true,
+    "magic_link_key_21": "lip-mask",
+    "magic_trigger_collection_21": "exclusive-sale",
+    "magic_trigger_count_21": 3,
+    "magic_gift_product_21": "foxtale-love-bomb-lip-mask",
+    "magic_link_lifetime_21": 4,
     "magic_enable_22": false,
     "magic_link_key_22": "",
     "magic_trigger_collection_22": "",
