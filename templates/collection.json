@@ -182,12 +182,16 @@
         "201e8bcf-2465-4228-81fe-317ca78d387a": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B2G2-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B2G2-01.jpg",
             "collection_handle": "phonepe-b2g2"
           }
         },
         "d5a2ffe9-14a6-4651-be91-d3d378b6b7ee": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B1G1-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B1G1-01.jpg",
             "collection_handle": "buy-1-get-1-phonepe"
           }
         },
