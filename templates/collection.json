@@ -306,8 +306,6 @@
         "image_AGT3Fx": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Partnership-Banners-01.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Partnership-Banners-02.jpg",
             "collection_handle": "gpay-free-eye-mask"
           }
         }
