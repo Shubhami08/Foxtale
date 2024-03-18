@@ -107,13 +107,13 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       {%- assign escaped_page_title = page_title | escape -%}
       {%- unless escaped_page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
     {%- endcapture -%}
-      <title>{{ seo_title | strip }}</title>
+      <title>{{ seo_title | strip }} <!-- hdhdhhd --> </title>
       <meta
         name="description"
         content="{{ page_description | default:shop.description | default: shop.name | escape }}"
       >
     {%- else -%}
-      <title>{{ 'list_collections.meta_title' | t | escape }} <!-- kkkk --></title
+      <title>{{ 'list_collections.meta_title' | t | escape }} <!-- ghdgjhdgh --> </title
       ><meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
     {%- endif -%}
 
