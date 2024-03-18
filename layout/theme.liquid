@@ -102,6 +102,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     {%- if t_name != 'list-collections' -%}
       {%- capture seo_title -%}
       {%- if template == 'search' and search.performed == true -%}{{ 'search.general.heading' | t: count: search.results_count }}: {{ 'search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}{%- elsif template == 'search.wishlist' %}{{ 'wishlist_page.meta' | t }}{%- elsif template == 'search.compare' %}{{ 'compare_page.meta' | t }}{%- else -%}{{ page_title }}{%- endif -%}
+      <!-- {{ shop.url }} -->
       {%- if current_tags -%}{%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}{%- endif -%}
       {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{%- endif -%}
       {%- assign escaped_page_title = page_title | escape -%}
