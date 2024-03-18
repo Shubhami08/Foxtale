@@ -113,7 +113,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         content="{{ page_description | default:shop.description | default: shop.name | escape }}"
       >
     {%- else -%}
-      <title>{{ 'list_collections.meta_title' | t | escape }}</title
+      <title>{{ 'list_collections.meta_title' | t | escape }} <!-- lll --></title
       ><meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
     {%- endif -%}
 
