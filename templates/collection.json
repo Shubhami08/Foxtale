@@ -294,6 +294,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/Mobile_10.jpg",
             "collection_handle": "secret-party"
           }
+        },
+        "image_HHVRJP": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-01.jpg",
+            "collection_handle": "flat-200-off-phonepe"
+          }
         }
       },
       "block_order": [
@@ -330,7 +338,8 @@
         "1ed0757d-1e6a-4d93-86b6-96a3aaeee593",
         "35952e72-8bd4-4162-8485-8e4d3072771e",
         "image_DcEBMA",
-        "image_hHzUFn"
+        "image_hHzUFn",
+        "image_HHVRJP"
       ],
       "settings": {
         "slider_height_mobile": "100%"
