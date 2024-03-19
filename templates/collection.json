@@ -143,14 +143,6 @@
             "collection_handle": "flat-300-off-gpay"
           }
         },
-        "c0529620-f32d-4d51-b4d1-61bc608923fd": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01.jpg",
-            "collection_handle": "flat-300-off-phonepe"
-          }
-        },
         "e370bd45-9005-4f18-9d4f-a36cfaa962f6": {
           "type": "image",
           "settings": {
@@ -161,6 +153,14 @@
           "type": "image",
           "settings": {
             "collection_handle": "phonepe-flat-400-off"
+          }
+        },
+        "c0529620-f32d-4d51-b4d1-61bc608923fd": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01.jpg",
+            "collection_handle": "flat-300-off-phonepe"
           }
         },
         "cd1def4f-3372-48b8-9243-a308be778a94": {
@@ -321,9 +321,9 @@
         "5957fc45-38e1-4660-b466-c79aa595062a",
         "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
         "b12ee519-3c23-4b62-b07e-45bb584fce0b",
-        "c0529620-f32d-4d51-b4d1-61bc608923fd",
         "e370bd45-9005-4f18-9d4f-a36cfaa962f6",
         "a224c502-f6dd-449b-9851-0323713ff2d4",
+        "c0529620-f32d-4d51-b4d1-61bc608923fd",
         "cd1def4f-3372-48b8-9243-a308be778a94",
         "c3847c8b-b98d-4d16-a83f-a048462d953e",
         "3dc3c72d-6f4a-4601-a52a-38f7fd83601a",
