@@ -1510,6 +1510,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       <script src="https://bot.orimon.ai/deploy/index.js" tenantId="11369d09-f6a7-4650-b5f8-988170a641d6"></script>
     -->
 
+    <script>
+      var view_url = new URL(window.location.href);
+      var utm_source = view_url.searchParams.get('utm_source');
+      localStorage.setItem('utm_source',utm_source);
+    </script>
+
     <script defer>
       function setCookie(name, value, days) {
         var expires = '';
