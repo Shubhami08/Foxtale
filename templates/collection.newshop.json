@@ -426,6 +426,8 @@
         "040dca29-acdb-4004-909b-5fe9000b3f52": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png",
             "collection_handle": "paytm-flat-200"
           }
         },
