@@ -85,6 +85,7 @@
         },
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2.jpg",
             "image_mb": "shopify:\/\/shop_images\/Glow_Sunscreen_-_Early_Birds_COPY_CHANGES_2-04_1.jpg",
