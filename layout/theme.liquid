@@ -1843,32 +1843,30 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     }
 
     function loadScriptss() {
-        loadScript('/cdn/shop/t/408/assets/ls.blur-up.min.js');
-        loadScript('/cdn/shop/t/408/assets/lazysize.js');
+        loadScript("{{ 'ls.blur-up.min.js' | asset_url }}");
+        loadScript("{{'lazysize.js'| asset_url }}");
       loadScript('https://www.googletagmanager.com/gtag/js?id=AW-10819339486');
         loadScript('https://www.googletagmanager.com/gtag/js?id=UA-214444346-1');
-        loadScript('/cdn/shop/t/408/assets/g_tag_manager.js');
-      loadStyle("/cdn/shop/t/406/assets/custom.css");
+        loadScript("{{'g_tag_manager.js'| asset_url }}");
       if(page_type == 'index')
-       {loadScript('/cdn/shop/t/401/assets/global.min.js');}
+       {loadScript("{{'global.min.js' | asset_url }}")}
     }
 
     function loadScripts() {
-       loadScript('/cdn/shop/t/401/assets/pre_flickity.min.js');
+       loadScript("{{'pre_flickity.min.js'| asset_url }}");
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
-       // loadScript('/cdn/shop/t/401/assets/global.min.js');
       if(page_type == 'index')
-      {loadStyle('/cdn/shop/t/401/assets/pre_theme.min.css');
-     loadStyle('/cdn/shop/t/401/assets/bt-common.css');
+      {loadStyle("{{'pre_theme.min.css'| asset_url }}");
+     loadStyle("{{'bt-common.css'| asset_url }}");
     }
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-        loadScript('/cdn/shop/t/401/assets/nt_theme.min.js');
-        loadStyle("/cdn/shop/t/401/assets/icon-social.css");
-        loadStyle('/cdn/shop/t/411/assets/theme.css');
-        loadStyle("/cdn/shop/t/401/assets/bt-ig.css");
-        loadStyle("/cdn/shop/t/406/assets/custom.css");
-        loadStyle("/cdn/shop/t/401/assets/pe_ic.min.css");
-        loadStyle("/cdn/shop/t/401/assets/style.min.css");
+        loadScript("{{'nt_theme.min.js'| asset_url }}");
+        loadStyle("{{'icon-social.css'| asset_url }}");
+        loadStyle("{{'theme.css'| asset_url }}");
+        loadStyle("{{'bt-ig.css'| asset_url }}");
+        loadStyle("{{'custom.css'| asset_url }}");
+        loadStyle("{{'pe_ic.min.css'| asset_url }}");
+        loadStyle("{{'style.min.css'| asset_url }}");
         var v = new URLSearchParams(window.location.search).get('clickid');
         if (v !== null) {
             var dateAf = new Date();
