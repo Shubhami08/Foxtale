@@ -107,11 +107,35 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       {%- assign escaped_page_title = page_title | escape -%}
       {%- unless escaped_page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
     {%- endcapture -%}
-      <title>{{ seo_title | strip }}</title>
-      <meta
+      {% if meta_tags == 'DRY SKIN' %}
+            <title>Shop Skincare Products for Dry Skin | Foxtale</title>
+  <meta name="description"
+        content="Buy skin care for dry skin at Foxtale. Shop now for moisturizers, cleansers, serums, sunscreens, face wash & more to revitalize your skin. Find your perfect regimen!"
+      >
+          {% elsif meta_tags == 'OILY SKIN' %}
+          <title>Shop Skin Care Products for Oily Skin | Foxtale</title>
+            <meta name="description"
+        content="Explore Foxtale's skincare product range for oily skin. From cleansers to moisturizers that maintain a clear, matte finish for a healthy, vibrant complexion" >
+          {% elsif meta_tags == 'COMBINATION' %}
+          <title>Buy Products for Combination Skin Online at Best Price | Foxtale</title>
+             <meta name="description"
+        content="Foxtale offer skincare products for combination skin including cleansers, moisturizers, and sunscreens to balance hydration and oil control for a flawless complexion" >
+          {% elsif meta_tags == 'SENSITIVE SKIN' %}
+          <title>Shop Sensitive Skin Products Online at Best Price | Foxtale</title>
+             <meta name="description"
+        content="Discover sensitive skin products and skincare solutions at Foxtale. Shop online for the best prices on effective products designed for sensitive skin care." >
+          {% elsif meta_tags == 'ACNE PRONE' %}
+          <title>Buy Skincare Products for Acne Prone Skin - Acne Solution | Foxtale</title>
+             <meta name="description"
+        content="Find perfect solution for acne-prone skin with Foxtale's skincare products. From face washes to moisturizers, our curated selection ensures clear, healthy skin." >
+          {% else %}
+         <title>{{ seo_title | strip }}</title>
+        <meta
         name="description"
         content="{{ page_description | default:shop.description | default: shop.name | escape }}"
       >
+          {% endif %}
+
     {%- else -%}
       <title>{{ 'list_collections.meta_title' | t | escape }}</title
       ><meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
