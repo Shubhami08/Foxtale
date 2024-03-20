@@ -1849,16 +1849,19 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         loadScript('https://www.googletagmanager.com/gtag/js?id=UA-214444346-1');
         loadScript("{{'g_tag_manager.js'| asset_url }}");
       if(page_type == 'index')
-       {loadScript("{{'global.min.js' | asset_url }}")}
+       {
+         loadScript("{{'global.min.js' | asset_url }}");
+         loadStyle("{{'pre_theme.min.css'| asset_url }}");
+       }
     }
 
     function loadScripts() {
        loadScript("{{'pre_flickity.min.js'| asset_url }}");
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js');
       if(page_type == 'index')
-      {loadStyle("{{'pre_theme.min.css'| asset_url }}");
-     loadStyle("{{'bt-common.css'| asset_url }}");
-    }
+      {
+       loadStyle("{{'bt-common.css'| asset_url }}");
+      }
         loadStyle('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
         loadScript("{{'nt_theme.min.js'| asset_url }}");
         loadStyle("{{'icon-social.css'| asset_url }}");
