@@ -309,7 +309,7 @@
         "a8f06393-bbca-4690-a0fa-a0152df92fbb": {
           "type": "content",
           "settings": {
-            "collection": "products"
+            "collection": "spotlight"
           }
         },
         "19da71f1-04f7-4293-9a39-0c5908d7e04a": {
@@ -591,7 +591,7 @@
         "hidden": false,
         "cp_code": false,
         "layout": "nt_full",
-        "cl_bg": "#fff",
+        "cl_bg": "#ffffff",
         "mg": "50px,35px,",
         "pd": ",60px,20px,60px",
         "mg_mb": ",,,,",
