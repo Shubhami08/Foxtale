@@ -191,6 +191,8 @@
         "e2161f4c-359d-4350-8a5a-decdd1235820": {
           "type": "image_parent",
           "settings": {
+            "image": "shopify:\/\/shop_images\/The_nine-nine_store-_banners-02.jpg",
+            "image_mb": "shopify:\/\/shop_images\/The_nine-nine_store-_banners-01.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "",
@@ -309,6 +311,7 @@
     },
     "d464225e-4d53-46b4-838a-f69fb4df8272": {
       "type": "featured_collection_owl",
+      "disabled": true,
       "settings": {
         "title": "Most Loved",
         "sub_title": "",
@@ -367,6 +370,7 @@
     },
     "caa6cbc8-8d3b-450a-8f50-14d092a7263a": {
       "type": "featured_collection_owl",
+      "disabled": true,
       "settings": {
         "title": "Glowing Skin",
         "sub_title": "",
@@ -417,8 +421,15 @@
     "5b59384a-2044-4f7c-ad03-e1f9c25dbc79": {
       "type": "custom-viewmoregrid",
       "settings": {
-        "mainheading": "Foxtale’s Skincare Range",
-        "collection": "products"
+        "mainheading": "399 Store",
+        "collection": "399-store"
+      }
+    },
+    "custom_viewmoregrid_RcBrfb": {
+      "type": "custom-viewmoregrid",
+      "settings": {
+        "mainheading": "499 Store",
+        "collection": "499-store"
       }
     },
     "de79515a-9460-4a52-af14-421dbb8fcff0": {
@@ -559,6 +570,7 @@
     "27dd3952-8a7f-460d-b3ae-ca700cdffd32",
     "caa6cbc8-8d3b-450a-8f50-14d092a7263a",
     "5b59384a-2044-4f7c-ad03-e1f9c25dbc79",
+    "custom_viewmoregrid_RcBrfb",
     "de79515a-9460-4a52-af14-421dbb8fcff0",
     "sidebar",
     "main"
