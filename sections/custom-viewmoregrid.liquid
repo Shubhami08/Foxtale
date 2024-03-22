@@ -28,7 +28,7 @@
      {% if collection != blank %}
         <div class="products-grid-item-main pdp-custom-collection custom-collection-product-grid-item">
           {%- for product in collection.products -%}
-            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 4 %}style="display: none;"{% endif %}>
+            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 5 %}style="display: none;"{% endif %}>
               <div class="product-innr vmg">
                 <div class="product-image pr oh lazyloadt4sed product-innr-top">
                   <a href="{{product.url}}">
@@ -114,7 +114,7 @@
                 </div>
            {%- endfor -%}
         </div>
-        <div class="custom-collection-view-more">view more</div>
+        <div class="custom-collection-view-more" style="display: none;">view more</div>
          <div class="custom-collection-view-less" style="display: none;">view less</div>
 {% endif %}
 {% endif %}
@@ -130,6 +130,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 20px;
   padding: 0 32px;
+  margin-bottom: 35px;
 }
 .custom-collection-view-more, .custom-collection-view-less {
   color: #1877F2;
@@ -144,7 +145,8 @@
   margin-top: 0px;
 }
 .template-collection .vm-vl .price .t4s-product-price {
-  display: block;
+  display: flex !important;
+  flex-direction: row-reverse;
   padding: 0 8px;
 }
 .vm-vl {
@@ -198,6 +200,7 @@
   .hdng-vwmr {
     margin: 0px 0 8px 12px;
     font-size: 20px;
+    padding-top: 1px;
   }
   .custom-collection-product-grid-item {
     display: grid;
@@ -205,6 +208,7 @@
     grid-row-gap: 10px;
     grid-column-gap: 8px;
     padding: 0 12px;
+    margin-bottom: 30px;
   }
   .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-stars-rating {
     font-size: 11px !important;
@@ -216,22 +220,22 @@
 }
 </style>
 <script>
-  $(document).ready(function(){
-    const viewMoreButton = $('.custom-collection-view-more');
-    const viewLessButton = $('.custom-collection-view-less');
-     viewMoreButton.on('click', function() {
-        $('.custom-collection-product-grid-item-sub').show(); // show all jobs
-        viewMoreButton.hide();           // hide the "View More" button
-        viewLessButton.show();           // show the "View Less" button
-      });
-     viewLessButton.on('click', function() {
-        $('.custom-collection-product-grid-item-sub').each(function(index) {
-            if (index >= 4) {
-                $(this).hide();          // hide jobs beyond the third one
-            }
-        });
-        viewLessButton.hide();           // hide the "View Less" button
-        viewMoreButton.show();           // show the "View More" button
-      });
-  });
+  // $(document).ready(function(){
+  //   const viewMoreButton = $('.custom-collection-view-more');
+  //   const viewLessButton = $('.custom-collection-view-less');
+  //    viewMoreButton.on('click', function() {
+  //       $('.custom-collection-product-grid-item-sub').show(); // show all jobs
+  //       viewMoreButton.hide();           // hide the "View More" button
+  //       viewLessButton.show();           // show the "View Less" button
+  //     });
+  //    viewLessButton.on('click', function() {
+  //       $('.custom-collection-product-grid-item-sub').each(function(index) {
+  //           if (index >= 4) {
+  //               $(this).hide();          // hide jobs beyond the third one
+  //           }
+  //       });
+  //       viewLessButton.hide();           // hide the "View Less" button
+  //       viewMoreButton.show();           // show the "View More" button
+  //     });
+  // });
 </script>
