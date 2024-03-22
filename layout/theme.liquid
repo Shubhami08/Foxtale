@@ -686,6 +686,15 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+      {% if collection.url contains '399-499-store'%}
+        .template-collection .discount-msg {
+          opacity: 0;
+        }
+        .saleBar {
+          display none !important;
+        }
+      {%endif%}
+
       {% if collection.url contains 'buy-1-get-1-free-gpay-1'%}
          .bottom-leftext {
            visibility: hidden;
@@ -1503,15 +1512,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
              }
          {%endif%}
        }
-
-       {% if collection.url contains '399-499-store'%}
-        .template-collection .discount-msg {
-          opacity: 0;
-        }
-        .saleBar {
-          display none !important;
-        }
-      {%endif%}
       
        {% if product.handle contains '399-store-hydrating-moisturizer-with-ceramide' or '399-store-super-glow-moisturizer' or '399-store-acne-spot-corrector-gel' or '499-store-niacinamide-serum' or '499-store-vitamin-c-serum' or '499-store-overnight-glow-mask' or '499-store-rapid-spot-reduction-drops' or '499-store-anti-aging-retinol-serum' %}
          .t4s-swatch__list, .offer-section-main {
