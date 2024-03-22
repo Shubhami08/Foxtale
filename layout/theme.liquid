@@ -687,8 +687,11 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
       {% if collection.url contains '399-499-store'%}
-        .template-collection .discount-msg, #custom-cart-value {
+        .template-collection .discount-msg {
           opacity: 0;
+        }
+        #custom-cart-value {
+          display: none;
         }
       {%endif%}
 
