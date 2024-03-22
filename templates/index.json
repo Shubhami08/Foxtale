@@ -551,7 +551,6 @@
     },
     "featured_collection_owl_RimMbr": {
       "type": "featured_collection_owl",
-      "disabled": true,
       "settings": {
         "title": " Summer Essentials",
         "sub_title": "",
@@ -560,7 +559,7 @@
         "style_title": "title_1",
         "ic_tt": "gem",
         "show_clpr": false,
-        "collection": "",
+        "collection": "summer-essentials",
         "limit": 12,
         "space": 20,
         "use_pagination": "none",
