@@ -372,16 +372,16 @@
         "896ab793-fd74-47fd-999e-0520b9c09b47": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2_Desktop_v1_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_Mobile_v1_copy_3.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "shop-1"
           }
         },
         "image_UibMeG": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Holi_B1G1_banners-01.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Holi_B1G1_banners-02.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "shop-2"
           }
         },
