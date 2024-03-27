@@ -214,28 +214,24 @@
         "7bff029f-c157-4639-b953-a7fab9d4bdeb": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B3_1099-Desktop-2-_LM.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B3_1099-Mobile2-_LM.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/B3_1099-Desktop-_LM.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/B3_1099-Mobile-_LM.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "exclusive-sale"
           }
         },
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WEB_BANNER_MDB1G1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_BANNER_MDB1G1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "midnight-sale"
           }
         },
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-Desktop-1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_Mobile-1.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/B2G2-Desktop-2.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/B2G2-Mobile-2.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "frontpage"
           }
         },
