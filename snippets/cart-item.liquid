@@ -11,7 +11,9 @@
     assign max_qty = item_variant.inventory_quantity
   else
     assign max_qty = 9999
-  endif -%}
+  endif 
+   assign item_only_id = item_key | split:":"| first
+-%}
 
 {% comment %}
 {% assign gift_prod_1 = settings.gift_product_1.id %}
