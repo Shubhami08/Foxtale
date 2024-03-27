@@ -392,13 +392,13 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
+          "announcement-bar-0": {
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>10% Off  <\/strong>on all orders [Code: <strong>FOX10<\/strong>]<\/p>",
+              "content": "<p><strong>Buy 2 @ 799<\/strong> [Use Code: <strong>GLOW799]<\/strong><\/p>",
               "countdown": "",
-              "txt_day": "days",
+              "txt_day": "",
               "dayx": 1
             }
           },
@@ -406,20 +406,19 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 3 @ 1099<\/strong> [Use Code: <strong>FOX1099]<\/strong><\/p>",
+              "content": "<p><strong>Buy 3 @ 1099<\/strong> [Use Code: <strong>GLOW1099]<\/strong><\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
             }
           },
-          "announcement-bar-0": {
+          "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/shop",
               "content": "<p><strong>10% Off  <\/strong>on all orders [Code: <strong>FOX10<\/strong>]<\/p>",
               "countdown": "",
-              "txt_day": "",
+              "txt_day": "days",
               "dayx": 1
             }
           },
@@ -469,9 +468,9 @@
           }
         },
         "block_order": [
-          "f223bebb-cc3c-48d2-9a6d-249db21b7563",
-          "75d97d28-d97c-478f-b125-3205b88a4be4",
           "announcement-bar-0",
+          "75d97d28-d97c-478f-b125-3205b88a4be4",
+          "f223bebb-cc3c-48d2-9a6d-249db21b7563",
           "5f5403a0-7add-4a01-b0f9-45ed6ee4a5e1",
           "02e70428-04c0-4ebf-8c75-aa5c2def741e",
           "9f947f8d-152f-425c-946a-8928071869c8",
