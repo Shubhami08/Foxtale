@@ -6,18 +6,18 @@
         "e5af2eb1-1336-41cb-81ad-7ba495fafa1b": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B3_1099_Aug-01.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B3_1099_Aug-02.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "products"
           }
         },
         "f9965015-912a-4ab1-a6b9-60456f64c9c9": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B3_1099_Aug-01.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B3_1099_Aug-02.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/FOX-10-D.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/FOX-10-M.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/FOX_10-03.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/FOX_10-04.jpg",
             "collection_handle": "shop"
           }
         },
