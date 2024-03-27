@@ -493,7 +493,7 @@
 
             {% assign total_cart_prod = cart.item_count | minus : gift_product_total %}
             
-            {% comment %}
+            
               {% if total_cart_prod > 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW1099</b> at next step to avail the Offer.</p></div>
               {% elsif total_cart_prod == 1 %}
@@ -501,7 +501,7 @@
               {% elsif total_cart_prod == 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy 3 @1099</strong></p></div>
               {% endif %}
-  
+  {% comment %}
               {% if total_cart_prod > 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code <b>VDAY1099</b> at next step.</p></div>
               {% elsif total_cart_prod == 1 %}
@@ -529,7 +529,7 @@
               {% elsif total_cart_prod == 3 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <strong>FOX1399</strong></p></div>
               {% endif %}
-            {% endcomment %}
+            
 
 
               {% if total_cart_prod >= 3 %}
@@ -537,6 +537,7 @@
               {% else %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to avail <strong>FOX1099</strong></p></div>
               {% endif %}
+              {% endcomment %}
             </div>
             
             {%- for block in section_blocks -%}
