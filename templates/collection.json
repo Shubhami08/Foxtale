@@ -423,7 +423,9 @@
         "image_6xYcN7": {
           "type": "image",
           "settings": {
-            "collection_handle": ""
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_1_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_1_2.jpg",
+            "collection_handle": "affiliate-early-access"
           }
         }
       },
