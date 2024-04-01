@@ -370,44 +370,12 @@
             "collection_handle": "acne-collection"
           }
         },
-        "e2a1aaa1-2016-4d5c-975f-376a3acfbd41": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Homepage_Banners_-_Assets-02_1.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Homepage_Banners_-_Assets-13_1.jpg",
-            "collection_handle": "dehydration"
-          }
-        },
         "8ed0aba5-abdd-4669-8797-afb5bee07b30": {
           "type": "image",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
             "image_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
             "collection_handle": "blemish-prone"
-          }
-        },
-        "c3324879-6720-465b-bbda-60eedf91a2ff": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/SLEEK-BANNERS-MARCH-24.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/SLEEK-BANNERS-sheet-mask-m.jpg",
-            "collection_handle": "frontpage"
-          }
-        },
-        "8fac0660-c3f0-4209-ac7e-c2248b57c751": {
-          "type": "image",
-          "settings": {
-            "collection_handle": "new-exclusive-special"
-          }
-        },
-        "ed536f89-8f17-4af3-b834-6ae95faa6ea7": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Sleek_love_bomb_feb_valentine-02_8cf56e04-8083-421b-9615-bb360062452a.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Sleek_love_bomb_feb_valentine-01_bdeb44cc-632b-486b-9058-83ea962de1f2.jpg",
-            "collection_handle": ""
           }
         },
         "f685fcb0-5ed0-4f13-809c-8e9c5146d0a3": {
@@ -426,15 +394,6 @@
             "collection_handle": "secret-flash-sale"
           }
         },
-        "image_39mjXr": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Midnight_Sale_Web.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Midnight_Sale_Mobile.jpg",
-            "collection_handle": "midnight-sale"
-          }
-        },
         "image_MzVJCd": {
           "type": "image",
           "settings": {
@@ -450,20 +409,24 @@
             "image_mobile": "shopify:\/\/shop_images\/EYE-MASK-_892X299_d1348964-7444-4920-9d96-34942b24851d.jpg",
             "collection_handle": "gpay-free-eye-mask"
           }
+        },
+        "image_HmryPz": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_10.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_12.jpg",
+            "collection_handle": "affiliate-secret-sale"
+          }
         }
       },
       "block_order": [
         "8f49b14c-bce1-4e1d-9511-a892b0d7d219",
-        "e2a1aaa1-2016-4d5c-975f-376a3acfbd41",
         "8ed0aba5-abdd-4669-8797-afb5bee07b30",
-        "c3324879-6720-465b-bbda-60eedf91a2ff",
-        "8fac0660-c3f0-4209-ac7e-c2248b57c751",
-        "ed536f89-8f17-4af3-b834-6ae95faa6ea7",
         "f685fcb0-5ed0-4f13-809c-8e9c5146d0a3",
         "image_bY63Te",
-        "image_39mjXr",
         "image_MzVJCd",
-        "image_mDrPfz"
+        "image_mDrPfz",
+        "image_HmryPz"
       ],
       "settings": {
       }
