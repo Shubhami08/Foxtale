@@ -1,5 +1,14 @@
 {
   "sections": {
+    "timer_QgwT4a": {
+      "type": "timer",
+      "settings": {
+        "timer_text": "",
+        "count_down_date": "",
+        "show_timer_on_home": false,
+        "show_timer_on_cart": false
+      }
+    },
     "8a75fd64-3ace-4ae7-8966-dfa4df542871": {
       "type": "slideshow-collection",
       "blocks": {
@@ -871,6 +880,7 @@
     }
   },
   "order": [
+    "timer_QgwT4a",
     "8a75fd64-3ace-4ae7-8966-dfa4df542871",
     "fde7dfaf-6042-4f71-b8f7-efdb65e3629e",
     "c3efaaee-55b3-4a51-93e2-4de6760e9eb4",
