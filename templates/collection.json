@@ -126,8 +126,10 @@
         "387e416d-e96a-42bf-b73f-10452683ddf3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/AFFILIATE_SUMMER_BANNER-05.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/AFFILIATE_SUMMER_BANNER-04.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Primary_DESKTOP_without_code.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Primary_MOBILE_without_code.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Secondary_Summer_Routine_WEB_without_code.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Secondary_Routine_banner_MOBILE_without_code.jpg",
             "collection_handle": "affiliate-early-access"
           }
         },
@@ -417,6 +419,12 @@
             "image_mobile": "shopify:\/\/shop_images\/MOBILE_12.jpg",
             "collection_handle": "affiliate-secret-sale"
           }
+        },
+        "image_6xYcN7": {
+          "type": "image",
+          "settings": {
+            "collection_handle": ""
+          }
         }
       },
       "block_order": [
@@ -426,7 +434,8 @@
         "image_bY63Te",
         "image_MzVJCd",
         "image_mDrPfz",
-        "image_HmryPz"
+        "image_HmryPz",
+        "image_6xYcN7"
       ],
       "settings": {
       }
