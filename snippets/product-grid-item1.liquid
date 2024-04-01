@@ -122,7 +122,7 @@ endif -%}
 <!--          <p class="t4s-gift" style="font-size: 14px; padding: 0 0 0 4px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Gift Worth ₹150</p> -->
               <div class="discount-msg">
                   {% if collection.title == "Secret Sale" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">Buy 2 get 3</p>
                   {% elsif collection.title == "Special Sale" %}
                     <p class="bottom-leftext">BYOB</p>
                   {% elsif collection.title == "Affiliate Valentine Sale" %}
@@ -183,7 +183,11 @@ endif -%}
                        <p class="bottom-leftext">10% OFF</p>
                      {% endif %}
                    {% endif %}
-                   <p class="bottom-rightext">Free Gift</p>                       
+                   {% if collection.title == "Secret Sale" %}
+                    <p class="bottom-rightext">Free Toner</p>
+                     {% else %}
+                    <p class="bottom-rightext">Free Gift</p>   
+                   {% endif %}
                 </div>
         {%- if show_list_btns -%}
          {%- assign description_excerpt = product.metafields.theme.description_excerpt -%}
