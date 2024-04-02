@@ -285,7 +285,10 @@
               {% endif %}
             {% endfor %}
 
+                 {% comment %}
             {% assign total_cart_prod = cart.item_count | minus : gift_product_total %}
+                 {% endcomment %}
+                 {% assign total_cart_prod = cart.item_count  %}
             {% assign trigger_prod_count_2 = settings.free_gift_v1_trigger_qty_2 %}
              {% assign trigger_prod_count_1 = settings.free_gift_v1_trigger_qty_1 %}
                  
