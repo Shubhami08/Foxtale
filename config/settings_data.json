@@ -396,7 +396,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 2 @ 799<\/strong> [Use Code: <strong>GLOW799]<\/strong><\/p>",
+              "content": "<p><strong>10% Off <\/strong>on all orders [Code:<strong> FOX10<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "",
               "dayx": 1
@@ -405,8 +405,8 @@
           "75d97d28-d97c-478f-b125-3205b88a4be4": {
             "type": "announcement",
             "settings": {
-              "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 3 @ 1099<\/strong> [Use Code: <strong>GLOW1099]<\/strong><\/p>",
+              "link": "shopify:\/\/collections\/shop",
+              "content": "<p><strong>15% Off <\/strong>on all orders [Code:<strong> FOX15<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
@@ -414,6 +414,7 @@
           },
           "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/shop",
               "content": "<p><strong>10% Off  <\/strong>on all orders [Code: <strong>FOX10<\/strong>]<\/p>",
@@ -1552,8 +1553,8 @@
           "58800ed8-befe-449a-b8f8-ea86620bef6f"
         ],
         "settings": {
-          "menu_banner_image": "shopify:\/\/shop_images\/HOME_PAGE2-05.jpg",
-          "image_url": "https:\/\/foxtale.in\/products\/glow-sunscreen"
+          "menu_banner_image": "shopify:\/\/shop_images\/FOX_10_15-01_2498ee49-d01c-4f50-a2b7-b85e8f7d35bd.jpg",
+          "image_url": "https:\/\/foxtale.in\/collections\/shop"
         }
       },
       "mb_cat": {
