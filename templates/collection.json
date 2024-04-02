@@ -2,7 +2,6 @@
   "sections": {
     "timer_QgwT4a": {
       "type": "timer",
-      "disabled": true,
       "settings": {
       }
     },
