@@ -1273,115 +1273,115 @@ $(document).ready(function () {
 {% endschema %}
 
 <script>
-  var count_down_date_bf='{{settings.count_down_date}}';
-  $(document).ready(function(){
-    console.log("count_down_date_bf",count_down_date_bf);
-    if(count_down_date_bf){
-      live_datetime_counter_bf();
-    }
-  });
-  $(function() {
+  // var count_down_date_bf='{{settings.count_down_date}}';
+  // $(document).ready(function(){
+  //   console.log("count_down_date_bf",count_down_date_bf);
+  //   if(count_down_date_bf){
+  //     live_datetime_counter_bf();
+  //   }
+  // });
+  // $(function() {
 
-    if(count_down_date_bf){
-      setInterval(live_datetime_counter_bf, 1000);
-    }
-  });
-  function live_checktime_bf(seconds)
-  { 
-    var days     = Math.floor(seconds / (24*60*60));
-    seconds -= days    * (24*60*60);
-    var hours    = Math.floor(seconds / (60*60));
-    seconds -= hours   * (60*60);
-    var minutes  = Math.floor(seconds / (60));
-    seconds -= minutes * (60);
-    return hours+":"+minutes;
-  }
-  function live_datetime_counter_bf(){
-    var start_bf = new Date() ;
-    var myDate_bf=new Date(count_down_date_bf);
-    var end_bf = myDate_bf;
+  //   if(count_down_date_bf){
+  //     setInterval(live_datetime_counter_bf, 1000);
+  //   }
+  // });
+  // function live_checktime_bf(seconds)
+  // { 
+  //   var days     = Math.floor(seconds / (24*60*60));
+  //   seconds -= days    * (24*60*60);
+  //   var hours    = Math.floor(seconds / (60*60));
+  //   seconds -= hours   * (60*60);
+  //   var minutes  = Math.floor(seconds / (60));
+  //   seconds -= minutes * (60);
+  //   return hours+":"+minutes;
+  // }
+  // function live_datetime_counter_bf(){
+  //   var start_bf = new Date() ;
+  //   var myDate_bf=new Date(count_down_date_bf);
+  //   var end_bf = myDate_bf;
     
-    if(end_bf.getTime() - (start_bf.getTime())>0){
-      var timeDiff_bf = Math.abs(end_bf.getTime() - (start_bf.getTime())); // in miliseconds
-      var timeDiffInSecond_bf = Math.ceil(timeDiff_bf / 1000);
+  //   if(end_bf.getTime() - (start_bf.getTime())>0){
+  //     var timeDiff_bf = Math.abs(end_bf.getTime() - (start_bf.getTime())); // in miliseconds
+  //     var timeDiffInSecond_bf = Math.ceil(timeDiff_bf / 1000);
 
-      seconds_to_days_hours_mins_secs_str_bf(timeDiffInSecond_bf);
-    }else{
-      seconds_to_days_hours_mins_secs_str_bf(0);
-    }
-  }
-  function seconds_to_days_hours_mins_secs_str_bf(seconds)
-  { // day, h, m and s
-    var days     = Math.floor(seconds / (24*60*60));
-    seconds -= days    * (24*60*60);
-    var hours    = Math.floor(seconds / (60*60));
-    seconds -= hours   * (60*60);
-    var minutes  = Math.floor(seconds / (60));
-    seconds -= minutes * (60);
-    if (hours < 10){hours = "0"+hours};
-    if (minutes < 10){minutes = "0"+minutes};
-    if (seconds < 10){seconds = "0"+seconds}
-    var day_str;
-    if(days==1){
-      day_str=" DAY ";
-    }else{
-      day_str=" DAYS ";
-    }
-    var html_count='';
-    if(days>0){
-      if (days < 10){days = "0"+days};
-        days = days.toString();
-        hours = hours.toString();
-        minutes = minutes.toString();
-        seconds = seconds.toString();
-        html_count+='<div class="days_count"><p class="days">';
-        for (var i = 0; i < days.length; i++) {
-          html_count += '<span>'+days[i]+'</span>';
-        }
-        html_count += '</p></div>'+
-        '<span class="timer-dots">:</span>';
+  //     seconds_to_days_hours_mins_secs_str_bf(timeDiffInSecond_bf);
+  //   }else{
+  //     seconds_to_days_hours_mins_secs_str_bf(0);
+  //   }
+  // }
+  // function seconds_to_days_hours_mins_secs_str_bf(seconds)
+  // { // day, h, m and s
+  //   var days     = Math.floor(seconds / (24*60*60));
+  //   seconds -= days    * (24*60*60);
+  //   var hours    = Math.floor(seconds / (60*60));
+  //   seconds -= hours   * (60*60);
+  //   var minutes  = Math.floor(seconds / (60));
+  //   seconds -= minutes * (60);
+  //   if (hours < 10){hours = "0"+hours};
+  //   if (minutes < 10){minutes = "0"+minutes};
+  //   if (seconds < 10){seconds = "0"+seconds}
+  //   var day_str;
+  //   if(days==1){
+  //     day_str=" DAY ";
+  //   }else{
+  //     day_str=" DAYS ";
+  //   }
+  //   var html_count='';
+  //   if(days>0){
+  //     if (days < 10){days = "0"+days};
+  //       days = days.toString();
+  //       hours = hours.toString();
+  //       minutes = minutes.toString();
+  //       seconds = seconds.toString();
+  //       html_count+='<div class="days_count"><p class="days">';
+  //       for (var i = 0; i < days.length; i++) {
+  //         html_count += '<span>'+days[i]+'</span>';
+  //       }
+  //       html_count += '</p></div>'+
+  //       '<span class="timer-dots">:</span>';
       
-        html_count+='<div class="hours_count"><p class="hours">';
-        for (var i = 0; i < hours.length; i++) {
-          html_count += '<span>'+hours[i]+'</span>';
-        }
-        html_count+='</p></div>'+
-        '<span class="timer-dots">:</span>'+
-        '<div class="minutes_count"><p class="minutes">';
-        for (var i = 0; i < minutes.length; i++) {
-          html_count += '<span>'+minutes[i]+'</span>';
-        }
-        html_count+='</p></div>'+
-        '<span class="timer-dots">:</span>'+
-        '<div class="sec_count"><p class="sec">';
-        for (var i = 0; i < seconds.length; i++) {
-          html_count += '<span>'+seconds[i]+'</span>';
-        }
-        html_count+='</p></div>';
-    }else{
-        hours = hours.toString();
-        minutes = minutes.toString();
-        seconds = seconds.toString();
-        html_count+='<div class="hours_count"><p class="hours">';
-        for (var i = 0; i < hours.length; i++) {
-          html_count += '<span>'+hours[i]+'</span>';
-        }
-        html_count+='</p></div>'+
-        '<span class="timer-dots">:</span>'+
-        '<div class="minutes_count"><p class="minutes">';
-        for (var i = 0; i < minutes.length; i++) {
-          html_count += '<span>'+minutes[i]+'</span>';
-        }
-        html_count+='</p></div>'+
-        '<span class="timer-dots">:</span>'+
-        '<div class="sec_count"><p class="sec">';
-        for (var i = 0; i < seconds.length; i++) {
-          html_count += '<span>'+seconds[i]+'</span>';
-        }
-        html_count+='</p></div>';
-    }
-    $('.count_down_timer_new').html(html_count);
-  }
+  //       html_count+='<div class="hours_count"><p class="hours">';
+  //       for (var i = 0; i < hours.length; i++) {
+  //         html_count += '<span>'+hours[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>'+
+  //       '<span class="timer-dots">:</span>'+
+  //       '<div class="minutes_count"><p class="minutes">';
+  //       for (var i = 0; i < minutes.length; i++) {
+  //         html_count += '<span>'+minutes[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>'+
+  //       '<span class="timer-dots">:</span>'+
+  //       '<div class="sec_count"><p class="sec">';
+  //       for (var i = 0; i < seconds.length; i++) {
+  //         html_count += '<span>'+seconds[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>';
+  //   }else{
+  //       hours = hours.toString();
+  //       minutes = minutes.toString();
+  //       seconds = seconds.toString();
+  //       html_count+='<div class="hours_count"><p class="hours">';
+  //       for (var i = 0; i < hours.length; i++) {
+  //         html_count += '<span>'+hours[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>'+
+  //       '<span class="timer-dots">:</span>'+
+  //       '<div class="minutes_count"><p class="minutes">';
+  //       for (var i = 0; i < minutes.length; i++) {
+  //         html_count += '<span>'+minutes[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>'+
+  //       '<span class="timer-dots">:</span>'+
+  //       '<div class="sec_count"><p class="sec">';
+  //       for (var i = 0; i < seconds.length; i++) {
+  //         html_count += '<span>'+seconds[i]+'</span>';
+  //       }
+  //       html_count+='</p></div>';
+  //   }
+  //   $('.count_down_timer_new').html(html_count);
+  // }
 
   $(document).on("click",".t4s-mini_cart__items div.free_gift_wrap a",function(event) {
     event.preventDefault();
