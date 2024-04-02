@@ -68,6 +68,10 @@
     "free_product_list": [
 
     ],
+    "timer_text": "Limited-Time Beauty Boost",
+    "count_down_date": "December 27, 2023 18:00",
+    "show_timer_on_home": false,
+    "show_timer_on_cart": false,
     "magic_enable_21": false,
     "magic_link_key_21": "lip-mask",
     "magic_trigger_collection_21": "exclusive-sale",
@@ -138,10 +142,6 @@
     "goBuynowEnable": true,
     "buynow-titile": "BUY NOW",
     "btnBClr": "#000000",
-    "timer_text": "Limited-Time Beauty Boost",
-    "count_down_date": "December 27, 2023 18:00",
-    "show_timer_on_home": false,
-    "show_timer_on_cart": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/Logo-Black-01.png",
     "checkout_logo_position": "center",
     "checkout_accent_color": "#e85a28",

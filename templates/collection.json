@@ -2,12 +2,7 @@
   "sections": {
     "timer_QgwT4a": {
       "type": "timer",
-      "disabled": true,
       "settings": {
-        "timer_text": "",
-        "count_down_date": "April 03, 2024 18:00",
-        "show_timer_on_home": true,
-        "show_timer_on_cart": true
       }
     },
     "8a75fd64-3ace-4ae7-8966-dfa4df542871": {
