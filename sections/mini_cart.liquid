@@ -456,6 +456,13 @@
          </div>
          <div class="t4s-drawer__bottom">
             <div id="custom-cart-value" data-cart-discounts>
+
+            {% if cart.items_subtotal_price > 69900 %}
+              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX15</b> at next step to avail the Offer.</p></div>
+            {% else %}
+              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
+            {% endif %}
+              
             {% comment %}
               {%- if cart.cart_level_discount_applications != blank -%}
                  <ul class="t4s-cart_discounts">
@@ -463,11 +470,7 @@
                  </ul>
               {%- endif -%}
             
-            {% if cart.items_subtotal_price > 69900 %}
-              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW20</b> at next step to avail the Offer.</p></div>
-            {% else %}
-              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>20% off</strong></p></div>
-            {% endif %}
+            
             
 
             {% if cart.items_subtotal_price > 69900 %}
@@ -493,7 +496,7 @@
 
             {% assign total_cart_prod = cart.item_count | minus : gift_product_total %}
             
-            
+            {% comment %}
               {% if total_cart_prod > 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW1099</b> at next step to avail the Offer.</p></div>
               {% elsif total_cart_prod == 1 %}
@@ -501,7 +504,7 @@
               {% elsif total_cart_prod == 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to avail <strong>Buy3@1099 + Candle</strong></p></div>
               {% endif %}
-  {% comment %}
+  
               {% if total_cart_prod > 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code <b>VDAY1099</b> at next step.</p></div>
               {% elsif total_cart_prod == 1 %}
