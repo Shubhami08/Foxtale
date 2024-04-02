@@ -749,7 +749,7 @@
         "single-double": true,
         "acne-control": true,
         "anti-ageing": true,
-        "affiliate-secret-sale": true,
+        "affiliate-secret-sale": false,
         "best-selling": false,
         "bestselling-combos": false,
         "cleanser-routines": false,
