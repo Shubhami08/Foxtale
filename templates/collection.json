@@ -407,6 +407,14 @@
             "collection_handle": "gpay-free-eye-mask"
           }
         },
+        "image_Fjzxj9": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_12.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_14_b6191aa6-dfa2-4023-b337-8eb56ee30b9a.jpg",
+            "collection_handle": "frontpage"
+          }
+        },
         "image_HmryPz": {
           "type": "image",
           "disabled": true,
@@ -433,6 +441,7 @@
         "image_bY63Te",
         "image_MzVJCd",
         "image_mDrPfz",
+        "image_Fjzxj9",
         "image_HmryPz",
         "image_6xYcN7"
       ],
