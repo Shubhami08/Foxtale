@@ -1034,6 +1034,18 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        @media screen (max-width: 425px) {
+       {% if collection.url contains 'frontpage'%}
+          .widget-title span:after {
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "Golden Summer Glow Essentials";
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 36px;
+          }
+       {%endif%}
        {% if collection.url contains 'serums' %}
          .collection-tabbing-heading:after {
            font-size: 20px;
@@ -1169,6 +1181,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
                font-size: 9px !important;
            }
          {%endif%}
+         
        }
 
        @media screen and (min-width: 320px) and (max-width: 767px) {
