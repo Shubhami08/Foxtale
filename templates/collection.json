@@ -237,8 +237,10 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Glow_Summer_web_banner_with_Vip_Access_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_BANNER-01_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Glow_Summer_web_banner_with_Vip_Access_2.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_BANNER-01_2.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Summer_Routine_web.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Routine_banner_mobile.jpg",
             "collection_handle": "frontpage"
           }
         },
