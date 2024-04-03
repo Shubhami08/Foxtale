@@ -179,7 +179,7 @@
         {% endif %}
        </div>
     </div>
-      <div class="t4s-mini_cart__actions {% if item.original_price > 0 and item.final_price == 0 %}need-show{% endif %}" >
+      <div class="t4s-mini_cart__actions {% if item.original_price > 0 and item.final_price == 0 %}need_show{% endif %}" >
         {%- if cart_ajax_enable -%}
         <div data-quantity-wrapper class="t4s-quantity-wrapper t4s-quantity-cart-item" data-qty-item="{{ item_pr.title }}"> 
           <button {% if item.final_price == 0 %} disabled style="color:gray !important;"{% endif %} data-quantity-selector data-decrease-qty type="button" class="t4s-quantity-selector is--minus">{% if item_qty > 1 or min_qty == 1 %}
