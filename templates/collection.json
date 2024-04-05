@@ -418,6 +418,12 @@
             "collection_handle": "frontpage"
           }
         },
+        "image_Xxdnpj": {
+          "type": "image",
+          "settings": {
+            "collection_handle": ""
+          }
+        },
         "image_HmryPz": {
           "type": "image",
           "disabled": true,
@@ -445,6 +451,7 @@
         "image_MzVJCd",
         "image_mDrPfz",
         "image_Fjzxj9",
+        "image_Xxdnpj",
         "image_HmryPz",
         "image_6xYcN7"
       ],
