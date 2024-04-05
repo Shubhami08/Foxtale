@@ -893,19 +893,21 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-         {% if collection.url contains 'new-exclusive-special' %}
+       {% if collection.url contains 'new-exclusive-special' %}
          .widget-title span {
            visibility: hidden;
            position: relative;
            width: 100%;
          }
          .widget-title span:after {
-          font-size: 17px;
            visibility: visible;
            position: absolute;
            top: 0;
            left: 0;
-           content: "Most-loved by Front Foxers";
+           content: "Golden Summer Glow Essentials";
+           font-size: 24px;
+           font-weight: 500;
+           line-height: 36px;
          }
        {%endif%}
 
@@ -1039,6 +1041,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
        @media (max-width: 425px) {
        {% if collection.url contains 'frontpage'%}
+         .widget-title span:after {
+           font-size: 18px !important;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'new-exclusive-special' %}
          .widget-title span:after {
            font-size: 18px !important;
          }
