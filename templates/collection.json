@@ -129,6 +129,14 @@
             "collection_handle": "affiliate-early-access"
           }
         },
+        "image_HHVRJP": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-01.jpg",
+            "collection_handle": "flat-200-off-phonepe"
+          }
+        },
         "image_AGT3Fx": {
           "type": "image",
           "settings": {
@@ -258,8 +266,8 @@
         "e4200243-e18e-45ee-a588-07aa2db63a66": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WEB_BANNER_FOX10.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/FOX10_MOBILE.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Hydrating_Eye_mask_web.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Eye_mask-_Mobile-02.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
@@ -302,14 +310,6 @@
             "image_1_mobile": "shopify:\/\/shop_images\/Mobile_10.jpg",
             "collection_handle": "secret-party"
           }
-        },
-        "image_HHVRJP": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-01.jpg",
-            "collection_handle": "flat-200-off-phonepe"
-          }
         }
       },
       "block_order": [
@@ -325,6 +325,7 @@
         "a6f55990-39a5-4ae9-957d-ba08788864d2",
         "image_rUk9y3",
         "387e416d-e96a-42bf-b73f-10452683ddf3",
+        "image_HHVRJP",
         "image_AGT3Fx",
         "5957fc45-38e1-4660-b466-c79aa595062a",
         "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
@@ -346,8 +347,7 @@
         "1ed0757d-1e6a-4d93-86b6-96a3aaeee593",
         "35952e72-8bd4-4162-8485-8e4d3072771e",
         "image_DcEBMA",
-        "image_hHzUFn",
-        "image_HHVRJP"
+        "image_hHzUFn"
       ],
       "settings": {
         "slider_height_mobile": "100%"
