@@ -443,6 +443,14 @@
             "image_mobile": "shopify:\/\/shop_images\/MOBILE_1_2.jpg",
             "collection_handle": "affiliate-early-access"
           }
+        },
+        "image_6nNydB": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_sleek_banner_Web_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_sleek_banner_Web_1.jpg",
+            "collection_handle": "midnight-sale"
+          }
         }
       },
       "block_order": [
@@ -455,7 +463,8 @@
         "image_Fjzxj9",
         "image_Xxdnpj",
         "image_HmryPz",
-        "image_6xYcN7"
+        "image_6xYcN7",
+        "image_6nNydB"
       ],
       "settings": {
       }
