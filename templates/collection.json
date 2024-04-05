@@ -240,8 +240,6 @@
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-04.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2-B3-March2024-Collection-03.jpg",
             "collection_handle": "midnight-sale"
           }
         },
