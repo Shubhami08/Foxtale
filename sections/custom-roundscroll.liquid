@@ -223,8 +223,8 @@
       margin: 0 auto;
     }
     .newshop-roundmobile img {
-      width: 65px;
-      height: 65px;
+      width: 70px;
+      height: 70px;
     }
   }
 </style>
@@ -349,9 +349,9 @@
       // Check if the user is using an iPhone
       if (userAgent.match(/iPhone/i)) {
           console.log('User is using an iPhone');
-          var for_tab_1 = 25;
+          var for_tab_1 = -20;
           var for_tab_first_time = 0;
-          var for_tab_click = 20;
+          var for_tab_click = -30;
       }else{
           var for_tab_1 = 0;
           var for_tab_first_time = -30;
@@ -436,7 +436,11 @@
 
     if($(window).scrollTop() > elementPosition.top){
           $('#navigation').css('position','fixed').css('top','0').css('z-index','3').addClass("scetion_fixed");
-          $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight());
+      if($(window).width() < 767){
+          $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight() + 20);
+      }else{
+        $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight());
+      }
     } else {
         $('#navigation').css('position','static').removeClass("scetion_fixed");
         $('.newshop-wrap #tab_1').css('margin-top',0);
