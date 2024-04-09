@@ -451,6 +451,14 @@
             "image_mobile": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_Sleek_banner_mobile_1.jpg",
             "collection_handle": "midnight-sale"
           }
+        },
+        "image_Xj7QAV": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Sunglasses_SLEEK_BANNER_web.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Sunglasses_SLEEK_BANNER_mobile.jpg",
+            "collection_handle": "exclusive-sale"
+          }
         }
       },
       "block_order": [
@@ -464,7 +472,8 @@
         "image_Xxdnpj",
         "image_HmryPz",
         "image_6xYcN7",
-        "image_6nNydB"
+        "image_6nNydB",
+        "image_Xj7QAV"
       ],
       "settings": {
       }
