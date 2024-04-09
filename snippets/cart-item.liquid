@@ -179,6 +179,7 @@
         {% endif %}
        </div>
     </div>
+      {% unless item.original_price == 0 and item.final_price == 0 %}
       <div class="t4s-mini_cart__actions {% if item.original_price > 0 and item.final_price == 0 %}need_show{% endif %}" >
         {%- if cart_ajax_enable -%}
         <div data-quantity-wrapper class="t4s-quantity-wrapper t4s-quantity-cart-item" data-qty-item="{{ item_pr.title }}"> 
@@ -195,6 +196,7 @@
         </div>
         {%- endif -%}
      </div>
+  {% endunless %}
  </div>
    <script>
      $(document).ready(function () {
