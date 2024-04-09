@@ -528,12 +528,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
       {{ content_for_header }}
       <footer id="t4s-footer">
+        {% comment %}
         {%- section 'footer_top' -%}
         {%- section 'footer_bot' -%}
-        {% comment %}
-          {%- section 'footer' -%}
-          {%- section 'bottom-bar' -%}
         {% endcomment %}
+        {%- section 'footer' -%}
+        {%- section 'bottom-bar' -%}
       </footer>
     </div>
 
