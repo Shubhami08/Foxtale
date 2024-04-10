@@ -1,1 +1,530 @@
-{"sections":{"7b83345a-3fd0-4c32-a0a1-eb800e29bcaf":{"type":"featured_collection_owl","disabled":true,"settings":{"title":"Featured Products","sub_title":"","sub_font":"1","btn_title":"See all products","style_title":"title_custom","ic_tt":"gem","show_clpr":false,"collection":"best-selling-combos","limit":8,"space":20,"use_pagination":"view-all","btn_rd":true,"btn_icon":false,"btn_style":"default","col_pr":"3","col_pr_tb":"6","col_pr_mb":"6","pr_des":"3","show_vendor":false,"use_cdt":false,"round_cd":false,"cdt_des":"1","loop":true,"au_time":0,"au_hover":true,"button":true,"btn_vi":"1","btn_owl":"1","btn_color":"0","dot":true,"dot_owl":"1","dot_color":"1","use_eq_height":false,"image_ratio":"ratio_nt","image_size":"nt_cover","image_position":"8","hidden":false,"cp_code":false,"layout":"wrap","cl_bg":"","mg":"40px,35px,","pd":",60px,20px,60px","mg_mb":"25px","pd_mb":",,25px,"}},"top":{"type":"top-collections","blocks":{"69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67":{"type":"cat","settings":{"collection":"default-3","icon":""}},"863873b6-012e-4a34-90e3-eead750fa3ce":{"type":"cat","settings":{"collection":"bag","icon":""}},"fc07bff9-6d08-423c-8802-9a03c34f3a31":{"type":"cat","settings":{"collection":"decor","icon":""}},"a286cc0b-0c90-4b1a-862c-a1136f283aac":{"type":"cat","settings":{"collection":"default-2","icon":""}},"23c84729-8fcb-488c-9541-00e283af6afe":{"type":"cat","settings":{"collection":"dress","icon":""}},"5f1d751a-fdac-43d4-ad9d-55da0c297244":{"type":"cat","settings":{"collection":"hats","icon":""}},"0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01":{"type":"cat","settings":{"collection":"frontpage","icon":""}},"70189b51-5562-4924-b642-a1deba7741ee":{"type":"cat","settings":{"collection":"sale","icon":""}},"560f5822-3eeb-4070-a2cd-b5738881a4c1":{"type":"cat","settings":{"collection":"shoes","icon":""}},"be9b8b8f-6cac-47ab-b809-a2fe640a75a7":{"type":"cat","settings":{"collection":"women","icon":""}}},"block_order":["69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67","863873b6-012e-4a34-90e3-eead750fa3ce","fc07bff9-6d08-423c-8802-9a03c34f3a31","a286cc0b-0c90-4b1a-862c-a1136f283aac","23c84729-8fcb-488c-9541-00e283af6afe","5f1d751a-fdac-43d4-ad9d-55da0c297244","0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01","70189b51-5562-4924-b642-a1deba7741ee","560f5822-3eeb-4070-a2cd-b5738881a4c1","be9b8b8f-6cac-47ab-b809-a2fe640a75a7"],"disabled":true,"settings":{"show_top_collections":true,"source":"1","menu":"main-menu","sort_collections":"alphabetical_reversed","box_border":"top","content_align":"center","hidden_mobile":false,"space_item":30,"fontf":"inherit","text_cl":"#222222","text_cl_hover":"#56cfe1","text_fs":14,"text_lh":45,"text_fw":400,"text_ls":0,"font_italic":false,"nav_btn":true,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":"","pd":"","mg_mb":"","pd_mb":""}},"heading_template":{"type":"heading-template","blocks":{"a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9":{"type":"1","settings":{"heading":"Page Heading","fontf":"inherit","text_cl":"#ffffff","text_fs":20,"text_lh":0,"text_fw":400,"text_ls":0,"font_italic":false,"font_uppercase":false,"text_shadow":false,"text_mgb":20,"hidden_mobile":false,"text_fs_mb":20,"text_lh_mb":0,"text_ls_mb":0,"text_mgb_mobile":20}},"e9f249a0-0a0f-4baf-9664-73babbd7bbe7":{"type":"4","settings":{"design_des":"show_all","length":60,"view_more":true,"viewm_txt":"View more","fontf":"inherit","text_cl":"#ffffff","text_fs":16,"text_lh":24,"text_fw":400,"text_ls":0,"font_italic":false,"font_uppercase":false,"text_shadow":false,"text_mgb":20,"hidden_mobile":false,"text_fs_mb":16,"text_lh_mb":0,"text_ls_mb":0,"text_mgb_mobile":10}}},"block_order":["a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9","e9f249a0-0a0f-4baf-9664-73babbd7bbe7"],"disabled":true,"settings":{"use_specify_image":false,"parallax":true,"color":"#000000","overlay":54,"padding":100,"paddingmb":50,"mg_b":0,"mg_bmb":0,"content_align":"t4s-text-center","bg_pos":"left center","bg_repeat":"inherit","bg_size":"cover","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"27dd3952-8a7f-460d-b3ae-ca700cdffd32":{"type":"custom-sliminibanner","disabled":true,"settings":{"txter":"","linkz":"","imageselect":"shopify:\/\/shop_images\/Event_Banner_Home_page_Mobile_copy_3.jpg","txtersml":"","imageselectsml":"shopify:\/\/shop_images\/AM_to_PM_Sale_desktop_banner_copy_8_1_fdf9ca40-797a-49f9-ae01-2c9c54cd2ee8.jpg"}},"168067683513ea2f90":{"type":"apps","disabled":true,"settings":{}},"sidebar":{"type":"sidebar-collection","blocks":{"221aa22f-5c6c-40c9-9403-6d3cd2c23e93":{"type":"filter","settings":{}}},"block_order":["221aa22f-5c6c-40c9-9403-6d3cd2c23e93"],"settings":{"enable_drawer":false,"space":50,"size":"medium","br_style":"none","brcolor":"#222222","sidebar_bdr":0,"sidebar_pd":15}},"main":{"type":"main-collection","blocks":{"filter_id":{"type":"filter","disabled":true,"settings":{"style_filters":"sidebar"}},"740319a4-8e19-4c70-b8a9-ada7cf235cbc":{"type":"layout","disabled":true,"settings":{}},"30594d23-d644-4653-9545-9ff769d2e6ab":{"type":"sortby","settings":{}}},"block_order":["filter_id","740319a4-8e19-4c70-b8a9-ada7cf235cbc","30594d23-d644-4653-9545-9ff769d2e6ab"],"settings":{"single-double":true,"acne-control":true,"anti-ageing":true,"affiliate-secret-sale":true,"best-selling":false,"bestselling-combos":false,"cleanser-routines":false,"exclusive-sale":false,"glow":true,"glow-routine":false,"glow-routine-with-OGM":false,"group-products":false,"hydration":true,"hyperpigmentation":true,"hyperpigmentation-routine":false,"intense-hydration-routine":false,"new-launches":true,"products":false,"routines":false,"shop":true,"special-sale":false,"summer-must-have":false,"summer-special":false,"winter-special":false,"early-access":true,"shop-1":false,"show_desc":true,"position_desc":"1","product_des":"1","show_vendor":false,"use_cdt":true,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"center","limit":50,"enable_listing":true,"enable_listing_default":false,"col_dk":"3","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","use_pagination":"infinite","enable_bar_lm":true,"btn_icon":false,"button_style":"outline","btns_size":"large","btns_cl":"primary","button_effect":"sweep-to-right","btn_pos":"t4s-text-center","type_filters":"facets_tags","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_mb":",,30px,","pd_mb":""}},"6b74da85-3b73-4c32-ad47-62ea04675904":{"type":"slideshow-collection","blocks":{"896ab793-fd74-47fd-999e-0520b9c09b47":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/DESKTOP_18.jpg","image_1_mobile":"shopify:\/\/shop_images\/MOBILE_20.jpg","collection_handle":"shop-1"}},"image_UibMeG":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/DESKTOP_18.jpg","image_1_mobile":"shopify:\/\/shop_images\/MOBILE_20.jpg","collection_handle":"shop-2"}},"cd98f790-df57-40d4-8b04-7e959afda723":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg","image_1_mobile":"shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg","collection_handle":"google-pay-b2g2-1"}},"1aa2a5f0-e416-4022-a189-f89b7e1237fb":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg","image_1_mobile":"shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg","collection_handle":"buy-1-get-1-free-gpay-1"}},"5a5e4eaf-e7bf-431c-b02d-534132ded685":{"type":"image","settings":{"collection_handle":"flat-400-off-gpay"}},"bcf56be1-ad2a-4624-b6ea-95f1504c5199":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/Desktop_1.jpg","image_1_mobile":"shopify:\/\/shop_images\/Mobile_1.jpg","image_2_desktop":"shopify:\/\/shop_images\/Desktop-_2.jpg","image_2_mobile":"shopify:\/\/shop_images\/Mobile_2.jpg","collection_handle":"new-frontpage"}},"3e054972-6a13-4eda-9144-1cacc230d754":{"type":"image","settings":{"collection_handle":"flat-200-off-gpay"}},"040dca29-acdb-4004-909b-5fe9000b3f52":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png","image_1_mobile":"shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png","collection_handle":"paytm-flat-200"}},"image_N3EabB":{"type":"image","settings":{"image_1_desktop":"shopify:\/\/shop_images\/B2G2-_Master-11_1.jpg","image_1_mobile":"shopify:\/\/shop_images\/B2G2-_Master-09_1.jpg","collection_handle":"offer-b2g2"}}},"block_order":["896ab793-fd74-47fd-999e-0520b9c09b47","image_UibMeG","cd98f790-df57-40d4-8b04-7e959afda723","1aa2a5f0-e416-4022-a189-f89b7e1237fb","5a5e4eaf-e7bf-431c-b02d-534132ded685","bcf56be1-ad2a-4624-b6ea-95f1504c5199","3e054972-6a13-4eda-9144-1cacc230d754","040dca29-acdb-4004-909b-5fe9000b3f52","image_N3EabB"],"settings":{"slider_height_mobile":"100%"}},"c91beaae-dd54-4644-bf80-185c464fd99c":{"type":"custom-roundscroll","blocks":{"41032556-7266-498e-8778-32e63d300c6d":{"type":"text","settings":{"collekt":"tb-serums-and-treatments","txter":"Serums","mdlpik":"shopify:\/\/shop_images\/Untitled-2-01_1.jpg","smlpik":"shopify:\/\/shop_images\/Untitled-2-01_1.jpg","grid-heading":"Serums and Treatments","grid-subheading":"Targeted solutions for all skin concerns"}},"2c6bc074-5f62-4c76-97a2-a37b159012b2":{"type":"text","settings":{"collekt":"serums-and-treatments","txter":"Moisturizers","mdlpik":"shopify:\/\/shop_images\/Untitled-2-02_1.jpg","smlpik":"shopify:\/\/shop_images\/Untitled-2-02_1.jpg","grid-heading":"Moisturisers","grid-subheading":"Protected skin barrier & a boost of hydration"}},"fef43bcb-d73b-4c7f-8f0d-082414be522a":{"type":"text","settings":{"collekt":"facewash-cleanser","txter":"Cleansers","mdlpik":"shopify:\/\/shop_images\/Untitled-2-03_1.jpg","smlpik":"shopify:\/\/shop_images\/Untitled-2-03_1.jpg","grid-heading":"Facewash & Cleansers","grid-subheading":"Gets rid of dirt, grime, and excess oil build-up"}},"e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96":{"type":"text","settings":{"collekt":"tb-sunscreens","txter":"Sunscreens","mdlpik":"shopify:\/\/shop_images\/Untitled-2-04_1.jpg","smlpik":"shopify:\/\/shop_images\/Untitled-2-04_1.jpg","grid-heading":"Sunscreens","grid-subheading":"Ultimate protection from UVA & UVB rays"}}},"block_order":["41032556-7266-498e-8778-32e63d300c6d","2c6bc074-5f62-4c76-97a2-a37b159012b2","fef43bcb-d73b-4c7f-8f0d-082414be522a","e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96"],"settings":{"heading":""}}},"order":["7b83345a-3fd0-4c32-a0a1-eb800e29bcaf","top","heading_template","27dd3952-8a7f-460d-b3ae-ca700cdffd32","168067683513ea2f90","sidebar","main","6b74da85-3b73-4c32-ad47-62ea04675904","c91beaae-dd54-4644-bf80-185c464fd99c"]}
+{
+  "sections": {
+    "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf": {
+      "type": "featured_collection_owl",
+      "disabled": true,
+      "settings": {
+        "title": "Featured Products",
+        "sub_title": "",
+        "sub_font": "1",
+        "btn_title": "See all products",
+        "style_title": "title_custom",
+        "ic_tt": "gem",
+        "show_clpr": false,
+        "collection": "best-selling-combos",
+        "limit": 8,
+        "space": 20,
+        "use_pagination": "view-all",
+        "btn_rd": true,
+        "btn_icon": false,
+        "btn_style": "default",
+        "col_pr": "3",
+        "col_pr_tb": "6",
+        "col_pr_mb": "6",
+        "pr_des": "3",
+        "show_vendor": false,
+        "use_cdt": false,
+        "round_cd": false,
+        "cdt_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "button": true,
+        "btn_vi": "1",
+        "btn_owl": "1",
+        "btn_color": "0",
+        "dot": true,
+        "dot_owl": "1",
+        "dot_color": "1",
+        "use_eq_height": false,
+        "image_ratio": "ratio_nt",
+        "image_size": "nt_cover",
+        "image_position": "8",
+        "hidden": false,
+        "cp_code": false,
+        "layout": "wrap",
+        "cl_bg": "",
+        "mg": "40px,35px,",
+        "pd": ",60px,20px,60px",
+        "mg_mb": "25px",
+        "pd_mb": ",,25px,"
+      }
+    },
+    "top": {
+      "type": "top-collections",
+      "blocks": {
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-3",
+            "icon": ""
+          }
+        },
+        "863873b6-012e-4a34-90e3-eead750fa3ce": {
+          "type": "cat",
+          "settings": {
+            "collection": "bag",
+            "icon": ""
+          }
+        },
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31": {
+          "type": "cat",
+          "settings": {
+            "collection": "decor",
+            "icon": ""
+          }
+        },
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-2",
+            "icon": ""
+          }
+        },
+        "23c84729-8fcb-488c-9541-00e283af6afe": {
+          "type": "cat",
+          "settings": {
+            "collection": "dress",
+            "icon": ""
+          }
+        },
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244": {
+          "type": "cat",
+          "settings": {
+            "collection": "hats",
+            "icon": ""
+          }
+        },
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01": {
+          "type": "cat",
+          "settings": {
+            "collection": "frontpage",
+            "icon": ""
+          }
+        },
+        "70189b51-5562-4924-b642-a1deba7741ee": {
+          "type": "cat",
+          "settings": {
+            "collection": "sale",
+            "icon": ""
+          }
+        },
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1": {
+          "type": "cat",
+          "settings": {
+            "collection": "shoes",
+            "icon": ""
+          }
+        },
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7": {
+          "type": "cat",
+          "settings": {
+            "collection": "women",
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67",
+        "863873b6-012e-4a34-90e3-eead750fa3ce",
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31",
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac",
+        "23c84729-8fcb-488c-9541-00e283af6afe",
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244",
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01",
+        "70189b51-5562-4924-b642-a1deba7741ee",
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1",
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_top_collections": true,
+        "source": "1",
+        "menu": "main-menu",
+        "sort_collections": "alphabetical_reversed",
+        "box_border": "top",
+        "content_align": "center",
+        "hidden_mobile": false,
+        "space_item": 30,
+        "fontf": "inherit",
+        "text_cl": "#222222",
+        "text_cl_hover": "#56cfe1",
+        "text_fs": 14,
+        "text_lh": 45,
+        "text_fw": 400,
+        "text_ls": 0,
+        "font_italic": false,
+        "nav_btn": true,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "heading_template": {
+      "type": "heading-template",
+      "blocks": {
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9": {
+          "type": "1",
+          "settings": {
+            "heading": "Page Heading",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7": {
+          "type": "4",
+          "settings": {
+            "design_des": "show_all",
+            "length": 60,
+            "view_more": true,
+            "viewm_txt": "View more",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9",
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_specify_image": false,
+        "parallax": true,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 0,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-center",
+        "bg_pos": "left center",
+        "bg_repeat": "inherit",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "27dd3952-8a7f-460d-b3ae-ca700cdffd32": {
+      "type": "custom-sliminibanner",
+      "disabled": true,
+      "settings": {
+        "txter": "",
+        "linkz": "",
+        "imageselect": "shopify:\/\/shop_images\/Event_Banner_Home_page_Mobile_copy_3.jpg",
+        "txtersml": "",
+        "imageselectsml": "shopify:\/\/shop_images\/AM_to_PM_Sale_desktop_banner_copy_8_1_fdf9ca40-797a-49f9-ae01-2c9c54cd2ee8.jpg"
+      }
+    },
+    "168067683513ea2f90": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-collection",
+      "blocks": {
+        "221aa22f-5c6c-40c9-9403-6d3cd2c23e93": {
+          "type": "filter",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "221aa22f-5c6c-40c9-9403-6d3cd2c23e93"
+      ],
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 0,
+        "sidebar_pd": 15
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filter_id": {
+          "type": "filter",
+          "disabled": true,
+          "settings": {
+            "style_filters": "sidebar"
+          }
+        },
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc": {
+          "type": "layout",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "30594d23-d644-4653-9545-9ff769d2e6ab": {
+          "type": "sortby",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "filter_id",
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc",
+        "30594d23-d644-4653-9545-9ff769d2e6ab"
+      ],
+      "settings": {
+        "single-double": true,
+        "acne-control": true,
+        "anti-ageing": true,
+        "affiliate-secret-sale": true,
+        "best-selling": false,
+        "bestselling-combos": false,
+        "cleanser-routines": false,
+        "exclusive-sale": false,
+        "glow": true,
+        "glow-routine": false,
+        "glow-routine-with-OGM": false,
+        "group-products": false,
+        "hydration": true,
+        "hyperpigmentation": true,
+        "hyperpigmentation-routine": false,
+        "intense-hydration-routine": false,
+        "new-launches": true,
+        "products": false,
+        "routines": false,
+        "shop": true,
+        "special-sale": false,
+        "summer-must-have": false,
+        "summer-special": false,
+        "winter-special": false,
+        "early-access": true,
+        "shop-1": false,
+        "show_desc": true,
+        "position_desc": "1",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": true,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 50,
+        "enable_listing": true,
+        "enable_listing_default": false,
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "use_pagination": "infinite",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "outline",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "sweep-to-right",
+        "btn_pos": "t4s-text-center",
+        "type_filters": "facets_tags",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "6b74da85-3b73-4c32-ad47-62ea04675904": {
+      "type": "slideshow-collection",
+      "blocks": {
+        "896ab793-fd74-47fd-999e-0520b9c09b47": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_18.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_20.jpg",
+            "collection_handle": "shop-1"
+          }
+        },
+        "image_UibMeG": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_18.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_20.jpg",
+            "collection_handle": "shop-2"
+          }
+        },
+        "cd98f790-df57-40d4-8b04-7e959afda723": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
+            "collection_handle": "google-pay-b2g2-1"
+          }
+        },
+        "1aa2a5f0-e416-4022-a189-f89b7e1237fb": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg",
+            "collection_handle": "buy-1-get-1-free-gpay-1"
+          }
+        },
+        "5a5e4eaf-e7bf-431c-b02d-534132ded685": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flat-400-off-gpay"
+          }
+        },
+        "bcf56be1-ad2a-4624-b6ea-95f1504c5199": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_1.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Desktop-_2.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Mobile_2.jpg",
+            "collection_handle": "new-frontpage"
+          }
+        },
+        "3e054972-6a13-4eda-9144-1cacc230d754": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_21.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_23.jpg",
+            "collection_handle": "flat-200-off-gpay"
+          }
+        },
+        "040dca29-acdb-4004-909b-5fe9000b3f52": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png",
+            "collection_handle": "paytm-flat-200"
+          }
+        },
+        "image_N3EabB": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-_Master-11_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2G2-_Master-09_1.jpg",
+            "collection_handle": "offer-b2g2"
+          }
+        }
+      },
+      "block_order": [
+        "896ab793-fd74-47fd-999e-0520b9c09b47",
+        "image_UibMeG",
+        "cd98f790-df57-40d4-8b04-7e959afda723",
+        "1aa2a5f0-e416-4022-a189-f89b7e1237fb",
+        "5a5e4eaf-e7bf-431c-b02d-534132ded685",
+        "bcf56be1-ad2a-4624-b6ea-95f1504c5199",
+        "3e054972-6a13-4eda-9144-1cacc230d754",
+        "040dca29-acdb-4004-909b-5fe9000b3f52",
+        "image_N3EabB"
+      ],
+      "settings": {
+        "slider_height_mobile": "100%"
+      }
+    },
+    "c91beaae-dd54-4644-bf80-185c464fd99c": {
+      "type": "custom-roundscroll",
+      "blocks": {
+        "41032556-7266-498e-8778-32e63d300c6d": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-serums-and-treatments",
+            "txter": "Serums",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
+            "grid-heading": "Serums and Treatments",
+            "grid-subheading": "Targeted solutions for all skin concerns"
+          }
+        },
+        "2c6bc074-5f62-4c76-97a2-a37b159012b2": {
+          "type": "text",
+          "settings": {
+            "collekt": "serums-and-treatments",
+            "txter": "Moisturizers",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-02_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-02_1.jpg",
+            "grid-heading": "Moisturisers",
+            "grid-subheading": "Protected skin barrier & a boost of hydration"
+          }
+        },
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a": {
+          "type": "text",
+          "settings": {
+            "collekt": "facewash-cleanser",
+            "txter": "Cleansers",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
+            "grid-heading": "Facewash & Cleansers",
+            "grid-subheading": "Gets rid of dirt, grime, and excess oil build-up"
+          }
+        },
+        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-sunscreens",
+            "txter": "Sunscreens",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-04_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-04_1.jpg",
+            "grid-heading": "Sunscreens",
+            "grid-subheading": "Ultimate protection from UVA & UVB rays"
+          }
+        }
+      },
+      "block_order": [
+        "41032556-7266-498e-8778-32e63d300c6d",
+        "2c6bc074-5f62-4c76-97a2-a37b159012b2",
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a",
+        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf",
+    "top",
+    "heading_template",
+    "27dd3952-8a7f-460d-b3ae-ca700cdffd32",
+    "168067683513ea2f90",
+    "sidebar",
+    "main",
+    "6b74da85-3b73-4c32-ad47-62ea04675904",
+    "c91beaae-dd54-4644-bf80-185c464fd99c"
+  ]
+}
