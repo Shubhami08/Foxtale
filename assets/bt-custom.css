@@ -228,4 +228,9 @@
   .template-product section#shopify-section-bottom-bar {
     margin-bottom: 72px;
   }
+  .shop-tag, .shop-tag1, .shop-tag2, .shop-tag3 {
+    font-size: 11px !important;
+    padding: 0px 6px !important;
+    border-radius: 3px !important;
+  }
 }
