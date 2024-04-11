@@ -54,6 +54,13 @@
   }
   .blink_me { animation: blinker 1.5s linear infinite; }
 </style>
+{% if collection.title == "New-Shop" %}
+     {% if product.metafields.custom.product_tag != blank %}
+       <span class="shop1tag">
+         {{ product.metafields.custom.product_tag }}
+       </span>
+     {% endif %}
+{% endif %}
 <span class="tc nt_labels pa pe_none cw">
 {% if collection.title == "Secret Sale" %}
      {% if product.metafields.custom.product_label_tag != blank %}
