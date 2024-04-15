@@ -12,18 +12,16 @@
         "e5af2eb1-1336-41cb-81ad-7ba495fafa1b": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_18.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_20.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/FOX_10-03_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/FOX_10-04_1.jpg",
             "collection_handle": "products"
           }
         },
         "f9965015-912a-4ab1-a6b9-60456f64c9c9": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_18.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_20.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/FOX_10-03_1.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/FOX_10-04_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/FOX_10-03_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/FOX_10-04_1.jpg",
             "collection_handle": "shop"
           }
         },
