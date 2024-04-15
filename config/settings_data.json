@@ -374,6 +374,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>Buy 2 Get 3 Free <\/strong>[Code:<strong> B2G3<\/strong>]<\/p>",
