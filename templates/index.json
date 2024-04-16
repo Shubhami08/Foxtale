@@ -5,6 +5,7 @@
       "blocks": {
         "65500d1b-7a9b-4077-85dd-8287413d749c": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_17.jpg",
             "image_mb": "shopify:\/\/shop_images\/MOBILE_19.jpg",
@@ -422,59 +423,18 @@
         "pr_des": "1"
       }
     },
-    "a2bbc261-0ad0-4d83-a4d3-733bb515cc92": {
+    "slideshow_FCKK7z": {
       "type": "slideshow",
       "blocks": {
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1": {
+        "image_parent_LMiWy7": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_16_7519b675-b37a-42a1-884d-1f1f35189c3b.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_18.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_23.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_24.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/products\/multivitamin-toner-mist",
-            "open_link": "_self",
-            "animate_slide": "none",
-            "text_align": "start",
-            "text_align_mb": "center",
-            "content_width": "auto",
-            "cv_pos": 50,
-            "ch_pos": 50,
-            "cv_pos_mb": 50,
-            "ch_pos_mb": 50,
-            "bg_overlay": "#000000",
-            "bg_opacity": 0,
-            "bg_content_cl": "#ffffff",
-            "bg_content_op": 0,
-            "content_radius": 0,
-            "box_square": false,
-            "content_pd_tb": 15,
-            "content_pd_lr": 15,
-            "content_pd_tb_tb": 15,
-            "content_pd_lr_tb": 15,
-            "content_pd_tb_mb": 10,
-            "content_pd_lr_mb": 10,
-            "border_bl": false,
-            "br_color": "#222222",
-            "br_bg": "#ffffff",
-            "br_opacity": 50,
-            "br_style": "solid",
-            "br_pd": 20,
-            "br_pd_mb": 10,
-            "time_animation": 1,
-            "animation_delay": 40
-          }
-        },
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2": {
-          "type": "image_parent",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Desktop_d475d0ed-6fc6-4c67-8674-9f4f14437482.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_8.jpg",
-            "image_position": "8",
-            "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/399-499-store",
-            "open_link": "_self",
+            "link_img1": "shopify:\/\/collections\/shop",
+            "open_link": "_blank",
             "animate_slide": "none",
             "text_align": "start",
             "text_align_mb": "center",
@@ -508,11 +468,10 @@
         }
       },
       "block_order": [
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1",
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2"
+        "image_parent_LMiWy7"
       ],
       "settings": {
-        "se_height": "t4s_ratioadapt_f",
+        "se_height": "t4s_ratioadapt",
         "custom_dk": true,
         "height_dk": 600,
         "custom_tb": true,
@@ -521,11 +480,11 @@
         "height_mb": 250,
         "eff": "slide",
         "loop": true,
-        "au_time": 5,
+        "au_time": 0,
         "au_hover": true,
-        "nav_btn": true,
-        "btn_vi": "always",
-        "btn_owl": "simple",
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
         "btn_shape": "none",
         "btn_cl": "dark",
         "btn_size": "small",
@@ -646,18 +605,59 @@
         "heading": "Shop by concern"
       }
     },
-    "slideshow_FCKK7z": {
+    "a2bbc261-0ad0-4d83-a4d3-733bb515cc92": {
       "type": "slideshow",
       "blocks": {
-        "image_parent_LMiWy7": {
+        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_23.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_24.jpg",
+            "image": "shopify:\/\/shop_images\/Brand_Banners-09.jpg",
+            "image_mb": "shopify:\/\/shop_images\/Brand_Banners-09.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/shop",
-            "open_link": "_blank",
+            "link_img1": "shopify:\/\/collections\/products",
+            "open_link": "_self",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOP_16_7519b675-b37a-42a1-884d-1f1f35189c3b.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_18.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify:\/\/products\/multivitamin-toner-mist",
+            "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
             "text_align_mb": "center",
@@ -691,10 +691,11 @@
         }
       },
       "block_order": [
-        "image_parent_LMiWy7"
+        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2",
+        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1"
       ],
       "settings": {
-        "se_height": "t4s_ratioadapt",
+        "se_height": "t4s_ratioadapt_f",
         "custom_dk": true,
         "height_dk": 600,
         "custom_tb": true,
@@ -703,11 +704,11 @@
         "height_mb": 250,
         "eff": "slide",
         "loop": true,
-        "au_time": 0,
+        "au_time": 5,
         "au_hover": true,
-        "nav_btn": false,
-        "btn_vi": "hover",
-        "btn_owl": "default",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "simple",
         "btn_shape": "none",
         "btn_cl": "dark",
         "btn_size": "small",
@@ -998,10 +999,10 @@
     "b5ec0436-17e3-460f-bf82-7ad78346e191",
     "c27353bc-cb01-4697-85f5-16483f61b689",
     "b309d096-c17b-4b40-8286-c2bed7520ec7",
-    "a2bbc261-0ad0-4d83-a4d3-733bb515cc92",
+    "slideshow_FCKK7z",
     "featured_collection_owl_RimMbr",
     "62796d61-e14a-4262-b754-6e38f68257ec",
-    "slideshow_FCKK7z",
+    "a2bbc261-0ad0-4d83-a4d3-733bb515cc92",
     "5a2273bf-78e7-4cea-befe-35a4b14dcffb",
     "251a86c7-6a99-4273-b40a-5c3d040f0068",
     "1c8a5e2f-875f-4596-85f9-a91e12980562",
