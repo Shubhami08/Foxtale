@@ -182,7 +182,7 @@ endif -%}
                     {% else %}
                   {% assign message = product.price | divided_by: 100 %}
                      {% if message <= 746 %}
-                       <p class="bottom-leftext">B2G3</p>
+                       <p class="bottom-leftext">10% OFF</p>
                      {% else %}
                        <p class="bottom-leftext">10% OFF</p>
                      {% endif %}
@@ -194,7 +194,7 @@ endif -%}
                    {% elsif collection.title == "Affiliate Early Sale" %}
                     <p class="bottom-rightext">Free Toner</p>
                      {% else %}
-                    <p class="bottom-rightext">Free Gift</p>   
+                    <p class="bottom-rightext">Free Eye Mask</p>   
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}
