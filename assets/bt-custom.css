@@ -14901,3 +14901,7 @@ span.shop1tag {
   color: #ff6347 !important;
   font-size: 12px;
 }
+
+.newstickynav-template .t4s-slideshow-inner {
+  border-radius: 4px;
+}
