@@ -3,6 +3,13 @@
     background-color: #e4e4e4;
     padding: 16px 0px 0px 0;
   }
+  .newshop-wrap h3 {
+    font-size: 22px;
+    background-color: transparent;
+    color: #2C2C2C;
+    font-weight: 500;
+    padding: 10px 35px;
+  }
   .newshop-inwrapped {
     margin: 20px 33px;
     border-radius: 4px;
@@ -89,7 +96,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -1px;
+    bottom: -3px;
     border-bottom: 3px solid #000000;
     border-radius: 2px;
   }
@@ -129,7 +136,7 @@
     color: #2c2c2c;
   }
   .active .collectio-name {
-    font-weight: 500;
+    /* font-weight: 500; */
     color: #000000;
   }
   .newshop-rounddesk {
@@ -142,6 +149,11 @@
   @media (max-width: 768px) {
     .newshop-wrap {
       padding: 0px 0px 0px 0;
+    }
+    .newshop-wrap h3 {
+      background-color: #ffffff;
+      font-size: 18px;
+      padding: 0 12px;
     }
     .round-wrapper {
       grid-column-gap: 8px;
@@ -223,13 +235,46 @@
       margin: 0 auto;
     }
     .newshop-roundmobile img {
-      width: 70px;
-      height: 70px;
+      width: 90px;
+      height: 90px;
+    }
+    /* New Changes 17th April */
+    .newshop-wrap h3 {
+      font-size: 18px;
+    }
+    .round-outerwrapper {
+      padding: 15px 0px 6px 0px;
+    }
+    .newstickynav-template .round-wrapper {
+      grid-column-gap: 3px;
+    }
+    .newstickynav-template .collectio-name {
+      font-size: 10px;
+      margin: 0px 0 5px 0;
+    }
+    .newshop-wrap .product-info .product-title {
+      text-overflow: unset;
+      display: flex;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+    }
+    .newshop-wrap .product-info .fx-tags-shop {
+      padding-top: 0px !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .newstickynav-template .collectio-name {
+      font-size: 10px;
+    }
+    .newstickynav-template .round-wrapper {
+      grid-column-gap: 0px;
     }
   }
 </style>
 
 <div class="newshop-wrap">
+  <h3>{{ section.settings.heading }}</h3>
   <div class="round-outerwrapper" id="navigation">
     <div class="round-wrapper">
       {% for block in section.blocks %}
