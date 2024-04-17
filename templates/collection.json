@@ -120,8 +120,8 @@
         "387e416d-e96a-42bf-b73f-10452683ddf3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Primary_DESKTOP_without_code.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Primary_MOBILE_without_code.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_3_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_4_1.jpg",
             "image_2_desktop": "shopify:\/\/shop_images\/Secondary_Summer_Routine_WEB_without_code.jpg",
             "image_2_mobile": "shopify:\/\/shop_images\/Secondary_Routine_banner_MOBILE_without_code.jpg",
             "collection_handle": "affiliate-early-access"
