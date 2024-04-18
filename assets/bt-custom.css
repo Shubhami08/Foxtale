@@ -14923,8 +14923,8 @@ span.shop1tag {
   border-top-right-radius: 3px;
 }
 
-.t4s-article-content p,
-.t4s-article-content ul,
-.t4s-article-content h2 {
+.template-article .t4s-article-content p,
+.template-article .t4s-article-content ul,
+.template-article .t4s-article-content h2 {
   color: black;
 }
