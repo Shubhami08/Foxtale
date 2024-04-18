@@ -14922,3 +14922,9 @@ span.shop1tag {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+.t4s-article-content p,
+.t4s-article-content ul,
+.t4s-article-content h2 {
+  color: black;
+}
