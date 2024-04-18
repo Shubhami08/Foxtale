@@ -61,6 +61,13 @@
        </span>
      {% endif %}
 {% endif %}
+{% if collection.title == "Summer Routines" %}
+     {% if product.metafields.custom.pr_excerpt != blank %}
+       <span class="summertag">
+         {{ product.metafields.custom.pr_excerpt }}
+       </span>
+     {% endif %}
+{% endif %}
 <span class="tc nt_labels pa pe_none cw">
 {% if collection.title == "Secret Sale" %}
      {% if product.metafields.custom.product_label_tag != blank %}
