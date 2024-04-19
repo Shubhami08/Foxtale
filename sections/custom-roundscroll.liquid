@@ -372,6 +372,7 @@
                 href="{{ product.url }}"
                 id="addtocart_r"
                 class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                style="{% if product.id== 8107533369591 %}pointer-events: none{% endif %}"
                 data-variant-id="{{product.first_available_variant.id}}"
                 data-action-atc
                 rel="dofollow"
