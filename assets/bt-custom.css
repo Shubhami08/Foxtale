@@ -14902,6 +14902,12 @@ span.shop1tag {
   font-size: 12px;
 }
 
+.shops-tags {
+  background-color: white;
+  color: #e85a28 !important;
+  font-size: 12px;
+}
+
 .newstickynav-template .t4s-slideshow-inner {
   border-radius: 4px;
 }
