@@ -5,10 +5,9 @@
       "blocks": {
         "65500d1b-7a9b-4077-85dd-8287413d749c": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_17.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_19.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_24.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_25.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
