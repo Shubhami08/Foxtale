@@ -640,6 +640,29 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          min-height:450px;
        }
 
+      {% if page.url contains 'new-launch-sign-up-video' %}
+        .t4s-hero-video .t4s-content-position p {
+          font-size: 45px !important;
+          font-weight: 400 !important;
+          margin-bottom: 30px;
+        }
+        .t4s-hero-video .t4s-content-position .waitlist-btn {
+          background-color: #000 !important;
+          border: 2px solid !important;
+          border-color: #000 !important;
+          color: #fff !important;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding: 8px 30px;
+          font-size: 12px;
+          border-radius: 3px;
+        }
+        .t4s-announcement-bar, #t4s-footer {
+          display: none !important;
+        }
+      {%endif%}
+      
       {% if collection.url contains 'new-frontpage'%}
          .bottom-leftext {
            visibility: hidden;
