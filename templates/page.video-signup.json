@@ -169,7 +169,23 @@
       "block_order": [
         "forms_inline_8xrkTP"
       ],
+      "disabled": true,
       "settings": {
+      }
+    },
+    "custom_html_fxz6Lc": {
+      "type": "custom-html",
+      "settings": {
+        "code": "<div style=\"text-align: center;\"><iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScJsO6BIr5tNh_1alPppcfHwiPb-dT1FC6ruFzqfjNczmtITg\/viewform?embedded=true\" width=\"640\" height=\"936\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe><\/div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
       }
     }
   },
@@ -178,6 +194,7 @@
     "main",
     "sidebar-page",
     "background_video_HqpBV3",
-    "171377677761d7ff58"
+    "171377677761d7ff58",
+    "custom_html_fxz6Lc"
   ]
 }
