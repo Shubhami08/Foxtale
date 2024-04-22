@@ -175,7 +175,7 @@
 {%- endif -%}
 
 <script>
-  $(".waitlist-btn").on('click',function() {
+$(document).on('click', '.waitlist-btn', function(){
     $('html, body').animate({
         'scrollTop' : $("#form-container-ref").position().top
     });
