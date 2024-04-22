@@ -173,6 +173,15 @@
     </span>
   </template>
 {%- endif -%}
+
+<script>
+  $(".video-signup-template .waitlist-btn").on('click',function() {
+    $('html, body').animate({
+        'scrollTop' : $("#form-container-ref").position().top
+    });
+});
+</script>
+                    
 {%- schema -%}
   {
     "name": "Background video",
