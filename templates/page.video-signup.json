@@ -59,33 +59,6 @@
         "sidebar_pd": 10
       }
     },
-    "171377677761d7ff58": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_8xrkTP": {
-          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "99775",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_8xrkTP"
-      ],
-      "settings": {
-      }
-    },
     "background_video_HqpBV3": {
       "type": "background_video",
       "blocks": {
@@ -126,7 +99,7 @@
         "html_z9kjVy"
       ],
       "settings": {
-        "se_height": "t4s_ratio16_9",
+        "se_height": "t4s_ratio_fh",
         "custom_dk": true,
         "height_dk": 600,
         "custom_tb": true,
@@ -136,6 +109,7 @@
         "source": "3",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "file_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0610\/5209\/2628\/files\/Share_your_brand_story_by_adding_a_video_to_your_store.mp4?v=1641630446",
+        "video": "shopify:\/\/files\/videos\/3762910-uhd_3840_2160_25fps.mp4",
         "text_align": "center",
         "text_align_mb": "center",
         "content_width": "auto",
@@ -170,13 +144,40 @@
         "use_cus_css": false,
         "code_cus_css": ""
       }
+    },
+    "171377677761d7ff58": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_8xrkTP": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "99775",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_8xrkTP"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "heading",
     "main",
     "sidebar-page",
-    "171377677761d7ff58",
-    "background_video_HqpBV3"
+    "background_video_HqpBV3",
+    "171377677761d7ff58"
   ]
 }
