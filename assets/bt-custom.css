@@ -13639,7 +13639,7 @@ form#t4s-form-newsletter {
 }
 
 .customGroupProduct-template .two-productscampaign .offer-2-row {
-  display: flex !important;
+  display: none !important;
 }
 
 .trio-frio {
