@@ -1235,6 +1235,11 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            }
          {%endif%}
          
+         {% if page.url contains 'new-launch-sign-up-video' %}
+            .t4s-hero-video .t4s-content-position p {
+              font-size: 25px !important;
+            }
+        {%endif%}
        }
 
        @media screen and (min-width: 320px) and (max-width: 767px) {
