@@ -88,7 +88,7 @@
         "html_z9kjVy": {
           "type": "html",
           "settings": {
-            "html_content": "<a class=\"waitlist-btn\" href=\"\">Join Waitlist<\/a>",
+            "html_content": "<a class=\"waitlist-btn\" href=\"\">Sign up<\/a>",
             "hidden_mobile": false,
             "animation": "none"
           }
