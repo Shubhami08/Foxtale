@@ -14934,3 +14934,9 @@ span.shop1tag {
 .template-article .t4s-article-content h2 {
   color: black;
 }
+
+.t4s-hero-video .t4s-content-position p {
+  font-size: 45px !important;
+  font-weight: 400 !important;
+  margin-bottom: 30px;
+}
