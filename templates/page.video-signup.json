@@ -88,7 +88,7 @@
         "custom_text_VjzQkw": {
           "type": "custom_text",
           "settings": {
-            "text": "Sign up below to be the first to receive an exclusive launch offer",
+            "text": "Sign up below to be the first to receive an <span>exclusive launch offer<\/span>",
             "remove_br_tag": false,
             "tag": "h6",
             "fontf": "inherit",
