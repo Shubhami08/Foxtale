@@ -85,6 +85,29 @@
             "animation": "none"
           }
         },
+        "custom_text_VjzQkw": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Sign up below to be the first to receive an exclusive launch offer",
+            "remove_br_tag": false,
+            "tag": "h6",
+            "fontf": "inherit",
+            "text_cl": "#fff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
         "html_z9kjVy": {
           "type": "html",
           "settings": {
@@ -96,6 +119,7 @@
       },
       "block_order": [
         "custom_text_PC9QnV",
+        "custom_text_VjzQkw",
         "html_z9kjVy"
       ],
       "settings": {
