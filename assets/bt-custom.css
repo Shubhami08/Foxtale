@@ -14870,6 +14870,11 @@ svg.t4s-iconsvg-close {
     padding: 0px 6px !important;
     border-radius: 3px !important;
   }
+  .t4s-hero-video .t4s-content-position h6 {
+    margin-bottom: 30px;
+    font-size: 16px !important;
+    line-height: 25px;
+  }
 }
 
 span.shop1tag {
@@ -14939,4 +14944,9 @@ span.shop1tag {
   font-size: 45px !important;
   font-weight: 400 !important;
   margin-bottom: 30px;
+}
+
+.t4s-hero-video .t4s-content-position h6 {
+  margin-bottom: 30px;
+  font-size: 30px;
 }
