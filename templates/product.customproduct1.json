@@ -195,7 +195,6 @@
         },
         "703ac5e6-e921-4ca8-90d1-881c863f4d2e": {
           "type": "shopify:\/\/apps\/estimated-delivery-date-cp\/blocks\/clickpost-edd\/052d4955-0ec2-4e86-8e1f-f971acb44560",
-          "disabled": true,
           "settings": {
             "heading": "Delivery Details",
             "color": "#263238",
