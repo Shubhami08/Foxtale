@@ -1226,10 +1226,11 @@
                 
                 {%- when '@app' -%} 
                    {% render 'keybenefits' %}
-                   {% render 'offers-custom' %}                
+                                  
                    {% render 'offerz-kustom' %}
                  {%- render block -%}
               {%- endcase -%}
+              {% render 'offers-custom' %}
             {%- endfor -%}
             
           {% comment %}
