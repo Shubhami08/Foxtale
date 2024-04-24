@@ -5276,9 +5276,14 @@ footer .widget .widget-title:after {
   color: #6e6e6e !important;
 }
 
-.template-collection .product-info .t4s-product-price ins,
 .template-search .product-info .t4s-product-price ins {
   color: #000;
+}
+
+.template-collection .product-info .t4s-product-price ins {
+  color: #000;
+  margin-left: 0px;
+  margin-right: 8px;
 }
 
 .template-collection
