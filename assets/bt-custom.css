@@ -7756,7 +7756,7 @@ header .t4s-site-nav__icons .t4s-site-nav__cart .t4s-count-box {
 }
 
 .customproduct1-template .product-tabs-content .product-info span.price {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   font-size: 14.3px !important;
   line-height: 21px;
   text-align: unset;
