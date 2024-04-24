@@ -1226,12 +1226,12 @@
                 
                 {%- when '@app' -%} 
                    {% render 'keybenefits' %}
-                                  
+                   {% render 'offers-custom' %}          
                    {% render 'offerz-kustom' %}
                  {%- render block -%}
               {%- endcase -%}
             {%- endfor -%}
-            {% render 'offers-custom' %} 
+            
           {% comment %}
             {% if se_stts.enable_delivery_time %}
               {% if product.metafields.custom.enable_delivery_time == 'yes' %}
