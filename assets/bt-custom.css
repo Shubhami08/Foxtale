@@ -5190,6 +5190,7 @@ footer .widget .widget-title:after {
 
 .price.dib.mb__5 del {
   font-size: 14px !important;
+  color: #6e6e6e !important;
 }
 
 .custom-tab-slider .discount-msg .discount-price.active {
@@ -5788,7 +5789,6 @@ footer .widget .widget-title:after {
 }
 
 .product-info span.price del {
-  margin-left: 10px;
   font-weight: 500;
 }
 
