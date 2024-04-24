@@ -5174,6 +5174,7 @@ footer .widget .widget-title:after {
 .template-index .type_featured_collection_owl .products .t4s-product-price,
 .custom-tab-slider .t4s-product-price {
   display: flex;
+  align-items: center;
   flex-direction: row-reverse;
 }
 
