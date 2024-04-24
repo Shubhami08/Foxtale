@@ -5171,11 +5171,15 @@ footer .widget .widget-title:after {
   display: none;
 }
 
-.template-index .type_featured_collection_owl .products .t4s-product-price,
-.custom-tab-slider .t4s-product-price {
+.template-index .type_featured_collection_owl .products .t4s-product-price {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
+}
+
+.customproduct1-template .custom-tab-slider .t4s-product-price {
+  display: flex;
+  align-items: center;
 }
 
 .custom-tab-slider .design_2 .t4s-product-price,
