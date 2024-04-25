@@ -43,14 +43,14 @@
             "animation_delay": 40
           }
         },
-        "164602873867eb3815-0": {
+        "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FOX_10-02_1.jpg",
-            "image_mb": "shopify:\/\/shop_images\/FOX_10-01_1.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_28_338113da-2b27-4b09-a1da-743daa1fd19f.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_27_e23a470f-ec12-40ea-98f2-71ec55ca5c9b.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/shop",
+            "link_img1": "shopify:\/\/pages\/new-launch-sign-up",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -83,14 +83,14 @@
             "animation_delay": 30
           }
         },
-        "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
+        "164602873867eb3815-0": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SUNSCREEN_BANNER-02.jpg",
-            "image_mb": "shopify:\/\/shop_images\/SUNSCREEN_BANNER-01.jpg",
+            "image": "shopify:\/\/shop_images\/FOX_10-02_1.jpg",
+            "image_mb": "shopify:\/\/shop_images\/FOX_10-01_1.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/products",
+            "link_img1": "shopify:\/\/collections\/shop",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -247,8 +247,8 @@
       },
       "block_order": [
         "65500d1b-7a9b-4077-85dd-8287413d749c",
-        "164602873867eb3815-0",
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f",
+        "164602873867eb3815-0",
         "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95",
         "6876bcbc-8439-4320-8af0-f2fd8ec67ced",
         "aca13d02-fdca-4dd7-b455-cc71ffabb08a"
