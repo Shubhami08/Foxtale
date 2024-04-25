@@ -246,6 +246,13 @@
   });
 </script>
 
+<script>
+$(document).on('click', '.video-signup-template .t4s-slideshow-inner', function(){
+    $('html, body').animate({
+        'scrollTop' : $(".t4s-code__html").position().top
+    });
+});
+</script>                                                
           
 {%- schema -%}
 {
