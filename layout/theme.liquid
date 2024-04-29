@@ -1348,6 +1348,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if product.handle contains 'skin-radiance-mask' %}
+         .custom-tab-slide {
+           display: none;
+         }
+       {%endif%}
+
        {% if product.handle contains 'multivitamin-toner-mist' %}
          .template-product .t4s-sticky-atc {
            transform: none !important;
