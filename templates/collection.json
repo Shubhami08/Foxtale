@@ -326,6 +326,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_22.jpg",
             "collection_handle": "cashkaro-buy-2-at-799"
           }
+        },
+        "image_8XaUmT": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/SUNSCREEN-DESKTOP.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/SUNSCREEN-MOBILE.jpg",
+            "collection_handle": "phonepe-sunscreen-offer"
+          }
         }
       },
       "block_order": [
@@ -365,7 +373,8 @@
         "image_DcEBMA",
         "image_hHzUFn",
         "image_eFYPxy",
-        "image_8rkW9n"
+        "image_8rkW9n",
+        "image_8XaUmT"
       ],
       "settings": {
         "slider_height_mobile": "100%"
