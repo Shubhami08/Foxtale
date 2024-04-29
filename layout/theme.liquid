@@ -1274,9 +1274,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            .customproduct1-template .result-section .result-section-content {
              grid-template-columns: 1fr !important;
            }
-           .customproduct1-template #combobtn {
-             display: none;
-           }
          {%endif%}
          
          {% if collection.url contains 'early-access'%}
@@ -1359,7 +1356,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'skin-radiance-mask' %}
-         .customproduct1-template .custom-tab-slider {
+         .customproduct1-template .custom-tab-slider, .customproduct1-template #combobtn {
            display: none;
          }
          .customproduct1-template .result-section .result-section-content {
