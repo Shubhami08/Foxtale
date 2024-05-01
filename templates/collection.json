@@ -112,10 +112,8 @@
         "image_rUk9y3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Primary_DESKTOP_CODE.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Primary_MOBILE_CODE.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Secondary_Summer_Routine_WEB_CODE.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/secondary_Routine_banner_MOBILE_CODE.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/CODE-_SUMMER_STOCKUP-AFFILIATES_DESKTOP.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/CODE-_SUMMER_STOCKUP-AFFILIATES_MOBILE.jpg",
             "collection_handle": "affiliate-secret-sale"
           }
         },
