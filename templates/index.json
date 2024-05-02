@@ -301,7 +301,7 @@
         "35fbed63-35ca-41b0-8ec7-c152f7c07aa6": {
           "type": "tabs",
           "settings": {
-            "tab-title": "New Launches"
+            "tab-title": ""
           }
         },
         "a8f06393-bbca-4690-a0fa-a0152df92fbb": {
@@ -312,6 +312,7 @@
         },
         "19da71f1-04f7-4293-9a39-0c5908d7e04a": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "collection": "new-launches"
           }
