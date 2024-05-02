@@ -45,7 +45,6 @@
         },
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/HP_BANNERS-02.jpg",
             "image_mb": "shopify:\/\/shop_images\/HP_BANNERS-01.jpg",
