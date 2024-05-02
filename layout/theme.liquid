@@ -1890,7 +1890,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
       // hard coded for no gift sale
 
-        var removeproductId51 = "44226784723191";
+        var removeproductId51 = "44080969220343";
         var variantObject51 = {};
         variantObject51[removeproductId51] = 0;
 
@@ -1900,6 +1900,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           type: 'post',
           url: '/cart/update.js',
           data: jsonObject51,
+          dataType: 'json',
+          success: function (data) {},
+        });
+
+      var removeproductId52 = "43565338427639";
+        var variantObject52 = {};
+        variantObject52[removeproductId52] = 0;
+
+        var jsonObject52 = {};
+        jsonObject52['updates'] = variantObject52;
+        $.ajax({
+          type: 'post',
+          url: '/cart/update.js',
+          data: jsonObject52,
           dataType: 'json',
           success: function (data) {},
         });
