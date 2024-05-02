@@ -14591,11 +14591,11 @@ svg.t4s-iconsvg-close {
 .t4s-announcement-bar {
   min-height: 12px;
   font-size: 12px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(255, 220, 143, 1) 0%,
     rgba(255, 184, 213, 1) 100%
-  );
+  ); */
 }
 
 .t4s-announcement-bar__close {
