@@ -28,7 +28,7 @@
      {% if collection != blank %}
         <div class="products-grid-item-main pdp-custom-collection custom-collection-product-grid-item">
           {%- for product in collection.products -%}
-            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 5 %}style="display: none;"{% endif %}>
+            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 5 %}{% endif %}>
               <div class="product-innr vmg">
                 <div class="product-image pr oh lazyloadt4sed product-innr-top">
                   <a href="{{product.url}}">
