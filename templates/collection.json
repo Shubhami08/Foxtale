@@ -225,14 +225,6 @@
             "collection_handle": "new-sale"
           }
         },
-        "7bff029f-c157-4639-b953-a7fab9d4bdeb": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
-            "collection_handle": "exclusive-sale"
-          }
-        },
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
           "type": "image",
           "settings": {
@@ -251,52 +243,44 @@
             "collection_handle": "frontpage"
           }
         },
+        "7bff029f-c157-4639-b953-a7fab9d4bdeb": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
+            "collection_handle": "exclusive-sale"
+          }
+        },
         "image_xHTBA4": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Free_gift_-Desktop_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Free_gift_-Mobile_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
             "collection_handle": "secret-flash-sale"
           }
         },
         "e4200243-e18e-45ee-a588-07aa2db63a66": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Hydrating_Eye_mask_web.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Eye_mask-_Mobile-02.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
         "1ed0757d-1e6a-4d93-86b6-96a3aaeee593": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_ca243d02-b4b5-406e-a522-3d55aee51095.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_2739c8a0-304d-4d2d-8cc1-cc83a0274492.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Free-minis_Desktop_a57d84c4-f647-42df-846f-d40c78a4cb26.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Free-minis_Mobile_c811655d-b156-4458-80e1-c53d729ac212.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/B2g2-_web_bd512397-4940-4722-b031-27a831e269ac.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/B2g2-_mobile_-01_ef06e404-294a-4033-a797-22f64bfa4fb5.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
             "collection_handle": "birthday-special-sale"
           }
         },
         "35952e72-8bd4-4162-8485-8e4d3072771e": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_ca243d02-b4b5-406e-a522-3d55aee51095.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_2739c8a0-304d-4d2d-8cc1-cc83a0274492.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Free-minis_Desktop_a57d84c4-f647-42df-846f-d40c78a4cb26.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Free-minis_Mobile_c811655d-b156-4458-80e1-c53d729ac212.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/B2g2-_web_bd512397-4940-4722-b031-27a831e269ac.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/B2g2-_mobile_-01_ef06e404-294a-4033-a797-22f64bfa4fb5.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
             "collection_handle": "birthday-sale"
-          }
-        },
-        "image_DcEBMA": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Artboard_1.png",
-            "image_1_mobile": "shopify:\/\/shop_images\/Artboard_3.png",
-            "collection_handle": "affiliate-vday-sale"
           }
         },
         "image_hHzUFn": {
@@ -305,6 +289,14 @@
             "image_1_desktop": "shopify:\/\/shop_images\/Desktop_8.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/Mobile_10.jpg",
             "collection_handle": "secret-party"
+          }
+        },
+        "image_DcEBMA": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Artboard_1.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/Artboard_3.png",
+            "collection_handle": "affiliate-vday-sale"
           }
         },
         "image_eFYPxy": {
@@ -359,15 +351,15 @@
         "201e8bcf-2465-4228-81fe-317ca78d387a",
         "d5a2ffe9-14a6-4651-be91-d3d378b6b7ee",
         "5b7203a3-1364-4353-873a-23c9957991ce",
-        "7bff029f-c157-4639-b953-a7fab9d4bdeb",
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992",
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a",
+        "7bff029f-c157-4639-b953-a7fab9d4bdeb",
         "image_xHTBA4",
         "e4200243-e18e-45ee-a588-07aa2db63a66",
         "1ed0757d-1e6a-4d93-86b6-96a3aaeee593",
         "35952e72-8bd4-4162-8485-8e4d3072771e",
-        "image_DcEBMA",
         "image_hHzUFn",
+        "image_DcEBMA",
         "image_eFYPxy",
         "image_8rkW9n",
         "image_8XaUmT"
