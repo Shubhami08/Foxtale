@@ -236,10 +236,8 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2_website.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_MOBILE.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_DESKTOP_copy.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_MOBILE_copy.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_DESKTOP_copy.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_MOBILE_copy.jpg",
             "collection_handle": "frontpage"
           }
         },
