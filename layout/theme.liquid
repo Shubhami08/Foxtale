@@ -758,6 +758,21 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'products-1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "BYOB";
+           width: 150px;
+         }
+       {%endif%}
+
        {% if collection.url contains 'new30'%}
          .bottom-leftext {
            visibility: hidden;
