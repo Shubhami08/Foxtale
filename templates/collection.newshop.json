@@ -440,6 +440,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/B2G2-_Master-09_1.jpg",
             "collection_handle": "offer-b2g2"
           }
+        },
+        "image_EzERLW": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_a92c4d12-a2a7-4a7c-90fc-651b45393f0b.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/SUMMER-SALE-BANNER-_Mobile_302966d2-8936-4b95-9128-bc4510ff6172.jpg",
+            "collection_handle": "products-1"
+          }
         }
       },
       "block_order": [
@@ -451,7 +459,8 @@
         "bcf56be1-ad2a-4624-b6ea-95f1504c5199",
         "3e054972-6a13-4eda-9144-1cacc230d754",
         "040dca29-acdb-4004-909b-5fe9000b3f52",
-        "image_N3EabB"
+        "image_N3EabB",
+        "image_EzERLW"
       ],
       "settings": {
         "slider_height_mobile": "100%"
