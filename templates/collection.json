@@ -228,18 +228,18 @@
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_mask_web_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Lip_Mask_B1G1_LIP_MASK_Mobile_copy_2.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/MIDNIGHT-SALE-B1G1-_-B2G2_WEB-BANNER.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/MIDNIGHT-SALE-B1G1-_-B2G2_MOBILE-BANNER.gif",
             "collection_handle": "midnight-sale"
           }
         },
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G3-Banners-_with_lip_mask-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G3-Banners-_with_lip_mask-01.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Summer_Routine_web_1.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Routine_banner_mobile_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2G2_website.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_MOBILE.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_DESKTOP_copy.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/SUMMER_STOCKUP_copy_MOBILE_copy.jpg",
             "collection_handle": "frontpage"
           }
         },
