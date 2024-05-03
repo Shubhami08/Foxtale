@@ -758,7 +758,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-       {% if collection.url contains 'republic-day-b2g2'%}
+       {% if collection.url contains 'Perf: New30'%}
          .bottom-leftext {
            visibility: hidden;
            position: relative;
@@ -768,7 +768,19 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "B2G2";
+           content: "NEW30";
+           width: 200px;
+         }
+         .bottom-rightext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-rightext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "New user only";
            width: 200px;
          }
        {%endif%}
