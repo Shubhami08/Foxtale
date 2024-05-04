@@ -216,7 +216,7 @@ endif -%}
       {% else %}
         <div class="t4s-product-btns t4s-product-info__btns">
            <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-                <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" style="{% if product.id== 8107533369591 %}pointer-events: none{% endif %}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{% if product.id== 8107533369591 %}SOLD OUT {% else %} {{ 'products.product.add_to_cart' | t }}{% endif %}</span></a>
+                <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
            </div>
         </div>
       {% endif %}
