@@ -123,18 +123,25 @@
                             </span>
                           </div>
                         </div>
-                        <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-                          <a
-                            href="{{ product.url }}"
-                            id="addtocart_r"
-                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
-                            data-variant-id="{{product.first_available_variant.id}}"
-                            data-action-atc
-                            rel="nofollow"
-                            ><span class="t4s-svg-pr-icon"></span
-                            ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
-                          >
-                        </div>
+                        {% if product.metafields.custom.check_variant %}
+                            <div class="shop-all-qty-cart-btn">
+                                <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                            </div>
+                        {% else %}
+                          <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+                            <a
+                              href="{{ product.url }}"
+                              id="addtocart_r"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                              data-variant-id="{{product.first_available_variant.id}}"
+                              data-action-atc
+                              rel="nofollow"
+                              ><span class="t4s-svg-pr-icon"></span
+                              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                            >
+                          </div>
+                        {% endif %}
+                        
                       </div>
                     {%- endfor -%}
                   </div>
@@ -200,18 +207,24 @@
                             </span>
                           </div>
                         </div>
-                        <div class="shop-all-qty-cart-btn">
-                          <a
-                            href="{{ product.url }}"
-                            id="addtocart_r"
-                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
-                            data-variant-id="{{product.first_available_variant.id}}"
-                            data-action-atc
-                            rel="nofollow"
-                            ><span class="t4s-svg-pr-icon"></span
-                            ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
-                          >
-                        </div>
+                        {% if product.metafields.custom.check_variant %}
+                            <div class="shop-all-qty-cart-btn">
+                                <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                            </div>
+                        {% else %}
+                          <div class="shop-all-qty-cart-btn">
+                            <a
+                              href="{{ product.url }}"
+                              id="addtocart_r"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                              data-variant-id="{{product.first_available_variant.id}}"
+                              data-action-atc
+                              rel="nofollow"
+                              ><span class="t4s-svg-pr-icon"></span
+                              ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+                            >
+                          </div>
+                        {% endif %}
                       </div>
                     {%- endfor -%}
                   </div>
@@ -416,7 +429,7 @@
 <!-- Growlytics Event-->
 <script>
    $(document).ready(function () {
-    $( '..shop-all-qty-cart-btn ').on("click", function(){
+    $( '.shop-all-qty-cart-btn ').on("click", function(){
      Growlytics.events.track(“Spotlight and Newlaunches ATC,{
        'clicks': "Clicks",
        'Product Name': prodName

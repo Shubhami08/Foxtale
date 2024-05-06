@@ -80,11 +80,8 @@
   ]
 }
 {% endschema %}
+{{ 'new-slider-collection.css' | asset_url | stylesheet_tag }}
 
-{% stylesheet %}
-<!-- Add Flickity CSS -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-{% endstylesheet %}
 
 <div class="main-carousel-collection" style="visibility:hidden">
 {% for block in section.blocks %}
@@ -191,7 +188,7 @@ $(document).ready(function() {
     $('.main-carousel-collection').css('visibility','visible');
   }, 1500);
   // Add Flickity JS
-  $.getScript("https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js")
+  $.getScript("{{ 'pre_flickity.min.js' | asset_url }}")
     .done(function() {
     var $desktopCarousel = $('.desktop-carousel').flickity({
       // options

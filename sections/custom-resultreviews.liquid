@@ -380,7 +380,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
                         <div class="cstmhtm">{{ block.settings.quote }}</div>
                         <span class="quoter">{% render 'andiquote' %}</span>
                       </div>
-                    </div>
+                    </div>    
+                  {% if product.metafields.custom.check_variant %}
+                      <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn">
+                          <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                      </div>
+                  {% else %}
                     <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn" data-handle="{{ product.handle }}">
                       <a
                         href="javascript:void(0)"
@@ -391,7 +396,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
                         <span class="t4s-svg-pr-icon"></span>
                         <span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span>
                       </a>
-                    </div>    
+                    </div> 
+                  {% endif %}
                 </div>
               </div>
               

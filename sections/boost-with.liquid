@@ -98,9 +98,15 @@
               >
               <div class="shopify-product-reviews-badge star-rating" data-id="{{pairProduct.id}}"></div>
             </div>
-            <div class="shop-all-qty-cart-btn">
-              <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart" data-variant-name="{{ pairProduct.title }}" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-            </div>
+            {% if pairProduct.metafields.custom.check_variant %}
+              <div class="shop-all-qty-cart-btn">
+                    <a href="{{ pairProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                  </div>
+            {% else %}
+              <div class="shop-all-qty-cart-btn">
+                    <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart" data-variant-name="{{ pairProduct.title }}" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+                  </div>
+            {% endif %}
           </div>
         </div>
       {% endfor %}

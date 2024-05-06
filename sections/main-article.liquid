@@ -188,14 +188,21 @@
                                   <span class="price dib mb__5" style="margin-top: 10px; font-size: 16px; font-weight: 800;"><del style="color: #878787;">{{shopStoryProduct.compare_at_price | money }}</del><ins>{{shopStoryProduct.price | money}}</ins></span>
                                   <div class="shopify-product-reviews-badge star-rating" data-id="{{shopStoryProduct.id}}"></div>
                                 </div>
-                              <div class="shop-all-qty-cart-btn">
-                                <a rel="dofollow" href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{shopStoryProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-                               {% comment %} {%- if settings.enable_quickshop -%}
-                                     <a href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" rel="nofollow" data-action-quickshop data-id="{{shopStoryProduct.first_available_variant.id}}"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-                                {%- else -%}
-                                   <a href="{{ shopStoryProduct.url }}"class="t4s-pr-item-btn t4s-pr-addtocart" rel="nofollow"><span class="t4s-svg-pr-icon"><svg viewBox="0 0 24 24"><use xlink:href="#t4s-icon-atc"></use></svg></span><span class="t4s-text-pr">{{ 'products.product_card.select_option' | t }}</span></a>
-                                {%- endif -%}{% endcomment %}
-                              </div>
+                              
+                                {% if shopStoryProduct.metafields.custom.check_variant %}
+                                    <div class="shop-all-qty-cart-btn">
+                                        <a href="{{ shopStoryProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                    </div>
+                                {% else %}
+                                  <div class="shop-all-qty-cart-btn">
+                                  <a rel="dofollow" href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{shopStoryProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+                                 {% comment %} {%- if settings.enable_quickshop -%}
+                                       <a href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" rel="nofollow" data-action-quickshop data-id="{{shopStoryProduct.first_available_variant.id}}"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+                                  {%- else -%}
+                                     <a href="{{ shopStoryProduct.url }}"class="t4s-pr-item-btn t4s-pr-addtocart" rel="nofollow"><span class="t4s-svg-pr-icon"><svg viewBox="0 0 24 24"><use xlink:href="#t4s-icon-atc"></use></svg></span><span class="t4s-text-pr">{{ 'products.product_card.select_option' | t }}</span></a>
+                                  {%- endif -%}{% endcomment %}
+                                </div>
+                                {% endif %}
                               </div>
                             {% endfor %}
                           </div>

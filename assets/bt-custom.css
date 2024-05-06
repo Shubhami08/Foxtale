@@ -11292,7 +11292,7 @@ div#shopify-section-template--16759600709879__fde7dfaf-6042-4f71-b8f7-efdb65e362
 }
 
 .template-collection .flickity-page-dots {
-  visibility: hidden !important;
+  /* visibility: hidden !important; */
 }
 
 #t4s-menu-drawer .t4s-drawer__header .main-class-header {
