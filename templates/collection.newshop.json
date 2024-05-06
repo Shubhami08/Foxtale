@@ -452,8 +452,8 @@
         "image_EzERLW": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_a92c4d12-a2a7-4a7c-90fc-651b45393f0b.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/SUMMER-SALE-BANNER-_Mobile_302966d2-8936-4b95-9128-bc4510ff6172.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
             "collection_handle": "products-1"
           }
         }
