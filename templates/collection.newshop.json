@@ -388,8 +388,8 @@
         "image_UibMeG": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-05_2.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-06_2.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Slashprice_web_banners-05.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Slashprice_web_banners-06.jpg",
             "collection_handle": "shop-2"
           }
         },
