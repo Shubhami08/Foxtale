@@ -1404,6 +1404,7 @@
           },
           "bfe335e7-f921-4d2a-92a1-e9da018ea4c2": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Skin Quiz",
               "url": "shopify:\/\/pages\/skin-quiz-8",
