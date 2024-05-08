@@ -1402,21 +1402,6 @@
               "icon": "las la-chair"
             }
           },
-          "bfe335e7-f921-4d2a-92a1-e9da018ea4c2": {
-            "type": "menu",
-            "disabled": true,
-            "settings": {
-              "title": "Skin Quiz",
-              "url": "shopify:\/\/pages\/skin-quiz-8",
-              "open_link": "_self",
-              "menu": "",
-              "lb": "New",
-              "lb_cl": "#ff4e00",
-              "icons_op": "1",
-              "image": "shopify:\/\/shop_images\/Skin_quiz.svg",
-              "icon": ""
-            }
-          },
           "ace49161-c488-4bd4-978f-cd049df013da": {
             "type": "heading-menu",
             "settings": {
@@ -1532,7 +1517,6 @@
           "e9d85513-6d31-4fbb-b47a-978883ddd5e1",
           "363a61e4-ad9b-4735-aebd-3f8c886023de",
           "023bf354-a920-4b2f-8fae-dd7af328c285",
-          "bfe335e7-f921-4d2a-92a1-e9da018ea4c2",
           "ace49161-c488-4bd4-978f-cd049df013da",
           "78e61656-56aa-420a-8ed9-16ffcce13f3c",
           "2270f2fe-2629-4656-a743-0723ba3332c8",
