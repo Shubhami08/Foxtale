@@ -62,6 +62,13 @@
              {%- endfor -%}
           {%- endif -%}
       </div>
+      {% comment %}
+        {%- if section.settings.klctn != blank -%}
+          <div class="view-more-btn ole-btn">
+            <a href="{{ section.settings.klctn }}">{{ section.settings.klctntxt }}</a>
+          </div>
+        {%- endif -%}
+      {% endcomment %}
       {%- if paginate.pages > 1 and use_pagination != 'none' -%}
       <div class="products-footer footer_{{inc_pr}} tc mt__40">
           <a id="view-more-btn"  data-collection="{{ collection.url }}" class="pr button view_more js_add_loading button_{{se_stts.btn_style}} br_rd_{{se_stts.btn_rd}} btn_icon_{{se_stts.btn_icon}}" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
@@ -86,6 +93,27 @@
     flex-direction: row-reverse;
     align-items: center;
   }
+  .ole-btn {
+    cursor: pointer;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    /* text-transform: lowercase; */
+    text-align: center;
+  }
+  .ole-btn a {
+    color: #1877f2;
+  }
+
+@media (max-width: 768px) {
+  .ole-btn {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
 </style>
 <script>
     $(document).ready(function () {
@@ -118,6 +146,16 @@
         "id": "sub_title",
         "label": "Sub Text",
         "default": "Sub Text"
+      },
+      {
+        "id": "klctntxt",
+        "type": "text",
+        "label": "Button Text"
+      },
+      {
+        "id": "klctn",
+        "type": "url",
+        "label": "Select Collection"
       },
       {
         "type": "select",

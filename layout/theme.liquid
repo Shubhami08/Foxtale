@@ -750,7 +750,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "B2G2";
+           content: "BYOB";
            width: 50%;
          }    
        {%endif%}
@@ -765,7 +765,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Use Code: SUN4";
+           content: "BYOB";
            width: 150px;
          }
        {%endif%}
@@ -1449,6 +1449,30 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if product.handle contains 'de-tan-scrub' %}
+         .template-product .t4s-sticky-atc {
+           transform: none !important;
+           display: none;
+         }
+         .shop-all-qty-cart-btn, .offer-section-main, .custom-collection-slider, .t4s-product-form__variants, #pr-reviews {
+           display: none !important;
+         }
+         .product-weight {
+           visibility: hidden;
+           position: relative;
+         }
+         .product-weight:after {
+           visibility: visible;
+           position: absolute;
+           top: 0px;
+           left: 8px;
+           content: "Size - 12g";
+         }
+         .template-product section#shopify-section-bottom-bar {
+           margin-bottom: 0px;
+         }
+       {%endif%}
+
        {% if product.handle contains 'glow-sunscreen' %}
 
        {%endif%}
@@ -1953,7 +1977,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
       // hard coded for no gift sale
 
-        var removeproductId51 = "44080969220343";
+        var removeproductId51 = "44174537294071";
         var variantObject51 = {};
         variantObject51[removeproductId51] = 0;
 

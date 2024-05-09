@@ -5,8 +5,10 @@
 .custom-container {
   height: 100%;
   position: relative;
-  /* background-color: #E85A28; */
-  background-color: #dc693a;
+  /* background-color: #E85A28; 
+  background-color: #dc693a; 
+  background-color: #bfa7d2; */
+  background-color: #d8c7ea;
   padding: 0 25px;
   margin: 65px 28px 32px;
   border-radius: 8px;
@@ -67,7 +69,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
   padding: 18px 0 10px 0;
 }
 .testimonials-heading h3 {
-  color: #ffffff;
+  color: #000000;
   padding: 0;
   font-size: 35px;
   font-weight: 500;
@@ -76,8 +78,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   grid-gap: 8rem;
-  /* background-color: #E85A28; */
-  background-color: #dc693a;
+  /* background-color: #E85A28; 
+  background-color: #dc693a; 
+  background-color: #bfa7d2; */
+  background-color: #d8c7ea;
   padding-bottom: 3rem;
 }
 .testimonials-beforeafter {
@@ -133,10 +137,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
   width: 40px;
   height: 40px;
 }
+.quoter svg path {
+  stroke: #000000;
+}
 .prod-name {
   font-size: 18px;
   padding-top: 10px;
-  color: #ffffff;
+  color: #000000;
   height: 30px;
   display: block;
 } 
@@ -145,13 +152,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
   top: 12px;
 }
 .nam-st {
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
   font-size: 17px;
   margin-bottom: 0;
 }
 .revw {
-  color: #ffffff;
+  color: #000000;
   font-weight: 400;
   font-size: 17px;
   margin-bottom: 30px;
@@ -380,12 +387,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
                         <div class="cstmhtm">{{ block.settings.quote }}</div>
                         <span class="quoter">{% render 'andiquote' %}</span>
                       </div>
-                    </div>    
-                  {% if product.metafields.custom.check_variant %}
-                      <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn">
-                          <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-                      </div>
-                  {% else %}
+                    </div>
                     <div class="shop-all-qty-cart-btn ajx-atcz rev-atcbtn" data-handle="{{ product.handle }}">
                       <a
                         href="javascript:void(0)"
@@ -396,8 +398,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
                         <span class="t4s-svg-pr-icon"></span>
                         <span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span>
                       </a>
-                    </div> 
-                  {% endif %}
+                    </div>    
                 </div>
               </div>
               
@@ -406,8 +407,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active-next, span.swiper-
         </div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-next"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385"></div>
-        <div class="swiper-button-prev"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385"></div>
+        <div style="display: none;" class="swiper-button-next"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_225.svg?v=1691672385"></div>
+        <div style="display: none;" class="swiper-button-prev"><img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Group_226.svg?v=1691672385"></div>
         <div class="swiper-pagination"></div>
     </div>
 </div>   
