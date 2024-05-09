@@ -236,8 +236,10 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2_may-03.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_may-04.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/HP_BANNERS-Website.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/HP_BANNERS-Mobile.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Freebie_website_banner.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Freebie_Mobile_banner.jpg",
             "collection_handle": "frontpage"
           }
         },
@@ -465,6 +467,14 @@
             "image_mobile": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_Sleek_banner_mobile_1.jpg",
             "collection_handle": ""
           }
+        },
+        "image_nE8V4k": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/SLEEK_BANNER_-01.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/SLEEK_BANNER_-02.jpg",
+            "collection_handle": "frontpage"
+          }
         }
       },
       "block_order": [
@@ -478,7 +488,8 @@
         "image_Xxdnpj",
         "image_HmryPz",
         "image_6xYcN7",
-        "image_6nNydB"
+        "image_6nNydB",
+        "image_nE8V4k"
       ],
       "settings": {
       }
