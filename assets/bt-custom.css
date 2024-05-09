@@ -14987,3 +14987,6 @@ span.shop1tag {
   font-weight: 600;
   text-transform: uppercase;
 }
+.template-collection .col-lg-.col-12.pt__20.pb__20.collection-best-seller {
+  padding-top: 12px !important;
+}
