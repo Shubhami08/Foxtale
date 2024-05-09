@@ -598,7 +598,7 @@
         "quinn_shoppable_videos_app_cards_block_eDjFK8": {
           "type": "shopify:\/\/apps\/quinn-shoppable-videos\/blocks\/app-cards-block\/150d2781-732b-4020-a9fb-1368e974e6bb",
           "settings": {
-            "layer_number": 1,
+            "layer_number": 3,
             "card_margins_desktop": "0",
             "card_margins_mobile": "20"
           }
