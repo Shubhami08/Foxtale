@@ -322,6 +322,20 @@
             "image_1_mobile": "shopify:\/\/shop_images\/SUNSCREEN-MOBILE.jpg",
             "collection_handle": "phonepe-sunscreen-offer"
           }
+        },
+        "image_T889YE": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_f44f183f-7e2b-4b88-bbfc-8473b59c301b.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_19d4ad90-2134-4f7f-82ec-235815eaef8c.jpg",
+            "collection_handle": "affiliate-slash-sale"
+          }
+        },
+        "image_AiRhnc": {
+          "type": "image",
+          "settings": {
+            "collection_handle": ""
+          }
         }
       },
       "block_order": [
@@ -362,7 +376,9 @@
         "image_DcEBMA",
         "image_eFYPxy",
         "image_8rkW9n",
-        "image_8XaUmT"
+        "image_8XaUmT",
+        "image_T889YE",
+        "image_AiRhnc"
       ],
       "settings": {
         "slider_height_mobile": "100%"
