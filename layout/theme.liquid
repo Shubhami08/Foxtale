@@ -702,6 +702,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'partnerships-slash-sale' or collection.url contains 'affiliate-slash-sale' or collection.url contains 'excusive-sale' %}
+          .saleBar {
+            display: none !important;
+          }
+       {%endif%}
+
       {% if collection.url contains '399-499-store'%}
         .template-collection .discount-msg {
           opacity: 0;
