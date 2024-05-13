@@ -148,7 +148,7 @@ endif -%}
                     {% elsif collection.title == "New Exclusive Special" %}
                     <p class="bottom-leftext">BYOB</p>
                     {% elsif collection.title == "Exclusive Sale" %}
-                    <p class="bottom-leftext">BYOB</p>
+                    <p class="bottom-leftext">Up to 40% Off</p>
                     {% elsif collection.title == "Affiliate Secret Sale" %}
                     <p class="bottom-leftext">BYOB</p>
                     {% elsif collection.title == "Affiliate Slash Sale" %}
@@ -203,7 +203,9 @@ endif -%}
                     <p class="bottom-rightext"></p>
                    {% elsif collection.title == "Partnerships Slash Sale" %}
                     <p class="bottom-rightext"></p>
-                     {% else %}
+                   {% elsif collection.title == "Exclusive Sale" %}
+                    <p class="bottom-rightext"></p>
+                   {% else %}
                     <p class="bottom-rightext">Free Gift</p>   
                    {% endif %}
                 </div>
