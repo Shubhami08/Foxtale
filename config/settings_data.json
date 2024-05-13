@@ -407,7 +407,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/shop",
-              "content": "<p><strong>15% Off <\/strong>on all orders [Code:<strong> GLOW15<\/strong>]<\/p>",
+              "content": "<p><strong>15% Off <\/strong>on orders above 699 [Code:<strong> GLOW15<\/strong>] <\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
