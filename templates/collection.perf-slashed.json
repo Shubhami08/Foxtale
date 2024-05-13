@@ -370,6 +370,17 @@
     },
     "6b74da85-3b73-4c32-ad47-62ea04675904": {
       "type": "slideshow-collection",
+      "blocks": {
+        "image_BVpHyi": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "new-slashed-sale"
+          }
+        }
+      },
+      "block_order": [
+        "image_BVpHyi"
+      ],
       "settings": {
         "slider_height_mobile": "100%"
       }
