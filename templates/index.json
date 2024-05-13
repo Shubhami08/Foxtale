@@ -6,8 +6,8 @@
         "65500d1b-7a9b-4077-85dd-8287413d749c": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_35.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_34.jpg",
+            "image": "shopify:\/\/shop_images\/GLOW10_GLOW15-02.jpg",
+            "image_mb": "shopify:\/\/shop_images\/GLOW10_GLOW15-01.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
@@ -85,6 +85,7 @@
         },
         "164602873867eb3815-0": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_32.jpg",
             "image_mb": "shopify:\/\/shop_images\/MOBILE_31.jpg",
