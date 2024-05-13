@@ -11020,6 +11020,10 @@ div#shopify-section-template--16759600709879__fde7dfaf-6042-4f71-b8f7-efdb65e362
   font-weight: 500 !important;
   color: #000000 !important;
   margin-left: 8px !important;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .t4s-collection-page .t4s-main-area .t4s-product-wrapper {
