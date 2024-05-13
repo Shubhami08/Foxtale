@@ -209,13 +209,17 @@
                   {% elsif collection.title == "Secret Party" %}
                      <p class="bottom-leftext">B1G1</p>
                   {% elsif collection.title == "Exclusive Sale" %}
-                    <p class="bottom-leftext">BYOB</p>
+                    <p class="bottom-leftext">Up to 40% Off</p>
                   {% elsif collection.title == "Paytm Flat 400 off" %}
                     <p class="bottom-leftext">₹400 off</p>
                   {% else %}
                     <p class="bottom-leftext">10% OFF</p>
-                  {% endif %}
-                    <p class="bottom-rightext">Free Gift</p>            
+                  {% endif %}                         
+                  {% if collection.title == "Exclusive Sale" %}
+                    <p class="bottom-rightext"></p>
+                   {% else %}
+                    <p class="bottom-rightext">Free Gift</p>
+                   {% endif %}
                </div>
 <!--             
              <form
