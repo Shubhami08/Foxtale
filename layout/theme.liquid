@@ -760,6 +760,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'new-slashed-sale-1' %}
+         span.badge.price__badge-sale.color- {
+           display: block !important;
+         } 
+       {%endif%}
+
        {% if collection.url contains 'shop-1'%}
          .bottom-leftext {
            visibility: hidden;
