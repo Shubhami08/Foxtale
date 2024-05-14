@@ -382,8 +382,8 @@
         "896ab793-fd74-47fd-999e-0520b9c09b47": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/banners_30_off-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/banners_30_off-01.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-03.jpg",
             "collection_handle": "shop-1"
           }
         },
@@ -392,6 +392,8 @@
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/Slashprice_web_banners-05_1.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/Slashprice_web_banners-06_1.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-04.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-03.jpg",
             "collection_handle": "shop-2"
           }
         },
