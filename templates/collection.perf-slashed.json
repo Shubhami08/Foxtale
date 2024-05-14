@@ -380,10 +380,19 @@
             "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_39.jpg",
             "collection_handle": "new-slashed-sale"
           }
+        },
+        "image_eWnD4z": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_38.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_39.jpg",
+            "collection_handle": "new-slashed-sale-1"
+          }
         }
       },
       "block_order": [
-        "image_BVpHyi"
+        "image_BVpHyi",
+        "image_eWnD4z"
       ],
       "settings": {
         "slider_height_mobile": "100%"
