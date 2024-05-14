@@ -151,8 +151,30 @@
   .newshop-roundmobile {
     display: none;
   }
+  span.badge.price__badge-sale.color- {
+    position: absolute;
+    color: #f05001;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 500;
+    top: 28px;
+    left: 22px;
+    display: none;
+  }
+  .newshop-wrap ins.dcba {
+    padding-right: 10px;
+  }
 
   @media (max-width: 768px) {
+    span.badge.price__badge-sale.color- {
+      font-size: 12px;
+      font-weight: 500;
+      top: 20px;
+      left: 15px;
+      padding: 6px;
+    }
     .newshop-wrap {
       padding: 0px 0px 0px 0;
     }
@@ -322,6 +344,16 @@
               <div class="product-image pr oh lazyloadt4sed product-innr-top">
                 <a rel="dofollow" href="{{product.url}}">
                   {%- render 'product_labels', on: 'singe', product: product -%}
+                  
+   {%- if product.price < product.compare_at_price -%}
+      {%- assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%' -%}
+      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">{{ savings }}</span>
+	{% else %}
+    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+      {{ 'products.product.on_sale' | t }}
+    </span>
+    {%- endif -%}
+                  
                   <img
                     class="pr-img-first lazyload"
                     loading="lazy"
