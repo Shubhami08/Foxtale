@@ -336,6 +336,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_39.jpg",
             "collection_handle": "partnerships-slash-sale"
           }
+        },
+        "image_jyAbkd": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_39.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_40.jpg",
+            "collection_handle": "gpay-offer-free-sunscreen"
+          }
         }
       },
       "block_order": [
@@ -378,7 +386,8 @@
         "image_8rkW9n",
         "image_8XaUmT",
         "image_T889YE",
-        "image_AiRhnc"
+        "image_AiRhnc",
+        "image_jyAbkd"
       ],
       "settings": {
         "slider_height_mobile": "100%"
