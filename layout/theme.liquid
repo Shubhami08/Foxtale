@@ -702,7 +702,44 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-       {% if collection.url contains 'partnerships-slash-sale' or collection.url contains 'affiliate-slash-sale' or collection.url contains 'new-slashed-sale-1' or collection.url contains 'new-slashed-sale' or if collection.url contains 'exclusive-sale' %}
+       {% if collection.url contains 'partnerships-slash-sale' or collection.url contains 'affiliate-slash-sale' or collection.url contains 'new-slashed-sale-1' or collection.url contains 'new-slashed-sale' %}
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Slash Sale ends soon. Check out now!";
+           font-size: 15px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+         }
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Upto 40% Off on our Bestsellers";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'exclusive-sale' %}
          .saleBar {
            visibility: hidden;
            position: relative;
