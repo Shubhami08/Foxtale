@@ -254,11 +254,7 @@
   <div class="product_header mb_img_slide">
     <div class="custom-pr-title">
       <h1 class="product_title">
-        {{ product.title -}}
-        <span class="product-weight">
-          Size:&nbsp
-          {%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}
-        </span>
+        {{ product.title }}
       </h1>
     </div>
     {{ product.metafields.global['product-sub-title'] }}
