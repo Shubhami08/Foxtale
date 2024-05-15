@@ -15031,3 +15031,169 @@ span.shop1tag {
 .template-collection .col-lg-.col-12.pt__20.pb__20.collection-best-seller {
   padding-top: 25px !important;
 }
+
+/* PDP v4.0 CSS Start */
+
+.muktailayout-template .rev {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 3;
+  background: #ffffff;
+  padding: 3px 12px;
+  border-radius: 6.153px;
+}
+.muktailayout-template .t4s-product__media-wrapper .t4s-product__media-item {
+  width: 100%;
+}
+.muktailayout-template .flickityt4s-page-dots {
+  margin: 14px 0 0;
+}
+.muktailayout-template li.dot.is-selected {
+  background-color: #989898 !important;
+}
+.muktailayout-template .dot {
+  background-color: #989898 !important;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+.muktailayout-template .product_title {
+  color: #1e1e1e;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 16px !important;
+}
+.muktailayout-template .t4s-product__info-wrapper .bt-pr-price {
+  padding: 0px 0 10px 0px;
+  margin: 0;
+}
+.muktailayout-template h5.prod_sub {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.muktailayout-template .review-wrap.pr-review {
+  display: none;
+}
+.muktailayout-template .t4s-product__info-wrapper .bt-pr-price {
+  display: flex;
+  align-items: center;
+}
+.muktailayout-template .t4s-product__price-review .t4s-product-price {
+  color: #ff8701;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 30px 6px 10px 0;
+}
+.mobile-shwnew,
+.clickpost-edd__container,
+.t4s-product-form__variants,
+.muktailayout-template
+  button.flickityt4s-button.flickityt4s-prev-next-button.next,
+.muktailayout-template
+  button.flickityt4s-button.flickityt4s-prev-next-button.previous {
+  display: none;
+}
+a.hm {
+  position: relative;
+  top: 3px;
+}
+.desk-prod {
+  opacity: 1 !important;
+  font-family: Inter;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 20px;
+  color: #000 !important;
+}
+.price-call {
+  color: #909090;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+@media (max-width: 768px) {
+  .muktailayout-template .breadcrumbs {
+    margin: 12px auto 0 auto;
+  }
+  .muktailayout-template .fera-productReviews.fera-productReviews--list {
+    margin: 20px auto;
+  }
+  .template-product
+    .t4s-product__info-wrapper
+    .bt-pr-price
+    .t4s-product__policies {
+    margin-top: 0px;
+  }
+  .muktailayout-template .rev {
+    padding: 0px 6px;
+  }
+  .muktailayout-template
+    .fera-productReviewsSummary
+    .fera-productReviewsSummary-avgRating {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: -3px;
+  }
+  .muktailayout-template
+    .fera-widget-457325
+    .fera-productReviewsSummary-stars-rating {
+    font-size: 10px !important;
+    line-height: 16px;
+  }
+  .muktailayout-template .rev {
+    top: 16px;
+    left: 16px;
+  }
+  .mobile-shwnew {
+    display: block;
+    padding: 0 15px;
+  }
+  .mobile-shwnew h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 4px;
+  }
+  .mobile-shwnew h5 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .muktailayout-template .t4s-product__info-wrapper .bt-pr-price {
+    padding: 5px 0 0px 0px;
+  }
+  .muktailayout-template .t4s-product__price-review .t4s-product-price {
+    color: #ff8701;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 6px 10px 0;
+  }
+  .muktailayout-template .product_header .custom-pr-title,
+  .muktailayout-template .product_header .prod_sub,
+  .muktailayout-template .product_header {
+    display: none !important;
+  }
+  .muktailayout-template
+    .t4s-product-media__without_thumbnails
+    .t4s-product__media-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .muktailayout-template .t4s-product__media-wrapper .t4s-product__media-item {
+    padding-right: 0 !important;
+  }
+  .muktailayout-template .shareIcon-container-icon {
+    top: 16px !important;
+    right: 16px !important;
+  }
+  .muktailayout-template .flickityt4s-page-dots {
+    margin: 0px 0 0;
+    bottom: 30px;
+  }
+}
