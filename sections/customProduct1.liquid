@@ -622,6 +622,11 @@
                       </div>
                     {%- endif -%}
                   </div>
+                  {%- if product.metafields.custom.offerstocklimited != blank -%}
+                    <div class="offer-limtedstoc">
+                      {{ product.metafields.custom.offerstocklimited }}
+                    </div>
+                  {%- endif -%}
                   {% comment %}
                         {%- if product.metafields.global.usp-icon != blank -%}
                     <div class="product-usp-icon" style="margin-left: 10px; margin-right: 10px; margin-top: 20px;">
