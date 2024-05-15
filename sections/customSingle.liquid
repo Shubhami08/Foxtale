@@ -508,6 +508,10 @@
               </div>
           {%- endcase -%}
         </div>
+        <div class="mobile-shwnew">
+          <h2>{{ product.title }}</h2>
+          <h5>{{ product.metafields.global['product-sub-title'] }}<span class="product-weight"> | &nbsp{%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}</span></h5>
+        </div>   
         <div data-t4s-zoom-info class="t4s-{{class_info}} t4s-col-12 t4s-col-item t4s-product__info-wrapper t4s-pr">
           <div id="product-zoom-{{ section.id }}" class="t4s-product__zoom-wrapper"></div>
           <div
@@ -617,12 +621,16 @@
 
                     {%- if bk_stts.tax_ship and cart.taxes_included or shop.shipping_policy.body != blank -%}
                       <div class="t4s-product__policies t4s-rte" data-product-policies>
+                        {% comment %}
                         {%- if cart.taxes_included -%}
                           {{ 'products.product.include_taxes' | t }}
                         {%- endif -%}
                         {%- if shop.shipping_policy.body != blank -%}
                           {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                         {%- endif -%}
+                        {% endcomment %}
+                        <h6 class="price-call">Tax Included</h6>
+                        <h6 class="price-call">Free Shipping</h6>
                       </div>
                     {%- endif -%}
                   </div>
@@ -1230,7 +1238,7 @@
                 
                 {%- when '@app' -%} 
                 {% render 'keybenefits' %}
-                {% render 'offerz-kustom' %}
+                {% render 'new-offerbox' %}
                  {%- render block -%}
               {%- endcase -%}
             {%- endfor -%}
