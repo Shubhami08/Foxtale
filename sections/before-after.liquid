@@ -1,0 +1,121 @@
+{{ 'before-after.css' | asset_url | stylesheet_tag }}
+<script defer="defer" src="{{ 'before-after.js' | asset_url }}" defer="defer"></script>
+
+<section class="app-before-after t4s-code__html container">
+  <div class="before-after-container expected-results">
+  <h3>Expected Results</h3>
+  <p>*We sent the Satin-Matte Niacinamide Serum to 250 customers and 100 skinfluencers for pan-India Lab Trials!</p>
+    <!-- <h1 class="before-after-heading-mobile">{{ section.settings.app_before_after_heading_mobile }}</h1> -->
+
+    <div class="border-wrapper {% if section.settings.border_top %}border-wrapper--top{% endif %} {% if section.settings.border_bottom %}border-wrapper--bottom{% endif %}">
+      <div class="compare__box">
+
+        <div class="compare__slide">
+          {%- if section.settings.image_before != blank and section.settings.image_after != blank -%}
+            <div class="twentytwenty-wrapper twentytwenty-horizontal">
+              <div class="twentytwenty-container">
+                {{ section.settings.image_before | image_url: width: 1790 | image_tag: loading: 'lazy', widths: '553, 895, 1790' }}
+                {{ section.settings.image_after | image_url: width: 1790 | image_tag: loading: 'lazy', widths: '553, 895, 1790' }}
+              </div>
+            </div>
+            <!-- <div class="before-after-comparison">
+              <p>Before</p>
+              <p>After</p>
+            </div> -->
+
+          {%- else -%}
+            <div class="compare__default">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day-barbottom">
+    <div class="day-one">Day 1</div>
+    <div class="day-one">Day 15</div>
+    <div class="day-one">Day 30</div>
+  </div>
+  <div class="bottom-ex">
+    <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/5cd58b02f874279424cf3facf01b19db.png?v=1714045492">
+    <h4 data-id="1" style="display:none;">98.5% of users experienced a matte finish for up to 8 hours</h4>
+    <h4 data-id="2">96.7% of users noticed their uneven skin tone improve</h4>
+    <h4 data-id="3" style="display:none;">98.3% of users experienced regulated sebum production over time</h4>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "App Before After",
+  "tag": "section",
+  "class": "section-compare spaced-section",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "app_before_after_heading",
+      "label": "Before After Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "app_before_after_heading_mobile",
+      "label": "Before After Heading Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_before",
+      "label": "t:sections.compare-block.settings.image_before.label",
+      "info": "t:sections.compare-block.settings.image_before.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_after",
+      "label": "t:sections.compare-block.settings.image_after.label",
+      "info": "t:sections.compare-block.settings.image_before.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_top",
+      "default": false,
+      "label": "t:sections.compare-block.settings.border_top.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_bottom",
+      "default": false,
+      "label": "t:sections.compare-block.settings.border_bottom.label"
+    },
+    {
+      "type": "text",
+      "id": "policy_text",
+      "label": "Before After Policy Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "App Before After"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "before-after",
+      "name": "Before After",
+      "settings": [
+        {
+          "id": "before_after_details_heading",
+          "type": "text",
+          "label": "Before After Details Heading"
+        },
+        {
+          "id": "before_after_details_content",
+          "type": "richtext",
+          "label": "Before After Details Content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
