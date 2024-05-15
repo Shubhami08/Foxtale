@@ -1,0 +1,153 @@
+<style>
+.new-offerbox {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.new-offerbox h6 {
+  color: var(--Gray-1, #333);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  opacity: 0.5;
+}
+.offerbox-mainwrap {
+  border-radius: 8px;
+  border: 1px solid #E9E5E5;
+  padding: 0px 24px 0px 12px;
+}
+.offerbox-one, .offerbox-two, .offerbox-three {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.offerbox-two {
+  border-top: 1px solid #E9E5E5;
+  border-bottom: 1px solid #E9E5E5;
+}
+.offerz-actual h5 {
+  color: #1E1E1E;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+.offerz-actual p {
+  color: #686363;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.offerz-actual {
+  margin-left: 8px;
+}
+.offer-innermain {
+  display: flex;
+  align-items: center;
+}
+.offer-copy {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px dashed var(--Sleek-Slate-200, #EAECF0);
+  background: var(--Sleek-Slate-50, #F9FAFB);
+  padding: 3px 8px;
+}
+.offer-copy h4 {
+  color: var(--Sleek-Slate-500, #667085);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+}
+.offer-copy span {
+  width: 15px;
+  height: 20px;
+}
+@media (max-width: 768px) {
+  .new-offerbox {
+    grid-template-columns: 1fr;
+  }
+  .new-offerbox h6 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    opacity: 1;
+    margin: 12px 0 8px 0;
+  }
+}
+</style>
+
+<div class="new-offerbox">
+  <h6>Offers</h6>
+  <div class="offerbox-mainwrap">
+    <div class="offerbox-one offerbox-list">
+      <div class="offer-innermain">
+        <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
+        <div class="offerz-actual">
+          <h5>Buy 2 @ 799</h5>
+          <p>Get Any 2 Products for ₹799/-</p>
+        </div>       
+      </div>
+      <div class="offer-copy">
+        <h4>FOX799</h4>
+        <span>{% render 'copy-svg' %}</span>
+      </div>
+      <div class="copiedcode_text" style="display:none;">Code Copied</div>
+    </div>
+    <div class="offerbox-two offerbox-list">
+      <div class="offer-innermain">
+        <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
+        <div class="offerz-actual">
+          <h5>Buy 3 @ 1099</h5>
+          <p>Get Any 3 Products for ₹1099/-</p>
+        </div>       
+      </div>
+      <div class="offer-copy">
+        <h4>FOX1099</h4>
+        <span>{% render 'copy-svg' %}</span>
+      </div>
+      <div class="copiedcode_text" style="display:none;">Code Copied</div>
+    </div>
+    <div class="offerbox-three offerbox-list">
+      <div class="offer-innermain">
+        <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
+        <div class="offerz-actual">
+          <h5>10% Off + Eye Mask *(5% + 5% on Prepaid)</h5>
+          <p>Up to 10% Off + Free Eye Mask</p>
+        </div>       
+      </div>
+      <div class="offer-copy">
+        <h4>GLOW10</h4>
+        <span>{% render 'copy-svg' %}</span>
+      </div>
+      <div class="copiedcode_text" style="display:none;">Code Copied</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(document).on('click', '.offerbox-mainwrap .offer-copy', function(){
+        setTimeout(function() {
+           $('.copiedcode_text').hide();
+          $(".offer-copy").show();
+        }, 1000);
+        var text = $(this).find('h4').text();
+        copyToClipboard(text);
+        $(this).parents(".offerbox-list").find('.copiedcode_text').show();
+        $(this).parents(".offerbox-list").find(".offer-copy").hide();
+        
+    });
+  });
+  
+  function copyToClipboard(text) {
+    var tempInput = $('<input>');
+    $('body').append(tempInput);
+    tempInput.val(text).select();
+    document.execCommand('copy');
+    tempInput.remove();
+  }
+</script>
