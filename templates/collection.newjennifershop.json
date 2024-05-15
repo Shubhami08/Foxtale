@@ -266,6 +266,7 @@
       "block_order": [
         "221aa22f-5c6c-40c9-9403-6d3cd2c23e93"
       ],
+      "disabled": true,
       "settings": {
         "enable_drawer": false,
         "space": 50,
@@ -303,6 +304,7 @@
         "740319a4-8e19-4c70-b8a9-ada7cf235cbc",
         "30594d23-d644-4653-9545-9ff769d2e6ab"
       ],
+      "disabled": true,
       "settings": {
         "single-double": true,
         "acne-control": true,
