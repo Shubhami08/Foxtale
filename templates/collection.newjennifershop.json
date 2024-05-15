@@ -373,109 +373,15 @@
     "6b74da85-3b73-4c32-ad47-62ea04675904": {
       "type": "slideshow-collection",
       "blocks": {
-        "image_LRQy7A": {
+        "image_jd3Cbe": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/banners_30_off-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/banners_30_off-01.jpg",
-            "collection_handle": "new30"
-          }
-        },
-        "896ab793-fd74-47fd-999e-0520b9c09b47": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-04.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-03.jpg",
-            "collection_handle": "shop-1"
-          }
-        },
-        "image_UibMeG": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Slashprice_web_banners-05_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Slashprice_web_banners-06_1.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-04.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-03.jpg",
-            "collection_handle": "shop-2"
-          }
-        },
-        "cd98f790-df57-40d4-8b04-7e959afda723": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
-            "collection_handle": "google-pay-b2g2-1"
-          }
-        },
-        "1aa2a5f0-e416-4022-a189-f89b7e1237fb": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg",
-            "collection_handle": "buy-1-get-1-free-gpay-1"
-          }
-        },
-        "5a5e4eaf-e7bf-431c-b02d-534132ded685": {
-          "type": "image",
-          "settings": {
-            "collection_handle": "flat-400-off-gpay"
-          }
-        },
-        "bcf56be1-ad2a-4624-b6ea-95f1504c5199": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_1.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Desktop-_2.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Mobile_2.jpg",
-            "collection_handle": "new-frontpage"
-          }
-        },
-        "3e054972-6a13-4eda-9144-1cacc230d754": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_21.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_23.jpg",
-            "collection_handle": "flat-200-off-gpay"
-          }
-        },
-        "040dca29-acdb-4004-909b-5fe9000b3f52": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png",
-            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png",
-            "collection_handle": "paytm-flat-200"
-          }
-        },
-        "image_N3EabB": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G2-_Master-11_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G2-_Master-09_1.jpg",
-            "collection_handle": "offer-b2g2"
-          }
-        },
-        "image_EzERLW": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DEKSTOP.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_35.jpg",
-            "collection_handle": "products-1"
+            "collection_handle": "399-499-store-1"
           }
         }
       },
       "block_order": [
-        "image_LRQy7A",
-        "896ab793-fd74-47fd-999e-0520b9c09b47",
-        "image_UibMeG",
-        "cd98f790-df57-40d4-8b04-7e959afda723",
-        "1aa2a5f0-e416-4022-a189-f89b7e1237fb",
-        "5a5e4eaf-e7bf-431c-b02d-534132ded685",
-        "bcf56be1-ad2a-4624-b6ea-95f1504c5199",
-        "3e054972-6a13-4eda-9144-1cacc230d754",
-        "040dca29-acdb-4004-909b-5fe9000b3f52",
-        "image_N3EabB",
-        "image_EzERLW"
+        "image_jd3Cbe"
       ],
       "settings": {
         "slider_height_mobile": "100%"
