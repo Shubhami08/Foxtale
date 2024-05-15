@@ -702,7 +702,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-       {% if collection.url contains 'partnerships-slash-sale' or collection.url contains 'affiliate-slash-sale' or collection.url contains 'new-slashed-sale-1' or collection.url contains 'new-slashed-sale' %}
+       {% if collection.url contains 'excusive-sale' %}
          .saleBar {
            visibility: hidden;
            position: relative;
@@ -738,8 +738,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            width: max-content;
          }
        {%endif%}
-      
-       {% if collection.url contains 'excusive-sale' %}
+
+       {% if collection.url contains 'partnerships-slash-sale' or collection.url contains 'affiliate-slash-sale' or collection.url contains 'new-slashed-sale-1' or collection.url contains 'new-slashed-sale' %}
          .saleBar {
            visibility: hidden;
            position: relative;
