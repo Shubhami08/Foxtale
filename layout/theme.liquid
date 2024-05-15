@@ -1385,7 +1385,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            }
          {%endif%}
          
-         {% if collection.url contains 'new-slashed-sale-1' %}
+         {% if collection.url contains 'new-slashed-sale-1' or collection.url contains 'new-slashed-sale' %}
            .template-collection .main-carousel-collection {
              margin: 8px 6px 8px 6px !important;
            }
