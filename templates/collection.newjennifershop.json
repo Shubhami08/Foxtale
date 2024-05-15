@@ -397,8 +397,8 @@
           "settings": {
             "collekt": "sp-moisturisers",
             "txter": "Moisturisers",
-            "mdlpik": "shopify:\/\/shop_images\/MOISTURISER_1.png",
-            "smlpik": "shopify:\/\/shop_images\/MOISTURISER_1.png",
+            "mdlpik": "shopify:\/\/shop_images\/MOISTURISER_2.png",
+            "smlpik": "shopify:\/\/shop_images\/MOISTURISER_2.png",
             "grid-heading": "Moisturisers at 399\/-",
             "grid-subheading": "Protected skin barrier & a boost of hydration"
           }
@@ -408,8 +408,8 @@
           "settings": {
             "collekt": "sp-sunscreens",
             "txter": "Sunscreens",
-            "mdlpik": "shopify:\/\/shop_images\/SUNSCREEN_1.png",
-            "smlpik": "shopify:\/\/shop_images\/SUNSCREEN_1.png",
+            "mdlpik": "shopify:\/\/shop_images\/SUNSCREEN_2.png",
+            "smlpik": "shopify:\/\/shop_images\/SUNSCREEN_2.png",
             "grid-heading": "Sunscreens at 499\/-",
             "grid-subheading": "Ultimate protection from UVA & UVB rays"
           }
@@ -419,8 +419,8 @@
           "settings": {
             "collekt": "sp-serums",
             "txter": "Serums",
-            "mdlpik": "shopify:\/\/shop_images\/SERUM.png",
-            "smlpik": "shopify:\/\/shop_images\/SERUM.png",
+            "mdlpik": "shopify:\/\/shop_images\/SERUM_1.png",
+            "smlpik": "shopify:\/\/shop_images\/SERUM_1.png",
             "grid-heading": "Serums at 499\/-",
             "grid-subheading": "Targeted solutions for all skin concerns"
           }
@@ -430,8 +430,8 @@
           "settings": {
             "collekt": "sp-masks",
             "txter": "Masks",
-            "mdlpik": "shopify:\/\/shop_images\/MASK.png",
-            "smlpik": "shopify:\/\/shop_images\/MASK.png",
+            "mdlpik": "shopify:\/\/shop_images\/MASK_1.png",
+            "smlpik": "shopify:\/\/shop_images\/MASK_1.png",
             "grid-heading": "Masks at 499\/-",
             "grid-subheading": ""
           }
