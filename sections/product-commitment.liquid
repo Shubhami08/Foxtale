@@ -1,0 +1,20 @@
+<div class="t4s-code__html container">
+{% if product.metafields.custom.product_commitments != blank %}
+ {{ product.metafields.custom.product_commitments }}
+{% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Product Commitment",
+    "settings": [
+
+    ],
+    "presets": [
+      {
+        "name": "Product Commitment",
+        "category": "Any"
+      }
+    ]
+  }
+{% endschema %}
