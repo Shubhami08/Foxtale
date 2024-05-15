@@ -405,11 +405,11 @@
           "type": "text",
           "settings": {
             "collekt": "",
-            "txter": "Moisturizers",
+            "txter": "Sunscreens",
             "mdlpik": "shopify:\/\/shop_images\/Untitled-2-02_1.jpg",
             "smlpik": "shopify:\/\/shop_images\/Untitled-2-02_1.jpg",
-            "grid-heading": "Moisturisers",
-            "grid-subheading": "Protected skin barrier & a boost of hydration"
+            "grid-heading": "Sunscreens at 499\/-",
+            "grid-subheading": "Ultimate protection from UVA & UVB rays.  Protected skin barrier & a boost of hydration"
           }
         },
         "fef43bcb-d73b-4c7f-8f0d-082414be522a": {
@@ -431,7 +431,7 @@
             "mdlpik": "shopify:\/\/shop_images\/Untitled-2-04_1.jpg",
             "smlpik": "shopify:\/\/shop_images\/Untitled-2-04_1.jpg",
             "grid-heading": "Sunscreens",
-            "grid-subheading": "Ultimate protection from UVA & UVB rays"
+            "grid-subheading": ""
           }
         }
       },
