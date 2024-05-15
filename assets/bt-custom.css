@@ -14808,8 +14808,8 @@ svg.t4s-iconsvg-close {
   margin: 10px 0;
 }
 .offer-limtedstoc img {
-  height: 66px;
-  width: 66px;
+  height: 50px;
+  width: 50px;
   padding: 4px;
   border: 1px solid #e9e9e9;
   border-radius: 50%;
@@ -14817,7 +14817,7 @@ svg.t4s-iconsvg-close {
 .offer-limtedstoc h4 {
   padding-left: 32px;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
 }
