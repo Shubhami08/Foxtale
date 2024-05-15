@@ -163,6 +163,18 @@
     left: 22px;
     display: none;
   }
+  .save-badge {
+    position: absolute;
+    color: #f05001;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 500;
+    top: 28px;
+    left: 22px;
+    display: none;
+  }
   .newshop-wrap ins.dcba {
     padding-right: 10px;
   }
@@ -352,6 +364,10 @@
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
       {{ 'products.product.on_sale' | t }}
     </span>
+    {%- endif -%}
+
+    {%- if product.metafields.custom.savingscustom != blank -%}
+      <span class="save-badge">{{ product.metafields.custom.savingscustom }}</span>
     {%- endif -%}
                   
                   <img
