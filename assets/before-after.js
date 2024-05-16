@@ -805,14 +805,23 @@
                     $('.bottom-ex div[data-id="1"]').show();
                     $('.bottom-ex div[data-id="2"]').hide();
                     $('.bottom-ex div[data-id="3"]').hide();
+                    $('.day-barbottom div.[data-id="1"]').addClass("active");
+                    $('.day-barbottom div.[data-id="2"]').removeClass("active");
+                    $('.day-barbottom div.[data-id="3"]').removeClass("active");
                   }else if(e.pageX - offsetX > second_img_width){
                     $('.bottom-ex div[data-id="1"]').hide();
                     $('.bottom-ex div[data-id="2"]').hide();
                     $('.bottom-ex div[data-id="3"]').show();
+                    $('.day-barbottom div.[data-id="1"]').removeClass("active");
+                    $('.day-barbottom div.[data-id="2"]').removeClass("active");
+                    $('.day-barbottom div.[data-id="3"]').addClass("active");
                   }else{
                     $('.bottom-ex div[data-id="1"]').hide();
                     $('.bottom-ex div[data-id="2"]').show();
                     $('.bottom-ex div[data-id="3"]').hide();
+                    $('.day-barbottom div.[data-id="1"]').removeClass("active");
+                    $('.day-barbottom div.[data-id="2"]').addClass("active");
+                    $('.day-barbottom div.[data-id="3"]').removeClass("active");
                   }
 				}
 			};
