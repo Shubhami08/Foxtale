@@ -15213,3 +15213,10 @@ a.hm {
     bottom: 30px;
   }
 }
+
+@media (max-width: 400px) {
+  .vega-text {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
