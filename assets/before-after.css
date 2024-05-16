@@ -511,6 +511,10 @@
     font-size: 12px;
     font-weight: 400;
   }
+  .bottom-ex h4 {
+    /* line-height: 15px;
+    text-align: left;  */
+  }
   .day-barbottom .day-one {
     text-align: left;
     color: #fff;
