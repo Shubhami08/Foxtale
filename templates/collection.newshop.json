@@ -392,8 +392,6 @@
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-04.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/Foxtale_bestsellers_banners-03.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Slashprice_web_banners-05_1.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Slashprice_web_banners-06_1.jpg",
             "collection_handle": "shop-2"
           }
         },
