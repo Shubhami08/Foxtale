@@ -802,17 +802,17 @@
                   var one_img_width = imgWidth/3;
                   var second_img_width = one_img_width * 2;
                   if(e.pageX - offsetX < one_img_width){
-                    $('.bottom-ex h4[data-id="1"]').show();
-                    $('.bottom-ex h4[data-id="2"]').hide();
-                    $('.bottom-ex h4[data-id="3"]').hide();
+                    $('.bottom-ex div[data-id="1"]').show();
+                    $('.bottom-ex div[data-id="2"]').hide();
+                    $('.bottom-ex div[data-id="3"]').hide();
                   }else if(e.pageX - offsetX > second_img_width){
-                    $('.bottom-ex h4[data-id="1"]').hide();
-                    $('.bottom-ex h4[data-id="2"]').hide();
-                    $('.bottom-ex h4[data-id="3"]').show();
+                    $('.bottom-ex div[data-id="1"]').hide();
+                    $('.bottom-ex div[data-id="2"]').hide();
+                    $('.bottom-ex div[data-id="3"]').show();
                   }else{
-                    $('.bottom-ex h4[data-id="1"]').hide();
-                    $('.bottom-ex h4[data-id="2"]').show();
-                    $('.bottom-ex h4[data-id="3"]').hide();
+                    $('.bottom-ex div[data-id="1"]').hide();
+                    $('.bottom-ex div[data-id="2"]').show();
+                    $('.bottom-ex div[data-id="3"]').hide();
                   }
 				}
 			};
