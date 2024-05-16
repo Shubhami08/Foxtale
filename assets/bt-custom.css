@@ -15216,6 +15216,10 @@ a.hm {
     margin: 0px 0 0;
     bottom: 30px;
   }
+  .text-sg img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 400px) {
