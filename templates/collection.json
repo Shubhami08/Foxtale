@@ -226,8 +226,8 @@
         "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/MIDNIGHT-SALE-B1G1-_-B2G2_WEB-BANNER.gif",
-            "image_1_mobile": "shopify:\/\/shop_images\/MIDNIGHT-SALE-B1G1-_-B2G2_MOBILE-BANNER.gif",
+            "image_1_desktop": "shopify:\/\/shop_images\/B1G1-Midnight-sale-website.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/B1G1-Midnight-sale-mobile.gif",
             "collection_handle": "midnight-sale"
           }
         },
