@@ -225,7 +225,7 @@ h6.pr-Protect {
             <div class="product-innr">
               {% if product.metafields.custom.pr_excerpt != blank %}
                 <h6 class="pr-{{ product.metafields.custom.pr_excerpt }} stepz">
-                  <span>Step{{ forloop.index }} .</span> {{ product.metafields.custom.pr_excerpt }}
+                  <span>Step {{ forloop.index }}.</span> {{ product.metafields.custom.pr_excerpt }}
                 </h6>
               {% endif %}
               <div class="product-image pr oh lazyloadt4sed product-innr-top">
