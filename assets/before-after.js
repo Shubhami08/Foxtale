@@ -768,7 +768,7 @@
 			};
 
 			$(window).on("resize.twentytwenty", function (e) {
-				adjustSlider(sliderPct);
+				adjustSlider(0.333333333333333);
 			});
 
 			var offsetX = 0;
