@@ -15134,6 +15134,9 @@ a.hm {
   width: 60px;
   height: 60px;
 }
+.mobile-shwnew {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .muktailayout-template .breadcrumbs {
@@ -15169,7 +15172,7 @@ a.hm {
     left: 16px;
   }
   .mobile-shwnew {
-    display: block;
+    display: block !important;
     padding: 0 15px;
   }
   .mobile-shwnew h2 {
