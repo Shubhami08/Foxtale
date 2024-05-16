@@ -1056,7 +1056,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Golden Summer Glow Essentials";
+           content: "All Time Bestsellers";
            font-size: 24px;
            font-weight: 500;
            line-height: 36px;
@@ -1454,6 +1454,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
               line-height: 25px;
             }
         {%endif%}
+        {% if collection.url contains 'midnight-sale'%}
+         .widget-title span:after {
+           content: "All Time Bestsellers";
+           font-size: 18px;
+         }
+       {%endif%}
        }
 
        @media screen and (min-width: 320px) and (max-width: 767px) {
