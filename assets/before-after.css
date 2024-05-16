@@ -28,6 +28,11 @@
   margin-top: -1.5px;
 }
 
+.fex {
+  display: flex;
+  align-items: center;
+}
+
 .twentytwenty-before-label,
 .twentytwenty-after-label,
 .twentytwenty-overlay {
