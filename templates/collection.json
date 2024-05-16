@@ -500,6 +500,14 @@
             "image_mobile": "shopify:\/\/shop_images\/SLEEK_BANNER_-02.jpg",
             "collection_handle": "frontpage"
           }
+        },
+        "image_ijCda9": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/MIDNIGT_SALE_MAY_GDN_Website_sleek_banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MIDNIGT_SALE_MAY_GDN_Mobile_sleek_banner.jpg",
+            "collection_handle": "midnight-sale"
+          }
         }
       },
       "block_order": [
@@ -514,7 +522,8 @@
         "image_HmryPz",
         "image_6xYcN7",
         "image_6nNydB",
-        "image_nE8V4k"
+        "image_nE8V4k",
+        "image_ijCda9"
       ],
       "settings": {
       }
