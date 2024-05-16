@@ -764,7 +764,7 @@
 						? (positionY - offsetY) / imgHeight
 						: (positionX - offsetX) / imgWidth;
 
-				return minMaxNumber(sliderPercentage, 0, 1);
+				return minMaxNumber(sliderPercentage, 0, 0.66);
 			};
 
 			$(window).on("resize.twentytwenty", function (e) {
