@@ -859,6 +859,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+      {% if collection.url contains 'shop' or 'products' %}
+         .t4s-pr-8265702342903 {
+           display: none;
+         } 
+       {%endif%}
+
        {% if collection.url contains 'shop-1'%}
          .bottom-leftext {
            visibility: hidden;
