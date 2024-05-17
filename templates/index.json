@@ -125,13 +125,12 @@
         },
         "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brand_Banners-13.jpg",
-            "image_mb": "shopify:\/\/shop_images\/Brand_Banners-12.jpg",
+            "image": "shopify:\/\/shop_images\/Website_banner.jpg",
+            "image_mb": "shopify:\/\/shop_images\/Mobile_banner_1_0921554b-7cd7-40d5-b712-e58a0bf2f635.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/shop",
+            "link_img1": "shopify:\/\/pages\/masterclass-sign-up",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
