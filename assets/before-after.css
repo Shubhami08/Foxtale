@@ -219,7 +219,7 @@
   top: 50%;
   margin-left: -22px;
   margin-top: -22px;
-  border: 5px solid #ffffff87;
+  /* border: 5px solid #ffffff87; */
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
   border-radius: 1000px;
@@ -231,7 +231,7 @@
 }
 
 .twentytwenty-horizontal .twentytwenty-handle:before {
-  bottom: 50%;
+  bottom: 72%;
   margin-bottom: 25px;
   -webkit-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
   -moz-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
@@ -264,7 +264,7 @@
 
 .twentytwenty-left-arrow {
   border-right: 6px solid white;
-  left: 50%;
+  left: 85%;
   margin-left: -17px;
 }
 
@@ -420,9 +420,9 @@
 .twentytwenty-container .twentytwenty-handle {
   width: 5rem;
   height: 5rem;
-  margin-left: -3rem;
-  background: #ffffff8a;
-  /* border: none; */
+  margin-left: -25px;
+  /* background: #ffffff8a;
+  border: none; */
   box-shadow: none;
 }
 .twentytwenty-container .twentytwenty-handle::before,
@@ -440,14 +440,17 @@
   background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Asset_1.png?v=1715776848");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto; */
+  background-size: auto; 
+  background-image: url(https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Asset_1.png?v=1715776848);
+  top: 50%;
+  left: 85%; */
+  background-image: url(https://cdn.shopify.com/s/files/1/0609/6096/4855/files/1NIACIANMIDE.png?v=1715943212);
   border: none;
   width: 100%;
   height: 100%;
-  top: 50%;
-  left: 85%;
+  width: 100px;
+  height: 100px;
   transform: translate(-50%, -50%);
-  background-image: url(https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Asset_1.png?v=1715776848);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
