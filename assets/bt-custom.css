@@ -15119,6 +15119,11 @@ span.shop1tag {
   .flickityt4s-prev-next-button.prev {
   left: 15px;
 }
+.muktailayout-template
+  .t4s-flicky-slider.t4s-slider-btn-style-outline
+  .flickityt4s-button {
+  border-width: 1px;
+}
 a.hm {
   position: relative;
   top: 3px;
