@@ -15107,12 +15107,14 @@ span.shop1tag {
 .muktailayout-template .t4s-product-form__variants {
   display: none;
 }
-.t4s-product__media-wrapper
+.muktailayout-template
+  .t4s-product__media-wrapper
   .t4s-flicky-slider
   .flickityt4s-prev-next-button.next {
   right: 15px;
 }
-.t4s-product__media-wrapper
+.muktailayout-template
+  .t4s-product__media-wrapper
   .t4s-flicky-slider
   .flickityt4s-prev-next-button.prev {
   left: 15px;
