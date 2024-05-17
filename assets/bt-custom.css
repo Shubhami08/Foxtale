@@ -15104,11 +15104,7 @@ span.shop1tag {
   margin: 30px 6px 10px 0;
 }
 .muktailayout-template .clickpost-edd__container,
-.muktailayout-template .t4s-product-form__variants,
-.muktailayout-template
-  button.flickityt4s-button.flickityt4s-prev-next-button.next,
-.muktailayout-template
-  button.flickityt4s-button.flickityt4s-prev-next-button.previous {
+.muktailayout-template .t4s-product-form__variants {
   display: none;
 }
 a.hm {
