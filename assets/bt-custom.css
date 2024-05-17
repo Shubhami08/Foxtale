@@ -15124,6 +15124,9 @@ span.shop1tag {
   .flickityt4s-button {
   border-width: 1px;
 }
+.muktailayout-template .t4s-flicky-slider .flickityt4s-button:hover {
+  color: #black;
+}
 .muktailayout-template
   .t4s-flicky-slider.t4s-slider-btn-style-outline
   .flickityt4s-button
