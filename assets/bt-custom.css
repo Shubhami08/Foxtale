@@ -15115,8 +15115,7 @@ span.shop1tag {
 }
 .muktailayout-template
   .t4s-product__media-wrapper
-  .t4s-flicky-slider
-  .flickityt4s-prev-next-button.prev {
+  .t4s-flicky-slider.flickityt4s-prev-next-button.previous {
   left: 15px;
 }
 .muktailayout-template
