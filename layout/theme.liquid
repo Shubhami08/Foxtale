@@ -878,6 +878,25 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            content: "Use Code: FOX1099";
            width: 155px;
          }    
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 3 Products to the cart and Use Code: FOX1099 at checkout to get De-Tan Scrub Free";
+           font-size: 12px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+           width: 100%;
+           padding: 15px;
+         }
        {%endif%}
       
        {% if collection.url contains 'offer-b1g1'%}
