@@ -398,8 +398,8 @@
         "image_GetAYE": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_43.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_44.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_49.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_50.jpg",
             "collection_handle": "shop-3"
           }
         },
