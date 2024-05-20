@@ -394,6 +394,7 @@
           },
           "75d97d28-d97c-478f-b125-3205b88a4be4": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>Buy 3 @ 1099 <\/strong>[Code:<strong> FOX1099<\/strong>]<\/p>",
