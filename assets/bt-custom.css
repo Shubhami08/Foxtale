@@ -15160,8 +15160,49 @@ a.hm {
 .mobile-shwnew {
   display: none;
 }
+.muktailayout-template .flickity-prev-next-button.previous {
+  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/left-arrow-in-circle-outline.png?v=1716200511");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 7%;
+  height: 7%;
+  background-color: transparent;
+  position: absolute;
+  margin-top: 20px;
+  top: 45%;
+  left: 0;
+  z-index: 1;
+  color: transparent;
+}
+.muktailayout-template .flickity-button:focus {
+  box-shadow: none !important;
+}
+.muktailayout-template .flickity-prev-next-button.next {
+  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/left-arrow-in-circle-outline.png?v=1716200511");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 7%;
+  height: 7%;
+  transform: rotateY(180deg);
+  background-color: transparent;
+  position: absolute;
+  top: 45%;
+  right: 0;
+  z-index: 1;
+  color: transparent;
+}
 
 @media (max-width: 768px) {
+  .muktailayout-template .flickity-prev-next-button.previous {
+    width: 9%;
+    height: 9%;
+  }
+  .muktailayout-template .flickity-prev-next-button.next {
+    width: 9%;
+    height: 9%;
+  }
   .muktailayout-template .breadcrumbs {
     margin: 12px auto 0 auto;
   }
