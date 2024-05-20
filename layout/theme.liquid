@@ -419,9 +419,11 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     sc(new URLSearchParams(window.location.search).get('clickid'));
   </script>
   <!-- End -->
+  {% assign limited_col = 'shop-1,shop-2,399-499-store,399-499-store-1,new-slashed-sale,new-slashed-sale-1' %}
+  {% assign limited_col_array = limited_col | split:',' %}
 
   <body
-    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}}"
+    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-default {% else %} show-new {% endif %}{% else %} show-new {% endif %}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     data-instant-allow-query-string
