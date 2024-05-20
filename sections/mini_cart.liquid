@@ -560,13 +560,39 @@
               {% endif %}
               
               {% endcomment %}
+              
+              {% assign cart_item_ids = '' %}
+              {% for item in cart_items %}
+                  {% assign cart_item_ids = cart_item_ids | append: ',' | append: item.id %}
+              {% endfor %}
+
+              {% assign cart_item_ids_array = cart_item_ids | split: ',' %}
+
+              {% if cart_item_ids_array contains '44409361957111' %}
+                {% if total_cart_prod > 2 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>You've unlocked a free SPF 50 Glow Sunscreen. <strong>Use code SPF</strong> at checkout.</p></div>
+                {% elsif total_cart_prod == 1 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 2 products to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
+                {% elsif total_cart_prod == 2 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 more product to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
+                {% endif %}
+              {% else %}
+                {% if total_cart_prod > 2 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 SPF 50 Glow Sunscreen. <strong>Use code SPF</strong> to get it for FREE!</p></div>
+                {% elsif total_cart_prod == 1 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 SPF 50 Glow Sunscreen and 1 more product. <strong>Use code SPF</strong></p></div>
+                {% elsif total_cart_prod == 2 %}
+                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 SPF 50 Glow Sunscreen. <strong>Use code SPF</strong> to get it for FREE!</p></div>
+                {% endif %}
+              {% endif %}
+              
 
               {% if total_cart_prod > 2 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>SPF</b> at checkout to get <a style="color: blue" href="https://foxtale.in/products/glow-sunscreen">SPF 50 Glow Sunscreen</a> FREE</p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
               {% elsif total_cart_prod == 1 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <a style="color: blue" href="https://foxtale.in/products/glow-sunscreen">SPF 50 Glow Sunscreen</a> FREE</p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799 + Sheet Mask</strong></p></div>
               {% elsif total_cart_prod == 2 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <a style="color: blue" href="https://foxtale.in/products/glow-sunscreen">SPF 50 Glow Sunscreen</a>n FREE</p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
               {% endif %}
               
             </div>
@@ -1452,3 +1478,12 @@ $(document).ready(function () {
   });
 
 </script>
+
+<style>
+  body.show-new .saleBar.show-default{
+    display:none !important;
+  }
+  body.show-default .saleBar.show-new{
+    display:none !important;
+  }
+</style>
