@@ -376,11 +376,12 @@
               <div class="t4s-row t4s-g-0">
                 <div class="rev" data-fera-container="457325" data-product_id="{{ product.id }}"></div>
                 <div data-product-single-media-group class="{{class_main}}t4s-col-12 t4s-col-item t4s-pr">
-
-                <div class="main-prod-slider">
+                  
+                  <div class="main-prod-slider">
                     {% for media in product_media %}
                     {% render 'product-thumbnail-new', media: media, height: height %}
                   {% endfor %}
+                    
 
                       {%- if se_stts.nav_dot and se_stts.dot_owl == 'number' -%}
                         <div class="flickityt4s-page-dots t4s-dots-list carousel--status{{ se_id }}"><span data-current-slide></span> / <span data-total-number></span></div>
