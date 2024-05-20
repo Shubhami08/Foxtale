@@ -220,11 +220,11 @@
                               {% endcomment %}
                               {% assign message = product.price | divided_by: 100 %}
                               {% if message <= 746 %}
-                                <p class="bottom-leftext">B2G1</p>
+                                <p class="bottom-leftext">Use Code: SPF</p>
                               {% else %}
                                 <p class="bottom-leftext">10% OFF</p>
                               {% endif %}
-                              <p class="bottom-rightext">Free Gift</p>
+                              <p class="bottom-rightext">Free SPF</p>
                             </div>
                           </div>
                         </div>
@@ -338,7 +338,7 @@
                             href="javascript:void(0)"
                             id="addtocart_sl"
                             class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
-                            style="{% if product.id== 8107533369591 %}pointer-events: none{% endif %}"
+                            style="{% if product.id== 8107533369591 %}{% endif %}"
                             data-variant-id="{{product.first_available_variant.id}}"
                             data-action-atc
                             rel="nofollow"
