@@ -386,7 +386,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 2 & Get 1 <\/strong>[Code:<strong> SPF<\/strong>]<\/p>",
+              "content": "<p><strong>Buy 2<\/strong> <strong>Get 1<\/strong> <strong>SPF 50 Sunscreen<\/strong> <strong>FREE <\/strong>[Code:<strong> SPF<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "",
               "dayx": 1
