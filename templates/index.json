@@ -411,55 +411,14 @@
     "a2bbc261-0ad0-4d83-a4d3-733bb515cc92": {
       "type": "slideshow",
       "blocks": {
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2": {
-          "type": "image_parent",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sleek_Bannner-01_2.jpg",
-            "image_mb": "shopify:\/\/shop_images\/Sleek_Bannner-02_1.jpg",
-            "image_position": "8",
-            "cl_img": "",
-            "link_img1": "shopify:\/\/collections\/products",
-            "open_link": "_self",
-            "animate_slide": "none",
-            "text_align": "start",
-            "text_align_mb": "center",
-            "content_width": "auto",
-            "cv_pos": 50,
-            "ch_pos": 50,
-            "cv_pos_mb": 50,
-            "ch_pos_mb": 50,
-            "bg_overlay": "#000000",
-            "bg_opacity": 0,
-            "bg_content_cl": "#ffffff",
-            "bg_content_op": 0,
-            "content_radius": 0,
-            "box_square": false,
-            "content_pd_tb": 15,
-            "content_pd_lr": 15,
-            "content_pd_tb_tb": 15,
-            "content_pd_lr_tb": 15,
-            "content_pd_tb_mb": 10,
-            "content_pd_lr_mb": 10,
-            "border_bl": false,
-            "br_color": "#222222",
-            "br_bg": "#ffffff",
-            "br_opacity": 50,
-            "br_style": "solid",
-            "br_pd": 20,
-            "br_pd_mb": 10,
-            "time_animation": 1,
-            "animation_delay": 40
-          }
-        },
         "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_46.jpg",
             "image_mb": "shopify:\/\/shop_images\/MOBILE_47.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "",
+            "link_img1": "https:\/\/foxtale.in\/products\/glow-sunscreen",
             "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
@@ -494,7 +453,6 @@
         }
       },
       "block_order": [
-        "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-2",
         "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1"
       ],
       "settings": {
