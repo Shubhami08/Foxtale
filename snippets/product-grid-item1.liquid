@@ -190,7 +190,7 @@ endif -%}
                     {% else %}
                   {% assign message = product.price | divided_by: 100 %}
                      {% if message <= 746 %}
-                       <p class="bottom-leftext">Use Code: SPF</p>
+                       <p class="bottom-leftext">BYOB</p>
                      {% else %}
                        <p class="bottom-leftext">10% OFF</p>
                      {% endif %}
@@ -210,7 +210,7 @@ endif -%}
                    {% elsif collection.title == "Exclusive Sale" %}
                     <p class="bottom-rightext"></p>
                    {% else %}
-                    <p class="bottom-rightext">Free SPF</p>   
+                    <p class="bottom-rightext">Free Gift</p>   
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}
