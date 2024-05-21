@@ -15171,7 +15171,7 @@ a.hm {
   position: absolute;
   margin-top: 20px;
   top: 45%;
-  left: 0;
+  left: 8px;
   z-index: 1;
   color: transparent;
 }
@@ -15189,7 +15189,7 @@ a.hm {
   background-color: transparent;
   position: absolute;
   top: 45%;
-  right: 0;
+  right: 8px;
   z-index: 1;
   color: transparent;
 }
@@ -15198,10 +15198,12 @@ a.hm {
   .muktailayout-template .flickity-prev-next-button.previous {
     width: 8%;
     height: 8%;
+    left: 8px;
   }
   .muktailayout-template .flickity-prev-next-button.next {
     width: 8%;
     height: 8%;
+    right: 8px;
   }
   .muktailayout-template .breadcrumbs {
     margin: 12px auto 0 auto;
