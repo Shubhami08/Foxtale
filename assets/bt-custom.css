@@ -15161,7 +15161,7 @@ a.hm {
   display: none;
 }
 .muktailayout-template .flickity-prev-next-button.previous {
-  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/left-arrow-in-circle-outline.png?v=1716200511");
+  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/back.png?v=1716270041");
   background-repeat: no-repeat;
   background-size: 100%;
   display: inline-block;
@@ -15179,7 +15179,7 @@ a.hm {
   box-shadow: none !important;
 }
 .muktailayout-template .flickity-prev-next-button.next {
-  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/left-arrow-in-circle-outline.png?v=1716200511");
+  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/back.png?v=1716270041");
   background-repeat: no-repeat;
   background-size: 100%;
   display: inline-block;
