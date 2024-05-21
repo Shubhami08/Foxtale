@@ -15299,6 +15299,7 @@ a.hm {
 }
 
 .stamped-rewards-earnings .stamped-rewards-widget-item:nth-child(4),
-.stamped-rewards-earnings .stamped-rewards-widget-item:last-child {
+.stamped-rewards-earnings .stamped-rewards-widget-item:last-child,
+.stamped-rewards-widget-buttons {
   display: none !important;
 }
