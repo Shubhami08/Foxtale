@@ -22,6 +22,8 @@
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/HP_BANNERS-04.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/HP_BANNERS-03_1.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/GLOW10_GLOW15-03.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/GLOW10_GLOW15-04.jpg",
             "collection_handle": "shop"
           }
         },
