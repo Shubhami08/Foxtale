@@ -15297,3 +15297,8 @@ a.hm {
     font-size: 10px !important;
   }
 }
+
+.stamped-rewards-earnings .stamped-rewards-widget-item:nth-child(4),
+.stamped-rewards-earnings .stamped-rewards-widget-item:last-child {
+  display: none !important;
+}
