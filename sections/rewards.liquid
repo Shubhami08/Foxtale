@@ -17,7 +17,7 @@
     .rewards-content {text-align: left;}
     .rewards-content .reward-box {max-width: 1200px; width: 100%; margin: 0 auto; padding: 20px 20px;}
     .referal-heading-main, .rewards-heading-main {font-size: 36px; text-align: center; margin: 50px auto 20px; text-transform: initial; letter-spacing: 1px;}
-    . {
+    .rhedinng {
       font-size: 23px !important;
       font-weight: 500;
       margin-bottom: 20px !important;
@@ -26,35 +26,37 @@
       line-height: 1.4;
       color: #222222;
     }
-    {
-      margin-bottom: 15px;
-    }
-    {
-      height: 40px;
-      width: 40px;
-    }
-    {
+    .below-number {
       font-weight: 600;
       font-size: 23px;
       color: #000;
       margin: 15px 0 10px;
     }
-    {
+    .flexy {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       padding: 0 0 50px !important;
+    }
+
+    @media (max-width: 768px) {
+     .flexy {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
     }
   </style>
   {% comment %}{% if customer %}{% else %}{% endif %}{% endcomment %}
   <div class="oh pr nt_img_txt" style="margin-left: -15px; margin-right: -15px; padding-bottom: 50px;">
     <div class="dek_img_slide">
       <img
-        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/DESKTOP_40.jpg?v=1716188727"
+        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/new_fox_charms_Banner_2.jpg?v=1671781683"
         alt="Referral and Rewards"
         style="display: block; margin-left: auto; margin-right: auto;"
       >
     </div>
     <div class="mb_img_slide">
       <img
-        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/MOBILE_41.jpg?v=1716188726"
+        src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/new_fox_charms_Banner_2.jpg?v=1671781683"
         alt="Referral and Rewards"
         style="display: block; margin-left: auto; margin-right: auto;"
       >
@@ -92,21 +94,55 @@
         If you don’t have an account with us, sign up or if you are an existing customer, just log in, and refer your
         friends and family to Foxtale.
       </p>
-      <a href="" class="stamped-rewards-page-text stamped-rewards-widget-description">
-         <p style="color: #000;" class="stamped-rewards-page-text stamped-rewards-widget-description">Click here to get your referral Code</p>
-      </a>
       <p
         class="stamped-rewards-page-text stamped-rewards-widget-description"
         style="font-size: 16px; font-weight: 600;"
       >
-        You Get 250 POPcoins and they get ₹100 discount coupon. So, get your address book ready and
+        You Get ₹250 OFF on your next purchase and they Get a ₹100 discount coupon. So, get your address book ready and
         start cashing in the rewards.
       </p>
     </div>
   {% endif %}
   <h2 class="rewards-heading-main">Rewards Program</h2>
-  <div id="stamped-rewards-widget" data-widget-type="rewards-how-it-works"></div>
-  <div id="stamped-rewards-widget" data-widget-type="rewards-earnings-v2"></div>
+  <h2 class="rhedinng">How it Works</h2>
+  <div class="flexy">
+    <div style="padding-top: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="background-color: #e85a28 !important; height: 40px; width: 40px; border-radius: 100%; display: flex; align-items: center; justify-content: center;"><span style="font-weight: 600;color: #fff;font-size: 16px;">1</span></div>
+      <p class="below-number">Join</p>
+      <a id="kp-login-button-header-logo" style="text-decoration: none;border-bottom: 0px solid currentColor;"><h6>Login</h6></a>
+    </div>
+    <div style="padding-top: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="background-color: #e85a28 !important; height: 40px; width: 40px; border-radius: 100%; display: flex; align-items: center; justify-content: center;"><span style="font-weight: 600;color: #fff;font-size: 16px;">2</span></div>
+      <p class="below-number">Earn Points</p>
+      <h6>10 FOX CHARMS on every Rs. 100 Spend</h6>
+    </div>
+    <div style="padding-top: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="background-color: #e85a28 !important; height: 40px; width: 40px; border-radius: 100%; display: flex; align-items: center; justify-content: center;"><span style="font-weight: 600;color: #fff;font-size: 16px;">3</span></div>
+      <p class="below-number">Redeem</p>
+      <h6>At Checkout, apply loyalty discount</h6>
+    </div>
+  </div>
+  <h2 class="rhedinng">Ways to Earn Points</h2>
+  <div class="flexy">
+    <div style="padding: 20px;text-align: center; margin: 10px;border: 1px solid #ccc; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img style="margin-bottom: 15px; width: 50px; height: 50px;" src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Untitled-5-04.png?v=1716309390">
+      <h6 style="margin-bottom: 5px; font-weight: bold;">Celebrate a birthday</h6>
+      <p style="margin: 10px 0 20px 0;">500 Fox Charms (Coins)</p>
+      <a style="text-decoration: none;border-bottom: 0px solid currentColor;background: #eee;color: #000;padding: 5px 15px;cursor: pointer;border: none;font-size: 1em;"><h6>Follow Now</h6></a>
+    </div>
+    <div style="padding: 20px;text-align: center; margin: 10px;border: 1px solid #ccc; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img style="margin-bottom: 15px; width: 50px; height: 50px;" src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Untitled-5-05.png?v=1716309389">
+      <h6 style="margin-bottom: 5px; font-weight: bold;">Follow us on Instagram</h6>
+      <p style="margin: 10px 0 20px 0;">500 Fox Charms (Coins)</p>
+      <a style="text-decoration: none;border-bottom: 0px solid currentColor;background: #eee;color: #000;padding: 5px 15px;cursor: pointer;border: none;font-size: 1em;"><h6>Follow Now</h6></a>
+    </div>
+    <div style="padding: 20px;text-align: center; margin: 10px;border: 1px solid #ccc; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img style="margin-bottom: 15px; width: 50px; height: 50px;" src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Untitled-5-06.png?v=1716309390">
+      <h6 style="margin-bottom: 5px; font-weight: bold;">Write a Review</h6>
+      <p style="margin: 10px 0 20px 0;">500 Fox Charms (Coins)</p>
+      <a style="text-decoration: none;border-bottom: 0px solid currentColor;background: #eee;color: #000;padding: 5px 15px;cursor: pointer;border: none;font-size: 1em;"><h6>Follow Now</h6></a>
+    </div>
+  </div>
   <div
     id="stamped-rewards-widget"
     data-widget-type="rewards-spendings"
