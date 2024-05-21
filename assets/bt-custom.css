@@ -15196,12 +15196,12 @@ a.hm {
 
 @media (max-width: 768px) {
   .muktailayout-template .flickity-prev-next-button.previous {
-    width: 9%;
-    height: 9%;
+    width: 8%;
+    height: 8%;
   }
   .muktailayout-template .flickity-prev-next-button.next {
-    width: 9%;
-    height: 9%;
+    width: 8%;
+    height: 8%;
   }
   .muktailayout-template .breadcrumbs {
     margin: 12px auto 0 auto;
