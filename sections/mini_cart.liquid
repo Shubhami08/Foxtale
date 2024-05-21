@@ -559,7 +559,7 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
               {% endif %}
               
-              {% endcomment %}
+              
               
               {% assign cart_item_ids = '' %}
               {% for item in cart_items %}
@@ -585,7 +585,7 @@
                   <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">FREE Sunscreen unlocked <strong>Use code: SPF</strong> at the next step to get your sunscreen.</p></div>
                 {% endif %}
               {% endif %}
-              
+              {% endcomment %}
 
               {% if total_cart_prod > 2 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
