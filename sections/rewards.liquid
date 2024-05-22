@@ -42,6 +42,18 @@
       grid-template-columns: 1fr 1fr;
       padding: 0 0 50px !important;
     }
+    .mrhedding {
+      margin: 25px 0 0 0 !important;
+      padding: 0 0 50px !important;
+      border-bottom: 1px solid #eaeaec;
+
+    }
+    .mrhedding h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 500;
+      text-align: center;
+    }
 
     @media (max-width: 768px) {
      .flexy, .gridy {
@@ -67,12 +79,10 @@
       >
     </div>
   </div>
-  <div
-    id="stamped-rewards-widget"
-    data-widget-type="rewards-summary"
-    data-label-greeting-anonymous="Hello, fellow skincare enthusiast!"
-    data-label-greeting-description="Are you ready to become our friend with benefits? After all, being a part of the Foxtale community comes with some special rewards. Let’s get started."
-  ></div>
+  <div class="mrhedding">
+    <h2>Earn points everytime you shop!</h2>
+    <a style="text-decoration: none;border-bottom: 0px solid currentColor;background: #eee;color: #000;padding: 5px 15px;cursor: pointer;border: none;font-size: 1em;width: 150px;display: flex;justify-content: center;margin: 0 auto;"><h6>Join Now</h6></a>
+  </div>
   <h2 class="referal-heading-main">Refer and Earn</h2>
   {% if customer %}
     <div class="stamped-rewards-page-refer-section-holder" style="text-align: center;">
