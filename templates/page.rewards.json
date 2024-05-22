@@ -114,6 +114,14 @@
             "content": "<p>Here are some ways you can use the Fox Charms you earn on Foxtale:<\/p><ul><li>Redeem them for exclusive offers and discounts on Foxtale products.<\/li><li>Use coins to get discounts on partner brands participating in the Fox Charms program.<\/li><\/ul>"
           }
         },
+        "accor_item_QrXfCM": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Is it possible to use Fox Charms as the sole payment method for shopping on Foxtale?",
+            "content": "<p>No, it is not possible to use Fox Charms for the entire purchase amount. Fox Charms can only be used to get a discount on a certain value of the cart, and the discount percentage is available on our website.<\/p>"
+          }
+        },
         "accor_item_rnBMyg": {
           "type": "accor_item",
           "settings": {
@@ -162,6 +170,7 @@
         "accor_item_CQPcCB",
         "accor_item_gYm7QA",
         "accor_item_wRP7Nf",
+        "accor_item_QrXfCM",
         "accor_item_rnBMyg",
         "accor_item_7XPzT4",
         "accor_item_aJ6pT3",
