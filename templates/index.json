@@ -455,6 +455,7 @@
       "block_order": [
         "template--16759590191351__a2bbc261-0ad0-4d83-a4d3-733bb515cc92-image_parent-1"
       ],
+      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt_f",
         "custom_dk": true,
@@ -538,7 +539,6 @@
       "block_order": [
         "image_parent_LMiWy7"
       ],
-      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt",
         "custom_dk": true,
