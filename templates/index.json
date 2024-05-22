@@ -7,7 +7,7 @@
           "type": "image_parent",
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_35.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_34.jpg",
+            "image_mb": "shopify:\/\/shop_images\/VERTICAL.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
@@ -88,7 +88,7 @@
           "type": "image_parent",
           "settings": {
             "image": "shopify:\/\/shop_images\/HP_BANNERS-02.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_36.jpg",
+            "image_mb": "shopify:\/\/shop_images\/HP_BANNERS_Recovered_-10.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/products\/skin-radiance-mask",
@@ -128,7 +128,7 @@
           "type": "image_parent",
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_32.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_31.jpg",
+            "image_mb": "shopify:\/\/shop_images\/TRIAL_BANNER_360x475-07.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/shop",
