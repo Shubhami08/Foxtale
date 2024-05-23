@@ -374,8 +374,8 @@
         "image_LRQy7A": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/banners_30_off-02_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/banners_30_off-01_1.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/banners_new30-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/banners_new30-01.jpg",
             "collection_handle": "new30"
           }
         },
