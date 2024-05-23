@@ -2650,7 +2650,7 @@
       },
       "15456654304285839333": {
         "type": "shopify:\/\/apps\/popcoins-loyalty-foxtale\/blocks\/pop_coin_embed\/d9bbc9b1-f9dc-401c-9a2e-a5d8d02fb695",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "iframe_url": "https:\/\/floater30.mypopcoins.com\/?brand=INDIGIFTS",
           "popcartdrawerdiv": "cart-drawer .cart_total",
