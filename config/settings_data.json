@@ -2647,6 +2647,22 @@
         "settings": {
           "custom_swatch_code": "<script><\/script>"
         }
+      },
+      "15456654304285839333": {
+        "type": "shopify:\/\/apps\/popcoins-loyalty-foxtale\/blocks\/pop_coin_embed\/d9bbc9b1-f9dc-401c-9a2e-a5d8d02fb695",
+        "disabled": false,
+        "settings": {
+          "iframe_url": "https:\/\/floater30.mypopcoins.com\/?brand=INDIGIFTS",
+          "popcartdrawerdiv": "cart-drawer .cart_total",
+          "popcartdraweritems": "cart-drawer li.cart-item",
+          "popcartdraweritemsearn": ".cart-item__details:first",
+          "popcartdrawersubtotal": "cart-drawer .cart_total:nth-child(2)",
+          "popcartpagediv": "[data-section-type='cart-template'] .cart_total",
+          "popcartpageitems": "[data-section-type='cart-template'] tr.cart-item",
+          "popcartpageitemsearn": ".cart-totals:first",
+          "popcartpagesubtotal": "[data-section-type='cart-template'] .cart__subtotal",
+          "plppricedivs": ".card-wrapper .price-item"
+        }
       }
     }
   }
