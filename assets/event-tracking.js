@@ -607,21 +607,21 @@ const observationConfig = [
 
 // Setting up distinct id of the user if it is logged in
 const mixpanelLocalStorageObject = JSON.parse(localStorage.getItem("mp_870b72f7101d6cff39515fddb9874ded_mixpanel"));
-let mixpanelDistinctId = JSON.parse(localStorage.getItem("mixpanel_distinct_id")) || mixpanelLocalStorageObject?.["distinct_id"]
+let mixpanelDistinctId = JSON.parse(localStorage.getItem("mp_distinct_id")) || mixpanelLocalStorageObject?.["distinct_id"]
 
 if (!mixpanelDistinctId) {
   const randomGeneratedDistinctId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
-  localStorage.setItem('mixpanel_distinct_id', JSON.stringify(randomGeneratedDistinctId));
+  localStorage.setItem('mp_distinct_id', JSON.stringify(randomGeneratedDistinctId));
   mixpanelDistinctId = randomGeneratedDistinctId;
 }
 
 const kwikPassCustomerId = localStorage.getItem("kp_customer_id")
 
 console.log("kwikPassCustomerId: ", kwikPassCustomerId);
-console.log("mixpanel_distinct_id", mixpanelDistinctId);
+console.log("mp_distinct_id", mixpanelDistinctId);
 // console.log("mixpanelLocalStorageObject?.['distinct_id']: ", mixpanelLocalStorageObject)?.["distinct_id"]
 // console.log("mixpanel local storage object", mixpanelLocalStorageObject);
 // if (mixpanelDistinctId || mixpanelLocalStorageObject?.["distinct_id"]) {
@@ -631,7 +631,7 @@ console.log("mixpanel_distinct_id", mixpanelDistinctId);
 // if (kwikPassCustomerId) {
 //   console.log('kwikPassCustomerId', kwikPassCustomerId)
 //   // mixpanel.identify(kwikPassCustomerId);
-//   localStorage.setItem("mixpanel_distinct_id", kwikPassCustomerId);
+//   localStorage.setItem("mp_distinct_id", kwikPassCustomerId);
 //   mixpanelDistinctId = kwikPassCustomerId
 // }
 // mixpanel.people.set_once({
