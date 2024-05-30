@@ -85,6 +85,7 @@
         },
         "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/COMBO_BANNER_OPT_2-01.jpg",
             "image_mb": "shopify:\/\/shop_images\/COMBO_BANNER_OPT_2-05.jpg",
@@ -497,8 +498,8 @@
         "image_parent_LMiWy7": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SLEEK_BANNER-01.jpg",
-            "image_mb": "shopify:\/\/shop_images\/SLEEK_BANNER-02.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_37.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_38.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/products\/back-to-basics-combo",
