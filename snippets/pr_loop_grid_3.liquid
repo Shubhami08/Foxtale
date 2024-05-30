@@ -55,6 +55,11 @@
    <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
 </div>
 {%- endif -%}
+  {% if product.metafields.custom.spotlight_tag != blank %}
+    <span class="spotlight-tag">
+      {{ product.metafields.custom.spotlight_tag }}
+    </span>
+  {% endif %}
 <div class="product-info mt__15 mb__10" data-pr-id="{{ product.handle }}" >
    {%- if product.vendor.size > 0 and show_vendor -%}
    <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
@@ -103,7 +108,7 @@
                               </span>   
                   <div class="discount-msg">
                      {% assign message = product.price | divided_by: 100 %}
-                        {% if message <= 497 %}
+                        {% if message <= 746 %}
                           <p class="bottom-leftext">BYOB</p>
                         {% else %}
                            <p class="bottom-leftext">10% OFF</p>
