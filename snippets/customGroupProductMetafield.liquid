@@ -1,6 +1,6 @@
 {% if product.metafields.my_fields.group_product_items %}
   {% assign itemHandle = product.metafields.my_fields.group_product_items | split: '@' %}
-  <div class="container">
+  <div class="container cont-old">
     <div class="row">
       {% for handle in itemHandle %}
         {% assign group_item = all_products[handle] %}

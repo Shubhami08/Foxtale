@@ -203,33 +203,24 @@ h6.pr-Protect {
 
 <div class="benefits-slider t4s-code__html container">
   <div class="benefit-left">
-    <h3>Directions of use</h3>
-    <h4><span>How to Use? : </span>Take a pea-sized amount and gently pat it onto a cleansed face in your morning routine.</h4>
-    <h4><span>When to Use? : </span>Daily in the morning, or whenever required as a touch-up.</h4>
-
+    {% if product.metafields.custom.enhance_benefits_content_1 != blank %}
+    {{ product.metafields.custom.enhance_benefits_content_1 }}
+    {% endif %}
+    {% if product.metafields.custom.enhance_benefits_content_2 != blank %}
     <div class="dot-tex">
-      <h3>Things to Remember</h3>
-      <ul>
-        <li>Store in a cool, dry place</li>
-        <li>Avoid contact with eyes</li>
-        <li>Always do a patch test</li>
-      </ul>
-  
-      <h3>Know the Ingredients</h3>
-      <ul>
-        <li>5% Niacinamide</li>
-        <li>Olive Leaf Extract</li>
-      </ul>
+      {{ product.metafields.custom.enhance_benefits_content_2 }}
     </div>
+    {% endif %}
   </div>
 
+  {% assign collection = collections[product.metafields.custom.enhance_benefits_collection] %}
+  {% if collection != blank %}
   <div class="benefit-right">
     <h3>Enhance Benefits<span>Recommended</span></h3>
-    <h4>Maximise the Impact of <span>Niacinamide Serum</span></h4>
+    <h4>Maximise the Impact of <span>{{ product.title }}</span></h4>
     <div class="direct-mainwrap">
-      {% assign collection = collections[section.settings.collection] %}
       <div class="newroute products-grid-item-main" >
-        {%- for product in collection.products -%}
+        {%- for product in collection.products limit:4 -%}
           <div class="products-grid-item">
             <div class="product-innr">
               {% if product.metafields.custom.pr_excerpt != blank %}
@@ -272,20 +263,12 @@ h6.pr-Protect {
       </div>
     </div>
   </div>
+  {% endif %}
+  {% if product.metafields.custom.enhance_benefits_content_2 != blank %}
   <div class="dot-tex1 benefit-left">
-      <h3>Things to Remember</h3>
-      <ul>
-        <li>Store in a cool, dry place</li>
-        <li>Avoid contact with eyes</li>
-        <li>Always do a patch test</li>
-      </ul>
-  
-      <h3>Know the Ingredients</h3>
-      <ul>
-        <li>5% Niacinamide</li>
-        <li>Olive Leaf Extract</li>
-      </ul>
+      {{ product.metafields.custom.enhance_benefits_content_2 }}
   </div>
+  {% endif %}
 </div>
 
 <script>
@@ -335,13 +318,7 @@ h6.pr-Protect {
 {% schema %}
 {
   "name": "Custom BenefitSlide",
-  "settings": [
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Select Collection"
-    }
-  ],
+  "settings": [],
   "presets": [
     {
       "name": "Custom BenefitSlide",

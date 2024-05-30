@@ -432,29 +432,7 @@
 .twentytwenty-container .twentytwenty-overlay {
   display: none;
 }
-.twentytwenty-container .twentytwenty-left-arrow {
-  /* width: 2rem;
-  height: 2rem;
-  top: 20px;
-  left: 32px;
-  background-image: url("https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Asset_1.png?v=1715776848");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto; 
-  background-image: url(https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Asset_1.png?v=1715776848);
-  top: 50%;
-  left: 85%; */
-  background-image: url(https://cdn.shopify.com/s/files/1/0609/6096/4855/files/1NIACIANMIDE.png?v=1715943212);
-  border: none;
-  width: 100%;
-  height: 100%;
-  width: 100px;
-  height: 100px;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
+
 .twentytwenty-container .twentytwenty-right-arrow {
   display: none;
 }

@@ -259,6 +259,12 @@ endif -%}
           {% endfor %}
         </p>
       </div>
+      {% else %}
+      <div class="group_product_items">
+        <p style="margin-bottom: 5px; line-height: 1.2; font-size: 12px;">
+        {{ product.metafields.custom.combo_name_plus }}
+        </p>
+      </div>
     {% endif %}
     {{ product.metafields.global['product-sub-title'] }}
     <div class="review-wrap pr-review small-show">

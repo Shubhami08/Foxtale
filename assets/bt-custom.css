@@ -9547,6 +9547,9 @@ table tr td {
   .flickity-viewport {
     min-height: 420px !important;
   }
+  /* .muktailayout-template .flickity-viewport {
+    min-height: 100% !important;
+  } */
 }
 
 .pr-variant-price .t4s-product-price {
@@ -9702,7 +9705,9 @@ table tr td {
   .flickity-viewport {
     min-height: 325px !important;
   }
-
+  /* .muktailayout-template .flickity-viewport {
+    min-height: 100% !important;
+  } */
   .type_featured_collection_owl .row_pr_3 .flickity-button {
     bottom: 235px !important;
   }

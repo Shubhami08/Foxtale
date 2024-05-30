@@ -419,11 +419,11 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     sc(new URLSearchParams(window.location.search).get('clickid'));
   </script>
   <!-- End -->
-  {% assign limited_col = 'shop-1,shop-2,399-499-store,399-499-store-1,new-slashed-sale,new-slashed-sale-1' %}
+  {% assign limited_col = 'phonepe-sunscreen-offer' %}
   {% assign limited_col_array = limited_col | split:',' %}
 
   <body
-    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-default {% else %} show-new {% endif %}{% else %} show-new {% endif %}"
+    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-gift {% else %} hide-gift {% endif %}{% else %} hide-gift {% endif %} {% if collection.url contains 'shop-3'%}shop-3{% endif %} {% if collection.url contains 'b2g2-detan'%}shop-4{% endif %} {% if collection.url contains 'phonepe-flat-400-off'%}phonefourhundred{% endif %} {% if collection.url contains 'flat-200-off-phonepe'%}phonetwohundred{% endif %}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     data-instant-allow-query-string
@@ -785,6 +785,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         #custom-cart-value {
           display: none;
         }
+        .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Exclusive prices for our new users!";
+           font-size: 12px;
+           width: max-content;
+         }
       {%endif%}
 
       {% if collection.url contains 'buy-1-get-1-free-gpay-1'%}
@@ -841,6 +855,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          .save-badge {
            display: block !important;
          } 
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Exclusive prices for our new users!";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
 
        {% if collection.url contains 'new-slashed-sale' %}
@@ -862,7 +890,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
       {% if collection.url contains 'shop' or 'products' %}
-         .t4s-pr-8265702342903 {
+         .t4s-pr-8265702342903, .t4s-pr-8296078606583 {
            display: none !important;
          } 
        {%endif%}
@@ -902,6 +930,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            width: 100%;
            padding: 15px;
          }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 3 @ 1099 [Code: FOX1099]";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
       
        {% if collection.url contains 'offer-b1g1'%}
@@ -916,7 +958,43 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            left: 0;
            content: "B1G1";
            width: 150px;
-         }    
+         } 
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 2 Products to the cart and Use Code: B1G1 at checkout to get 1 Product Free";
+           font-size: 12px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+           width: 100%;
+           padding: 15px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 1 Get 1 Free";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
 
        {% if collection.url contains 'shop-2'%}
@@ -954,6 +1032,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            width: 100%;
            padding: 15px;
          }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free [Code: SUN4]";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
 
        {% if collection.url contains 'shop-3'%}
@@ -981,9 +1073,165 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            content: "Free SPF";
            width: 150px;
          }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 [Code: SPF]";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
 
-       {% if collection.url contains 'products-1'%}
+       {% if collection.url contains 'gpay-b2g2'%}
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 4 Products to the cart and Use code at checkout to get 2 Products Free";
+           font-size: 12px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+           width: 100%;
+           padding: 15px;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'phonepe-b2g2'%}
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 4 Products to the cart and Use code at checkout to get 2 Products Free";
+           font-size: 12px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+           width: 100%;
+           padding: 15px;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'phonepe-flat-400-off'%}
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Get flat ₹400 Off on orders above ₹999";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'flat-200-off-phonepe'%}
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Get flat ₹200 Off on orders above ₹599";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'b2g2-detan'%}
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+           pointer-events: none;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 [Code: DETAN]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+           width: 150px;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'products'%}
          .bottom-leftext {
            visibility: hidden;
            position: relative;
@@ -1022,6 +1270,21 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            left: 0;
            content: "30*% off";
            width: 200px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+           pointer-events: none;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "30% Off for new users";
+           font-size: 12px;
+           width: max-content;
          }
        {%endif%}
 
@@ -1535,6 +1798,14 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        }
 
        @media screen and (min-width: 320px) and (max-width: 767px) {
+         {% if product.handle contains 'spf-70-matte-finish-sunscreen-1' %}
+            .flickity-viewport {
+              min-height: 432px !important;
+            }
+            .mobile-shwnew {
+              margin-top: 12px;
+            }
+         {%endif%}
          
          {% if product.handle contains 'skin-radiance-mask' %}
            .customproduct1-template .result-section .result-section-content {
@@ -1648,6 +1919,15 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if product.handle contains 'back-to-basics-combo' %}
+         .container.cont-new {
+           display: block;
+         }
+         .container.cont-old {
+           display: none;
+         }
+       {%endif%}
+
        {% if product.handle contains 'multivitamin-toner-mist' %}
          .template-product .t4s-sticky-atc {
            transform: none !important;
@@ -1701,9 +1981,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
-       {% if product.handle contains 'glow-sunscreen' %}
-
-       {%endif%}
+       {% if product.handle contains 'spf-70-matte-finish-sunscreen-1' %}
+          h6.pr-Treat {
+            color: #fe7c05 !important;
+          }
+          .flickity-viewport {
+            min-height: 578px;
+          }
+          .bottom-ex, .don {
+            display: none !important;
+          }
+          .day-barbottom {
+            grid-template-columns: 1fr 1fr;
+          }
+          .day-barbottom .day-one {
+            text-align: center;
+          }
+       {% endif %}
 
        {% if product.handle contains 'lip-mask' %}
          .template-product .t4s-sticky-atc {

@@ -307,11 +307,12 @@
                     </div>
                     </div>
                     <div class="native_cart_info">
-                       <a class="native_cart_title">Upgrade your free gift!</a>
+                       <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
+                      <a class="native_cart_title lg2">Unlock your free sunscreen!</a>
                       <div class="native_cart_details">
                      {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
                       {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
-                      <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span>
+                      <!-- <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span> -->
                        </div>
                     </div>
                  </div>
@@ -332,11 +333,12 @@
                     </div>
                     </div>
                     <div class="native_cart_info">
-                       <a class="native_cart_title">Upgrade your free gift!</a>
+                       <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
+                      <a class="native_cart_title lg2">Unlock your free sunscreen!</a>
                       <div class="native_cart_details">
                      {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
                       {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
-                      <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span>
+                      <!-- <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span> -->
                        </div>
                     </div>
                  </div>
@@ -595,15 +597,57 @@
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
               {% endif %}
 
+                            {% if total_cart_prod > 2 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799 + Sheet Mask</strong></p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
+              {% endif %}
+
               {% endcomment %}
 
               {% if total_cart_prod > 2 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
               {% elsif total_cart_prod == 1 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799 + Sheet Mask</strong></p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799 + Sheet Mask</strong></p></div>
               {% elsif total_cart_prod == 2 %}
-                <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
               {% endif %}
+
+            {% if cart.items_subtotal_price > 59900 %}
+              <div class="saleBar show-new" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPPSUN</b> to get this sunscreen for free</p></div>
+            {% else %}
+              <div class="saleBar show-new" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 59900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to unlock a <b>Free Sunscreen</b></p></div>
+            {% endif %}
+
+              {% if total_cart_prod > 2 %}
+                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>SPF</b> at checkout</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
+              {% endif %}
+
+              {% if total_cart_prod > 2 %}
+                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>DETAN</b> at checkout</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <strong>De-tan Scrub</strong> Free</p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <strong>De-tan Scrub</strong> Free</p></div>
+              {% endif %}
+
+              {% if cart.items_subtotal_price > 99900 %}
+                <div class="saleBar phonefourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPP400</b> at checkout to get ₹400 Off</p></div>
+              {% else %}
+                <div class="saleBar phonefourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 99900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹400 Off</b></p></div>
+              {% endif %}
+              
+            {% if cart.items_subtotal_price > 59900 %}
+              <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPP200</b> at checkout to get ₹200 Off</p></div>
+            {% else %}
+              <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 59900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹200 Off</b></p></div>
+            {% endif %}
               
             </div>
             
@@ -1490,10 +1534,32 @@ $(document).ready(function () {
 </script>
 
 <style>
-  body.show-new .saleBar.show-default{
+  body.hide-gift .saleBar.show-new,body.hide-gift #gift_1_wrap,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred{
     display:none !important;
   }
-  body.show-default .saleBar.show-new{
+  body.show-gift .saleBar.show-default,body.show-gift .saleBar.shop-3,body.show-gift .saleBar.shop-4,body.show-gift .saleBar.phonefourhundred,body.show-gift .saleBar.phonetwohundred {
     display:none !important;
+  }
+  .t4s-quantity-wrapper [disabled],.t4s-quantity-wrapper [disabled] svg,.t4s-quantity-wrapper [disabled] path {
+    color: #80808099 !important;
+    fill:#80808099 !important;
+  }
+  body.shop-3 .saleBar.show-new,body.shop-3 .saleBar.show-default,body.phonefourhundred .saleBar.show-default,body.phonetwohundred .saleBar.show-default  {
+    display:none !important;
+  }
+  body.shop-3 .saleBar.shop-3{
+    display:block !important;
+  }
+  body.shop-4 .saleBar.show-new,body.shop-4 .saleBar.show-default,body.shop-4 .saleBar.shop-3{
+    display:none !important;
+  }
+  body.shop-4 .saleBar.shop-4{
+    display:block !important;
+  }
+  body.phonefourhundred .saleBar.phonefourhundred{
+    display:block !important;
+  }
+  body.phonetwohundred .saleBar.phonetwohundred{
+    display:block !important;
   }
 </style>
