@@ -85,6 +85,7 @@
         },
         "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/COMBO_BANNER_OPT_2-01.jpg",
             "image_mb": "shopify:\/\/shop_images\/COMBO_BANNER_OPT_2-05.jpg",
