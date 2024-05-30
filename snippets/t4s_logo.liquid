@@ -15,7 +15,7 @@
     assign rate_retina = 2
     assign lg_w_2s = lg_w | times:rate_retina -%} 
 
-<{{tag}} class="{{class}} t4s-header__logo t4s-lh-1"><a class="{{class_a |default:'t4s-d-inline-block' }}" href="{% if request.path contains '399-store-hydrating-moisturizer-with-ceramide' or request.path contains '399-store-super-glow-moisturizer' or request.path contains 'spf-70-dewy-finish-sunscreen-copy' or request.path contains 'spf-70-matte-finish-sunscreen-copy' or request.path contains '499-store-overnight-glow-mask' or request.path contains '499-store-skin-radiance-mask' or request.path contains '499-store-rapid-spot-reduction-drops' or request.path contains '499-store-vitamin-c-serum' or request.path contains '499-store-anti-aging-retinol-serum' or request.path contains '499-store-niacinamide-serum' or request.path contains '399-store-acne-spot-corrector-gel' or request.path contains 'firming-under-eye-gel-copy' or request.path contains 'aha-bha-exfoliating-serum-copy' or request.path contains 'hydrating-serum-with-hyaluronic-acid-copy' %} javascript:history.back() {% else %} {{ routes.root_url }} {% endif %}" {{ block.shopify_attributes }}>
+<{{tag}} class="{{class}} t4s-header__logo t4s-lh-1"><a class="{{class_a |default:'t4s-d-inline-block' }}" data-foxtale-event="logo-click-event" href="{{ routes.root_url }}" {{ block.shopify_attributes }}>
 
    {%- if svg != blank -%}
       <img loading="eager" class="header__normal-logo t4s-d-none t4s-d-lg-block" src="{{ svg }}" alt="{{ shop_name_escape }}" style="width: {{ lg_w }}px">

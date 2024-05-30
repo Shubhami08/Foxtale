@@ -63,9 +63,9 @@
                                       endif -%}
 
                                       {%- if value.active -%}
-                                          <li class="{% if value.count == 0 and value.active == false %}is--disabled {% endif %}is--selected"><a href="{{value.url_to_remove}}"><div class="t4s-filter_color t4s-pr t4s-oh"><span class="bg_color_{{value_label | handle}} lazyloadt4s"></span><svg focusable="false" viewBox="0 0 24 24" role="presentation"><path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path></svg></div> {{label}}<span class="t4s-value-count">({{value.count}})</span></a></li>
+                                          <li class="{% if value.count == 0 and value.active == false %}is--disabled {% endif %}is--selected"><a href="{{value.url_to_remove}}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{label}}"><div class="t4s-filter_color t4s-pr t4s-oh"><span class="bg_color_{{value_label | handle}} lazyloadt4s"></span><svg focusable="false" viewBox="0 0 24 24" role="presentation"><path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path></svg></div> {{label}}<span class="t4s-value-count">({{value.count}})</span></a></li>
                                       {%- else -%}
-                                          <li {% if value.count == 0 and value.active == false %}class="is--disabled"{% endif %}><a href="{{value.url_to_add}}"><div class="t4s-filter_color t4s-pr t4s-oh"><span class="bg_color_{{value_label | handle}} lazyloadt4s"></span><svg focusable="false" viewBox="0 0 24 24" role="presentation"><path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path></svg></div> {{label}}<span class="t4s-value-count">({{value.count}})</span></a></li>
+                                          <li {% if value.count == 0 and value.active == false %}class="is--disabled"{% endif %}><a href="{{value.url_to_add}}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{label}}"><div class="t4s-filter_color t4s-pr t4s-oh"><span class="bg_color_{{value_label | handle}} lazyloadt4s"></span><svg focusable="false" viewBox="0 0 24 24" role="presentation"><path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path></svg></div> {{label}}<span class="t4s-value-count">({{value.count}})</span></a></li>
                                       {%- endif -%}
 
                                     {%- endfor -%}
@@ -89,9 +89,9 @@
                                          endif -%}
 
                                          {%- if value.active -%}
-                                             <li class="{% if value.count == 0 and value.active == false %}is--disabled {% endif %}is--selected"><a href="{{value.url_to_remove}}">{{value.label | escape}}<span class="t4s-value-count">({{value.count}})</span></a></li>
+                                             <li class="{% if value.count == 0 and value.active == false %}is--disabled {% endif %}is--selected"><a href="{{value.url_to_remove}}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{label}}">{{value.label | escape}}<span class="t4s-value-count">({{value.count}})</span></a></li>
                                          {%- else -%}
-                                             <li {% if value.count == 0 and value.active == false %}class="is--disabled"{% endif %}><a href="{{value.url_to_add}}">{{value.label | escape}}<span class="t4s-value-count">({{value.count}})</span></a></li>
+                                             <li {% if value.count == 0 and value.active == false %}class="is--disabled"{% endif %}><a href="{{value.url_to_add}}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{label}}">{{value.label | escape}}<span class="t4s-value-count">({{value.count}})</span></a></li>
                                          {%- endif -%}
 
                                        {%- endfor -%}

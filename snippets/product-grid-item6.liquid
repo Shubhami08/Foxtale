@@ -103,7 +103,7 @@ endif -%}
       </div>
       {%- if size_count > 0 and pr_size_pos == '1'%}{%- render 'product-size', size_variants: size_variants, size_variants_avai: size_variants_avai, show_size_type: show_size_type -%}{% endif -%} 
       {%- if use_countdown and countdown != blank %}{%- render 'product-countdown',countdown:countdown %}{% endif -%}
-      <a data-pr-href class="t4s-full-width-link" href="{{pr_url}}"></a>
+      <a data-pr-href class="t4s-full-width-link" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-collections" href="{{pr_url}}"></a>
     </div>
     <div class="t4s-product-info">
       <div class="t4s-product-info__inner">
@@ -133,14 +133,15 @@ endif -%}
         </div>
         {% if product.metafields.custom.check_variant %}
           <div class="shop-all-qty-cart-btn prod-recom">
-              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
           </div>
       {% else %}
         <div class="shop-all-qty-cart-btn prod-recom">
           <a
             href="{{ product.url }}"
             id="addtocart_r"
-            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
+            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
             data-variant-id="{{product.first_available_variant.id}}"
             data-action-atc
             rel="nofollow"

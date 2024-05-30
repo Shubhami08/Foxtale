@@ -48,7 +48,7 @@
 </div>{% endcomment %}
 <div class="product-innr">
 <div class="product-image pr oh lazyloadt4sed">
-   <a rel="dofollow" class="cd chp" href="{{pr_url}}"><img class="first-img lazyload" loading="lazy"    src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+   <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{pr_url}}"><img class="first-img lazyload" loading="lazy"    src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
                            data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="Product Image" />
    <img class="second-img lazyload" loading="lazy"               src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
                            data-src="{{ product.images[1] | product_img_url: 'master' }}" alt="Product Image" /></a>
@@ -60,7 +60,7 @@
    <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
    {%- endif -%}
    <div class="pr-det prlg-3">
-      <h3 class="product-title pr fs__14 mg__0 fwm"><a rel="dofollow" class="cd chp" href="{{pr_url}}">{{product.title}}</a></h3>
+      <h3 class="product-title pr fs__14 mg__0 fwm"><a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{pr_url}}">{{product.title}}</a></h3>
       {% if product.metafields.my_fields.hp_excerpt != blank %}
       <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
       {% endif %}
@@ -103,7 +103,7 @@
                               </span>   
                   <div class="discount-msg">
                      {% assign message = product.price | divided_by: 100 %}
-                        {% if message <= 497 %}
+                        {% if message <= 746 %}
                           <p class="bottom-leftext">BYOB</p>
                         {% else %}
                            <p class="bottom-leftext">10% OFF</p>
@@ -137,11 +137,11 @@
 </div>
   {% if product.metafields.custom.check_variant %}
           <div class="shop-all-qty-cart-btn">
-              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
           </div>
       {% else %}
         <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-           <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+           <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
         </div>
       {% endif %}
 

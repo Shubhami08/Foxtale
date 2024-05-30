@@ -39,6 +39,7 @@
                   {% if block.settings['tab-title'] != blank %}
                     <div
                       class="glide__slide tab-link{% if forloop.first %} active{% endif %}"
+                      data-foxtale-event="routine-section-click-event" foxtale-event-attr-collection-name="{{ collections[block.settings.collection].title }}" foxtale-event-attr-routine-name="{{ block.settings['tab-title'] }}"
                       data-tab="tabs-{{ forloop.index }}"
                       onclick="tabCustoms(event);"
                       data-index="{{ forloop.index0 }}"
@@ -69,7 +70,7 @@
                                   </h6>
                                 {% endif %}
                               <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                                <a href="{{product.url}}">
+                                <a href="{{product.url}}" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image">
                                   {%- render 'product_labels', on: 'singe', product: product -%}
                                   <img
                                     class="pr-img-first lazyload"
@@ -99,7 +100,7 @@
                               >
                                 <div class="pr-det">
                                   <h3 class="product-title pr fs__14 mg__0 fwm">
-                                    <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                    <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
                                   </h3>
                                   {% if product.metafields.my_fields.hp_excerpt != blank %}
                                     <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -153,7 +154,7 @@
                             
                             {% if product.metafields.custom.check_variant %}
                                 <div class="shop-all-qty-cart-btn">
-                                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                                 </div>
                             {% else %}
                               <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
@@ -161,6 +162,7 @@
                                 href="{{ product.url }}"
                                 id="addtocart_r"
                                 class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart s-atc"
+                                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
                                 data-variant-id="{{product.first_available_variant.id}}"
                                 data-action-atc
                                 rel="nofollow"
@@ -197,7 +199,7 @@
                                   </h6>
                                 {% endif %}
                               <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                                <a rel="dofollow" href="{{product.url}}">
+                                <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
                                   {%- render 'product_labels', on: 'singe', product: product -%}
                                   <img
                                     class="pr-img-first lazyload" 
@@ -217,7 +219,7 @@
                               <div class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst">
                                 <div class="pr-det">
                                   <h3 class="product-title pr fs__14 mg__0 fwm">
-                                    <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                    <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
                                   </h3>
                                   {% if product.metafields.my_fields.hp_excerpt != blank %}
                                     <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -239,7 +241,7 @@
                             
                             {% if product.metafields.custom.check_variant %}
                                 <div class="shop-all-qty-cart-btn">
-                                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                                 </div>
                             {% else %}
                               <div class="shop-all-qty-cart-btn">
@@ -247,6 +249,7 @@
                                 href="{{ product.url }}"
                                 id="addtocart_r"
                                 class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart s-atc"
+                                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
                                 data-variant-id="{{product.first_available_variant.id}}"
                                 data-action-atc
                                 rel="dofollow"
@@ -262,6 +265,11 @@
                         <div class="shop-all-qty-cart-btn">
                           <a
                             class="fx-custom-btn-dark t4s-pr-item-btn aatcrtnone"
+                            data-foxtale-event="add-all-to-cart-click-event" foxtale-event-attr-from="from-routine-section" foxtale-event-attr-button-name="{%- if template contains 'product' %}
+                              get-this-routine-button
+                            {% else %}
+                              add-all-to-cart-button
+                            {% endif -%}"
                             data-id="t-{{ forloop.index | minus: len }}"
                             data-action-atc
                             rel="nofollow"
@@ -277,7 +285,7 @@
                         </div>
                       </div>
                       <div class="rtn-btn">
-                        <a href="{{ section.settings.urlz }}">View more routines</a>
+                        <a href="{{ section.settings.urlz }}" data-foxtale-event="view-more-click-event" foxtale-event-attr-collection-name="{{ collection.title }}" foxtale-event-attr-from="from-view-more-routine" foxtale-event-attr-collection-url="{{ section.settings.urlz }}">View more routines</a>
                       </div>
                     {% endif %}
                   </div>
@@ -783,6 +791,9 @@ console.log("tab_id:", modifiedString);
   $('.owl-next').addClass('slick-next');
 </script>
 <script>
+  
+    var latestCartData = {};
+
     function updateMiniCartQuantityCount(quantity) {
     $('#mini-cart .cart-quantity').text(quantity);
     }
@@ -820,6 +831,8 @@ console.log("tab_id:", modifiedString);
             // All products have been added to the cart
             $.getJSON('/cart.js', function (cart) {
               updateMiniCartQuantityCount(cart.item_count);
+              console.log("latest cart data:", cart);
+              latestCartData = cart;
             });
             return;
           }
@@ -851,6 +864,20 @@ console.log("tab_id:", modifiedString);
         }
 
         addProductToCart();
+        
+        console.log("latestCartData:", latestCartData);
+        console.log("window: ", window);
+        console.log("(currentIndex >= productIds.length): ", (currentIndex >= productIds.length));
+
+        // $.getJSON('/cart.js', function (cart) {
+        //  console.log("latest cart data:", cart);
+        //  latestCartData = cart;
+        // });
+
+        window.trackMixpanelEvent('Add All To Cart', {
+          'from': 'routine-section-add-all-to-cart-button',
+          'added-product-ids': productIds
+        })
       }, 100);
     });
   })

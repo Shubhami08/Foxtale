@@ -185,7 +185,7 @@
       <div class="cus-single">
         {% assign collection = block.settings.collectionmain %}
         {% if block.settings.collectionimg != blank %}
-          <a class="cus-pik" href="{{ collection.url }}"
+          <a class="cus-pik" data-foxtale-event="shop-by-concern-click-event" foxtale-event-attr-collection-name="{{ collection.title }}" foxtale-event-attr-collection-url="{{ collection.url }}" foxtale-event-attr-from="from-shop-by-concern-section" href="{{ collection.url }}"
             ><img
               class="lazyload"
               loading="lazy"

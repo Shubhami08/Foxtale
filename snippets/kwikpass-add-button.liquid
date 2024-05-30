@@ -294,7 +294,7 @@ const drawerhtmlDesktop = `<div id="kwikpass-drawer-desktop"  >
                 ${loader}
             </a>
         </ul>
-        <button id="logout-button-desktop">
+        <button id="logout-button-desktop" data-foxtale-event="logout-click-event" foxtale-event-attr-user-id="{{localStorage.getItem("kp_customer_id")}}">
             Logout
             <svg
                 width="20"

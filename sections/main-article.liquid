@@ -166,7 +166,7 @@
                               {% assign shopStoryProduct = all_products[shopStoryHandle] %}
                               <div class="product-inner pr">
                                 <div class="product-image pr oh lazyloadt4sed">
-                                  <a rel="dofollow" class="db" href="{{shopStoryProduct.url}}">
+                                  <a rel="dofollow" class="db" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ shopStoryProduct.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{shopStoryProduct.url}}">
                                     <div class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed shop-story-pr-img" data-id="{{ shopStoryProduct.images[0].id }}"
                                         data-bgset="{{ shopStoryProduct.images[0] | image_url }}"
                                         data-parent-fit="width" data-wiis="" data-ratio="1.0"
@@ -184,18 +184,18 @@
                                 </div>
                                 <div class="product-info mt__15">
                                   <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 600;">
-                                    <a rel="dofollow" class="cd chp shop-story-pr-title" href="{{shopStoryProduct.url}}">{{shopStoryProduct.title}}</a></h3>
+                                    <a rel="dofollow" class="cd chp shop-story-pr-title" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ shopStoryProduct.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{shopStoryProduct.url}}">{{shopStoryProduct.title}}</a></h3>
                                   <span class="price dib mb__5" style="margin-top: 10px; font-size: 16px; font-weight: 800;"><del style="color: #878787;">{{shopStoryProduct.compare_at_price | money }}</del><ins>{{shopStoryProduct.price | money}}</ins></span>
                                   <div class="shopify-product-reviews-badge star-rating" data-id="{{shopStoryProduct.id}}"></div>
                                 </div>
                               
                                 {% if shopStoryProduct.metafields.custom.check_variant %}
                                     <div class="shop-all-qty-cart-btn">
-                                        <a href="{{ shopStoryProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                        <a href="{{ shopStoryProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ shopStoryProduct.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                                     </div>
                                 {% else %}
                                   <div class="shop-all-qty-cart-btn">
-                                  <a rel="dofollow" href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{shopStoryProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+                                  <a rel="dofollow" href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ shopStoryProduct.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{shopStoryProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
                                  {% comment %} {%- if settings.enable_quickshop -%}
                                        <a href="{{ shopStoryProduct.url }}"class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" rel="nofollow" data-action-quickshop data-id="{{shopStoryProduct.first_available_variant.id}}"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
                                   {%- else -%}

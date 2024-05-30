@@ -64,7 +64,7 @@ observer1.observe(targetNode, config);
 </script> -->
 <script defer>
   let  targetNode = document.querySelector('html')
-  let gkButtonCode = '<button type="button" onclick="onBuyNowClick(this)" id="gokwik-buy-now"{% if settings.hideFlow %} style="display:none !important;" {% endif %}>{{ settings.buynow-titile }}<div style="display:none"><div class="cir-loader">Loading..</div></div></button> '
+  let gkButtonCode = '<button type="button" onclick="onBuyNowClick(this)" id="gokwik-buy-now"{% if settings.hideFlow %} style="display:none !important;" {% endif %}   data-foxtale-event="buy-now-button-click-event" foxtale-event-attr-from="from-pdp" foxtale-event-attr-api-url-for-data="{{ product.url }}">{{ settings.buynow-titile }}<div style="display:none"><div class="cir-loader">Loading..</div></div></button> '
   let buttonAdded = false
   let parsedBtnCode = new DOMParser().parseFromString(gkButtonCode, 'text/html').querySelectorAll('#gokwik-buy-now')[0];
   const sideCartCallback = function(mutationList){

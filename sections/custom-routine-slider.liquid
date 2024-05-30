@@ -23,6 +23,7 @@
                 {% if block.settings['tab-title'] != blank %}
                   <option
                     class="tab-links{% if forloop.first %} active{% endif %}"
+                    data-foxtale-event="routine-section-click-event" foxtale-event-attr-collection-name="{{ collections[block.settings.collection].title }}" foxtale-event-attr-routine-name="{{ block.settings['tab-title'] }}"
                     data-tab="tabs-{{ forloop.index }}"
                     value="val-{{ forloop.index }}"
                   >{{ block.settings['tab-title'] }}</option>
@@ -52,7 +53,7 @@
                               </h6>
                             {% endif %}
                             <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                              <a href="{{product.url}}">
+                              <a href="{{product.url}}" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image">
                                 {%- render 'product_labels', on: 'singe', product: product -%}
                                 <img
                                   class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
@@ -77,7 +78,7 @@
                             >
                               <div class="pr-det">
                                 <h3 class="product-title pr fs__14 mg__0 fwm">
-                                  <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                  <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
                                 </h3>
                                 {% if product.metafields.my_fields.hp_excerpt != blank %}
                                   <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -126,13 +127,13 @@
                           
                           {% if product.metafields.custom.check_variant %}
                               <div class="shop-all-qty-cart-btn">
-                                  <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                  <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                               </div>
                           {% else %}
                             <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
                             <a
                               href="{{ product.url }}"
-                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart lhm"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart lhm" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
                               data-variant-id="{{product.first_available_variant.id}}"
                               data-action-atc
                               rel="nofollow"
@@ -173,7 +174,7 @@
                               </h6>
                             {% endif %}
                             <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                              <a href="{{product.url}}">
+                              <a href="{{product.url}}" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image">
                                 {%- render 'product_labels', on: 'singe', product: product -%}
                                 <img
                                   class="pr-img-first" style="border-top-left-radius: 0px; border-top-right-radius: 0px;"
@@ -193,7 +194,7 @@
                             <div class="product-info mt__15 mb__10 product-innr-bottom">
                               <div class="pr-det">
                                 <h3 class="product-title pr fs__14 mg__0 fwm">
-                                  <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                                  <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
                                 </h3>
                                 {% if product.metafields.my_fields.hp_excerpt != blank %}
                                   <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -215,13 +216,14 @@
                           
                           {% if product.metafields.custom.check_variant %}
                               <div class="shop-all-qty-cart-btn">
-                                  <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                                  <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                               </div>
                           {% else %}
                             <div class="shop-all-qty-cart-btn">
                               <a
                                 href="{{ product.url }}"
                                 class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart lhm"
+                                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
                                 data-variant-id="{{product.first_available_variant.id}}"
                                 data-action-atc
                                 rel="nofollow"

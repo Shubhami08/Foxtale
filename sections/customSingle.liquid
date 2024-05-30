@@ -1423,7 +1423,8 @@
             data-action-atc
             data-variant-id="{{current_variant.id}}"
             id="addtocart_p"
-            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg"
+            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg" 
+            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-pdp"
             {% unless current_variant.available %}
               aria-disabled="true"
             {% endunless -%}
@@ -5119,43 +5120,3 @@ $(document).ready(function () {
   }
 }
 {%- endschema -%}
-  <style>
-    .carousel-cell{
-      width:100%;
-    }
-    .carousel-cell img,.carousel-cell video{
-      width:100%;
-    }
-    .flickity-slider .carousel-cell{
-      opacity:1 !important;
-    }
-  </style>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script>
-    $( document ).ready(function() {
-
-    var elem = document.querySelector('.main-prod-slider');
-    if (elem) {
-      var flkty = new Flickity(elem, {
-        cellAlign: 'left',
-        contain: true,
-        wrapAround: true,
-        autoPlay: 3000, // 3 seconds
-        prevNextButtons: true,
-        pageDots: false,
-        on: {
-          ready: function() {
-          },
-          change: function( index ) {
-            if (index === 1) {
-              flkty.pausePlayer();
-            }
-          }
-        }
-      });
-    }
-
-});
-  </script>

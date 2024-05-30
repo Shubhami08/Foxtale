@@ -374,7 +374,7 @@
                 {% endif %}
               {% endcomment %}
               <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                <a rel="dofollow" href="{{product.url}}">
+                <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
                   {%- render 'product_labels', on: 'singe', product: product -%}
                   
    {%- if product.price < product.compare_at_price -%}
@@ -414,7 +414,7 @@
               <div class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst">
                 <div class="pr-det">
                   <h3 class="product-title pr fs__14 mg__0 fwm">
-                    <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
+                    <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
                   </h3>
                   {% if product.metafields.my_fields.hp_excerpt != blank %}
                     <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -448,14 +448,15 @@
             
             {% if product.metafields.custom.check_variant %}
                 <div class="shop-all-qty-cart-btn">
-                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
                 </div>
             {% else %}
               <div class="shop-all-qty-cart-btn">
               <a
                 href="{{ product.url }}"
                 id="addtocart_r"
-                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
+                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
                 data-variant-id="{{product.first_available_variant.id}}"
                 data-action-atc
                 rel="dofollow"

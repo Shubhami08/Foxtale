@@ -196,7 +196,7 @@
                                 {%- endfor -%}
                             </div>
                         </div>
-                    <a id="home-link" href="{{url}}" target="{{open_link}}" class="t4s-full-width-link{% if url == blank %} t4s-pe-none {% else %} t4s-pe-auto{% endif %}" style="--bg-overlay:{{bg_overlay}};"></a>
+                    <a id="home-link" href="{{url}}" target="{{open_link}}" class="t4s-full-width-link{% if url == blank %} t4s-pe-none {% else %} t4s-pe-auto{% endif %}" data-foxtale-event="shop-now-banner-click-event" foxtale-event-attr-from="from-home-page" style="--bg-overlay:{{bg_overlay}};"></a>
                 </div>
             </div>
         {%- endfor -%}
