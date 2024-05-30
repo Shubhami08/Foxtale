@@ -75,15 +75,8 @@
   });
 
   // Setting up distinct id of the user if it is logged in
-  const mixpanelLocalStorageObject = JSON.parse(localStorage.getItem("mp_870b72f7101d6cff39515fddb9874ded_mixpanel"));
-  const mixpanelDistinctId = localStorage.getItem("mp_distinct_id") || mixpanelLocalStorageObject?.["distinct_id"]
-  const kwikPassCustomerId = localStorage.getItem("kp_customer_id")
-  console.log("kwikPassCustomerId: ", kwikPassCustomerId);
+  const mixpanelDistinctId = JSON.parse(localStorage.getItem("mp_distinct_id"))
   console.log("mp_distinct_id", mixpanelDistinctId);
-  console.log("mixpanelLocalStorageObject?.['distinct_id']: ", mixpanelLocalStorageObject)?.["distinct_id"]
-  console.log("mixpanel local storage object", mixpanelLocalStorageObject);
-  // if (mixpanelDistinctId || mixpanelLocalStorageObject?.["distinct_id"]) {
-  //   identifyAndSetProfile(mixpanelDistinctId || mixpanelLocalStorageObject?.["distinct_id"], {});
 
   if (mixpanelDistinctId) {
     mixpanel.identify(mixpanelDistinctId);
