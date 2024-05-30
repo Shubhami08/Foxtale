@@ -607,7 +607,7 @@ const observationConfig = [
 
 // Setting up distinct id of the user if it is logged in
 const mixpanelLocalStorageObject = JSON.parse(localStorage.getItem("mp_870b72f7101d6cff39515fddb9874ded_mixpanel"));
-let mixpanelDistinctId = JSON.parse(localStorage.getItem("mp_distinct_id")) || mixpanelLocalStorageObject?.["distinct_id"]
+let mixpanelDistinctId = JSON.parse(localStorage.getItem("mp_distinct_id"));
 
 if (!mixpanelDistinctId) {
   const randomGeneratedDistinctId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
