@@ -610,7 +610,7 @@ const mixpanelLocalStorageObject = JSON.parse(localStorage.getItem("mp_870b72f71
 let mixpanelDistinctId = JSON.parse(localStorage.getItem("mixpanel_distinct_id")) || mixpanelLocalStorageObject?.["distinct_id"]
 
 if (!mixpanelDistinctId) {
-  const randomGeneratedDistinctId = '$device:xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  const randomGeneratedDistinctId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
