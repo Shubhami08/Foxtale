@@ -364,6 +364,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_21.jpg",
             "collection_handle": "admittad-199-offer"
           }
+        },
+        "image_xRxqVx": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_53.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_53.jpg",
+            "collection_handle": "zomato-flat-400-offer"
+          }
         }
       },
       "block_order": [
@@ -409,7 +417,8 @@
         "image_AiRhnc",
         "image_jyAbkd",
         "image_Ui8z8E",
-        "image_dQPKpa"
+        "image_dQPKpa",
+        "image_xRxqVx"
       ],
       "settings": {
         "slider_height_mobile": "100%"
