@@ -425,22 +425,22 @@
               "dayx": 1
             }
           },
-          "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
-            "type": "announcement",
-            "settings": {
-              "link": "shopify:\/\/collections\/shop",
-              "content": "<p><strong>10% Off <\/strong>on all orders [Code:<strong> GLOW10<\/strong>]<\/p>",
-              "countdown": "",
-              "txt_day": "days",
-              "dayx": 1
-            }
-          },
           "5f5403a0-7add-4a01-b0f9-45ed6ee4a5e1": {
             "type": "announcement",
             "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>₹200 Off<\/strong> on orders above<strong> ₹1199<\/strong> [Code:<strong> SUMMER200<\/strong>]<\/p><p><strong>+ Extra 5% Off<\/strong> on UPI Payment<\/p>",
+              "content": "<p><strong>15% Off <\/strong>on all orders [Code:<strong> GLOW15<\/strong>]<\/p>",
+              "countdown": "",
+              "txt_day": "days",
+              "dayx": 1
+            }
+          },
+          "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
+            "type": "announcement",
+            "settings": {
+              "link": "shopify:\/\/collections\/shop",
+              "content": "<p><strong>10% Off <\/strong>on all orders [Code:<strong> GLOW10<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
@@ -483,8 +483,8 @@
         "block_order": [
           "announcement-bar-0",
           "75d97d28-d97c-478f-b125-3205b88a4be4",
-          "f223bebb-cc3c-48d2-9a6d-249db21b7563",
           "5f5403a0-7add-4a01-b0f9-45ed6ee4a5e1",
+          "f223bebb-cc3c-48d2-9a6d-249db21b7563",
           "02e70428-04c0-4ebf-8c75-aa5c2def741e",
           "9f947f8d-152f-425c-946a-8928071869c8",
           "announcement-bar-1"
