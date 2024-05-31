@@ -1,78 +1,78 @@
-// /**
-//  * Mixpanel Event Tracking Initializer
-//  */
-// (function (f, b) {
-//   if (!b.__SV) {
-//     var e, g, i, h;
-//     window.mixpanel = b;
-//     b._i = [];
-//     b.init = function (e, f, c) {
-//       function g(a, d) {
-//         var b = d.split(".");
-//         2 == b.length && ((a = a[b[0]]), (d = b[1]));
-//         a[d] = function () {
-//           a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
-//         };
-//       }
-//       var a = b;
-//       "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel");
-//       a.people = a.people || [];
-//       a.toString = function (a) {
-//         var d = "mixpanel";
-//         "mixpanel" !== c && (d += "." + c);
-//         a || (d += " (stub)");
-//         return d;
-//       };
-//       a.people.toString = function () {
-//         return a.toString(1) + ".people (stub)";
-//       };
-//       i =
-//         "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
-//           " "
-//         );
-//       for (h = 0; h < i.length; h++) g(a, i[h]);
-//       var j = "set set_once union unset remove delete".split(" ");
-//       a.get_group = function () {
-//         function b(c) {
-//           d[c] = function () {
-//             call2_args = arguments;
-//             call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
-//             a.push([e, call2]);
-//           };
-//         }
-//         for (
-//           var d = {},
-//             e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)),
-//             c = 0;
-//           c < j.length;
-//           c++
-//         )
-//           b(j[c]);
-//         return d;
-//       };
-//       b._i.push([e, f, c]);
-//     };
-//     b.__SV = 1.2;
-//     e = f.createElement("script");
-//     e.type = "text/javascript";
-//     e.async = !0;
-//     e.src =
-//       "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
-//         ? MIXPANEL_CUSTOM_LIB_URL
-//         : "file:" === f.location.protocol &&
-//           "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
-//         ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
-//         : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
-//     g = f.getElementsByTagName("script")[0];
-//     g.parentNode.insertBefore(e, g);
-//   }
-// })(document, window.mixpanel || []);
+/**
+ * Mixpanel Event Tracking Initializer
+ */
+(function (f, b) {
+  if (!b.__SV) {
+    var e, g, i, h;
+    window.mixpanel = b;
+    b._i = [];
+    b.init = function (e, f, c) {
+      function g(a, d) {
+        var b = d.split(".");
+        2 == b.length && ((a = a[b[0]]), (d = b[1]));
+        a[d] = function () {
+          a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+      }
+      var a = b;
+      "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel");
+      a.people = a.people || [];
+      a.toString = function (a) {
+        var d = "mixpanel";
+        "mixpanel" !== c && (d += "." + c);
+        a || (d += " (stub)");
+        return d;
+      };
+      a.people.toString = function () {
+        return a.toString(1) + ".people (stub)";
+      };
+      i =
+        "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+          " "
+        );
+      for (h = 0; h < i.length; h++) g(a, i[h]);
+      var j = "set set_once union unset remove delete".split(" ");
+      a.get_group = function () {
+        function b(c) {
+          d[c] = function () {
+            call2_args = arguments;
+            call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+            a.push([e, call2]);
+          };
+        }
+        for (
+          var d = {},
+            e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)),
+            c = 0;
+          c < j.length;
+          c++
+        )
+          b(j[c]);
+        return d;
+      };
+      b._i.push([e, f, c]);
+    };
+    b.__SV = 1.2;
+    e = f.createElement("script");
+    e.type = "text/javascript";
+    e.async = !0;
+    e.src =
+      "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+        ? MIXPANEL_CUSTOM_LIB_URL
+        : "file:" === f.location.protocol &&
+          "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+        ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+        : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+    g = f.getElementsByTagName("script")[0];
+    g.parentNode.insertBefore(e, g);
+  }
+})(document, window.mixpanel || []);
 
-// mixpanel.init("870b72f7101d6cff39515fddb9874ded", {
-//   debug: true,
-//   track_pageview: false,
-//   persistence: "localStorage",
-// });
+mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
+  debug: true,
+  track_pageview: false,
+  persistence: "localStorage",
+});
 
 /**
  * Mixpanel Event Tracking Configuration Array
@@ -521,10 +521,10 @@ const observationConfig = [
     parentElementQuery: ".pairProduct-grid-item",
   },
   {
-    parentElementQuery: ".buy-now-parent-class",
+    parentElementQuery: ".stc-mixpanel-adc-buyn-parent-class",
   },
   {
-    parentElementQuery: ".t4s-sticky-atc__btns",
+    parentElementQuery: ".t4s-sticky-atc", // Can also add these: "t4s-pf t4s-b-0 t4s-l-0 t4s-r-0 t4s-op-0 t4s-pe-none is--shown"
   },
   {
     parentElementQuery: "#shopify-section-search-hidden",
@@ -1126,65 +1126,24 @@ function handleDynamicComponentInteraction(parentElementQuery) {
 
 /*********************************************** TEMP_FIX_FOR_LAZY_LOADED_COMPONENTS_WITHOUT_STATICALLY_LOADED_PARENT_START ****************************************************/
 
-// this section is logical TEMP FIX for cart, because it does not have a parent
+// this section is logical TEMP FIX for the dynamic components whoose top most parent have the dynamic nature too
 
 function setupObserverForLazyComponentsWhichDoNotHaveStaticallyLoadedParent() {
   const bodyObserverForMiniCart = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
           mutation.addedNodes.forEach(node => {
-            // console.log("added node tracked by body mutaion observer: ", node)
               if (node.nodeType === 1 && node.matches('#t4s-mini_cart')) { // check for the componenet, which do not have the parent which do not load lazily
-                if ( node.matches('#t4s-mini_cart')) {
-                  // Cart drawer has been added to the DOM
-                  console.log("found the mini-cart component")
-                }
-
-                // or 
-
-                if ( node.matches('.kart')) {
-                  // view cart popup has been added to the DOM
-                  console.log("found the view cart component")
-                }
-
-                // or 
-
-                if ( node.matches('#t4s-search-hidden')) {
-                  // search drawer
-                  console.log("found the search component")
-                }
-
-                // or
-
-                if ( node.matches('#logout-button-desktop')) {
-                  // logout button
-                  console.log("found the logout button")
-                }
-
                 observationConfig.forEach((config) => {
                   console.log("here in the observation config loop for cart/view cart component")
-                  // handleDynamicComponentInteraction(config.parentElementQuery);
                   handleDynamicComponentInteraction(config.parentElementQuery);
                 });
-                
-                // if ( node.matches('#kwikpass-drawer-desktop') ) {
-                //   trackEvent('Logged In', {
-                //     'userId': kwikPassCustomerId ? kwikPassCustomerId : mixpanelDistinctId
-                //   });
-                // }
 
                 // for current dynamic parent, we will set events too when it is getting detected at first time
                 elementsWithFoxtaleEventAttribute = node.querySelectorAll("[data-foxtale-event]");
 
                 elementsWithFoxtaleEventAttribute.forEach((el) => {
-                  // console.log('element for event:', el);
                   setupEventListenerForElement(el);
                 });
-
-                // if ( node.matches('#logout-button-desktop') ) {
-                //   trackEvent('Logged Out', {
-                //     'userId': kwikPassCustomerId ? kwikPassCustomerId : mixpanelDistinctId
-                //   });
-                // }
 
                 bodyObserverForMiniCart.disconnect(); // Optional: Disconnect after the cart is found
                 console.log("The old logical temp fix used observer disconnected ( the body one ).")
@@ -1202,69 +1161,59 @@ function setupObserverForLazyComponentsWhichDoNotHaveStaticallyLoadedParent() {
   const bodyObserverForHiddenSearch = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
-          // console.log("added node tracked by body mutaion observer: ", node)
             if (node.nodeType === 1 && node.matches('#shopify-section-search-hidden')) { // check for the componenet, which do not have the parent which do not load lazily
-              if ( node.matches('#t4s-mini_cart')) {
-                // Cart drawer has been added to the DOM
-                console.log("found the mini-cart component")
-              }
-
-              // or 
-
-              if ( node.matches('.kart')) {
-                // view cart popup has been added to the DOM
-                console.log("found the view cart component")
-              }
-
-              // or 
-
-              if ( node.matches('#t4s-search-hidden')) {
-                // search drawer
-                console.log("found the search component")
-              }
-
-              // or
-
-              if ( node.matches('#logout-button-desktop')) {
-                // logout button
-                console.log("found the logout button")
-              }
 
               observationConfig.forEach((config) => {
-                console.log("here in the observation config loop for cart/view cart component")
-                // handleDynamicComponentInteraction(config.parentElementQuery);
                 handleDynamicComponentInteraction(config.parentElementQuery);
               });
-              
-              // if ( node.matches('#kwikpass-drawer-desktop') ) {
-              //   trackEvent('Logged In', {
-              //     'userId': kwikPassCustomerId ? kwikPassCustomerId : mixpanelDistinctId
-              //   });
-              // }
 
               // for current dynamic parent, we will set events too when it is getting detected at first time
               elementsWithFoxtaleEventAttribute = node.querySelectorAll("[data-foxtale-event]");
 
               elementsWithFoxtaleEventAttribute.forEach((el) => {
-                // console.log('element for event:', el);
                 setupEventListenerForElement(el);
               });
-
-              // if ( node.matches('#logout-button-desktop') ) {
-              //   trackEvent('Logged Out', {
-              //     'userId': kwikPassCustomerId ? kwikPassCustomerId : mixpanelDistinctId
-              //   });
-              // }
 
               bodyObserverForHiddenSearch.disconnect(); // Optional: Disconnect after the cart is found
               console.log("The old logical temp fix used observer disconnected ( the body one ).")
             }
         });
     });
-});
+  }) 
 
-bodyObserverForHiddenSearch.observe(document.body, { childList: true, subtree: true }); // Observe the body for added elements
-console.log("The old logical temp fix used observer connected ( the body one ).")
+  bodyObserverForHiddenSearch.observe(document.body, { childList: true, subtree: true }); // Observe the body for added elements
+  console.log("The old logical temp fix used observer connected ( the body one ).")
+
+
+
+
+
+  const bodyObserverForStickyPdpAdcBuyN = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          // console.log("added node tracked by body mutaion observer: ", node)
+            if (node.nodeType === 1 && node.matches('.stc-mixpanel-adc-buyn-parent-class')) { // check for the componenet, which do not have the parent which do not load lazily
+
+              observationConfig.forEach((config) => {
+                handleDynamicComponentInteraction(config.parentElementQuery);
+              });
+
+              // for current dynamic parent, we will set events too when it is getting detected at first time
+              elementsWithFoxtaleEventAttribute = node.querySelectorAll("[data-foxtale-event]");
+
+              elementsWithFoxtaleEventAttribute.forEach((el) => {
+                setupEventListenerForElement(el);
+              });
+
+              bodyObserverForStickyPdpAdcBuyN.disconnect(); // Optional: Disconnect after the cart is found
+              console.log("The old logical temp fix used observer disconnected ( the body one ).")
+            }
+        });
+    });
+  }) 
+
+  bodyObserverForStickyPdpAdcBuyN.observe(document.body, { childList: true, subtree: true }); // Observe the body for added elements
+  console.log("The old logical temp fix used observer connected ( the body one ).")
 }
 
 // Call this function early in the page load or when you expect the cart could be loaded
