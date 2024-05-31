@@ -642,6 +642,13 @@
               {% else %}
                 <div class="saleBar phonefourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 99900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹400 Off</b></p></div>
               {% endif %}
+
+              
+              {% if cart.items_subtotal_price > 99900 %}
+                <div class="saleBar zomatofourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code at checkout to get ₹400 Off</p></div>
+              {% else %}
+                <div class="saleBar zomatofourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 99900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹400 Off</b></p></div>
+              {% endif %}
               
             {% if cart.items_subtotal_price > 59900 %}
               <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPP200</b> at checkout to get ₹200 Off</p></div>
@@ -1534,17 +1541,17 @@ $(document).ready(function () {
 </script>
 
 <style>
-  body.hide-gift .saleBar.show-new,body.hide-gift #gift_1_wrap,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred{
+  body.hide-gift .saleBar.show-new,body.hide-gift #gift_1_wrap,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred, body.hide-gift .saleBar.zomatofourhundred{
     display:none !important;
   }
-  body.show-gift .saleBar.show-default,body.show-gift .saleBar.shop-3,body.show-gift .saleBar.shop-4,body.show-gift .saleBar.phonefourhundred,body.show-gift .saleBar.phonetwohundred {
+  body.show-gift .saleBar.show-default,body.show-gift .saleBar.shop-3,body.show-gift .saleBar.shop-4,body.show-gift .saleBar.phonefourhundred,body.show-gift .saleBar.phonetwohundred, body.show-gift .saleBar.zomatofourhundred {
     display:none !important;
   }
   .t4s-quantity-wrapper [disabled],.t4s-quantity-wrapper [disabled] svg,.t4s-quantity-wrapper [disabled] path {
     color: #80808099 !important;
     fill:#80808099 !important;
   }
-  body.shop-3 .saleBar.show-new,body.shop-3 .saleBar.show-default,body.phonefourhundred .saleBar.show-default,body.phonetwohundred .saleBar.show-default  {
+  body.shop-3 .saleBar.show-new,body.shop-3 .saleBar.show-default,body.phonefourhundred .saleBar.show-default,body.phonetwohundred .saleBar.show-default, body.zomatofourhundred .saleBar.show-default {
     display:none !important;
   }
   body.shop-3 .saleBar.shop-3{
@@ -1560,6 +1567,9 @@ $(document).ready(function () {
     display:block !important;
   }
   body.phonetwohundred .saleBar.phonetwohundred{
+    display:block !important;
+  }
+  body.zomatofourhundred .saleBar.zomatofourhundred{
     display:block !important;
   }
 </style>
