@@ -1,6 +1,6 @@
 {% if settings.goEnable %}
 <div class="gokwik-checkout"{% if settings.hideFlow %} style="display:none !important;" {% endif %}>
-  <button type='button' class="" onclick="onCheckoutClick(this)">
+  <button type='button' class="" onclick="onCheckoutClick(this)" data-foxtale-event="begin-checkout">
             <span class="btn-text" >
                 <span>{{ settings.main-titile }}</span>
                 <span>{{ settings.sub-titile }}</span>
