@@ -348,6 +348,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_40.jpg",
             "collection_handle": "gpay-offer-free-sunscreen"
           }
+        },
+        "image_Ui8z8E": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/HP_BANNERS-04.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/HP_BANNERS-03_1.jpg",
+            "collection_handle": "admittad-buy2-buy3-offer"
+          }
         }
       },
       "block_order": [
@@ -391,7 +399,8 @@
         "image_8XaUmT",
         "image_T889YE",
         "image_AiRhnc",
-        "image_jyAbkd"
+        "image_jyAbkd",
+        "image_Ui8z8E"
       ],
       "settings": {
         "slider_height_mobile": "100%"
