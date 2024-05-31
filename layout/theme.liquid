@@ -1189,6 +1189,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'zomato-flat-400-offer' %}
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Get flat ₹400 Off on orders above ₹999";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
        {% if collection.url contains 'flat-200-off-phonepe'%}
          .t4s-announcement-bar__item {
            visibility: hidden;
