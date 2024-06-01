@@ -70,7 +70,7 @@
 
 mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
   debug: true,
-  track_pageview: false,
+  track_pageview: true,
   persistence: "localStorage",
 });
 
