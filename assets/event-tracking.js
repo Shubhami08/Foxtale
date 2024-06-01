@@ -68,11 +68,11 @@
   }
 })(document, window.mixpanel || []);
 
-mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
-  debug: true,
-  track_pageview: true,
-  persistence: "localStorage",
-});
+// mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
+//   debug: true,
+//   track_pageview: true,
+//   persistence: "localStorage",
+// });
 
 /**
  * Mixpanel Event Tracking Configuration Array
@@ -624,6 +624,13 @@ console.log("kwikPassCustomerId: ", kwikPassCustomerId);
 console.log("mp_distinct_id", mixpanelDistinctId);
 
 mixpanel.identify(mixpanelDistinctId);
+
+mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
+  debug: true,
+  track_pageview: true,
+  persistence: "localStorage",
+});
+
 // console.log("mixpanelLocalStorageObject?.['distinct_id']: ", mixpanelLocalStorageObject)?.["distinct_id"]
 // console.log("mixpanel local storage object", mixpanelLocalStorageObject);
 // if (mixpanelDistinctId || mixpanelLocalStorageObject?.["distinct_id"]) {
