@@ -1236,7 +1236,7 @@ setupObserverForLazyComponentsWhichDoNotHaveStaticallyLoadedParent();
 const defaultPageToPageEvent = {
   'index': "Viewed Homepage",
   'collection': "Viewed Collection",
-  // 'product': 'Viewed Product'
+  'product': 'Viewed Product'
 }
 
 /**
@@ -1277,7 +1277,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if ( defaultPageToPageEvent?.[window.page_type] ) {
         trackEvent(defaultPageToPageEvent[window.page_type], properties);
       } else {
-        trackEvent('Other Pages', properties);
+        trackEvent('The Foxtale Pages', properties);
       }
   }
 });
