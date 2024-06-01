@@ -625,7 +625,7 @@ console.log("mp_distinct_id", mixpanelDistinctId);
 
 mixpanel.init("1e8f3dbc29a04e9ae06ef45a4e721309", {
   debug: true,
-  track_pageview: true,
+  track_pageview: false,
   persistence: "localStorage",
 });
 
@@ -1270,7 +1270,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlComponenetsForPage = window.location.href.split('/');
 
     properties['page_name'] = urlComponenetsForPage[urlComponenetsForPage.length - 1];
+    properties['page_url'] = window.location.href;
 
-    trackEvent(defaultPageToPageEvent[window.page_type], properties);
+      if ( defaultPageToPageEvent?.[window.page_type] ) {
+        trackEvent(defaultPageToPageEvent[window.page_type], properties);
+      } else {
+        trackEvent('Other Pages', properties);
+      }
   }
 });
