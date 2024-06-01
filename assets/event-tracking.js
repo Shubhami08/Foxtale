@@ -1271,6 +1271,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     properties['page_name'] = urlComponenetsForPage[urlComponenetsForPage.length - 1];
     properties['page_url'] = window.location.href;
+    properties['page_type'] = window.page_type;
 
       if ( defaultPageToPageEvent?.[window.page_type] ) {
         trackEvent(defaultPageToPageEvent[window.page_type], properties);
