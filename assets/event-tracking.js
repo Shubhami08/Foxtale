@@ -622,6 +622,8 @@ const kwikPassCustomerId = localStorage.getItem("kp_customer_id")
 
 console.log("kwikPassCustomerId: ", kwikPassCustomerId);
 console.log("mp_distinct_id", mixpanelDistinctId);
+
+mixpanel.identify(mixpanelDistinctId);
 // console.log("mixpanelLocalStorageObject?.['distinct_id']: ", mixpanelLocalStorageObject)?.["distinct_id"]
 // console.log("mixpanel local storage object", mixpanelLocalStorageObject);
 // if (mixpanelDistinctId || mixpanelLocalStorageObject?.["distinct_id"]) {
