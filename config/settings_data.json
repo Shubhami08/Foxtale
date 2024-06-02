@@ -405,11 +405,31 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "link": "shopify:\/\/collections\/products",
+              "content": "<p><strong>Buy 2 @ 799 <\/strong>[Code:<strong> BUY2<\/strong>]<\/p>",
+              "countdown": "",
+              "txt_day": "",
+              "dayx": 1
+            }
+          },
+          "75d97d28-d97c-478f-b125-3205b88a4be4": {
+            "type": "announcement",
+            "settings": {
+              "link": "shopify:\/\/collections\/products",
+              "content": "<p><strong>Buy 3 @ 1099 <\/strong>[Code:<strong> BUY3<\/strong>]<\/p>",
+              "countdown": "",
+              "txt_day": "days",
+              "dayx": 1
+            }
+          },
           "f223bebb-cc3c-48d2-9a6d-249db21b7563": {
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/shop",
-              "content": "<p><strong>10% Off <\/strong>on all orders [Code:<strong> GLOW10<\/strong>]<\/p>",
+              "content": "<p><strong>10% Off + Eye Mask <\/strong>on all orders [Code:<strong> GLOW10<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
@@ -417,33 +437,12 @@
           },
           "5f5403a0-7add-4a01-b0f9-45ed6ee4a5e1": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>15% Off <\/strong>on all orders above 699 [Code:<strong> GLOW15<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "days",
-              "dayx": 1
-            }
-          },
-          "75d97d28-d97c-478f-b125-3205b88a4be4": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 3 @ 1099 <\/strong>[Code:<strong> FOX1099<\/strong>]<\/p>",
-              "countdown": "",
-              "txt_day": "days",
-              "dayx": 1
-            }
-          },
-          "announcement-bar-0": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "link": "shopify:\/\/collections\/products",
-              "content": "<p><strong>Buy 2 @ 799 <\/strong>[Code:<strong> FOX799<\/strong>]<\/p>",
-              "countdown": "",
-              "txt_day": "",
               "dayx": 1
             }
           },
@@ -482,10 +481,10 @@
           }
         },
         "block_order": [
+          "announcement-bar-0",
+          "75d97d28-d97c-478f-b125-3205b88a4be4",
           "f223bebb-cc3c-48d2-9a6d-249db21b7563",
           "5f5403a0-7add-4a01-b0f9-45ed6ee4a5e1",
-          "75d97d28-d97c-478f-b125-3205b88a4be4",
-          "announcement-bar-0",
           "02e70428-04c0-4ebf-8c75-aa5c2def741e",
           "9f947f8d-152f-425c-946a-8928071869c8",
           "announcement-bar-1"
