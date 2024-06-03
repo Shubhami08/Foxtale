@@ -650,31 +650,51 @@ mixpanel.identify(mixpanelDistinctId);
 
 /////////////////////////////////////// Section to get and store UTM parameters if there are any /////////////////////////////////////////////
 
+// function getUTMParams() {
+//   const params = {};
+//   const queryString = window.location.search.substring(1);
+//   const regex = /([^&=]+)=([^&]*)/g;
+//   let match;
+//   try {
+//       while (match = regex.exec(queryString)) {
+//           params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+//       }
+//   } catch (error) {
+//       console.error('Error capturing UTM parameters:', error);
+//   }
+//   return params;
+// }
+
 function getUTMParams() {
-  const params = {};
-  const queryString = window.location.search.substring(1);
-  const regex = /([^&=]+)=([^&]*)/g;
-  let match;
   try {
-      while (match = regex.exec(queryString)) {
-          params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
-      }
-  } catch (error) {
-      console.error('Error capturing UTM parameters:', error);
-  }
-  return params;
+     const queryString = window.location.search.substring(1);
+     const uriComponentsString = queryString.split('?');
+     const uriParameters = uriComponentsString?.[1]?.split('&');
+     const params = {};
+
+     for ( let itr = 0; itr < uriParameters.length; itr ++ ) {
+        const singleParamStringKeyValuePair = uriParameters?.[itr]?.split('=');
+
+        params[singleParamStringKeyValuePair[0]] = singleParamStringKeyValuePair[1];
+     }
+
+    return params;
+} catch (error) {
+    console.error('Error capturing UTM parameters:', error);
+    return {};
 }
+  
 
 function storeUTMParams() {
   const params = getUTMParams();
   
   // Mapping UTM parameters to the names from the screenshot
   const mappedParams = {
-      utm_source: params.utm_source || null,
-      utm_medium: params.utm_medium || null,
-      utm_campaign: params.utm_campaign || null,
-      utm_term: params.utm_term || null,
-      utm_content: params.utm_content || null
+      utm_source: params?.utm_source || null,
+      utm_medium: params?.utm_medium || null,
+      utm_campaign: params?.utm_campaign || null,
+      utm_term: params?.utm_term || null,
+      utm_content: params?.utm_content || null
   };
   
   // Store the mapped parameters in local storage with error handling
