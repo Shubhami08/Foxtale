@@ -731,7 +731,91 @@ storeUTMParams();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+function getBrowserInfo() {
+  var ua = navigator.userAgent, tem,
+      matchTest = ua.match(/(opera|chrome|safari|firefox|msie|trident)\/?\s*(\d+)/i) || [];
+  if (/trident/i.test(matchTest[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+      return { name: 'IE', version: (tem[1] || '') };
+  }
+  if (matchTest[1] === 'Chrome') {
+      tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+      if (tem != null) return { name: tem.slice(1)[0].replace('OPR', 'Opera'), version: tem.slice(1)[1] };
+  }
+  matchTest = matchTest[2] ? [matchTest[1], matchTest[2]] : [navigator.appName, navigator.appVersion, '-?'];
+  if ((tem = ua.match(/version\/(\d+)/i)) != null) matchTest.splice(1, 1, tem[1]);
+  return {
+      name: matchTest[0],
+      version: matchTest[1]
+  };
+}
 
+function getOS() {
+  var os = 'Unknown';
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/windows phone/i.test(userAgent)) {
+      os = "Windows Phone";
+  } else if (/android/i.test(userAgent)) {
+      os = "Android";
+  } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      os = "iOS";
+  } else if (/Macintosh/.test(userAgent)) {
+      os = "MacOS";
+  } else if (/Windows/.test(userAgent)) {
+      os = "Windows";
+  } else if (/Linux/.test(userAgent)) {
+      os = "Linux";
+  }
+
+  return os;
+}
+
+function getDefaultProperties() {
+  var browserInfo = getBrowserInfo();
+
+  var defaultProperties = {
+      // "API Endpoint": "api-js.mixpanel.com",
+      // "API Timestamp": Date.now(),
+      "Browser": browserInfo.name,
+      "Browser Version": browserInfo.version,
+      "Current URL": window.location.href,
+      "Device": navigator.userAgent.match(/(mobile|android|tablet|ipad|iphone|ipod)/i) ? 'Mobile' : 'Desktop',
+      "Insert ID": Math.random().toString(36).substr(2, 9),
+      // "Library Version": "2.51.0",
+      // "Mixpanel Library": "web",
+      "Operating System": getOS(),
+      "Screen Height": window.screen.height,
+      "Screen Width": window.screen.width,
+      // "Sent By Library Version": "2.51.0"
+  };
+
+  var locationInfo = {};
+
+  fetch('https://ipinfo.io/json')
+      .then(response => response.json())
+      .then(response => (
+        locationInfo = { 
+          ...defaultProperties, 
+          city: response.city, 
+          region: response.region, 
+          country: response.country 
+        }
+      ))
+      .catch(() => (
+        locationInfo = { 
+          ...defaultProperties, 
+          city: 'Unknown', 
+          region: 'Unknown', 
+          country: 'Unknown' 
+        })
+      );
+
+    return {
+        ...locationInfo,
+        ...defaultProperties
+    }
+}
 
 // Mixpael REST API for tracking the events
 function trackEvent(eventName, properties) {
@@ -742,14 +826,16 @@ function trackEvent(eventName, properties) {
   // }
   
   const utmProperties = getStoredUTMParams();
+  const defaultProperties = getDefaultProperties();
 
   const data = {
       event: eventName,
       properties: {
           token: projectToken,
           "distinct_id": mixpanelDistinctId,
+          ...defaultProperties,
+          ...utmProperties,
           ...properties,
-          ...utmProperties
       }
   };
 
