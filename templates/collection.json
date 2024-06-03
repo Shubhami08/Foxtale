@@ -94,8 +94,8 @@
         "a6f55990-39a5-4ae9-957d-ba08788864d2": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/INFLUENCER_BANNER-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/INFLUENCER_BANNER-01.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP1.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE1.gif",
             "collection_handle": "early-access"
           }
         },
