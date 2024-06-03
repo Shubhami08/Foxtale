@@ -842,14 +842,14 @@ function trackEvent(eventName, properties) {
   // }
   
   const utmProperties = getStoredUTMParams();
-  const defaultProperties = getDefaultProperties();
+  // const defaultProperties = getDefaultProperties();
 
   const data = {
       event: eventName,
       properties: {
           token: projectToken,
           "distinct_id": mixpanelDistinctId,
-          ...defaultProperties,
+          // ...defaultProperties,
           ...utmProperties,
           ...properties,
       }
