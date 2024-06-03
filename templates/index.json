@@ -6,8 +6,8 @@
         "aca13d02-fdca-4dd7-b455-cc71ffabb08a": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1800X606_2.jpg",
-            "image_mb": "shopify:\/\/shop_images\/767X464_2.jpg",
+            "image": "shopify:\/\/shop_images\/1800X606_3.jpg",
+            "image_mb": "shopify:\/\/shop_images\/shop-now-360x475-app.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
@@ -47,7 +47,7 @@
           "type": "image_parent",
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_32.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_31.jpg",
+            "image_mb": "shopify:\/\/shop_images\/TRIAL_BANNER_360x475-07.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/shop",
