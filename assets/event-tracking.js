@@ -647,6 +647,72 @@ mixpanel.identify(mixpanelDistinctId);
 //   last_updated: new Date(),
 // });
 
+
+/////////////////////////////////////// Section to get and store UTM parameters if there are any /////////////////////////////////////////////
+
+function getUTMParams() {
+  const params = {};
+  const queryString = window.location.search.substring(1);
+  const regex = /([^&=]+)=([^&]*)/g;
+  let match;
+  try {
+      while (match = regex.exec(queryString)) {
+          params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+      }
+  } catch (error) {
+      console.error('Error capturing UTM parameters:', error);
+  }
+  return params;
+}
+
+function storeUTMParams() {
+  const params = getUTMParams();
+  
+  // Mapping UTM parameters to the names from the screenshot
+  const mappedParams = {
+      utm_source: params.utm_source || null,
+      utm_medium: params.utm_medium || null,
+      utm_campaign: params.utm_campaign || null,
+      utm_term: params.utm_term || null,
+      utm_content: params.utm_content || null
+  };
+  
+  // Store the mapped parameters in local storage with error handling
+  try {
+      if (mappedParams.utm_source) localStorage.setItem('utm_source', mappedParams.utm_source);
+      if (mappedParams.utm_medium) localStorage.setItem('utm_medium', mappedParams.utm_medium);
+      if (mappedParams.utm_campaign) localStorage.setItem('utm_campaign', mappedParams.utm_campaign);
+      if (mappedParams.utm_term) localStorage.setItem('utm_term', mappedParams.utm_term);
+      if (mappedParams.utm_content) localStorage.setItem('utm_content', mappedParams.utm_content);
+  } catch (error) {
+      console.error('Error storing UTM parameters in local storage:', error);
+  }
+}
+
+function getStoredUTMParams() {
+  let utmParams = {};
+  try {
+      utmParams = {
+          "UTM Source": localStorage.getItem('utm_source'),
+          "UTM Medium": localStorage.getItem('utm_medium'),
+          "UTM Campaign": localStorage.getItem('utm_campaign'),
+          "UTM Term": localStorage.getItem('utm_term'),
+          "UTM Content": localStorage.getItem('utm_content')
+      };
+  } catch (error) {
+      console.error('Error retrieving UTM parameters from local storage:', error);
+  }
+  return utmParams;
+}
+
+
+// Call this function on page load
+storeUTMParams();
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 // Mixpael REST API for tracking the events
 function trackEvent(eventName, properties) {
   const projectToken = "1e8f3dbc29a04e9ae06ef45a4e721309";
@@ -654,13 +720,16 @@ function trackEvent(eventName, properties) {
   // if (kwikPassCustomerId) {
   //   identifyAndSetProfile(mixpanelDistinctId, kwikPassCustomerId);
   // }
+  
+  const utmProperties = getStoredUTMParams();
 
   const data = {
       event: eventName,
       properties: {
           token: projectToken,
           "distinct_id": mixpanelDistinctId,
-          ...properties
+          ...properties,
+          ...utmProperties
       }
   };
 
