@@ -13677,7 +13677,7 @@ form#t4s-form-newsletter {
 
 .customGroupProduct-template .one-two1,
 .customGroupProduct-template .or-text {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .customGroupProduct-template .two-productscampaign .offer-2-row {
