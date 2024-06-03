@@ -667,18 +667,34 @@ mixpanel.identify(mixpanelDistinctId);
 
 function getUTMParams() {
   try {
-     const queryString = window.location.search.substring(1);
-     const uriComponentsString = queryString.split('?');
-     const uriParameters = uriComponentsString?.[1]?.split('&');
      const params = {};
+     const queryString = window.location.search?.substring(1);
 
-     for ( let itr = 0; itr < uriParameters.length; itr ++ ) {
-        const singleParamStringKeyValuePair = uriParameters?.[itr]?.split('=');
+     if (queryString) {
+       
+       const uriComponentsString = queryString.split('?');
 
-        params[singleParamStringKeyValuePair[0]] = singleParamStringKeyValuePair[1];
-     }
+       if (uriComponentsString.length > 1 ) {
+         const uriParameters = uriComponentsString?.[1]?.split('&');
+  
+         if (uriParameters.length) {
+           for ( let itr = 0; itr < uriParameters.length; itr ++ ) {
+             const singleParamStringKeyValuePair = uriParameters?.[itr]?.split('=');
+    
+             params[singleParamStringKeyValuePair[0]] = singleParamStringKeyValuePair[1];
+           }
+         } else {
+           return {};
+         }
+       } else {
+         return {};
+       }
+     } else {
+       return {};
+    }
 
     return params;
+    
 } catch (error) {
     console.error('Error capturing UTM parameters:', error);
     return {};
