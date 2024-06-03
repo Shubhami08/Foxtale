@@ -695,9 +695,10 @@ function getUTMParams() {
 
     return params;
     
-} catch (error) {
-    console.error('Error capturing UTM parameters:', error);
-    return {};
+  } catch (error) {
+      console.error('Error capturing UTM parameters:', error);
+      return {};
+  }
 }
   
 
