@@ -523,11 +523,10 @@
         },
         "image_ijCda9": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/B1G1_OR_B2G2_midnight_sale_sleek_banner_website.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/B1G1_OR_B2G2_midnight_sale_Sleek_banner_mobile.jpg",
-            "collection_handle": "midnight-sale"
+            "image_desktop": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_website.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_Mobile.jpg",
+            "collection_handle": "exclusive-sale"
           }
         }
       },
