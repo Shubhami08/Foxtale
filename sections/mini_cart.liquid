@@ -663,6 +663,14 @@
             {% else %}
               <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 59900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹200 Off</b></p></div>
             {% endif %}
+
+              {% if total_cart_prod > 2 %}
+                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>SPF</b> at checkout</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
+              {% endif %}
               
             </div>
             
