@@ -102,16 +102,16 @@
         "image_rUk9y3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/MIDNIGHT_BOGO_WEB_copy_368a8832-ddd0-4b4d-9a89-aa46b37ab27d.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MIDNIGHT_BOGO_MOBILE_copy_108daa61-a21a-4636-b553-91b207c14b31.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Affiliate_DESKTOP-banner.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/Affiliate_MOBILE-banner.gif",
             "collection_handle": "affiliate-secret-sale"
           }
         },
         "387e416d-e96a-42bf-b73f-10452683ddf3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/MIDNIGHT_B1G1_WEB_revised_0f5e9a0a-cac7-4c3a-b879-81b4f343a078.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MIDNIGHT_B1G1_MOBILE_re_9e6a50bf-a733-445e-a17a-89d0f6704d61.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Affiliate_without-code_DESKTOP-banner.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/Affiliate_without-code_MOBILE-banner.gif",
             "collection_handle": "affiliate-early-access"
           }
         },
