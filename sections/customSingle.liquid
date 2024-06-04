@@ -5149,15 +5149,31 @@ $(document).ready(function () {
         pageDots: false,
         on: {
           ready: function() {
+              myInterval = setInterval(function () {
+                if($(".main-prod-slider .flickity-viewport").length){
+                  $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
+                  $(".main-prod-slider").css("height",$(".carousel-cell img").height());
+                  clearInterval(myInterval);
+                }
+              }, 100);
           },
           change: function( index ) {
             if (index === 1) {
               flkty.pausePlayer();
             }
+            $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
+            $(".main-prod-slider").css("height",$(".carousel-cell img").height());
           }
         }
       });
     }
-
+  myInterval1 = setInterval(function () {
+    if($(".main-prod-slider .flickity-viewport").length){
+      $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
+      $(".main-prod-slider").css("height",$(".carousel-cell img").height());
+      clearInterval(myInterval1);
+    }
+  }, 100);
 });
+
 </script>
