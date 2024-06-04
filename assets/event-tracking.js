@@ -1474,7 +1474,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 setTimeout(function() {
-  var mixpanelDistinctIdAttributes = {'mp_distinct_id': mixpanelDistinctId };
+  var mixpanelDistinctIdAttributes = {'distinct_id': mixpanelDistinctId };
   $.ajax({
     type: 'POST',
     url: '/cart/update.js',
