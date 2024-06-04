@@ -486,10 +486,10 @@
         "image_KehdyY": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/extra-glow-days-routine-banner_1.gif",
-            "image_1_mobile": "shopify:\/\/shop_images\/ROUTINE-BANNER_Mobile-_1.gif",
-            "image_2_desktop": "shopify:\/\/shop_images\/DESKTOP-banner.gif",
-            "image_2_mobile": "shopify:\/\/shop_images\/MOBILE-banner.gif",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-banner.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE-banner.gif",
+            "image_2_desktop": "shopify:\/\/shop_images\/extra-glow-days-routine-banner_1.gif",
+            "image_2_mobile": "shopify:\/\/shop_images\/ROUTINE-BANNER_Mobile-_1.gif",
             "collection_handle": "new-exclusive-special-1"
           }
         }
