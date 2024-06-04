@@ -15198,6 +15198,10 @@ a.hm {
   z-index: 1;
   color: transparent;
 }
+.muktailayout-template .t4s-sticky-atc__btns {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 @media (max-width: 768px) {
   .muktailayout-template .flickity-prev-next-button.previous {
