@@ -15202,6 +15202,24 @@ a.hm {
   display: flex;
   flex-direction: row-reverse;
 }
+.muktailayout-template
+  .t4s-sticky-atc
+  .t4s-sticky-atc__btns
+  .t4s-sticky-atc__atc {
+  background: #000000;
+  border-color: #000;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  color: #ffffff;
+  margin: 0 0px 0 4px;
+}
+.muktailayout-template .t4s-sticky-atc #gokwik-buy-now {
+  border-color: #000;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+}
 
 @media (max-width: 768px) {
   .muktailayout-template .flickity-prev-next-button.previous {
