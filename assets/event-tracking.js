@@ -1473,3 +1473,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
 });
+var mixpanelDistinctIdAttributes = {'mp_distinct_id': mixpanelDistinctId };
+$.ajax({
+  type: 'POST',
+  url: '/cart/update.js',
+  data: {
+    attributes : mixpanelDistinctIdAttributes
+  },
+  dataType: 'json',
+  success: function(cart) {
+    console.log('Cart note updated:', cart.note);
+  },
+  error: function(XMLHttpRequest, textStatus) {
+    console.error('Failed to update cart note:', textStatus);
+  }
+});
