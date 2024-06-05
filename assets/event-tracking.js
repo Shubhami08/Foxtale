@@ -313,9 +313,9 @@ const eventConfig = [
       "Removed from Product SKU": "sku",
       "Removed from Product Availability": "available",
       "Removed from Product Max Price": "price_max",
-      "": "price_min",
-      productTitle: "title",
-      tags: "tags",
+      "Removed from Product Min Price": "price_min",
+      "Removed from Product Title": "title",
+      "Removed from Product Tags": "tags",
     },
     elementDataMap: {},
     constDataMap: {
