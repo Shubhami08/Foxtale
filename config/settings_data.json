@@ -407,6 +407,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>Buy 2 @ 799 <\/strong>[Code:<strong> BUY2<\/strong>]<\/p>",
@@ -417,6 +418,7 @@
           },
           "75d97d28-d97c-478f-b125-3205b88a4be4": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>Buy 3 @ 1099 <\/strong>[Code:<strong> BUY3<\/strong>]<\/p>",
