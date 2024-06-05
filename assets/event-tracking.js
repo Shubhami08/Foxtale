@@ -164,6 +164,7 @@ const eventConfig = [
       // cartTotal: "total_price",
       // cartDiscounts: "total_discount",
       // cartItemCount: "item_count"
+      "Viewed cart item id"
       productName: "handle",
       productUrl: "url",
       productPrice: "price",
