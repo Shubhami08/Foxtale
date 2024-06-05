@@ -801,9 +801,9 @@ async function getDefaultPropertiesAndStore() {
       "$insert_id": Math.random().toString(36).substr(2, 9),
       // "Library Version": "2.51.0",
       // "Mixpanel Library": "web",
-      "": getOS(),
-      "Screen Height": window.screen.height,
-      "Screen Width": window.screen.width,
+      "$os": getOS(),
+      "$screen_height": window.screen.height,
+      "$screen_width": window.screen.width,
       // "Sent By Library Version": "2.51.0"
   };
 
