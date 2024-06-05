@@ -1441,44 +1441,45 @@ const defaultPageToPageEvent = {
  * Attaching event listener on "DOMContentLoaded" event to trigger our application logic on that event
  */
 document.addEventListener("DOMContentLoaded", function () {
-  getDefaultPropertiesAndStore().then(() => {
-    setupEventListeners();
+  getDefaultPropertiesAndStore().then(() => 
+    {
+      setupEventListeners();
 
-  /**
-   * Clean up previous observers
-   */
-  observers.forEach((observer) => observer.disconnect());
-  observers = []; // Clear the array to start fresh
+    /**
+     * Clean up previous observers
+     */
+    observers.forEach((observer) => observer.disconnect());
+    observers = []; // Clear the array to start fresh
 
-  /**
-   * Function to handle the intersection changes
-   */
-  observationConfig.forEach((config) => {
-    handleDynamicComponentInteraction(config.parentElementQuery);
-  });
+    /**
+     * Function to handle the intersection changes
+     */
+    observationConfig.forEach((config) => {
+      handleDynamicComponentInteraction(config.parentElementQuery);
+    });
 
-  /**
-   * Fire event of home page viewed, if the current page is 'index' page
-   */
+    /**
+     * Fire event of home page viewed, if the current page is 'index' page
+     */
 
-  if ( window.page_type ) {
-    const properties = {};
-    
-    // const urlComponenetsForPage = window.page_type.split('/');
+    if ( window.page_type ) {
+      const properties = {};
+      
+      // const urlComponenetsForPage = window.page_type.split('/');
 
-    const urlComponenetsForPage = window.location.href.split('/');
+      const urlComponenetsForPage = window.location.href.split('/');
 
-    properties['page_name'] = urlComponenetsForPage[urlComponenetsForPage.length - 1];
-    properties['page_url'] = window.location.href;
-    properties['page_type'] = window.page_type;
-    properties['source'] = source;
+      properties['page_name'] = urlComponenetsForPage[urlComponenetsForPage.length - 1];
+      properties['page_url'] = window.location.href;
+      properties['page_type'] = window.page_type;
+      properties['source'] = source;
 
-      if ( defaultPageToPageEvent?.[window.page_type] ) {
-        trackEvent(defaultPageToPageEvent[window.page_type], properties);
-      } else {
-        trackEvent('The Foxtale Pages', properties);
-      }
-  }
+        if ( defaultPageToPageEvent?.[window.page_type] ) {
+          trackEvent(defaultPageToPageEvent[window.page_type], properties);
+        } else {
+          trackEvent('The Foxtale Pages', properties);
+        }
+    }
   })
 });
 
