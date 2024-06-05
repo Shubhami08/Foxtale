@@ -816,6 +816,11 @@ function getDefaultPropertiesAndStore() {
           "$city": response.city, 
           "$region": response.region, 
           "$country": response.country 
+        };
+
+        defaultProperties = {
+          ...locationInfo,
+          ...defaultProperties
         }
       ))
       .catch(() => (
@@ -825,11 +830,6 @@ function getDefaultPropertiesAndStore() {
           "$country": 'Unknown' 
         })
       );
-
-    defaultProperties = {
-      ...locationInfo,
-      ...defaultProperties
-    }
 
     localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
 }
