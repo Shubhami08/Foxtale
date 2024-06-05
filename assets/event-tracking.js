@@ -334,9 +334,9 @@ const eventConfig = [
     needsNativeCodeData: true,
     apiDataMap: {
       "Dynamic Checkout product handle": "handle",
-      productUrl: "url",
+      "Dynamic Checkout product url": "url",
       productPrice: "price",
-      category: "product_type",
+      productType: "product_type",
       varientSku: "sku",
       productAvailabe: "available",
       productMaxPrice: "price_max",
