@@ -810,14 +810,12 @@ async function getDefaultPropertiesAndStore() {
   var locationInfo = {};
 
   locationData = await fetch('https://ipinfo.io/json')
-      .then(response => response.json())
-      .then(response => (
-        locationInfo = { 
-          "$city": response.city, 
-          "$region": response.region, 
-          "$country": response.country 
-        }
-      ))
+
+  locationInfo = { 
+    "$city": response.city, 
+    "$region": response.region, 
+    "$country": response.country 
+  }
       .catch(() => (
         locationInfo = { 
           "$city": 'Unknown', 
