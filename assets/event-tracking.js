@@ -337,7 +337,7 @@ const eventConfig = [
       "Dynamic Checkout product url": "url",
       "Dynamic Checkout product price": "price",
       "Dynamic Checkout product type": "product_type",
-      varientSku: "sku",
+      "Dynamic Checkout product sku": "sku",
       productAvailabe: "available",
       productMaxPrice: "price_max",
       productMinPrice: "price_min",
