@@ -809,7 +809,7 @@ async function getDefaultPropertiesAndStore() {
 
   var locationInfo = {};
 
-  locationData = await fetch('https://ipinfo.io/json')
+  var locationData = (await fetch('https://ipinfo.io/json')).json();
 
   locationInfo = { 
     "$city": response.city, 
