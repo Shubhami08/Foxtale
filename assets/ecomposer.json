@@ -246,7 +246,8 @@
       "data": {
         "title": "Kalles Products Grid",
         "template": "featured",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "kallesProductRelated": {
@@ -267,7 +268,8 @@
       "data": {
         "title": "Kalles Product Related",
         "template": "product",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "kallesheading": {
@@ -286,7 +288,8 @@
       ],
       "data": {
         "title": "Kalles Heading",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "kallesWishlist": {
@@ -305,7 +308,8 @@
       ],
       "data": {
         "title": "Kalles Wishlist",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "kallesCompare": {
@@ -324,7 +328,8 @@
       ],
       "data": {
         "title": "Kalles Compare",
-        "settings": {}
+        "settings": {
+        }
       }
     }
   }
