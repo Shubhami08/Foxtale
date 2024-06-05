@@ -798,10 +798,10 @@ async function getDefaultPropertiesAndStore() {
       "$browser_version": browserInfo.version,
       "$current_url": window.location.href,
       "$device": navigator.userAgent.match(/(mobile|android|tablet|ipad|iphone|ipod)/i) ? 'Mobile' : 'Desktop',
-      "Insert ID": Math.random().toString(36).substr(2, 9),
+      "$insert_id": Math.random().toString(36).substr(2, 9),
       // "Library Version": "2.51.0",
       // "Mixpanel Library": "web",
-      "Operating System": getOS(),
+      "": getOS(),
       "Screen Height": window.screen.height,
       "Screen Width": window.screen.width,
       // "Sent By Library Version": "2.51.0"
