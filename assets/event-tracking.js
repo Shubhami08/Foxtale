@@ -811,28 +811,25 @@ async function getDefaultPropertiesAndStore() {
 
   try {
 
-    var locationData = (await fetch('https://ipinfo.io/json')).json();
+      var locationData = (await fetch('https://ipinfo.io/json')).json();
 
-    locationInfo = { 
-      "$city": response.city, 
-      "$region": response.region, 
-      "$country": response.country 
-    }
-        .catch(() => (
-          )
-        );
-
-      localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
-    
-      } catch (error) {
-        
-        locationInfo = { 
-          "$city": 'Unknown', 
-          "$region": 'Unknown', 
-          "$country": 'Unknown' 
-        }
+      locationInfo = { 
+        "$city": response.city, 
+        "$region": response.region, 
+        "$country": response.country 
       }
-}
+      
+    } catch (error) {
+      
+      locationInfo = { 
+        "$city": 'Unknown', 
+        "$region": 'Unknown', 
+        "$country": 'Unknown' 
+      }
+    }
+    
+    localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
+  }
 
 getDefaultPropertiesAndStore();
 
