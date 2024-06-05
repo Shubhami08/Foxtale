@@ -811,7 +811,7 @@ async function getDefaultPropertiesAndStore() {
 
   try {
 
-      var locationData = (await fetch('https://ipinfo.io/json')).json();
+      var locationData = await(await fetch('https://ipinfo.io/json')).json();
 
       locationInfo = { 
         "$city": locationData?.city, 
