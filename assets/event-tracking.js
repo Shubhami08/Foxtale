@@ -284,7 +284,7 @@ const eventConfig = [
       productUrl: "url",
       "Added to Product Price": "price",
       category: "product_type",
-      varientSku: "sku",
+      "Added to Product SKU": "sku",
       productAvailabe: "available",
       productMaxPrice: "price_max",
       productMinPrice: "price_min",
