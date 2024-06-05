@@ -819,17 +819,17 @@ async function getDefaultPropertiesAndStore() {
       "$country": response.country 
     }
         .catch(() => (
-          locationInfo = { 
-            "$city": 'Unknown', 
-            "$region": 'Unknown', 
-            "$country": 'Unknown' 
-          })
+          )
         );
 
       localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
     
       } catch (error) {
-        
+          locationInfo = { 
+            "$city": 'Unknown', 
+            "$region": 'Unknown', 
+            "$country": 'Unknown' 
+        }
       }
 }
 
