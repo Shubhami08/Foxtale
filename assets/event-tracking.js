@@ -228,7 +228,7 @@ const eventConfig = [
       "Viewed product sku": "sku",
       "Viewed product availability": "available",
       "Viewed product max price": "price_max",
-      : "price_min",
+      "Viewed product min price": "price_min",
       productTitle: "title",
       tags: "tags",
     },
