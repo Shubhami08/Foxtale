@@ -306,8 +306,8 @@ const eventConfig = [
     needsConstData: true,
     needsNativeCodeData: true,
     apiDataMap: {
-      productName: "handle",
-      productUrl: "url",
+      "Removed from Product Name": "handle",
+      "Removed from Product URL": "url",
       productPrice: "price",
       category: "product_type",
       varientSku: "sku",
