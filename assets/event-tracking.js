@@ -828,7 +828,10 @@ async function getDefaultPropertiesAndStore() {
       }
     }
 
-    localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
+    localStorage.setItem("defaultProperties", JSON.stringify(
+      ...defaultProperties,
+      ...
+    ));
   }
 
 getDefaultPropertiesAndStore();
