@@ -342,7 +342,7 @@ const eventConfig = [
       "Dynamic Checkout product max price": "price_max",
       "Dynamic Checkout product min price": "price_min",
       productTitle: "title",
-      tags: "tags",
+      "Dynamic Checkout product tags": "tags",
     },
     elementDataMap: {},
     constDataMap: {
