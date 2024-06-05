@@ -813,7 +813,6 @@ function getDefaultPropertiesAndStore() {
       .then(response => response.json())
       .then(response => (
         locationInfo = { 
-          ...defaultProperties, 
           "$city": response.city, 
           "$region": response.region, 
           "$country": response.country 
@@ -821,7 +820,6 @@ function getDefaultPropertiesAndStore() {
       ))
       .catch(() => (
         locationInfo = { 
-          ...defaultProperties, 
           "$city": 'Unknown', 
           "$region": 'Unknown', 
           "$country": 'Unknown' 
