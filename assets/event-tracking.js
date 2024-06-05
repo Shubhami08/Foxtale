@@ -788,7 +788,7 @@ function getOS() {
   return os;
 }
 
-function getDefaultPropertiesAndStore() {
+async function getDefaultPropertiesAndStore() {
   var browserInfo = getBrowserInfo();
 
   var defaultProperties = {
