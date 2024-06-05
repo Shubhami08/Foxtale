@@ -341,7 +341,7 @@ const eventConfig = [
       "Dynamic Checkout product availability": "available",
       "Dynamic Checkout product max price": "price_max",
       "Dynamic Checkout product min price": "price_min",
-      productTitle: "title",
+      "Dynamic Checkout product title": "title",
       "Dynamic Checkout product tags": "tags",
     },
     elementDataMap: {},
