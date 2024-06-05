@@ -817,6 +817,8 @@ async function getDefaultPropertiesAndStore() {
           "$region": response.region, 
           "$country": response.country 
         }
+
+        return locationInfo
       ))
       .catch(() => (
         locationInfo = { 
