@@ -5940,7 +5940,8 @@ footer .widget .widget-title:after {
 
 .product-tabs-content a.is--loading::before,
 .type_featured_collection_owl a.is--loading::before,
-.template-product .shop-all-qty-cart-btn a.is--loading::before {
+.template-product .shop-all-qty-cart-btn a.is--loading::before,
+.template-collection .shop-all-qty-cart-btn a.is--loading::before{
   width: 18px;
   height: 18px;
   border: 1px solid;
@@ -5962,20 +5963,23 @@ footer .widget .widget-title:after {
 
 .product-tabs-content .shop-all-qty-cart-btn a.is--loading,
 .type_featured_collection_owl .shop-all-qty-cart-btn a.is--loading,
-.template-product .shop-all-qty-cart-btn a.is--loading {
+.template-product .shop-all-qty-cart-btn a.is--loading,
+.template-collection .shop-all-qty-cart-btn a.is--loading {
   pointer-events: none;
 }
 
 .product-tabs-content .shop-all-qty-cart-btn a.is--loading > span,
 .type_featured_collection_owl .shop-all-qty-cart-btn a.is--loading > span,
-.template-product .shop-all-qty-cart-btn a.is--loading > span {
+.template-product .shop-all-qty-cart-btn a.is--loading > span,
+.template-collection .shop-all-qty-cart-btn a.is--loading > span {
   opacity: 0;
   visibility: hidden;
 }
 
 .product-tabs-content .t4s-pr-addtocart.is--loading,
 .type_featured_collection_owl .t4s-pr-addtocart.is--loading,
-.template-product .shop-all-qty-cart-btn .t4s-pr-addtocart.is--loading {
+.template-product .shop-all-qty-cart-btn .t4s-pr-addtocart.is--loading
+.template-collection .shop-all-qty-cart-btn .t4s-pr-addtocart.is--loading {
   --border-cl: var(--atc-cl);
 }
 
