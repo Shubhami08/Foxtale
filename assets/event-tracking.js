@@ -836,8 +836,10 @@ async function getDefaultPropertiesAndStore() {
     ));
   }
 
-if(localStorage.getItem("defaultProperties"))
-getDefaultPropertiesAndStore();
+if(!localStorage.getItem("defaultProperties")) {
+
+  getDefaultPropertiesAndStore();
+}
 
 // Mixpael REST API for tracking the events
 function trackEvent(eventName, properties) {
