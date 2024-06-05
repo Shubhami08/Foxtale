@@ -333,7 +333,7 @@ const eventConfig = [
     needsConstData: true,
     needsNativeCodeData: true,
     apiDataMap: {
-      "": "handle",
+      "Dynamic Checkout product handle": "handle",
       productUrl: "url",
       productPrice: "price",
       category: "product_type",
