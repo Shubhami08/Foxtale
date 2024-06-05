@@ -809,6 +809,8 @@ async function getDefaultPropertiesAndStore() {
 
   var locationInfo = {};
 
+  try {
+
   var locationData = (await fetch('https://ipinfo.io/json')).json();
 
   locationInfo = { 
