@@ -335,8 +335,8 @@ const eventConfig = [
     apiDataMap: {
       "Dynamic Checkout product handle": "handle",
       "Dynamic Checkout product url": "url",
-      productPrice: "price",
-      productType: "product_type",
+      "Dynamic Checkout product price": "price",
+      "Dynamic Checkout product type": "product_type",
       varientSku: "sku",
       productAvailabe: "available",
       productMaxPrice: "price_max",
