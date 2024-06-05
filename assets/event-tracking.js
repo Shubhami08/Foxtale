@@ -826,9 +826,9 @@ function getDefaultPropertiesAndStore() {
         })
       );
 
-    const defaultProperties = {
-        ...locationInfo,
-        ...defaultProperties
+    defaultProperties = {
+      ...locationInfo,
+      ...defaultProperties
     }
 
     localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
