@@ -282,7 +282,7 @@ const eventConfig = [
     apiDataMap: {
       "Added to Product Name": "handle",
       productUrl: "url",
-      productPrice: "price",
+      "Added to Product Price": "price",
       category: "product_type",
       varientSku: "sku",
       productAvailabe: "available",
