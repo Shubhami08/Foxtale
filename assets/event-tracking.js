@@ -788,7 +788,7 @@ function getOS() {
   return os;
 }
 
-function getDefaultProperties() {
+function getDefaultPropertiesAndStore() {
   var browserInfo = getBrowserInfo();
 
   var defaultProperties = {
@@ -828,11 +828,15 @@ function getDefaultProperties() {
         })
       );
 
-    return {
+    const defaultProperties = {
         ...locationInfo,
         ...defaultProperties
     }
+
+    localStorage.setItem("defaultProperties", JSON.stringify(defaultProperties));
 }
+
+getDefaultPropertiesAndStore();
 
 // Mixpael REST API for tracking the events
 function trackEvent(eventName, properties) {
@@ -843,14 +847,14 @@ function trackEvent(eventName, properties) {
   // }
   
   const utmProperties = getStoredUTMParams();
-  // const defaultProperties = getDefaultProperties();
+  const defaultProperties = JSON.parse(localStorage.getItem("defaultProperties")) || {};
 
   const data = {
       event: eventName,
       properties: {
           token: projectToken,
           "distinct_id": mixpanelDistinctId,
-          // ...defaultProperties,
+          ...defaultProperties,
           ...utmProperties,
           ...properties,
       }
@@ -861,7 +865,7 @@ function trackEvent(eventName, properties) {
   fetch('https://api.mixpanel.com/track?data=' + base64Data, {
       method: 'POST',
       headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'  // This header can be adjusted if needed
+        'Content-Type': 'application/x-www-form-urlencoded'  // This header can be adjusted if needed
       }
   })
   .then(response => response.text())
