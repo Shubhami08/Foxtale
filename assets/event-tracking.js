@@ -837,7 +837,6 @@ async function getDefaultPropertiesAndStore() {
   }
 
 if(!localStorage.getItem("defaultProperties")) {
-
   getDefaultPropertiesAndStore();
 }
 
