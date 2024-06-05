@@ -794,8 +794,8 @@ async function getDefaultPropertiesAndStore() {
   var defaultProperties = {
       // "API Endpoint": "api-js.mixpanel.com",
       // "API Timestamp": Date.now(),
-      "Browser": browserInfo.name,
-      "Browser Version": browserInfo.version,
+      "$browser": browserInfo.name,
+      "$browser_version": browserInfo.version,
       "Current URL": window.location.href,
       "Device": navigator.userAgent.match(/(mobile|android|tablet|ipad|iphone|ipod)/i) ? 'Mobile' : 'Desktop',
       "Insert ID": Math.random().toString(36).substr(2, 9),
@@ -832,6 +832,7 @@ async function getDefaultPropertiesAndStore() {
       {
         ...defaultProperties,
         ...locationInfo
+      }
     ));
   }
 
