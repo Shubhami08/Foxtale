@@ -829,8 +829,9 @@ async function getDefaultPropertiesAndStore() {
     }
 
     localStorage.setItem("defaultProperties", JSON.stringify(
-      ...defaultProperties,
-      ...locationInfo
+      {
+        ...defaultProperties,
+        ...locationInfo
     ));
   }
 
