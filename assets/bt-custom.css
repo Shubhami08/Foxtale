@@ -15198,7 +15198,7 @@ a.hm {
   z-index: 1;
   color: transparent;
 }
-.muktailayout-template .t4s-sticky-atc__btns {
+/* .muktailayout-template .t4s-sticky-atc__btns {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -15219,7 +15219,7 @@ a.hm {
   border-radius: 4px;
   background: #ffffff;
   color: #000000;
-}
+} */
 
 @media (max-width: 768px) {
   .muktailayout-template .flickity-prev-next-button.previous {
