@@ -308,9 +308,9 @@ const eventConfig = [
     apiDataMap: {
       "Removed from Product Name": "handle",
       "Removed from Product URL": "url",
-      productPrice: "price",
-      category: "product_type",
-      varientSku: "sku",
+      "Removed from Product Price": "price",
+      "Removed from Product Type": "product_type",
+      "Removed from Product SKU": "sku",
       productAvailabe: "available",
       productMaxPrice: "price_max",
       productMinPrice: "price_min",
