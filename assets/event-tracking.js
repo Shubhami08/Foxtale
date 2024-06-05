@@ -817,9 +817,7 @@ async function getDefaultPropertiesAndStore() {
           "$region": response.region, 
           "$country": response.country 
         }
-      )
-    
-    )
+      ))
       .catch(() => (
         locationInfo = { 
           "$city": 'Unknown', 
