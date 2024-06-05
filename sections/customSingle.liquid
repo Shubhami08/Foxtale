@@ -376,12 +376,29 @@
               <div class="t4s-row t4s-g-0">
                 <div class="rev" data-fera-container="457325" data-product_id="{{ product.id }}"></div>
                 <div data-product-single-media-group class="{{class_main}}t4s-col-12 t4s-col-item t4s-pr">
-                  
-                  <div class="main-prod-slider">
-                    {% for media in product_media %}
-                    {% render 'product-thumbnail-new', media: media, height: height %}
-                  {% endfor %}
-                    
+                  <div
+                    data-t4s-gallery
+                    data-main-media
+                    data-t4s-thumb-true
+                    class="t4s-row t4s-g-0 t4s-slide-eff-{{se_stts.eff}} flickityt4s t4s_{{image_ratio}} t4s_position_{{se_stts.image_position}} t4s_{{se_stts.image_size}}{% if se_stts.nav_btn %} t4s-flicky-slider t4s-slider-btn-{{se_stts.nav_btn}} t4s-slider-btn-style-{{se_stts.btn_owl}} t4s-slider-btn-{{se_stts.btn_shape}} t4s-slider-btn-{{se_stts.btn_size}} t4s-slider-btn-cl-{{se_stts.btn_cl}} t4s-slider-btn-vi-{{se_stts.btn_vi}} t4s-slider-btn-hidden-mobile-{{se_stts.btn_hidden_mobile}} {% endif %}"
+                    {% if se_stts.nav_dot %}
+                      t4s-dots-style-{{ se_stts.dot_owl }} t4s-dots-cl-{{ se_stts.dots_cl }}
+                      t4s-dots-round-{{ se_stts.dots_round }} t4s-dots-hidden-mobile-{{ se_stts.dots_hidden_mobile }}
+                    {% endif %}
+                    data-flickityt4s-js='{"cellSelector": "[data-main-slide]:not(.is--media-hide)","isFilter":{{canMedia_group}},"imagesLoaded": 0,"adaptiveHeight": 1, "contain": 1, "dragThreshold" : {% if se_stts.eff == 'fade' %}6{% else %}5{% endif %}, "freeScroll": true, "pageDots": {{ se_stts.nav_dot }}, "prevNextButtons": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true , "t4sid": "{{se_id}}", "thumbNav": {% if media_layout != 'without_thumbnails' %}true{% else %}false{% endif %}, "thumbVertical": {% if media_layout != 'thumbnails_bottom' %}true{% else %}false{% endif %}, "isMedia": true }'
+                    style="--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;--space-dots: {{ se_stts.dots_space }}px;"
+                  >
+                    {%- liquid
+                      for media in product_media
+                        if media.preview_image and media.preview_image.alt contains 'break--360'
+                          break
+                        endif
+                        render 'product-thumbnail', media: media, imgatt: imgatt, variant_images: variant_images, loop: enable_video_looping, mute: enable_video_muting, autoplay: enable_video_autoplaying, height: height, se_id: se_id, isMediaHidden: isMediaHidden, current_option1: current_option1, current_option2: current_option2, current_option3: current_option3, ops_name: ops_name, ops_name_1: ops_name_1, ops_name_2: ops_name_2, ops_name_3: ops_name_3, class_pswp_disable: class_pswp_disable, variants_size: variants_size
+                      endfor
+                      if has_media_360
+                        render 'product-360', product: product, se_id: se_id
+                      endif
+                    -%}
 
                       {%- if se_stts.nav_dot and se_stts.dot_owl == 'number' -%}
                         <div class="flickityt4s-page-dots t4s-dots-list carousel--status{{ se_id }}"><span data-current-slide></span> / <span data-total-number></span></div>
@@ -5120,60 +5137,3 @@ $(document).ready(function () {
   }
 }
 {%- endschema -%}
-
-<style>
-  .carousel-cell{
-    width:100%;
-  }
-  .carousel-cell img,.carousel-cell video{
-    width:100%;
-  }
-  .flickity-slider .carousel-cell{
-    opacity:1 !important;
-  }
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script>
-    $( document ).ready(function() {
-
-    var elem = document.querySelector('.main-prod-slider');
-    if (elem) {
-      var flkty = new Flickity(elem, {
-        cellAlign: 'left',
-        contain: true,
-        wrapAround: true,
-        autoPlay: 3000, // 3 seconds
-        prevNextButtons: true,
-        pageDots: false,
-        on: {
-          ready: function() {
-              myInterval = setInterval(function () {
-                if($(".main-prod-slider .flickity-viewport").length){
-                  $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
-                  $(".main-prod-slider").css("height",$(".carousel-cell img").height());
-                  clearInterval(myInterval);
-                }
-              }, 100);
-          },
-          change: function( index ) {
-            if (index === 1) {
-              flkty.pausePlayer();
-            }
-            $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
-            $(".main-prod-slider").css("height",$(".carousel-cell img").height());
-          }
-        }
-      });
-    }
-  myInterval1 = setInterval(function () {
-    if($(".main-prod-slider .flickity-viewport").length){
-      $(".main-prod-slider .flickity-viewport").css("height",$(".carousel-cell img").height());
-      $(".main-prod-slider").css("height",$(".carousel-cell img").height());
-      clearInterval(myInterval1);
-    }
-  }, 100);
-});
-
-</script>
