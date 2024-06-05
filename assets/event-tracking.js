@@ -816,7 +816,7 @@ async function getDefaultPropertiesAndStore() {
       locationInfo = { 
         "$city": locationData?.city, 
         "$region": locationData?.region, 
-        "$country": locationData?.country 
+        "mp_country_code": locationData?.country 
       }
       
     } catch (error) {
@@ -824,7 +824,7 @@ async function getDefaultPropertiesAndStore() {
       locationInfo = { 
         "$city": 'Unknown', 
         "$region": 'Unknown', 
-        "$country": 'Unknown' 
+        "mp_country_code": 'Unknown' 
       }
     }
 
