@@ -280,7 +280,7 @@ const eventConfig = [
     needsConstData: true,
     needsNativeCodeData: true,
     apiDataMap: {
-      productName: "handle",
+      "Added to Product Name": "handle",
       productUrl: "url",
       productPrice: "price",
       category: "product_type",
