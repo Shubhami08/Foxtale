@@ -1441,7 +1441,7 @@ const defaultPageToPageEvent = {
  * Attaching event listener on "DOMContentLoaded" event to trigger our application logic on that event
  */
 document.addEventListener("DOMContentLoaded", function () {
-  
+  getDefaultPropertiesAndStore()
 });
 
 setTimeout(function() {
