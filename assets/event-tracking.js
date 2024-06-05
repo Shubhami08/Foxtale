@@ -1442,10 +1442,10 @@ const defaultPageToPageEvent = {
  */
 document.addEventListener("DOMContentLoaded", function () {
   getDefaultPropertiesAndStore().then(() => {
+    
+    setupEventListeners();
 
-      setupEventListeners();
-
-      /**
+    /**
      * Clean up previous observers
      */
     observers.forEach((observer) => observer.disconnect());
