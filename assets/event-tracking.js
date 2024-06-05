@@ -1441,11 +1441,11 @@ const defaultPageToPageEvent = {
  * Attaching event listener on "DOMContentLoaded" event to trigger our application logic on that event
  */
 document.addEventListener("DOMContentLoaded", function () {
-  getDefaultPropertiesAndStore().then(() => 
-    {
+  getDefaultPropertiesAndStore().then(() => {
+
       setupEventListeners();
 
-    /**
+      /**
      * Clean up previous observers
      */
     observers.forEach((observer) => observer.disconnect());
