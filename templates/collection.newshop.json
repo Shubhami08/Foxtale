@@ -374,8 +374,8 @@
         "image_xjWFnn": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_33.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_32.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/1800X606_2.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/767X464_2.jpg",
             "collection_handle": "products"
           }
         },
