@@ -822,9 +822,9 @@ function getDefaultPropertiesAndStore() {
       .catch(() => (
         locationInfo = { 
           ...defaultProperties, 
-          city: 'Unknown', 
-          region: 'Unknown', 
-          country: 'Unknown' 
+          "$city": 'Unknown', 
+          "$region": 'Unknown', 
+          "$country": 'Unknown' 
         })
       );
 
