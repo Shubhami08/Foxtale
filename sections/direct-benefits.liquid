@@ -32,7 +32,7 @@
   font-weight: 600;
   line-height: 28px;
 }
-.benefit-left ul li {
+.benefit-left ul li , .benefit-left h5 {
   color: #000;
   font-size: 18px;
   font-weight: 400;
@@ -40,6 +40,7 @@
   text-align: left;
   list-style: disc;
 }
+
 .benefit-right h3 span {
   border-radius: 4px;
   background: #FFF9F2;
@@ -183,7 +184,7 @@ h6.pr-Protect {
     font-size: 12px;
     padding: 7px 15px;
   }
-  .benefit-left ul li {
+  .benefit-left ul li, .benefit-left h5 {
     color: #000;
     font-size: 12px;
     font-weight: 400;
@@ -199,7 +200,64 @@ h6.pr-Protect {
     display: block;
   }
 }
+
+.stat-wrapper {
+  background-color: #FFF9F2;
+  margin: 25px 15px 5px 15px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.stat-pik {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.stat-innerwrapper h3 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4b4b4b;
+  padding-top: 15px;
+}
+.stat-textp p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 20px;
+}
+.stat-innerwrapper h3 span{
+  font-weight: 600;
+}
 </style>
+
+
+<div class="stat-wrapper">
+  <div class="stat-innerwrapper">
+    {% if product.metafields.custom.enhance_benefits_content_1 != blank %}
+     {{ product.metafields.custom.stat_heading }}
+    {% endif %}
+    <div class="stat-pik">
+      <div class="stat-textp">
+        {% if product.metafields.custom.statleftphoto != blank %}
+        <img src="{{ product.metafields.custom.statleftphoto | image_url }}">
+        {% endif %}
+        {% if product.metafields.custom.statlefttext != blank %}
+        {{ product.metafields.custom.statlefttext }}
+        {% endif %}
+      </div>
+      <div class="stat-textp">
+        {% if product.metafields.custom.statrightphoto != blank %}
+        <img src="{{ product.metafields.custom.statrightphoto | image_url }}">
+        {% endif %}
+        {% if product.metafields.custom.statrighttext != blank %}
+        {{ product.metafields.custom.statrighttext }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="benefits-slider t4s-code__html container">
   <div class="benefit-left">
