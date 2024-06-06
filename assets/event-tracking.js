@@ -1481,7 +1481,7 @@ document.addEventListener("DOMContentLoaded", function () {
 setTimeout(function() {
   var mixpanelDistinctIdAttributes = {
     'distinct_id': mixpanelDistinctId,
-    
+
   };
   $.ajax({
     type: 'POST',
