@@ -878,7 +878,7 @@ function trackEvent(eventName, properties) {
       }
   };
 
-  const base64Data = btoa(JSON.stringify(data));
+  const base64Data = btoa(unescape(encodeURIComponent(str)));
 
   fetch('https://api.mixpanel.com/track?data=' + base64Data, {
       method: 'POST',
