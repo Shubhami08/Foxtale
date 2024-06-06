@@ -426,6 +426,7 @@ const eventConfig = [
   //   apiDataMap: {},
   //   elementDataMap: {},
   //   constDataMap: {
+  //     source_domain: sourceDomain,
   //     source: source == 'index' ? 'home-page' : source,
   //   },
   //   customFunction: false,
