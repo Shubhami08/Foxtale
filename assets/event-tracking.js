@@ -675,7 +675,7 @@ function getUTMParams() {
        
        const uriComponentsString = queryString.split('&');
 
-       if (uriComponentsString.length > 1 ) {
+       if (uriComponentsString.length > 0 ) {
          const uriParameters = uriComponentsString?.[1]?.split('&');
   
          if (uriParameters.length) {
