@@ -119,6 +119,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -143,6 +144,7 @@ const eventConfig = [
     },
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -178,6 +180,7 @@ const eventConfig = [
     },
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -193,6 +196,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -208,6 +212,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -236,6 +241,7 @@ const eventConfig = [
       // apiUrlForData: "href",
     },
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -251,6 +257,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -268,6 +275,7 @@ const eventConfig = [
       // collectionUrl: "href",
     },
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -294,6 +302,7 @@ const eventConfig = [
     },
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -320,6 +329,7 @@ const eventConfig = [
     },
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -346,6 +356,7 @@ const eventConfig = [
     },
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -363,6 +374,7 @@ const eventConfig = [
       // collectionUrl: "href",
     },
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -380,6 +392,7 @@ const eventConfig = [
       // collectionUrl: "href",
     },
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -397,6 +410,7 @@ const eventConfig = [
       // collectionUrl: "href",
     },
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -427,6 +441,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -442,6 +457,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -457,6 +473,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: true,
@@ -472,6 +489,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -487,6 +505,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
@@ -502,6 +521,7 @@ const eventConfig = [
     apiDataMap: {},
     elementDataMap: {},
     constDataMap: {
+      source_domain: sourceDomain,
       source: source == 'index' ? 'home-page' : source,
     },
     customFunction: false,
