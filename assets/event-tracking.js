@@ -676,17 +676,11 @@ function getUTMParams() {
        const uriComponentsString = queryString.split('&');
 
        if (uriComponentsString.length > 0 && uriComponentsString[0]) {
-        //  const uriParameters = uriComponentsString?.[1]?.split('&');
-  
-        //  if (uriParameters.length) {
            for ( let itr = 0; itr < uriComponentsString.length; itr ++ ) {
              const singleParamStringKeyValuePair = uriComponentsString?.[itr]?.split('=');
     
              params[singleParamStringKeyValuePair[0]] = decodeURIComponent(singleParamStringKeyValuePair[1]);
            }
-        //  } else {
-        //    return {};
-        //  }
        } else {
          return {};
        }
