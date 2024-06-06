@@ -86,7 +86,6 @@
         },
         "6876bcbc-8439-4320-8af0-f2fd8ec67ced": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/1800-X-606.gif",
             "image_mb": "shopify:\/\/shop_images\/360X475-1.gif",
