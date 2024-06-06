@@ -1502,7 +1502,7 @@ document.addEventListener("DOMContentLoaded", function () {
 setTimeout(function() {
   var mixpanelDistinctIdAttributes = {
     'distinct_id': mixpanelDistinctId,
-    'source_domain': 
+    'source_domain': sourceDomain
   };
   $.ajax({
     type: 'POST',
