@@ -676,11 +676,11 @@ function getUTMParams() {
        const uriComponentsString = queryString.split('&');
 
        if (uriComponentsString.length > 0 && uriComponentsString[0]) {
-           for ( let itr = 0; itr < uriComponentsString.length; itr ++ ) {
-             const singleParamStringKeyValuePair = uriComponentsString?.[itr]?.split('=');
-    
-             params[singleParamStringKeyValuePair[0]] = decodeURIComponent(singleParamStringKeyValuePair[1]);
-           }
+          for ( let itr = 0; itr < uriComponentsString.length; itr ++ ) {
+            const singleParamStringKeyValuePair = uriComponentsString?.[itr]?.split('=');
+  
+            params[singleParamStringKeyValuePair[0]] = decodeURIComponent(singleParamStringKeyValuePair[1]);
+          }
        } else {
          return {};
        }
@@ -1479,7 +1479,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 setTimeout(function() {
-  var mixpanelDistinctIdAttributes = {'distinct_id': mixpanelDistinctId };
+  var mixpanelDistinctIdAttributes = {
+    'distinct_id': mixpanelDistinctId,
+    
+  };
   $.ajax({
     type: 'POST',
     url: '/cart/update.js',
