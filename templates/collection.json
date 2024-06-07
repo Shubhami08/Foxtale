@@ -9,6 +9,13 @@
     "8a75fd64-3ace-4ae7-8966-dfa4df542871": {
       "type": "slideshow-collection",
       "blocks": {
+        "image_fxXwGX": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "collection_handle": ""
+          }
+        },
         "f9965015-912a-4ab1-a6b9-60456f64c9c9": {
           "type": "image",
           "settings": {
@@ -375,6 +382,7 @@
         }
       },
       "block_order": [
+        "image_fxXwGX",
         "f9965015-912a-4ab1-a6b9-60456f64c9c9",
         "56f1ef1a-a3ff-4b88-b644-a461bad11dc4",
         "b0000dba-a032-4f67-899a-dce9c6aca32b",
@@ -421,12 +429,6 @@
       ],
       "settings": {
         "slider_height_mobile": "100%"
-      }
-    },
-    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e": {
-      "type": "collection_best_seller",
-      "settings": {
-        "best_seller_section_heading": "Featured Products"
       }
     },
     "c3efaaee-55b3-4a51-93e2-4de6760e9eb4": {
@@ -538,6 +540,12 @@
             "image_mobile": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_Mobile.jpg",
             "collection_handle": "exclusive-sale"
           }
+        },
+        "image_Kmgt76": {
+          "type": "image",
+          "settings": {
+            "collection_handle": ""
+          }
         }
       },
       "block_order": [
@@ -553,9 +561,16 @@
         "image_6xYcN7",
         "image_6nNydB",
         "image_nE8V4k",
-        "image_ijCda9"
+        "image_ijCda9",
+        "image_Kmgt76"
       ],
       "settings": {
+      }
+    },
+    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e": {
+      "type": "collection_best_seller",
+      "settings": {
+        "best_seller_section_heading": "Featured Products"
       }
     },
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf": {
@@ -977,8 +992,8 @@
   "order": [
     "timer_QgwT4a",
     "8a75fd64-3ace-4ae7-8966-dfa4df542871",
-    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e",
     "c3efaaee-55b3-4a51-93e2-4de6760e9eb4",
+    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e",
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf",
     "top",
     "heading_template",
