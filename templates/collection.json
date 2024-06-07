@@ -126,6 +126,8 @@
         "image_AGT3Fx": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "gpay-free-eye-mask"
           }
         },
@@ -146,12 +148,16 @@
         "b12ee519-3c23-4b62-b07e-45bb584fce0b": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "flat-300-off-gpay"
           }
         },
         "e370bd45-9005-4f18-9d4f-a36cfaa962f6": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "paytm-flat-400-off"
           }
         },
