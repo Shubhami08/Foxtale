@@ -115,7 +115,15 @@
                            <p class="bottom-leftext">10% Off</p>
                         {% endif %}
                     {% endcomment %}
-                    <p class="bottom-leftext">B2G2</p>
+
+
+                    {% assign target_tag = "Combos" %}
+
+                      {% if product.tags contains target_tag %}
+                        <p class="bottom-leftext">10% Off</p>
+                      {% else %}
+                        <p class="bottom-leftext">B2G2</p>
+                      {% endif %}
                       {% comment %}
                       {% if product.compare_at_price_max > product.price %}
                       <p class="green">
