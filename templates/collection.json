@@ -256,8 +256,8 @@
         "e4200243-e18e-45ee-a588-07aa2db63a66": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Blue_eye_mask_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Blue_eye_mask_MOBILE_banner.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
