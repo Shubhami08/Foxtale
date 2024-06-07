@@ -142,6 +142,8 @@
         "26003c4f-26c3-4086-9cb0-b7c059dd74a7": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "flat-400-off-gpay"
           }
         },
