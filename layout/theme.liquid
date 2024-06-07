@@ -940,13 +940,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            visibility: hidden;
            position: relative;
          }
-         .t4s-announcement-bar__item:after {
+         .t4s-announcement-bar__item:first-of-type:after {
            visibility: visible;
            position: absolute;
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Buy 3 @ 1099 [Code: FOX1099]";
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .t4s-announcement-bar__item:nth-of-type(2):after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Get 10% Off + Eye Mask on all orders [Code: GLOW10]";
            font-size: 12px;
            width: max-content;
          }
