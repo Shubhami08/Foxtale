@@ -35,7 +35,7 @@
                     {%- for product in collection.products limit: 12 -%}
                       <div class="products-grid-item">
                         <div class="product-innr">
-                          <div class="product-image pr oh lazyloadt4sed product-innr-top" style="position: relative;">
+                          <div class="product-image pr oh lazyloadt4sed product-innr-top">
                             <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
                               {%- render 'product_labels', on: 'singe', product: product -%}
                               <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}"
@@ -60,7 +60,7 @@
                               style='height:24px;width:50px;background:white'
                             ></div>
                             {% if product.metafields.custom.spotlight_tag != blank %}
-                              <span class="spotlight-tag" style="display:none;">
+                              <span class="spotlight-tag">
                                 {{ product.metafields.custom.spotlight_tag }}
                               </span>
                             {% endif %}
