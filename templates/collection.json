@@ -387,6 +387,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "new-special-sale"
           }
+        },
+        "image_ygYpnn": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
+            "collection_handle": "dnetwork-exclusive-offer"
+          }
         }
       },
       "block_order": [
@@ -434,7 +442,8 @@
         "image_Ui8z8E",
         "image_dQPKpa",
         "image_xRxqVx",
-        "image_699Jnh"
+        "image_699Jnh",
+        "image_ygYpnn"
       ],
       "settings": {
         "slider_height_mobile": "100%"
