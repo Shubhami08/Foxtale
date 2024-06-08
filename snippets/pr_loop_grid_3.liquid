@@ -47,7 +47,7 @@
 <div class="product-image pr oh lazyloadt4s" data-rendert4s="{{pr_url}}/?view=img{{sett_equal}}"><div class="nt_bg_lz nt_fk_lz"{% unless sett_equal %} style="padding-top:{{ 1 | divided_by: images_0.aspect_ratio | times: 100}}%;"{% endunless %}></div>
 </div>{% endcomment %}
 <div class="product-innr">
-<div class="product-image pr oh lazyloadt4sed">
+<div class="product-image pr oh lazyloadt4sed" style="position: relative;">
    <a rel="dofollow" class="cd chp" href="{{pr_url}}"><img class="first-img lazyload" loading="lazy"    src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
                            data-src="{{ product.images[0] | product_img_url: 'master' }}" alt="Product Image" />
    <img class="second-img lazyload" loading="lazy"               src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
