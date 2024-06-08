@@ -6596,6 +6596,9 @@ footer .widget .widget-title:after {
 .t4s-announcement-bar__wrap {
   padding: 0 !important;
 }
+.t4s-announcement-bar{
+  z-index:99;
+}
 
 header .t4s-site-nav__icons .t4s-site-nav__icon:hover svg.t4s-icon {
   transform: none !important;
