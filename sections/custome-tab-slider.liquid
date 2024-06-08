@@ -34,7 +34,7 @@
                   <div class="products-grid-item-main">
                     {%- for product in collection.products limit: 12 -%}
                       <div class="products-grid-item">
-                        <div class="product-innr">
+                        <div class="product-innr" style="position:relative;">
                           <div class="product-image pr oh lazyloadt4sed product-innr-top">
                             <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
                               {%- render 'product_labels', on: 'singe', product: product -%}
