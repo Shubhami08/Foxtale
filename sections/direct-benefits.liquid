@@ -301,7 +301,7 @@ h6.pr-Protect {
                   <a rel="dofollow" href="{{product.url}}">{{ product.title | truncate: 25 }}</a>
                 </h2>
                 <h5>
-                  {{ product.price | money | remove: 00 }} |
+                  {{ product.price | money }} |
                   <span>
                     {%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}
                   </span>
