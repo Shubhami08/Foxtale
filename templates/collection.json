@@ -245,8 +245,8 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/extra-glow-days-routine-banner_1.gif",
-            "image_1_mobile": "shopify:\/\/shop_images\/ROUTINE-BANNER_Mobile-_1.gif",
+            "image_1_desktop": "shopify:\/\/shop_images\/Last-chance-routine-banner.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/Last-chanceROUTINE-BANNER_Mobile.gif",
             "collection_handle": "frontpage"
           }
         },
