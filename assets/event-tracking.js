@@ -1499,23 +1499,74 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 });
 
+// setTimeout(function() {
+//   var mixpanelDistinctIdAttributes = {
+//     'mp_distinct_id': mixpanelDistinctId,
+//     'source_domain': sourceDomain
+//   };
+//   $.ajax({
+//     type: 'POST',
+//     url: '/cart/update.js',
+//     data: {
+//       attributes : mixpanelDistinctIdAttributes
+//     },
+//     dataType: 'json',
+//     success: function(cart) {
+//       console.log('Cart note updated:', cart.note);
+//     },
+//     error: function(XMLHttpRequest, textStatus) {
+//       console.error('Failed to update cart note:', textStatus);
+//     }
+//   });
+// }, 1500);
+
 setTimeout(function() {
-  var mixpanelDistinctIdAttributes = {
-    'mp_distinct_id': mixpanelDistinctId,
-    'source_domain': sourceDomain
-  };
+
+  // Function to check if the attributes are already set
+  function isAttributesSet(cartAttributes, attributeKey, attributeValue) {
+    return cartAttributes.hasOwnProperty(attributeKey) && cartAttributes[attributeKey] === attributeValue;
+  }
+
+  // Fetch the current cart attributes
   $.ajax({
-    type: 'POST',
-    url: '/cart/update.js',
-    data: {
-      attributes : mixpanelDistinctIdAttributes
-    },
+    type: 'GET',
+    url: '/cart.js',
     dataType: 'json',
     success: function(cart) {
-      console.log('Cart note updated:', cart.note);
+      var attributes = cart.attributes || {};
+      var mixpanelDistinctIdAttributes = {};
+
+      if ( !isAttributesSet(attributes, 'mp_distinct_id', mixpanelDistinctId) ) {
+        mixpanelDistinctIdAttributes['mp_distinct_id'] = mixpanelDistinctId;
+      }
+
+      if ( !isAttributesSet(attributes, 'source_domain', sourceDomain) ) {
+        mixpanelDistinctIdAttributes['source_domain'] = sourceDomain;
+      }
+
+      // Check if the attributes are already set
+      if ( Object.keys(mixpanelDistinctIdAttributes).length > 0 ) {
+        // Update the cart attributes only if they are not set
+        $.ajax({
+          type: 'POST',
+          url: '/cart/update.js',
+          data: {
+            attributes: mixpanelDistinctIdAttributes
+          },
+          dataType: 'json',
+          success: function(cart) {
+            console.log('Cart attributes updated:', cart.attributes);
+          },
+          error: function(XMLHttpRequest, textStatus) {
+            console.error('Failed to update cart attributes:', textStatus);
+          }
+        });
+      } else {
+        console.log('Cart attributes already set. No update needed.');
+      }
     },
     error: function(XMLHttpRequest, textStatus) {
-      console.error('Failed to update cart note:', textStatus);
+      console.error('Failed to fetch cart:', textStatus);
     }
   });
 }, 1500);
