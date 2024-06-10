@@ -1536,11 +1536,13 @@ setTimeout(function() {
       var attributes = cart.attributes || {};
       var mixpanelDistinctIdAttributes = {};
 
-      if ( !isAttributesSet(attributes, 'mp_distinct_id', mixpanelDistinctId) ) {
-        mixpanelDistinctIdAttributes['mp_distinct_id'] = mixpanelDistinctId;
+      if ( !isAttributesSet(attributes, 'distinct_id', mixpanelDistinctId) ) {
+        console.log("distinct_id set");
+        mixpanelDistinctIdAttributes['distinct_id'] = mixpanelDistinctId;
       }
 
       if ( !isAttributesSet(attributes, 'source_domain', sourceDomain) ) {
+        console.log("source_domain set");
         mixpanelDistinctIdAttributes['source_domain'] = sourceDomain;
       }
 
