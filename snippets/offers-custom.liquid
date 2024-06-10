@@ -100,6 +100,7 @@ img.offer-section-img {
     </div>
   </div>
   <div class="two-productscampaign">
+    {% comment %}
     <div class="row one-two1">
     <div class="col-7 pr-0px">
       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewbox="0 0 8 8" fill="none"><path d="M4 0L4.89806 2.76393H7.80423L5.45308 4.47214L6.35114 7.23607L4 5.52786L1.64886 7.23607L2.54692 4.47214L0.195774 2.76393H3.10194L4 0Z" fill="#D76339"></path></svg>
@@ -112,6 +113,7 @@ img.offer-section-img {
       
     </div>
   </div>
+  {% endcomment %}
   <div class="row one-two2">
     <div class="col-12">
     <span class="or-text" style="padding-left:10px;font-size:12px;"><strong>OR</strong></span>
@@ -177,27 +179,27 @@ img.offer-section-img {
 <script>
 const span = document.getElementById("offersection1");
   // $('#offercustom').html('BUY2');
-  $('#offercustom').html('B1G1');
+  // $('#offercustom').html('B1G1');
   $('#offerupsell').html('B2G2');
   $('#offerupsell1').html('GLOW10');
   $('#codeCopyCust').hide();
- $('#offersectioncustom').click(function(){
-  var text = $("#offercustom").get(0)
-  var selection = window.getSelection();
-  var range = document.createRange();
-  range.selectNodeContents(text);
-  selection.removeAllRanges();
-  selection.addRange(range);
+//  $('#offersectioncustom').click(function(){
+//   var text = $("#offercustom").get(0)
+//   var selection = window.getSelection();
+//   var range = document.createRange();
+//   range.selectNodeContents(text);
+//   selection.removeAllRanges();
+//   selection.addRange(range);
        
-document.execCommand('copy');
- $('#codeCopyCust').show();
- $('#offersectioncustom').hide();
-  setTimeout(function() {
-             // myText.innerHTML = span.innerHTML ;
-             $('#offersectioncustom').show();
-             $('#codeCopyCust').hide();
-          }, 1000)       
-});
+// document.execCommand('copy');
+//  $('#codeCopyCust').show();
+//  $('#offersectioncustom').hide();
+//   setTimeout(function() {
+//              // myText.innerHTML = span.innerHTML ;
+//              $('#offersectioncustom').show();
+//              $('#codeCopyCust').hide();
+//           }, 1000)       
+// });
   
 $('#offerupsellcode').click(function(){
   var text = $("#offerupsell").get(0)
