@@ -536,6 +536,7 @@
         },
         "image_nE8V4k": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_website.jpg",
             "image_mobile": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_Mobile.jpg",
@@ -580,6 +581,24 @@
       "type": "collection_best_seller",
       "settings": {
         "best_seller_section_heading": "Featured Products"
+      }
+    },
+    "collection_image_banner_VUnneE": {
+      "type": "collection-image-banner",
+      "blocks": {
+        "image_FM3zxY": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_website.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_Mobile.jpg",
+            "collection_handle": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "image_FM3zxY"
+      ],
+      "settings": {
       }
     },
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf": {
@@ -1003,6 +1022,7 @@
     "8a75fd64-3ace-4ae7-8966-dfa4df542871",
     "c3efaaee-55b3-4a51-93e2-4de6760e9eb4",
     "fde7dfaf-6042-4f71-b8f7-efdb65e3629e",
+    "collection_image_banner_VUnneE",
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf",
     "top",
     "heading_template",
