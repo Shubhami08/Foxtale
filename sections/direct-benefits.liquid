@@ -1,4 +1,16 @@
 <style>
+h6.pr-Cleanse {
+  color: #12A2AD;
+}
+h6.pr-Treat {
+  color: #C382B8;
+}
+h6.pr-Moisturize {
+  color: #e4aaeb;
+}
+h6.pr-Protect {
+   color: #d4c570;
+}
 .benefits-slider {
   padding-top: 48px;
   padding-right: 15px;
@@ -67,19 +79,6 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 22.857px;
-}
-h6.pr-Cleanse {
-  color: #12A2AD;
-}
-h6.pr-Treat {
-  color: #C382B8;
-}
-h6.pr-Moisturize {
-  color: #e4aaeb;
-}
-h6.pr-Protect {
-/* color: #F6E99E; */
-   color: #d4c570;
 }
 .prod-deetz h2  {
   font-size: 18px;
@@ -263,7 +262,7 @@ h6.pr-Protect {
   </div>
 </div>
 
-<div class="benefits-slider t4s-code__html container">
+<div class="benefits-slider t4s-code__html container {{ product.handle }}">
   <div class="benefit-left">
     {% if product.metafields.custom.enhance_benefits_content_1 != blank %}
     {{ product.metafields.custom.enhance_benefits_content_1 }}
