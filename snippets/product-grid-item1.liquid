@@ -10,7 +10,7 @@ if product.tags contains 'isPreoder' or current_variant.inventory_policy == 'con
    assign isPreoder = true
 endif
 
-if current_variant.inventory_management == 'shopify'x
+if current_variant.inventory_management == 'shopify'
    assign cur_qty = current_variant.inventory_quantity |default:9999
 else
    assign cur_qty = 9999
