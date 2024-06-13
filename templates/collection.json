@@ -1159,8 +1159,8 @@
       ],
       "settings": {
         "design_heading": "1",
-        "heading_align": "t4s-text-center",
-        "top_heading": "Accordion",
+        "heading_align": "t4s-text-start",
+        "top_heading": "FAQs",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,
