@@ -1,10 +1,11 @@
 <div class="read-more-sec t4s-container">
   <div class="read-more-wrap">
-
-    {{ collection.metafields.custom.viewmoreless }}
-
+    {% if collection.metafields.custom.viewmoreless != blank %}
+      {{ collection.metafields.custom.viewmoreless }}
+    {% endif %}
   </div>
 </div>
+
 <script>
   jQuery(document).ready(function(){
 
