@@ -437,6 +437,7 @@
           },
           "02e70428-04c0-4ebf-8c75-aa5c2def741e": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "https:\/\/foxtale.in\/pages\/new-launch-sign-up",
               "content": "<p>Get an <strong>exclusive discount <\/strong>on our <strong>new launch<\/strong>!<\/p>",
