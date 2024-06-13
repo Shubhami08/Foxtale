@@ -407,7 +407,6 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "link": "shopify:\/\/collections\/products",
               "content": "<p><strong>Buy 2 @ 799 <\/strong>[Code:<strong> BUY2<\/strong>]<\/p>",
@@ -420,7 +419,7 @@
             "type": "announcement",
             "settings": {
               "link": "shopify:\/\/collections\/products",
-              "content": "<p>Buy <strong>2<\/strong> Get <strong>2<\/strong> Free [Code: <strong>B2G2<\/strong>]<\/p>",
+              "content": "<p><strong>Buy 3 @ 1099 <\/strong>[Code:<strong> FOX1099<\/strong>]<\/p>",
               "countdown": "",
               "txt_day": "days",
               "dayx": 1
@@ -1554,7 +1553,7 @@
           "58800ed8-befe-449a-b8f8-ea86620bef6f"
         ],
         "settings": {
-          "menu_banner_image": "shopify:\/\/shop_images\/MOBILE-1.jpg",
+          "menu_banner_image": "shopify:\/\/shop_images\/B2B3-Mobile2_1.jpg",
           "image_url": "https:\/\/foxtale.in\/collections\/shop"
         }
       },

@@ -6,8 +6,8 @@
         "aca13d02-fdca-4dd7-b455-cc71ffabb08a": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_09a9efd7-afcc-433a-89e3-01a340886a1b.jpg",
-            "image_mb": "shopify:\/\/shop_images\/LONG-BANNER.jpg",
+            "image": "shopify:\/\/shop_images\/B2B3-DESKTOP1.jpg",
+            "image_mb": "shopify:\/\/shop_images\/B2B3.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
@@ -374,6 +374,7 @@
       "block_order": [
         "image_parent_LMiWy7"
       ],
+      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt",
         "custom_dk": true,
@@ -577,6 +578,56 @@
         "code_cus_css": ""
       }
     },
+    "62796d61-e14a-4262-b754-6e38f68257ec": {
+      "type": "custom-collectionslider",
+      "blocks": {
+        "e930d3db-e633-4a0a-ba90-753fb67a4d03": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "dullness",
+            "collectionimg": "shopify:\/\/shop_images\/Glow_4e5d2f31-f411-4c1b-99a7-614f06da5641.jpg"
+          }
+        },
+        "eca45a55-ac74-40bc-be0c-edef6014c2b4": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "dehydration",
+            "collectionimg": "shopify:\/\/shop_images\/Hydration_4f7da641-5de6-4832-9e4a-9ebcb19d3dab.jpg"
+          }
+        },
+        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "hyperpigmentation",
+            "collectionimg": "shopify:\/\/shop_images\/Pigmentation_e170f4bc-d697-43c2-ba98-ba1540e68102.jpg"
+          }
+        },
+        "9e907d53-d5fa-412f-a832-3155faa90623": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "fine-lines",
+            "collectionimg": "shopify:\/\/shop_images\/Anti_Ageing_51bcc920-85af-4a57-a3e4-55ce0eb6881f.jpg"
+          }
+        },
+        "5c9e3756-d2b3-40a1-904d-64c29f442aca": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "blemish-prone",
+            "collectionimg": "shopify:\/\/shop_images\/Acne_Control_2a68b9ab-d510-4a4b-89c8-96b6914f3f7f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e930d3db-e633-4a0a-ba90-753fb67a4d03",
+        "eca45a55-ac74-40bc-be0c-edef6014c2b4",
+        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461",
+        "9e907d53-d5fa-412f-a832-3155faa90623",
+        "5c9e3756-d2b3-40a1-904d-64c29f442aca"
+      ],
+      "settings": {
+        "heading": "Shop by concern"
+      }
+    },
     "featured_collection_owl_RimMbr": {
       "type": "featured_collection_owl",
       "settings": {
@@ -626,56 +677,6 @@
         "pd": ",60px,20px,60px",
         "mg_mb": ",,,,",
         "pd_mb": ",,,"
-      }
-    },
-    "62796d61-e14a-4262-b754-6e38f68257ec": {
-      "type": "custom-collectionslider",
-      "blocks": {
-        "e930d3db-e633-4a0a-ba90-753fb67a4d03": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "dullness",
-            "collectionimg": "shopify:\/\/shop_images\/Glow_4e5d2f31-f411-4c1b-99a7-614f06da5641.jpg"
-          }
-        },
-        "eca45a55-ac74-40bc-be0c-edef6014c2b4": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "dehydration",
-            "collectionimg": "shopify:\/\/shop_images\/Hydration_4f7da641-5de6-4832-9e4a-9ebcb19d3dab.jpg"
-          }
-        },
-        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "hyperpigmentation",
-            "collectionimg": "shopify:\/\/shop_images\/Pigmentation_e170f4bc-d697-43c2-ba98-ba1540e68102.jpg"
-          }
-        },
-        "9e907d53-d5fa-412f-a832-3155faa90623": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "fine-lines",
-            "collectionimg": "shopify:\/\/shop_images\/Anti_Ageing_51bcc920-85af-4a57-a3e4-55ce0eb6881f.jpg"
-          }
-        },
-        "5c9e3756-d2b3-40a1-904d-64c29f442aca": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "blemish-prone",
-            "collectionimg": "shopify:\/\/shop_images\/Acne_Control_2a68b9ab-d510-4a4b-89c8-96b6914f3f7f.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "e930d3db-e633-4a0a-ba90-753fb67a4d03",
-        "eca45a55-ac74-40bc-be0c-edef6014c2b4",
-        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461",
-        "9e907d53-d5fa-412f-a832-3155faa90623",
-        "5c9e3756-d2b3-40a1-904d-64c29f442aca"
-      ],
-      "settings": {
-        "heading": "Shop by concern"
       }
     },
     "17151691640b3bdab7": {
@@ -982,8 +983,8 @@
     "slideshow_FCKK7z",
     "b309d096-c17b-4b40-8286-c2bed7520ec7",
     "a2bbc261-0ad0-4d83-a4d3-733bb515cc92",
-    "featured_collection_owl_RimMbr",
     "62796d61-e14a-4262-b754-6e38f68257ec",
+    "featured_collection_owl_RimMbr",
     "17151691640b3bdab7",
     "5a2273bf-78e7-4cea-befe-35a4b14dcffb",
     "251a86c7-6a99-4273-b40a-5c3d040f0068",
