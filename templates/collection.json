@@ -1061,7 +1061,6 @@
         },
         "accor_item_pxnETL": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq6.value }}",
@@ -1070,7 +1069,6 @@
         },
         "accor_item_jq6Wdd": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq7.value }}",
@@ -1079,7 +1077,6 @@
         },
         "accor_item_gtKfYh": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq8.value }}",
@@ -1088,7 +1085,6 @@
         },
         "accor_item_HYXmzF": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq9.value }}",
@@ -1097,7 +1093,6 @@
         },
         "accor_item_UYFakm": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq10.value }}",
@@ -1106,7 +1101,6 @@
         },
         "accor_item_8bGdbt": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq11.value }}",
@@ -1115,7 +1109,6 @@
         },
         "accor_item_h7Ttqy": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq12.value }}",
@@ -1124,7 +1117,6 @@
         },
         "accor_item_FpfTwU": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq13.value }}",
@@ -1133,7 +1125,6 @@
         },
         "accor_item_yFUpFF": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq14.value }}",
@@ -1142,7 +1133,6 @@
         },
         "accor_item_qdwdYq": {
           "type": "accor_item",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "title": "{{ collection.metafields.custom.faq15.value }}",
