@@ -1157,7 +1157,6 @@
         "accor_item_yFUpFF",
         "accor_item_qdwdYq"
       ],
-      "disabled": true,
       "settings": {
         "design_heading": "1",
         "heading_align": "t4s-text-center",
@@ -1188,7 +1187,6 @@
     },
     "read_more_text_AbNdG8": {
       "type": "read-more-text",
-      "disabled": true,
       "settings": {
       }
     }
