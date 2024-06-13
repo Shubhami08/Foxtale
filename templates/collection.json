@@ -1111,40 +1111,32 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Accordion item",
-            "content": ""
+            "title": "{{ collection.metafields.custom.faq12.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq12content.value }}<\/p>"
           }
         },
         "accor_item_FpfTwU": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Accordion item",
-            "content": ""
+            "title": "{{ collection.metafields.custom.faq13.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq13content.value }}<\/p>"
           }
         },
         "accor_item_yFUpFF": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Accordion item",
-            "content": ""
+            "title": "{{ collection.metafields.custom.faq14.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq14content.value }}<\/p>"
           }
         },
         "accor_item_qdwdYq": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Accordion item",
-            "content": ""
-          }
-        },
-        "accor_item_mbnTYk": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "Accordion item",
-            "content": ""
+            "title": "{{ collection.metafields.custom.faq15.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq15content.value }}<\/p>"
           }
         }
       },
@@ -1163,8 +1155,7 @@
         "accor_item_h7Ttqy",
         "accor_item_FpfTwU",
         "accor_item_yFUpFF",
-        "accor_item_qdwdYq",
-        "accor_item_mbnTYk"
+        "accor_item_qdwdYq"
       ],
       "disabled": true,
       "settings": {
