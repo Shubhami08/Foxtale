@@ -15396,3 +15396,8 @@ a.hm {
   .t4s-sticky-atc__atc {
   padding: 8px 0;
 }
+
+.template-collection .t4s-accordion,
+.template-collection .read-more-sec {
+  display: none;
+}
