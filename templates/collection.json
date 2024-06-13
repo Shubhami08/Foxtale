@@ -1015,6 +1015,185 @@
       ],
       "settings": {
       }
+    },
+    "accordion_JjiJhp": {
+      "type": "accordion",
+      "blocks": {
+        "accor_item_M7ifWP": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq1.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq1content.value }}<\/p>"
+          }
+        },
+        "accor_item_WPFNw7": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq2.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq2content.value }}<\/p>"
+          }
+        },
+        "accor_item_ggKLtD": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq3.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq3content.value }}<\/p>"
+          }
+        },
+        "accor_item_3CaJTi": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq4.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq4content.value }}<\/p>"
+          }
+        },
+        "accor_item_7zQ3TL": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq5.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq5content.value }}<\/p>"
+          }
+        },
+        "accor_item_pxnETL": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq6.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq6content.value }}<\/p>"
+          }
+        },
+        "accor_item_jq6Wdd": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq7.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq7content.value }}<\/p>"
+          }
+        },
+        "accor_item_gtKfYh": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq8.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq8content.value }}<\/p>"
+          }
+        },
+        "accor_item_HYXmzF": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq9.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq9content.value }}<\/p>"
+          }
+        },
+        "accor_item_UYFakm": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq10.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq10content.value }}<\/p>"
+          }
+        },
+        "accor_item_8bGdbt": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "{{ collection.metafields.custom.faq11.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq11content.value }}<\/p>"
+          }
+        },
+        "accor_item_h7Ttqy": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        },
+        "accor_item_FpfTwU": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        },
+        "accor_item_yFUpFF": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        },
+        "accor_item_qdwdYq": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        },
+        "accor_item_mbnTYk": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "accor_item_M7ifWP",
+        "accor_item_WPFNw7",
+        "accor_item_ggKLtD",
+        "accor_item_3CaJTi",
+        "accor_item_7zQ3TL",
+        "accor_item_pxnETL",
+        "accor_item_jq6Wdd",
+        "accor_item_gtKfYh",
+        "accor_item_HYXmzF",
+        "accor_item_UYFakm",
+        "accor_item_8bGdbt",
+        "accor_item_h7Ttqy",
+        "accor_item_FpfTwU",
+        "accor_item_yFUpFF",
+        "accor_item_qdwdYq",
+        "accor_item_mbnTYk"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Accordion",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#fff",
+        "content_align": "t4s-text-start",
+        "auto_active": true,
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
     }
   },
   "order": [
@@ -1030,6 +1209,7 @@
     "168067683513ea2f90",
     "sidebar",
     "main",
-    "24356143-4ff5-4ebf-aef7-e0a21d813634"
+    "24356143-4ff5-4ebf-aef7-e0a21d813634",
+    "accordion_JjiJhp"
   ]
 }
