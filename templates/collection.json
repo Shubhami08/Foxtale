@@ -1166,12 +1166,12 @@
         "top_subheading": "",
         "tophead_mb": 30,
         "accor_des": "1",
-        "title_cl": "#222",
+        "title_cl": "#222222",
         "bg_title_cl": "#f6f6f8",
-        "title_active_cl": "#000",
+        "title_active_cl": "#000000",
         "bg_title_active_cl": "#f6f6f8",
         "content_cl": "#878787",
-        "bg_content_cl": "#fff",
+        "bg_content_cl": "#ffffff",
         "content_align": "t4s-text-start",
         "auto_active": true,
         "layout": "t4s-container-wrap",
@@ -1184,6 +1184,12 @@
         "pd_mb": "",
         "use_cus_css": false,
         "code_cus_css": ""
+      }
+    },
+    "read_more_text_AbNdG8": {
+      "type": "read-more-text",
+      "disabled": true,
+      "settings": {
       }
     }
   },
@@ -1201,6 +1207,7 @@
     "sidebar",
     "main",
     "24356143-4ff5-4ebf-aef7-e0a21d813634",
-    "accordion_JjiJhp"
+    "accordion_JjiJhp",
+    "read_more_text_AbNdG8"
   ]
 }
