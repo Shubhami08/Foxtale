@@ -1310,6 +1310,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'toners'%}
+        .template-collection .t4s-container-wrap {
+          margin-bottom: 0;
+        }
+       {%endif%}
+
        {% if collection.url contains 'new30'%}
          .bottom-leftext {
            visibility: hidden;
