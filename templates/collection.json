@@ -382,6 +382,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
             "collection_handle": "new-special-sale"
           }
+        },
+        "image_a6Wbjh": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_56.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_58.jpg",
+            "collection_handle": "toners"
+          }
         }
       },
       "block_order": [
@@ -428,7 +436,8 @@
         "image_Ui8z8E",
         "image_dQPKpa",
         "image_xRxqVx",
-        "image_699Jnh"
+        "image_699Jnh",
+        "image_a6Wbjh"
       ],
       "settings": {
         "slider_height_mobile": "100%"
