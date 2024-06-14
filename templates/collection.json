@@ -975,6 +975,12 @@
     "24356143-4ff5-4ebf-aef7-e0a21d813634": {
       "type": "collection-image-banner",
       "blocks": {
+        "image_iLcaQy": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "toners"
+          }
+        },
         "b1644dee-5995-46e7-abfc-1e2ed8d5e4f7": {
           "type": "image",
           "settings": {
@@ -1011,6 +1017,7 @@
         }
       },
       "block_order": [
+        "image_iLcaQy",
         "b1644dee-5995-46e7-abfc-1e2ed8d5e4f7",
         "512acbe4-1c45-49f5-8c8f-9652d34f81f9",
         "a38f36c3-9314-4b18-b1f2-222f9c6190d3",
