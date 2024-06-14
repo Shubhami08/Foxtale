@@ -385,6 +385,7 @@
         },
         "image_a6Wbjh": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_56.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
@@ -978,6 +979,8 @@
         "image_iLcaQy": {
           "type": "image",
           "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_56.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
             "collection_handle": "toners"
           }
         },
