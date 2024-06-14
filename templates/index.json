@@ -6,8 +6,8 @@
         "aca13d02-fdca-4dd7-b455-cc71ffabb08a": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/B2B3-DESKTOP1.jpg",
-            "image_mb": "shopify:\/\/shop_images\/B2B3.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_1_9de91c83-bcd1-4aa7-9e30-0e9d3ee6e816.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_1_4c9bcb1d-8293-4999-bad3-e8acc135f995.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/products",
@@ -86,8 +86,8 @@
         "164602873867eb3815-0": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_32.jpg",
-            "image_mb": "shopify:\/\/shop_images\/TRIAL_BANNER_360x475-07.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_58.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE_60.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/collections\/shop",
@@ -333,12 +333,12 @@
         "image_parent_LMiWy7": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_52da0ed3-ba8b-4224-8d65-13933f15fc29.gif",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_d063cd57-0853-4906-a3c0-d1608dad8781.gif",
+            "image": "shopify:\/\/shop_images\/DESKTOP1.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE1.jpg",
             "image_position": "8",
             "cl_img": "",
-            "link_img1": "https:\/\/foxtale.in\/pages\/new-launch-sign-up",
-            "open_link": "_blank",
+            "link_img1": "shopify:\/\/products\/exfoliating-facial-toner",
+            "open_link": "_self",
             "animate_slide": "none",
             "text_align": "start",
             "text_align_mb": "center",
@@ -369,12 +369,23 @@
             "time_animation": 1,
             "animation_delay": 40
           }
+        },
+        "image_A3pVYK": {
+          "type": "image",
+          "settings": {
+            "img_width": 0,
+            "img_width_mb": 0,
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20,
+            "animation": "none"
+          }
         }
       },
       "block_order": [
-        "image_parent_LMiWy7"
+        "image_parent_LMiWy7",
+        "image_A3pVYK"
       ],
-      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt",
         "custom_dk": true,
@@ -578,6 +589,89 @@
         "code_cus_css": ""
       }
     },
+    "slideshow_rKaVNk": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_atRFbq": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOP1_1.jpg",
+            "image_mb": "shopify:\/\/shop_images\/MOBILE1_1.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "https:\/\/foxtale.in\/collections\/toners\/products\/multivitamin-glow-toner",
+            "open_link": "_self",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#fff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222",
+            "br_bg": "#fff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_atRFbq"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
     "62796d61-e14a-4262-b754-6e38f68257ec": {
       "type": "custom-collectionslider",
       "blocks": {
@@ -585,35 +679,35 @@
           "type": "text",
           "settings": {
             "collectionmain": "dullness",
-            "collectionimg": "shopify:\/\/shop_images\/Glow_4e5d2f31-f411-4c1b-99a7-614f06da5641.jpg"
+            "collectionimg": "shopify:\/\/shop_images\/1_edc53155-519a-4a07-af3b-c32ddf9905f8.jpg"
           }
         },
         "eca45a55-ac74-40bc-be0c-edef6014c2b4": {
           "type": "text",
           "settings": {
             "collectionmain": "dehydration",
-            "collectionimg": "shopify:\/\/shop_images\/Hydration_4f7da641-5de6-4832-9e4a-9ebcb19d3dab.jpg"
+            "collectionimg": "shopify:\/\/shop_images\/2_a3fcae06-88c5-4708-b6f7-64141a236041.jpg"
           }
         },
         "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461": {
           "type": "text",
           "settings": {
             "collectionmain": "hyperpigmentation",
-            "collectionimg": "shopify:\/\/shop_images\/Pigmentation_e170f4bc-d697-43c2-ba98-ba1540e68102.jpg"
+            "collectionimg": "shopify:\/\/shop_images\/3_591abc5b-10eb-4864-96b0-d9ef2a9e7adb.jpg"
           }
         },
         "9e907d53-d5fa-412f-a832-3155faa90623": {
           "type": "text",
           "settings": {
             "collectionmain": "fine-lines",
-            "collectionimg": "shopify:\/\/shop_images\/Anti_Ageing_51bcc920-85af-4a57-a3e4-55ce0eb6881f.jpg"
+            "collectionimg": "shopify:\/\/shop_images\/4_1_58483359-70e3-4dba-888e-d4ed88360583.jpg"
           }
         },
         "5c9e3756-d2b3-40a1-904d-64c29f442aca": {
           "type": "text",
           "settings": {
             "collectionmain": "blemish-prone",
-            "collectionimg": "shopify:\/\/shop_images\/Acne_Control_2a68b9ab-d510-4a4b-89c8-96b6914f3f7f.jpg"
+            "collectionimg": "shopify:\/\/shop_images\/5_432ab047-8219-40b5-909d-d1666eab5af3.jpg"
           }
         }
       },
@@ -983,6 +1077,7 @@
     "slideshow_FCKK7z",
     "b309d096-c17b-4b40-8286-c2bed7520ec7",
     "a2bbc261-0ad0-4d83-a4d3-733bb515cc92",
+    "slideshow_rKaVNk",
     "62796d61-e14a-4262-b754-6e38f68257ec",
     "featured_collection_owl_RimMbr",
     "17151691640b3bdab7",
