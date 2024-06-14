@@ -569,6 +569,8 @@
           "settings": {
             "collekt": "sp-masks",
             "txter": "Mask",
+            "mdlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
+            "smlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
             "grid-heading": "Mask",
             "grid-subheading": ""
           }
