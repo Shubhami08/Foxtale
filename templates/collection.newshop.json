@@ -568,7 +568,7 @@
           "type": "text",
           "settings": {
             "collekt": "sp-masks",
-            "txter": "",
+            "txter": "Mask",
             "grid-heading": "",
             "grid-subheading": ""
           }
