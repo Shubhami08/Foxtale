@@ -594,6 +594,7 @@
       "blocks": {
         "image_parent_atRFbq": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP1_1.jpg",
             "image_mb": "shopify:\/\/shop_images\/MOBILE1_1.jpg",
