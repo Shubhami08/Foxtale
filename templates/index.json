@@ -672,56 +672,6 @@
         "code_cus_css": ""
       }
     },
-    "62796d61-e14a-4262-b754-6e38f68257ec": {
-      "type": "custom-collectionslider",
-      "blocks": {
-        "e930d3db-e633-4a0a-ba90-753fb67a4d03": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "dullness",
-            "collectionimg": "shopify:\/\/shop_images\/1_edc53155-519a-4a07-af3b-c32ddf9905f8.jpg"
-          }
-        },
-        "eca45a55-ac74-40bc-be0c-edef6014c2b4": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "dehydration",
-            "collectionimg": "shopify:\/\/shop_images\/2_a3fcae06-88c5-4708-b6f7-64141a236041.jpg"
-          }
-        },
-        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "hyperpigmentation",
-            "collectionimg": "shopify:\/\/shop_images\/3_591abc5b-10eb-4864-96b0-d9ef2a9e7adb.jpg"
-          }
-        },
-        "9e907d53-d5fa-412f-a832-3155faa90623": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "fine-lines",
-            "collectionimg": "shopify:\/\/shop_images\/4_1_58483359-70e3-4dba-888e-d4ed88360583.jpg"
-          }
-        },
-        "5c9e3756-d2b3-40a1-904d-64c29f442aca": {
-          "type": "text",
-          "settings": {
-            "collectionmain": "blemish-prone",
-            "collectionimg": "shopify:\/\/shop_images\/5_432ab047-8219-40b5-909d-d1666eab5af3.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "e930d3db-e633-4a0a-ba90-753fb67a4d03",
-        "eca45a55-ac74-40bc-be0c-edef6014c2b4",
-        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461",
-        "9e907d53-d5fa-412f-a832-3155faa90623",
-        "5c9e3756-d2b3-40a1-904d-64c29f442aca"
-      ],
-      "settings": {
-        "heading": "Shop by concern"
-      }
-    },
     "featured_collection_owl_RimMbr": {
       "type": "featured_collection_owl",
       "settings": {
@@ -771,6 +721,56 @@
         "pd": ",60px,20px,60px",
         "mg_mb": ",,,,",
         "pd_mb": ",,,"
+      }
+    },
+    "62796d61-e14a-4262-b754-6e38f68257ec": {
+      "type": "custom-collectionslider",
+      "blocks": {
+        "e930d3db-e633-4a0a-ba90-753fb67a4d03": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "dullness",
+            "collectionimg": "shopify:\/\/shop_images\/1_edc53155-519a-4a07-af3b-c32ddf9905f8.jpg"
+          }
+        },
+        "eca45a55-ac74-40bc-be0c-edef6014c2b4": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "dehydration",
+            "collectionimg": "shopify:\/\/shop_images\/2_a3fcae06-88c5-4708-b6f7-64141a236041.jpg"
+          }
+        },
+        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "hyperpigmentation",
+            "collectionimg": "shopify:\/\/shop_images\/3_591abc5b-10eb-4864-96b0-d9ef2a9e7adb.jpg"
+          }
+        },
+        "9e907d53-d5fa-412f-a832-3155faa90623": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "fine-lines",
+            "collectionimg": "shopify:\/\/shop_images\/4_1_58483359-70e3-4dba-888e-d4ed88360583.jpg"
+          }
+        },
+        "5c9e3756-d2b3-40a1-904d-64c29f442aca": {
+          "type": "text",
+          "settings": {
+            "collectionmain": "blemish-prone",
+            "collectionimg": "shopify:\/\/shop_images\/5_432ab047-8219-40b5-909d-d1666eab5af3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e930d3db-e633-4a0a-ba90-753fb67a4d03",
+        "eca45a55-ac74-40bc-be0c-edef6014c2b4",
+        "e2ca5dbe-5be1-4bb2-9ec9-fb0d9f018461",
+        "9e907d53-d5fa-412f-a832-3155faa90623",
+        "5c9e3756-d2b3-40a1-904d-64c29f442aca"
+      ],
+      "settings": {
+        "heading": "Shop by concern"
       }
     },
     "17151691640b3bdab7": {
@@ -1078,8 +1078,8 @@
     "b309d096-c17b-4b40-8286-c2bed7520ec7",
     "a2bbc261-0ad0-4d83-a4d3-733bb515cc92",
     "slideshow_rKaVNk",
-    "62796d61-e14a-4262-b754-6e38f68257ec",
     "featured_collection_owl_RimMbr",
+    "62796d61-e14a-4262-b754-6e38f68257ec",
     "17151691640b3bdab7",
     "5a2273bf-78e7-4cea-befe-35a4b14dcffb",
     "251a86c7-6a99-4273-b40a-5c3d040f0068",
