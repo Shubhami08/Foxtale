@@ -1314,6 +1314,21 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .template-collection .t4s-container-wrap {
           margin-bottom: 0;
         }
+        .collection-tabbing-heading {
+           visibility: hidden;
+           position: relative;
+           pointer-events: none;
+        }
+        .collection-tabbing-heading:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Toners";
+           font-size: 12px;
+           width: max-content;
+        }
        {%endif%}
 
        {% if collection.url contains 'new30'%}
