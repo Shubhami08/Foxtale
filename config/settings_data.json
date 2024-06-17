@@ -2621,12 +2621,6 @@
         "settings": {
         }
       },
-      "6074638853274380604": {
-        "type": "shopify:\/\/apps\/growlytics-connector\/blocks\/growlyticsScript\/cc6f20e0-3199-418b-9ce6-08c8ce7b5ca6",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "15893262951164257591": {
         "type": "shopify:\/\/apps\/otpless-foxtale-consumer\/blocks\/app-embed\/2af6f334-41dd-459f-a6a9-cdb33602955d",
         "disabled": true,
