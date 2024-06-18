@@ -770,7 +770,7 @@
 			$(window).on("resize.twentytwenty", function (e) {
               var currentUrl = window.location.href;
               if (currentUrl.indexOf("multivitamin-glow-toner") !== -1) {
-                adjustSlider(0.45);
+                adjustSlider(0.40);
               }else{
 				adjustSlider(0.333333333333333);
               }
