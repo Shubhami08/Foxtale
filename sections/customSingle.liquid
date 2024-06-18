@@ -385,7 +385,7 @@
                       t4s-dots-style-{{ se_stts.dot_owl }} t4s-dots-cl-{{ se_stts.dots_cl }}
                       t4s-dots-round-{{ se_stts.dots_round }} t4s-dots-hidden-mobile-{{ se_stts.dots_hidden_mobile }}
                     {% endif %}
-                    data-flickityt4s-js='{"cellSelector": "[data-main-slide]:not(.is--media-hide)","isFilter":{{canMedia_group}},"imagesLoaded": 0,"adaptiveHeight": 1,"wrapAround": true "contain": 1, "dragThreshold" : {% if se_stts.eff == 'fade' %}6{% else %}5{% endif %}, "freeScroll": true, "pageDots": {{ se_stts.nav_dot }}, "prevNextButtons": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true , "t4sid": "{{se_id}}", "thumbNav": {% if media_layout != 'without_thumbnails' %}true{% else %}false{% endif %}, "thumbVertical": {% if media_layout != 'thumbnails_bottom' %}true{% else %}false{% endif %}, "isMedia": true }'
+                    data-flickityt4s-js='{"cellSelector": "[data-main-slide]:not(.is--media-hide)","isFilter":{{canMedia_group}},"imagesLoaded": 0,"adaptiveHeight": 1,"wrapAround": true, "contain": 1, "dragThreshold" : {% if se_stts.eff == 'fade' %}6{% else %}5{% endif %}, "freeScroll": true, "pageDots": {{ se_stts.nav_dot }}, "prevNextButtons": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true , "t4sid": "{{se_id}}", "thumbNav": {% if media_layout != 'without_thumbnails' %}true{% else %}false{% endif %}, "thumbVertical": {% if media_layout != 'thumbnails_bottom' %}true{% else %}false{% endif %}, "isMedia": true }'
                     style="--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;--space-dots: {{ se_stts.dots_space }}px;"
                   >
                     {%- liquid
