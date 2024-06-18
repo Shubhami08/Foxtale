@@ -388,7 +388,7 @@
       </div>
       <div class="newshop-layout">
         {%- for product in collection.products limit: 10 -%}
-          <div class="products-grid-item {{ block.id }}">
+          <div class="products-grid-item bb-{{ block.id }}">
             <div class="product-innr">
               {% comment %}
                 {% if product.metafields.custom.pr_excerpt != blank %}
@@ -572,6 +572,7 @@
     var tab_3_pos = $(".newshop-inwrapped#tab_3").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     var tab_5_pos = $(".newshop-inwrapped#tab_5").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    var tab_6_pos = $(".newshop-inwrapped#tab_6").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     if($(window).scrollTop() > tab_1_pos && $(window).scrollTop() < tab_2_pos){
       if(!$('.round-collectionimg[data-tab="tab_1"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");
@@ -593,10 +594,16 @@
         $('.round-collectionimg[data-tab="tab_4"]').addClass("active");
       }
     }
-    else if($(window).scrollTop() > tab_5_pos){
+    else if($(window).scrollTop() > tab_5_pos && $(window).scrollTop() < tab_6_pos){
       if(!$('.round-collectionimg[data-tab="tab_5"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");
         $('.round-collectionimg[data-tab="tab_5"]').addClass("active");
+      }
+    }
+    else if($(window).scrollTop() > tab_6_pos){
+      if(!$('.round-collectionimg[data-tab="tab_6"]').hasClass("active")){
+        $(".round-wrapper .round-collectionimg").removeClass("active");
+        $('.round-collectionimg[data-tab="tab_6"]').addClass("active");
       }
     }
 
