@@ -388,7 +388,7 @@
       </div>
       <div class="newshop-layout">
         {%- for product in collection.products limit: 10 -%}
-          <div class="products-grid-item">
+          <div class="products-grid-item {{ block.id }}">
             <div class="product-innr">
               {% comment %}
                 {% if product.metafields.custom.pr_excerpt != blank %}
