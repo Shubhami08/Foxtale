@@ -369,22 +369,10 @@
             "time_animation": 1,
             "animation_delay": 40
           }
-        },
-        "image_A3pVYK": {
-          "type": "image",
-          "settings": {
-            "img_width": 0,
-            "img_width_mb": 0,
-            "hidden_mobile": false,
-            "mgb": 20,
-            "mgb_mb": 20,
-            "animation": "none"
-          }
         }
       },
       "block_order": [
-        "image_parent_LMiWy7",
-        "image_A3pVYK"
+        "image_parent_LMiWy7"
       ],
       "settings": {
         "se_height": "t4s_ratioadapt",
@@ -637,6 +625,7 @@
       "block_order": [
         "image_parent_atRFbq"
       ],
+      "disabled": true,
       "settings": {
         "se_height": "t4s_ratioadapt",
         "custom_dk": true,
