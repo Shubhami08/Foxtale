@@ -578,7 +578,7 @@
         "text_GEPPAV": {
           "type": "text",
           "settings": {
-            "collekt": "toners",
+            "collekt": "tb-toners",
             "txter": "Toners",
             "mdlpik": "shopify:\/\/shop_images\/TONER.png",
             "smlpik": "shopify:\/\/shop_images\/TONER.png",
