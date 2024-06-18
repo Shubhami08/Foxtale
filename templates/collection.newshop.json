@@ -574,6 +574,26 @@
             "grid-heading": "Masks",
             "grid-subheading": "High-powered masks to deliver instant benefits"
           }
+        },
+        "text_GEPPAV": {
+          "type": "text",
+          "settings": {
+            "collekt": "toners",
+            "txter": "Toners",
+            "mdlpik": "shopify:\/\/shop_images\/TONER.png",
+            "smlpik": "shopify:\/\/shop_images\/TONER.png",
+            "grid-heading": "Toners",
+            "grid-subheading": "Tone it up for that dewy, bright skin!"
+          }
+        },
+        "text_VLxwFY": {
+          "type": "text",
+          "settings": {
+            "collekt": "",
+            "txter": "",
+            "grid-heading": "",
+            "grid-subheading": ""
+          }
         }
       },
       "block_order": [
@@ -581,7 +601,9 @@
         "2c6bc074-5f62-4c76-97a2-a37b159012b2",
         "fef43bcb-d73b-4c7f-8f0d-082414be522a",
         "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96",
-        "text_BXQdrR"
+        "text_BXQdrR",
+        "text_GEPPAV",
+        "text_VLxwFY"
       ],
       "settings": {
         "heading": ""
