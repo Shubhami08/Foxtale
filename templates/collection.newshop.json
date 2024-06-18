@@ -585,15 +585,6 @@
             "grid-heading": "Toners",
             "grid-subheading": "Tone it up for that dewy, bright skin!"
           }
-        },
-        "text_VLxwFY": {
-          "type": "text",
-          "settings": {
-            "collekt": "",
-            "txter": "",
-            "grid-heading": "",
-            "grid-subheading": ""
-          }
         }
       },
       "block_order": [
@@ -602,8 +593,7 @@
         "fef43bcb-d73b-4c7f-8f0d-082414be522a",
         "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96",
         "text_BXQdrR",
-        "text_GEPPAV",
-        "text_VLxwFY"
+        "text_GEPPAV"
       ],
       "settings": {
         "heading": ""
