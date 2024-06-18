@@ -422,11 +422,6 @@
       "settings": {
       }
     },
-    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e": {
-      "type": "faq-section",
-      "settings": {
-      }
-    },
     "aea25245-bd71-47fa-9e0d-bdde5017406d": {
       "type": "boost-with",
       "disabled": true,
@@ -553,6 +548,11 @@
       "settings": {
         "reviews": true
       }
+    },
+    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e": {
+      "type": "faq-section",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -564,11 +564,11 @@
     "before_after_WYBHpw",
     "direct_benefits_hJ4bYk",
     "product_commitment_qwG9Rd",
-    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e",
     "aea25245-bd71-47fa-9e0d-bdde5017406d",
     "baa1065b-e89a-4e42-affb-936d001668f9",
     "product-recommendations",
     "recently-viewed-products",
-    "6a4f9bd0-be52-4194-9473-dddd1a65a45c"
+    "6a4f9bd0-be52-4194-9473-dddd1a65a45c",
+    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e"
   ]
 }
