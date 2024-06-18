@@ -258,7 +258,7 @@
         "zoom_tp": "external",
         "enable_zoom_icon": true,
         "enable_zoom_click_mb": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "enable_video_muting": true,
         "enable_video_autoplaying": true,
         "eff": "fade",
