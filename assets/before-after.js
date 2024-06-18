@@ -768,7 +768,12 @@
 			};
 
 			$(window).on("resize.twentytwenty", function (e) {
+              var currentUrl = window.location.href;
+              if (currentUrl.indexOf("multivitamin-glow-toner") !== -1) {
+                adjustSlider(0.4);
+              }else{
 				adjustSlider(0.333333333333333);
+              }
 			});
 
 			var offsetX = 0;
