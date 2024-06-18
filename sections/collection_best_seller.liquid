@@ -217,9 +217,11 @@
                   {% endif %}                         
                   {% if collection.title == "Exclusive Sale" %}
                     <p class="bottom-rightext"></p>
-                   {% else %}
+                  {% elsif collection.title == "Special Sale" %}
+                    <p class="bottom-rightext"></p>
+                  {% else %}
                     <p class="bottom-rightext">Free Gift</p>
-                   {% endif %}
+                  {% endif %}
                </div>
 <!--             
              <form
