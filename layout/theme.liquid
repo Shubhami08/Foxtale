@@ -1164,6 +1164,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            display: none;
          }
        {%endif%}
+      
+       {% if collection.url contains 'shop-gpay-b2g2'%}
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
 
        {% if collection.url contains 'phonepe-b2g2'%}
          #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
@@ -1182,6 +1188,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            content: "Buy 2 Get 2 Free";
            font-size: 12px;
            width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
          }
        {%endif%}
 
