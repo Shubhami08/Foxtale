@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "1646028739ae283905": {
@@ -333,8 +342,8 @@
         "image_parent_LMiWy7": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_1_0b7b9ad9-931b-4796-96de-69b01a1a68da.jpg",
-            "image_mb": "shopify:\/\/shop_images\/MOBILE_2_1324f114-c0e3-420b-9dd6-6f0180f68ce7.jpg",
+            "image": "shopify:\/\/shop_images\/DESKTOP_59.jpg",
+            "image_mb": "shopify:\/\/shop_images\/DESKTOP_59.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify:\/\/products\/exfoliating-facial-toner",
