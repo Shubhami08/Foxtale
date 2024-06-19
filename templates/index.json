@@ -54,6 +54,7 @@
         },
         "image_parent_FQHc4U": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_06ed6a9f-141a-4e58-b790-9449801858ee.jpg",
             "image_mb": "shopify:\/\/shop_images\/LONG_BANNER.jpg",
