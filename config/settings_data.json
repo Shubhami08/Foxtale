@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "purchase_code": "7d7c4f0a-d840-4982-8ac2-f4c6d207d48c",
@@ -105,11 +114,11 @@
     "magic_trigger_count_23": 4,
     "magic_gift_product_23": "sunglass",
     "magic_link_lifetime_23": 10,
-    "magic_enable_24": false,
-    "magic_link_key_24": "",
-    "magic_trigger_collection_24": "",
+    "magic_enable_24": true,
+    "magic_link_key_24": "brightmask",
+    "magic_trigger_collection_24": "midnight-sale",
     "magic_trigger_count_24": 1,
-    "magic_gift_product_24": "",
+    "magic_gift_product_24": "brightening-under-eye-mask",
     "magic_link_lifetime_24": 15,
     "magic_enable_25": true,
     "magic_link_key_25": "b2g2detan",
