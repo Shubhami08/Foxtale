@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "timer_QgwT4a": {
@@ -354,8 +363,8 @@
         "image_Ui8z8E": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1_05d6c3f7-fda1-4aac-a415-79a04075d0a4.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE-1_7162a0f1-a8fe-4f99-87d6-ee03a1038f9b.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/B2B3-DESKTOP2_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2B3-Mobile2_1.jpg",
             "collection_handle": "adnetwork-exclusive-offer"
           }
         },
