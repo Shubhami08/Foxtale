@@ -541,8 +541,14 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       <source media="(min-width: 1028px)" srcset="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-03.png?v=1718887420 1x, https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-03.png?v=1718887420 2x">
       <source media="(min-width: 768px)"  srcset="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-04.png?v=1718887420 1x, https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-04.png?v=1718887420 2x">
       <source media="(max-width: 768px)"  srcset="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-04.png?v=1718887420 1x, https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-04.png?v=1718887420 2x">
-      <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-03.png?v=1718887420" height="100vh" max-width="none" alt="">
+      <img class="gatekeep-banner" src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Bodycare_-_Gatekeep_Landing_Page-03.png?v=1718887420" height="100vh" max-width="none" alt="">
       </picture>
+      <style>
+        img.gatekeep-banner{
+          height:"100vh";
+          max-width:"none";
+        }
+      </style>
     {% else %}
       <div class="t4s-website-wrapper">
       {%- render 'header', t_name: t_name -%}
