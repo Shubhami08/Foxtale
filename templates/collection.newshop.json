@@ -503,6 +503,14 @@
             "image_2_mobile": "shopify:\/\/shop_images\/Last-chanceROUTINE-BANNER_Mobile.gif",
             "collection_handle": "new-exclusive-special-1"
           }
+        },
+        "image_jQBqGm": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B3_Scrub_Banners-V1-01.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B3_Scrub_Banners-V1-02.jpg",
+            "collection_handle": "monsoon-offer"
+          }
         }
       },
       "block_order": [
@@ -520,7 +528,8 @@
         "image_N3EabB",
         "image_EzERLW",
         "image_gpitR8",
-        "image_KehdyY"
+        "image_KehdyY",
+        "image_jQBqGm"
       ],
       "settings": {
         "slider_height_mobile": "100%"
