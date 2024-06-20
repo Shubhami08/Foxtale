@@ -536,7 +536,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <a class="skip-to-content-link visually-hidden" href="#MainContent">{{ 'accessibility.skip_to_text' | t }}</a>
     <div class="t4s-close-overlay t4s-op-0"></div>
 
-    <div class="t4s-website-wrapper">
+    {% if request.host == "gatekeep.club" %}
+    {% else %}
+      <div class="t4s-website-wrapper">
       {%- render 'header', t_name: t_name -%}
 
       {% if settings.show_breadcrumb_nav %}
@@ -560,6 +562,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         {%- section 'bottom-bar' -%}
       </footer>
     </div>
+    {% endif %}
 
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
 
