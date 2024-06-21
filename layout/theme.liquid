@@ -538,7 +538,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
     {% if request.host == "gatekeep.club" %}
       {% section 'gatekeep' %}
-    {% else %}
+    {% endif %}
       <div class="t4s-website-wrapper">
       {%- render 'header', t_name: t_name -%}
 
@@ -563,7 +563,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         {%- section 'bottom-bar' -%}
       </footer>
     </div>
-    {% endif %}
+
 
     {% comment %}{%- render 'div_html', t_name: t_name -%}{% endcomment %}
 
