@@ -1504,15 +1504,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let productDataFromApiRes = data?.product;
 
-            properties["Viewed product title"] = productDataFromApiRes?.["title"]
-            properties["Viewed product handle"] = productDataFromApiRes?.["handle"],
-            properties["Viewed product url"] = productDataFromApiRes?.["url"],
-            properties["Viewed product price"] = productDataFromApiRes?.["price"],
-            properties["Viewed product type"] = productDataFromApiRes?.["product_type"],
-            properties["Viewed product sku"] = productDataFromApiRes?.["sku"],
-            properties["Viewed product availability"] = productDataFromApiRes?.["available"],
-            properties["Viewed product max price"] = productDataFromApiRes?.["price_max"],
-            properties["Viewed product min price"] = productDataFromApiRes?.["price_min"],
+            properties["Viewed product title"] = productDataFromApiRes?.["title"];
+            properties["Viewed product handle"] = productDataFromApiRes?.["handle"];
+            properties["Viewed product url"] = productDataFromApiRes?.["url"];
+            properties["Viewed product price"] = productDataFromApiRes?.["price"];
+            properties["Viewed product type"] = productDataFromApiRes?.["product_type"];
+            properties["Viewed product sku"] = productDataFromApiRes?.["sku"];
+            properties["Viewed product availability"] = productDataFromApiRes?.["available"];
+            properties["Viewed product max price"] = productDataFromApiRes?.["price_max"];
+            properties["Viewed product min price"] = productDataFromApiRes?.["price_min"];
           },
           error: function (error) {
             console.log("Error fetching product data from only page view:", error);
