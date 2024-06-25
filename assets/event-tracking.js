@@ -1450,7 +1450,7 @@ setupObserverForLazyComponentsWhichDoNotHaveStaticallyLoadedParent();
 const defaultPageToPageEvent = {
   'index': "Viewed Homepage",
   'collection': "Viewed Collection",
-  'product': 'Viewed Product'
+  'product': "Viewed Product"
 }
 
 /**
