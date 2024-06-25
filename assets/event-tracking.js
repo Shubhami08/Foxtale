@@ -1498,7 +1498,7 @@ document.addEventListener("DOMContentLoaded", function () {
           dataType: "json",
           async: false, // This makes the AJAX call synchronous
           success: function (data) {
-            console.log("data from ajax query: ", data);
+            console.log("data from ajax query from only page view: ", data);
     
             let productApiData = data;
 
@@ -1515,7 +1515,7 @@ document.addEventListener("DOMContentLoaded", function () {
             properties["Viewed product min price"] = productDataFromApiRes?.["price_min"],
           },
           error: function (error) {
-            console.log("Error fetching product data:", error);
+            console.log("Error fetching product data from only page view:", error);
           },
         });
       } else if ( window.page_type == 'collection' && properties['page_url'] ) {
