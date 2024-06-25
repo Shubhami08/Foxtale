@@ -1490,11 +1490,43 @@ document.addEventListener("DOMContentLoaded", function () {
       properties['page_type'] = window.page_type;
       properties['source'] = source;
 
-        if ( defaultPageToPageEvent?.[window.page_type] ) {
-          trackEvent(defaultPageToPageEvent[window.page_type], properties);
-        } else {
-          trackEvent('The Foxtale Pages', properties);
-        }
+
+      if ( window.page_type == 'product' && properties['page_url'] ) {
+        $.ajax({
+          url: properties['page_url'].split('?')?.[0],
+          type: "GET",
+          dataType: "json",
+          async: false, // This makes the AJAX call synchronous
+          success: function (data) {
+            console.log("data from ajax query: ", data);
+    
+            let productApiData = data;
+
+            let productDataFromApiRes = data?.product;
+
+            properties["Viewed product title"] = productDataFromApiRes?.["title"]
+            properties["Viewed product handle"] = productDataFromApiRes?.["handle"],
+            properties["Viewed product url"] = productDataFromApiRes?.["url"],
+            properties["Viewed product price"] = productDataFromApiRes?.["price"],
+            properties["Viewed product type"] = productDataFromApiRes?.["product_type"],
+            properties["Viewed product sku"] = productDataFromApiRes?.["sku"],
+            properties["Viewed product availability"] = productDataFromApiRes?.["available"],
+            properties["Viewed product max price"] = productDataFromApiRes?.["price_max"],
+            properties["Viewed product min price"] = productDataFromApiRes?.["price_min"],
+          },
+          error: function (error) {
+            console.log("Error fetching product data:", error);
+          },
+        });
+      } else if ( window.page_type == 'collection' && properties['page_url'] ) {
+        properties['collection-url'] = properties['page_url'].split('?')?.[0];
+      }
+
+      if ( defaultPageToPageEvent?.[window.page_type] ) {
+        trackEvent(defaultPageToPageEvent[window.page_type], properties);
+      } else {
+        trackEvent('The Foxtale Pages', properties);
+      }
     }
   })
 });
