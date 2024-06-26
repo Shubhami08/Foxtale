@@ -109,6 +109,9 @@ endif -%}
       {%- if size_count > 0 and pr_size_pos == '1'%}{%- render 'product-size', size_variants: size_variants, size_variants_avai: size_variants_avai, show_size_type: show_size_type -%}{% endif -%}
       {%- if use_countdown and countdown != blank %}{%- render 'product-countdown',countdown:countdown %}{% endif -%}
       <a data-pr-href class="t4s-full-width-link"  data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-collections" href="{{pr_url}}"></a>
+    {%- if product.metafields.custom.ingredientstag != blank -%}
+      <span class="ingredient-badge"><h5 style="color: #{{ product.metafields.custom.ingredientscolor }};">{{ product.metafields.custom.ingredientstag }}</h5></span>
+    {%- endif -%}
     </div>
     <div class="t4s-product-info product-info" data-pr-id="{{ product.handle }}">
       <div class="t4s-product-info__inner">
