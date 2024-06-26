@@ -196,6 +196,8 @@ endif -%}
                     <p class="bottom-leftext">Buy 2 @ 799</p>
                     {% elsif collection.title == "Phonepe Sunscreen Offer" %}
                     <p class="bottom-leftext">Matte Sunscreen Free</p>
+                    {% elsif collection.title == "New Gpay B2G2" %}
+                    <p class="bottom-leftext">B2G2</p>
                     {% else %}
                   {% assign message = product.price | divided_by: 100 %}
                      {% if message <= 746 %}
