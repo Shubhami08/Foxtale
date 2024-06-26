@@ -1160,6 +1160,45 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            content: "RAIN";
            width: 150px;
          }
+         .bottom-rightext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-rightext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Free Scrub";
+           width: 150px;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'monsoon-offer-1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "RAIN";
+           width: 150px;
+         }
+         .bottom-rightext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-rightext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "Free Scrub";
+           width: 150px;
+         }
        {%endif%}
       
        {% if collection.url contains 'shop-gpay-b2g2'%}
