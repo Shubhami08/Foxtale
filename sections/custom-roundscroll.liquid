@@ -412,10 +412,11 @@
     {%- if product.metafields.custom.savingscustom != blank -%}
       <span class="save-badge">SAVE<br><h5>{{ product.metafields.custom.savingscustom }}</h5></span>
     {%- endif -%}
-
+{% comment %}
     {%- if product.metafields.custom.ingredientstag != blank -%}
       <span class="ingredient-badge"><h5 style="color: #{{ product.metafields.custom.ingredientscolor }};">{{ product.metafields.custom.ingredientstag }}</h5></span>
-    {%- endif -%}    
+    {%- endif -%}
+{% endcomment %}
                   <img
                     class="pr-img-first lazyload"
                     loading="lazy"
