@@ -968,9 +968,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            width: max-content;
          } */
        {%endif%}
-      {% if collection.url contains 'adnetwork-exclusive-offer'%}
       
-
+      {% if collection.url contains 'adnetwork-exclusive-offer'%}
         .bottom-leftext,.bottom-rightext {
            visibility: hidden;
            position: relative;
@@ -1073,7 +1072,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            bottom: unset;
            top: 9px !important;
          }
-         .bottom-rightext {
+         .bottom-rightext, .round-outerwrapper {
            display: none !important;
          }
          span.ingredient-badge {
