@@ -511,6 +511,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/monsoon_banners-01-02_1.png",
             "collection_handle": "monsoon-offer"
           }
+        },
+        "image_fRfLeA": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_1_2.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Slik_banner-02_2.jpg",
+            "collection_handle": "monsoon-offer-1"
+          }
         }
       },
       "block_order": [
@@ -529,7 +537,8 @@
         "image_EzERLW",
         "image_gpitR8",
         "image_KehdyY",
-        "image_jQBqGm"
+        "image_jQBqGm",
+        "image_fRfLeA"
       ],
       "settings": {
         "slider_height_mobile": "100%"
