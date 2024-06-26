@@ -400,6 +400,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
             "collection_handle": "toners"
           }
+        },
+        "image_C3wNkH": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02_3d509756-5e18-45a0-bbbe-fadab1b6a894.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01_625c7846-5f7f-4a3b-98e1-8adc96b15af7.jpg",
+            "collection_handle": "\/shop-gpay-b2g2"
+          }
         }
       },
       "block_order": [
@@ -447,7 +455,8 @@
         "image_dQPKpa",
         "image_xRxqVx",
         "image_699Jnh",
-        "image_a6Wbjh"
+        "image_a6Wbjh",
+        "image_C3wNkH"
       ],
       "settings": {
         "slider_height_mobile": "100%"
