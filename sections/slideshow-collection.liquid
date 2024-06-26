@@ -110,7 +110,7 @@
       {% endfor %}
     </div>
 
-    <div class="main-carousel mobile-carousel" style="height:calc(100vw * 9 / 16);">
+    <div class="main-carousel mobile-carousel" style="{% if collection.handle == "monsoon-offer-1" %}height:calc(100vw * 9 / 30);{% else %}height:calc(100vw * 9 / 16);{% endif %}">
       {% for i in (1..5) %}
         {% assign img = "" %}
         {% case i %}
