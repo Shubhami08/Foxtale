@@ -396,6 +396,14 @@
             "collection_handle": "new30"
           }
         },
+        "image_G8rx9c": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/MOBILE1_1_44027759-0801-4ceb-9346-8e49473d33f8.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE1_1_44027759-0801-4ceb-9346-8e49473d33f8.jpg",
+            "collection_handle": "products-shop-1"
+          }
+        },
         "896ab793-fd74-47fd-999e-0520b9c09b47": {
           "type": "image",
           "settings": {
@@ -524,6 +532,7 @@
       "block_order": [
         "image_xjWFnn",
         "image_LRQy7A",
+        "image_G8rx9c",
         "896ab793-fd74-47fd-999e-0520b9c09b47",
         "image_UibMeG",
         "image_GetAYE",
