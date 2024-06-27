@@ -408,6 +408,14 @@
             "collection_handle": "adnetwork-bestsellers-199-offer"
           }
         },
+        "image_cgLftm": {
+          "type": "image",
+          "settings": {
+            "image_4_desktop": "shopify:\/\/shop_images\/DESKTOP_62.jpg",
+            "image_4_mobile": "shopify:\/\/shop_images\/MOBILE_63.jpg",
+            "collection_handle": "clovia-flat-400-offer"
+          }
+        },
         "image_a6Wbjh": {
           "type": "image",
           "disabled": true,
@@ -465,6 +473,7 @@
         "image_699Jnh",
         "image_C3wNkH",
         "image_dFPLTm",
+        "image_cgLftm",
         "image_a6Wbjh"
       ],
       "settings": {
