@@ -247,8 +247,8 @@
         "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_61.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/HAMBURGURE.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Monsoon_sale_web_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Monsoon_sale_mobile_banner.jpg",
             "collection_handle": "frontpage"
           }
         },
