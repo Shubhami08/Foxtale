@@ -308,7 +308,7 @@
                     </div>
                     <div class="native_cart_info">
                        <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
-                      <a class="native_cart_title lg2">Unlock your free De-Tan Scrub!</a>
+                      <a class="native_cart_title lg2">Unlock your free Lip Mask!</a>
                       <div class="native_cart_details">
                      {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
                       {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
@@ -334,7 +334,7 @@
                     </div>
                     <div class="native_cart_info">
                        <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
-                      <a class="native_cart_title lg2">Unlock your free De-Tan Scrub!</a>
+                      <a class="native_cart_title lg2">Unlock your free Lip Mask!</a>
                       <div class="native_cart_details">
                      {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
                       {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
@@ -469,11 +469,7 @@
                  </ul>
               {%- endif -%}
             
-            {% if cart.items_subtotal_price > 69900 %}
-              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply code at next step</p></div>
-            {% else %}
-              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
-            {% endif %}
+
             
 
             {% if cart.items_subtotal_price > 69900 %}
@@ -621,8 +617,6 @@
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW10</b> at checkout to get your Free Eye Mask</p></div>
               {% endif %}
 
-              {% endcomment %}
-
               {% if total_cart_prod > 2 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to get these @ 1099</p></div>
               {% elsif total_cart_prod == 1 %}
@@ -631,19 +625,25 @@
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>FOX1099</strong></p></div>
               {% endif %}
 
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>RAIN</b> at checkout to get your <strong>Free De-Tan Scrub!</strong></p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to unlock your <strong>Free De-Tan Scrub!</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to unlock your <strong>Free De-Tan Scrub!</strong></p></div>
-             {% endif %}
+              {% endcomment %}
+
+            {% if cart.items_subtotal_price > 69900 %}
+              <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW15</b> at the checkout!</p></div>
+            {% else %}
+              <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
+            {% endif %}
 
               {% if total_cart_prod > 3 %}
+                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>B2G2</b> at the checkout!</p></div>
+              {% else %}
+                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to unlock your free <strong>Lip mask!</strong></p></div>
+              {% endif %}
+
+              <!-- {% if total_cart_prod > 3 %}
                 <div class="saleBar shop-1" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply the Code <b>B2G2</b> at checkout</p></div>
               {% else %}
                 <div class="saleBar shop-1" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail <b>B2G2</b></p></div>
-              {% endif %}
+              {% endif %} -->
 
               {% if total_cart_prod > 3 %}
                 <div class="saleBar b2g2-rib" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply your code at checkout!</p></div>
