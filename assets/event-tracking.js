@@ -814,7 +814,6 @@ async function getDefaultPropertiesAndStore() {
       "$browser_version": browserInfo.version,
       "$current_url": window.location.href,
       "$device": navigator.userAgent.match(/(mobile|android|tablet|ipad|iphone|ipod)/i) ? 'Mobile' : 'Desktop',
-      "$insert_id": Math.random().toString(36).substr(2, 9),
       // "Library Version": "2.51.0",
       // "Mixpanel Library": "web",
       "$os": getOS(),
@@ -857,41 +856,119 @@ if(!localStorage.getItem("defaultProperties")) {
 }
 
 // Mixpael REST API for tracking the events
-function trackEvent(eventName, properties) {
-  const projectToken = "1e8f3dbc29a04e9ae06ef45a4e721309";
+class MixpanelEventTracker {
+    constructor() {
+        this.queue = [];
+        this.projectToken = '1e8f3dbc29a04e9ae06ef45a4e721309';
+        this.apiEndpoint = 'https://api.mixpanel.com/track';
+        this.maxBatchSize = 3;
+        this.retryDelay = 5000; // milliseconds
+        this.batchTimeout = 3000; // milliseconds, adjust as needed
+        this.timeoutId = null;
+    }
 
-  // if (kwikPassCustomerId) {
-  //   identifyAndSetProfile(mixpanelDistinctId, kwikPassCustomerId);
-  // }
-  
-  const utmProperties = getStoredUTMParams();
-  const defaultProperties = JSON.parse(localStorage.getItem("defaultProperties")) || {};
+    trackMpEvent(eventName, properties) {
+        const utmProperties = getStoredUTMParams();
+        const defaultProperties = JSON.parse(localStorage.getItem("defaultProperties")) || {};
 
-  const data = {
-      event: eventName,
-      properties: {
-          token: projectToken,
-          "distinct_id": mixpanelDistinctId,
-          ...defaultProperties,
-          ...utmProperties,
-          ...properties,
-      }
-  };
+        const data = {
+            event: eventName,
+            properties: {
+                token: this.projectToken,
+                "distinct_id": mixpanelDistinctId, // Ensure this is defined or handled appropriately
+                "$insert_id": Math.random().toString(36).substr(2, 9),
+                ...properties,
+                ...defaultProperties,
+                ...utmProperties,
+            }
+        };
 
-  const base64Data = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+        this.queue.push(data);
+        this.processQueue();
+        this.resetTimeout();
+    }
 
-  fetch('https://api.mixpanel.com/track?data=' + base64Data, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'  // This header can be adjusted if needed
-      }
-  })
-  .then(response => response.text())
-  .then(result => console.log('Mixpanel track event response:', result))
-  .catch(error => console.error('Error posting event to Mixpanel:', error));
+    processQueue() {
+        if (this.queue.length >= this.maxBatchSize) {
+            this.sendEvents();
+        }
+    }
+
+    resetTimeout() {
+        clearTimeout(this.timeoutId);
+        this.timeoutId = setTimeout(() => {
+            if (this.queue.length > 0) {
+                this.sendEvents();
+            }
+        }, this.batchTimeout);
+    }
+
+    sendEvents() {
+        clearTimeout(this.timeoutId); // Clear the timeout as we're processing the queue now
+        const eventsToSend = this.queue.splice(0, this.maxBatchSize);
+        const encodedData = btoa(unescape(encodeURIComponent(JSON.stringify(eventsToSend))));
+        const fullUrl = `${this.apiEndpoint}?verbose=1&data=${encodedData}`;
+
+        fetch(fullUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log('Mixpanel track event response:', result);
+        })
+        .catch(error => {
+            console.error('Error posting event to Mixpanel:', error);
+            this.queue.unshift(...eventsToSend); // Re-add events to the front of the queue
+            setTimeout(() => this.sendEvents(), this.retryDelay); // Retry after a delay
+        });
+    }
 }
 
-window.trackMixpanelEvent = trackEvent;
+// Usage
+const tracker = new MixpanelEventTracker();
+// tracker.trackEvent('Event Name', { property1: 'value1' });
+
+function trackEvent(eventName, properties) {
+  // const projectToken = "1e8f3dbc29a04e9ae06ef45a4e721309";
+
+  // // if (kwikPassCustomerId) {
+  // //   identifyAndSetProfile(mixpanelDistinctId, kwikPassCustomerId);
+  // // }
+  
+  // const utmProperties = getStoredUTMParams();
+  // const defaultProperties = JSON.parse(localStorage.getItem("defaultProperties")) || {};
+
+  // const data = {
+  //     event: eventName,
+  //     properties: {
+  //         token: projectToken,
+  //         "distinct_id": mixpanelDistinctId,
+  //         ...defaultProperties,
+  //         ...utmProperties,
+  //         ...properties,
+  //     }
+  // };
+
+  // const base64Data = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+
+  // fetch('https://api.mixpanel.com/track?verbose=1&data=' + base64Data, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded'  // This header can be adjusted if needed
+  //     }
+  // })
+  // .then(response => response.text())
+  // .then(result => console.log('Mixpanel track event response:', result))
+  // .catch(error => console.error('Error posting event to Mixpanel:', error));
+
+  tracker.trackMpEvent(eventName, properties);
+  
+}
+
+// window.trackMixpanelEvent = trackEvent;
 
 //////////////// Here Starts The Mixpanel Event Tracking Code ///////////////////
 
@@ -995,56 +1072,107 @@ function getProductDetails(
         : "",
       type: "GET",
       dataType: "json",
-      async: false, // This makes the AJAX call synchronous
+      async: true, // This makes the AJAX call synchronous
       success: function (data) {
         console.log("data from ajax query: ", data);
 
         apiResData = data;
+
+        var latestAddedProductItem = apiResData?.product;
+
+        for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
+          latestProductDetailsForParameters[mpProp] = latestAddedProductItem[apiProp];
+      
+          if (["price", "sku"].includes(apiProp)) {
+            latestProductDetailsForParameters[mpProp] =
+              latestAddedProductItem.variants[0][apiProp];
+          }
+      
+          if (apiProp == "url") {
+            latestProductDetailsForParameters[mpProp] =
+              nativeCodeDataForEventFromElement["api-url-for-data"];
+          }
+        }
+      
+        // cart details when product is getting clicked and events are like add-to-cart
+      
+        if ( config.key == "add-to-cart-click-event" || config.key == "remove-from-cart-click-event" || config.key == "cart-quantity-change-event") {
+          if (config.needsAPIData) {
+            $.ajax({
+              url: "https://foxtale.in" + "/cart.js",
+              type: "GET",
+              dataType: "json",
+              async: false, // This makes the AJAX call synchronous
+              success: function (data) {
+                console.log("data from ajax query: ", data);
+        
+                latestProductDetailsForParameters['cart'] = JSON.stringify(data);
+              },
+              error: function (error) {
+                console.log("Error fetching product data:", error);
+              },
+            });
+          }
+        }
+
+        console.log('latestProductDetailsForParameters', latestProductDetailsForParameters);
+
+        trackMixpanelEvent(config.eventName, latestProductDetailsForParameters);
+
+        return;
       },
       error: function (error) {
         console.log("Error fetching product data:", error);
       },
     });
-  }
-
-  var latestAddedProductItem = apiResData?.product;
-
-  for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
-    latestProductDetailsForParameters[mpProp] = latestAddedProductItem[apiProp];
-
-    if (["price", "sku"].includes(apiProp)) {
-      latestProductDetailsForParameters[mpProp] =
-        latestAddedProductItem.variants[0][apiProp];
-    }
-
-    if (apiProp == "url") {
-      latestProductDetailsForParameters[mpProp] =
-        nativeCodeDataForEventFromElement["api-url-for-data"];
-    }
-  }
-
-  // cart details when product is getting clicked and events are like add-to-cart
-
-  if ( config.key == "add-to-cart-click-event" || config.key == "remove-from-cart-click-event" || config.key == "cart-quantity-change-event") {
-    if (config.needsAPIData) {
-      $.ajax({
-        url: "https://foxtale.in" + "/cart.js",
-        type: "GET",
-        dataType: "json",
-        async: false, // This makes the AJAX call synchronous
-        success: function (data) {
-          console.log("data from ajax query: ", data);
   
-          latestProductDetailsForParameters['cart'] = JSON.stringify(data);
-        },
-        error: function (error) {
-          console.log("Error fetching product data:", error);
-        },
-      });
-    }
+  } else {
+  
+    trackMixpanelEvent(config.eventName, latestProductDetailsForParameters);
+
+    return;
+    
   }
 
-  return latestProductDetailsForParameters;
+  // var latestAddedProductItem = apiResData?.product;
+
+  // for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
+  //   latestProductDetailsForParameters[mpProp] = latestAddedProductItem[apiProp];
+
+  //   if (["price", "sku"].includes(apiProp)) {
+  //     latestProductDetailsForParameters[mpProp] =
+  //       latestAddedProductItem.variants[0][apiProp];
+  //   }
+
+  //   if (apiProp == "url") {
+  //     latestProductDetailsForParameters[mpProp] =
+  //       nativeCodeDataForEventFromElement["api-url-for-data"];
+  //   }
+  // }
+
+  // // cart details when product is getting clicked and events are like add-to-cart
+
+  // if ( config.key == "add-to-cart-click-event" || config.key == "remove-from-cart-click-event" || config.key == "cart-quantity-change-event") {
+  //   if (config.needsAPIData) {
+  //     $.ajax({
+  //       url: "https://foxtale.in" + "/cart.js",
+  //       type: "GET",
+  //       dataType: "json",
+  //       async: false, // This makes the AJAX call synchronous
+  //       success: function (data) {
+  //         console.log("data from ajax query: ", data);
+  
+  //         latestProductDetailsForParameters['cart'] = JSON.stringify(data);
+  //       },
+  //       error: function (error) {
+  //         console.log("Error fetching product data:", error);
+  //       },
+  //     });
+  //   }
+  // }
+
+  // trackMixpanelEvent(config.eventName, latestProductDetailsForParameters);
+  // return latestProductDetailsForParameters;
 }
 
 function getCartDetails(
@@ -1092,35 +1220,65 @@ function getCartDetails(
         : "" || latestCartDataForParameteres.productHandle,
       type: "GET",
       dataType: "json",
-      async: false, // This makes the AJAX call synchronous
+      async: true, // This makes the AJAX call synchronous
       success: function (data) {
         console.log("data from ajax query: ", data);
 
-        apiResData = data;
+        // apiResData = data;
+
+        var latestCartData = data;
+
+        for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
+          latestCartDataForParameteres[mpProp] = latestCartData[apiProp];
+      
+          // if (["price", "sku"].includes(apiProp)) {
+          //   latestProductDetailsForParameters[mpProp] =
+          //     latestAddedProductItem.variants[0][apiProp];
+          // }
+      
+          // if (apiProp == "url") {
+          //   latestProductDetailsForParameters[mpProp] =
+          //     nativeCodeDataForEventFromElement["api-url-for-data"];
+          // }
+        }
+
+        console.log('latestCartDataForParameteres', latestCartDataForParameteres);
+
+        trackMixpanelEvent(config.eventName, latestCartDataForParameteres);
+
+        return;
       },
       error: function (error) {
         console.log("Error fetching product data:", error);
       },
     });
+    
+  } else {
+    
+    console.log('latestCartDataForParameteres', latestCartDataForParameteres);
+
+    trackMixpanelEvent(config.eventName, latestCartDataForParameteres);
+
+    return;
   }
 
-  var latestCartData = apiResData;
+  // var latestCartData = apiResData;
 
-  for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
-    latestCartDataForParameteres[mpProp] = latestCartData[apiProp];
+  // for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
+  //   latestCartDataForParameteres[mpProp] = latestCartData[apiProp];
 
-    // if (["price", "sku"].includes(apiProp)) {
-    //   latestProductDetailsForParameters[mpProp] =
-    //     latestAddedProductItem.variants[0][apiProp];
-    // }
+  //   // if (["price", "sku"].includes(apiProp)) {
+  //   //   latestProductDetailsForParameters[mpProp] =
+  //   //     latestAddedProductItem.variants[0][apiProp];
+  //   // }
 
-    // if (apiProp == "url") {
-    //   latestProductDetailsForParameters[mpProp] =
-    //     nativeCodeDataForEventFromElement["api-url-for-data"];
-    // }
-  }
+  //   // if (apiProp == "url") {
+  //   //   latestProductDetailsForParameters[mpProp] =
+  //   //     nativeCodeDataForEventFromElement["api-url-for-data"];
+  //   // }
+  // }
 
-  return latestCartDataForParameteres;
+  // return latestCartDataForParameteres;
 }
 /****************************************************************************************************/
 
@@ -1158,6 +1316,8 @@ async function getEventsParameterAndTriggerEvent(element = null, config) {
         config,
         element
       );
+
+      return;
     
     } else {
       
@@ -1198,24 +1358,30 @@ async function getEventsParameterAndTriggerEvent(element = null, config) {
             : "",
           type: "GET",
           dataType: "json",
-          async: false, // This makes the AJAX call synchronous
+          async: true, // This makes the AJAX call synchronous
           success: function (data) {
             console.log("data from ajax query: ", data);
 
             apiResData = data;
+
+            for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
+              eventProperties[mpProp] = apiResData[apiProp];
+            }
+
+            console.log('eventProperties from api common api needed function', eventProperties);
+
+            trackMixpanelEvent(config.eventName, eventProperties);
+
+            return;
           },
           error: function (error) {
             console.log("Error fetching product data:", error);
           },
         });
       }
-
-      for (const [mpProp, apiProp] of Object.entries(config.apiDataMap)) {
-        eventProperties[mpProp] = apiResData[apiProp];
-      }
     }
 
-    trackMixpanelEvent(config.eventName, eventProperties);
+    // trackMixpanelEvent(config.eventName, eventProperties);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -1493,26 +1659,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if ( window.page_type == 'product' && properties['page_url'] ) {
         $.ajax({
-          url: properties['page_url'].split('?')?.[0],
+          url: `${properties['page_url'].split('?')?.[0]}.js`,
           type: "GET",
           dataType: "json",
-          async: false, // This makes the AJAX call synchronous
+          async: true, // This makes the AJAX call synchronous
           success: function (data) {
             console.log("data from ajax query from only page view: ", data);
     
-            let productApiData = data;
+            // let productApiData = data;
 
-            let productDataFromApiRes = data?.product;
+            let productDataFromApiRes = data;
 
             properties["Viewed product title"] = productDataFromApiRes?.["title"];
             properties["Viewed product handle"] = productDataFromApiRes?.["handle"];
             properties["Viewed product url"] = productDataFromApiRes?.["url"];
             properties["Viewed product price"] = productDataFromApiRes?.["price"];
-            properties["Viewed product type"] = productDataFromApiRes?.["product_type"];
+            properties["Viewed product type"] = productDataFromApiRes?.["type"];
             properties["Viewed product sku"] = productDataFromApiRes?.["sku"];
             properties["Viewed product availability"] = productDataFromApiRes?.["available"];
             properties["Viewed product max price"] = productDataFromApiRes?.["price_max"];
             properties["Viewed product min price"] = productDataFromApiRes?.["price_min"];
+
+            trackEvent(defaultPageToPageEvent[window.page_type], properties);
           },
           error: function (error) {
             console.log("Error fetching product data from only page view:", error);
@@ -1520,10 +1688,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       } else if ( window.page_type == 'collection' && properties['page_url'] ) {
         properties['collection-url'] = properties['page_url'].split('?')?.[0];
+
+        trackEvent(defaultPageToPageEvent[window.page_type], properties);
       }
 
       if ( defaultPageToPageEvent?.[window.page_type] ) {
-        trackEvent(defaultPageToPageEvent[window.page_type], properties);
+        // trackEvent(defaultPageToPageEvent[window.page_type], properties);
       } else {
         trackEvent('The Foxtale Pages', properties);
       }
