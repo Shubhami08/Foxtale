@@ -234,7 +234,7 @@ const eventConfig = [
       "Viewed product availability": "available",
       "Viewed product max price": "price_max",
       "Viewed product min price": "price_min",
-      productTitle: "title",
+      "Viewed product title": "title",
       tags: "tags",
     },
     elementDataMap: {
