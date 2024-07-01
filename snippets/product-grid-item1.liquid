@@ -207,9 +207,9 @@ endif -%}
                     {% else %}
                   {% assign message = product.price | divided_by: 100 %}
                      {% if message <= 746 %}
-                       <p class="bottom-leftext">B2G2</p>
+                       <p class="bottom-leftext">Upto 15% Off</p>
                      {% else %}
-                       <p class="bottom-leftext">10% Off</p>
+                       <p class="bottom-leftext">Upto 15% Off</p>
                      {% endif %}
                    {% endif %}
                    {% if collection.title == "Secret Sale" %}
@@ -231,7 +231,7 @@ endif -%}
                    {% elsif collection.title == "Exclusive Sale" %}
                     <p class="bottom-rightext"></p>
                    {% else %}
-                    <p class="bottom-rightext">Free Gift</p>   
+                    <p class="bottom-rightext"></p>   
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}
@@ -274,3 +274,22 @@ $(document).ready(function () {
      });
 </script>
 <!-- End -->
+
+<style>
+span.ingredient-badge {
+  position: absolute;
+  left: 0px;
+  bottom: 9px;
+  background-color: #ffffff;
+  text-align: left;
+  width: max-content;
+  border-radius: 0px;
+  padding: 1px 3px;
+  display: none;
+}
+span.ingredient-badge h5 {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+</style>
