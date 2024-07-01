@@ -425,7 +425,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     sc(new URLSearchParams(window.location.search).get('clickid'));
   </script>
   <!-- End -->
-  {% assign limited_col = 'shop-1,products-shop-1,adnetwork-exclusive-offer' %}
+  {% assign limited_col = '' %}
   {% assign limited_col_array = limited_col | split:',' %}
 
   <body
@@ -905,7 +905,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
       
-       {% if collection.url contains 'shop-1' or collection.url contains 'products-shop-1' %}
+       {% if collection.url contains 'shop-1' %}
          .bottom-leftext {
            visibility: hidden !important;
            position: relative !important;
@@ -956,6 +956,55 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            width: max-content;
          } */
        {%endif%}
+
+       {% if collection.url contains 'products-shop-1' %}
+         .on-productpic {
+           bottom: unset;
+           top: 9px !important;
+         }
+         .bottom-leftext {
+           visibility: hidden !important;
+           position: relative !important;
+         }
+         .bottom-leftext:after {
+           visibility: visible !important;
+           position: absolute !important;
+           top: 0 !important ;
+           left: 0 !important;
+           content: "B2G2" !important;
+           width: 155px !important;
+         }   
+         .bottom-rightext {
+           display: block !important;
+           visibility: hidden !important;
+           position: relative !important;
+         }
+         .bottom-rightext:after {
+           visibility: visible !important;
+           position: absolute !important;
+           top: 0 !important;
+           left: 0 !important;
+           content: "Free Gift"!important;
+           width: 155px !important;
+         }
+          .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:first-of-type:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
+           font-size: 12px;
+           width: max-content;
+         }
+         span.ingredient-badge {
+           display: block !important;
+         }
+      {%endif%}
 
        {% if collection.url contains 'bodycare' %}
          .on-perfekt, .perfekt-sub {
@@ -1340,11 +1389,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "BYOB";
+           content: "B2G2";
            width: 150px;
-         }
-         .bottom-rightext {
-           display: none;
          }
        {%endif%}
 
