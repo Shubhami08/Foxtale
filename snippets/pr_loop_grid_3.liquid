@@ -119,9 +119,9 @@
 
                     {% assign target_tag = "Combos" %}
                     {% if product.tags contains target_tag %}
-                      <p class="bottom-leftext">Upto 15% Off</p>
+                      <p class="bottom-leftext">10% Off</p>
                     {% else %}
-                      <p class="bottom-leftext">Upto 15% Off</p>
+                      <p class="bottom-leftext">B2G2</p>
                     {% endif %}
                     
                       {% comment %}
@@ -144,7 +144,12 @@
                          </div>
                       </div>
                       {% endif %}{% endcomment %}
+                    {% assign target_tag = "Combos" %}
+                    {% if product.tags contains target_tag %}
                       <p class="bottom-rightext"></p>
+                    {% else %}
+                      <p class="bottom-rightext">Free Gift</p>
+                    {% endif %}
                    </div>
    {%- if color_count > 0 -%}
    <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyloadt4s" data-colorCount="{{color_count}}" data-rendert4s="{{pr_url}}/?view=sw{{sett_equal}}"></div>
