@@ -63,10 +63,11 @@
   <div class="day-barbottom">
     <div class="day-one" data-id="1">{{ product.metafields.custom.day_one_text }}</div>
     <div class="day-one active don" data-id="2">{{ product.metafields.custom.day_fifteen_text }}</div>
-    <div class="day-one" data-id="3" style="text-align: right;">{{ product.metafields.custom.day_thirty_text }}</div>
+    <div class="day-one nod" data-id="3" style="{% if product.handle contains 'exfoliating-facial-toner' %}text-align: right;{%endif%}">{{ product.metafields.custom.day_thirty_text }}</div>
   </div>
 </section>
 <style>
+
   .twentytwenty-container .twentytwenty-left-arrow {
   /* width: 2rem;
   height: 2rem;

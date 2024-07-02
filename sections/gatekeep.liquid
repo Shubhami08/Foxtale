@@ -10,7 +10,7 @@
 <div style="margin:0 auto;" class="pxFormGenerator gatekeep-form-wrap" id="Xws1gROArv-8jRGCLRcA_A"></div>
 <div class="gatekeep-after-form"><h2>INVITE ONLY.</h2></div>
 
-    <div class="faq_section">
+    {% comment %}<div class="faq_section">
       <h2>Got questions? We’ve got answers.</h2>
       <div class="faq_item vitC_faq">
       <div class="faq_que" data-faq-id="faq-que-1">
@@ -41,7 +41,7 @@
    </div>
 </div>
 
-<!-- <script>
+<script>
   const metaaa= `{{ product.metafields.global.faq-section }}`;
 const parser = new DOMParser();
 const doc = parser.parseFromString(metaaa, 'text/html');
@@ -89,13 +89,25 @@ questions.forEach((question, index) => {
      });
     });
      });
- </script> -->
+ </script>
+ {% endcomment %}
  
 <style>
+  .shopify-section,nav.breadcrumbs{
+    display:none !important;
+  }
+  div#shopify-section-template--17920589627639__gatekeep,section#shopify-section-template--17920589627639__accordion_jh478i{
+    display:block !important;
+  }
+  #MainContent{
+    background-color: #e0024d;
+  }
   .gatekeep-banner-wrap{
     display:flex;
     padding:30px;
     background-color: #e0024d;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .gatekeep-banner-wrap .gatekeep-contet,.gatekeep-banner-wrap .gatekeep-img-wrap{
     width:50%;
@@ -135,16 +147,31 @@ questions.forEach((question, index) => {
     color: #fff;
     font-size: 22px;
   }
-  @media only screen and (max-width: 768px) {
-    .gatekeep-banner-wrap{
-      flex-direction: column;
-      gap: 30px;
-    }
-    .gatekeep-banner-wrap .gatekeep-contet,.gatekeep-banner-wrap .gatekeep-img-wrap{
-      width:100%;
-    }
+  img.gatekeep-img {
+    width: 100%;
   }
-
+  .t4s-type-accordion .t4s-accor-title {
+    color: #fff !important;
+    margin: 0 0 10px;
+    padding-left: 0 !important;
+    font-weight: 400;
+  }
+  .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:after, .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:before {
+    background-color: #fff !important;
+  }
+  .t4s-type-accordion .t4s-tab-content {
+    border: none !important;
+  }
+  .t4s-tab-wrapper {
+    border-bottom: 1px solid #fff;
+  }
+  .t4s-tab-wrapper .t4s-accor-title .t4s-accor-item-nav {
+    background-color: transparent !important;
+  }
+  .t4s-section-inner.t4s-se-container .t4s-container-inner, .t4s-section-inner {
+    margin-bottom: 0 !important;
+    padding-bottom: 30px !important;
+  }
   #shopify-section-gatekeep h3 {
     font-size: 20px;
     color: #fff;
@@ -157,10 +184,39 @@ questions.forEach((question, index) => {
   #shopify-section-gatekeep .faq_section{
     padding: 0 10px 30px;
   }
+  .t4s-section-inner.t4s-se-container .t4s-container-inner, .t4s-section-inner {
+    margin-bottom: 0 !important;
+    padding-bottom: 30px !important;
+  }
+  .t4s-section-title{
+    color: #fff !important;
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+    .gatekeep-banner-wrap{
+      flex-direction: column;
+      gap: 30px;
+    }
+    .gatekeep-banner-wrap .gatekeep-contet,.gatekeep-banner-wrap .gatekeep-img-wrap{
+      width:100%;
+    }
+    section#shopify-section-template--17920589627639__accordion_jh478i {
+      margin: 0 25px;
+    }
+  }
+
+  
+
 </style>
 {% schema %}
   {
-    "name": "gatekeep",
-    "settings": []
+    "name": "Gatekeep",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Gatekeep"
+      }
+    ]
   }
 {% endschema %}
