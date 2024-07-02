@@ -251,10 +251,8 @@
           "settings": {
             "image_1_desktop": "shopify:\/\/shop_images\/Monsoon_sale_web_banner_f57dbdef-7d5d-484f-b7f5-0134f696ed6e.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/Monsoon_sale_mobile_banner_22d539db-befb-40b9-896f-bdb0bb192163.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/LP-banner2_website.gif",
-            "image_2_mobile": "shopify:\/\/shop_images\/LP-banner2_2nd-option-Mobile.gif",
-            "image_3_desktop": "shopify:\/\/shop_images\/LP_3_website_banner.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/LP_3_mobile_banner.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/LP_3_website_banner.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/LP_3_mobile_banner.jpg",
             "collection_handle": "frontpage"
           }
         },
