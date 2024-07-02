@@ -2170,6 +2170,18 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if product.handle contains 'radiance-ritual-duo' %}
+        .group-product-item-detail-newcombo .shop-all-qty-cart-btn {
+          display: none !important;
+        }
+       {%endif%}
+
+       {% if product.handle contains 'happy-hydration-duo' %}
+        .group-product-item-detail-newcombo .shop-all-qty-cart-btn {
+          display: none !important;
+        }
+       {%endif%}
+
        @media (min-width: 768px) {
          {% if product.handle contains 'glow-sunscreen' %}
             .customproduct1-template .result-section .result-section-content {
@@ -2330,18 +2342,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            font-size: 12px;
            color: #E85A28;
          }
-       {%endif%}
-
-       {% if product.handle contains 'radiance-ritual-duo' %}
-       .shop-all-qty-cart-btn {
-          display: none !important;
-        }
-       {%endif%}
-
-       {% if product.handle contains 'happy-hydration-duo' %}
-       .shop-all-qty-cart-btn {
-          display: none !important;
-        }
        {%endif%}
 
        {% if product.handle contains 'skin-radiance-mask' %}
