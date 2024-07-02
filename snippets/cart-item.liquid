@@ -117,7 +117,7 @@
           </ul>
           {%- endif -%}
           {%- if recurringchecked %}<span class="t4s-product-details__item-recurring t4s-ch">{{ 'cart.general.recurring_mess' | t:frequency:frequency,frequency_unit:frequency_unit }}</span>{% endif -%}
-          <div class="t4s-cart_meta_price" {% if item.properties._Gifted == 'Free Combo' or item.properties._Gifted == 'Free Gift' %} style="padding-bottom:2px;"{% endif %}>
+          <div class="t4s-cart_meta_price" {% if item.product.tags contains 'pre-order-only' %}style="display:flex;gap: 10px;"{% endif %} {% if item.properties._Gifted == 'Free Combo' or item.properties._Gifted == 'Free Gift' %} style="padding-bottom:2px;"{% endif %}>
               <div class="t4s-cart_price {{ item.id }}">
                 {%- unless cart_ajax_enable %}{{item_qty}} × {% endunless -%}
                 {%- liquid
