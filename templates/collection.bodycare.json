@@ -226,7 +226,7 @@
     "custom_perfectgrid_PMaMyd": {
       "type": "custom-perfectgrid",
       "settings": {
-        "heading": "",
+        "heading": "Hydration Range",
         "collekt": "hydrating-range-bodycare",
         "offertext": "10% Off"
       }
