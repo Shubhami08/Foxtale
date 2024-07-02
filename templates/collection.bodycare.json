@@ -226,24 +226,24 @@
     "custom_perfectgrid_aBmhQt": {
       "type": "custom-perfectgrid",
       "settings": {
-        "heading": "Hydration",
-        "collekt": "new-bcare",
+        "heading": "",
+        "collekt": "",
         "offertext": "10% Off"
       }
     },
     "custom_perfectgrid_PMaMyd": {
       "type": "custom-perfectgrid",
       "settings": {
-        "heading": "Brighteners",
-        "collekt": "new-bcare",
+        "heading": "",
+        "collekt": "",
         "offertext": "10% Off"
       }
     },
     "custom_perfectgrid_aaQKXU": {
       "type": "custom-perfectgrid",
       "settings": {
-        "heading": "Combos",
-        "collekt": "new-bcare",
+        "heading": "",
+        "collekt": "",
         "offertext": "10% Off"
       }
     },
