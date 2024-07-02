@@ -214,6 +214,14 @@
   {% assign pre_order_only = false %}
 {% endif %}
 
+{% if product.tags contains 'pre-order-only' %}
+<style>
+  button#gokwik-buy-now {
+      display: none !important;
+  }
+</style>
+{% endif %}
+
 {%- capture html_sizeg -%}
   {%- if bk_size_chart != '1' and Block_sizeg != blank -%}
     {%- liquid
