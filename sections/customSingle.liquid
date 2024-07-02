@@ -1453,7 +1453,7 @@
             {% unless current_variant.available %}
               aria-disabled="true"
             {% endunless -%}
-            {% unless isProductAvailable %}
+            {% unless isProductAvailable or pre_order_only %}
               disabled="disabled"
             {% endunless %}
           >
