@@ -1453,8 +1453,10 @@
             {% unless current_variant.available %}
               aria-disabled="true"
             {% endunless -%}
-            {% unless isProductAvailable or pre_order_only %}
+            {% unless pre_order_only %}
+            {% unless isProductAvailable %}
               disabled="disabled"
+            {% endunless %}
             {% endunless %}
           >
             <span class="t4s-btn-atc_text">
