@@ -201,6 +201,21 @@ if sticky_mode != '0' and isGrouped == false and isProductAvailable and settings
    endif
 endif -%}
 
+{% if product.tags contains 'pre-order-only' %}
+  {% assign pre_order_only = true %}
+  {% assign isSticky = true %}
+{% else %}
+  {% assign pre_order_only = false %}
+{% endif %}
+
+{% if product.tags contains 'pre-order-only' %}
+<style>
+  button#gokwik-buy-now {
+      display: none !important;
+  }
+</style>
+{% endif %}
+
 {%- capture html_sizeg -%}
   {%- if bk_size_chart != '1' and Block_sizeg != blank -%}
     {%- liquid
