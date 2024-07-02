@@ -6,13 +6,6 @@
   t4option0_0 | alt text
 {%- endcomment -%}
 
-
-{% if product.tags contains 'pre-order-only' %}
-  {% assign pre_order_only = true %}
-{% else %}
-  {% assign pre_order_only = false %}
-{% endif %}
-
 {%- liquid
   assign isProductAvailable = product.available
   if isProductAvailable and settings.variant_remove == '2'
@@ -205,13 +198,21 @@
   assign isSticky = false
   assign isStickyMB = false
   assign sticky_mode = se_stts.sticky_mode
-  if sticky_mode != '0' and isGrouped == false and settings.atc_ajax_enable
+  if sticky_mode != '0' and isGrouped == false and isProductAvailable and settings.atc_ajax_enable
     assign isSticky = true
     if sticky_mode == '2'
       assign isStickyMB = true
     endif
   endif
 -%}
+
+    
+{% if product.tags contains 'pre-order-only' %}
+  {% assign pre_order_only = true %}
+  {% assign isSticky = true %}
+{% else %}
+  {% assign pre_order_only = false %}
+{% endif %}
 
 {%- capture html_sizeg -%}
   {%- if bk_size_chart != '1' and Block_sizeg != blank -%}
@@ -1290,8 +1291,8 @@
     </symbol>
   </svg>
 </template>
-{% if product != blank %}
-{%- if isSticky or pre_order_only -%}
+
+{%- if isSticky and product != blank -%}
   {%- liquid
     assign current_inventory_quantity = current_variant.inventory_quantity
     if current_variant.inventory_management != null and current_inventory_quantity > 0
@@ -1490,7 +1491,6 @@
      {% comment %} <div id="simpl-checkout-product-v2" class="simpl-button-container"></div> {% endcomment %}
     </div>
   </template>
-{%- endif -%}
 {%- endif -%}
 
 {%- liquid
