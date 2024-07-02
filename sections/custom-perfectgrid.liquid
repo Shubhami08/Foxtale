@@ -195,6 +195,7 @@
           {%- if product.metafields.custom.bodybadge != blank -%}
             <span class="body-badge"><h5>{{ product.metafields.custom.bodybadge }}</h5></span>
           {%- endif -%}
+          <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-perfekt"></div>
         </div>
         <!-- <div style="width: 100%;" class="">
           {% for media in product.media %}
@@ -204,7 +205,7 @@
           {% endfor %}
         </div> -->
         <div class="product-detailed">
-          <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-perfekt"></div>
+          <!-- <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-perfekt"></div> -->
           <div class="product-nomenclature">
               <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">
                 {{- product.title -}}
