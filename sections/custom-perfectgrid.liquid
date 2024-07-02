@@ -211,12 +211,13 @@
   {% assign collection = section.settings.collekt %} 
   <div class="perfektslide-{{ section.id }} body-grid"> 
     {% for product in collection.products %} 
-  <div class="perfekto-gridu adj-{{ block.id }}">
+  <div class="perfekto-gridu">
       <div class="perfect-grid">
         <div style="position: relative;" class="lazyloadt4sed">
-          <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
-            <img class="lazyload" loading="lazy" src="data:image/svg+xml,%3Csvgxmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' fill='%23282828'%3E%3Crect x='-50' y='20' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='-50' y='35' width='50' height='10' fill='%23ccc'%3E%3Canimate attributeName='x' attributeType='XML' values='-50;100;' dur='1.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E" data-src="{{ product.images[0] | product_img_url: "master" }}" alt="Product Image">
-          </a> 
+          <a class="" href="{{product.url}}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="product" foxtale-event-attr-tab-name="product">
+              <img  class="lazyload"   loading="lazy" alt="img"
+              src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+               data-src="{{ product.images[0] | product_img_url: "master" }}"></a>
           {%- if product.metafields.custom.bodybadge != blank -%}
             <span class="body-badge"><h5>{{ product.metafields.custom.bodybadge }}</h5></span>
           {%- endif -%}
