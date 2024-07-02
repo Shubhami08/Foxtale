@@ -2645,6 +2645,18 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         }
        {%endif%}
 
+       {% if product.handle contains 'radiance-ritual-duo' %}
+        .group-product-item-detail-newcombo .shop-all-qty-cart-btn {
+          display: none !important;
+        }
+       {%endif%}
+
+       {% if product.handle contains 'happy-hydration-duo' %}
+        .group-product-item-detail-newcombo .shop-all-qty-cart-btn {
+          display: none !important;
+        }
+       {%endif%}
+
 
        @media screen and (min-width: 768px) and (max-width: 1000px) {
            {% if product.handle contains 'aha-bha-exfoliating-serum-1' %}
