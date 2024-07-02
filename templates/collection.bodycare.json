@@ -223,19 +223,19 @@
         "pd_mb": ""
       }
     },
-    "custom_perfectgrid_aBmhQt": {
-      "type": "custom-perfectgrid",
-      "settings": {
-        "heading": "",
-        "collekt": "glow-range",
-        "offertext": "10% Off"
-      }
-    },
     "custom_perfectgrid_PMaMyd": {
       "type": "custom-perfectgrid",
       "settings": {
         "heading": "",
         "collekt": "hydrating-range-bodycare",
+        "offertext": "10% Off"
+      }
+    },
+    "custom_perfectgrid_aBmhQt": {
+      "type": "custom-perfectgrid",
+      "settings": {
+        "heading": "",
+        "collekt": "glow-range",
         "offertext": "10% Off"
       }
     },
@@ -298,8 +298,8 @@
     "heading_template",
     "sidebar",
     "main",
-    "custom_perfectgrid_aBmhQt",
     "custom_perfectgrid_PMaMyd",
+    "custom_perfectgrid_aBmhQt",
     "custom_perfectgrid_aaQKXU",
     "custom_playbook_JKCNVJ"
   ]
