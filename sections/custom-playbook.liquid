@@ -1,6 +1,378 @@
+<style>
+.cus-collswrapperz {
+  position: relative;
+  padding: 15px 0 30px;
+}
+.mftt {
+  padding: 0 0 0 60px;
+}
+.cus-pikz {
+  background: #FFFFFF;
+  border-bottom: 0;
+  padding: 0;
+  display: block;
+}
+.cus-singlez {
+  /* margin: 0 27px;
+  border-radius: 8px; */
+  position: relative;
+}
+.cus-singlez a img {
+  width: 100%;
+  border-radius: 8px;
+}
+.cus-titlez {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+}
+.inside-mft {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.inside-mft a {
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 63px;
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+
+@media(max-width: 768px) {
+  .cus-colselectz-{{ section.id }} {
+    display: none !important;
+  }
+  .cusmall-colselectz-{{ section.id }} {
+    display: block !important;
+  }
+  .cus-collswrapperz {
+    padding: 0 0 32px;
+  }
+  .cus-headz {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    padding-left: 18px;
+    margin-bottom: 15px;
+  }
+  .inside-mft a {
+    line-height: 36px;
+    font-size: 16px;
+  }
+  .mftt {
+    padding: 0 0 0 16px;
+  }
+  .cus-collswrapperz .slick-list {
+    margin: 0 0 0 -20px !important;
+    padding: 0 40px 0 0 !important;
+  }
+  .cus-collswrapperz .slick-slide {
+    margin: 0 0 0 20px;
+  }
+}
+
+.cus-singlez {
+  background-color: #FFD6CA;
+  padding: 21px 12px 44px 17px;
+}
+.cus-singlez a img {
+  width: 183px;
+  height: 183px;
+  margin: 0 auto;
+}
+.cus-singlez h4 {
+  color: #292930;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.6px;
+  padding-top: 22px;
+}
+.cus-singlez p {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px; /* 160% */
+  letter-spacing: -0.375px;
+  opacity: 0.5;
+}
+.cus-btnlrz {
+  display: flex;
+}
+.slider_pagecount_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+  padding-top: 8px;
+}
+.slider_sfter_wrap {
+  padding-top: 22px;
+  padding-left: 14px;
+  padding-right: 14px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} 
+.current_slide_count {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  position: relative;
+}
+.current_slide_count:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  width: 38px;
+  height: 1px;
+  background-color: #000;
+}
+.total_slide_count {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  opacity: 0.3;
+}
+button.slik-leftz {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 0;
+  transform: rotate(180deg);
+  line-height: 0;
+}
+button.slik-rightz {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 0;
+  line-height: 0;
+  padding-left: 14px;
+}
+.tsmall button.slick-next, .tsmall button.slick-prev {
+  
+}
+.tsmall .slick-prev {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  padding: 0;
+  z-index: 1;
+  color: transparent;
+  padding-top: 22px;
+}
+.tsmall .slick-prev:before {
+  background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Right_Arrow_1.svg?v=1719308272');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(180deg);
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+.tsmall .slick-prev .slick-disabled:before {
+  background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Left_Arrow.svg?v=1719308273');
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+.tsmall .slick-next {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  left: 6.8rem;
+  padding: 0;
+  z-index: 1;
+  color: transparent;
+  padding-top: 22px;
+}
+.tsmall .slick-next:before {
+  background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Right_Arrow_1.svg?v=1719308272');
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  display: inline-block;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+.tsmall .slick-next .slick-disabled:before {
+  background-image: url('https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Left_Arrow.svg?v=1719308273');
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  display: inline-block;
+  background-position: center;
+  transform: rotate(180deg);
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+</style>
+
+<div class="cus-collswrapperz">
+  <div class="perfect-heading"><h3>{{ section.settings.heading }}</h3></div>
+  <!-- <div class="cus-colselectz-{{ section.id }} mftt"> -->
+  {% assign total_slide = 0 %}
+  <div class="cusmall-colselectz-{{ section.id }} mftt tsmall">
+    {% for block in section.blocks %}
+      {% assign total_slide = forloop.length %}
+      <div class="cus-singlez">
+        <div class="">
+          {% if block.settings.collectionimgz != blank %}
+            <a class="cus-pikz" href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}">
+              <img  class="lazyload"   loading="lazy" alt="img"
+              src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+               data-src="{{ block.settings.collectionimgz | img_url: 'master' }}"></a>
+          {% endif %}
+        </div>
+        <h4>{{ block.settings.txtblw }}</h4>
+        <div style="padding-top: 16px;">{{ block.settings.txtblwtht }}</div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="slider_sfter_wrap">
+    <div class="slider_pagecount_wrap">
+      <div class="current_slide_count">01</div>
+      <div class="total_slide_count">0{{ total_slide }}</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.cusmall-colselectz-{{ section.id }}').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: true
+        }
+      },{
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true
+        }
+      }
+    ]
+  });
+
+  $('.cusmall-colselectz-{{ section.id }}').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $(".current_slide_count").html('0'+(currentSlide+1));
+  });
+
+   
+
+$(document).ready(function(){
+   $(document).on("click",'.slik-rightz',function() {
+    $(this).parents('.cus-collswrapperz').find('.slick-next').click();
+//     // $('.cusmall-colselectz-{{ section.id }}').slick('slickNext');
+// $('.cusmall-colselectz-{{ section.id }}').slick('slickGoTo', 2)
+  });
+  $(document).on("click",'.slik-leftz',function() {
+    $(this).parents('.cus-collswrapperz').find('.slick-prev').click();
+    // $('.cusmall-colselectz-{{ section.id }}').slick('slickPrev');
+  });
+  
+});
+</script>
+
+<!-- Growlytics -->
+<!-- <script>
+$(document).ready(function () {
+    $( '.cus-title').on("click", function(){
+     var prodName = $(this).data("title");
+     Growlytics.events.track("Shop by concern HP,{
+      'clicks': "Clicks",
+       'Product Name': prodName
+     });
+    });
+     });
+</script> -->
+<!-- end -->
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Playbook",
+    "settings": [
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Image",
+        "type": "text",
+        "settings": [
+          {
+            "id": "imglink",
+            "type": "url",
+            "label": "Add Link"
+          }, {
+            "id": "collectionimg",
+            "type": "image_picker",
+            "label": "Add Image Desktop"
+          }, {
+            "id": "collectionimgz",
+            "type": "image_picker",
+            "label": "Add Image Mobile"
+          }, {
+            "id": "txtblw",
+            "type": "text",
+            "label": "Add Card Heading"
+          }, {
+            "id": "txtblwtht",
+            "type": "textarea",
+            "label": "Add Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Playbook",
+        "category": "Any"
+      }
+    ]
   }
 {% endschema %}

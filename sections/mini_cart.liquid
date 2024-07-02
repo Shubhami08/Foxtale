@@ -625,13 +625,21 @@
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>FOX1099</strong></p></div>
               {% endif %}
 
-              {% endcomment %}
-
-            {% if cart.items_subtotal_price > 69900 %}
+              {% if cart.items_subtotal_price > 69900 %}
               <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW15</b> at the checkout!</p></div>
             {% else %}
               <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
             {% endif %}
+
+              {% endcomment %}
+
+            
+
+              {% if total_cart_prod > 3 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>B2G2</b> at the checkout!</p></div>
+              {% else %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to unlock your free <strong>Lip mask!</strong></p></div>
+              {% endif %}
 
               {% if total_cart_prod > 3 %}
                 <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>B2G2</b> at the checkout!</p></div>
@@ -1608,7 +1616,10 @@ $(document).ready(function () {
 </script>
 
 <style>
-  body.hide-gift .saleBar.show-new,body.hide-gift #gift_1_wrap,body.hide-gift .saleBar.shop-1,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred, body.hide-gift .saleBar.zomatofourhundred, body.hide-gift .saleBar.secretsale, body.hide-gift .saleBar.frontspecial, body.hide-gift .saleBar.exclusive, body.hide-gift .saleBar.b2g2-rib, body.hide-gift .saleBar.shop-2{
+  /* body.hide-gift #gift_1_wrap{
+    display:none !important;
+  } */
+  body.hide-gift .saleBar.show-new,body.hide-gift .saleBar.shop-1,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred, body.hide-gift .saleBar.zomatofourhundred, body.hide-gift .saleBar.secretsale, body.hide-gift .saleBar.frontspecial, body.hide-gift .saleBar.exclusive, body.hide-gift .saleBar.b2g2-rib, body.hide-gift .saleBar.shop-2{
     display:none !important;
   }
   body.show-gift .saleBar.show-default,body.show-gift .saleBar.shop-1,body.show-gift .saleBar.shop-3,body.show-gift .saleBar.shop-4,body.show-gift .saleBar.phonefourhundred,body.show-gift .saleBar.phonetwohundred, body.show-gift .saleBar.zomatofourhundred, body.show-gift .saleBar.secretsale, body.show-gift .saleBar.frontspecial, body.show-gift .saleBar.exclusive, body.show-gift .saleBar.b2g2-rib, body.show-gift .saleBar.shop-2{
