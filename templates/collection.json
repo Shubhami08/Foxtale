@@ -428,6 +428,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
             "collection_handle": "toners"
           }
+        },
+        "image_cqQgUp": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/CRED-MONSOON-DESKTOP.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/CRED-MONSOON-MOBILE_VERSION.jpg",
+            "collection_handle": "cred-b2-749"
+          }
         }
       },
       "block_order": [
@@ -478,7 +486,8 @@
         "image_C3wNkH",
         "image_dFPLTm",
         "image_kFzf3z",
-        "image_a6Wbjh"
+        "image_a6Wbjh",
+        "image_cqQgUp"
       ],
       "settings": {
         "slider_height_mobile": "100%"
