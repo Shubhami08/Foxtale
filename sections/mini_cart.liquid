@@ -282,6 +282,8 @@
             {% for item in cart.items %}
               {% if item.final_line_price == 0 and item.original_line_price == 0 %}
                 {% assign gift_product_total = gift_product_total | plus: 1 %}
+              {% elsif item.product.type == 'pre_order' %}
+                {% assign gift_product_total = gift_product_total | plus: item.quantity %}
               {% endif %}
             {% endfor %}
 
@@ -504,6 +506,8 @@
             {% for item in cart.items %}
               {% if item.final_line_price == 0 and item.original_line_price == 0 %}
                 {% assign gift_product_total = gift_product_total | plus: 1 %}
+              {% elsif item.product.type == 'pre_order' %}
+                {% assign gift_product_total = gift_product_total | plus: item.quantity %}
               {% endif %}
             {% endfor %}
 
@@ -632,8 +636,6 @@
             {% endif %}
 
               {% endcomment %}
-
-            
 
               {% if total_cart_prod > 3 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>B2G2</b> at the checkout!</p></div>
