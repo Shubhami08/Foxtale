@@ -1291,6 +1291,7 @@
   </svg>
 </template>
 {% if product != blank %}
+  <div data-for="data-sticky-addtocart"></div>
 {%- if isSticky or pre_order_only -%}
   {%- liquid
     assign current_inventory_quantity = current_variant.inventory_quantity
