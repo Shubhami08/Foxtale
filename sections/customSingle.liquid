@@ -6,6 +6,13 @@
   t4option0_0 | alt text
 {%- endcomment -%}
 
+
+{% if product.tags contains 'pre-order-only' %}
+  {% assign pre_order_only = true %}
+{% else %}
+  {% assign pre_order_only = false %}
+{% endif %}
+
 {%- liquid
   assign isProductAvailable = product.available
   if isProductAvailable and settings.variant_remove == '2'
@@ -1450,13 +1457,17 @@
             {% endunless %}
           >
             <span class="t4s-btn-atc_text">
-              {%- if current_variant.available == false or isProductAvailable == false -%}
-                {{- 'products.product.sold_out' | t -}}
-              {%- elsif isPreoder -%}
-                {{- 'products.product.pre_order' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
+              {% if pre_order_only %}
+                Pre Order Now
+              {% else %}
+                {%- if current_variant.available == false or isProductAvailable == false -%}
+                  {{- 'products.product.sold_out' | t -}}
+                {%- elsif isPreoder -%}
+                  {{- 'products.product.pre_order' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
+              {% endif %}
             </span>
             <span class="t4s-loading__spinner" hidden>
               <svg
