@@ -254,8 +254,8 @@
           "type": "text",
           "settings": {
             "imglink": "",
-            "collectionimg": "shopify:\/\/shop_images\/TONER.png",
-            "collectionimgz": "shopify:\/\/shop_images\/TONER.png",
+            "collectionimg": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png",
+            "collectionimgz": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png",
             "txtblw": "Works like Skincare ",
             "txtblwtht": "<p>We’re extending our knowledge of skincare to the remaining 95% of your body.<\/p>\n<p>Our body care range identifies concerns like rough skin, dryness, bumpy texture, pigmentation, dullness and damaged barrier and tackles it at its root cause.<\/p>\n<p>So soft, hydrated, glowing skin never has to be limited just to your face again.<\/p>"
           }
@@ -264,14 +264,15 @@
           "type": "text",
           "settings": {
             "imglink": "",
-            "collectionimg": "shopify:\/\/shop_images\/TONER.png",
-            "collectionimgz": "shopify:\/\/shop_images\/TONER.png",
+            "collectionimg": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png",
+            "collectionimgz": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png",
             "txtblw": "Wears like Perfume",
             "txtblwtht": "<p>We’re going beyond the basics – cleansing your skin and keeping it moisturized is the bare minimum.<\/p>\n<p>Using long-lasting signature perfumes, our body care range keeps you smelling fresh through the day  <\/p>\n<p>So you can smell as good as you feel all day long.<\/p>"
           }
         },
         "text_iN7Ygz": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "imglink": "",
             "collectionimg": "shopify:\/\/shop_images\/TONER.png",
