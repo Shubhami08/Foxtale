@@ -150,6 +150,11 @@
                    {{ money_original_price }}
                 {%- endif -%}
               </div>
+              {% if item.product.tags contains 'pre-order-only' %}
+              <div class="pre_order_tag_wrap">
+                <span class="pre_order_tag">Pre Order</span>
+              </div>
+              {% endif %}
               {% if item.id == 44883357958391 %}
               <div style="font-size: 11px;color: green;">Use code FOXPPSUN to get for free</div>
               {% endif %}
