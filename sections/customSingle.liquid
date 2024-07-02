@@ -1290,8 +1290,8 @@
     </symbol>
   </svg>
 </template>
-
-{%- if isSticky and product != blank -%}
+{% if product != blank %}
+{%- if isSticky or pre_order_only -%}
   {%- liquid
     assign current_inventory_quantity = current_variant.inventory_quantity
     if current_variant.inventory_management != null and current_inventory_quantity > 0
@@ -1490,6 +1490,7 @@
      {% comment %} <div id="simpl-checkout-product-v2" class="simpl-button-container"></div> {% endcomment %}
     </div>
   </template>
+{%- endif -%}
 {%- endif -%}
 
 {%- liquid
