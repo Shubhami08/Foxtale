@@ -1450,9 +1450,9 @@
             id="addtocart_p"
             class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg" 
             data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-pdp"
-            {% unless current_variant.available %}
+            {% unless pre_order_only %}{% unless current_variant.available %}
               aria-disabled="true"
-            {% endunless -%}
+            {% endunless -%}{% endunless -%}
             {% unless pre_order_only %}
             {% unless isProductAvailable %}
               disabled="disabled"
