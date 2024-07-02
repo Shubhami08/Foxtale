@@ -9,6 +9,34 @@
 */
 {
   "sections": {
+    "video_featured_eM6YTR": {
+      "type": "video_featured",
+      "settings": {
+        "se_height": "t4s_ratio16_9",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "source": "2",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "file_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6207dec598434aa28b26be509f9b926f.mp4",
+        "au_video": false,
+        "loop_video": true,
+        "bg_overlay": "#000",
+        "bg_opacity": 0,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
     "slideshow_rq6AVc": {
       "type": "slideshow",
       "blocks": {
@@ -289,37 +317,10 @@
       "settings": {
         "heading": "Our Product Playbook"
       }
-    },
-    "video_featured_eM6YTR": {
-      "type": "video_featured",
-      "settings": {
-        "se_height": "t4s_ratio16_9",
-        "custom_dk": true,
-        "height_dk": 600,
-        "custom_tb": true,
-        "height_tb": 400,
-        "custom_mb": true,
-        "height_mb": 250,
-        "source": "2",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "file_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6207dec598434aa28b26be509f9b926f.mp4",
-        "au_video": false,
-        "loop_video": true,
-        "bg_overlay": "#000",
-        "bg_opacity": 0,
-        "layout": "t4s-container-fluid",
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": "",
-        "use_cus_css": false,
-        "code_cus_css": ""
-      }
     }
   },
   "order": [
+    "video_featured_eM6YTR",
     "slideshow_rq6AVc",
     "top",
     "heading_template",
@@ -328,7 +329,6 @@
     "custom_perfectgrid_aBmhQt",
     "custom_perfectgrid_PMaMyd",
     "custom_perfectgrid_aaQKXU",
-    "custom_playbook_JKCNVJ",
-    "video_featured_eM6YTR"
+    "custom_playbook_JKCNVJ"
   ]
 }
