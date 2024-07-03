@@ -2217,6 +2217,24 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           display: none !important;
         }
        {%endif%}
+      
+       {% if product.handle contains 'happy-hydration-duo' %}
+        .offer-section-main {
+          display: none !important;
+        }
+        div#shopify-section-announcement-bar {
+          display: none !important;
+        }
+       {%endif%}
+
+       {% if product.handle contains 'radiance-ritual-duo' %}
+        .offer-section-main {
+          display: none !important;
+        }
+        div#shopify-section-announcement-bar {
+          display: none !important;
+        }
+       {%endif%}
 
        @media (min-width: 768px) {
          {% if product.handle contains 'glow-sunscreen' %}
