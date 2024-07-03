@@ -15433,8 +15433,8 @@ a.hm {
     .t4s-site-nav__icons.t4s-use__kalles.is--hover2.t4s-h-cart__design1.t4s-lh-1.t4s-d-inline-flex.t4s-align-items-center,
   .skinonehalfgrid-template
     .t4s-site-nav__icons.t4s-use__kalles.is--hover2.t4s-h-cart__design1.t4s-lh-1.t4s-d-inline-flex.t4s-align-items-center {
-    margin-right: 0px;
-    flex-direction: row-reverse;
+    /* margin-right: 0px;
+    flex-direction: row-reverse; */
   }
   .bodycare-template header .t4s-site-nav__icons .t4s-site-nav__account svg,
   .onegrid-template header .t4s-site-nav__icons .t4s-site-nav__account svg,
@@ -15555,21 +15555,21 @@ span.ingredient-badge h5 {
 
 /* for pre order tag */
 span.pre_order_tag {
-    color: #f66f00;
-    font-family: Poppins;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
+  color: #f66f00;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .pre_order_tag_wrap {
-    display: inline-flex;
-    padding: 0px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 4px;
-    background: #f66f001f;
+  display: inline-flex;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: #f66f001f;
 }
