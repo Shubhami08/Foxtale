@@ -962,11 +962,23 @@
           "settings": {
             "produkt": "exfoliating-facial-toner",
             "bfr": "shopify:\/\/shop_images\/BEFORE_1_a688ba95-3252-4ce7-a689-4a98d70d4086.jpg",
-            "bfrlnk": "",
+            "bfrlnk": "shopify:\/\/products\/exfoliating-facial-toner",
             "aftr": "shopify:\/\/shop_images\/AFTER_2_ecdb2ff3-39a7-4073-866d-c4c2d4d281a3.jpg",
-            "aftrlnk": "",
+            "aftrlnk": "shopify:\/\/products\/exfoliating-facial-toner",
             "mdlpik": "shopify:\/\/shop_images\/Exfoliating_Toner_-_New_PDP_copy-01.jpg",
             "quote": "<h6 class=\"revw\">I have been using this for about a month now and there’s a definite decongestion in pores.\n  Since it’s alcohol free, I’ve not felt any dryness post-usage.<\/h6>\n<p class=\"nam-st\">Rakhi<br>Acne-prone skin<\/p>"
+          }
+        },
+        "text_Dm4Dne": {
+          "type": "text",
+          "settings": {
+            "produkt": "multivitamin-glow-toner",
+            "bfr": "shopify:\/\/shop_images\/BEFORE_3.jpg",
+            "bfrlnk": "shopify:\/\/products\/multivitamin-glow-toner",
+            "aftr": "shopify:\/\/shop_images\/NEHA-AFTER.jpg",
+            "aftrlnk": "shopify:\/\/products\/multivitamin-glow-toner",
+            "mdlpik": "shopify:\/\/shop_images\/Glow_Toner_-_New_PDP_copy-01.jpg",
+            "quote": "<h6 class=\"revw\">This glow toner + makeup setting spray literally held my makeup in this humid weather. It provides an instant glow to the skin.<\/h6>\n<p class=\"nam-st\">Neha<br>Dry skin<\/p>"
           }
         },
         "text_63hE9g": {
@@ -1032,6 +1044,7 @@
       },
       "block_order": [
         "text_gegPfQ",
+        "text_Dm4Dne",
         "text_63hE9g",
         "31dc84f4-df54-482a-91f4-49c63764c3d3",
         "1464da4e-ec29-496b-863b-b33e0d0cb5c7",
