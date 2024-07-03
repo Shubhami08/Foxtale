@@ -15272,7 +15272,8 @@ a.hm {
     line-height: 16px;
   }
   .muktailayout-template .rev {
-    top: 16px;
+    top: unset;
+    bottom: 12px;
     left: 16px;
   }
   .mobile-shwnew {
