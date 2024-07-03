@@ -282,7 +282,7 @@
             {% for item in cart.items %}
               {% if item.final_line_price == 0 and item.original_line_price == 0 %}
                 {% assign gift_product_total = gift_product_total | plus: 1 %}
-              {% elsif item.product.type == 'pre_order' %}
+              {% elsif item.product.type == 'Bodycare' %}
                 {% assign gift_product_total = gift_product_total | plus: item.quantity %}
               {% endif %}
             {% endfor %}
