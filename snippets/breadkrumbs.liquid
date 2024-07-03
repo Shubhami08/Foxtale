@@ -144,6 +144,11 @@
     
     {% endif %}
 
+    {% if product.type == "Bodycare" %}
+    <li>
+        <a rel="dofollow" href="/collections/bodycare" aria-current="page" class="">Bodycare</a>
+      </li>
+    {% endif %}
     <li>
       <a rel="dofollow" href="{{ product.url }}" aria-current="page" class="desk-prod">{{ product.title }}</a>
       <!-- <a href="{{ product.url }}" aria-current="page" class="mob-prod">{{ product.title | truncatewords: 2 }}</a> -->
