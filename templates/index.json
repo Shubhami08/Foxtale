@@ -957,6 +957,18 @@
     "38e1b156-6995-442a-844e-86ae1ec0e9eb": {
       "type": "custom-resultreviews",
       "blocks": {
+        "text_gegPfQ": {
+          "type": "text",
+          "settings": {
+            "produkt": "exfoliating-facial-toner",
+            "bfr": "shopify:\/\/shop_images\/BEFORE_1_a688ba95-3252-4ce7-a689-4a98d70d4086.jpg",
+            "bfrlnk": "",
+            "aftr": "shopify:\/\/shop_images\/AFTER_2_ecdb2ff3-39a7-4073-866d-c4c2d4d281a3.jpg",
+            "aftrlnk": "",
+            "mdlpik": "shopify:\/\/shop_images\/Exfoliating_Toner_-_New_PDP_copy-01.jpg",
+            "quote": "<h6 class=\"revw\">I have been using this for about a month now and there’s a definite decongestion in pores.\n  Since it’s alcohol free, I’ve not felt any dryness post-usage.<\/h6>\n<p class=\"nam-st\">Rakhi<br>Acne-prone skin<\/p>"
+          }
+        },
         "text_63hE9g": {
           "type": "text",
           "settings": {
@@ -1016,26 +1028,15 @@
             "mdlpik": "shopify:\/\/shop_images\/Product_1st_Image-10.jpg",
             "quote": "<h6 class=\"revw\">I have gone through hyperpigmentation and nothing but Foxtale's products help me. \nThey worked like a charm on my skin!<\/h6>\n<p class=\"nam-st\">Sonam<br>Acne-prone skin<\/p>"
           }
-        },
-        "text_gegPfQ": {
-          "type": "text",
-          "settings": {
-            "produkt": "exfoliating-facial-toner",
-            "bfr": "shopify:\/\/shop_images\/BEFORE_1_a688ba95-3252-4ce7-a689-4a98d70d4086.jpg",
-            "bfrlnk": "",
-            "aftr": "shopify:\/\/shop_images\/AFTER_2_ecdb2ff3-39a7-4073-866d-c4c2d4d281a3.jpg",
-            "aftrlnk": "",
-            "quote": "<h6 class=\"revw\">I have been using this for about a month now and there’s a definite decongestion in pores.\n  Since it’s alcohol free, I’ve not felt any dryness post-usage.<\/h6>\n<p class=\"nam-st\">Rakhi<br>Acne-prone skin<\/p>"
-          }
         }
       },
       "block_order": [
+        "text_gegPfQ",
         "text_63hE9g",
         "31dc84f4-df54-482a-91f4-49c63764c3d3",
         "1464da4e-ec29-496b-863b-b33e0d0cb5c7",
         "828f3493-ae76-463f-ac26-0a0096fa2452",
-        "f99be63d-b8f7-47e7-a6b6-8d53a334c6a9",
-        "text_gegPfQ"
+        "f99be63d-b8f7-47e7-a6b6-8d53a334c6a9"
       ],
       "settings": {
         "heading": "Result that #WorksWonders"
