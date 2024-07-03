@@ -15443,7 +15443,7 @@ a.hm {
     .t4s-site-nav__icons
     .t4s-site-nav__account
     svg {
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   .bodycare-template .t4s-site-nav__cart > a,
   .bodycare-template .t4s-push-menu-btn,
