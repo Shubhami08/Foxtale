@@ -1,13 +1,17 @@
 <style>
+  .top-perfekt {
+    margin: 0px 100px 0px 100px;
+  }
   .perfect-heading {
-    margin: 24px 0px 16px 16px;
+    margin: 36px 0px 36px 36px;
   }
   .perfect-heading h3 {
-    color: #292930;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.5px;
+    color: #101828;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    font-family: Inter;
   }
   .perfect-grid {
     border-radius: 18px;
@@ -17,10 +21,10 @@
   .perfekto-gridu {
     border-radius: 18px;
     /* border: 1px solid #E6E8EC; */
-    margin: 0 8.5px;
+    margin: 0 36px;
   }
   .product-detailed {
-    padding: 8px 9px 11px 9px;
+    padding: 16px 24px 24px 24px;
   }
   .product-nomenclature {
     padding-bottom: 7px;
@@ -29,8 +33,8 @@
   }
   .product-nomenclature a {
     color: #141416;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 0.3px;
     line-height: 16px;
     margin-bottom: 7px;
@@ -44,11 +48,11 @@
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
   }
-  .body-grid {
+  /* .body-grid {
     grid-template-columns: 1fr 1fr;
     display: grid;
     grid-row-gap: 24px;
-  }
+  } */
   .lower-grid {
     display: flex;
     justify-content: space-between;
@@ -60,18 +64,19 @@
   }
   .product-price .active {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     flex-direction: row-reverse;
   }
   .product-price .active {
     color: #23262F;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 16px;
     padding: 0 0 4px 0;
   }
   .onegrid-template .product-price .active {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
   }
@@ -85,7 +90,7 @@
   }
   .product-price .active del {
     color: #777E90 !important;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 14px;
     text-decoration: line-through;
@@ -165,22 +170,52 @@
   }
 
 @media (max-width: 768px) {
+  .top-perfekt {
+    margin: 0px 0px 0px 0px;
+  }
+  .perfect-heading {
+    margin: 24px 0px 16px 16px;
+  }
+  .perfect-heading h3 {
+    color: #292930;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+  }
+  .perfekto-gridu {
+    /* border: 1px solid #E6E8EC; */
+    margin: 0 8.5px;
+  }
   .onegrid-template .top-perfekt {
     padding: 0 8px;
   }
-  .body-grid {
+  /* .body-grid {
     grid-template-columns: 1fr 1fr;
     display: grid;
     grid-row-gap: 24px;
-  }
+  } */
   .onegrid-template .body-grid {
     grid-template-columns: 1fr !important;
     display: grid;
     grid-row-gap: 24px;
   }
+  .product-detailed {
+    padding: 8px 9px 11px 9px;
+  }
   .product-nomenclature a {
     min-height: 35px;
     display: block;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .product-price .active {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 0 4px 0;
+  }
+  .product-price .active del {
+    font-size: 10px;
   }
   .perfect-grid a#addtocart_r {
     border-radius: 8px;
@@ -196,12 +231,6 @@
     font-size: 12px;
   }
 }
-.inside-perfektimage {
-  
-}
-.inside-perfektimage img {
-
-}
 </style>
 
 <div class="top-perfekt"> 
@@ -209,7 +238,7 @@
     <h3>{{ section.settings.heading }}</h3>
   </div>
   {% assign collection = section.settings.collekt %} 
-  <div class="perfektslide-{{ section.id }} body-grid"> 
+  <div class="perfektslide-{{ section.id }}"> 
     {% for product in collection.products %} 
   <div class="perfekto-gridu">
       <div class="perfect-grid">
@@ -285,59 +314,53 @@
 </div>
 
 <script>
-  $('.singleguy-{{ section.id }}').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true
+  $('.perfektslide-{{ section.id }}').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }]
   });
-  // $('.perfektslide-{{ section.id }}').slick({
-  //   dots: false,
-  //   arrows: false,
-  //   infinite: false,
-  //   speed: 300,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 3,
-  //   responsive: [{
-  //     breakpoint: 1200,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 3,
-  //       infinite: true,
-  //       arrows: false
-  //     }
-  //   }, {
-  //     breakpoint: 1024,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 3,
-  //       infinite: true,
-  //       arrows: false
-  //     }
-  //   }, {
-  //     breakpoint: 600,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 2,
-  //       arrows: false
-  //     }
-  //   }, {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 2,
-  //       arrows: false
-  //     }
-  //   }]
-  // });
-  // $(document).ready(function(){
-  // $('.slik-right').click(function(){
-  //     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
-  // });
-  // $('.slik-left').click(function(){
-  //     $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
-  // });
-  // });
+  $(document).ready(function(){
+  $('.slik-right').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
+  });
+  $('.slik-left').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
+  });
+  });
 </script> 
 
 {% schema %}
