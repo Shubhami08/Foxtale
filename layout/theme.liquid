@@ -1007,12 +1007,31 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
       {%endif%}
 
        {% if collection.url contains 'bodycare' %}
-         .perfekt-sub {
-           /* display: none !important; */
-         }
-         .on-perfekt {
-           
-         }
+          .template-collection .t4s-slideshow.t4s-row {
+            margin: -30px 0px 0px 0px !important;
+          }
+          div#shopify-section-announcement-bar {
+            display: none !important;
+          }
+          nav.breadcrumbs.t4s-container {
+            position: relative;
+            z-index: 999;
+            top: 20px;
+          }
+          .hm svg path {
+            stroke: #000000;
+          }
+          .breadcrumbs li:not(:last-child):after {
+            width: 15px;
+            height: 8px;
+          }
+          .breadcrumbs a {
+            color: #000000 !important;
+          }
+          .is-header--stuck .t4s-section-header {
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+          }
        {%endif%}
       
       {% if collection.url contains 'adnetwork-exclusive-offer'%}
