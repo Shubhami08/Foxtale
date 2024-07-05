@@ -1655,9 +1655,11 @@ $(document).ready(function () {
   body.zomatofourhundred .saleBar.zomatofourhundred{
     display:block !important;
   }
+  {% if collection.url contains 'early-access' %}
   body.secretsale .saleBar.secretsale{
     display:block !important;
   }
+  {% endif %}
   body.frontspecial .saleBar.frontspecial{
     display:block !important;
   }
