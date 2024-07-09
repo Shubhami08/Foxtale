@@ -521,8 +521,8 @@
         "image_AjAedA": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/SHORT-BANNER-DESKTOP.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/SHORT-BANNER-MOBILE.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ef88f819-4b8f-4406-94c0-94d283b959a9.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_79906ff3-1164-4f8a-8326-1eb4c65e674f.jpg",
             "collection_handle": "products-shop-1"
           }
         }
