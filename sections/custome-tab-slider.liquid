@@ -218,13 +218,21 @@
                                 </div>
                                  {% endif %}
                               {% endcomment %}
-                              {% assign message = product.price | divided_by: 100 %}
-                              {% if message <= 746 %}
-                                <p class="bottom-leftext">B2G2</p>
-                              {% else %}
+                              {% assign target_tag = "Combos" %}
+                              {% if product.tags contains target_tag %}
                                 <p class="bottom-leftext">10% Off</p>
+                              {% else %}
+                                {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                                  <p class="bottom-leftext">B2G2</p>
+                                {% else %}
+                                  <p class="bottom-leftext">BYOB</p>
+                                {% endif %} 
                               {% endif %}
-                              <p class="bottom-rightext">Free Gift</p>
+                              {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                                <p class="bottom-rightext">Free Gift</p>
+                              {% else %}
+                                <p class="bottom-rightext"></p>
+                              {% endif %}
                             </div>
                           </div>
                         </div>
@@ -267,7 +275,7 @@
                     {%- endfor -%}
                   </div>
                   <div class="view-more-btn">
-                    <a id="view-more-link" data-foxtale-event="view-more-click-event" foxtale-event-attr-collection-name="{{ collection.title }}" foxtale-event-attr-from="featured-collection" foxtale-event-attr-collection-url="{{ collection.url }}" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                    <a id="view-more-link" data-foxtale-event="view-more-click-event" foxtale-event-attr-collection-name="{{ collection.title }}" foxtale-event-attr-from="featured-collection" foxtale-event-attr-collection-url="{{ collection.url }}" href="/collections/bodycare">{{ 'products.grid_items.view_more' | t }}</a>
                   </div>
                 {% endif %}
               </div>
@@ -351,7 +359,7 @@
                     {%- endfor -%}
                   </div>
                   <div class="view-more-btn">
-                    <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
+                    <a id="view-more-link" href="/collections/bodycare">{{ 'products.grid_items.view_more' | t }}</a>
                   </div>
                 {% endif %}
               </div>

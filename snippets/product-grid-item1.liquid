@@ -156,8 +156,6 @@ endif -%}
                     <p class="bottom-leftext">SECRET</p>
                     {% elsif collection.title == "Affiliate Slash Sale" %}
                     <p class="bottom-leftext">Up to 40% Off</p>                   
-                    {% elsif collection.title == "Ad Exclusive Offer" %}
-                    <p class="bottom-leftext">B2G2</p>
                     {% elsif collection.title == "Partnerships Slash Sale" %}
                     <p class="bottom-leftext">Up to 40% Off</p>
                     {% elsif collection.title == "Affiliate Early Sale" %}
@@ -192,6 +190,8 @@ endif -%}
                     <p class="bottom-leftext">Flat 400 Off</p>  
                     {% elsif collection.title == "Flipkart 400 Offer" %}
                     <p class="bottom-leftext">Flat 400 Off</p>
+                    {% elsif collection.title == "Ad Exclusive Offer" %}
+                    <p class="bottom-leftext">BYOB</p>
                     {% elsif collection.title == "Cashkaro: 199 Store" %}
                     <p class="bottom-leftext">Bestsellers @ 199</p>
                     {% elsif collection.title == "Admittad 199 Offer" %}
@@ -207,12 +207,16 @@ endif -%}
                     {% elsif collection.title == "CRED Offer" %}
                     <p class="bottom-leftext">Buy2@749</p>
                     {% else %}
-                  {% assign message = product.price | divided_by: 100 %}
-                     {% if message <= 746 %}
-                       <p class="bottom-leftext">B2G2</p>
-                     {% else %}
-                       <p class="bottom-leftext">10% Off</p>
-                     {% endif %}
+                     {% assign target_tag = "Combos" %}
+                    {% if product.tags contains target_tag %}
+                      <p class="bottom-leftext">10% Off</p>
+                    {% else %}
+                      {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                        <p class="bottom-leftext">B2G2</p>
+                      {% else %}
+                        <p class="bottom-leftext">BYOB</p>
+                      {% endif %} 
+                    {% endif %}
                    {% endif %}
                    {% if collection.title == "Secret Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
@@ -234,8 +238,10 @@ endif -%}
                     <p class="bottom-rightext"></p>
                    {% elsif collection.title == "Clovia Flat 400 Offer" %}
                     <p class="bottom-rightext"></p>  
-                   {% else %}
-                    <p class="bottom-rightext">Free Gift</p>   
+                   {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                      <p class="bottom-rightext">Free Gift</p>
+                    {% else %}
+                      <p class="bottom-rightext"></p>
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}

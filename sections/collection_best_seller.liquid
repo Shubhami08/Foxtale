@@ -212,15 +212,19 @@
                     <p class="bottom-leftext">B1G1/B2G2</p>
                   {% elsif collection.title == "Paytm Flat 400 off" %}
                     <p class="bottom-leftext">₹400 off</p>
-                  {% else %}
+                  {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                     <p class="bottom-leftext">B2G2</p>
+                  {% else %}
+                    <p class="bottom-leftext">BYOB</p>
                   {% endif %}                         
                   {% if collection.title == "Exclusive Sale" %}
                     <p class="bottom-rightext"></p>
                   {% elsif collection.title == "Special Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
-                  {% else %}
+                  {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                     <p class="bottom-rightext">Free Gift</p>
+                  {% else %}
+                    <p class="bottom-rightext"></p>
                   {% endif %}
                </div>
 <!--             
