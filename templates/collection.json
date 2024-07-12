@@ -21,10 +21,8 @@
         "f9965015-912a-4ab1-a6b9-60456f64c9c9": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_65.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_64.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/GLOW_10-12.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/GLOW_10-13.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/GLOW_10_amp_15_without_GWP-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GLOW_10_15_MOBILE_VERSION_WITHOUT_CTA.jpg",
             "collection_handle": "shop"
           }
         },
