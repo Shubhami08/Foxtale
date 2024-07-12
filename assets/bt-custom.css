@@ -9176,7 +9176,7 @@ header .t4s-site-nav__icons .t4s-site-nav__cart .t4s-count-box {
   }
 
   .custom-tab-slider .design_2 .products-grid-item-main button.slick-arrow {
-    bottom: 215px;
+    bottom: 175px;
   }
 
   .type_featured_collection_owl .row_pr_3 .flickity-button {
@@ -10972,7 +10972,7 @@ div#shopify-section-template--16759600709879__fde7dfaf-6042-4f71-b8f7-efdb65e362
     .nt_full
     .row_pr_3
     .flickity-prev-next-button.next {
-    bottom: 225px !important;
+    bottom: 195px !important;
   }
 }
 
@@ -13688,11 +13688,11 @@ form#t4s-form-newsletter {
 
 .customGroupProduct-template .one-two1,
 .customGroupProduct-template .or-text {
-  /* display: none !important; */
+  display: none !important;
 }
 
 .customGroupProduct-template .two-productscampaign .offer-2-row {
-  /* display: none !important; */
+  display: none !important;
 }
 
 .trio-frio {

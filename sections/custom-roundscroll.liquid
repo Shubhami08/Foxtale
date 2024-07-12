@@ -466,8 +466,16 @@
                       {% endfor %}
                     </span>
                 <div class="discount-msg">
-                  <p class="bottom-leftext">B2G2</p>
-                  <p class="bottom-rightext">Free Gift</p>
+                  {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                    <p class="bottom-leftext">B2G2</p>
+                  {% else %}
+                    <p class="bottom-leftext">BYOB</p>
+                  {% endif %} 
+                  {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                    <p class="bottom-rightext">Free Gift</p>
+                  {% else %}
+                    <p class="bottom-rightext">Free Gift</p>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -575,6 +583,7 @@
     var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     var tab_5_pos = $(".newshop-inwrapped#tab_5").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     var tab_6_pos = $(".newshop-inwrapped#tab_6").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    // var tab_7_pos = $(".newshop-inwrapped#tab_7").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
     if($(window).scrollTop() > tab_1_pos && $(window).scrollTop() < tab_2_pos){
       if(!$('.round-collectionimg[data-tab="tab_1"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");
@@ -608,6 +617,12 @@
         $('.round-collectionimg[data-tab="tab_6"]').addClass("active");
       }
     }
+    // else if($(window).scrollTop() > tab_7_pos){
+    //   if(!$('.round-collectionimg[data-tab="tab_7"]').hasClass("active")){
+    //     $(".round-wrapper .round-collectionimg").removeClass("active");
+    //     $('.round-collectionimg[data-tab="tab_7"]').addClass("active");
+    //   }
+    // }
 
     if($(window).scrollTop() > elementPosition.top){
           $('#navigation').css('position','fixed').css('top','0').css('z-index','3').addClass("scetion_fixed");

@@ -425,11 +425,11 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     sc(new URLSearchParams(window.location.search).get('clickid'));
   </script>
   <!-- End -->
-  {% assign limited_col = '' %}
+  {% assign limited_col = 'shop-1,products-shop-1' %}
   {% assign limited_col_array = limited_col | split:',' %}
 
   <body
-    class="template-{{ request.page_type | handle }} {% if template.name == 'product' and template.suffix == 'muktailayout' %}{{ product.handle }}{% endif %} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-gift {% else %} hide-gift {% endif %}{% else %} hide-gift {% endif %} {% if collection.url contains 'shop-2'%}shop-2{% endif %} {% if collection.url contains 'shop-3'%}shop-3{% endif %} {% if collection.url contains 'b2g2-detan'%}shop-4{% endif %} {% if collection.url contains 'phonepe-flat-400-off'%}phonefourhundred{% endif %} {% if collection.url contains 'flat-200-off-phonepe'%}phonetwohundred{% endif %} {% if collection.url contains 'zomato-flat-400-offer'%}zomatofourhundred{% endif %} {% if collection.url contains 'early-access'%}{% unless collection.url contains 'affiliate-early-access' %}secretsale{% endunless %}{% endif %} {% if collection.url contains 'frontpage'%}frontspecial{% endif %} {% if collection.url contains 'exclusive-sale'%}exclusive{% endif %} {% if collection.url contains 'gpay-b2g2' or collection.url contains 'phonepe-b2g2' or collection.url contains 'shop-gpay-b2g2' or collection.url contains 'affiliate-early-access' %}b2g2-rib{% endif %}"
+    class="template-{{ request.page_type | handle }} {% if template.name == 'product' and template.suffix == 'muktailayout' %}{{ product.handle }}{% endif %} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-gift {% else %} hide-gift {% endif %}{% else %} hide-gift {% endif %} {% if collection.url contains 'shop-2'%}shop-2{% endif %} {% if collection.url contains 'shop-3'%}shop-3{% endif %} {% if collection.url contains 'b2g2-detan'%}shop-4{% endif %} {% if collection.url contains 'phonepe-flat-400-off'%}phonefourhundred{% endif %} {% if collection.url contains 'flat-200-off-phonepe'%}phonetwohundred{% endif %} {% if collection.url contains 'zomato-flat-400-offer'%}zomatofourhundred{% endif %} {% if collection.url contains 'early-access'%}{% unless collection.url contains 'affiliate-early-access' %}secretsale{% endunless %}{% endif %} {% if collection.url contains 'frontpage'%}frontspecial{% endif %} {% if collection.url contains 'exclusive-sale'%}exclusive{% endif %} {% if collection.url contains 'gpay-b2g2' or collection.url contains 'phonepe-b2g2' or collection.url contains 'shop-gpay-b2g2' or collection.url contains 'affiliate-early-access' %}b2g2-rib{% endif %}{% if collection.handle == 'monsoon-offer' %} monsoon-offer {% endif %}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     data-instant-allow-query-string
@@ -930,7 +930,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            left: 0 !important;
            content: "Free Gift"!important;
            width: 155px !important;
-         }
+         } 
           .t4s-announcement-bar__item {
            visibility: hidden;
            position: relative;
@@ -945,16 +945,26 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            font-size: 12px;
            width: max-content;
          }
-        /* .t4s-announcement-bar__item:nth-of-type(2):after {
+        .t4s-announcement-bar__item:nth-of-type(2):after {
            visibility: visible;
            position: absolute;
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Get 10% Off + Eye Mask on all orders [Code: GLOW10]";
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
            font-size: 12px;
            width: max-content;
-         } */
+         }
+         .t4s-announcement-bar__item:nth-of-type(3):after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
+           font-size: 12px;
+           width: max-content;
+         }
        {%endif%}
 
        {% if collection.url contains 'products-shop-1' %}
@@ -1001,6 +1011,26 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            font-size: 12px;
            width: max-content;
          }
+         .t4s-announcement-bar__item:nth-of-type(2):after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .t4s-announcement-bar__item:nth-of-type(3):after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free [Code: B2G2]";
+           font-size: 12px;
+           width: max-content;
+         }
          span.ingredient-badge {
            display: block !important;
          }
@@ -1033,21 +1063,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
             -webkit-box-shadow: none !important;
           }
        {%endif%}
-      
-      {% if collection.url contains 'adnetwork-exclusive-offer'%}
-        .bottom-leftext,.bottom-rightext {
-           visibility: hidden;
-           position: relative;
-         }
-         .bottom-leftext:after {
-           visibility: visible;
-           position: absolute;
-           top: 0;
-           left: 0;
-           content: "B2G2";
-           width: 150px;
-         } 
-        {% endif %}
       
        {% if collection.url contains 'offer-b1g1'%}
          .bottom-leftext {
@@ -1715,6 +1730,9 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .template-collection .col-lg-.col-12.pt__20.pb__20.collection-best-seller {
           padding-top: 8px !important;
         }
+        .template-collection .t4s_bk_flickity .t4s-section-inner {
+          padding-top: 3rem;
+        }
        {%endif%}
 
        {% if collection.url contains 'glow'%} 
@@ -2205,8 +2223,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'brightening-body-wash-with-glycolic-acid-niacinamide' %}
-         .new-offerbox {
-          display: none !important;
+        .new-offerbox {
+          /* display: none !important; */
         }
         div#shopify-section-announcement-bar {
           display: none !important;
@@ -2221,8 +2239,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'brightening-body-lotion-with-vitamin-c-niacinamide' %}
-         .new-offerbox {
-          display: none !important;
+        .new-offerbox {
+          /* display: none !important; */
         }
         div#shopify-section-announcement-bar {
           display: none !important;
@@ -2237,8 +2255,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'hydrating-body-wash-with-hyaluronic-acid-ceramides' %}
-         .new-offerbox {
-          display: none !important;
+        .new-offerbox {
+          /* display: none !important; */
         }
         div#shopify-section-announcement-bar {
           display: none !important;
@@ -2253,8 +2271,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'deep-moisture-body-lotion-with-hyaluronic-acid-ceramides' %}
-         .new-offerbox {
-          display: none !important;
+        .new-offerbox {
+          /* display: none !important; */
         }
         div#shopify-section-announcement-bar {
           display: none !important;
