@@ -54,6 +54,7 @@
         },
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/DESKTOP_64.jpg",
             "image_mb": "shopify:\/\/shop_images\/LONG_MOBILE_BANNER_WITH_CTA_1.jpg",
