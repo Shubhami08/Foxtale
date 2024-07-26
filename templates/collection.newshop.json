@@ -571,6 +571,14 @@
           "settings": {
             "collection_handle": "cred-buy-1-get-1-lip-mask"
           }
+        },
+        "image_tQzyAP": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B2G2-02_1a3df152-ceda-463e-be9f-28c3e96595ee.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B2G2-01_b4a7e6f3-9403-49f5-9754-3f43c8558c50.jpg",
+            "collection_handle": ""
+          }
         }
       },
       "block_order": [
@@ -598,7 +606,8 @@
         "image_Mi7646",
         "image_639wHV",
         "image_mwg7HA",
-        "image_VcXYcX"
+        "image_VcXYcX",
+        "image_tQzyAP"
       ],
       "settings": {
         "slider_height_mobile": "100%"
