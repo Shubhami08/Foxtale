@@ -179,7 +179,42 @@
   }
 }
 </style>
+{% assign flag_copy = false %}
+{% for col1 in product.collections %}
+  {% if col1.handle == 'slashed-masks' or col1.handle == 'slashed-moisturisers' or col1.handle == 'slashed-serums-and-treatments' or col1.handle == 'slashed-sunscreens' or col1.handle == 'slashed-facewash-cleansers' %}
+    {% assign flag_copy = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
 
+
+{% if flag_copy %}
+  <div class="offer-section-main new0ffer">
+  <div class="row">
+    <div class="col-6 offer-title">Offers</div>
+    <div class="col-6" id="offersectioncodeid">
+    </div>
+  </div>
+  <div class="two-productscampaign">
+    <div class="row one-two1">
+    <div class="col-7 pr-0px">
+     <span class="offer-text-main offer-section-text-custom"><b>BUY 1</b> Product <b>get 1 mini free</b></span>
+    </div>
+    <div class="col-5 pr-0px" id="codeprime"> 
+
+    </div>
+  </div>
+  <div class="row offer-2-row">
+    <div class="col-7 pr-0px" style="padding-right:0px !important;">
+     <span class="offer-text-main offer-section-text-upsell"><b>BUY 2</b> Product <b>get 2 mini free</b></span> 
+    </div>
+    <div class="col-5 pr-0px" id="codeseconde">
+     </div>
+  </div>
+ </div>
+
+</div>
+  {% else %}
 <div class="offer-section-main new0ffer">
   <div class="row">
     <div class="col-6 offer-title">
@@ -228,6 +263,7 @@
     </div>
   </div> -->
 </div>
+  {% endif %}
 
 <div class="row newpdpxtra">
   <div class="col-4 newpp" style="border-right: 1px solid;">

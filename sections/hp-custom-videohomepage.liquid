@@ -1,0 +1,352 @@
+<div class="heading-all">
+    <h3>Peak into Foxtale HQ</h3>
+  </div>
+<div style="position:relative" class="custom-video-hp">
+<div class='video-section'>
+  <!-- <h2>{{ section.settings.heading }}</h2> -->
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'video-stored' %}
+      {% comment %}
+        <div class="video-slide stored-video" data-heading="{{ block.settings.heading }}" data-description="{{ block.settings.description }}" {{ block.shopify_attributes }}>
+          {{ block.settings.video | video_tag: loop: true, autoplay: true, muted: true,controls: false , class:'mobile-video' }} 
+          {{ block.settings.video_desktop | video_tag: loop: true, autoplay: true, muted: true,controls: false , class:'desktop-video' }} 
+        </div>
+      {% endcomment %}
+        <div class="video-slide stored-video" data-heading="{{ block.settings.heading }}" data-description="{{ block.settings.description }}" {{ block.shopify_attributes }}>
+          <img src="{{ block.settings.mobile_gif | img_url:'master' }}" alt="" class="mobile-video" width='100%;'>
+          <img src="{{ block.settings.desktop_gif | img_url:'master' }}" alt="" class="desktop-video" width='100%;'>
+        </div>
+      
+    {% endcase %}
+  {% endfor %}
+</div>
+  <div class="overlay-text">
+    <h2></h2>
+    <p></p>
+  </div>
+</div>
+
+<style>
+  /* .custom-video-hp .slick-list {
+	max-height: 428.75px !important;
+} */
+
+.custom-video-hp .slick-slide {
+	margin: 0px !important
+}
+
+.custom-video-hp .stored-video video {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.stored-video {
+	display: none;
+}
+
+
+@media only screen and (min-width: 376px) and (max-width: 430px) {
+	.slick-dots {
+		top: 40.5% !important;
+	}
+}
+@media only screen and (min-width: 430px) and (max-width: 500px) {
+	.slick-dots {
+		top: 43.5% !important;
+	}
+}
+  @media only screen and (min-width: 500px) and (max-width: 600px) {
+	.slick-dots {
+		top: 45% !important;
+	}
+}
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+	.slick-dots {
+		top: 46% !important;
+	}
+}
+
+@media only screen and (max-width: 330px) {
+	.slick-dots {
+		top: 35.5% !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.stored-video {
+		display: block;
+	}
+
+	.desktop-video {
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 999px) {
+	.slick-dots {
+		top: 83% !important;
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+	.slick-dots {
+		top: 77% !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.slick-dots {
+		top: 70% !important;
+	}
+}
+  @media (min-width: 1500px) {
+    .slick-dots {
+        top: 67% !important;
+    }
+}
+@media (min-width: 1920px) {
+    .slick-dots {
+        top: 64% !important;
+    }
+}
+
+@media (min-width: 768px) {
+	.overlay-text h2 {
+		font-size: 100px !important;
+		height: 120px !important;
+		margin-left: 15px;
+	}
+
+	.overlay-text {
+		width: 60% !important;
+	}
+
+	.overlay-text p {
+		max-width: 250px !important;
+		font-size: 20px !important;
+		margin-left: 15px;
+	}
+
+	.mobile-video {
+		display: none !important;
+	}
+
+	.slick-dots {
+		flex-direction: row !important;
+		left: 33px !important;
+	}
+
+}
+
+.slick-slider {
+	position: relative;
+}
+
+.slick-dots li {
+	background: none;
+	border: none;
+}
+
+.slick-dots li button {
+	font-size: 0;
+	background: none;
+	border: none;
+}
+
+.slick-dots li button:before {
+	font-size: 12px;
+	color: gray;
+	content: '';
+}
+
+.slick-dots li.slick-active button:before {
+	color: black;
+}
+
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+	outline: none;
+}
+
+.overlay-text h2 {
+	font-size: 64px;
+	height: 80px
+}
+
+.overlay-text p {
+	font-size: 16px;
+	width: 65%;
+	margin-bottom: 57px;
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+.slick-dots {
+	position: absolute;
+	top: 39.5%;
+	left: -7px;
+	transform: translate(0, -50%);
+	z-index: 10;
+	flex-direction: column;
+	gap: 18px;
+	display: flex;
+}
+
+.slick-dots li {
+	margin: 0 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: gray;
+}
+
+.slick-dots li.slick-active {
+	background-color: black;
+}
+
+.video-slide {
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+
+.video-slide.slick-current {
+	display: block;
+}
+
+.video-slide video,
+.external-video iframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.overlay-text {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	color: black;
+	font-size: 24px;
+	text-align: left;
+	background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.5) 85%, rgba(255, 255, 255, 0) 100%);
+	/* Adjust stops for a larger portion of solid white */
+	padding-left: 40px;
+	/* border-radius: 5px; */
+	/* max-width: 84%; */
+	/* max-width: 95.5%; */
+	transform: translate(0, -50%);
+	width: 100%;
+}
+</style>
+
+<script>
+  $('.video-section').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    touchThreshold:100,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          vertical: true,
+          verticalSwiping: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          vertical: true,
+          verticalSwiping: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  // Function to update overlay text content
+  function updateOverlayText(nextSlide) {
+    const $nextSlide = $('.video-slide').not('.slick-cloned').eq(nextSlide);
+    const heading = $nextSlide.data('heading');
+    const description = $nextSlide.data('description');
+    $('.overlay-text h2').text(heading);
+    $('.overlay-text p').text(description);
+  }
+  
+  updateOverlayText(0);
+  
+  // Update overlay text on before slide change
+  $('.video-section').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    updateOverlayText(nextSlide % slick.slideCount);
+  });
+  
+  $('.slick-dots li button').each(function () {
+    $(this).removeAttr('aria-label');
+  });
+
+</script>
+
+{% schema %}
+{
+  "name": "Custom Vertical Video",
+  "class": "custom-video-slider",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Shopify Hosted Video",
+      "type": "video-stored",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "A Shopify-hosted video"
+        },
+        {
+          "type": "video",
+          "id": "video_desktop",
+          "label": "A Shopify-hosted Desktop video"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_gif",
+          "label": "Desktop GIF"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_gif",
+          "label": "Mobile GIF"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "15"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "amazing products in formulation 'cause innovation never stops!"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Vertical Video"
+    }
+  ]
+}
+{% endschema %}

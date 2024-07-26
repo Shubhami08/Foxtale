@@ -14,8 +14,22 @@
     assign logo = logo_df
     assign rate_retina = 2
     assign lg_w_2s = lg_w | times:rate_retina -%} 
+    {% assign logo_url = routes.root_url %}
+    {% if template.name == 'product' %}
+    {% for col1 in product.collections %}
+      {% if col1.handle == 'slashed-masks' or col1.handle == 'slashed-moisturisers' or col1.handle == 'slashed-serums-and-treatments' or col1.handle == 'slashed-sunscreens' or col1.handle == 'slashed-facewash-cleansers' %}
+        {% assign logo_url = '/collections/shop-2' %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% if template.name == 'collection' %}
+      {% if collection.handle == 'shop-2' %}
+          {% assign logo_url = '/collections/shop-2' %}
+        {% endif %}
+    {% endif %}
 
-<{{tag}} class="{{class}} t4s-header__logo t4s-lh-1"><a class="{{class_a |default:'t4s-d-inline-block' }}" data-foxtale-event="logo-click-event" href="{{ routes.root_url }}" {{ block.shopify_attributes }}>
+<{{tag}} class="{{class}} t4s-header__logo t4s-lh-1"><a class="{{class_a |default:'t4s-d-inline-block' }}" data-foxtale-event="logo-click-event" href="{{ logo_url }}" {{ block.shopify_attributes }}>
 
    {%- if svg != blank -%}
       <img loading="eager" class="header__normal-logo t4s-d-none t4s-d-lg-block" src="{{ svg }}" alt="{{ shop_name_escape }}" style="width: {{ lg_w }}px">

@@ -699,8 +699,14 @@ function getUTMParams() {
        if (uriComponentsString.length > 0 && uriComponentsString[0]) {
           for ( let itr = 0; itr < uriComponentsString.length; itr ++ ) {
             const singleParamStringKeyValuePair = uriComponentsString?.[itr]?.split('=');
+
+            const paramValueToSet = decodeURIComponent(singleParamStringKeyValuePair[1]);
+
+            if (params[singleParamStringKeyValuePair[0]] && !paramValueToSet) {
+              continue;
+            }
   
-            params[singleParamStringKeyValuePair[0]] = decodeURIComponent(singleParamStringKeyValuePair[1]);
+            params[singleParamStringKeyValuePair[0]] = paramValueToSet;
           }
        } else {
          return {};
@@ -732,11 +738,19 @@ function storeUTMParams() {
   
   // Store the mapped parameters in local storage with error handling
   try {
-      if (mappedParams.utm_source) localStorage.setItem('utm_source', mappedParams.utm_source);
-      if (mappedParams.utm_medium) localStorage.setItem('utm_medium', mappedParams.utm_medium);
-      if (mappedParams.utm_campaign) localStorage.setItem('utm_campaign', mappedParams.utm_campaign);
-      if (mappedParams.utm_term) localStorage.setItem('utm_term', mappedParams.utm_term);
-      if (mappedParams.utm_content) localStorage.setItem('utm_content', mappedParams.utm_content);
+      if (
+        mappedParams.utm_source ||
+        mappedParams.utm_medium ||
+        mappedParams.utm_campaign ||
+        mappedParams.utm_term ||
+        mappedParams.utm_content
+      ) {
+          localStorage.setItem('utm_source', mappedParams.utm_source);
+          localStorage.setItem('utm_medium', mappedParams.utm_medium);
+          localStorage.setItem('utm_campaign', mappedParams.utm_campaign);
+          localStorage.setItem('utm_term', mappedParams.utm_term);
+          localStorage.setItem('utm_content', mappedParams.utm_content);
+      }
   } catch (error) {
       console.error('Error storing UTM parameters in local storage:', error);
   }
@@ -1675,7 +1689,7 @@ document.addEventListener("DOMContentLoaded", function () {
             properties["Viewed product url"] = productDataFromApiRes?.["url"];
             properties["Viewed product price"] = productDataFromApiRes?.["price"];
             properties["Viewed product type"] = productDataFromApiRes?.["type"];
-            properties["Viewed product sku"] = productDataFromApiRes?.["sku"];
+            properties["Viewed product sku"] = productDataFromApiRes?.variants?.[0]?.["sku"];
             properties["Viewed product availability"] = productDataFromApiRes?.["available"];
             properties["Viewed product max price"] = productDataFromApiRes?.["price_max"];
             properties["Viewed product min price"] = productDataFromApiRes?.["price_min"];

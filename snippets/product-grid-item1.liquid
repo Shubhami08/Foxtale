@@ -127,7 +127,7 @@ endif -%}
                   {% if collection.title == "Secret Sale" %}
                     <p class="bottom-leftext">B1G1</p>
                   {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">25% off</p>
                   {% elsif collection.title == "Affiliate Valentine Sale" %}
                     <p class="bottom-leftext">CUPID</p>
                     {% elsif collection.title == "Birthday Sale" %}
@@ -153,7 +153,7 @@ endif -%}
                     {% elsif collection.title == "Exclusive Sale" %}
                     <p class="bottom-leftext">B1G1/B2G2</p>
                     {% elsif collection.title == "Affiliate Secret Sale" %}
-                    <p class="bottom-leftext">SECRET</p>
+                    <p class="bottom-leftext">Buy 1 Get 1 Mini</p>
                     {% elsif collection.title == "Affiliate Slash Sale" %}
                     <p class="bottom-leftext">Up to 40% Off</p>                   
                     {% elsif collection.title == "Partnerships Slash Sale" %}
@@ -191,7 +191,7 @@ endif -%}
                     {% elsif collection.title == "Flipkart 400 Offer" %}
                     <p class="bottom-leftext">Flat 400 Off</p>
                     {% elsif collection.title == "Ad Exclusive Offer" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">B2/B3</p>
                     {% elsif collection.title == "Cashkaro: 199 Store" %}
                     <p class="bottom-leftext">Bestsellers @ 199</p>
                     {% elsif collection.title == "Admittad 199 Offer" %}
@@ -212,18 +212,20 @@ endif -%}
                       <p class="bottom-leftext">10% Off</p>
                     {% else %}
                       {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                        <p class="bottom-leftext">B2G2</p>
-                      {% else %}
                         <p class="bottom-leftext">Upto 15% Off</p>
+                      {% elsif collection.handle == "adnetwork-exclusive-offer" %}
+                        <p class="bottom-leftext">B1G1</p>
+                      {% else %}
+                        <p class="bottom-leftext">25% Off</p>
                       {% endif %} 
                     {% endif %}
                    {% endif %}
                    {% if collection.title == "Secret Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-rightext">Free Gift</p>
+                    <p class="bottom-rightext">Free Eye Mask</p>
                    {% elsif collection.title == "Ad Exclusive Offer" %}
-                    <p class="bottom-rightext">Free Gift</p>
+                    <p class="bottom-rightext"></p>
                    {% elsif collection.title == "Affiliate Secret Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Gpay Offer Free Sunscreen" %}
@@ -241,7 +243,7 @@ endif -%}
                    {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                       <p class="bottom-rightext">Free Gift</p>
                     {% else %}
-                      <p class="bottom-rightext"></p>
+                      <p class="bottom-rightext">Free Eye Mask</p>
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}

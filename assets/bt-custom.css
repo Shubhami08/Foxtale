@@ -11937,18 +11937,21 @@ a.t4s-menu-item-has-children-anchor {
   color: #000000;
 }
 
-.template-index .heading-all {
+.template-index .heading-all,
+.new-index-template .heading-all {
   margin: 20px 0 20px 48px;
 }
 
-.template-index .heading-all h3 {
+.template-index .heading-all h3,
+.new-index-template .heading-all h3 {
   color: #000000;
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  .template-index .heading-all {
+  .template-index .heading-all,
+  .new-index-template .heading-all {
     margin: 14px 0 8px 18px;
   }
   .template-index .cus-collswrapperz .heading-all {
@@ -11958,7 +11961,8 @@ a.t4s-menu-item-has-children-anchor {
     margin: 14px 0 8px 10px;
   }
 
-  .template-index .heading-all h3 {
+  .template-index .heading-all h3,
+  .new-index-template .heading-all h3 {
     font-size: 20px;
   }
 
@@ -11982,8 +11986,9 @@ a.t4s-menu-item-has-children-anchor {
 }
 
 @media (max-width: 1450px) and (min-width: 768px) {
-  .template-index .heading-all h3 {
-    font-size: 35px;
+  .template-index .heading-all h3,
+  .new-index-template .heading-all h3 {
+    font-size: 36px;
   }
 
   .template-index .type_featured_collection_owl .section-title span {
@@ -15475,6 +15480,9 @@ a.hm {
     .t4s-header__wrapper.t4s-pr.t4s-header-layout_logo_left {
     box-shadow: none;
   }
+  .fork p {
+    font-size: 14px !important;
+  }
 }
 
 .bodycare-template #MainContent,
@@ -15573,4 +15581,21 @@ span.pre_order_tag {
   gap: 10px;
   border-radius: 4px;
   background: #f66f001f;
+}
+
+.fork {
+  position: absolute;
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.fork p {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 15px;
 }

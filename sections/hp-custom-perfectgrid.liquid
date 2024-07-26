@@ -1,0 +1,849 @@
+{% comment %} <style>
+  .top-perfekt {
+    margin: 0px 100px 0px 100px;
+  }
+  .perfect-heading {
+    margin: 36px 0px 36px 36px;
+  }
+  .perfect-heading h3 {
+    color: #101828;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    font-family: Inter;
+  }
+  .perfect-grid {
+    border-radius: 18px;
+    border: 1px solid #E6E8EC;
+    /* position: relative; */
+  }
+  .perfekto-gridu {
+    border-radius: 18px;
+    /* border: 1px solid #E6E8EC; */
+    margin: 0 36px;
+  }
+  .product-detailed {
+    padding: 16px 24px 24px 24px;
+  }
+  .product-nomenclature {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #E6E8EC;
+    border-radius: 1px;
+  }
+  .product-nomenclature a {
+    color: #141416;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+  .onegrid-template .product-nomenclature a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .perfect-grid img.lazyloaded {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+  /* .body-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-row-gap: 24px;
+  } */
+  .lower-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 9px;
+  }
+  .onegrid-template .lower-grid {
+    padding-top: 16px;
+  }
+  .product-price .active {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  .product-price .active {
+    color: #23262F;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 0 0 4px 0;
+  }
+  .onegrid-template .product-price .active {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .onegrid-template .product-price .active del {
+    color: #777E90 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+    text-decoration: line-through !important;
+    padding-left: 6px !important; 
+  }
+  .product-price .active del {
+    color: #777E90 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-decoration: line-through;
+    padding-left: 3px;
+  }
+  .offers-tile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .offer-vg {
+    width: 12px;
+    height: 12px;
+    line-height: 0;
+  }
+  .offers-tile h6 {
+    color: #777E90;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-left: 2px;
+  }
+  .onegrid-template .offers-tile h6 {
+    font-size: 12px;
+    padding-left: 6px;
+  }
+  .perfect-grid a#addtocart_r {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 7px 20px;
+  }
+  .body-grid {
+    
+  }
+  span.fera-productReviewsSummary-avgRating {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    color: #23262F !important;
+    margin-left: 0px !important;
+  }
+  .perfekt-sub {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    color: #777E90;
+  }
+  .body-badge {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+  }
+  .body-badge h5 {
+    font-size: 12px;
+    padding: 8px 8px 6px 8px;
+    background-color: white;
+    border-radius: 4px;
+    color: #23262F;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+  .off-perfekt {
+    position: absolute;
+    bottom: 12px;
+    left: 9px;
+    z-index: 1;
+    padding: 0px 4px !important;
+    width: fit-content !important;
+    height: auto !important;
+    background: white;
+    border-radius: 3px;
+  }
+
+@media (max-width: 768px) {
+  .top-perfekt {
+    margin: 0px 0px 0px 0px;
+  }
+  .perfect-heading {
+    margin: 24px 0px 16px 16px;
+  }
+  .perfect-heading h3 {
+    color: #292930;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+  }
+  .perfekto-gridu {
+    /* border: 1px solid #E6E8EC; */
+    margin: 0 8.5px;
+  }
+  .onegrid-template .top-perfekt {
+    padding: 0 8px;
+  }
+  /* .body-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-row-gap: 24px;
+  } */
+  .onegrid-template .body-grid {
+    grid-template-columns: 1fr !important;
+    display: grid;
+    grid-row-gap: 24px;
+  }
+  .product-detailed {
+    padding: 8px 9px 11px 9px;
+  }
+  .product-nomenclature a {
+    min-height: 35px;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .product-price .active {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 0 4px 0;
+  }
+  .product-price .active del {
+    font-size: 10px;
+  }
+  .perfect-grid a#addtocart_r {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 3px 5px;
+    height: 33px !important;
+  }
+  .perfect-grid a.fx-custom-btn-dark.t4s-pr-item-btn.t4s-pr-addtocart span {
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+</style>
+
+<div class="top-perfekt"> 
+  <div class="perfect-heading">
+    <h3>{{ section.settings.heading }}</h3>
+  </div>
+  {% assign collection = section.settings.collekt %} 
+  <div class="perfektslide-{{ section.id }}"> 
+    {% for product in collection.products %} 
+  <div class="perfekto-gridu">
+      <div class="perfect-grid">
+        <div style="position: relative;" class="lazyloadt4sed">
+          <a class="" href="{{product.url}}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="product" foxtale-event-attr-tab-name="product">
+              <img  class="lazyload"   loading="lazy" alt="img"
+              src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+               data-src="{{ product.images[0] | product_img_url: "master" }}"></a>
+          {%- if product.metafields.custom.bodybadge != blank -%}
+            <span class="body-badge"><h5>{{ product.metafields.custom.bodybadge }}</h5></span>
+          {%- endif -%}
+          <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv off-perfekt"></div>
+        </div>
+        <!-- <div style="width: 100%;" class="">
+          {% for media in product.media %}
+            <div class="inside-perfektimage">
+              <img src="{{ media.src | img_url: 'master' }}">
+            </div>
+          {% endfor %}
+        </div> -->
+        <div class="product-detailed">
+          <!-- <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-perfekt"></div> -->
+          <div class="product-nomenclature">
+              <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">
+                {{- product.title -}}
+              </a>
+              {% if product.metafields.my_fields.hp_excerpt != blank %}
+                <p class="perfekt-sub fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                  {{ product.metafields.my_fields.hp_excerpt }}
+                </p>
+              {% endif %}
+          </div>
+          <div class="lower-grid">
+          <div class="product-price">
+            {%- for variant in product.variants limit: 1 -%}
+              <div class="{% if forloop.first %} active{% endif %}"> {% if variant.compare_at_price > variant.price %} <del>{{ variant.compare_at_price | money_with_currency }}</del>
+                <ins>{{ variant.price | money_with_currency }}</ins> {% else %} {{ variant.price | money_with_currency }} {% endif %}
+              </div> 
+            {% endfor %}
+            <div class="offers-tile">
+              {% if section.settings.offertext != blank %}
+                <div class="offer-vg">               
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.62129 1C6.09086 1 5.58215 1.21071 5.20708 1.58579L2.67678 4.11609C2.57915 4.21372 2.57915 4.37201 2.67678 4.46964L7.53033 9.32319C7.62796 9.42083 7.78625 9.42083 7.88388 9.32319L10.4142 6.79289C10.7893 6.41782 11 5.90911 11 5.37868V2.5C11 1.67157 10.3284 1 9.49997 1H6.62129ZM8.5 4.5C8.5 5.05228 8.05228 5.5 7.5 5.5C6.94772 5.5 6.5 5.05228 6.5 4.5C6.5 3.94772 6.94772 3.5 7.5 3.5C8.05228 3.5 8.5 3.94772 8.5 4.5Z" fill="#F88461"/>
+                  <path d="M6.82322 10.3839C6.92086 10.2862 6.92086 10.1279 6.82322 10.0303L1.96967 5.17675C1.87204 5.07912 1.71375 5.07912 1.61612 5.17675L1.35352 5.43934C0.767739 6.02513 0.767737 6.97487 1.35352 7.56066L4.43931 10.6464C5.0251 11.2322 5.97485 11.2322 6.56063 10.6464L6.82322 10.3839Z" fill="#F88461"/>
+                  </svg>
+                </div>
+                <h6>{{ section.settings.offertext }}</h6>
+              {% endif %}
+            </div>
+          </div>
+          {% if product.metafields.custom.check_variant %}
+            <div class="shop-all-qty-cart-btn">
+            <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection">
+            <span class="t4s-svg-pr-icon"></span>
+            <span class="t4s-text-pr">Select Shade</span>
+            </a>
+            </div>
+            {% else %} 
+            <div class="shop-all-qty-cart-btn">
+            <a href="{{ product.url }}" id="addtocart_r" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="dofollow">
+            <span class="t4s-svg-pr-icon"></span>
+            <span class="t4s-text-pr">ADD TO CART</span>
+            </a>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %} 
+</div>
+</div>
+
+<script>
+  $('.perfektslide-{{ section.id }}').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }]
+  });
+  $(document).ready(function(){
+  $('.slik-right').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
+  });
+  $('.slik-left').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
+  });
+  });
+</script> 
+
+{% schema %}
+  { "name": "Perfect Grid",
+    "settings": 
+    [ 
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      },
+      { "id": "collekt",
+        "type": "collection",
+        "label": "Add Collection" 
+      }, 
+      { "id": "offertext",
+        "type": "text",
+        "label": "Offer Text" 
+      }
+    ],
+  "presets": [ { "name": "Perfect Grid" } ] } 
+{% endschema %} {% endcomment %}
+
+<style>
+  .top-perfekt {
+    margin: 0px 0px 70px 112px;
+  }
+  .perfect-heading {
+    margin: 54px 0px 46px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .perfect-heading h3 {
+    color: #101828;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    font-family: Inter;
+  }
+  .head-bnt {
+    color: #FF8D6D;
+    /* font-family: "DM Sans"; */
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 99.327%;
+    letter-spacing: -0.9px;
+    padding-right: 126px;
+  }
+  .perfect-grid {
+    border-radius: 18px;
+    border: 1px solid #E6E8EC;
+    /* position: relative; */
+  }
+  .perfekto-gridu {
+    border-radius: 18px;
+    /* border: 1px solid #E6E8EC; */
+    margin: 0 12px;
+  }
+  .product-detailed {
+    padding: 16px 24px 24px 24px;
+  }
+  .product-nomenclature {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #E6E8EC;
+    border-radius: 1px;
+  }
+  .product-nomenclature a {
+    color: #141416;
+    font-size: 16px;
+    font-weight: 600;
+    /* letter-spacing: 0.3px; */
+    line-height: 24px;
+    margin: 4px 0 7px 0;
+  }
+  .perfect-grid .shop-all-qty-cart-btn {
+    margin-top: 10px;
+  }
+  .onegrid-template .product-nomenclature a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .perfect-grid img.lazyloaded {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+  /* .body-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-row-gap: 24px;
+  } */
+  .lower-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 9px;
+  }
+  .onegrid-template .lower-grid {
+    padding-top: 16px;
+  }
+  .product-price .active {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  .product-price .active {
+    color: #23262F;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 0 4px 0;
+  }
+  .onegrid-template .product-price .active {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .onegrid-template .product-price .active del {
+    color: #777E90 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+    text-decoration: line-through !important;
+    padding-left: 6px !important; 
+  }
+  .product-price .active del {
+    color: #777E90 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-decoration: line-through;
+    padding-left: 3px;
+  }
+  .offers-tile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .offer-vg {
+    width: 12px;
+    height: 12px;
+    line-height: 0;
+  }
+  .offers-tile h6 {
+    color: #777E90;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-left: 2px;
+  }
+  .onegrid-template .offers-tile h6 {
+    font-size: 12px;
+    padding-left: 6px;
+  }
+  .perfect-grid a#addtocart_r {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 7px 20px;
+  }
+  .body-grid {
+    
+  }
+  span.fera-productReviewsSummary-avgRating {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    color: #23262F !important;
+    margin-left: 0px !important;
+  }
+  .perfekt-sub {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 4px 0;
+    color: #777E90;
+  }
+  .body-badge {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+  }
+  .body-badge h5 {
+    font-size: 12px;
+    padding: 8px 8px 6px 8px;
+    background-color: white;
+    border-radius: 4px;
+    color: #23262F;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+  .off-perfekt {
+    position: absolute;
+    bottom: 12px;
+    left: 9px;
+    z-index: 1;
+    padding: 0px 4px !important;
+    width: fit-content !important;
+    height: auto !important;
+    background: white;
+    border-radius: 3px;
+  }
+  .product-detailed .fera-stars-rating.fera-productReviewsSummary-stars-rating {
+    font-size: 12px !important;
+  }
+
+@media (max-width: 768px) {
+  .top-perfekt {
+    margin: 0px 0px 24px 14px;
+  }
+  .perfect-heading {
+    margin: 24px 0px 24px 4px;
+  }
+  .perfect-heading h3 {
+    color: #292930;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+  }
+  .head-bnt {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    padding-right: 16px;
+  }
+  .perfekto-gridu {
+    /* border: 1px solid #E6E8EC; */
+    margin: 0 8.5px;
+  }
+  .onegrid-template .top-perfekt {
+    padding: 0 8px;
+  }
+  /* .body-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-row-gap: 24px;
+  } */
+  .onegrid-template .body-grid {
+    grid-template-columns: 1fr !important;
+    display: grid;
+    grid-row-gap: 24px;
+  }
+  .product-detailed {
+    padding: 8px 9px 11px 9px;
+  }
+  .product-nomenclature a {
+    min-height: 35px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .product-price .active {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 0 4px 0;
+  }
+  .product-price .active del {
+    font-size: 10px;
+  }
+  .perfect-grid a#addtocart_r {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 7px 16px;
+    height: 33px !important;
+  }
+  .perfect-grid a.fx-custom-btn-dark.t4s-pr-item-btn.t4s-pr-addtocart span {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .top-perfekt .slick-list {
+    margin: 0 0 0 -17px !important;
+    padding: 0 98px 0 0 !important;
+  }
+  .top-perfekt .slick-slide {
+    margin: 0 0 0 17px;
+  }
+  .product-detailed .fera-stars-rating.fera-productReviewsSummary-stars-rating {
+    font-size: 12px !important;
+    line-height: 15px;
+    width: 12px !important;
+    height: 15px !important;
+  }
+  .fera-productReviewsSummary-content .fera-stars {
+    letter-spacing: 1px;
+  }
+  .perfekt-sub {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1023px) {
+  .perfect-grid a#addtocart_r {
+    padding: 7px 7px;
+    font-size: 13px;
+  }
+  .perfekt-sub {
+    font-size: 12px !important;
+  }
+  .product-detailed {
+    padding: 16px 14px 24px 14px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .perfekt-sub {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .perfect-grid a#addtocart_r {
+    padding: 7px 7px;
+  }
+}
+</style>
+
+<div class="top-perfekt"> 
+  {% assign collection = section.settings.collekt %} 
+  <div class="perfect-heading">
+    <h3>{{ section.settings.heading }}</h3>
+    <a class="head-bnt" href="{% if section.settings.button_url %}{{ section.settings.button_url }}{% else %}/{% endif %}">See All</a>
+  </div>
+  
+  <div class="perfektslide-{{ section.id }}"> 
+    {% for product in collection.products %} 
+  <div class="perfekto-gridu">
+      <div class="perfect-grid">
+        <div style="position: relative;" class="lazyloadt4sed">
+          <a class="" href="{{product.url}}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="product" foxtale-event-attr-tab-name="product">
+              <img  class="lazyload"   loading="lazy" alt="img"
+              src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
+               data-src="{{ product.images[0] | product_img_url: "master" }}"></a>
+          {%- if product.metafields.custom.bodybadge != blank -%}
+            <span class="body-badge"><h5>{{ product.metafields.custom.bodybadge }}</h5></span>
+          {%- endif -%}
+          <!-- <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv off-perfekt"></div> -->
+        </div>
+        <!-- <div style="width: 100%;" class="">
+          {% for media in product.media %}
+            <div class="inside-perfektimage">
+              <img src="{{ media.src | img_url: 'master' }}">
+            </div>
+          {% endfor %}
+        </div> -->
+        <div class="product-detailed">
+          <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-perfekt"></div> 
+          <div class="product-nomenclature">
+              <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">
+                {{- product.title -}}
+              </a>
+              {% if product.metafields.my_fields.hp_excerpt != blank %}
+                <p class="perfekt-sub fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
+                  {{ product.metafields.my_fields.hp_excerpt }}
+                </p>
+              {% endif %}
+          </div>
+          <div class="lower-grid">
+          <div class="product-price">
+            {%- for variant in product.variants limit: 1 -%}
+              <div class="{% if forloop.first %} active{% endif %}"> {% if variant.compare_at_price > variant.price %} <del>{{ variant.compare_at_price | money_with_currency }}</del>
+                <ins>{{ variant.price | money_with_currency }}</ins> {% else %} {{ variant.price | money_with_currency }} {% endif %}
+              </div> 
+            {% endfor %}
+            <div class="offers-tile">
+              {% if section.settings.offertext != blank %}
+                <div class="offer-vg">               
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.62129 1C6.09086 1 5.58215 1.21071 5.20708 1.58579L2.67678 4.11609C2.57915 4.21372 2.57915 4.37201 2.67678 4.46964L7.53033 9.32319C7.62796 9.42083 7.78625 9.42083 7.88388 9.32319L10.4142 6.79289C10.7893 6.41782 11 5.90911 11 5.37868V2.5C11 1.67157 10.3284 1 9.49997 1H6.62129ZM8.5 4.5C8.5 5.05228 8.05228 5.5 7.5 5.5C6.94772 5.5 6.5 5.05228 6.5 4.5C6.5 3.94772 6.94772 3.5 7.5 3.5C8.05228 3.5 8.5 3.94772 8.5 4.5Z" fill="#F88461"/>
+                  <path d="M6.82322 10.3839C6.92086 10.2862 6.92086 10.1279 6.82322 10.0303L1.96967 5.17675C1.87204 5.07912 1.71375 5.07912 1.61612 5.17675L1.35352 5.43934C0.767739 6.02513 0.767737 6.97487 1.35352 7.56066L4.43931 10.6464C5.0251 11.2322 5.97485 11.2322 6.56063 10.6464L6.82322 10.3839Z" fill="#F88461"/>
+                  </svg>
+                </div>
+                <h6>{{ section.settings.offertext }}</h6>
+              {% endif %}
+            </div>
+          </div>
+          {% if product.metafields.custom.check_variant %}
+            <div class="shop-all-qty-cart-btn">
+            <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection">
+            <span class="t4s-svg-pr-icon"></span>
+            <span class="t4s-text-pr">Select Shade</span>
+            </a>
+            </div>
+            {% else %} 
+            <div class="shop-all-qty-cart-btn">
+            <a href="{{ product.url }}" id="addtocart_r" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="dofollow">
+            <span class="t4s-svg-pr-icon"></span>
+            <span class="t4s-text-pr">Add to Cart</span>
+            </a>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %} 
+</div>
+</div>
+
+<script>
+  $('.perfektslide-{{ section.id }}').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }]
+  });
+  $(document).ready(function(){
+  $('.slik-right').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-next').click()
+  });
+  $('.slik-left').click(function(){
+      $(this).parent('.cus-btnlr').siblings('.cus-colselect').children('.slick-prev').click()
+  });
+  });
+</script> 
+
+{% schema %}
+  { "name": "Perfect Grid",
+    "settings": 
+    [ 
+      {
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+      },
+      { "id": "collekt",
+        "type": "collection",
+        "label": "Add Collection" 
+      }, 
+      { "id": "offertext",
+        "type": "text",
+        "label": "Offer Text" 
+      },
+      {
+      "type": "url",
+      "id": "button_url",
+      "label": "See all Button URL"
+      }
+    ],
+  "presets": [ { "name": "Perfect Grid" } ] } 
+{% endschema %}

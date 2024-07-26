@@ -1,0 +1,92 @@
+{% assign gift_product_total = 0 %}
+{% for item in cart.items %}
+  {% if item.final_line_price == 0 and item.original_line_price == 0 %}
+    {% assign gift_product_total = gift_product_total | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign total_cart_prod = cart.item_count | minus : gift_product_total %}
+
+{% if trigger_prod_count_1 == 0 %}
+    {% if cart.original_total_price < gift1_trigger_price and gift1_trigger_price > 0 and gift_prod_1 != blank%}
+      <div id="gift_1_wrap" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh {% if class != blank %}{{ class }}{% endif %}" data-pid="{{ gift_prod_1.id }}">
+        <div class="gift_img_wrap">
+        <img class="gift_prod_img " width="60" height="60" src="{{ gift_prod_1.featured_image | img_url: 'master' }}">
+        <div class="free_gift_lock">
+          {% render 'lock-icon-svg' %}
+        </div>
+        </div>
+        <div class="native_cart_info">
+           <a class="native_cart_title lg2">Upgrade your free gift!</a>
+          <!-- <a class="native_cart_title lg2">Unlock your free {{ gift_prod_1.title }}</a> -->
+          <div class="native_cart_details">
+         {% assign remaining_ammount1 = gift1_trigger_price | minus : cart.original_total_price | divided_by : 100 %}
+          {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>
+          <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span>{% endcomment %}
+           </div>
+        </div>
+     </div>
+    {% endif %}
+{% else %}
+    {% if total_cart_prod < trigger_prod_count_1 %}
+      <div id="gift_1_wrap" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh {% if class != blank %}{{ class }}{% endif %}" data-pid="{{ gift_prod_1.id }}">
+        <div class="gift_img_wrap">
+        <img class="gift_prod_img " width="60" height="60" src="{{ gift_prod_1.featured_image | img_url: 'master' }}">
+        <div class="free_gift_lock">
+          {% render 'lock-icon-svg' %}
+        </div>
+        </div>
+        <div class="native_cart_info">
+           <a class="native_cart_title lg2">Upgrade your free gift!</a>
+          <!-- <a class="native_cart_title lg2">Unlock your free {{ gift_prod_1.title }}</a> -->
+          <div class="native_cart_details">
+         {% assign remaining_ammount1 = gift1_trigger_price | minus : cart.original_total_price | divided_by : 100 %}
+          {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>
+          <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span>{% endcomment %}
+           </div>
+        </div>
+     </div>
+    {% endif %}
+{% endif %}
+
+ {% if trigger_prod_count_2 == 0 %}
+   {% if cart.original_total_price > gift1_trigger_price and cart.original_total_price < gift2_trigger_price and gift2_trigger_price > 0 and gift_prod_2 != blank %}
+    <div id="gift_2_wrap" style="margin: 0 !important;" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh {% if class != blank %}{{ class }}{% endif %}" data-pid="{{ gift_prod_2.id }}">
+      <div class="gift_img_wrap">
+      <img class="gift_prod_img lockedimg" width="60" height="60" src="{{ gift_prod_2.featured_image | img_url: 'master' }}">
+      <div class="free_gift_lock">
+        {% render 'lock-icon-svg' %}
+      </div>
+      </div>
+      <div class="native_cart_info gc2">
+         <a class="native_cart_title lg2">Upgrade your free gift!</a>
+        <div class="native_cart_details">
+       {% assign remaining_ammount2 = gift2_trigger_price | minus : cart.original_total_price | divided_by : 100 %}
+        {% comment %}<span>Add products worth <b>₹{{ remaining_ammount2 }}</b> to get your {{ gift_prod_2.title }}</span>
+        <span>Add {{ trigger_prod_count_2 | minus:total_cart_prod }} more product to unlock a <b>De-tan Scrub</b></span>{% endcomment %}
+         </div>
+      </div>
+   </div>
+    {% endif %}
+ {% else %}
+   {% if total_cart_prod < trigger_prod_count_2 and total_cart_prod >= trigger_prod_count_1 %}
+   {% if cart.original_total_price > gift1_trigger_price and gift2_trigger_price > 0 and gift_prod_2 != blank %}
+    <div id="gift_2_wrap" style="margin: 0 !important;" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh {% if class != blank %}{{ class }}{% endif %}" data-pid="{{ gift_prod_2.id }}">
+      <div class="gift_img_wrap">
+      <img class="gift_prod_img lockedimg" width="60" height="60" src="{{ gift_prod_2.featured_image | img_url: 'master' }}">
+      <div class="free_gift_lock">
+        {% render 'lock-icon-svg' %}
+      </div>
+      </div>
+      <div class="native_cart_info gc2">
+         <a class="native_cart_title lg2">Upgrade your free gift!</a>
+        <div class="native_cart_details">
+       {% assign remaining_ammount2 = gift2_trigger_price | minus : cart.original_total_price | divided_by : 100 %}
+        {% comment %}<span>Add products worth <b>₹{{ remaining_ammount2 }}</b> to get your {{ gift_prod_2.title }}</span>
+        <span>Add {{ trigger_prod_count_2 | minus:total_cart_prod }} more product to unlock a <b>De-tan Scrub</b></span>{% endcomment %}
+         </div>
+      </div>
+   </div>
+   {% endif %}
+   {% endif %}
+ {% endif %}

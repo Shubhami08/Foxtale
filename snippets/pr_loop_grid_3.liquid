@@ -119,12 +119,14 @@
 
                     {% assign target_tag = "Combos" %}
                     {% if product.tags contains target_tag %}
-                      <p class="bottom-leftext">Upto 15% Off</p>
+                      <p class="bottom-leftext">10% Off</p>
                     {% else %}
                       {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                         <p class="bottom-leftext">B2G2</p>
+                      {% elsif collection.handle == "adnetwork-exclusive-offer" %}
+                        <p class="bottom-leftext">B1G1</p>
                       {% else %}
-                        <p class="bottom-leftext">Upto 15% Off</p>
+                        <p class="bottom-leftext">25% Off</p>
                       {% endif %} 
                     {% endif %}
                     
@@ -149,14 +151,19 @@
                       </div>
                       {% endif %}{% endcomment %}
                     {% assign target_tag = "Combos" %}
+                    {% assign main_tag = "Body-care" %}
                     {% if product.tags contains target_tag %}
                       <p class="bottom-rightext"></p>
                     {% else %}
                       {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                         <p class="bottom-rightext">Free Gift</p>
-                      {% else %}
+                      {% else %} 
+                       {% if product.tags contains main_tag %}
                         <p class="bottom-rightext"></p>
+                         {% else %}
+                         <p class="bottom-rightext">Free Eye Mask</p>
                       {% endif %}
+                    {% endif %}
                     {% endif %}
                    </div>
    {%- if color_count > 0 -%}
@@ -165,14 +172,36 @@
 </div>
 </div>
   {% if product.metafields.custom.check_variant %}
-          <div class="shop-all-qty-cart-btn">
-              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-          </div>
-      {% else %}
-        <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-           <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-        </div>
-      {% endif %}
+      <div class="shop-all-qty-cart-btn">
+          <a href="{{ product.url }}" 
+            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
+            data-foxtale-event="add-to-cart-click-event" 
+            foxtale-event-attr-api-url-for-data="{{ product.url }}" 
+            foxtale-event-attr-from="from-homepage"
+          ><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
+      </div>
+  {% else %}
+    <!-- <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+       <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
+        data-foxtale-event="add-to-cart-click-event" 
+        foxtale-event-attr-api-url-for-data="{{ product.url }}" 
+        foxtale-event-attr-from="from-homepage"
+        data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+    </div> -->
+    <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+      <a
+        href="javascript:void(0)"
+        id="addtocart_sl"
+        class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
+        data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+        data-variant-id="{{product.first_available_variant.id}}"
+        data-action-atc
+        rel="nofollow"
+        ><span class="t4s-svg-pr-icon"></span
+        ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
+      >
+    </div>
+  {% endif %}
 
 </div>
 </div>
