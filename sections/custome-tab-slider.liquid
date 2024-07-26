@@ -217,21 +217,28 @@
                                 </div>
                                 </div>
                                  {% endif %}
-                              {% endcomment %}
+                              
                               {% assign target_tag = "Combos" %}
-                              {% if product.tags contains target_tag %}
-                                <p class="bottom-leftext">10% Off</p>
+                              {% endcomment %}
+                              {% assign main_tag = "Body-care" %}
+                              {% if product.tags contains main_tag %}
+                                <p class="bottom-leftext">15% Off</p>
                               {% else %}
                                 {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                                   <p class="bottom-leftext">B2G2</p>
                                 {% else %}
-                                  <p class="bottom-leftext">Upto 15% Off</p>
+                                  <p class="bottom-leftext">25% Off</p>
                                 {% endif %} 
                               {% endif %}
-                              {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                                <p class="bottom-rightext">Free Gift</p>
+                              {% assign target_tag = "Combos" %}
+                              {% if product.tags contains target_tag or product.tags contains main_tag %}
+                              <p class="bottom-rightext"></p>
                               {% else %}
-                                <p class="bottom-rightext"></p>
+                                {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
+                                  <p class="bottom-rightext">Free Gift</p>
+                                {% else %}
+                                  <p class="bottom-rightext">Free Eye Mask</p>
+                                 {% endif %}
                               {% endif %}
                             </div>
                           </div>

@@ -207,9 +207,14 @@
          </div>
       {%- endif -%}
       <form action="{{ cart_url }}" method="post" novalidate class="t4s-drawer__wrap">
-        
+
+        <!-- ################## for default native cart gift ################## -->
         {% assign gift_prod_1 = settings.gift_product_1 %}
         {% assign gift_prod_2 = settings.gift_product_2 %}
+        {% assign trigger_prod_count_2 = settings.free_gift_v1_trigger_qty_2 %}
+        {% assign trigger_prod_count_1 = settings.free_gift_v1_trigger_qty_1 %}
+        {% assign gift1_trigger_price = settings.trigger_price_1 | times: 100 %}
+        {% assign gift2_trigger_price = settings.trigger_price_2 | times: 100 %}
         
          <input type="hidden" data-cart-attr-rm name="attributes[collection_items_per_row]" value="">
          {%- if se_stts.enable_discount %}<input type="hidden" data-cart-discount name="discount" value="">{% endif -%}
@@ -238,173 +243,54 @@
                       {%- render 'cart-item', item:item ,gift_pr_id:gift_pr_id, min_qty:min_qty, compare_tt_price:compare_tt_price, cart_change_url:cart_change_url, edit_item:edit_item, cur_code_enabled:cur_code_enabled, atc_ajax_enable:atc_ajax_enable, cart_ajax_enable:cart_ajax_enable -%}
                  {% endif %}           
                {%- endfor -%}
-                 <div data-pid="{{gift_prod_1.id}}" class="free_gift_detail upgrade_gift" style="display:none;">
-                    <div class="free_gift_pop_close_wrap">
-                      <button class="free_gift_pop_close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.46017 10.8607C4.27272 11.0481 4.27272 11.352 4.46017 11.5395C4.64762 11.7269 4.95154 11.7269 5.13899 11.5395L4.46017 10.8607ZM8.33897 8.33946C8.52643 8.152 8.52643 7.84813 8.33897 7.66067C8.15151 7.47322 7.84764 7.47322 7.66019 7.66067L8.33897 8.33946ZM7.66019 7.66067C7.47273 7.84813 7.47273 8.152 7.66019 8.33946C7.84764 8.52691 8.15151 8.52691 8.33897 8.33946L7.66019 7.66067ZM11.539 5.13948C11.7264 4.95203 11.7264 4.64811 11.539 4.46066C11.3515 4.27321 11.0476 4.27321 10.8602 4.46066L11.539 5.13948ZM8.33897 7.66067C8.15151 7.47322 7.84764 7.47322 7.66019 7.66067C7.47273 7.84813 7.47273 8.152 7.66019 8.33946L8.33897 7.66067ZM10.8602 11.5395C11.0476 11.7269 11.3515 11.7269 11.539 11.5395C11.7264 11.352 11.7264 11.0481 11.539 10.8607L10.8602 11.5395ZM7.66019 8.33946C7.84764 8.52691 8.15151 8.52691 8.33897 8.33946C8.52643 8.152 8.52643 7.84813 8.33897 7.66067L7.66019 8.33946ZM5.13899 4.46066C4.95154 4.27321 4.64762 4.27321 4.46017 4.46066C4.27272 4.64811 4.27272 4.95203 4.46017 5.13948L5.13899 4.46066ZM5.13899 11.5395L8.33897 8.33946L7.66019 7.66067L4.46017 10.8607L5.13899 11.5395ZM8.33897 8.33946L11.539 5.13948L10.8602 4.46066L7.66019 7.66067L8.33897 8.33946ZM7.66019 8.33946L10.8602 11.5395L11.539 10.8607L8.33897 7.66067L7.66019 8.33946ZM8.33897 7.66067L5.13899 4.46066L4.46017 5.13948L7.66019 8.33946L8.33897 7.66067Z" fill="#2C2C2C"></path></svg>
-                      </button>
-                    </div>
-                    <div class="free_gift_pop_info_wrap">
-                      <h5 class="free_gift_pop_title">{{ gift_prod_1.title }}</h5>
-                     {% if gift_prod_1.metafields.custom.free_gift_popup_info_1 != blank %}
-                      <p>{{ gift_prod_1.metafields.custom.free_gift_popup_info_1 }}</p>
-                      {% endif %}
-                     {% if gift_prod_1.metafields.custom.free_gift_popup_info_2 != blank %}
-                      <p>{{ gift_prod_1.metafields.custom.free_gift_popup_info_2 }}</p>
-                      {% endif %}
-                    </div>
-                    {%- if gift_prod_1.featured_image != blank -%}
-                      <img class="lazyloadt4s free_gift_pop_img" width="120" height="{{ 120 | divided_by: gift_prod_1.featured_image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ gift_prod_1.featured_image | img_url: 'master' }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ gift_prod_1.featured_image.alt | escape }}">
-                    {%- endif -%}
-                </div>
-                <div data-pid="{{gift_prod_2.id}}" class="free_gift_detail upgrade_gift" style="display:none;">
-                    <div class="free_gift_pop_close_wrap">
-                      <button class="free_gift_pop_close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.46017 10.8607C4.27272 11.0481 4.27272 11.352 4.46017 11.5395C4.64762 11.7269 4.95154 11.7269 5.13899 11.5395L4.46017 10.8607ZM8.33897 8.33946C8.52643 8.152 8.52643 7.84813 8.33897 7.66067C8.15151 7.47322 7.84764 7.47322 7.66019 7.66067L8.33897 8.33946ZM7.66019 7.66067C7.47273 7.84813 7.47273 8.152 7.66019 8.33946C7.84764 8.52691 8.15151 8.52691 8.33897 8.33946L7.66019 7.66067ZM11.539 5.13948C11.7264 4.95203 11.7264 4.64811 11.539 4.46066C11.3515 4.27321 11.0476 4.27321 10.8602 4.46066L11.539 5.13948ZM8.33897 7.66067C8.15151 7.47322 7.84764 7.47322 7.66019 7.66067C7.47273 7.84813 7.47273 8.152 7.66019 8.33946L8.33897 7.66067ZM10.8602 11.5395C11.0476 11.7269 11.3515 11.7269 11.539 11.5395C11.7264 11.352 11.7264 11.0481 11.539 10.8607L10.8602 11.5395ZM7.66019 8.33946C7.84764 8.52691 8.15151 8.52691 8.33897 8.33946C8.52643 8.152 8.52643 7.84813 8.33897 7.66067L7.66019 8.33946ZM5.13899 4.46066C4.95154 4.27321 4.64762 4.27321 4.46017 4.46066C4.27272 4.64811 4.27272 4.95203 4.46017 5.13948L5.13899 4.46066ZM5.13899 11.5395L8.33897 8.33946L7.66019 7.66067L4.46017 10.8607L5.13899 11.5395ZM8.33897 8.33946L11.539 5.13948L10.8602 4.46066L7.66019 7.66067L8.33897 8.33946ZM7.66019 8.33946L10.8602 11.5395L11.539 10.8607L8.33897 7.66067L7.66019 8.33946ZM8.33897 7.66067L5.13899 4.46066L4.46017 5.13948L7.66019 8.33946L8.33897 7.66067Z" fill="#2C2C2C"></path></svg>
-                      </button>
-                    </div>
-                    <div class="free_gift_pop_info_wrap">
-                      <h5 class="free_gift_pop_title">{{ gift_prod_2.title }}</h5>
-                     {% if gift_prod_2.metafields.custom.free_gift_popup_info_1 != blank %}
-                      <p>{{ gift_prod_2.metafields.custom.free_gift_popup_info_1 }}</p>
-                      {% endif %}
-                     {% if gift_prod_2.metafields.custom.free_gift_popup_info_2 != blank %}
-                      <p>{{ gift_prod_2.metafields.custom.free_gift_popup_info_2 }}</p>
-                      {% endif %}
-                    </div>
-                    {%- if gift_prod_2.featured_image != blank -%}
-                      <img class="lazyloadt4s free_gift_pop_img" width="120" height="{{ 120 | divided_by: gift_prod_2.featured_image.aspect_ratio | ceil }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ gift_prod_2.featured_image | img_url: 'master' }}" data-widths="[120, 240]" data-sizes="auto" alt="{{ gift_prod_2.featured_image.alt | escape }}">
-                    {%- endif -%}
-                </div>
+                 {% render 'free-gift-popup',gift_prod_1:gift_prod_1,gift_prod_2:gift_prod_2 %}
+                <!-- ################## for landing page base cart gift start ################## -->
+                {% for i in (1..10) %}
+                  {% assign landing_page_list = i | append: '_landing_page_list' %}
+                  {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
+                  {% if landing_page_for_diff_gift != blank %}
+                    {% assign l_gift_product_1 = i | append: '_l_gift_product_1' %}
+                    {% assign l_gift_product_2 = i | append: '_l_gift_product_2' %}
+                    {% assign landing_gift_product_1 = settings[l_gift_product_1] %}
+                    {% assign landing_gift_product_2 = settings[l_gift_product_2] %}
+                    {% render 'free-gift-popup',gift_prod_1:landing_gift_product_1,gift_prod_2:landing_gift_product_2 %}
+                  {% endif %}
+                {% endfor %}
+                <!-- ################## for landing page base cart gift end ################## -->
              </div>
 
-           {% assign gift_product_total = 0 %}
-            {% for item in cart.items %}
-              {% if item.final_line_price == 0 and item.original_line_price == 0 %}
-                {% assign gift_product_total = gift_product_total | plus: 1 %}
-              {% elsif item.product.type == 'Bodycare' %}
-                {% assign gift_product_total = gift_product_total | plus: item.quantity %}
+           {% assign landing_page_list = ''%}
+            {% assign landing_page_for_diff_gift = settings.landing_page_list %}
+            {%- for collection in landing_page_for_diff_gift -%}
+              {% assign landing_page_list = landing_page_list | append: collection.handle %}
+              {% if forloop.last != true %}{% assign landing_page_list = landing_page_list | append: ',' %}{% endif %}
+            {% endfor %}
+            {% assign landing_page_array = landing_page_list | split:',' %}
+             
+
+            {% render 'free-gift-detail',class:"default-native-gift",gift_prod_1:gift_prod_1,gift_prod_2:gift_prod_2,trigger_prod_count_1:trigger_prod_count_1,trigger_prod_count_2:trigger_prod_count_2,gift1_trigger_price:gift1_trigger_price,gift2_trigger_price:gift2_trigger_price %}
+            <!-- ################## for landing page base cart gift start ################## -->
+            {% for i in (1..10) %}
+              {% assign landing_page_list = i | append: '_landing_page_list' %}
+              {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
+              {% if landing_page_for_diff_gift != blank %}
+                {% assign l_gift_product_1 = i | append: '_l_gift_product_1' %}
+                {% assign l_gift_product_2 = i | append: '_l_gift_product_2' %}
+                {% assign l_free_gift_v1_trigger_qty_1 = i | append: '_l_free_gift_v1_trigger_qty_1' %}
+                {% assign l_free_gift_v1_trigger_qty_2 = i | append: '_l_free_gift_v1_trigger_qty_2' %}
+                {% assign l_trigger_price_1 = i | append: '_l_trigger_price_1' %}
+                {% assign l_trigger_price_2 = i | append: '_l_trigger_price_2' %}
+                {% assign landing_gift_product_1 = settings[l_gift_product_1] %}
+                {% assign landing_gift_product_2 = settings[l_gift_product_2] %}
+                {% assign landing_free_gift_v1_trigger_count_1= settings[l_free_gift_v1_trigger_qty_1] %}
+                {% assign landing_free_gift_v1_trigger_count_2= settings[l_free_gift_v1_trigger_qty_2] %}
+                {% assign landing_trigger_price_1= settings[l_trigger_price_1] | times: 100 %}
+                {% assign landing_trigger_price_2= settings[l_trigger_price_2] | times: 100 %}
+                {% assign free_gift_class = 'landing-page-base-gift landing-page-base-gift-' | append: i %}
+                {% render 'free-gift-detail',class:free_gift_class,gift_prod_1:landing_gift_product_1,gift_prod_2:landing_gift_product_2,trigger_prod_count_1:landing_free_gift_v1_trigger_count_1,trigger_prod_count_2:landing_free_gift_v1_trigger_count_2,gift1_trigger_price:landing_trigger_price_1,gift2_trigger_price:landing_trigger_price_2 %}
               {% endif %}
             {% endfor %}
-
-                 
-            {% assign total_cart_prod = cart.item_count | minus : gift_product_total %}
-            {% assign trigger_prod_count_2 = settings.free_gift_v1_trigger_qty_2 %}
-             {% assign trigger_prod_count_1 = settings.free_gift_v1_trigger_qty_1 %}
-                 
-            {% assign gift1_trigger_price = settings.trigger_price_1 | times: 100 %}
-            {% if trigger_prod_count_1 == 0 %}
-                {% if cart.original_total_price < gift1_trigger_price and gift1_trigger_price > 0 and gift_prod_1 != blank%}
-                  <div id="gift_1_wrap" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh" data-pid="{{ gift_prod_1.id }}">
-                    <div class="gift_img_wrap">
-                    <img class="gift_prod_img " width="60" height="60" src="{{ gift_prod_1.featured_image | img_url: 'master' }}">
-                    <div class="free_gift_lock">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <g id="SVGRepo_iconCarrier">
-                      <path id="Vector" d="M1 8C1 6.5858 1 5.8787 1.43934 5.43935C1.87868 5 2.58579 5 4 5H8C9.4142 5 10.1213 5 10.5606 5.43935C11 5.8787 11 6.5858 11 8C11 9.4142 11 10.1213 10.5606 10.5606C10.1213 11 9.4142 11 8 11H4C2.58579 11 1.87868 11 1.43934 10.5606C1 10.1213 1 9.4142 1 8Z" stroke="white" stroke-width="0.75"/>
-                      <path id="Vector_2" d="M6 7V9" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      <path id="Vector_3" d="M3 5V4C3 2.34315 4.34315 1 6 1C7.65685 1 9 2.34315 9 4V5" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      </g>
-                      </svg>
-                    </div>
-                    </div>
-                    <div class="native_cart_info">
-                       <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
-                      <a class="native_cart_title lg2">Unlock your free Lip Mask!</a>
-                      <div class="native_cart_details">
-                     {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
-                      {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
-                      <!-- <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span> -->
-                       </div>
-                    </div>
-                 </div>
-                {% endif %}
-            {% else %}
-            {% if total_cart_prod < trigger_prod_count_1 %}
-              <div id="gift_1_wrap" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh" data-pid="{{ gift_prod_1.id }}">
-                    <div class="gift_img_wrap">
-                    <img class="gift_prod_img " width="60" height="60" src="{{ gift_prod_1.featured_image | img_url: 'master' }}">
-                    <div class="free_gift_lock">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <g id="SVGRepo_iconCarrier">
-                      <path id="Vector" d="M1 8C1 6.5858 1 5.8787 1.43934 5.43935C1.87868 5 2.58579 5 4 5H8C9.4142 5 10.1213 5 10.5606 5.43935C11 5.8787 11 6.5858 11 8C11 9.4142 11 10.1213 10.5606 10.5606C10.1213 11 9.4142 11 8 11H4C2.58579 11 1.87868 11 1.43934 10.5606C1 10.1213 1 9.4142 1 8Z" stroke="white" stroke-width="0.75"/>
-                      <path id="Vector_2" d="M6 7V9" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      <path id="Vector_3" d="M3 5V4C3 2.34315 4.34315 1 6 1C7.65685 1 9 2.34315 9 4V5" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      </g>
-                      </svg>
-                    </div>
-                    </div>
-                    <div class="native_cart_info">
-                       <!-- <a class="native_cart_title">Upgrade your free gift!</a> -->
-                      <a class="native_cart_title lg2">Unlock your free Lip Mask!</a>
-                      <div class="native_cart_details">
-                     {% assign remaining_ammount1 = settings.trigger_price_1 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
-                      {% comment %}<span>Add products worth <b>₹{{ remaining_ammount1 }}</b> to get your {{ gift_prod_1.title }}</span>{% endcomment %}
-                      <!-- <span>Add {{ trigger_prod_count_1 | minus:total_cart_prod }} more product to unlock your <b>free Gift</b>!</span> -->
-                       </div>
-                    </div>
-                 </div>
-               {% endif %}
-              
-              {% endif %}
-
-               {% assign gift2_trigger_price = settings.trigger_price_2 | times: 100 %}
-               {% if trigger_prod_count_2 == 0 %}
-               {% if cart.original_total_price > gift1_trigger_price and cart.original_total_price < gift2_trigger_price and gift2_trigger_price > 0 and gift_prod_2 != blank %}
-                  <div id="gift_2_wrap" style="margin: 0 !important;" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh" data-pid="{{ gift_prod_2.id }}">
-                    <div class="gift_img_wrap">
-                    <img class="gift_prod_img lockedimg" width="60" height="60" src="{{ gift_prod_2.featured_image | img_url: 'master' }}">
-                    <div class="free_gift_lock">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <g id="SVGRepo_iconCarrier">
-                      <path id="Vector" d="M1 8C1 6.5858 1 5.8787 1.43934 5.43935C1.87868 5 2.58579 5 4 5H8C9.4142 5 10.1213 5 10.5606 5.43935C11 5.8787 11 6.5858 11 8C11 9.4142 11 10.1213 10.5606 10.5606C10.1213 11 9.4142 11 8 11H4C2.58579 11 1.87868 11 1.43934 10.5606C1 10.1213 1 9.4142 1 8Z" stroke="white" stroke-width="0.75"/>
-                      <path id="Vector_2" d="M6 7V9" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      <path id="Vector_3" d="M3 5V4C3 2.34315 4.34315 1 6 1C7.65685 1 9 2.34315 9 4V5" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      </g>
-                      </svg>
-                    </div>
-                    </div>
-                    <div class="native_cart_info gc2">
-                       <a class="native_cart_title lg2">Upgrade your free gift!</a>
-                      <div class="native_cart_details">
-                     {% assign remaining_ammount2 = settings.trigger_price_2 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
-                      {% comment %}<span>Add products worth <b>₹{{ remaining_ammount2 }}</b> to get your {{ gift_prod_2.title }}</span>{% endcomment %}
-                      <span>Add {{ trigger_prod_count_2 | minus:total_cart_prod }} more product to unlock a <b>De-tan Scrub</b></span>
-                       </div>
-                    </div>
-                 </div>
-                {% endif %}
-                 
-                 {% else %}
-                 
-                 {% if total_cart_prod < trigger_prod_count_2 and total_cart_prod >= trigger_prod_count_1 %}
-                   
-                 {% if cart.original_total_price > gift1_trigger_price and gift2_trigger_price > 0 and gift_prod_2 != blank %}
-                  <div id="gift_2_wrap" style="margin: 0 !important;" class="gift_lock_list t4s-mini_cart__item t4s-d-flex t4s-align-items-center t4s-pr t4s-oh" data-pid="{{ gift_prod_2.id }}">
-                    <div class="gift_img_wrap">
-                    <img class="gift_prod_img lockedimg" width="60" height="60" src="{{ gift_prod_2.featured_image | img_url: 'master' }}">
-                    <div class="free_gift_lock">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <g id="SVGRepo_iconCarrier">
-                      <path id="Vector" d="M1 8C1 6.5858 1 5.8787 1.43934 5.43935C1.87868 5 2.58579 5 4 5H8C9.4142 5 10.1213 5 10.5606 5.43935C11 5.8787 11 6.5858 11 8C11 9.4142 11 10.1213 10.5606 10.5606C10.1213 11 9.4142 11 8 11H4C2.58579 11 1.87868 11 1.43934 10.5606C1 10.1213 1 9.4142 1 8Z" stroke="white" stroke-width="0.75"/>
-                      <path id="Vector_2" d="M6 7V9" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      <path id="Vector_3" d="M3 5V4C3 2.34315 4.34315 1 6 1C7.65685 1 9 2.34315 9 4V5" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
-                      </g>
-                      </svg>
-                    </div>
-                    </div>
-                    <div class="native_cart_info gc2">
-                       <a class="native_cart_title lg2">Upgrade your free gift!</a>
-                      <div class="native_cart_details">
-                     {% assign remaining_ammount2 = settings.trigger_price_2 | times: 100 | minus : cart.original_total_price | divided_by : 100 %}
-                      {% comment %}<span>Add products worth <b>₹{{ remaining_ammount2 }}</b> to get your {{ gift_prod_2.title }}</span>{% endcomment %}
-                      <span>Add {{ trigger_prod_count_2 | minus:total_cart_prod }} more product to unlock a <b>De-tan Scrub</b></span>
-                       </div>
-                    </div>
-                 </div>
-                {% endif %}
-                   {% endif %}
-               {% endif %}
+                 <!-- ################## for landing page base cart gift end ################## -->
 
                {%- else -%}
 
@@ -429,7 +315,8 @@
                      {%- assign bk_stts = block.settings -%}
                      {%- assign button_style = bk_stts.button_style -%}
                         {%- if bk_stts.title != blank -%}
-                           <p class="t4s-return-to-shop"><a data-loading-bar class="t4s-btn-cart__emty t4s-btn t4s-btn-base t4s-btn-style-{{button_style}} t4s-btn-color-{{bk_stts.btn_cl}} {% if button_style == 'default' or button_style == 'outline'%}t4s-btn-effect-{{bk_stts.button_effect}}{% endif %} t4s-justify-content-center t4s-truncate" href="{{bk_stts.url | default:routes.all_products_collection_url}}">{{ bk_stts.title }}{%- if bk_stts.btn_icon -%}<svg  class="t4s-btn-icon" viewBox="0 0 14 10"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}</a></p>
+                           <p class="t4s-return-to-shop for_all_site"><a data-loading-bar class="{{ request.path }} t4s-btn-cart__emty t4s-btn t4s-btn-base t4s-btn-style-{{button_style}} t4s-btn-color-{{bk_stts.btn_cl}} {% if button_style == 'default' or button_style == 'outline'%}t4s-btn-effect-{{bk_stts.button_effect}}{% endif %} t4s-justify-content-center t4s-truncate" href="{{bk_stts.url | default:routes.all_products_collection_url}}">{{ bk_stts.title }}{%- if bk_stts.btn_icon -%}<svg  class="t4s-btn-icon" viewBox="0 0 14 10"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}</a></p>
+                            <!-- <p class="t4s-return-to-shop for_slash_prod"><a data-loading-bar class="{{ request.path }} t4s-btn-cart__emty t4s-btn t4s-btn-base t4s-btn-style-{{button_style}} t4s-btn-color-{{bk_stts.btn_cl}} {% if button_style == 'default' or button_style == 'outline'%}t4s-btn-effect-{{bk_stts.button_effect}}{% endif %} t4s-justify-content-center t4s-truncate" href="/collections/shop-2">{{ bk_stts.title }}{%- if bk_stts.btn_icon -%}<svg  class="t4s-btn-icon" viewBox="0 0 14 10"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}</a></p> -->
                         {%- endif -%}
                      {%- endfor -%}
                      {%- endif -%}
@@ -471,7 +358,11 @@
                  </ul>
               {%- endif -%}
             
-
+            {% if cart.items_subtotal_price > 69900 %}
+              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply code at next step</p></div>
+            {% else %}
+              <div class="saleBar" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
+            {% endif %}
             
 
             {% if cart.items_subtotal_price > 69900 %}
@@ -506,8 +397,6 @@
             {% for item in cart.items %}
               {% if item.final_line_price == 0 and item.original_line_price == 0 %}
                 {% assign gift_product_total = gift_product_total | plus: 1 %}
-              {% elsif item.product.type == 'Bodycare' %}
-                {% assign gift_product_total = gift_product_total | plus: item.quantity %}
               {% endif %}
             {% endfor %}
 
@@ -528,7 +417,8 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 more product to get <strong>Buy2@799 + Heart Candle</strong></p></div>
               {% elsif total_cart_prod == 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add 1 more product to get <strong>Buy3@1099 + Lip Mask</strong></p></div>
-              {% endif %}         
+              {% endif %}
+              
   
               {% if total_cart_prod > 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>VDAY1099</b> at next step to avail the Offer.</p></div>
@@ -536,7 +426,8 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799</strong></p></div>
               {% elsif total_cart_prod == 2 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + Lip Mask</strong></p></div>
-              {% endif %}    
+              {% endif %}
+            
 
               {% if total_cart_prod > 3 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1399</b> at next step to avail the Offer.</p></div>
@@ -552,7 +443,8 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at next step to avail the Offer.</p></div>
               {% else %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to avail <strong>FOX1099</strong></p></div>
-              {% endif %}           
+              {% endif %}
+              
 
               {% if total_cart_prod > 3 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply offer on the next step</p></div>
@@ -562,7 +454,9 @@
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail the offer</p></div>
               {% elsif total_cart_prod == 3 %}
                 <div class="saleBar" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
-              {% endif %}              
+              {% endif %}
+              
+              
               
               {% assign cart_item_ids = '' %}
               {% for item in cart_items %}
@@ -573,21 +467,22 @@
 
               {% if cart_item_ids_array contains '44409361957111' %}
                 {% if total_cart_prod > 2 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">You've unlocked a free SPF 50 Glow Sunscreen. <strong>Use code SPF</strong> at checkout.</p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">You've unlocked a free SPF 50 Glow Sunscreen. <strong>Use code SPF</strong> at checkout.</p></div>
                 {% elsif total_cart_prod == 1 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 2 products to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 2 products to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
                 {% elsif total_cart_prod == 2 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 1 more product to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 1 more product to get the SPF 50 Glow Sunscreen for free. <strong>Use code SPF</strong></p></div>
                 {% endif %}
               {% else %}
                 {% if total_cart_prod > 2 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">FREE Sunscreen unlocked <strong>Use code: SPF</strong> at the next step to get your sunscreen.</p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">FREE Sunscreen unlocked <strong>Use code: SPF</strong> at the next step to get your sunscreen.</p></div>
                 {% elsif total_cart_prod == 1 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 1 more product to cart to unlock a FREE <strong>SPF 50 Glow Sunscreen</strong></p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add 1 more product to cart to unlock a FREE <strong>SPF 50 Glow Sunscreen</strong></p></div>
                 {% elsif total_cart_prod == 2 %}
-                  <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">FREE Sunscreen unlocked <strong>Use code: SPF</strong> at the next step to get your sunscreen.</p></div>
+                  <div class="saleBar show-landing-page" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">FREE Sunscreen unlocked <strong>Use code: SPF</strong> at the next step to get your sunscreen.</p></div>
                 {% endif %}
-              {% endif %}              
+              {% endif %}
+              
 
               {% if total_cart_prod > 2 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
@@ -597,152 +492,69 @@
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;">Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
               {% endif %}
 
-              {% if total_cart_prod > 2 %}
+                            {% if total_cart_prod > 2 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to unlock the De-Tan Scrub</p></div>
               {% elsif total_cart_prod == 1 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>Buy2@799 + Sheet Mask</strong></p></div>
               {% elsif total_cart_prod == 2 %}
                 <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>Buy3@1099 + De-tan Scrub</strong></p></div>
-              {% endif %}            
-
-              {% if total_cart_prod > 1 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW10</b> at checkout</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>GLOW10 + Eye Mask</strong></p></div>
               {% endif %}
 
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply the Code <b>B2G2</b> at checkout</p></div>
-              {% else %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <b>B2G2</b></p></div>
-              {% endif %}
-
-              {% if total_cart_prod >= 1 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW10</b> at checkout to get your Free Eye Mask</p></div>
-              {% endif %}
-
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>FOX1099</b> at checkout to get these @ 1099</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>FOX799</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>FOX1099</strong></p></div>
-              {% endif %}              
-
-
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply the code <strong>FOX1099</strong> at checkout to get these @ 1099</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>FOX799</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>FOX1099</strong></p></div>
-              {% endif %}
-              {% endcomment %}
-
-                            {% if cart.items_subtotal_price > 69900 %}
-              <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>GLOW15</b> at the checkout!</p></div>
-            {% else %}
-              <div class="saleBar show-default" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth <b>{{ 69900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> & get <strong>15% off</strong></p></div>
-            {% endif %}
-
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>B2G2</b> at the checkout!</p></div>
-              {% else %}
-                <div class="saleBar show-new" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more skincare product to unlock your free <strong>Lip mask!</strong></p></div>
-              {% endif %}
-
-              <!-- {% if total_cart_prod > 3 %}
-                <div class="saleBar shop-1" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply the Code <b>B2G2</b> at checkout</p></div>
-              {% else %}
-                <div class="saleBar shop-1" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail <b>B2G2</b></p></div>
-              {% endif %} -->
-
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar b2g2-rib" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply your code at checkout!</p></div>
-              {% else %}
-                <div class="saleBar b2g2-rib" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <b>B2G2</b></p></div>
-              {% endif %}
-
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar monsoon-offer" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>RAIN</b> at checkout</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar monsoon-offer" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to unlock a free <strong>De-Tan Scrub</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar monsoon-offer" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to unlock a free <strong>De-Tan Scrub</strong></p></div>
-              {% endif %}
-
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar shop-2" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply the code <strong>SUN4</strong> at checkout</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar shop-2" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <strong>SUN4</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar shop-2" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail <strong>SUN4</strong></p></div>
-              {% elsif total_cart_prod == 3 %}
-                <div class="saleBar shop-2" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail <strong>SUN4</strong></p></div>
-              {% endif %}
-
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>SPF</b> at checkout</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar shop-3" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <strong>Glow Sunscreen</strong> Free</p></div>
-              {% endif %}
-
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>DETAN</b> at checkout</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to get <strong>De-tan Scrub</strong> Free</p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar shop-4" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more product to get <strong>De-tan Scrub</strong> Free</p></div>
-              {% endif %}
-
-              {% if cart.items_subtotal_price > 99900 %}
-                <div class="saleBar phonefourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPP400</b> at checkout to get ₹400 Off</p></div>
-              {% else %}
-                <div class="saleBar phonefourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 99900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹400 Off</b></p></div>
-              {% endif %}
               
-              {% if cart.items_subtotal_price > 99900 %}
-                <div class="saleBar zomatofourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Coupon Code at checkout to get ₹400 Off</p></div>
-              {% else %}
-                <div class="saleBar zomatofourhundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 99900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹400 Off</b></p></div>
+
+              {% if total_cart_prod > 2 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use Code: <b>BUY3</b> at checkout</p></div>
+              {% elsif total_cart_prod == 1 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more products to avail <strong>BUY2</strong></p></div>
+              {% elsif total_cart_prod == 2 %}
+                <div class="saleBar show-default" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 3 | minus: total_cart_prod }}</b> more products to avail <strong>BUY3</strong></p></div>
               {% endif %}
               
               {% if cart.items_subtotal_price > 59900 %}
-                <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPP200</b> at checkout to get ₹200 Off</p></div>
+                <div class="saleBar show-landing-page" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Use code <b>FOXPPSUN</b> to get this sunscreen for free</p></div>
               {% else %}
-                <div class="saleBar phonetwohundred" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 59900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to get <b>₹200 Off</b></p></div>
+                <div class="saleBar show-landing-page" style=" background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add products worth ₹<b>{{ 59900 | minus: cart.items_subtotal_price | divided_by: 100 }}</b> to unlock a <b>Free Sunscreen</b></p></div>
               {% endif %}
+              {% endcomment %}
 
-              {% if total_cart_prod > 2 %}
-                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code at checkout!</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 2 | minus: total_cart_prod }}</b> more product to avail <strong>B1G1</strong></p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar secretsale" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 12px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code <b>B1G1</b> at checkout!</p></div>
+              <!-- for exclude bodycare start -->
+              {% assign exclude_total_price = cart.items_subtotal_price %}
+              {% assign main_tag = "Body-care" %}
+              {% for item in cart.items %}
+              {% if item.product.tags contains main_tag %}
+                {% assign exclude_total_price = exclude_total_price | minus: item.final_line_price %}
               {% endif %}
+              {% endfor %}
+              <!-- for exclude bodycare end -->
 
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar frontspecial" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code on the next step</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar frontspecial" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar frontspecial" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail the offer</p></div>
-              {% elsif total_cart_prod == 3 %}
-                <div class="saleBar frontspecial" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
-              {% endif %}
+              {% assign cart_ribbon_type = settings.cart_ribbon_type %}
+              {% assign ribbon_class = "show-default" %}
+              {% assign CODE = settings.cart_ribbon_discount_code %}
+              {% assign trigger_ribbon_price = settings.cart_trigger_price | times:100  %}
+              {% assign PRICE = trigger_ribbon_price | minus: exclude_total_price | divided_by: 100  %}
+              {% assign trigger_product_count = settings.prod_success_count  %}
+              {% assign PRODUCT = trigger_product_count | minus: total_cart_prod %}
+              {% render 'cart-ribbon' , i:0, cart:cart, total_cart_prod:total_cart_prod ,cart_ribbon_type:cart_ribbon_type ,class:ribbon_class ,CODE:CODE ,trigger_ribbon_price:trigger_ribbon_price,trigger_product_count:trigger_product_count ,PRICE:PRICE ,PRODUCT:PRODUCT %}
 
-              {% if total_cart_prod > 3 %}
-                <div class="saleBar exclusive" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Apply Code on the next step</p></div>
-              {% elsif total_cart_prod == 1 %}
-                <div class="saleBar exclusive" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
-              {% elsif total_cart_prod == 2 %}
-                <div class="saleBar exclusive" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more products to avail the offer</p></div>
-              {% elsif total_cart_prod == 3 %}
-                <div class="saleBar exclusive" style="background-color: #ffe1d7; padding: 5px;"><p style="font-size: 13px;text-align:left; line-height: 1.2; color: #000; font-weight: 400; margin-bottom: 0px; padding: 5px;"><i class="fa fa-info-circle" style="color: #000000;width: 16px;margin-left: 8px;"></i>Add <b>{{ 4 | minus: total_cart_prod }}</b> more product to avail the offer</p></div>
-              {% endif %}
-              
+              {% for i in (1..10) %}
+                {% assign landing_page_list = i | append: '_landing_page_list' %}
+                {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
+                {% if landing_page_for_diff_gift != blank %}
+                  {% assign landing_cart_ribbon_type = i | append: '_landing_cart_ribbon_type' %}
+                  {% assign landing_cart_ribbon_discount_code = i | append: '_landing_cart_ribbon_discount_code' %}
+                  {% assign landing_cart_trigger_price = i | append: '_landing_cart_trigger_price' %}
+                  {% assign landing_prod_success_count = i | append: '_landing_prod_success_count' %}
+                  
+                  {% assign landing_cart_ribbon_type = settings[landing_cart_ribbon_type] %}
+                  {% assign landing_ribbon_class = "show-landing-page show-landing-page-" | append: i %}
+                  {% assign landing_CODE = settings[landing_cart_ribbon_discount_code] %}
+                  {% assign landing_trigger_ribbon_price = settings[landing_cart_trigger_price] | times:100  %}
+                  {% assign landing_PRICE = landing_trigger_ribbon_price | minus: cart.items_subtotal_price | divided_by: 100  %}
+                  {% assign landing_trigger_product_count = settings[landing_prod_success_count]  %}
+                  {% assign landing_PRODUCT = landing_trigger_product_count | minus: total_cart_prod %}
+                  {% render 'cart-ribbon' , i:i, cart:cart, total_cart_prod:total_cart_prod ,cart_ribbon_type:landing_cart_ribbon_type ,class:landing_ribbon_class ,CODE:landing_CODE ,trigger_ribbon_price: landing_trigger_ribbon_price,trigger_product_count:landing_trigger_product_count,PRICE:landing_PRICE,PRODUCT:landing_PRODUCT %}
+                {% endif %}
+              {% endfor %}
             </div>
             
             {%- for block in section_blocks -%}
@@ -832,7 +644,6 @@
             {%- endfor -%}
          </div>
       </form>
-
 
       {%- if se_stts.enable_note -%}
       <div class="t4s-mini_cart-tool__content is--note t4s-pe-none">             
@@ -1627,58 +1438,61 @@ $(document).ready(function () {
 
 </script>
 
-
 <style>
- body.hide-gift #gift_1_wrap{
-    display:none !important;
-  } 
-  body.hide-gift .saleBar.show-new,body.hide-gift .saleBar.shop-1,body.hide-gift .saleBar.shop-3,body.hide-gift .saleBar.monsoon-offer,body.hide-gift .saleBar.shop-4, body.hide-gift .saleBar.phonefourhundred, body.hide-gift .saleBar.phonetwohundred, body.hide-gift .saleBar.zomatofourhundred, body.hide-gift .saleBar.secretsale, body.hide-gift .saleBar.frontspecial, body.hide-gift .saleBar.exclusive, body.hide-gift .saleBar.b2g2-rib, body.hide-gift .saleBar.shop-2{
+  body.landing-page-gift .gift_lock_list.default-native-gift{
     display:none !important;
   }
-  body.show-gift .saleBar.show-default,body.show-gift .saleBar.shop-1,body.show-gift .saleBar.shop-3,body.show-gift .saleBar.monsoon-offer,body.show-gift .saleBar.shop-4,body.show-gift .saleBar.phonefourhundred,body.show-gift .saleBar.phonetwohundred, body.show-gift .saleBar.zomatofourhundred, body.show-gift .saleBar.secretsale, body.show-gift .saleBar.frontspecial, body.show-gift .saleBar.exclusive, body.show-gift .saleBar.b2g2-rib, body.show-gift .saleBar.shop-2{
+  body.default-gift .gift_lock_list.landing-page-base-gift,body.landing-page-gift .gift_lock_list.landing-page-base-gift{
     display:none !important;
   }
+  {% for i in (1..10) %}
+  body.landing-page-gift-{{i}} .gift_lock_list.landing-page-base-gift-{{ i }}{
+    display:flex !important;
+  }
+  {% endfor %}
+  body.default-gift .saleBar.show-landing-page{
+    display:none !important;
+  }
+  body.landing-page-gift .saleBar.show-default,body.landing-page-gift .saleBar.show-landing-page{
+    display:none !important;
+  }
+  {% for i in (1..10) %}
+  body.landing-page-gift-{{ i }} .saleBar.show-landing-page-{{ i }}{
+    display:block !important;
+  }
+  {% endfor %}
+  /* body.landing-page-gift #gift_1_wrap{
+    display:none !important;
+  } */
   .t4s-quantity-wrapper [disabled],.t4s-quantity-wrapper [disabled] svg,.t4s-quantity-wrapper [disabled] path {
     color: #80808099 !important;
     fill:#80808099 !important;
   }
-  body.shop-3 .saleBar.show-new,body.shop-3 .saleBar.show-default,body.shop-1 .saleBar.show-new,body.shop-1 .saleBar.show-default,body.phonefourhundred .saleBar.show-default,body.phonetwohundred .saleBar.show-default, body.zomatofourhundred .saleBar.show-default, body.secretsale .saleBar.show-default, body.frontspecial .saleBar.show-default, body.exclusive .saleBar.show-default, body.b2g2-rib .saleBar.show-default, body.shop-2 .saleBar.show-default{
+  .saleBar{
+    background-color: #ffe1d7;
+    padding: 5px;
+  }
+  .saleBar p{
+    font-size: 12px;
+    text-align:left;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding: 5px;
+  }
+  .saleBar i{
+    color: #000000;
+    width: 16px;
+    margin-left: 8px;
+  }
+  /* .t4s-return-to-shop{
     display:none !important;
   }
-  body.monsoon-offer .saleBar.show-new,body.monsoon-offer .saleBar.show-default{
-    display:none !important;
-  }
-  body.shop-3 .saleBar.shop-3,body.shop-1 .saleBar.shop-1,body.monsoon-offer .saleBar.monsoon-offer{
+  body.for_all_site .t4s-return-to-shop.for_all_site{
     display:block !important;
   }
-  body.shop-4 .saleBar.show-new,body.shop-4 .saleBar.show-default,body.shop-4 .saleBar.shop-3,body.shop-4 .saleBar.shop-1, body.shop-2 .saleBar.shop-2{
-    display:none !important;
-  }
-  body.shop-4 .saleBar.shop-4{
+  body.for_slash_prod .t4s-return-to-shop.for_slash_prod{
     display:block !important;
-  }
-  body.shop-2 .saleBar.shop-2{
-    display:block !important;
-  }
-  body.phonefourhundred .saleBar.phonefourhundred{
-    display:block !important;
-  }
-  body.phonetwohundred .saleBar.phonetwohundred{
-    display:block !important;
-  }
-  body.zomatofourhundred .saleBar.zomatofourhundred{
-    display:block !important;
-  }
-  body.secretsale .saleBar.secretsale{
-    display:block !important;
-  }
-  body.frontspecial .saleBar.frontspecial{
-    display:block !important;
-  }
-  body.exclusive .saleBar.exclusive{
-    display:block !important;
-  }
-  body.b2g2-rib .saleBar.b2g2-rib{
-    display:block !important;
-  }
+  } */
 </style>

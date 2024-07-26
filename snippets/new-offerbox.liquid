@@ -83,35 +83,41 @@
 <div class="new-offerbox">
   <h6>Offers</h6>
   <div class="offerbox-mainwrap">
+    {% assign one_tag = "Singles" %}
+    {% if product.tags contains one_tag %}
     <div class="offerbox-one offerbox-list">
       <div class="offer-innermain">
         <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
         <div class="offerz-actual">
-          <h5>Up to 10% Off </h5>
-          <p>5% Off + Extra 5% Off On Prepaid Orders</p>
+          <h5>Up to 25% Off</h5>
+          <p>Includes 5% off on prepaid orders</p>
         </div>       
       </div>
       <div class="offer-copy">
-        <h4>GLOW10</h4>
+        <h4>GLOW25</h4>
         <span>{% render 'copy-svg' %}</span>
       </div>
       <div class="copiedcode_text" style="display:none;">Code Copied</div>
     </div>
-   <div class="offerbox-two offerbox-list">
+    {% endif %}
+    {% assign main_tag = "Body-care" %}
+    {% if product.tags contains main_tag %}
+    <div class="offerbox-two offerbox-list">
       <div class="offer-innermain">
         <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
         <div class="offerz-actual">
-          <h5>Up to 15% Off on orders above ₹699</h5>
-          <p>10% Off + Extra 5% Off On Prepaid Orders</p>
+          <h5>Up to 15% Off</h5>
+          <p>Includes 5% off on prepaid orders</p>
         </div>       
       </div>
       <div class="offer-copy">
-        <h4>GLOW15</h4>
+        <h4>BODY15</h4>
         <span>{% render 'copy-svg' %}</span>
       </div>
       <div class="copiedcode_text" style="display:none;">Code Copied</div>
     </div> 
-    <!-- <div class="offerbox-three offerbox-list">
+   {% endif %}
+   <!-- <div class="offerbox-three offerbox-list">
       <div class="offer-innermain">
         <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/Illustration.svg?v=1714096405">
         <div class="offerz-actual">

@@ -60,7 +60,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     <meta name="robots" content="index">
    {% endif %}
 
-   {% if request.path contains '/gpay-b2g2/combination' or request.path contains '/gpay-b2g2/glow' or request.path contains '/phonepe-b2g2/sensitive-skin' or request.path contains '/gpay-b2g2/sensitive-skin' or request.path contains '/paytm-b2g2/sensitive-skin' or request.path contains '/gpay-b2g2/acne-control' or request.path contains '/pages/discount' or request.path contains 'buy-1-get-1-free-gpay'  or request.path contains 'early-access' or request.path contains 'deal-of-the-day' or request.path contains 'exclusive-sale' or request.path contains 'special-offer' or request.path contains 'midnight-sale' or request.path contains 'offer-b2g2' or request.path contains '/buy-1-get-1-free-gpay/glow' or request.path contains 'offers' or request.path contains 'foxtale-paytm-offer' or request.path contains 'buy-1-get-1-phonepe' or request.path contains 'phonepe-b2g2' or request.path contains 'offer-b1g1' or request.path contains 'buy-1-get-1-phonepe/glow'  or request.path contains 'gpay-free-eye-mask' or request.path contains 'gpay-b2g2' or request.path contains 'shop-gpay-b2g2' or request.path contains 'flat-200-off-phonepe/acne' or request.path contains 'phonepe-sunscreen-offer' or request.path contains 'phonepe-flat-400-off/acne-control' or request.path contains 'phonepe-b2g2/hydration' or request.path contains 'flat-200-off-phonepe/acne-control' or request.path contains 'flat-400-off-gpay/glow' or request.path contains 'free-face-wash-gpay/hydration' or request.path contains 'free-face-wash-gpay' or request.path contains 'gpay-b2g2/hydration' or request.path contains 'gpay-b2g2/anti-ageing' or request.path contains 'flat-200-off-gpay' or request.path contains 'flat-300-off-gpay' or request.path contains 'flat-400-off-gpay' or request.path contains 'phonepe-b2g2' or request.path contains 'gpay-b2g2' %}
+   {% if request.path contains '/gpay-b2g2/combination' or request.path contains '/pages/home' or request.path contains '/gpay-b2g2/glow' or request.path contains '/phonepe-b2g2/sensitive-skin' or request.path contains '/gpay-b2g2/sensitive-skin' or request.path contains '/paytm-b2g2/sensitive-skin' or request.path contains '/gpay-b2g2/acne-control' or request.path contains '/pages/discount' or request.path contains 'buy-1-get-1-free-gpay'  or request.path contains 'early-access' or request.path contains 'deal-of-the-day' or request.path contains 'exclusive-sale' or request.path contains 'special-offer' or request.path contains 'midnight-sale' or request.path contains 'offer-b2g2' or request.path contains '/buy-1-get-1-free-gpay/glow' or request.path contains 'offers' or request.path contains 'foxtale-paytm-offer' or request.path contains 'buy-1-get-1-phonepe' or request.path contains 'phonepe-b2g2' or request.path contains 'offer-b1g1' or request.path contains 'buy-1-get-1-phonepe/glow'  or request.path contains 'gpay-free-eye-mask' or request.path contains 'gpay-b2g2' or request.path contains 'shop-gpay-b2g2' or request.path contains 'flat-200-off-phonepe/acne' or request.path contains 'phonepe-sunscreen-offer' or request.path contains 'phonepe-flat-400-off/acne-control' or request.path contains 'phonepe-b2g2/hydration' or request.path contains 'flat-200-off-phonepe/acne-control' or request.path contains 'flat-400-off-gpay/glow' or request.path contains 'free-face-wash-gpay/hydration' or request.path contains 'free-face-wash-gpay' or request.path contains 'gpay-b2g2/hydration' or request.path contains 'gpay-b2g2/anti-ageing' or request.path contains 'flat-200-off-gpay' or request.path contains 'flat-300-off-gpay' or request.path contains 'flat-400-off-gpay' or request.path contains 'phonepe-b2g2' or request.path contains 'gpay-b2g2' %}
     <meta name="robots" content="noindex">
    {% endif %}
   
@@ -425,16 +425,44 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     sc(new URLSearchParams(window.location.search).get('clickid'));
   </script>
   <!-- End -->
-  {% assign limited_col = 'shop-1,products-shop-1,adnetwork-exclusive-offer' %}
-  {% assign limited_col_array = limited_col | split:',' %}
+
+  {% assign col_class = 'default-gift' %}
+  {% assign all_landing_gift_prod = '' %}
+  {% for i in (1..10) %}
+      {% assign landing_page_list = i | append: '_landing_page_list' %}
+      {% assign landing_page_list_all = ''%}
+      {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
+      {%- for collection in landing_page_for_diff_gift -%}
+        {% assign landing_page_list_all = landing_page_list_all | append: collection.handle %}
+        {% if forloop.last != true %}{% assign landing_page_list_all = landing_page_list_all | append: ',' %}{% endif %}
+      {% endfor %}
+      {% assign landing_page_array = landing_page_list_all | split:',' %}
+      {% if template.name == 'collection' %}
+        {% if landing_page_array contains collection.handle %} 
+          {% assign col_class = 'landing-page-gift-' | append: i %}
+        {% endif %}
+      {% endif %}
+      {% assign gift_product_1 = i | append: '_l_gift_product_1' %}
+      {% assign gift_product_2 = i | append: '_l_gift_product_2' %}
+      {% assign gift_product_1_id = settings[gift_product_1].selected_or_first_available_variant.id %}
+      {% assign gift_product_2_id = settings[gift_product_2].selected_or_first_available_variant.id %}
+      {% if gift_product_1_id != blank %}
+        {% assign all_landing_gift_prod = all_landing_gift_prod | append: gift_product_1_id | append: ',' %}
+      {% endif %}
+      {% if gift_product_2_id != blank %}
+        {% assign all_landing_gift_prod = all_landing_gift_prod | append: gift_product_2_id | append: ',' %}
+      {% endif %}
+  {% endfor %}
 
   <body
-    class="template-{{ request.page_type | handle }} {% if template.name == 'product' and template.suffix == 'muktailayout' %}{{ product.handle }}{% endif %} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if template.name == 'collection' %}{% if limited_col_array contains collection.handle %} show-gift {% else %} hide-gift {% endif %}{% else %} hide-gift {% endif %} {% if collection.url contains 'shop-2'%}shop-2{% endif %} {% if collection.url contains 'shop-3'%}shop-3{% endif %} {% if collection.url contains 'b2g2-detan'%}shop-4{% endif %} {% if collection.url contains 'phonepe-flat-400-off'%}phonefourhundred{% endif %} {% if collection.url contains 'flat-200-off-phonepe'%}phonetwohundred{% endif %} {% if collection.url contains 'zomato-flat-400-offer'%}zomatofourhundred{% endif %} {% if collection.url contains 'early-access'%}{% unless collection.url contains 'affiliate-early-access' %}secretsale{% endunless %}{% endif %} {% if collection.url contains 'frontpage'%}frontspecial{% endif %} {% if collection.url contains 'exclusive-sale'%}exclusive{% endif %} {% if collection.url contains 'gpay-b2g2' or collection.url contains 'phonepe-b2g2' or collection.url contains 'shop-gpay-b2g2' or collection.url contains 'affiliate-early-access' %}b2g2-rib{% endif %}{% if collection.handle == 'monsoon-offer' %} monsoon-offer {% endif %}"
+    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if col_class == 'default-gift' %}{{ col_class }}{% else %} landing-page-gift {{ col_class }}{% endif %}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     data-instant-allow-query-string
     {% endif -%}
-
+    {% if template.name == 'collection' %}
+    landing-page-handle="{{ collection.handle }}" 
+    {% endif %}
     trigger-price-1="{{ settings.trigger_price_1 }}"
     gift-product-1="{{ settings.gift_product_1.selected_or_first_available_variant.id }}"
     free-gift-v1-trigger-count-1="{{ settings.free_gift_v1_trigger_qty_1 }}"
@@ -445,6 +473,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
     trigger-qty="{{ settings.free_gift_trigger_qty }}"
     free-gift-remove="{{ settings.variant_list_for_remove }}"
     free-gift-list="{%- for item in free_gift_claim_list -%}{% if gift_prod_1.id != item.id and gift_prod_2.id != item.id %}{{ item.selected_or_first_available_variant.id }}{% if forloop.last != true %},{% endif %}{% endif %}{% endfor %}"
+    all_landing_gift_prod="{{ all_landing_gift_prod }}"
+    data-slash-product="{% if template.name == 'product' %}{% if product.type == 'Slash Sale' %}Slash Sale{% endif %}{% endif %}"
   >
     <div id="magic_link_wrap" style="display:none !important;">
       <div id="for_cart">
@@ -514,6 +544,47 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           {% endif %}
         {% endfor %}
       </div>
+    </div>
+    <div id="landing_gift_wrap" style="display:none !important;">
+      
+      {% for i in (1..10) %}
+        {% assign landing_page_list = i | append: '_landing_page_list' %}
+        {% assign l_trigger_price_1 = i | append: '_l_trigger_price_1' %}
+        {% assign l_gift_product_1 = i | append: '_l_gift_product_1' %}
+        {% assign l_free_gift_v1_trigger_qty_1 = i | append: '_l_free_gift_v1_trigger_qty_1' %}
+        {% assign l_trigger_price_2 = i | append: '_l_trigger_price_2' %}
+        {% assign l_gift_product_2 = i | append: '_l_gift_product_2' %}
+        {% assign l_free_gift_v1_trigger_qty_2 = i | append: '_l_free_gift_v1_trigger_qty_2' %}
+        {% assign landing_page_list_val = ''%}
+        {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
+          {% if landing_page_for_diff_gift != blank %}
+            
+            {%- for collection in landing_page_for_diff_gift -%}
+              {% assign landing_page_list_val = landing_page_list_val | append: collection.handle %}
+              {% if forloop.last != true %}{% assign landing_page_list_val = landing_page_list_val | append: ',' %}{% endif %}
+            {% endfor %}
+            {% assign landing_page_array = landing_page_list_val | split:',' %}
+            
+            {% if template.name == 'collection' %}
+            {% if landing_page_array contains collection.handle %} 
+            <div class="for-landing-page"
+              data-landing-for="{{ i }}"
+              data-landing-list="{{ landing_page_list_val }}"
+              landing_trigger-price-1="{{ settings[l_trigger_price_1] }}"
+              landing_gift-product-1="{{ settings[l_gift_product_1].selected_or_first_available_variant.id }}"
+              landing_free-gift-v1-trigger-count-1="{{ settings[l_free_gift_v1_trigger_qty_1] }}"
+              landing_trigger-price-2="{{ settings[l_trigger_price_2] }}"
+              landing_gift-product-2="{{ settings[l_gift_product_2].selected_or_first_available_variant.id }}"
+              landing_free-gift-v1-trigger-count-2="{{ settings[l_free_gift_v1_trigger_qty_2] }}"
+              >
+            </div>
+            {% endif %}
+            {% endif %}
+
+        {% endif %}
+      {% endfor %}
+      
+      
     </div>
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -904,6 +975,23 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            display: none !important;
          }
        {%endif%}
+
+      {% if collection.url contains 'adnetwork-exclusive-offer' %}
+        .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:first-of-type:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 1 Get 1 Free [Code: BOGO]";
+           font-size: 12px;
+           width: max-content;
+         }
+      {% endif %}
       
        {% if collection.url contains 'shop-1' %}
          .bottom-leftext {
@@ -1146,6 +1234,38 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            display: none;
          }
        {%endif%}
+
+       {% if collection.url contains 'buy-1-get-1-phonepe'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B1G1";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 1 Get 1 Free [Code: FOXPPB1G1]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
       
        {% if collection.url contains 'shop-gpay-b2g2'%}
          .on-productpic {
@@ -1369,6 +1489,47 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'zomato-b2g2' %}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+           width: 50%;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+         }
+         .bottom-rightext {
+           visibility: hidden;
+           position: relative;
+           width: 50%;
+         }
+         .bottom-rightext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           right: 0;
+           content: "";
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 get 2 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
        {% if collection.url contains 'flat-200-off-phonepe'%}
          .t4s-announcement-bar__item {
            visibility: hidden;
@@ -1420,14 +1581,26 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          .bottom-leftext {
            visibility: hidden;
            position: relative;
+           width: 50%;
          }
          .bottom-leftext:after {
            visibility: visible;
            position: absolute;
            top: 0;
            left: 0;
-           content: "B2G2";
-           width: 150px;
+           content: "GLOW25";
+         }
+         .bottom-rightext {
+           visibility: hidden;
+           position: relative;
+           width: 50%;
+         }
+         .bottom-rightext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           right: 0;
+           content: "Free Eye Mask";
          }
        {%endif%}
 
@@ -2222,6 +2395,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         }
        {%endif%}
 
+       {% if product.url contains 'brightening-under-eye-mask' %}
+         .t4s-product-form__variants, .t4s-sticky-atc {
+           display: none !important;
+         }
+       {%endif%}
+
        {% if product.handle contains 'brightening-body-wash-with-glycolic-acid-niacinamide' %}
         .new-offerbox {
           /* display: none !important; */
@@ -2287,20 +2466,20 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
       
        {% if product.handle contains 'happy-hydration-duo' %}
-        .offer-section-main {
-          display: none !important;
-        }
         div#shopify-section-announcement-bar {
           display: none !important;
+        }
+        .customGroupProduct-template .two-productscampaign .offer-2-row {
+          display: flex !important;
         }
        {%endif%}
 
        {% if product.handle contains 'radiance-ritual-duo' %}
-        .offer-section-main {
-          display: none !important;
-        }
         div#shopify-section-announcement-bar {
           display: none !important;
+        }
+        .customGroupProduct-template .two-productscampaign .offer-2-row {
+          display: flex !important;
         }
        {%endif%}
 
@@ -2484,17 +2663,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          .customproduct1-template .t4s-product-form__variants .t4s-swatch__item .pr-best-seller {
            width: 100%;
          }
-         .product-weight {
-           visibility: hidden;
-           position: relative;
-         }
-         .product-weight:after {
-           visibility: visible;
-           position: absolute;
-           top: 0px;
-           left: 8px;
-           content: "Size - 75g";
-         }
        {%endif%}
 
        {% if product.handle contains 'back-to-basics-combo' %}
@@ -2628,16 +2796,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if product.handle contains 'retailer-box' %}
-         .template-product .t4s-sticky-atc {
-           transform: none !important;
-           display: none;
-         }
-         .t4s-product-form__variants {
-           display: none;
-         }
-       {%endif%}
-
-       {% if product.handle contains 'brightening-under-eye-mask' %}
          .template-product .t4s-sticky-atc {
            transform: none !important;
            display: none;
@@ -2804,131 +2962,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          {%endif%}
        }
 
-       {% if product.handle contains 'acne-control-cleanser-with-salicylic-acid-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'acne-spot-corrector-gel-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'aha-bha-exfoliating-serum-copy-1' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'anti-aging-retinol-serum-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'firming-under-eye-gel-copy-1' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'hydrating-face-wash-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'hydrating-moisturizer-with-ceramide-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'hydrating-serum-with-hyaluronic-acid-copy-1' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'niacinamide-serum-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'oil-free-moisturizer-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'overnight-glow-mask-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'purify-glow-cleanser-mask-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'rapid-spot-reduction-drops-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'skin-radiance-mask-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'skin-repair-cream-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'spf-50-glow-sunscreen-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'spf-50-tinted-sunscreen-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'spf-70-dewy-finish-sunscreen-copy-1' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'spf-70-matte-finish-sunscreen-copy-1' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'super-glow-moisturizer-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
-
-       {% if product.handle contains 'vitamin-c-serum-copy' %} 
-         .t4s-swatch__list, .offer-section-main {
-           display: none !important;
-         }       
-       {%endif%}
       
        {% if product.handle contains '399-store-hydrating-moisturizer-with-ceramide' %} 
          .t4s-swatch__list, .offer-section-main {
@@ -3073,6 +3106,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         localStorage.setItem('utm_source',utm_source);
       }
     </script>
+
 
     <script defer>
       function setCookie(name, value, days) {
