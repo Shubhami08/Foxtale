@@ -565,6 +565,12 @@
           "settings": {
             "collection_handle": "gpay-buy-2-get-4"
           }
+        },
+        "image_VcXYcX": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "cred-buy-1-get-1-lip-mask"
+          }
         }
       },
       "block_order": [
@@ -591,7 +597,8 @@
         "image_diC8eN",
         "image_Mi7646",
         "image_639wHV",
-        "image_mwg7HA"
+        "image_mwg7HA",
+        "image_VcXYcX"
       ],
       "settings": {
         "slider_height_mobile": "100%"
