@@ -721,14 +721,13 @@
         },
         "text_qnPjLP": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "collekt": "tb-bodycare",
             "txter": "Bodycare",
             "mdlpik": "shopify:\/\/shop_images\/BODY-LOTION.png",
             "smlpik": "shopify:\/\/shop_images\/BODY-LOTION.png",
             "grid-heading": "Bodycare",
-            "grid-subheading": ""
+            "grid-subheading": "Bodycare Range"
           }
         }
       },
