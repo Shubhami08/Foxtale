@@ -453,9 +453,10 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         {% assign all_landing_gift_prod = all_landing_gift_prod | append: gift_product_2_id | append: ',' %}
       {% endif %}
   {% endfor %}
+  
 
   <body
-    class="template-{{ request.page_type | handle }} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if col_class == 'default-gift' %}{{ col_class }}{% else %} landing-page-gift {{ col_class }}{% endif %}"
+    class="{% if request.path contains 'pages/home' %}template-index -template{% else %}template-{{ request.page_type | handle }}{% endif %} {% if template.suffix == "customSingle" %}customproduct1-template {{ template.suffix }}-template{% else %}{{ template.suffix }}-template{% endif %} {{class_lazy}} {% if col_class == 'default-gift' %}{{ col_class }}{% else %} landing-page-gift {{ col_class }}{% endif %}"
     {% if body_img != blank %}
       data-bgset="{{ body_img | image_url: width: 1 }}" data-optimumx="2" data-sizes="auto"
     data-instant-allow-query-string

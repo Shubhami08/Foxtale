@@ -20,7 +20,11 @@
    assign html_layout = '__' | split:'__'
   endif
   assign design_mode = request.design_mode
-  assign page_type = request.page_type -%}
+  if request.path contains 'pages/home'
+    assign page_type = 'index'
+  else
+    assign page_type = request.page_type
+  endif -%}
 
 {%- for i in (1..1) -%}
   {%- if se_stts.cp_code and page_type == 'index' and design_mode %}<div class="dn tc mt__40 mb__40 cp_cd_js"><input type="text" class="dcp_cd_ip" value='<div class="inc_lz inc_pr_laz" data-rendert4s="/search/?section_id={{sid}}"><div class="lds_bginfinity pr"></div></div>'><button class="dcp_cd_btn">Copy Shortcode</button></div>{% endif -%}
