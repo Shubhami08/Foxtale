@@ -541,6 +541,12 @@
             "image_1_mobile": "shopify:\/\/shop_images\/Phonepe_b1g1_mobile_banner.jpg",
             "collection_handle": "buy-1-get-1-phonepe"
           }
+        },
+        "image_LN3PHA": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "buy-1-get-1-phonepe-f"
+          }
         }
       },
       "block_order": [
@@ -563,7 +569,8 @@
         "image_fRfLeA",
         "image_AjAedA",
         "image_8T9LR7",
-        "image_mbLQPf"
+        "image_mbLQPf",
+        "image_LN3PHA"
       ],
       "settings": {
         "slider_height_mobile": "100%"
