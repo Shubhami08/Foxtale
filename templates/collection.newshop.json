@@ -545,6 +545,8 @@
         "image_LN3PHA": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Phonepe_b1g1_website_banner_FOXPPFB1G1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Phonepe_b1g1_mobile_bannerFOXPPFB1G1.jpg",
             "collection_handle": "buy-1-get-1-phonepe-f"
           }
         }
