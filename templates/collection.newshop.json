@@ -542,6 +542,14 @@
             "collection_handle": "buy-1-get-1-phonepe"
           }
         },
+        "image_j4rAdE": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Phonepe_b1g1_website_banner_FOXPPFB1G1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Phonepe_b1g1_mobile_bannerFOXPPFB1G1.jpg",
+            "collection_handle": ""
+          }
+        },
         "image_diC8eN": {
           "type": "image",
           "settings": {
@@ -608,6 +616,7 @@
         "image_AjAedA",
         "image_8T9LR7",
         "image_mbLQPf",
+        "image_j4rAdE",
         "image_diC8eN",
         "image_Mi7646",
         "image_639wHV",
