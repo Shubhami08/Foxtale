@@ -979,19 +979,8 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
 
       {% if collection.url contains 'adnetwork-exclusive-offer' %}
         .t4s-announcement-bar__item {
-           visibility: hidden;
-           position: relative;
-         }
-         .t4s-announcement-bar__item:first-of-type:after {
-           visibility: visible;
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%, -50%);
-           content: "Buy 1 Get 1 Free [Code: BOGO]";
-           font-size: 12px;
-           width: max-content;
-         }
+          display: none !important;
+        }
       {% endif %}
       
        {% if collection.url contains 'shop-1' %}
