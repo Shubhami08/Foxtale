@@ -579,6 +579,12 @@
             "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B2G2-01_b4a7e6f3-9403-49f5-9754-3f43c8558c50.jpg",
             "collection_handle": "phonepe-b2g2"
           }
+        },
+        "image_88kBRm": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "phonepe-b2g2-f"
+          }
         }
       },
       "block_order": [
@@ -607,7 +613,8 @@
         "image_639wHV",
         "image_mwg7HA",
         "image_VcXYcX",
-        "image_tQzyAP"
+        "image_tQzyAP",
+        "image_88kBRm"
       ],
       "settings": {
         "slider_height_mobile": "100%"
