@@ -148,7 +148,7 @@ endif -%}
 
                {%- if linklists[block_stts.menu].links.size > 0 -%}
                    <li id="item_{{block.id}}" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-has-children {{only_icon}} {% if forloop.index >= 3 and forloop.index <= 5 %}discover-section{% endif %}" {{ block.shopify_attributes }}>
-                     <a href="{{block_stts.url}}" target="{{block_stts.open_link}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{block_stts.title}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">
+                     <a href="{{block_stts.url}}"   target="{{block_stts.open_link}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">
                         {%- if block_stts.icons_op == '2' and block_stts.icon != blank %}<i class="{{block_stts.icon | strip }}"></i>
                            {%- elsif block_stts.icons_op == '1' and block_stts.image != blank %}
                                {%- assign image = block_stts.image -%}
@@ -164,39 +164,39 @@ endif -%}
                            {%- assign arrlt = link.title | split: '[' -%}
                            {%- if link.links != blank -%}
                               <li class="t4s-menu-item t4s-item-level-1 t4s-menu-item-has-children {{only_icon}}{% if link.active %} is--current{% endif %}">
-                                 <a href="{{link.url}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{link.title}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">{%- render 'lb_inc_mb',arrlt:arrlt -%}</span><span class="t4s-mb-nav__icon"></span></a>
+                                 <a href="{{link.url}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">{%- render 'lb_inc_mb',arrlt:arrlt -%}</span><span class="t4s-mb-nav__icon"></span></a>
                                  <ul class="t4s-sub-sub-menu">
                                     {%- for child_link in link.links -%}
 
                                        {%- assign arrlt = child_link.title | split: '[' -%}
                                        {%- if child_link.links != blank -%}
                                           <li id="item_{{block.id}}" class="t4s-menu-item t4s-item-level-2 t4s-menu-item-has-children {{only_icon}}{% if child_link.active %} is--current{% endif %}">
-                                             <a href="{{child_link.url}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{child_link.title}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">{%- render 'lb_inc_mb',arrlt:arrlt -%}</span><span class="t4s-mb-nav__icon"></span></a>
+                                             <a href="{{child_link.url}}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">{%- render 'lb_inc_mb',arrlt:arrlt -%}</span><span class="t4s-mb-nav__icon"></span></a>
                                              <ul class="t4s-sub-sub-sub-menu">
 
                                                 {%- for grandchild_link in child_link.links -%}
                                                 {%- assign arrlt = grandchild_link.title | split: '[' -%}
-                                                <li class="t4s-menu-item t4s-item-level-3{% if grandchild_link.active %} is--current{% endif %}"><a href="{{grandchild_link.url}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{grandchild_link.title}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
+                                                <li class="t4s-menu-item t4s-item-level-3{% if grandchild_link.active %} is--current{% endif %}"><a href="{{grandchild_link.url}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
                                                 {%- endfor -%}
 
                                              </ul>
                                           </li>
                                        {%- else -%}
-                                           <li class="t4s-menu-item t4s-item-level-2{% if child_link.active %} is--current{% endif %}"><a href="{{child_link.url}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{child_link.title}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
+                                           <li class="t4s-menu-item t4s-item-level-2{% if child_link.active %} is--current{% endif %}"><a href="{{child_link.url}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
                                        {%- endif -%}
 
                                     {%- endfor -%}
                                  </ul>
                               </li>
                            {%- else -%}
-                              <li class="t4s-menu-item t4s-item-level-1{% if link.active %} is--current{% endif %}"><a href="{{link.url}}" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{link.title}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
+                              <li class="t4s-menu-item t4s-item-level-1{% if link.active %} is--current{% endif %}"><a href="{{link.url}}">{%- render 'lb_inc_mb',arrlt:arrlt -%}</a></li>
                            {%- endif -%}
 
                         {%- endfor -%}
                      </ul>
                   </li>
                {%- else -%}
-                   <li id="item_{{block.id}}" class="t4s-menu-item t4s-item-level-0 {% if forloop.index >= 11 and forloop.index <= 13 %}community-help-section{% endif %} {% if forloop.index == 2 and forloop.index == 6 %}discover-section{% endif %} {% if forloop.index >= 8 and forloop.index <= 9 %}delve-section{% endif %}"><a href="{% if block_stts.url contains '#homet4' %}{{ root_url }}{% else %}{{block_stts.url}}{% endif %}" style="padding: 8px 4px 8px 12px !important" class="t4s-menu-item-has-children-anchor" data-foxtale-event="navigation-section-click-event" foxtale-event-attr-click-location="navigation-section" foxtale-event-attr-from="from-mobile" foxtale-event-attr-section-name="{{block_stts.title}}" target="{{block_stts.open_link}}">
+                   <li id="item_{{block.id}}" class="t4s-menu-item t4s-item-level-0 {% if forloop.index >= 11 and forloop.index <= 13 %}community-help-section{% endif %} {% if forloop.index == 2 and forloop.index == 6 %}discover-section{% endif %} {% if forloop.index >= 8 and forloop.index <= 9 %}delve-section{% endif %}"><a href="{% if block_stts.url contains '#homet4' %}{{ root_url }}{% else %}{{block_stts.url}}{% endif %}" style="padding: 8px 4px 8px 12px !important" class="t4s-menu-item-has-children-anchor" target="{{block_stts.open_link}}">
                         {%- if block_stts.icons_op == '2' and block_stts.icon != blank %}<i class="{{block_stts.icon | strip }}"></i>
                            {%- elsif block_stts.icons_op == '1' and block_stts.image != blank %}
                                {%- assign image = block_stts.image -%}
@@ -281,7 +281,7 @@ endif -%}
       {"type": "paragraph","content": "#{{i}} ——————————————"},{"label": " Collection #{{i}}","id": "cat{{i}}", "type": "collection"},{"type": "image_picker","id": "image{{i}}","label": "Image #{{i}}"},
 {%- endfor -%}
 {%- endcomment -%}
-<div class="menu-image-banner"><a href="{{ section.settings.image_url }}" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ section.settings.image_url }}" foxtale-event-attr-from="from-mobile-menu-side-bar"><img src="{{ section.settings.menu_banner_image | img_url: 'master' }}"></a></div>
+<div class="menu-image-banner"><a href="{{ section.settings.image_url }}"><img src="{{ section.settings.menu_banner_image | img_url: 'master' }}"></a></div>
 <style>
   
 </style>

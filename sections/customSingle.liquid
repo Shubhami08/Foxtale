@@ -206,22 +206,6 @@
   endif
 -%}
 
-    
-{% if product.tags contains 'pre-order-only' %}
-  {% assign pre_order_only = true %}
-  {% assign isSticky = true %}
-{% else %}
-  {% assign pre_order_only = false %}
-{% endif %}
-
-{% if product.tags contains 'pre-order-only' %}
-<style>
-  button#gokwik-buy-now {
-      display: none !important;
-  }
-</style>
-{% endif %}
-
 {%- capture html_sizeg -%}
   {%- if bk_size_chart != '1' and Block_sizeg != blank -%}
     {%- liquid
@@ -270,7 +254,11 @@
   <div class="product_header mb_img_slide">
     <div class="custom-pr-title">
       <h1 class="product_title">
-        {{ product.title }}
+        {{ product.title -}}
+        <span class="product-weight">
+          Size:&nbsp
+          {%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}
+        </span>
       </h1>
     </div>
     {{ product.metafields.global['product-sub-title'] }}
@@ -401,7 +389,7 @@
                       t4s-dots-style-{{ se_stts.dot_owl }} t4s-dots-cl-{{ se_stts.dots_cl }}
                       t4s-dots-round-{{ se_stts.dots_round }} t4s-dots-hidden-mobile-{{ se_stts.dots_hidden_mobile }}
                     {% endif %}
-                    data-flickityt4s-js='{"cellSelector": "[data-main-slide]:not(.is--media-hide)","isFilter":{{canMedia_group}},"imagesLoaded": 0,"adaptiveHeight": 1,"wrapAround": true, "contain": 1, "dragThreshold" : {% if se_stts.eff == 'fade' %}6{% else %}5{% endif %}, "freeScroll": true, "pageDots": {{ se_stts.nav_dot }}, "prevNextButtons": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true , "t4sid": "{{se_id}}", "thumbNav": {% if media_layout != 'without_thumbnails' %}true{% else %}false{% endif %}, "thumbVertical": {% if media_layout != 'thumbnails_bottom' %}true{% else %}false{% endif %}, "isMedia": true }'
+                    data-flickityt4s-js='{"cellSelector": "[data-main-slide]:not(.is--media-hide)","isFilter":{{canMedia_group}},"imagesLoaded": 0,"adaptiveHeight": 1, "contain": 1, "dragThreshold" : {% if se_stts.eff == 'fade' %}6{% else %}5{% endif %}, "freeScroll": true, "pageDots": {{ se_stts.nav_dot }}, "prevNextButtons": true, "autoPlay" : 0, "pauseAutoPlayOnHover" : true , "t4sid": "{{se_id}}", "thumbNav": {% if media_layout != 'without_thumbnails' %}true{% else %}false{% endif %}, "thumbVertical": {% if media_layout != 'thumbnails_bottom' %}true{% else %}false{% endif %}, "isMedia": true }'
                     style="--flickity-btn-pos: 0px;--flickity-btn-pos-mb: 0px;--space-dots: {{ se_stts.dots_space }}px;"
                   >
                     {%- liquid
@@ -520,10 +508,6 @@
               </div>
           {%- endcase -%}
         </div>
-        <div class="mobile-shwnew">
-          <h2>{{ product.title }}</h2>
-          <h5>{{ product.metafields.global['product-sub-title'] }}<span class="product-weight"> | &nbsp{%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}</span></h5>
-        </div>   
         <div data-t4s-zoom-info class="t4s-{{class_info}} t4s-col-12 t4s-col-item t4s-product__info-wrapper t4s-pr">
           <div id="product-zoom-{{ section.id }}" class="t4s-product__zoom-wrapper"></div>
           <div
@@ -533,10 +517,14 @@
             <div class="product_header dek_img_slide custom-desktop">
               <div class="custom-pr-title">
                 <h1 class="product_title">
-                  {{ product.title }}
+                  {{ product.title -}}
+                  <span class="product-weight">
+                    Size -
+                    {%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}
+                  </span>
                 </h1>
               </div>
-              <h5 style="color: #000; font-size: 20px; font-weight: 400; line-height: 24px;">{{ product.metafields.global['product-sub-title'] }}<span class="product-weight"> | &nbsp{%- if product.variants.first.weight != 0 %}{{ product.variants.first.weight }} ml {% endif -%}</span></h5>
+              {{ product.metafields.global['product-sub-title'] }}
               <div class="review-wrap pr-review">
                 <div class="review_product">
                   <div data-fera-container="457325" data-product_id="{{ product.id }}"></div>
@@ -629,16 +617,12 @@
 
                     {%- if bk_stts.tax_ship and cart.taxes_included or shop.shipping_policy.body != blank -%}
                       <div class="t4s-product__policies t4s-rte" data-product-policies>
-                        {% comment %}
                         {%- if cart.taxes_included -%}
                           {{ 'products.product.include_taxes' | t }}
                         {%- endif -%}
                         {%- if shop.shipping_policy.body != blank -%}
                           {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                         {%- endif -%}
-                        {% endcomment %}
-                        <h6 class="price-call">Tax Included</h6>
-                        <h6 class="price-call">Free Shipping</h6>
                       </div>
                     {%- endif -%}
                   </div>
@@ -1246,7 +1230,7 @@
                 
                 {%- when '@app' -%} 
                 {% render 'keybenefits' %}
-                {% render 'new-offerbox' %}
+                {% render 'offerz-kustom' %}
                  {%- render block -%}
               {%- endcase -%}
             {%- endfor -%}
@@ -1317,7 +1301,7 @@
   <template class="t4s-d-none" id="t4s-sticky-atc-temp">
     <div
       data-sticky-addtocart
-      class="t4s-sticky-atc t4s-pf t4s-b-0 t4s-l-0 t4s-r-0 t4s-op-0 t4s-pe-none stc-mixpanel-adc-buyn-parent-class"
+      class="t4s-sticky-atc t4s-pf t4s-b-0 t4s-l-0 t4s-r-0 t4s-op-0 t4s-pe-none"
       {% if PR_no_pick %}
       {% endif %}
     >
@@ -1456,29 +1440,22 @@
             data-action-atc
             data-variant-id="{{current_variant.id}}"
             id="addtocart_p"
-            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg" 
-            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-pdp"
-            {% unless pre_order_only %}{% unless current_variant.available %}
+            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg"
+            {% unless current_variant.available %}
               aria-disabled="true"
-            {% endunless -%}{% endunless -%}
-            {% unless pre_order_only %}
+            {% endunless -%}
             {% unless isProductAvailable %}
               disabled="disabled"
             {% endunless %}
-            {% endunless %}
           >
             <span class="t4s-btn-atc_text">
-              {% if pre_order_only %}
-                Pre-order
-              {% else %}
-                {%- if current_variant.available == false or isProductAvailable == false -%}
-                  {{- 'products.product.sold_out' | t -}}
-                {%- elsif isPreoder -%}
-                  {{- 'products.product.pre_order' | t }}
-                {%- else -%}
-                  {{ 'products.product.add_to_cart' | t }}
-                {%- endif -%}
-              {% endif %}
+              {%- if current_variant.available == false or isProductAvailable == false -%}
+                {{- 'products.product.sold_out' | t -}}
+              {%- elsif isPreoder -%}
+                {{- 'products.product.pre_order' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
             </span>
             <span class="t4s-loading__spinner" hidden>
               <svg
@@ -5159,50 +5136,3 @@ $(document).ready(function () {
   }
 }
 {%- endschema -%}
-<style>
-  .t4s-section-main-product .t4s-product__media-item{
-    padding: 0px !important;
-  }
-  .rev[data-product_id="8345939575031"] {
-    display: none;
-  }
-  .rev[data-product_id="8345916735735"] {
-    display: none;
-  }
-  .muktailayout-template .faq_section {
-      background: #f7f7f7;
-      padding: 0;
-      margin: 28px auto;
-  }
-  .muktailayout-template .faq_section ul {
-    list-style: unset;
-    color: #000;
-  }
-  .muktailayout-template .faq_section .faq_item .faq_que:after {
-        width: 28px;
-        height: 28px;
-        top: 25px;
-        right: 25px;
-    }
-  .muktailayout-template .faq_section .faq_item h3 {
-    margin: 0 !important;
-    padding: 23px 0;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: #000000;
-}
-  
-  .muktailayout-template .faq_item.vitC_faq {
-      background-color: transparent !important;
-          padding: 0;
-  }
-  .muktailayout-template .faq_que {
-      background-color: transparent;
-    padding: 0 24px;
-  }
-  .muktailayout-template .faq_ans {
-    padding: 0 31px 0 26px;
-    background: #fff;
-  }
-</style>

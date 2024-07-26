@@ -622,12 +622,6 @@
                       </div>
                     {%- endif -%}
                   </div>
-                  {%- if product.metafields.custom.offerstocklimited != blank -%}
-                    <div class="offer-limtedstoc">
-                      <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/5cd58b02f874279424cf3facf01b19db.png?v=1714045492">
-                      <h4>{{ product.metafields.custom.offerstocklimited }}</h4>
-                    </div>
-                  {%- endif -%}
                   {% comment %}
                         {%- if product.metafields.global.usp-icon != blank -%}
                     <div class="product-usp-icon" style="margin-left: 10px; margin-right: 10px; margin-top: 20px;">
@@ -1232,14 +1226,12 @@
                 
                 {%- when '@app' -%} 
                    {% render 'keybenefits' %}
-                   {% render 'offers-custom' %}          
+                   {% render 'offers-custom' %}                
                    {% render 'offerz-kustom' %}
                  {%- render block -%}
               {%- endcase -%}
             {%- endfor -%}
-            {% render 'keybenefits' %}
-           {% render 'offers-custom' %}          
-           {% render 'offerz-kustom' %}
+            
           {% comment %}
             {% if se_stts.enable_delivery_time %}
               {% if product.metafields.custom.enable_delivery_time == 'yes' %}
@@ -1445,8 +1437,7 @@
             data-action-atc
             data-variant-id="{{current_variant.id}}"
             id="addtocart_p"
-            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg" 
-            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-pdp"
+            class="t4s-sticky-atc__atc single_add_to_cart_button t4s-btn-loading__svg"
             {% unless current_variant.available %}
               aria-disabled="true"
             {% endunless -%}

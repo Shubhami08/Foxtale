@@ -192,14 +192,14 @@
     {% for block in section.blocks %}
       <div class="cus-singlez">
         {% if block.settings.collectionimg != blank %}
-          <a class="cus-pikz" href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}">
+          <a class="cus-pikz" href="{{ block.settings.imglink }}">
             <img class="lazyload"  loading="lazy"
             src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
             data-src="{{ block.settings.collectionimg | img_url: 'master' }}" alt="img"></a>
         {% endif %}
-        <a class="cus-titlez" href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}"></a>
+        <a class="cus-titlez" href="{{ block.settings.imglink }}"></a>
         <div class="inside-mft">
-          <a href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}">{{ block.settings.txtblw }}</a>
+          <a href="{{ block.settings.imglink }}">{{ block.settings.txtblw }}</a>
         </div>
       </div>
     {% endfor %}
@@ -208,14 +208,14 @@
     {% for block in section.blocks %}
       <div class="cus-singlez">
         {% if block.settings.collectionimgz != blank %}
-          <a class="cus-pikz" href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}">
+          <a class="cus-pikz" href="{{ block.settings.imglink }}">
             <img  class="lazyload"   loading="lazy" alt="img"
             src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='darkgray'><rect width='100' height='100'/></svg>"
              data-src="{{ block.settings.collectionimgz | img_url: 'master' }}"></a>
         {% endif %}
-      <a class="cus-titlez" href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}"></a>
+        <a class="cus-titlez" href="{{ block.settings.imglink }}"></a>
         <div class="inside-mft">
-          <a href="{{ block.settings.imglink }}" data-foxtale-event="the-fox-tales-section-click-event" foxtale-event-attr-page-link="{{ block.settings.imglink }}" foxtale-event-attr-tab-name="{{ section.settings.heading }}">{{ block.settings.txtblw }}</a>
+          <a href="{{ block.settings.imglink }}">{{ block.settings.txtblw }}</a>
         </div>
       </div>
     {% endfor %}

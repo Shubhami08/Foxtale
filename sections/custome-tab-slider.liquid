@@ -36,9 +36,9 @@
                       <div class="products-grid-item">
                         <div class="product-innr">
                           <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                            <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
+                            <a rel="dofollow" href="{{product.url}}">
                               {%- render 'product_labels', on: 'singe', product: product -%}
-                              <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}"
+                              <a rel="dofollow" class="cd chp" href="{{product.url}}"
                                 ><img
                                   class="pr-img-first lazyload"
                                   loading="lazy"
@@ -59,16 +59,11 @@
                               class="reviewContainerDiv on-productpic"
                               style='height:24px;width:50px;background:white'
                             ></div>
-                            {% if product.metafields.custom.spotlight_tag != blank %}
-                              <span class="spotlight-tag">
-                                {{ product.metafields.custom.spotlight_tag }}
-                              </span>
-                            {% endif %}
                           </div>
                           <div class="product-info mt__15 mb__10 product-innr-bottom" data-pr-id="{{ product.handle }}">
                             <div class="pr-det">
                               <h3 class="product-title pr fs__14 mg__0 fwm">
-                                <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
+                                <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
                               </h3>
                               {% if product.metafields.my_fields.hp_excerpt != blank %}
                                 <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -217,29 +212,14 @@
                                 </div>
                                 </div>
                                  {% endif %}
-                              
-                              {% assign target_tag = "Combos" %}
                               {% endcomment %}
-                              {% assign main_tag = "Body-care" %}
-                              {% if product.tags contains main_tag %}
-                                <p class="bottom-leftext">15% Off</p>
+                              {% assign message = product.price | divided_by: 100 %}
+                              {% if message <= 746 %}
+                                <p class="bottom-leftext">VDAY</p>
                               {% else %}
-                                {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                                  <p class="bottom-leftext">B2G2</p>
-                                {% else %}
-                                  <p class="bottom-leftext">25% Off</p>
-                                {% endif %} 
+                                <p class="bottom-leftext">15% OFF</p>
                               {% endif %}
-                              {% assign target_tag = "Combos" %}
-                              {% if product.tags contains target_tag or product.tags contains main_tag %}
-                              <p class="bottom-rightext"></p>
-                              {% else %}
-                                {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                                  <p class="bottom-rightext">Free Gift</p>
-                                {% else %}
-                                  <p class="bottom-rightext">Free Eye Mask</p>
-                                 {% endif %}
-                              {% endif %}
+                              <p class="bottom-rightext">Free Gift</p>
                             </div>
                           </div>
                         </div>
@@ -258,8 +238,7 @@
                             <a
                               href="{{ product.url }}"
                               id="addtocart_sl"
-                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-                              data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
                               ><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select shade</span></a
                             >
                           </div>
@@ -268,8 +247,7 @@
                             <a
                               href="javascript:void(0)"
                               id="addtocart_sl"
-                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-                              data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+                              class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
                               data-variant-id="{{product.first_available_variant.id}}"
                               data-action-atc
                               rel="nofollow"
@@ -282,7 +260,7 @@
                     {%- endfor -%}
                   </div>
                   <div class="view-more-btn">
-                    <a id="view-more-link" data-foxtale-event="view-more-click-event" foxtale-event-attr-collection-name="{{ collection.title }}" foxtale-event-attr-from="featured-collection" foxtale-event-attr-collection-url="{{ collection.url }}" href="/collections/bodycare">{{ 'products.grid_items.view_more' | t }}</a>
+                    <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
                   </div>
                 {% endif %}
               </div>
@@ -303,7 +281,7 @@
                           <div class="product-image pr oh lazyloadt4sed product-innr-top">
                             <a href="{{product.url}}">
                               {%- render 'product_labels', on: 'singe', product: product -%}
-                              <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}"
+                              <a class="cd chp" href="{{product.url}}"
                                 ><img
                                   class="pr-img-first lazyload"
                                   data-src="{{ product.images[0] | product_img_url: "500x" }}"
@@ -328,7 +306,7 @@
                           <div class="product-info mt__15 mb__10 product-innr-bottom">
                             <div class="pr-det">
                               <h3 class="product-title pr fs__14 mg__0 fwm">
-                                <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
+                                <a class="cd chp" href="{{product.url}}">{{ product.title }}</a>
                               </h3>
                               {% if product.metafields.my_fields.hp_excerpt != blank %}
                                 <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -353,8 +331,7 @@
                           <a
                             href="javascript:void(0)"
                             id="addtocart_sl"
-                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-                            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
                             data-variant-id="{{product.first_available_variant.id}}"
                             data-action-atc
                             rel="nofollow"
@@ -366,7 +343,7 @@
                     {%- endfor -%}
                   </div>
                   <div class="view-more-btn">
-                    <a id="view-more-link" href="/collections/bodycare">{{ 'products.grid_items.view_more' | t }}</a>
+                    <a id="view-more-link" href="{{ collection.url }}">{{ 'products.grid_items.view_more' | t }}</a>
                   </div>
                 {% endif %}
               </div>
@@ -380,6 +357,7 @@
 
 <style>
   h1 {
+
       color: green;
   }
   .custom-tab-slider .tabcontent {

@@ -3,13 +3,6 @@
     background-color: #e4e4e4;
     padding: 16px 0px 0px 0;
   }
-  .newshop-wrap h3 {
-    font-size: 22px;
-    background-color: transparent;
-    color: #2C2C2C;
-    font-weight: 500;
-    padding: 10px 35px;
-  }
   .newshop-inwrapped {
     margin: 20px 33px;
     border-radius: 4px;
@@ -24,24 +17,13 @@
     width: 100%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   }
-  /* .round-wrapper {
+  .round-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 28px;
     border-bottom: 2px solid #e1e1e1;
     background-color: #ffffff;
     max-width: 585px;
-    margin: 0 auto;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-  } */
-
-  .round-wrapper {
-    display: flex;
-    gap: 28px;
-    border-bottom: 2px solid #e1e1e1;
-    background-color: #ffffff;
-    max-width: 750px;
     margin: 0 auto;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -86,13 +68,12 @@
     font-size: 12px;
     font-weight: 400;
   }
+  .newshop-wrap .price .t4s-product-price {
+    display: block !important;
+  }
   .newshop-layout .pr-img-first, .newshop-layout .pr-img-second {
     border-top-left-radius: 4px !important;
     border-top-right-radius: 4px !important;
-  }
-  .newstickynav-template .newshop-layout .pr-img-first, .newstickynav-template .newshop-layout .pr-img-second {
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
   }
   .newshop-wrap .product-info {
     margin-bottom: 0;
@@ -101,19 +82,14 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   }
   .newshop-wrap .price .t4s-product-price {
-    padding: 0 0px 0 8px;
-    display: none;
-  }
-  .newshop-layout .price .t4s-product-price.active {
-    display: flex;
-    flex-direction: row-reverse;
+    padding: 0 8px;
   }
   .round-collectionimg.active:before {
     content: '';
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     border-bottom: 3px solid #000000;
     border-radius: 2px;
   }
@@ -153,7 +129,7 @@
     color: #2c2c2c;
   }
   .active .collectio-name {
-    /* font-weight: 500; */
+    font-weight: 500;
     color: #000000;
   }
   .newshop-rounddesk {
@@ -162,84 +138,13 @@
   .newshop-roundmobile {
     display: none;
   }
-  span.badge.price__badge-sale.color- {
-    position: absolute;
-    color: #f05001;
-    padding: 8px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    font-size: 15px;
-    font-weight: 500;
-    top: 28px;
-    left: 22px;
-    display: none;
-  }
-  .save-badge {
-    position: absolute;
-    color: #f05001;
-    padding: 8px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    font-size: 11px;
-    font-weight: 500;
-    top: 28px;
-    left: 22px;
-    display: none;
-    text-align: center;
-    line-height: 10px;
-  }
-  .save-badge h5 {
-    color: #f05001;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .newshop-wrap ins.dcba {
-    padding-right: 10px;
-  }
 
   @media (max-width: 768px) {
-    .round-collectionimg {
-      max-width: 100px;
-      min-width: 21%;
-    }
-    .round-wrapper {
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    .round-wrapper::-webkit-scrollbar {
-      display: none;
-    }
-    span.badge.price__badge-sale.color- {
-      font-size: 12px;
-      font-weight: 500;
-      top: 8px;
-      left: 10px;
-      padding: 6px;
-      line-height: 10px;
-    }
-    .save-badge {
-      font-size: 10px;
-      font-weight: 500;
-      top: 8px;
-      left: 10px;
-      padding: 6px;
-      line-height: 12px;
-    }
-    .save-badge h5 {
-      font-size: 14px;
-      font-weight: 600;
-    }
     .newshop-wrap {
-      padding: 0px 0px 1px 0;
-    }
-    .newshop-wrap h3 {
-      background-color: #ffffff;
-      font-size: 18px;
-      padding: 0 12px;
+      padding: 0px 0px 0px 0;
     }
     .round-wrapper {
-      grid-column-gap: 0;
+      grid-column-gap: 8px;
     }
     .newshop-layout {
       display: grid;
@@ -318,46 +223,13 @@
       margin: 0 auto;
     }
     .newshop-roundmobile img {
-      width: 85px;
-      height: 85px;
-    }
-    /* New Changes 17th April */
-    .newshop-wrap h3 {
-      font-size: 18px;
-    }
-    .round-outerwrapper {
-      padding: 15px 0px 6px 0px;
-    }
-    .newstickynav-template .round-wrapper {
-      grid-column-gap: 3px;
-    }
-    .newstickynav-template .collectio-name {
-      font-size: 10px;
-      margin: 0px 0 5px 0;
-    }
-    .newshop-wrap .product-info .product-title {
-      text-overflow: unset;
-      display: flex;
-      -webkit-line-clamp: unset;
-      -webkit-box-orient: unset;
-    }
-    .newshop-wrap .product-info .fx-tags-shop {
-      padding-top: 0px !important;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .newstickynav-template .collectio-name {
-      font-size: 10px;
-    }
-    .newstickynav-template .round-wrapper {
-      grid-column-gap: 0px;
+      width: 65px;
+      height: 65px;
     }
   }
 </style>
 
 <div class="newshop-wrap">
-  <h3>{{ section.settings.heading }}</h3>
   <div class="round-outerwrapper" id="navigation">
     <div class="round-wrapper">
       {% for block in section.blocks %}
@@ -386,8 +258,8 @@
         <p>{{ block.settings['grid-subheading'] }}</p>
       </div>
       <div class="newshop-layout">
-        {%- for product in collection.products limit: 10 -%}
-          <div class="products-grid-item bb-{{ block.id }}">
+        {%- for product in collection.products limit: 8 -%}
+          <div class="products-grid-item">
             <div class="product-innr">
               {% comment %}
                 {% if product.metafields.custom.pr_excerpt != blank %}
@@ -397,25 +269,8 @@
                 {% endif %}
               {% endcomment %}
               <div class="product-image pr oh lazyloadt4sed product-innr-top">
-                <a rel="dofollow" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{product.url}}">
+                <a rel="dofollow" href="{{product.url}}">
                   {%- render 'product_labels', on: 'singe', product: product -%}
-                  
-   {%- if product.price < product.compare_at_price -%}
-      {%- assign savings = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round | append: '%' -%}
-      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">{{ savings }}</span>
-	{% else %}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      {{ 'products.product.on_sale' | t }}
-    </span>
-    {%- endif -%}
-
-    {%- if product.metafields.custom.savingscustom != blank -%}
-      <span class="save-badge">SAVE<br><h5>{{ product.metafields.custom.savingscustom }}</h5></span>
-    {%- endif -%}
-
-    {%- if product.metafields.custom.ingredientstag != blank -%}
-      <span class="ingredient-badge"><h5 style="color: #{{ product.metafields.custom.ingredientscolor }};">{{ product.metafields.custom.ingredientstag }}</h5></span>
-    {%- endif -%}
                   <img
                     class="pr-img-first lazyload"
                     loading="lazy"
@@ -440,7 +295,7 @@
               <div class="product-info mt__15 mb__10 product-innr-bottom rtn-adjst">
                 <div class="pr-det">
                   <h3 class="product-title pr fs__14 mg__0 fwm">
-                    <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{product.url}}">{{ product.title }}</a>
+                    <a rel="dofollow" class="cd chp" href="{{product.url}}">{{ product.title }}</a>
                   </h3>
                   {% if product.metafields.my_fields.hp_excerpt != blank %}
                     <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">
@@ -449,48 +304,25 @@
                   {% endif %}
                 </div>
                 {% comment %}<p style="font-size: 14px; font-weight: 400; -webkit-letter-spacing: 0; -moz-letter-spacing: 0; -ms-letter-spacing: 0; color: #fc2779; margin-bottom: 0;">Free Gift Worth ₹150</p>{% endcomment %}
-                    <span class="price dib mb__5">
-                      {%- for variant in product.variants -%}
-                        {% assign pr_option = variant.options | downcase | replace: '"', '' %}
-                        {% assign pr_option = pr_option | replace: ' ', '-' %}
-                        {% assign pr_option = pr_option | replace: '[', '' %}
-                        {% assign pr_option = pr_option | replace: ']', '' %}
-                        <div class="t4s-product-price {{ pr_option }}{% if forloop.first %} active{% endif %}">
-                          {% if variant.compare_at_price > variant.price %}
-                            <del>{{ variant.compare_at_price | money_with_currency }}</del
-                            ><ins class="dcba">{{ variant.price | money_with_currency }}</ins>
-                          {% else %}
-                            {{ variant.price | money_with_currency }}
-                          {% endif %}
-                        </div>
-                      {% endfor %}
-                    </span>
+                <span class="price dib mb__5">
+                  {%- render 'product-price',
+                    product: product,
+                    price_varies_style: price_varies_style,
+                    type: 'card',
+                    isGrouped: isGrouped
+                  -%}
+                </span>
                 <div class="discount-msg">
-                  {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                    <p class="bottom-leftext">B2G2</p>
-                  {% else %}
-                    <p class="bottom-leftext">BYOB</p>
-                  {% endif %} 
-                  {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                    <p class="bottom-rightext">Free Gift</p>
-                  {% else %}
-                    <p class="bottom-rightext">Free Gift</p>
-                  {% endif %}
+                  <p class="bottom-leftext">B2G2</p>
+                  <p class="bottom-rightext">Free Gift</p>
                 </div>
               </div>
             </div>
-            
-            {% if product.metafields.custom.check_variant %}
-                <div class="shop-all-qty-cart-btn">
-                    <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-                </div>
-            {% else %}
-              <div class="shop-all-qty-cart-btn">
+            <div class="shop-all-qty-cart-btn">
               <a
                 href="{{ product.url }}"
                 id="addtocart_r"
-                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+                class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
                 data-variant-id="{{product.first_available_variant.id}}"
                 data-action-atc
                 rel="dofollow"
@@ -498,7 +330,6 @@
                 ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
               >
             </div>
-            {% endif %}
           </div>
         {%- endfor -%}
       </div>
@@ -518,9 +349,9 @@
       // Check if the user is using an iPhone
       if (userAgent.match(/iPhone/i)) {
           console.log('User is using an iPhone');
-          var for_tab_1 = -20;
+          var for_tab_1 = 25;
           var for_tab_first_time = 0;
-          var for_tab_click = -30;
+          var for_tab_click = 20;
       }else{
           var for_tab_1 = 0;
           var for_tab_first_time = -30;
@@ -575,15 +406,13 @@
           var scroll_manage = -60;
       }
 
+  var tab_1_pos = $(".newshop-inwrapped#tab_1").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+  var tab_2_pos = $(".newshop-inwrapped#tab_2").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+  var tab_3_pos = $(".newshop-inwrapped#tab_3").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+  var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
 
   $(window).scroll(function(){
-    var tab_1_pos = $(".newshop-inwrapped#tab_1").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    var tab_2_pos = $(".newshop-inwrapped#tab_2").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    var tab_3_pos = $(".newshop-inwrapped#tab_3").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    var tab_4_pos = $(".newshop-inwrapped#tab_4").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    var tab_5_pos = $(".newshop-inwrapped#tab_5").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    var tab_6_pos = $(".newshop-inwrapped#tab_6").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
-    // var tab_7_pos = $(".newshop-inwrapped#tab_7").offset().top - $(".round-outerwrapper").outerHeight() + scroll_manage;
+    console.log($(window).scrollTop(),"111111111");
     if($(window).scrollTop() > tab_1_pos && $(window).scrollTop() < tab_2_pos){
       if(!$('.round-collectionimg[data-tab="tab_1"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");
@@ -599,38 +428,16 @@
         $(".round-wrapper .round-collectionimg").removeClass("active");
         $('.round-collectionimg[data-tab="tab_3"]').addClass("active");
       }
-    }else if($(window).scrollTop() > tab_4_pos && $(window).scrollTop() < tab_5_pos){
+    }else if($(window).scrollTop() > tab_4_pos){
       if(!$('.round-collectionimg[data-tab="tab_4"]').hasClass("active")){
         $(".round-wrapper .round-collectionimg").removeClass("active");
         $('.round-collectionimg[data-tab="tab_4"]').addClass("active");
       }
     }
-    else if($(window).scrollTop() > tab_5_pos && $(window).scrollTop() < tab_6_pos){
-      if(!$('.round-collectionimg[data-tab="tab_5"]').hasClass("active")){
-        $(".round-wrapper .round-collectionimg").removeClass("active");
-        $('.round-collectionimg[data-tab="tab_5"]').addClass("active");
-      }
-    }
-    else if($(window).scrollTop() > tab_6_pos){
-      if(!$('.round-collectionimg[data-tab="tab_6"]').hasClass("active")){
-        $(".round-wrapper .round-collectionimg").removeClass("active");
-        $('.round-collectionimg[data-tab="tab_6"]').addClass("active");
-      }
-    }
-    // else if($(window).scrollTop() > tab_7_pos){
-    //   if(!$('.round-collectionimg[data-tab="tab_7"]').hasClass("active")){
-    //     $(".round-wrapper .round-collectionimg").removeClass("active");
-    //     $('.round-collectionimg[data-tab="tab_7"]').addClass("active");
-    //   }
-    // }
 
     if($(window).scrollTop() > elementPosition.top){
           $('#navigation').css('position','fixed').css('top','0').css('z-index','3').addClass("scetion_fixed");
-      if($(window).width() < 767){
-          $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight() + 20);
-      }else{
-        $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight());
-      }
+          $('.newshop-wrap #tab_1').css('margin-top',$(".round-outerwrapper").outerHeight());
     } else {
         $('#navigation').css('position','static').removeClass("scetion_fixed");
         $('.newshop-wrap #tab_1').css('margin-top',0);

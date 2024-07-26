@@ -149,7 +149,7 @@
                      </div>
                      <div class="t4s-dropdown__content">
                       {%- for option in collection.sort_options -%}
-                      <button data-dropdown-item data-sortby-item data-value="{{ option.value | escape }}" class="{% if option.value == sort_by %}is--selected{% endif %}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{ option }}">{%- if option.name == 'Date, new to old' -%} Newest {%- else -%} {{ option.name | escape }} {% endif %}</button>
+                      <button data-dropdown-item data-sortby-item data-value="{{ option.value | escape }}" class="{% if option.value == sort_by %}is--selected{% endif %}">{%- if option.name == 'Date, new to old' -%} Newest {%- else -%} {{ option.name | escape }} {% endif %}</button>
                       {%- endfor -%}
                      </div>
                   </div>

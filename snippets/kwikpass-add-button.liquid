@@ -269,7 +269,7 @@ svg.kploader {
    // dropdown for desktop (opens on clicking kwikpass icon if user logged in)
 const drawerhtmlDesktop = `<div id="kwikpass-drawer-desktop"  >
         <ul>
-            <a href="/account" tabindex="0" style="display: flex">
+            <a href="/account" style=" display: flex">
                 <p>
                     <svg
                         width="20"
@@ -294,7 +294,7 @@ const drawerhtmlDesktop = `<div id="kwikpass-drawer-desktop"  >
                 ${loader}
             </a>
         </ul>
-        <button id="logout-button-desktop" data-foxtale-event="logout-click-event" foxtale-event-attr-user-id="{{localStorage.getItem("kp_customer_id")}}">
+        <button id="logout-button-desktop">
             Logout
             <svg
                 width="20"

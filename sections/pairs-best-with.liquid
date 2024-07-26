@@ -48,7 +48,7 @@
                    </span>
                 {% endcomment %}
               {% endif %}
-              <a class="db" href="/products/{{pairProduct.handle}}?section=pdp-best-selling-combos" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="/products/{{pairProduct.handle}}?section=pdp-best-selling-combos" foxtale-event-attr-from="from-pdp" foxtal-event-attr-section="best-selling-combos">
+              <a class="db" href="/products/{{pairProduct.handle}}?section=pdp-best-selling-combos">
                 <div
                   class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed"
                   data-id="{{ pairProduct.images[0].id }}"
@@ -130,17 +130,10 @@
               {% comment %}<div class="shopify-product-reviews-badge star-rating" data-id="{{pairProduct.id}}"></div>
               <div class="pr-variant">{% render 'product-form', type:'main', product: product, bk_stts: bk_stts, pr_se_id: pr_se_id, isExternal:isExternal, external_title:external_title, external_link:external_link, isProductAvailable:isProductAvailable, isProductDefault:isProductDefault, current_variant:current_variant, remove_soldout: remove_soldout, PR_no_pick:PR_no_pick, isPreoder:isPreoder, is_fit_ratio_img:is_fit_ratio_img, first_ratio_img:first_ratio_img, name_sizeg:name_sizeg, html_sizeg:html_sizeg, advance_pr_type:advance_pr_type, advance_label:advance_label, html_price:html_price ,shopify_attributes:block.shopify_attributes, arr_properties: arr_properties, cus_qty: cus_qty %}</div>{% endcomment %}
             </div>
-            
-            {% if pairProduct.metafields.custom.check_variant %}
-                <div class="shop-all-qty-cart-btn">
-                    <a href="{{ pairProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-                </div>
-            {% else %}
-              <div class="shop-all-qty-cart-btn">
+            <div class="shop-all-qty-cart-btn">
               <a
                 href="javascript:void(0)"
                 class="fx-custom-btn-dark t4s-pr-item-btn btn-pairs-atc t4s-pr-addtocart"
-                data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-pdp"
                 data-variant-name="{{ pairProduct.title }}"
                 data-variant-id="{{pairProduct.first_available_variant.id}}"
                 data-action-atc
@@ -149,7 +142,6 @@
                 ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
               >
             </div>
-            {% endif %}
           </div>
         </div>
       {% endfor %}

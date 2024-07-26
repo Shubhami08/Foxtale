@@ -299,7 +299,7 @@ t4s_group_btns_split
 
 	{%- if se_stts.cart_des != '0' -%}
    <div class="t4s-site-nav__icon t4s-site-nav__cart">	
-		<a href="javascript:void(0)"{% if settings.cart_type != 'disable' %} data-drawer-delay data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} data-foxtale-event="cart-viewed" foxtale-event-attr-from="side-cart" foxtale-event-attr-api-url-for-data="/cart.js">
+		<a href="javascript:void(0)"{% if settings.cart_type != 'disable' %} data-drawer-delay data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %}>
 			<span class="t4s-pr t4s-icon-cart__wrap">
 			  {% comment %}<svg class="t4s-icon t4s-icon--cart" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-cart"></use></svg>{% endcomment %}
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>

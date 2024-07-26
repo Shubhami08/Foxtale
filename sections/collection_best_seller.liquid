@@ -60,7 +60,7 @@
               data-rendert4s="/products/{{pairProduct.handle}}/?view=imgfalse"
               data-currentrendert4s=""
             >
-              <a class="db" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="/products/{{pairProduct.handle}}" foxtale-event-attr-from="from-feature-collection-image" href="/products/{{pairProduct.handle}}">
+              <a class="db" href="/products/{{pairProduct.handle}}">
                 <div
                   class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed"
                   data-id="{{ pairProduct.images[0].id }}"
@@ -120,7 +120,7 @@
             </div>
             <div class="product-info mt__15">
               <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 500;font-size:18px;-webkit-line-clamp:2;">
-                <a rel="dofollow" class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
+                <a rel="dofollow" class="cd chp" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
               </h3>
               {% if  pairProduct.metafields.my_fields.hp_excerpt != blank %}
                 <p class="fx-tags-shop fx-{{  pairProduct.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{  pairProduct.metafields.my_fields.hp_excerpt }}</p>
@@ -187,7 +187,7 @@
                   {% elsif collection.title == "Affiliate Valentine Sale" %}
                     <p class="bottom-leftext">CUPID</p>
                   {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-leftext">25% off</p>
+                    <p class="bottom-leftext">VDAY</p>
                   {% elsif collection.title == "Birthday Special Sale" %}
                     <p class="bottom-leftext">B2G4</p>
                   {% elsif collection.title == "Birthday Sale" %}
@@ -199,33 +199,23 @@
                   {% elsif collection.title == "Special Offer" %}
                     <p class="bottom-leftext">B2G4</p>
                   {% elsif collection.title == "New Exclusive Special" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">B2G4</p>
                   {% elsif collection.title == "Midnight Sale" %}
-                    <p class="bottom-leftext">B1G1</p>
-                  {% elsif collection.title == "Free Eye Mask - Gpay" %}
+                     <p class="bottom-leftext">B1G1</p>
+                      {% elsif collection.title == "Free Eye Mask - Gpay" %}
                     <p class="bottom-leftext">B1G1 Eye Mask Free</p>
                   {% elsif collection.title == "Secret Flash Sale" %}
                      <p class="bottom-leftext">B1G1</p>
                   {% elsif collection.title == "Secret Party" %}
                      <p class="bottom-leftext">B1G1</p>
                   {% elsif collection.title == "Exclusive Sale" %}
-                    <p class="bottom-leftext">B1G1/B2G2</p>
+                    <p class="bottom-leftext">VDAY</p>
                   {% elsif collection.title == "Paytm Flat 400 off" %}
                     <p class="bottom-leftext">₹400 off</p>
-                  {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                    <p class="bottom-leftext">B2G2</p>
                   {% else %}
-                    <p class="bottom-leftext">BYOB</p>
-                  {% endif %}                         
-                  {% if collection.title == "Exclusive Sale" %}
-                    <p class="bottom-rightext"></p>
-                  {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-rightext">Free Eye Mask</p>
-                  {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                    <p class="bottom-rightext">Free Gift</p>
-                  {% else %}
-                    <p class="bottom-rightext"></p>
+                    <p class="bottom-leftext">15% OFF</p>
                   {% endif %}
+                    <p class="bottom-rightext">Free Gift</p>            
                </div>
 <!--             
              <form
@@ -277,18 +267,10 @@
                 </div>
               </div>
             </form>  -->
-
-            {% if pairProduct.metafields.custom.check_variant %}
-              <div class="shop-all-qty-cart-btn">
-                <a href="{{ pairProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-              </div>
-            {% else %}
-              <div class="shop-all-qty-cart-btn " data-handle="{{ pairProduct.handle }}">               
-                 <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>            
-              </div>
-            {% endif %}
             
-            
+            <div class="shop-all-qty-cart-btn " data-handle="{{ pairProduct.handle }}">               
+               <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>            
+            </div>
             
           </div>
         </div>

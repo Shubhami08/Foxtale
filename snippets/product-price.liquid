@@ -76,7 +76,7 @@
 
           {%- elsif product.variants.first.compare_at_price -%}
 
-            <del>{{money_compare_at_price}}</del> <ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins>
+            {% comment %}<del>{{money_compare_at_price}}</del>{% endcomment %} <ins>{{ 'products.product.from_price_html' | t: price_min: money_price, class: 't4s-price-from' }}</ins>
 
           {%- else -%}
           {{ 'products.product.from_price_html' | t: price_min: money_price, class:'t4s-price-from' }}

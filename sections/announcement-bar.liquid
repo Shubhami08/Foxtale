@@ -33,7 +33,7 @@
 
   <div aria-hidden="false" class="t4s-announcement-bar t4s-pr t4s-oh t4s-type-close-{{se_stts.close}}" data-ver='{{se_stts.version}}_nt' data-date='{{se_stts.date}}'>
     <div class="t4s-container">
-       <div class="t4s-row t4s-gx-0 t4s-flex-nowrap t4s-align-items-center sml-announce">
+       <div class="t4s-row t4s-gx-0 t4s-flex-nowrap t4s-align-items-center">
           
           {{- cap_btn -}}
 
@@ -44,7 +44,7 @@
                   {%- capture cap_date %}{% assign se_dayx = bk_stts.dayx %}<span data-refresh-owl data-countdown-t4s data-loop="{% if se_dayx > 0 %}true{% else %}false{% endif %}" data-date="{{bk_stts.countdown}}" data-dayl="{{se_dayx}}">%D {{bk_stts.txt_day}} %H:%M:%S</span>{% endcapture -%}
                   
                   <div id="b_{{block.id}}" {{ block.shopify_attributes }} data-select-flickity class="t4s-col-item t4s-announcement-bar__item t4s-pr t4s-oh">
-                  {%- if bk_stts.link != blank -%}<a href="{{bk_stts.link}}" aria-label="{{label}}" class="t4s-full-width-link" data-foxtale-event="announcement-section-click-event"></a>{%- endif -%}
+                  {%- if bk_stts.link != blank -%}<a href="{{bk_stts.link}}" aria-label="{{label}}" class="t4s-full-width-link"></a>{%- endif -%}
                   {{- bk_stts.content | replace:'[countdown]',cap_date | replace:'[icon_arrow]',cap_arrow -}}
                   </div>
                {%- endfor -%}

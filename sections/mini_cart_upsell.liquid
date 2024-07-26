@@ -16,7 +16,7 @@
 		       		<div class="t4s-row t4s-g-0 t4s-align-items-center">
 						<div class="t4s-col-item t4s-col-auto t4s-minicart-recommendations__item--img">
 							{%- if image != blank -%}
-								<a class="t4s-d-block t4s-pr t4s-oh t4s_ratio" href="{{pr_url}}"style="{{imgatt}}--aspect-ratioapt: {{image.aspect_ratio | default: 1}}" data-foxtale-event="cart-item-viewed" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-mini-cart-suggestions-product-image">
+								<a class="t4s-d-block t4s-pr t4s-oh t4s_ratio" href="{{pr_url}}"style="{{imgatt}}--aspect-ratioapt: {{image.aspect_ratio | default: 1}}">
 									<img class="lazyloadt4s" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600,700,800,900,1000,1200,1400,1600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg',w:image.width,h:image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
 									<span class="lazyloadt4s-loader is-bg-img" style="background: url({{ image | image_url: width: 1 }});"></span>
 								</a>
@@ -24,18 +24,18 @@
 						</div>
 						<div class="t4s-col-item t4s-col t4s-pr t4s-oh">
 							{% comment %}{%- render 'product-rating',product:product,app_review:app_review -%}{% endcomment %}
-							<a href="{{pr_url}}" class="t4s-d-block t4s-minicart-recommendations__item--title t4s-truncate" data-foxtale-event="cart-item-viewed" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-mini-cart-suggestions-product-name">{{ product.title }}</a>
+							<a href="{{pr_url}}" class="t4s-d-block t4s-minicart-recommendations__item--title t4s-truncate">{{ product.title }}</a>
                             {% if product.metafields.my_fields.hp_excerpt != blank %}
                               <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
                             {% endif %}
 							{%- render 'product-price',class_price:'t4s-minicart-recommendations__item--price',product:product,price_varies_style:price_varies_style,type:'card',isGrouped:false -%}
 						</div>
-						{%- if settings.enable_quickview %}<div class="t4s-col-item t4s-col-auto"><a href="{{pr_url}}" data-id="{{product.id}}" data-tooltip="top" title="{{'products.product_card.quick_view' | t | escape}}" rel="nofollow" class="t4s-minicart-recommendations__item--qv t4s-btn-loading__svg" data-action-quickview  data-foxtale-event="cart-item-viewed" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-mini-cart-suggestions-quick-view">
+						{%- if settings.enable_quickview %}<div class="t4s-col-item t4s-col-auto"><a href="{{pr_url}}" data-id="{{product.id}}" data-tooltip="top" title="{{'products.product_card.quick_view' | t | escape}}" rel="nofollow" class="t4s-minicart-recommendations__item--qv t4s-btn-loading__svg" data-action-quickview>
 							<svg viewBox="0 0 24 24" class="t4s-btn-op0"><use xlink:href="#t4s-icon-qv"></use></svg>
 							<span class="t4s-loading__spinner" hidden><svg width="16" height="16" hidden="" class="t4s-svg-spinner" focusable="false" role="presentation" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></span>
 						</a></div>{% endif %}
                     <div class="mini-cart-add">
-                      <a href="{{ product.url }}" data-target="add-{{ forloop.index }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-mini-cart-drawer" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'Add' }}</span></a>
+                      <a href="{{ product.url }}" data-target="add-{{ forloop.index }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'Add' }}</span></a>
                     </div>
 					</div>
                 </div>

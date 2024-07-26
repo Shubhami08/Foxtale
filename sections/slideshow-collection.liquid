@@ -80,8 +80,11 @@
   ]
 }
 {% endschema %}
-{{ 'new-slider-collection.css' | asset_url | stylesheet_tag }}
 
+{% stylesheet %}
+<!-- Add Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% endstylesheet %}
 
 <div class="main-carousel-collection" style="visibility:hidden">
 {% for block in section.blocks %}
@@ -110,7 +113,7 @@
       {% endfor %}
     </div>
 
-    <div class="main-carousel mobile-carousel" style="{% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1" or collection.handle == "gpay-b2g2" %}height:calc(100vw * 9 / 30);{% else %}height:calc(100vw * 9 / 16);{% endif %}">
+    <div class="main-carousel mobile-carousel" style="height:calc(100vw * 9 / 16);">
       {% for i in (1..5) %}
         {% assign img = "" %}
         {% case i %}
@@ -181,24 +184,6 @@
   }
   
 }
-  {% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1" or collection.handle == "gpay-b2g2" %}
-    .desktop-carousel{
-      padding-bottom:0 !important;
-    }
-    @media screen and (min-width: 768px) {
-      .template-collection .main-carousel-collection {
-          margin: 28px 0 0px 0 !important;
-      }
-    }
-    @media (max-width: 768px) {
-      .newshop-template .main-carousel-collection {
-          margin: 8px 0 18px 0 !important;
-      }
-    }
-    .newshop-wrap {
-      padding: 0 !important;
-    }
-  {% endif %}
 </style>
 <script>
 $(document).ready(function() {
@@ -206,7 +191,7 @@ $(document).ready(function() {
     $('.main-carousel-collection').css('visibility','visible');
   }, 1500);
   // Add Flickity JS
-  $.getScript("{{ 'pre_flickity.min.js' | asset_url }}")
+  $.getScript("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")
     .done(function() {
     var $desktopCarousel = $('.desktop-carousel').flickity({
       // options

@@ -301,7 +301,7 @@
           {% assign collection = collections[handle] %}
           {% if collection %}
             <li>
-              <button ><a data-value = "{{ collection.title }}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{ collection.title }}">{{ collection.title }}</a></button><hr>
+              <button ><a data-value = "{{ collection.title }}">{{ collection.title }}</a></button><hr>
               <!-- Code to display the collection -->
             </li>
           {% endif %}
@@ -329,7 +329,7 @@
     
     {% if handle %}
       <li>
-        <button><a data-value = "{{ handle }}" data-foxtale-event="filter-select-event" foxtale-event-attr-from="from-collection" foxtale-event-attr-filter-name="{{ collection.title }}">{{ handle }}</a></button><hr>
+        <button ><a data-value = "{{ handle }}">{{ handle }}</a></button><hr>
         <!-- Code to display the collection -->
       </li>
     {% endif %}

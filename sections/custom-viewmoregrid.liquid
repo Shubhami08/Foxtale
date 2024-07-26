@@ -28,7 +28,7 @@
      {% if collection != blank %}
         <div class="products-grid-item-main pdp-custom-collection custom-collection-product-grid-item">
           {%- for product in collection.products -%}
-            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 5 %}{% endif %}>
+            <div class="products-grid-item custom-collection-product-grid-item-sub vm-vl" {% if forloop.index > 4 %}style="display: none;"{% endif %}>
               <div class="product-innr vmg">
                 <div class="product-image pr oh lazyloadt4sed product-innr-top">
                   <a href="{{product.url}}">
@@ -94,22 +94,16 @@
                               -%}
                           </span>
                         <div class="discount-msg">
-                          <p class="bottom-leftext">10% OFF</p>
-                          <p class="bottom-rightext"></p>
+                          <p class="bottom-leftext">VDAY</p>
+                          <p class="bottom-rightext">Free Gift</p>
                         </div>
                         </div>
                     </div>
-                  {% if product.metafields.custom.check_variant %}
-                      <div class="shop-all-qty-cart-btn">
-                          <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-                      </div>
-                  {% else %}
                     <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
                           <a
                             href="{{ product.url }}"
                             id="addtocart_r"
-                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-                            data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
+                            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
                             data-variant-id="{{product.first_available_variant.id}}"
                             data-action-atc
                             rel="nofollow"
@@ -117,11 +111,10 @@
                             ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
                           >
                     </div>
-                  {% endif %} 
                 </div>
            {%- endfor -%}
         </div>
-        <div class="custom-collection-view-more" style="display: none;">view more</div>
+        <div class="custom-collection-view-more">view more</div>
          <div class="custom-collection-view-less" style="display: none;">view less</div>
 {% endif %}
 {% endif %}
@@ -137,7 +130,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 20px;
   padding: 0 32px;
-  margin-bottom: 35px;
 }
 .custom-collection-view-more, .custom-collection-view-less {
   color: #1877F2;
@@ -152,8 +144,7 @@
   margin-top: 0px;
 }
 .template-collection .vm-vl .price .t4s-product-price {
-  display: flex !important;
-  flex-direction: row-reverse;
+  display: block;
   padding: 0 8px;
 }
 .vm-vl {
@@ -207,7 +198,6 @@
   .hdng-vwmr {
     margin: 0px 0 8px 12px;
     font-size: 20px;
-    padding-top: 1px;
   }
   .custom-collection-product-grid-item {
     display: grid;
@@ -215,7 +205,6 @@
     grid-row-gap: 10px;
     grid-column-gap: 8px;
     padding: 0 12px;
-    margin-bottom: 30px;
   }
   .custom-collection-product-grid-item .fera-widget-457325 .fera-productReviewsSummary-stars-rating {
     font-size: 11px !important;
@@ -227,22 +216,22 @@
 }
 </style>
 <script>
-  // $(document).ready(function(){
-  //   const viewMoreButton = $('.custom-collection-view-more');
-  //   const viewLessButton = $('.custom-collection-view-less');
-  //    viewMoreButton.on('click', function() {
-  //       $('.custom-collection-product-grid-item-sub').show(); // show all jobs
-  //       viewMoreButton.hide();           // hide the "View More" button
-  //       viewLessButton.show();           // show the "View Less" button
-  //     });
-  //    viewLessButton.on('click', function() {
-  //       $('.custom-collection-product-grid-item-sub').each(function(index) {
-  //           if (index >= 4) {
-  //               $(this).hide();          // hide jobs beyond the third one
-  //           }
-  //       });
-  //       viewLessButton.hide();           // hide the "View Less" button
-  //       viewMoreButton.show();           // show the "View More" button
-  //     });
-  // });
+  $(document).ready(function(){
+    const viewMoreButton = $('.custom-collection-view-more');
+    const viewLessButton = $('.custom-collection-view-less');
+     viewMoreButton.on('click', function() {
+        $('.custom-collection-product-grid-item-sub').show(); // show all jobs
+        viewMoreButton.hide();           // hide the "View More" button
+        viewLessButton.show();           // show the "View Less" button
+      });
+     viewLessButton.on('click', function() {
+        $('.custom-collection-product-grid-item-sub').each(function(index) {
+            if (index >= 4) {
+                $(this).hide();          // hide jobs beyond the third one
+            }
+        });
+        viewLessButton.hide();           // hide the "View Less" button
+        viewMoreButton.show();           // show the "View More" button
+      });
+  });
 </script>

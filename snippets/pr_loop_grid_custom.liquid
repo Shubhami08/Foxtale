@@ -52,17 +52,17 @@
     </h6>
   {% endif %}
 <div class="product-image pr oh lazyloadt4sed">
-   <a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-feature-collection-image" href="{{pr_url}}"><img class="first-img" src="{{ product.images[0] | product_img_url: 'master' }}" />
+   <a class="cd chp" href="{{pr_url}}"><img class="first-img" src="{{ product.images[0] | product_img_url: 'master' }}" />
    <img class="second-img" src="{{ product.images[1] | product_img_url: 'master' }}" /></a>
    <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
 </div>
 {%- endif -%}
 <div class="product-info mt__15 mb__10 jen-rtn-adjst" data-pr-id="{{ product.handle }}" >
    {%- if product.vendor.size > 0 and show_vendor -%}
-   <div class="product-brand"><a class="cg chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ product.vendor | url_for_vendor }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
+   <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
    {%- endif -%}
    <div class="pr-det">
-      <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pr_url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{pr_url}}">{{product.title}}</a></h3>
+      <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp" href="{{pr_url}}">{{product.title}}</a></h3>
       {% if product.metafields.my_fields.hp_excerpt != blank %}
       <p class="fx-tags-shop fx-{{ product.metafields.my_fields.hp_excerpt | downcase | replace: " ", "-" }}">{{ product.metafields.my_fields.hp_excerpt }}</p>
       {% endif %}
@@ -106,9 +106,9 @@
    <div class="discount-msg">
      {% assign message = product.price | divided_by: 100 %}
         {% if message <= 750 %}
-          <p class="bottom-leftext">B3@1099</p>
+          <p class="bottom-leftext">VDAY</p>
         {% else %}
-            <p class="bottom-leftext">10% OFF</p>
+            <p class="bottom-leftext">15% OFF</p>
           {% endif %} 
       <!-- {% if product.title contains 'Foxtale Minis' %}
       <div class="bottom-leftext">
@@ -117,22 +117,15 @@
          </div>
       </div>
       {% endif %} -->
-      <p class="bottom-rightext"></p>
+      <p class="bottom-rightext">Free Gift</p>
    </div>
    {%- if color_count > 0 -%}
    <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyloadt4s" data-colorCount="{{color_count}}" data-rendert4s="{{pr_url}}/?view=sw{{sett_equal}}"></div>
    {%- endif -%}
 </div>
 </div>
-  {% if product.metafields.custom.check_variant %}
-          <div class="shop-all-qty-cart-btn">
-              <a href="{{ product.url }}" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-          </div>
-      {% else %}
-        <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-           <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-        </div>
-      {% endif %}
-
+<div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+   <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+</div>
 </div>
 </div>

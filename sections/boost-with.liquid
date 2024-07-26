@@ -20,7 +20,7 @@
               data-currentrendert4s=""
             >
               <h6>{{ pairHandleExcerpt }}</h6>
-              <a class="db" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="/products/{{pairProduct.handle}}" foxtale-event-attr-from="from-feature-collection-image" href="/products/{{pairProduct.handle}}?section=boost-with">
+              <a class="db" href="/products/{{pairProduct.handle}}?section=boost-with">
                 <div
                   class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloadt4sed"
                   data-id="{{ pairProduct.images[0].id }}"
@@ -91,22 +91,16 @@
             </div>
             <div class="product-info mt__15">
               <h3 class="product-title pr fs__14 mg__0 fwm" style="font-weight: 600;">
-                <a class="cd chp prod-title-bs" data-foxtale-event="product-click-event" foxtale-event-attr-api-url-for-data="{{ pairProduct.url }}" foxtale-event-attr-from="from-feature-collection-product-info" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
+                <a class="cd chp prod-title-bs" href="{{pairProduct.url}}">{{ pairProduct.title }}</a>
               </h3>
               <span class="price dib mb__5" style="margin-top: 10px; font-size: 16px; font-weight: 800;"
                 ><ins>{{ pairProduct.price | money }}</ins></span
               >
               <div class="shopify-product-reviews-badge star-rating" data-id="{{pairProduct.id}}"></div>
             </div>
-            {% if pairProduct.metafields.custom.check_variant %}
-              <div class="shop-all-qty-cart-btn">
-                    <a href="{{ pairProduct.url }}" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-                  </div>
-            {% else %}
-              <div class="shop-all-qty-cart-btn">
-                    <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart" data-variant-name="{{ pairProduct.title }}" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-                  </div>
-            {% endif %}
+            <div class="shop-all-qty-cart-btn">
+              <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn btn-boost-with-atc t4s-pr-addtocart" data-variant-name="{{ pairProduct.title }}" data-variant-id="{{pairProduct.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+            </div>
           </div>
         </div>
       {% endfor %}

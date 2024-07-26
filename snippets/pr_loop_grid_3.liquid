@@ -55,11 +55,6 @@
    <div data-fera-container="457325" data-product_id="{{ product.id }}" class="reviewContainerDiv on-productpic"></div>
 </div>
 {%- endif -%}
-  {% if product.metafields.custom.spotlight_tag != blank %}
-    <span class="spotlight-tag">
-      {{ product.metafields.custom.spotlight_tag }}
-    </span>
-  {% endif %}
 <div class="product-info mt__15 mb__10" data-pr-id="{{ product.handle }}" >
    {%- if product.vendor.size > 0 and show_vendor -%}
    <div class="product-brand"><a class="cg chp" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a></div>
@@ -107,29 +102,12 @@
                                 {% endfor %}
                               </span>   
                   <div class="discount-msg">
-                    {% comment %}
                      {% assign message = product.price | divided_by: 100 %}
-                        {% if message <= 497 %}
-                          <p class="bottom-leftext">B2G2</p>
+                        {% if message <= 746 %}
+                          <p class="bottom-leftext">VDAY</p>
                         {% else %}
-                           <p class="bottom-leftext">10% Off</p>
+                           <p class="bottom-leftext">15% OFF</p>
                         {% endif %}
-                    {% endcomment %}
-
-
-                    {% assign target_tag = "Combos" %}
-                    {% if product.tags contains target_tag %}
-                      <p class="bottom-leftext">10% Off</p>
-                    {% else %}
-                      {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                        <p class="bottom-leftext">B2G2</p>
-                      {% elsif collection.handle == "adnetwork-exclusive-offer" %}
-                        <p class="bottom-leftext">B1G1</p>
-                      {% else %}
-                        <p class="bottom-leftext">25% Off</p>
-                      {% endif %} 
-                    {% endif %}
-                    
                       {% comment %}
                       {% if product.compare_at_price_max > product.price %}
                       <p class="green">
@@ -150,58 +128,15 @@
                          </div>
                       </div>
                       {% endif %}{% endcomment %}
-                    {% assign target_tag = "Combos" %}
-                    {% assign main_tag = "Body-care" %}
-                    {% if product.tags contains target_tag %}
-                      <p class="bottom-rightext"></p>
-                    {% else %}
-                      {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                        <p class="bottom-rightext">Free Gift</p>
-                      {% else %} 
-                       {% if product.tags contains main_tag %}
-                        <p class="bottom-rightext"></p>
-                         {% else %}
-                         <p class="bottom-rightext">Free Eye Mask</p>
-                      {% endif %}
-                    {% endif %}
-                    {% endif %}
+                      <p class="bottom-rightext">Free Gift</p>
                    </div>
    {%- if color_count > 0 -%}
    <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyloadt4s" data-colorCount="{{color_count}}" data-rendert4s="{{pr_url}}/?view=sw{{sett_equal}}"></div>
    {%- endif -%}
 </div>
 </div>
-  {% if product.metafields.custom.check_variant %}
-      <div class="shop-all-qty-cart-btn">
-          <a href="{{ product.url }}" 
-            class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart"
-            data-foxtale-event="add-to-cart-click-event" 
-            foxtale-event-attr-api-url-for-data="{{ product.url }}" 
-            foxtale-event-attr-from="from-homepage"
-          ><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">Select Shade</span></a>
-      </div>
-  {% else %}
-    <!-- <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-       <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-        data-foxtale-event="add-to-cart-click-event" 
-        foxtale-event-attr-api-url-for-data="{{ product.url }}" 
-        foxtale-event-attr-from="from-homepage"
-        data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
-    </div> -->
-    <div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
-      <a
-        href="javascript:void(0)"
-        id="addtocart_sl"
-        class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" 
-        data-foxtale-event="add-to-cart-click-event" foxtale-event-attr-api-url-for-data="{{ product.url }}" foxtale-event-attr-from="from-feature-collection"
-        data-variant-id="{{product.first_available_variant.id}}"
-        data-action-atc
-        rel="nofollow"
-        ><span class="t4s-svg-pr-icon"></span
-        ><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a
-      >
-    </div>
-  {% endif %}
-
+<div class="shop-all-qty-cart-btn" data-handle="{{ product.handle }}">
+   <a href="javascript:void(0)" class="fx-custom-btn-dark t4s-pr-item-btn t4s-pr-addtocart" data-variant-id="{{product.first_available_variant.id}}" data-action-atc rel="nofollow"><span class="t4s-svg-pr-icon"></span><span class="t4s-text-pr">{{ 'products.product.add_to_cart' | t }}</span></a>
+</div>
 </div>
 </div>

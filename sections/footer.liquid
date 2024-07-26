@@ -46,7 +46,7 @@
                       {%- else -%}     
                           <h3 class="t4s-col-heading t4s-fnt-fm-{{se_stts.heading_fontf}}">{{bk_stts.col_heading}}</h3> 
                       {%- endif -%}     
-                          <span class="t4s-footer-collapse-icon">{% render 'slide-awr' %}</span>
+                          <span class="t4s-footer-collapse-icon"></span>
                       </div>
                     {%- endif -%} 
                     <div {% if bk_stts.col_heading != blank or bk_stts.col_heading_mobile != blank %}data-footer-content{% endif %} class="t4s-footer-content">
@@ -1039,11 +1039,6 @@
       "name": "Form newsletter",
       "limit": 1,
       "settings": [
-        {
-          "id": "nwstoptxt",
-          "label": "Enter Subscribe Text",
-          "type": "text"
-        },
         {
           "type": "number",
           "id": "form_width",
