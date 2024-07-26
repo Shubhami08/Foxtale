@@ -13,7 +13,7 @@
 >
 {% assign multi = section.settings.show_on_collection_handle | split: '@' %}
 {% for handles in multi %}
-  {% if handles == collection.handle or template contains 'index' or template contains 'product' %}
+  {% if handles == collection.handle or template contains 'index' or template contains 'product' or template.suffix contains 'home' %}
     {% assign inc_pr = section.settings.pr_des %}
     <section>
       {% if template contains 'product' %}
