@@ -547,6 +547,12 @@
           "settings": {
             "collection_handle": "zomato-buy-1-get-1"
           }
+        },
+        "image_Mi7646": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flipkart-buy-1-get-1"
+          }
         }
       },
       "block_order": [
@@ -570,7 +576,8 @@
         "image_AjAedA",
         "image_8T9LR7",
         "image_mbLQPf",
-        "image_diC8eN"
+        "image_diC8eN",
+        "image_Mi7646"
       ],
       "settings": {
         "slider_height_mobile": "100%"
