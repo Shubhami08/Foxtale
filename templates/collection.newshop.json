@@ -559,6 +559,12 @@
           "settings": {
             "collection_handle": "flipkart-buy-2-get-2"
           }
+        },
+        "image_mwg7HA": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "gpay-buy-2-get-4"
+          }
         }
       },
       "block_order": [
@@ -584,7 +590,8 @@
         "image_mbLQPf",
         "image_diC8eN",
         "image_Mi7646",
-        "image_639wHV"
+        "image_639wHV",
+        "image_mwg7HA"
       ],
       "settings": {
         "slider_height_mobile": "100%"
