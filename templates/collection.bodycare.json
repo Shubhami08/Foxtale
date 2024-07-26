@@ -1,1 +1,306 @@
-{"sections":{"slideshow_rq6AVc":{"type":"slideshow","blocks":{"image_parent_eTU73i":{"type":"image_parent","settings":{"image":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page-03.png","image_mb":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page_1_-04.jpg","image_position":"8","cl_img":"","link_img1":"","open_link":"_blank","animate_slide":"none","text_align":"center","text_align_mb":"center","content_width":"auto","cv_pos":50,"ch_pos":50,"cv_pos_mb":50,"ch_pos_mb":50,"bg_overlay":"#000000","bg_opacity":0,"bg_content_cl":"#ffffff","bg_content_op":0,"content_radius":0,"box_square":false,"content_pd_tb":15,"content_pd_lr":15,"content_pd_tb_tb":15,"content_pd_lr_tb":15,"content_pd_tb_mb":10,"content_pd_lr_mb":10,"border_bl":false,"br_color":"#222222","br_bg":"#ffffff","br_opacity":50,"br_style":"solid","br_pd":20,"br_pd_mb":10,"time_animation":1,"animation_delay":40}}},"block_order":["image_parent_eTU73i"],"settings":{"se_height":"t4s_ratioadapt","custom_dk":true,"height_dk":600,"custom_tb":true,"height_tb":400,"custom_mb":true,"height_mb":250,"eff":"slide","loop":true,"au_time":3.5,"au_hover":false,"nav_btn":false,"btn_vi":"hover","btn_owl":"default","btn_shape":"none","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":true,"dot_owl":"default","dots_cl":"dark","dots_round":false,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"top":{"type":"top-collections","disabled":true,"settings":{"show_top_collections":true,"source":"1","menu":"main-menu","sort_collections":"alphabetical_reversed","box_border":"top","content_align":"center","hidden_mobile":false,"space_item":30,"fontf":"inherit","text_cl":"#222222","text_cl_hover":"#56cfe1","text_fs":14,"text_lh":45,"text_fw":400,"text_ls":0,"font_italic":false,"nav_btn":true,"layout":"t4s-container-fluid","cl_bg":"","cl_bg_gradient":"","mg":"","pd":"","mg_mb":"","pd_mb":""}},"heading_template":{"type":"heading-template","disabled":true,"settings":{"use_specify_image":false,"parallax":true,"color":"#000000","overlay":54,"padding":100,"paddingmb":50,"mg_b":0,"mg_bmb":0,"content_align":"t4s-text-center","bg_pos":"left center","bg_repeat":"inherit","bg_size":"cover","use_cus_css":false,"code_cus_css":".SectionID {\nbackground-color:red\n}"}},"sidebar":{"type":"sidebar-collection","disabled":true,"settings":{"enable_drawer":false,"space":50,"size":"medium","br_style":"none","brcolor":"#222222","sidebar_bdr":0,"sidebar_pd":15}},"main":{"type":"main-collection","disabled":true,"settings":{"single-double":true,"acne-control":true,"anti-ageing":true,"affiliate-secret-sale":false,"best-selling":false,"bestselling-combos":false,"cleanser-routines":false,"exclusive-sale":false,"glow":true,"glow-routine":false,"glow-routine-with-OGM":false,"group-products":false,"hydration":true,"hyperpigmentation":true,"hyperpigmentation-routine":false,"intense-hydration-routine":false,"new-launches":true,"products":false,"routines":false,"shop":true,"special-sale":false,"summer-must-have":false,"summer-special":false,"winter-special":false,"early-access":true,"shop-1":false,"show_desc":true,"position_desc":"1","product_des":"1","show_vendor":false,"use_cdt":true,"image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"center","limit":50,"enable_listing":true,"enable_listing_default":false,"col_dk":"3","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"1","use_pagination":"infinite","enable_bar_lm":true,"btn_icon":false,"button_style":"outline","btns_size":"large","btns_cl":"primary","button_effect":"sweep-to-right","btn_pos":"t4s-text-center","type_filters":"facets_tags","layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":",,50px,","pd":"","mg_mb":",,30px,","pd_mb":""}},"custom_perfectgrid_PMaMyd":{"type":"custom-perfectgrid","settings":{"heading":"Hydration Range","collekt":"new-hydrating-bodycare-range","offertext":"15% Off"}},"custom_perfectgrid_aBmhQt":{"type":"custom-perfectgrid","settings":{"heading":"Brightening Range","collekt":"new-glow-bodycare-range","offertext":"15% Off"}},"custom_perfectgrid_aaQKXU":{"type":"custom-perfectgrid","settings":{"heading":"Duos","collekt":"bodycare-combo","offertext":"15% Off"}},"custom_playbook_JKCNVJ":{"type":"custom-playbook","blocks":{"text_YexqDG":{"type":"text","settings":{"imglink":"","collectionimg":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png","collectionimgz":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png","txtblw":"Works like Skincare ","txtblwtht":"<p>Your face and neck are only 5% of your skin. The other 95% is your body.  \nWe’re extending our knowledge of skincare to the remaining 95% of your body.<\/p>\n<p>Our body care range identifies concerns like rough skin, dryness, bumpy texture, pigmentation, dullness and damaged barrier and tackles it at its root cause.<\/p>\n<p>So soft, hydrated, glowing skin never has to be limited just to your face again.<\/p>"}},"text_WjLKKm":{"type":"text","settings":{"imglink":"","collectionimg":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png","collectionimgz":"shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png","txtblw":"Wears like Perfume","txtblwtht":"<p>We’re going beyond the basics – cleansing your skin and keeping it moisturized is the bare minimum.<\/p>\n<p>Using long-lasting signature perfumes, our body care range keeps you smelling fresh through the day  <\/p>\n<p>So you can smell as good as you feel all day long.<\/p>"}},"text_iN7Ygz":{"type":"text","disabled":true,"settings":{"imglink":"","collectionimg":"shopify:\/\/shop_images\/TONER.png","collectionimgz":"shopify:\/\/shop_images\/TONER.png","txtblw":"High Perform","txtblwtht":"<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>\n<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>\n<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>"}}},"block_order":["text_YexqDG","text_WjLKKm","text_iN7Ygz"],"settings":{"heading":"Product Philosophy"}}},"order":["slideshow_rq6AVc","top","heading_template","sidebar","main","custom_perfectgrid_PMaMyd","custom_perfectgrid_aBmhQt","custom_perfectgrid_aaQKXU","custom_playbook_JKCNVJ"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "slideshow_rq6AVc": {
+      "type": "slideshow",
+      "blocks": {
+        "image_parent_eTU73i": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-03.png",
+            "image_mb": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page_1_-04.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "center",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_parent_eTU73i"
+      ],
+      "settings": {
+        "se_height": "t4s_ratioadapt",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 3.5,
+        "au_hover": false,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": true,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "top": {
+      "type": "top-collections",
+      "disabled": true,
+      "settings": {
+        "show_top_collections": true,
+        "source": "1",
+        "menu": "main-menu",
+        "sort_collections": "alphabetical_reversed",
+        "box_border": "top",
+        "content_align": "center",
+        "hidden_mobile": false,
+        "space_item": 30,
+        "fontf": "inherit",
+        "text_cl": "#222222",
+        "text_cl_hover": "#56cfe1",
+        "text_fs": 14,
+        "text_lh": 45,
+        "text_fw": 400,
+        "text_ls": 0,
+        "font_italic": false,
+        "nav_btn": true,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "heading_template": {
+      "type": "heading-template",
+      "disabled": true,
+      "settings": {
+        "use_specify_image": false,
+        "parallax": true,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 0,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-center",
+        "bg_pos": "left center",
+        "bg_repeat": "inherit",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-collection",
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 0,
+        "sidebar_pd": 15
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "single-double": true,
+        "acne-control": true,
+        "anti-ageing": true,
+        "affiliate-secret-sale": false,
+        "best-selling": false,
+        "bestselling-combos": false,
+        "cleanser-routines": false,
+        "exclusive-sale": false,
+        "glow": true,
+        "glow-routine": false,
+        "glow-routine-with-OGM": false,
+        "group-products": false,
+        "hydration": true,
+        "hyperpigmentation": true,
+        "hyperpigmentation-routine": false,
+        "intense-hydration-routine": false,
+        "new-launches": true,
+        "products": false,
+        "routines": false,
+        "shop": true,
+        "special-sale": false,
+        "summer-must-have": false,
+        "summer-special": false,
+        "winter-special": false,
+        "early-access": true,
+        "shop-1": false,
+        "show_desc": true,
+        "position_desc": "1",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": true,
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "limit": 50,
+        "enable_listing": true,
+        "enable_listing_default": false,
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "use_pagination": "infinite",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "outline",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "sweep-to-right",
+        "btn_pos": "t4s-text-center",
+        "type_filters": "facets_tags",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_perfectgrid_PMaMyd": {
+      "type": "custom-perfectgrid",
+      "settings": {
+        "heading": "Hydration Range",
+        "collekt": "new-hydrating-bodycare-range",
+        "offertext": "15% Off"
+      }
+    },
+    "custom_perfectgrid_aBmhQt": {
+      "type": "custom-perfectgrid",
+      "settings": {
+        "heading": "Brightening Range",
+        "collekt": "new-glow-bodycare-range",
+        "offertext": "15% Off"
+      }
+    },
+    "custom_perfectgrid_aaQKXU": {
+      "type": "custom-perfectgrid",
+      "settings": {
+        "heading": "Duos",
+        "collekt": "bodycare-combo",
+        "offertext": "15% Off"
+      }
+    },
+    "custom_playbook_JKCNVJ": {
+      "type": "custom-playbook",
+      "blocks": {
+        "text_YexqDG": {
+          "type": "text",
+          "settings": {
+            "imglink": "",
+            "collectionimg": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png",
+            "collectionimgz": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-01.png",
+            "txtblw": "Works like Skincare ",
+            "txtblwtht": "<p>Your face and neck are only 5% of your skin. The other 95% is your body.  \nWe’re extending our knowledge of skincare to the remaining 95% of your body.<\/p>\n<p>Our body care range identifies concerns like rough skin, dryness, bumpy texture, pigmentation, dullness and damaged barrier and tackles it at its root cause.<\/p>\n<p>So soft, hydrated, glowing skin never has to be limited just to your face again.<\/p>"
+          }
+        },
+        "text_WjLKKm": {
+          "type": "text",
+          "settings": {
+            "imglink": "",
+            "collectionimg": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png",
+            "collectionimgz": "shopify:\/\/shop_images\/Bodycare_-_Collection_Page-02.png",
+            "txtblw": "Wears like Perfume",
+            "txtblwtht": "<p>We’re going beyond the basics – cleansing your skin and keeping it moisturized is the bare minimum.<\/p>\n<p>Using long-lasting signature perfumes, our body care range keeps you smelling fresh through the day  <\/p>\n<p>So you can smell as good as you feel all day long.<\/p>"
+          }
+        },
+        "text_iN7Ygz": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "imglink": "",
+            "collectionimg": "shopify:\/\/shop_images\/TONER.png",
+            "collectionimgz": "shopify:\/\/shop_images\/TONER.png",
+            "txtblw": "High Perform",
+            "txtblwtht": "<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>\n<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>\n<p>We address 350+ unique skin profiles in India within 5 broad skin types.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_YexqDG",
+        "text_WjLKKm",
+        "text_iN7Ygz"
+      ],
+      "settings": {
+        "heading": "Product Philosophy"
+      }
+    }
+  },
+  "order": [
+    "slideshow_rq6AVc",
+    "top",
+    "heading_template",
+    "sidebar",
+    "main",
+    "custom_perfectgrid_PMaMyd",
+    "custom_perfectgrid_aBmhQt",
+    "custom_perfectgrid_aaQKXU",
+    "custom_playbook_JKCNVJ"
+  ]
+}
