@@ -382,76 +382,10 @@
     "6b74da85-3b73-4c32-ad47-62ea04675904": {
       "type": "slideshow-collection",
       "blocks": {
-        "image_xjWFnn": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/FLAT-30-OFF-_-GWP-HP-DESKTOP-BANNER-WITHOUT-GWP_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/FLAT_30_OFF-HP_-MOBILE_BANNER.jpg",
-            "collection_handle": "products"
-          }
-        },
-        "image_LRQy7A": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/banners_new30-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/banners_new30-01.jpg",
-            "collection_handle": "new30"
-          }
-        },
-        "896ab793-fd74-47fd-999e-0520b9c09b47": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/1800X606_4.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/767X464_3.jpg",
-            "collection_handle": "shop-1"
-          }
-        },
-        "image_UibMeG": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-05_3.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-06_3.jpg",
-            "collection_handle": "shop-2"
-          }
-        },
-        "image_GetAYE": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/B2_Sunscreen_Banners-09_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/B2_Sunscreen_Banners-10_1.jpg",
-            "collection_handle": "shop-3"
-          }
-        },
-        "cd98f790-df57-40d4-8b04-7e959afda723": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
-            "collection_handle": "google-pay-b2g2-1"
-          }
-        },
-        "1aa2a5f0-e416-4022-a189-f89b7e1237fb": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg",
-            "collection_handle": "buy-1-get-1-free-gpay-1"
-          }
-        },
         "5a5e4eaf-e7bf-431c-b02d-534132ded685": {
           "type": "image",
           "settings": {
             "collection_handle": "flat-400-off-gpay"
-          }
-        },
-        "bcf56be1-ad2a-4624-b6ea-95f1504c5199": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_1.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Desktop-_2.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Mobile_2.jpg",
-            "collection_handle": "new-frontpage"
           }
         },
         "3e054972-6a13-4eda-9144-1cacc230d754": {
@@ -468,56 +402,6 @@
             "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png",
             "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png",
             "collection_handle": "paytm-flat-200"
-          }
-        },
-        "image_N3EabB": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/midmight_sale_banners-01-01.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/midmight_sale_banners-01-02.jpg",
-            "collection_handle": "offer-b1g1"
-          }
-        },
-        "image_EzERLW": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DEKSTOP.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_35.jpg",
-            "collection_handle": "products-1"
-          }
-        },
-        "image_gpitR8": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/1800X606_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/767X464_1.jpg",
-            "collection_handle": "b2g2-detan"
-          }
-        },
-        "image_KehdyY": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Last-chance_DESKTOP-banner.gif",
-            "image_1_mobile": "shopify:\/\/shop_images\/last-chance-MOBILE-banner.gif",
-            "image_2_desktop": "shopify:\/\/shop_images\/Last-chance-routine-banner.gif",
-            "image_2_mobile": "shopify:\/\/shop_images\/Last-chanceROUTINE-BANNER_Mobile.gif",
-            "collection_handle": "new-exclusive-special-1"
-          }
-        },
-        "image_jQBqGm": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/MONSOON_BANNER_MOBILE.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MONSOON_BANNER_MOBILE.jpg",
-            "collection_handle": "monsoon-offer"
-          }
-        },
-        "image_fRfLeA": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Sleek_banner_adc62361-d2ce-4c5e-af84-dbe1da68abca.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Slik_banner-03.jpg",
-            "collection_handle": "monsoon-offer-1"
           }
         },
         "image_8T9LR7": {
@@ -600,23 +484,9 @@
         }
       },
       "block_order": [
-        "image_xjWFnn",
-        "image_LRQy7A",
-        "896ab793-fd74-47fd-999e-0520b9c09b47",
-        "image_UibMeG",
-        "image_GetAYE",
-        "cd98f790-df57-40d4-8b04-7e959afda723",
-        "1aa2a5f0-e416-4022-a189-f89b7e1237fb",
         "5a5e4eaf-e7bf-431c-b02d-534132ded685",
-        "bcf56be1-ad2a-4624-b6ea-95f1504c5199",
         "3e054972-6a13-4eda-9144-1cacc230d754",
         "040dca29-acdb-4004-909b-5fe9000b3f52",
-        "image_N3EabB",
-        "image_EzERLW",
-        "image_gpitR8",
-        "image_KehdyY",
-        "image_jQBqGm",
-        "image_fRfLeA",
         "image_8T9LR7",
         "image_mbLQPf",
         "image_j4rAdE",
