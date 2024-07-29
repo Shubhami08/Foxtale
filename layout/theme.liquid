@@ -1228,7 +1228,39 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Buy 1 Get 1 Free [Code: ]";
+           content: "Buy 1 Get 1 Free [Code: FKAB1G1AJ-257]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'flipkart-buy-2-get-2'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 1 Get 1 Free [Code: FKAB2G2AX-243]";
            font-size: 12px;
            width: max-content;
          }
