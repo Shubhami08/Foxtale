@@ -399,8 +399,8 @@
         "896ab793-fd74-47fd-999e-0520b9c09b47": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/1800X606_4.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/767X464_3.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_1.png",
             "collection_handle": "shop-1"
           }
         },
