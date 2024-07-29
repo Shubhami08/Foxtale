@@ -455,6 +455,8 @@
         "image_639wHV": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Flipkart_b2g2_website.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Flipkart_b2g2_mobile.jpg",
             "collection_handle": "flipkart-buy-2-get-2"
           }
         },
