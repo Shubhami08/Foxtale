@@ -531,8 +531,8 @@
         "image_8T9LR7": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ZOMATO_B2G2.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_ZOMATO_B2G2.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Zomato_B2g2_WEBSITE.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Zomato_B2g2_mobile.jpg",
             "collection_handle": "zomato-b2g2"
           }
         },
