@@ -123,8 +123,9 @@
     "4_landing_page_list": [
       "zomato-b2g2"
     ],
+    "4_landing_cart_ribbon_discount_code": "B2G2ZOM19A-763",
     "4_landing_prod_success_count": 4,
-    "4_landing_prod_success_message": "Code auto applied at checkout",
+    "4_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
     "4_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy 2 Get 2<\/strong>",
     "5_landing_page_list": [
       "shop-2"
