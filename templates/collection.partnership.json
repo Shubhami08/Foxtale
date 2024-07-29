@@ -555,6 +555,8 @@
         "image_diC8eN": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Zomato_B1g1_WEBSITE.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Zomato_B1g1_mobile.jpg",
             "collection_handle": "zomato-buy-1-get-1"
           }
         },
