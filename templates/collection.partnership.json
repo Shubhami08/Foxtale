@@ -447,6 +447,8 @@
         "image_Mi7646": {
           "type": "image",
           "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Flipkart_B1G1_website.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Flipkart_B1G1_mobile.jpg",
             "collection_handle": "flipkart-buy-1-get-1"
           }
         },
