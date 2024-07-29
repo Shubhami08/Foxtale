@@ -527,6 +527,17 @@
     "c91beaae-dd54-4644-bf80-185c464fd99c": {
       "type": "custom-roundscroll",
       "blocks": {
+        "41032556-7266-498e-8778-32e63d300c6d": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-serums-and-treatments",
+            "txter": "Serums",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
+            "grid-heading": "Serums and Treatments",
+            "grid-subheading": "Targeted solutions for all skin concerns"
+          }
+        },
         "2c6bc074-5f62-4c76-97a2-a37b159012b2": {
           "type": "text",
           "settings": {
@@ -538,26 +549,15 @@
             "grid-subheading": "Protected skin barrier & a boost of hydration"
           }
         },
-        "fef43bcb-d73b-4c7f-8f0d-082414be522a": {
+        "text_BXQdrR": {
           "type": "text",
           "settings": {
-            "collekt": "facewash-cleanser",
-            "txter": "Cleansers",
-            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
-            "smlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
-            "grid-heading": "Facewash & Cleansers",
-            "grid-subheading": "Gets rid of dirt, grime, and excess oil build-up"
-          }
-        },
-        "41032556-7266-498e-8778-32e63d300c6d": {
-          "type": "text",
-          "settings": {
-            "collekt": "tb-serums-and-treatments",
-            "txter": "Serums",
-            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
-            "smlpik": "shopify:\/\/shop_images\/Untitled-2-01_1.jpg",
-            "grid-heading": "Serums and Treatments",
-            "grid-subheading": "Targeted solutions for all skin concerns"
+            "collekt": "sp-masks",
+            "txter": "Masks",
+            "mdlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
+            "smlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
+            "grid-heading": "Masks",
+            "grid-subheading": "High-powered masks to deliver instant benefits"
           }
         },
         "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96": {
@@ -571,15 +571,15 @@
             "grid-subheading": "Ultimate protection from UVA & UVB rays"
           }
         },
-        "text_BXQdrR": {
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a": {
           "type": "text",
           "settings": {
-            "collekt": "sp-masks",
-            "txter": "Masks",
-            "mdlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
-            "smlpik": "shopify:\/\/shop_images\/TOP-NAVIGATION-BAR.png",
-            "grid-heading": "Masks",
-            "grid-subheading": "High-powered masks to deliver instant benefits"
+            "collekt": "facewash-cleanser",
+            "txter": "Cleansers",
+            "mdlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
+            "smlpik": "shopify:\/\/shop_images\/Untitled-2-03_1.jpg",
+            "grid-heading": "Facewash & Cleansers",
+            "grid-subheading": "Gets rid of dirt, grime, and excess oil build-up"
           }
         },
         "text_GEPPAV": {
@@ -606,11 +606,11 @@
         }
       },
       "block_order": [
-        "2c6bc074-5f62-4c76-97a2-a37b159012b2",
-        "fef43bcb-d73b-4c7f-8f0d-082414be522a",
         "41032556-7266-498e-8778-32e63d300c6d",
-        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96",
+        "2c6bc074-5f62-4c76-97a2-a37b159012b2",
         "text_BXQdrR",
+        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96",
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a",
         "text_GEPPAV",
         "text_qnPjLP"
       ],
