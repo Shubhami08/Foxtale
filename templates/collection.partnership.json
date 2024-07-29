@@ -520,14 +520,6 @@
             "collection_handle": "monsoon-offer-1"
           }
         },
-        "image_AjAedA": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ef88f819-4b8f-4406-94c0-94d283b959a9.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_79906ff3-1164-4f8a-8326-1eb4c65e674f.jpg",
-            "collection_handle": "products-shop-1"
-          }
-        },
         "image_8T9LR7": {
           "type": "image",
           "settings": {
@@ -558,6 +550,14 @@
             "image_1_desktop": "shopify:\/\/shop_images\/Zomato_B1g1_WEBSITE.jpg",
             "image_1_mobile": "shopify:\/\/shop_images\/Zomato_B1g1_mobile.jpg",
             "collection_handle": "zomato-buy-1-get-1"
+          }
+        },
+        "image_AjAedA": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ef88f819-4b8f-4406-94c0-94d283b959a9.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_79906ff3-1164-4f8a-8326-1eb4c65e674f.jpg",
+            "collection_handle": "products-shop-1"
           }
         },
         "image_Mi7646": {
@@ -617,11 +617,11 @@
         "image_KehdyY",
         "image_jQBqGm",
         "image_fRfLeA",
-        "image_AjAedA",
         "image_8T9LR7",
         "image_mbLQPf",
         "image_j4rAdE",
         "image_diC8eN",
+        "image_AjAedA",
         "image_Mi7646",
         "image_639wHV",
         "image_mwg7HA",
