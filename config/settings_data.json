@@ -197,6 +197,14 @@
     "14_landing_prod_success_count": 4,
     "14_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
     "14_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy 2 Get 2!<\/strong>",
+    "15_landing_page_list": [
+      "cred-buy-1-get-1-lip-mask"
+    ],
+    "15_l_gift_product_1": "plumping-lip-mask-r",
+    "15_l_free_gift_v1_trigger_qty_1": 2,
+    "15_landing_prod_success_count": 2,
+    "15_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
+    "15_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy 1 Get 1<\/strong>",
     "timer_text": "Early Access to Sale Starts in",
     "count_down_date": "April 03, 2024 12:00",
     "show_timer_on_home": false,
