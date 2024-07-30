@@ -270,7 +270,7 @@
 
             {% render 'free-gift-detail',class:"default-native-gift",gift_prod_1:gift_prod_1,gift_prod_2:gift_prod_2,trigger_prod_count_1:trigger_prod_count_1,trigger_prod_count_2:trigger_prod_count_2,gift1_trigger_price:gift1_trigger_price,gift2_trigger_price:gift2_trigger_price %}
             <!-- ################## for landing page base cart gift start ################## -->
-            {% for i in (1..10) %}
+            {% for i in (1..40) %}
               {% assign landing_page_list = i | append: '_landing_page_list' %}
               {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
               {% if landing_page_for_diff_gift != blank %}
