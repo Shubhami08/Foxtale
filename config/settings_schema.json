@@ -4715,6 +4715,1266 @@
     ]
   },
   {
+    "name": "Landing Page Base Gift 21",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "21_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "21_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "21_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "21_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "21_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "21_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "21_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "21_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "21_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "21_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "21_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "21_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "21_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "21_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "21_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 22",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "22_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "22_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "22_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "22_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "22_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "22_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "22_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "22_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "22_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "22_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "22_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "22_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "22_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "22_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "22_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 23",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "23_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "23_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "23_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "23_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "23_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "23_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "23_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "23_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "23_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "23_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "23_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "23_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "23_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "23_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "23_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 24",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "24_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "24_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "24_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "24_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "24_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "24_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "24_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "24_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "24_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "24_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "24_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "24_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "24_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "24_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "24_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 25",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "25_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "25_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "25_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "25_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "25_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "25_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "25_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "25_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "25_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "25_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "25_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "25_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "25_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "25_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "25_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 26",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "26_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "26_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "26_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "26_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "26_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "26_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "26_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "26_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "26_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "26_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "26_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "26_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "26_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "26_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "26_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 27",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "27_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "27_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "27_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "27_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "27_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "27_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "27_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "27_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "27_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "27_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "27_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "27_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "27_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "27_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "27_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 28",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "28_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "28_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "28_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "28_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "28_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "28_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "28_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "28_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "28_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "28_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "28_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "28_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "28_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "28_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "28_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 29",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "29_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "29_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "29_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "29_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "29_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "29_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "29_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "29_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "29_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "29_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "29_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "29_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "29_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "29_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "29_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
+    "name": "Landing Page Base Gift 30",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "30_landing_page_list",
+        "label": "Collections For Trigger",
+        "info": "Remove all for disable this functionality"
+      },
+      {
+        "type": "number",
+        "id": "30_l_trigger_price_1",
+        "label": "Trigger Price For First Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "30_l_gift_product_1",
+        "label": "First Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "30_l_free_gift_v1_trigger_qty_1",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For First Gift",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "30_l_trigger_price_2",
+        "label": "Trigger Price For Second Gift",
+        "info": "For Product Base: (minimum product price * number of product) - 1"
+      },
+      {
+        "type": "product",
+        "id": "30_l_gift_product_2",
+        "label": "Second Gift Product"
+      },
+      {
+        "type": "range",
+        "id": "30_l_free_gift_v1_trigger_qty_2",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "label": "Trigger Product Qty For Second Gift",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "++++ For Cart Ribbon ++++"
+      },
+      {
+        "type": "select",
+        "id": "30_landing_cart_ribbon_type",
+        "label": "Landing Cart Ribbon Type",
+        "default": "product_count_base",
+        "options": [
+          {
+            "value": "product_count_base",
+            "label": "Product Count"
+          },
+          {
+            "value": "cart_total_base",
+            "label": "Cart Total"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "30_landing_cart_ribbon_discount_code",
+        "label": "Discount Code For Ribbon Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Product Count Base"
+      },
+      {
+        "type": "range",
+        "id": "30_landing_prod_success_count",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Success Product Count",
+        "default": 3
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRODUCT]] for fatch dynamic product count into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "30_landing_prod_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "30_landing_prod_before_success_message",
+        "label": "Before Success Message"
+      },
+      {
+        "type": "header",
+        "content": "+ For Cart Total Price Base"
+      },
+      {
+        "type": "number",
+        "id": "30_landing_cart_trigger_price",
+        "label": "Success Cart Total Price"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add [[CODE]] for fatch dynamic discount code & user [[PRICE]] for fatch dynamic price into messages."
+      },
+      {
+        "type": "inline_richtext",
+        "id": "30_landing_cart_success_message",
+        "label": "Success Message"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "30_landing_cart_before_success_message",
+        "label": "Before Success Message"
+      }
+    ]
+  },
+  {
     "name": "Timer",
     "settings": [
       {
