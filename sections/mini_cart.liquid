@@ -536,7 +536,7 @@
               {% assign PRODUCT = trigger_product_count | minus: total_cart_prod %}
               {% render 'cart-ribbon' , i:0, cart:cart, total_cart_prod:total_cart_prod ,cart_ribbon_type:cart_ribbon_type ,class:ribbon_class ,CODE:CODE ,trigger_ribbon_price:trigger_ribbon_price,trigger_product_count:trigger_product_count ,PRICE:PRICE ,PRODUCT:PRODUCT %}
 
-              {% for i in (1..10) %}
+              {% for i in (1..40) %}
                 {% assign landing_page_list = i | append: '_landing_page_list' %}
                 {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
                 {% if landing_page_for_diff_gift != blank %}
@@ -1445,7 +1445,7 @@ $(document).ready(function () {
   body.default-gift .gift_lock_list.landing-page-base-gift,body.landing-page-gift .gift_lock_list.landing-page-base-gift{
     display:none !important;
   }
-  {% for i in (1..10) %}
+  {% for i in (1..40) %}
   body.landing-page-gift-{{i}} .gift_lock_list.landing-page-base-gift-{{ i }}{
     display:flex !important;
   }
@@ -1456,7 +1456,7 @@ $(document).ready(function () {
   body.landing-page-gift .saleBar.show-default,body.landing-page-gift .saleBar.show-landing-page{
     display:none !important;
   }
-  {% for i in (1..10) %}
+  {% for i in (1..40) %}
   body.landing-page-gift-{{ i }} .saleBar.show-landing-page-{{ i }}{
     display:block !important;
   }
