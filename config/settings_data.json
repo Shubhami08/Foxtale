@@ -177,6 +177,9 @@
     "11_landing_prod_success_count": 4,
     "11_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
     "11_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Free Gift!<\/strong>",
+    "12_landing_page_list": [
+      "phonepe-buy-2-get-4-f"
+    ],
     "12_landing_cart_ribbon_discount_code": "FOXPPFB2GF",
     "12_landing_prod_success_count": 4,
     "12_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
