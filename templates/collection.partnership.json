@@ -505,6 +505,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/b1g1_gpay_mobile.jpg",
             "collection_handle": "buy-1-get-1-free-gpay"
           }
+        },
+        "image_PRPFf4": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_website_B2G2.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_Mobile_B2G2.jpg",
+            "collection_handle": "gpay-b2g2"
+          }
         }
       },
       "block_order": [
@@ -524,7 +532,8 @@
         "image_88kBRm",
         "image_LVwYxn",
         "image_HB9nXz",
-        "image_BVTHq6"
+        "image_BVTHq6",
+        "image_PRPFf4"
       ],
       "settings": {
         "slider_height_mobile": "100%"
