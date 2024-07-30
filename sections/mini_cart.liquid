@@ -245,7 +245,7 @@
                {%- endfor -%}
                  {% render 'free-gift-popup',gift_prod_1:gift_prod_1,gift_prod_2:gift_prod_2 %}
                 <!-- ################## for landing page base cart gift start ################## -->
-                {% for i in (1..10) %}
+                {% for i in (1..40) %}
                   {% assign landing_page_list = i | append: '_landing_page_list' %}
                   {% assign landing_page_for_diff_gift = settings[landing_page_list] %}
                   {% if landing_page_for_diff_gift != blank %}
