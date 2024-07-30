@@ -485,6 +485,18 @@
           "settings": {
             "collection_handle": "phonepe-b2g2-f"
           }
+        },
+        "image_LVwYxn": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "phonepe-buy-2-get-4"
+          }
+        },
+        "image_HB9nXz": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "phonepe-buy-2-get-4-f"
+          }
         }
       },
       "block_order": [
@@ -501,7 +513,9 @@
         "image_mwg7HA",
         "image_VcXYcX",
         "image_tQzyAP",
-        "image_88kBRm"
+        "image_88kBRm",
+        "image_LVwYxn",
+        "image_HB9nXz"
       ],
       "settings": {
         "slider_height_mobile": "100%"
