@@ -497,6 +497,14 @@
           "settings": {
             "collection_handle": "phonepe-buy-2-get-4-f"
           }
+        },
+        "image_BVTHq6": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B1g1_gpay_website.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/b1g1_gpay_mobile.jpg",
+            "collection_handle": ""
+          }
         }
       },
       "block_order": [
@@ -515,7 +523,8 @@
         "image_tQzyAP",
         "image_88kBRm",
         "image_LVwYxn",
-        "image_HB9nXz"
+        "image_HB9nXz",
+        "image_BVTHq6"
       ],
       "settings": {
         "slider_height_mobile": "100%"
