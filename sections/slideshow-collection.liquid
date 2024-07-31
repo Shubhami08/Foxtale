@@ -110,7 +110,7 @@
       {% endfor %}
     </div>
 
-    <div class="main-carousel mobile-carousel" style="{% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1" or collection.handle == "gpay-b2g2" %}height:calc(100vw * 9 / 30);{% else %}height:calc(100vw * 9 / 16);{% endif %}">
+    <div class="main-carousel mobile-carousel" style="{% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1" %}height:calc(100vw * 9 / 30);{% else %}height:calc(100vw * 9 / 16);{% endif %}">
       {% for i in (1..5) %}
         {% assign img = "" %}
         {% case i %}
@@ -181,7 +181,7 @@
   }
   
 }
-  {% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1" or collection.handle == "gpay-b2g2" %}
+  {% if collection.handle == "monsoon-offer-1" or collection.handle == "monsoon-offer" or collection.handle == "products-shop-1" or collection.handle == "shop-1"  %}
     .desktop-carousel{
       padding-bottom:0 !important;
     }
