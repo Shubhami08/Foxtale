@@ -95,10 +95,10 @@
     "1_l_gift_product_2": "",
     "1_l_free_gift_v1_trigger_qty_2": 0,
     "1_landing_cart_ribbon_type": "product_count_base",
-    "1_landing_cart_ribbon_discount_code": "FOX@1099",
+    "1_landing_cart_ribbon_discount_code": "FOX30",
     "1_landing_prod_success_count": 3,
     "1_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at next step to avail the Offer.",
-    "1_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy3@1099.<\/strong>",
+    "1_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to get upto <strong>30% Off.<\/strong>",
     "2_landing_page_list": [
       "shop-1",
       "products-shop-1"
