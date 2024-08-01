@@ -62,9 +62,9 @@
    {% endif %}
 {% endif %}
 {% if collection.title == "Early Sale" or collection.title == "Affiliate Secret Sale" %}
-   {% if product.metafields.custom.product_tag != blank %}
+   {% if product.metafields.custom.affiliatetag != blank %}
      <span class="shop1tag">
-       {{ product.metafields.custom.product_tag }}
+       {{ product.metafields.custom.affiliatetag }}
      </span>
    {% endif %}
 {% endif %}
