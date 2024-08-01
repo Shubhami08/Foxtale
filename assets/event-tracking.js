@@ -1750,26 +1750,52 @@ setTimeout(function() {
     dataType: 'json',
     success: function(cart) {
       var attributes = cart.attributes || {};
-      var mixpanelDistinctIdAttributes = {};
+      var mixpanelDistinctIdAndOtherDefaultAttributes = {};
 
       if ( !isAttributesSet(attributes, 'distinct_id', mixpanelDistinctId) ) {
         console.log("distinct_id set");
-        mixpanelDistinctIdAttributes['distinct_id'] = mixpanelDistinctId;
+        mixpanelDistinctIdAndOtherDefaultAttributes['distinct_id'] = mixpanelDistinctId;
       }
 
       if ( !isAttributesSet(attributes, 'source_domain', sourceDomain) ) {
         console.log("source_domain set");
-        mixpanelDistinctIdAttributes['source_domain'] = sourceDomain;
+        mixpanelDistinctIdAndOtherDefaultAttributes['source_domain'] = sourceDomain;
       }
 
+      if ( !isAttributesSet(attributes, 'source', source) ) {
+        console.log("source set");
+        mixpanelDistinctIdAndOtherDefaultAttributes['source'] = source;
+      }
+
+      
+      var mpEventDefaultProperties = localStorage.getItem("defaultProperties") ? JSON.parse(localStorage.getItem("defaultProperties")) : {};
+
+      if ( mpEventDefaultProperties && Object.keys(mixpanelDistinctIdAndOtherDefaultAttributes).length > 0 ) {
+        mixpanelDistinctIdAndOtherDefaultAttributes = {
+          ...mixpanelDistinctIdAndOtherDefaultAttributes,
+          ...mpEventDefaultProperties
+        };
+      }
+
+
+      var utmInfo = getStoredUTMParams();
+
+      if ( utmInfo && Object.keys(utmInfo).length > 0 ) {
+        mixpanelDistinctIdAndOtherDefaultAttributes = {
+          ...mixpanelDistinctIdAndOtherDefaultAttributes,
+          ...utmInfo
+        };
+      }
+
+
       // Check if the attributes are already set
-      if ( Object.keys(mixpanelDistinctIdAttributes).length > 0 ) {
+      if ( Object.keys(mixpanelDistinctIdAndOtherDefaultAttributes).length > 0 ) {
         // Update the cart attributes only if they are not set
         $.ajax({
           type: 'POST',
           url: '/cart/update.js',
           data: {
-            attributes: mixpanelDistinctIdAttributes
+            attributes: mixpanelDistinctIdAndOtherDefaultAttributes
           },
           dataType: 'json',
           success: function(cart) {
