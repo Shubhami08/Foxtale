@@ -15599,7 +15599,3 @@ span.pre_order_tag {
   margin: 0;
   padding: 0 15px;
 }
-
-.t4s-product.products.t4s-pr-grid:last-child {
-  display: none !important;
-}
