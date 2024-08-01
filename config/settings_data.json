@@ -88,17 +88,17 @@
     "1_landing_page_list": [
       "adnetwork-exclusive-offer"
     ],
-    "1_l_trigger_price_1": 1,
+    "1_l_trigger_price_1": 499,
     "1_l_gift_product_1": "brightening-under-eye-mask",
     "1_l_free_gift_v1_trigger_qty_1": 1,
     "1_l_trigger_price_2": 0,
     "1_l_gift_product_2": "",
     "1_l_free_gift_v1_trigger_qty_2": 0,
-    "1_landing_cart_ribbon_type": "product_count_base",
+    "1_landing_cart_ribbon_type": "cart_total_base",
     "1_landing_cart_ribbon_discount_code": "FOX30",
     "1_landing_prod_success_count": 1,
     "1_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at next step to avail the Offer.",
-    "1_landing_prod_before_success_message": "Use Code: <strong>[[CODE]]<\/strong> at next step to avail the Offer.",
+    "1_landing_prod_before_success_message": "Add products worth <strong>[[PRICE]] <\/strong> to unlock a <strong>Free Eye Mask<\/strong>",
     "2_landing_page_list": [
       "shop-1",
       "products-shop-1"
