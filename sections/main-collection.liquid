@@ -377,12 +377,14 @@
     <div class="collection-tabbing-double collection-tabbing-btn">ROUTINES & COMBOS</div>
   </div>
      {% endif %}
+    {% comment %}
       {% if se_stts.early-access %}
-  <div class="collection-tabbing" data-collection="Early Access" data-collection-urls="/collections/early-access">
-    <div class="tej-abc123 collection-tabbing-single collection-tabbing-btn collection-active">SINGLES</div>
-    <div class="collection-tabbing-double collection-tabbing-btn">ROUTINES & COMBOS</div>
-  </div>
-     {% endif %}
+        <div class="collection-tabbing" data-collection="Early Access" data-collection-urls="/collections/early-access">
+        <div class="tej-abc123 collection-tabbing-single collection-tabbing-btn collection-active">SINGLES</div>
+        <div class="collection-tabbing-double collection-tabbing-btn">ROUTINES & COMBOS</div>
+        </div>
+      {% endif %}
+    {% endcomment %}
     {% if se_stts.shop-1 %}
       <div class="collection-tabbing" data-collection="{{ collection.title }}" data-collection-urls="/collections/shop-1">
       <div class="tej-abc123 collection-tabbing-single collection-tabbing-btn collection-active">SINGLES</div>
