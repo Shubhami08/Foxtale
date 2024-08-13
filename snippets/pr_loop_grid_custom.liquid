@@ -104,12 +104,12 @@
                                 {% endfor %}
                               </span>
    <div class="discount-msg">
-     {% assign message = product.price | divided_by: 100 %}
-        {% if message <= 750 %}
-          <p class="bottom-leftext">B3@1099</p>
-        {% else %}
-            <p class="bottom-leftext">10% OFF</p>
-          {% endif %} 
+          {% assign target_tag = "Combos" %}
+          {% if product.tags contains target_tag %}
+            <p class="bottom-leftext">20% off</p>
+          {% else %}
+          <p class="bottom-leftext">B2G4</p>
+          {% endif %}
       <!-- {% if product.title contains 'Foxtale Minis' %}
       <div class="bottom-leftext">
          <div class="discount-price {{ pr_option }}{% if forloop.first %} active{% endif %}">

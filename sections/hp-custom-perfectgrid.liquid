@@ -397,7 +397,7 @@
   .perfect-heading h3 {
     color: #101828;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 44px;
     letter-spacing: -0.72px;
     font-family: Inter;
@@ -579,7 +579,7 @@
     margin: 0px 0px 24px 14px;
   }
   .perfect-heading {
-    margin: 24px 0px 24px 4px;
+    margin: 24px 0px 24px 0px;
   }
   .perfect-heading h3 {
     color: #292930;
@@ -745,7 +745,13 @@
                   <path d="M6.82322 10.3839C6.92086 10.2862 6.92086 10.1279 6.82322 10.0303L1.96967 5.17675C1.87204 5.07912 1.71375 5.07912 1.61612 5.17675L1.35352 5.43934C0.767739 6.02513 0.767737 6.97487 1.35352 7.56066L4.43931 10.6464C5.0251 11.2322 5.97485 11.2322 6.56063 10.6464L6.82322 10.3839Z" fill="#F88461"/>
                   </svg>
                 </div>
-                <h6>{{ section.settings.offertext }}</h6>
+                {% assign target_tag = "Combos" %}
+                {% if product.tags contains target_tag %}
+                  <h6>20% off</h6>
+                {% else %}
+                  <h6>{{ section.settings.offertext }}</h6>
+                {% endif %}
+                
               {% endif %}
             </div>
           </div>

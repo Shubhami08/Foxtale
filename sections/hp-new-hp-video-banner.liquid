@@ -2,10 +2,11 @@
   {% comment %}
   
   
-  {{ section.settings.desktop_video | video_tag: loop: true, autoplay: true, muted: true, controls: false, class: 'desktop-video' , id: 'my-video' }}
+  <img src="{{ section.settings.desktop_gif | img_url:'master' }}" alt="" class="desktop-video" id='my-video' width='100%;'>
   {{ section.settings.mobile_video | video_tag: loop: true, autoplay: true, muted: true, controls: false, class: 'mobile-video', id: 'my-video' }} 
   {% endcomment %}
-  <img src="{{ section.settings.desktop_gif | img_url:'master' }}" alt="" class="desktop-video" id='my-video' width='100%;'>
+  
+  {{ section.settings.desktop_video | video_tag: loop: true, autoplay: true, muted: true, controls: false, class: 'desktop-video' , id: 'my-video' }}
   <img src="{{ section.settings.mobile_gif | img_url:'master' }}" alt="" class="mobile-video" id='my-video' width='100%;'>
   <a href="{{ section.settings.button_url }}" class="explore-now">{{ section.settings.button_text }}</a>
 

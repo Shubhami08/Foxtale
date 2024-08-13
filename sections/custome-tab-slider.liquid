@@ -218,16 +218,21 @@
                                 </div>
                                  {% endif %}
                               
-                              {% assign target_tag = "Combos" %}
+                              
                               {% endcomment %}
+                              {% assign target_tag = "Combos" %}
                               {% assign main_tag = "Body-care" %}
                               {% if product.tags contains main_tag %}
-                                <p class="bottom-leftext">15% Off</p>
+                                {% if product.tags contains target_tag %}
+                                  <p class="bottom-leftext">20% off</p>
+                                {% else %}
+                                <p class="bottom-leftext">B2G4</p>
+                                {% endif %}
                               {% else %}
                                 {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                                   <p class="bottom-leftext">B2G2</p>
                                 {% else %}
-                                  <p class="bottom-leftext">25% Off</p>
+                                  <p class="bottom-leftext">B2G4</p>
                                 {% endif %} 
                               {% endif %}
                               {% assign target_tag = "Combos" %}
@@ -237,7 +242,7 @@
                                 {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                                   <p class="bottom-rightext">Free Gift</p>
                                 {% else %}
-                                  <p class="bottom-rightext">Free Eye Mask</p>
+                                  <p class="bottom-rightext">Free Gift</p>
                                  {% endif %}
                               {% endif %}
                             </div>

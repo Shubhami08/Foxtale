@@ -5,12 +5,14 @@
   {% assign cart_success_message = settings.cart_success_message %}
   {% assign cart_before_success_message = settings.cart_before_success_message %}
   <!-- for exclude bodycare start -->
+  {% comment %}
   {% assign main_tag = "Body-care" %}
   {% for item in cart.items %}
   {% if item.product.tags contains main_tag %}
     {% assign total_price = total_price | minus: item.final_line_price %}
   {% endif %}
   {% endfor %}
+  {% endcomment %}
   <!-- for exclude bodycare end -->
 {% else %}
   <!-- for exclude other that slash products start -->

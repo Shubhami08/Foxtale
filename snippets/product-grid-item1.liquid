@@ -127,7 +127,9 @@ endif -%}
                   {% if collection.title == "Secret Sale" %}
                     <p class="bottom-leftext">Buy 2 Get 4 Free</p>
                   {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-leftext">25% off</p>
+                    <p class="bottom-leftext">Buy 2 Get 4</p>
+                  {% elsif collection.title == "New Special Sale" %}
+                    <p class="bottom-leftext">Buy 2 Get 4 Free</p>
                   {% elsif collection.title == "Affiliate Valentine Sale" %}
                     <p class="bottom-leftext">CUPID</p>
                     {% elsif collection.title == "Birthday Sale" %}
@@ -149,23 +151,23 @@ endif -%}
                     {% elsif collection.title == "Buy2@799" %}
                     <p class="bottom-leftext">B2@799</p>
                     {% elsif collection.title == "New Exclusive Special" %}
-                    <p class="bottom-leftext">B2G2</p>
+                    <p class="bottom-leftext">B1G1</p>
                     {% elsif collection.title == "Exclusive Sale" %}
-                    <p class="bottom-leftext">B1G1/B2G2</p>
+                    <p class="bottom-leftext">Buy 2 Get 4</p>
                     {% elsif collection.title == "Affiliate Secret Sale" %}
-                    <p class="bottom-leftext">Buy 2 Get 4 Free</p>
+                    <p class="bottom-leftext">Buy 1 Get 1 Free</p>
                     {% elsif collection.title == "Affiliate Slash Sale" %}
                     <p class="bottom-leftext">Up to 40% Off</p>                   
                     {% elsif collection.title == "Partnerships Slash Sale" %}
                     <p class="bottom-leftext">Up to 40% Off</p>
                     {% elsif collection.title == "Early Sale" %}
-                    <p class="bottom-leftext">Buy 2 Get 4 Free</p>
+                    <p class="bottom-leftext">Buy 1 Get 1 Free</p>
                     {% elsif collection.title == "Midnight Sale" %}
                     <p class="bottom-leftext">B1G1</p>
                     {% elsif collection.title == "Free Eye Mask - Gpay" %}
                     <p class="bottom-leftext">B1G1 Eye Mask Free</p>
                     {% elsif collection.title == "Secret Flash Sale" %}
-                    <p class="bottom-leftext">B1G1</p>
+                    <p class="bottom-leftext">Buy 2 Get 4</p>
                     {% elsif collection.title == "Secret Party" %}
                     <p class="bottom-leftext">B1G1</p>
                     {% elsif collection.title == "New Sale" %}
@@ -191,7 +193,7 @@ endif -%}
                     {% elsif collection.title == "Flipkart 400 Offer" %}
                     <p class="bottom-leftext">Flat 400 Off</p>
                     {% elsif collection.title == "Ad Exclusive Offer" %}
-                    <p class="bottom-leftext">Upto 30% Off</p>
+                    <p class="bottom-leftext">Buy 2 Get 4 Free</p>
                     {% elsif collection.title == "Cashkaro: 199 Store" %}
                     <p class="bottom-leftext">Bestsellers @ 199</p>
                     {% elsif collection.title == "Admittad 199 Offer" %}
@@ -209,27 +211,33 @@ endif -%}
                     {% else %}
                      {% assign target_tag = "Combos" %}
                     {% if product.tags contains target_tag %}
-                      <p class="bottom-leftext">10% Off</p>
+                      <p class="bottom-leftext">20% Off</p>
                     {% else %}
                       {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                         <p class="bottom-leftext">Upto 15% Off</p>
                       {% elsif collection.handle == "adnetwork-exclusive-offer" %}
                         <p class="bottom-leftext">B1G1</p>
                       {% else %}
-                        <p class="bottom-leftext">25% Off</p>
+                        <p class="bottom-leftext">B2G4</p>
                       {% endif %} 
                     {% endif %}
                    {% endif %}
                    {% if collection.title == "Secret Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Special Sale" %}
-                    <p class="bottom-rightext">Free Eye Mask</p>
+                    <p class="bottom-rightext">Free Gift</p>
+                   {% elsif collection.title == "New Special Sale" %}
+                    <p class="bottom-rightext">De Tan Scrub</p>
+                   {% elsif collection.title == "Secret Flash Sale" %}
+                     <p class="bottom-rightext">Free Scrub</p>
                    {% elsif collection.title == "Ad Exclusive Offer" %}
-                    <p class="bottom-rightext"></p>
+                    <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Affiliate Secret Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Gpay Offer Free Sunscreen" %}
                     <p class="bottom-rightext"></p>
+                   {% elsif collection.title == "New Exclusive Special" %}
+                    <p class="bottom-rightext">Free Sheet Mask</p>
                    {% elsif collection.title == "Early Sale" %}
                     <p class="bottom-rightext">Free Gift</p>
                    {% elsif collection.title == "Affiliate Slash Sale" %}
@@ -237,13 +245,13 @@ endif -%}
                    {% elsif collection.title == "Partnerships Slash Sale" %}
                     <p class="bottom-rightext"></p>
                    {% elsif collection.title == "Exclusive Sale" %}
-                    <p class="bottom-rightext"></p>
+                    <p class="bottom-rightext">Free Pouch</p>
                    {% elsif collection.title == "Clovia Flat 400 Offer" %}
                     <p class="bottom-rightext"></p>  
                    {% elsif collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
-                      <p class="bottom-rightext">Free Gift</p>
-                    {% else %}
-                      <p class="bottom-rightext">Free Eye Mask</p>
+                    <p class="bottom-rightext">Free Gift</p>
+                   {% else %}
+                    <p class="bottom-rightext">Free Gift</p>
                    {% endif %}
                 </div>
         {%- if show_list_btns -%}
