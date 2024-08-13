@@ -1,1 +1,594 @@
-{"sections":{"breadcrumb":{"type":"brc-nav-product","disabled":true,"settings":{"breadcrumb_pr":true,"back_next_pr":true,"cl_bg":"#f6f6f6","cl_link":"#222222"}},"main":{"type":"customProduct1","blocks":{"title":{"type":"title","disabled":true,"settings":{"txt_tr_pr":"none","fnt_df_pr":"1","size_pr":16,"fw_pr":600,"lh_pr":0,"ls_pr":0,"pr_title_color":"#222222"}},"price_review":{"type":"price_review","settings":{"price":"0","type_sale":"0","tax_ship":true,"rating":false,"review_liquid":"","size_price_pr":22,"fw_price_pr":400,"price_color":"#696969","price_sale_color":"#ec0101"}},"description":{"type":"description","disabled":true,"settings":{"des":"2","text":"<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.<\/p>","length":31,"readm":false,"readm_txt":"Read more"}},"form":{"type":"form","settings":{"selector_mode":"block","color_mode":"color is-sw-cl__round","enable_fit_ratio_img":false,"color_size":"medium","show_qty":false,"enable_wishlist":true,"enable_compare":true,"btn_atc_full":false,"pr_btn_round":40,"ani":"none","time":6,"btn_txt":"3","btn_icon":false,"button_style":"default","button_color":"primary","button_effect":"sweep-to-top","wishlist_color":"#222222","wishlist_color_hover":"#56cfe1","wishlist_color_active":"#e81e1e","compare_color":"#222222","compare_color_hover":"#56cfe1","show_dynamic_checkout":false,"btn_txt2":"3","button_color_payment":"dark","product_list":[],"show_product_current":true,"qty_val":"0","advance_label":"Choose style","advance_pr_list":[]}},"23551ebc-3be1-40d6-81b2-30f03478cccb":{"type":"img","disabled":true,"settings":{"al":"start","mess":"","size":16,"source":"1","wimg":70,"svg":"amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa","height":44}},"size_delivery_ask":{"type":"size_delivery_ask","disabled":true,"settings":{"size_chart":"3","pos_sizeg":"1","sc_type":"1","page":"","size_ck":"","delivery":true,"page_dr":"delivery-return","ask":true,"phone":true}},"meta":{"type":"meta","disabled":true,"settings":{"show_options":false,"show_vendor":false,"show_type":false,"show_sku":true,"show_barcode":false,"show_available":true,"show_category":true,"show_tags":true}},"95d4f334-8ea7-4cd2-b609-2373b1e848b8":{"type":"tab_des","disabled":true,"settings":{"title":"Description"}},"e36839f5-0847-44e2-97d3-2885597bd1ff":{"type":"tab_add","disabled":true,"settings":{"title":"Additional Information"}},"754ad4a0-7308-4a3e-b325-e2f2c0b85d4c":{"type":"tab_html","disabled":true,"settings":{"title":"Custom tab","content":"","page":"wash-care"}},"56e67368-7424-4d73-8f14-dacdda4c59be":{"type":"tab_rivui","disabled":true,"settings":{"title":"Reviews","review_liquid":""}},"1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3":{"type":"store_pickup","disabled":true,"settings":{}},"94011ade-ec25-4d68-b37a-70660ede49dd":{"type":"social","disabled":true,"settings":{"socials_align":"start","social_mode":"2","social_style":"1","social_size":"extra_small","bd_radius":0,"use_color_set":true,"icon_cl":"#222222","bg_cl":"#00badb","space_h_item":"20","space_v_item":"5","space_h_item_mb":"2","space_v_item_mb":"2"}},"7eb5a20a-286b-484e-b70e-cf0879d77f3d":{"type":"html","disabled":true,"settings":{"page":"custom-offer"}}},"block_order":["title","price_review","description","form","23551ebc-3be1-40d6-81b2-30f03478cccb","size_delivery_ask","meta","95d4f334-8ea7-4cd2-b609-2373b1e848b8","e36839f5-0847-44e2-97d3-2885597bd1ff","754ad4a0-7308-4a3e-b325-e2f2c0b85d4c","56e67368-7424-4d73-8f14-dacdda4c59be","1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3","94011ade-ec25-4d68-b37a-70660ede49dd","7eb5a20a-286b-484e-b70e-cf0879d77f3d"],"settings":{"pr_layout":"default","enable_sticky_info":true,"enable_delivery_time":true,"media_layout":"without_thumbnails","media_size":"medium","thumb_lr_size":"medium","image_ratio":"ratioadapt","image_size":"cover","image_position":"8","main_click":"zoom","zoom_tp":"external","enable_zoom_icon":true,"enable_zoom_click_mb":true,"enable_video_looping":false,"enable_video_muting":true,"enable_video_autoplaying":true,"eff":"slide","nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":false,"nav_dot":false,"dot_owl":"elessi","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"tabs_design":"tab","tabs_design_mb":"accordion","tabs_position":"external","enable_first_tab":false,"tabs_layout_fix":"full","bg":"#f6f6f8","bg_mb":"#ffffff","product_list":[],"sticky_mode":"2","sticky_show":"1","enable_select":true,"ani":"none","time":6}},"sidebar":{"type":"sidebar-product","blocks":{"f01b181b-62ee-4735-8e25-32cb71ccfaba":{"type":"category","settings":{"title_category":"Product Categories","cat_source":"1","cat_link_list":"","count":true}},"f65f464b-9487-43be-9c91-8688a098bb6f":{"type":"collection","settings":{"title_fea_pr":"Sale Products","collection":"frontpage","limit_pr":5,"image_ratio":"t4s_ratioadapt","image_size":"t4s_cover","image_position":"t4s_position_8"}},"83340bb8-58d2-4148-89e2-a4c7a01cf792":{"type":"instagram","settings":{"title_ins":"Instagram","mode":"2","acc":"","limit":12,"open_link":"_blank","round":0,"col_dk":"3","space_item":"6"}},"9ce9ded8-1cef-4e32-b98b-47364ffa328c":{"type":"shipping","settings":{"title":"Shipping & Delivery","shipping_1":"las la-truck,FREE SHIPPING,Free shipping for all US order","shipping_2":"las la-headset,SUPPORT 24\/7,We support 24 hours a day","shipping_3":"las la-exchange-alt,30 DAYS RETURN,You have 30 days to return","shipping_4":"","shipping_5":"","shipping_6":""}},"4a9c6ae8-f3b4-4192-a6d1-82d01670bce6":{"type":"image","settings":{"b_link":"","open_link":"_self","img_effect":"none","date":"2022\/12\/26","content_align":"center","cdt_des":"2","countdown_pos":"2","cdt_size":"medium","box_bdr":0,"bd_width":0,"space_item":10,"number_cl":"#ffffff","text_cl":"#ffffff","border_cl":"#000000","bg_cl":"#000000"}}},"block_order":["f01b181b-62ee-4735-8e25-32cb71ccfaba","f65f464b-9487-43be-9c91-8688a098bb6f","83340bb8-58d2-4148-89e2-a4c7a01cf792","9ce9ded8-1cef-4e32-b98b-47364ffa328c","4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"],"disabled":true,"settings":{"enable_drawer":true,"space":50,"size":"medium","br_style":"none","brcolor":"#222222","sidebar_bdr":5,"sidebar_pd":10}},"cf4fc163-d130-41b4-95c0-293ae9b5bb7e":{"type":"faq-section","disabled":true,"settings":{}},"cb4ccc25-1da8-4227-9512-31e68807f867":{"type":"about_unique","settings":{}},"9c53eee8-2373-4d04-a4c9-f861e4df8973":{"type":"custom_html","disabled":true,"custom_css":["a:active {color: black;}","a:hover {color: #242424;}",".result-after-days.active {border-bottom: 1px solid black;}",".result-after-days.active a {color: #242424;}"],"settings":{"code":"<div class=\"result-section\">\n\t<div class=\"result-section-title\">Real People, Verified Results<\/div>\n\t<div class=\"result-section-content\">\n<div class=\"dek_img_slide\"> \t\t\t\n<img class=\"result-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Group_155_2_a78266cf-3531-4976-8fe5-d605cdf8dfe6.png?v=1679989121\">\n<\/div>\n<div class=\"mb_img_slide\"> \t\t\t\n<img class=\"result-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Real_People_Verified_Results_2.png?v=1679989386\">\n<\/div>\n\t\t<div class=\"result-section-innr\">\n\t\t\t<div class=\"result-text\">\n\t\t\t\t<span class=\"result-after-days\"><a href=\"#result1\">RESULTS<br>AFTER 10 DAYS<\/a><\/span>\n\t\t\t\t<span class=\"result-after-days\"><a href=\"#result2\">RESULTS<br>AFTER 30 DAYS<\/a><\/span>\n\t\t\t<\/div>\n\t\t\t<div class=\"result-after\">\n\t\t\t\t<div class=\"result-content\" id=\"result1\">\n<div class=\"dek_img_slide\">\t\t\t\t\t<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Single_Product_Website_Design-15.jpg?v=1679575683\">\n<\/div>\t\n<div class=\"mb_img_slide\"> \n<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/AFTER_10_DAYS_3.jpg?v=1679998121\">\n<\/div>\t\t\t<\/div>\n\t\t\t\t<div class=\"result-content\" id=\"result2\">\n<div class=\"dek_img_slide\">\t\t\t\t\t<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Single_Product_Website_Design-16.jpg?v=1679575683\">\n<\/div>\n<div class=\"mb_img_slide\"> \n<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/AFTER_30_DAYS_3.jpg?v=1679998122\">\n<\/div>\t\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>","layout":"container","mg":"50px,,50px,","pd":"","mg_mb":"","pd_mb":""}},"85ba70be-7e6c-4846-89ce-1be5e231bb5b":{"type":"custom_results","settings":{"code":"","layout":"t4s-se-container","cl_bg":"","cl_bg_gradient":"","mg":"50px,,50px,","pd":"","mg_mb":",,30px,","pd_mb":"","use_cus_css":false,"code_cus_css":""}},"aea25245-bd71-47fa-9e0d-bdde5017406d":{"type":"boost-with","disabled":true,"settings":{"boost_section_heading":"Buy 2 Get 1 FREE"}},"00e37841-4dbb-488c-8445-1e886e4eab73":{"type":"custom-collection-slider","blocks":{"33f45732-e7e6-4ef6-841e-a49b0a6796ab":{"type":"tabs","settings":{"tab-title":"{{ product.metafields.custom.routinename1.value }}"}},"dfc31745-596f-4344-bede-6418aebfa614":{"type":"tabs","settings":{"tab-title":"{{ product.metafields.custom.routinename2.value }}"}},"78231d72-6a7d-4c4f-9c9f-b26af5d08be7":{"type":"content","settings":{"collection":"{{ product.metafields.custom.routines.value }}"}},"f0766262-d559-43ad-ac9b-7ae9275c2d59":{"type":"content","settings":{"collection":"{{ product.metafields.custom.routines2.value }}"}}},"block_order":["33f45732-e7e6-4ef6-841e-a49b0a6796ab","dfc31745-596f-4344-bede-6418aebfa614","78231d72-6a7d-4c4f-9c9f-b26af5d08be7","f0766262-d559-43ad-ac9b-7ae9275c2d59"],"settings":{"slider-title":"","pr_des":"1"}},"c5b83534-9803-465e-be13-01d79c8a8bb6":{"type":"pr-uses-detail","settings":{}},"baa1065b-e89a-4e42-affb-936d001668f9":{"type":"pairs-best-with","settings":{"pair_section_heading":"Frequently purchased combos"}},"product-recommendations":{"type":"product-recommendations","disabled":true,"settings":{"show":true,"design_heading":"1","heading_align":"t4s-text-center","top_heading":"You may also like","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"product_des":"1","show_vendor":false,"use_cdt":false,"limit":12,"display_type":"4","image_ratio":"rationt","image_size":"nt_cover","image_position":"8","content_align":"default","col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"1","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"1","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"75px,,50px,","pd":"","mg_mb":",,30px,","pd_mb":""}},"recently-viewed-products":{"type":"recently_viewed","disabled":true,"settings":{"show":true,"design_heading":"1","heading_align":"t4s-text-center","top_heading":"Recently viewed products","icon_heading":"las la-gem","top_subheading":"","tophead_mb":30,"product_des":"1","show_vendor":false,"use_cdt":false,"limit":14,"sortby":"1","unavailable_prs":"show","image_ratio":"rationt","image_size":"cover","image_position":"8","content_align":"default","col_dk":"4","col_tb":"2","col_mb":"2","space_h_item":"30","space_v_item":"30","space_h_item_mb":"10","space_v_item_mb":"10","layout_des":"2","loop":true,"au_time":0,"au_hover":true,"nav_btn":true,"btn_vi":"always","btn_owl":"outline","btn_shape":"round","btn_cl":"dark","btn_size":"small","btn_hidden_mobile":true,"nav_dot":false,"dot_owl":"default","dots_cl":"dark","dots_round":true,"dots_space":10,"dots_hidden_mobile":false,"layout":"t4s-container-wrap","cl_bg":"","cl_bg_gradient":"","mg":"75px,,50px,","pd":"","mg_mb":",,30px,","pd_mb":""}},"6a4f9bd0-be52-4194-9473-dddd1a65a45c":{"type":"reviews-section","settings":{"reviews":true}},"d95087b2-0560-4d01-964b-32a3589a2c14":{"type":"faq-section","settings":{}}},"order":["breadcrumb","main","sidebar","cf4fc163-d130-41b4-95c0-293ae9b5bb7e","cb4ccc25-1da8-4227-9512-31e68807f867","9c53eee8-2373-4d04-a4c9-f861e4df8973","85ba70be-7e6c-4846-89ce-1be5e231bb5b","aea25245-bd71-47fa-9e0d-bdde5017406d","00e37841-4dbb-488c-8445-1e886e4eab73","c5b83534-9803-465e-be13-01d79c8a8bb6","baa1065b-e89a-4e42-affb-936d001668f9","product-recommendations","recently-viewed-products","6a4f9bd0-be52-4194-9473-dddd1a65a45c","d95087b2-0560-4d01-964b-32a3589a2c14"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "#f6f6f6",
+        "cl_link": "#222222"
+      }
+    },
+    "main": {
+      "type": "customProduct1",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 16,
+            "fw_pr": 600,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#222222"
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "0",
+            "tax_ship": true,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 400,
+            "price_color": "#696969",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "des": "2",
+            "text": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.<\/p>",
+            "length": 31,
+            "readm": false,
+            "readm_txt": "Read more"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color is-sw-cl__round",
+            "enable_fit_ratio_img": false,
+            "color_size": "medium",
+            "show_qty": false,
+            "enable_wishlist": true,
+            "enable_compare": true,
+            "btn_atc_full": false,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "primary",
+            "button_effect": "sweep-to-top",
+            "wishlist_color": "#222222",
+            "wishlist_color_hover": "#56cfe1",
+            "wishlist_color_active": "#e81e1e",
+            "compare_color": "#222222",
+            "compare_color_hover": "#56cfe1",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "product_list": [
+
+            ],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": [
+
+            ]
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "wimg": 70,
+            "svg": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa",
+            "height": 44
+          }
+        },
+        "size_delivery_ask": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": true,
+            "page_dr": "delivery-return",
+            "ask": true,
+            "phone": true
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "show_options": false,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_available": true,
+            "show_category": true,
+            "show_tags": true
+          }
+        },
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
+          "type": "tab_des",
+          "disabled": true,
+          "settings": {
+            "title": "Description"
+          }
+        },
+        "e36839f5-0847-44e2-97d3-2885597bd1ff": {
+          "type": "tab_add",
+          "disabled": true,
+          "settings": {
+            "title": "Additional Information"
+          }
+        },
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Custom tab",
+            "content": "",
+            "page": "wash-care"
+          }
+        },
+        "56e67368-7424-4d73-8f14-dacdda4c59be": {
+          "type": "tab_rivui",
+          "disabled": true,
+          "settings": {
+            "title": "Reviews",
+            "review_liquid": ""
+          }
+        },
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3": {
+          "type": "store_pickup",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "94011ade-ec25-4d68-b37a-70660ede49dd": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "2",
+            "social_style": "1",
+            "social_size": "extra_small",
+            "bd_radius": 0,
+            "use_color_set": true,
+            "icon_cl": "#222222",
+            "bg_cl": "#00badb",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        },
+        "7eb5a20a-286b-484e-b70e-cf0879d77f3d": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "page": "custom-offer"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price_review",
+        "description",
+        "form",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "size_delivery_ask",
+        "meta",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "e36839f5-0847-44e2-97d3-2885597bd1ff",
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
+        "56e67368-7424-4d73-8f14-dacdda4c59be",
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "7eb5a20a-286b-484e-b70e-cf0879d77f3d"
+      ],
+      "settings": {
+        "pr_layout": "default",
+        "enable_sticky_info": true,
+        "enable_delivery_time": true,
+        "media_layout": "without_thumbnails",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "slide",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "elessi",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "tabs_design": "tab",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "external",
+        "enable_first_tab": false,
+        "tabs_layout_fix": "full",
+        "bg": "#f6f6f8",
+        "bg_mb": "#ffffff",
+        "product_list": [
+
+        ],
+        "sticky_mode": "2",
+        "sticky_show": "1",
+        "enable_select": true,
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24\/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022\/12\/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e": {
+      "type": "faq-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "cb4ccc25-1da8-4227-9512-31e68807f867": {
+      "type": "about_unique",
+      "settings": {
+      }
+    },
+    "9c53eee8-2373-4d04-a4c9-f861e4df8973": {
+      "type": "custom_html",
+      "disabled": true,
+      "custom_css": [
+        "a:active {color: black;}",
+        "a:hover {color: #242424;}",
+        ".result-after-days.active {border-bottom: 1px solid black;}",
+        ".result-after-days.active a {color: #242424;}"
+      ],
+      "settings": {
+        "code": "<div class=\"result-section\">\n\t<div class=\"result-section-title\">Real People, Verified Results<\/div>\n\t<div class=\"result-section-content\">\n<div class=\"dek_img_slide\"> \t\t\t\n<img class=\"result-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Group_155_2_a78266cf-3531-4976-8fe5-d605cdf8dfe6.png?v=1679989121\">\n<\/div>\n<div class=\"mb_img_slide\"> \t\t\t\n<img class=\"result-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Real_People_Verified_Results_2.png?v=1679989386\">\n<\/div>\n\t\t<div class=\"result-section-innr\">\n\t\t\t<div class=\"result-text\">\n\t\t\t\t<span class=\"result-after-days\"><a href=\"#result1\">RESULTS<br>AFTER 10 DAYS<\/a><\/span>\n\t\t\t\t<span class=\"result-after-days\"><a href=\"#result2\">RESULTS<br>AFTER 30 DAYS<\/a><\/span>\n\t\t\t<\/div>\n\t\t\t<div class=\"result-after\">\n\t\t\t\t<div class=\"result-content\" id=\"result1\">\n<div class=\"dek_img_slide\">\t\t\t\t\t<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Single_Product_Website_Design-15.jpg?v=1679575683\">\n<\/div>\t\n<div class=\"mb_img_slide\"> \n<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/AFTER_10_DAYS_3.jpg?v=1679998121\">\n<\/div>\t\t\t<\/div>\n\t\t\t\t<div class=\"result-content\" id=\"result2\">\n<div class=\"dek_img_slide\">\t\t\t\t\t<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/Single_Product_Website_Design-16.jpg?v=1679575683\">\n<\/div>\n<div class=\"mb_img_slide\"> \n<img class=\"result-after-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0609\/6096\/4855\/files\/AFTER_30_DAYS_3.jpg?v=1679998122\">\n<\/div>\t\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>",
+        "layout": "container",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "85ba70be-7e6c-4846-89ce-1be5e231bb5b": {
+      "type": "custom_results",
+      "settings": {
+        "code": "",
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "aea25245-bd71-47fa-9e0d-bdde5017406d": {
+      "type": "boost-with",
+      "disabled": true,
+      "settings": {
+        "boost_section_heading": "Buy 2 Get 1 FREE"
+      }
+    },
+    "00e37841-4dbb-488c-8445-1e886e4eab73": {
+      "type": "custom-collection-slider",
+      "blocks": {
+        "33f45732-e7e6-4ef6-841e-a49b0a6796ab": {
+          "type": "tabs",
+          "settings": {
+            "tab-title": "{{ product.metafields.custom.routinename1.value }}"
+          }
+        },
+        "dfc31745-596f-4344-bede-6418aebfa614": {
+          "type": "tabs",
+          "settings": {
+            "tab-title": "{{ product.metafields.custom.routinename2.value }}"
+          }
+        },
+        "78231d72-6a7d-4c4f-9c9f-b26af5d08be7": {
+          "type": "content",
+          "settings": {
+            "collection": "{{ product.metafields.custom.routines.value }}"
+          }
+        },
+        "f0766262-d559-43ad-ac9b-7ae9275c2d59": {
+          "type": "content",
+          "settings": {
+            "collection": "{{ product.metafields.custom.routines2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "33f45732-e7e6-4ef6-841e-a49b0a6796ab",
+        "dfc31745-596f-4344-bede-6418aebfa614",
+        "78231d72-6a7d-4c4f-9c9f-b26af5d08be7",
+        "f0766262-d559-43ad-ac9b-7ae9275c2d59"
+      ],
+      "settings": {
+        "slider-title": "",
+        "pr_des": "1"
+      }
+    },
+    "c5b83534-9803-465e-be13-01d79c8a8bb6": {
+      "type": "pr-uses-detail",
+      "settings": {
+      }
+    },
+    "baa1065b-e89a-4e42-affb-936d001668f9": {
+      "type": "pairs-best-with",
+      "settings": {
+        "pair_section_heading": "Frequently purchased combos"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "You may also like",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "4",
+        "image_ratio": "rationt",
+        "image_size": "nt_cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "6a4f9bd0-be52-4194-9473-dddd1a65a45c": {
+      "type": "reviews-section",
+      "settings": {
+        "reviews": true
+      }
+    },
+    "d95087b2-0560-4d01-964b-32a3589a2c14": {
+      "type": "faq-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "sidebar",
+    "cf4fc163-d130-41b4-95c0-293ae9b5bb7e",
+    "cb4ccc25-1da8-4227-9512-31e68807f867",
+    "9c53eee8-2373-4d04-a4c9-f861e4df8973",
+    "85ba70be-7e6c-4846-89ce-1be5e231bb5b",
+    "aea25245-bd71-47fa-9e0d-bdde5017406d",
+    "00e37841-4dbb-488c-8445-1e886e4eab73",
+    "c5b83534-9803-465e-be13-01d79c8a8bb6",
+    "baa1065b-e89a-4e42-affb-936d001668f9",
+    "product-recommendations",
+    "recently-viewed-products",
+    "6a4f9bd0-be52-4194-9473-dddd1a65a45c",
+    "d95087b2-0560-4d01-964b-32a3589a2c14"
+  ]
+}
