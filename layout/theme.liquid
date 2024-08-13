@@ -1660,6 +1660,70 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'timesprime-b2g2'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G2";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'timesprime-b1g1'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B1G1";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 2 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
        {% if collection.url contains 'shop-3'%}
          .bottom-leftext {
            visibility: hidden;
