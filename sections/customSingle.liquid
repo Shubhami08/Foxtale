@@ -1245,10 +1245,11 @@
 
                 
                 {%- when '@app' -%} 
-                {% render 'keybenefits' %}
-                {% render 'new-offerbox' %}
+                
                  {%- render block -%}
               {%- endcase -%}
+              {% render 'keybenefits' %}
+                {% render 'new-offerbox' %}
             {%- endfor -%}
             
           {% comment %}
