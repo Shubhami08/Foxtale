@@ -600,8 +600,7 @@
         "image_Kmgt76": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Sleek_banner_web_a69d8611-12ea-47b5-af83-c63d44e4b4b7.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Sleek_banner_mobile_0a199564-a2f8-477c-8a23-73033297845a.jpg",
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
             "collection_handle": "frontpage"
           }
         },
