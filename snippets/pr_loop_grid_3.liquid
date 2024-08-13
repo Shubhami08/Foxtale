@@ -119,14 +119,14 @@
 
                     {% assign target_tag = "Combos" %}
                     {% if product.tags contains target_tag %}
-                      <p class="bottom-leftext">10% Off</p>
+                      <p class="bottom-leftext">20% Off</p>
                     {% else %}
                       {% if collection.handle == "shop-1" or collection.handle == "products-shop-1" %}
                         <p class="bottom-leftext">B2G2</p>
                       {% elsif collection.handle == "adnetwork-exclusive-offer" %}
                         <p class="bottom-leftext">B1G1</p>
                       {% else %}
-                        <p class="bottom-leftext">25% Off</p>
+                        <p class="bottom-leftext">B2G4</p>
                       {% endif %} 
                     {% endif %}
                     
@@ -161,7 +161,7 @@
                        {% if product.tags contains main_tag %}
                         <p class="bottom-rightext"></p>
                          {% else %}
-                         <p class="bottom-rightext">Free Eye Mask</p>
+                         <p class="bottom-rightext">Free Gift</p>
                       {% endif %}
                     {% endif %}
                     {% endif %}

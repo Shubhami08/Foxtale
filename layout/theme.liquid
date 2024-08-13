@@ -824,23 +824,6 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
 
        {% if collection.url contains 'exclusive-sale' %}
-         .saleBar {
-           visibility: hidden;
-           position: relative;
-         }
-         .saleBar:after {
-           visibility: visible;
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%, -50%);
-           content: "Slash Sale ends soon. Check out now!";
-           font-size: 15px;
-           width: max-content;     
-           line-height: 1.2;
-           color: #000;
-           font-weight: 400;
-         }
          #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
            background-color: #ffe1d7;
          }
@@ -854,7 +837,27 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Upto 40% Off on our Bestsellers";
+           content: "Buy 2 Get 4 Free";
+           font-size: 12px;
+           width: max-content;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'new-exclusive-special' %}
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 4 Free";
            font-size: 12px;
            width: max-content;
          }
@@ -981,6 +984,29 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .t4s-announcement-bar {
           display: none !important;
         }
+        .bottom-leftext {
+          visibility: hidden;
+          position: relative;
+        }
+        .bottom-leftext:after {
+          visibility: visible;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "B2G4";
+          width: 50%;
+        }
+        .bottom-rightext {
+          visibility: hidden;
+          position: relative;
+        }
+        .bottom-rightext:after {
+          visibility: visible;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "Free Gift";
+        }
       {% endif %}
       
        {% if collection.url contains 'shop-1' %}
@@ -993,7 +1019,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute !important;
            top: 0 !important ;
            left: 0 !important;
-           content: "PAYDAY" !important;
+           content: "B2G4" !important;
            width: 155px !important;
          }   
          .bottom-rightext {
@@ -1019,7 +1045,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Get 4 at 1099 [Code: PAYDAY]";
+           content: "Buy 2 Get 4 Free [Code: B2G4]";
            font-size: 12px;
            width: max-content;
          }
@@ -1397,6 +1423,102 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          }
        {%endif%}
 
+       {% if collection.url contains 'gpay-buy-2-get-4'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G4";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 4 [Code: FTGPAYB2GF]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'zomato-buy-2-get-4'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G4";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 4 [Code: B2GFZOM21B-985]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
+       {% if collection.url contains 'flipkart-buy-2-get-4'%}
+         .bottom-leftext {
+           visibility: hidden;
+           position: relative;
+         }
+         .bottom-leftext:after {
+           visibility: visible;
+           position: absolute;
+           top: 0;
+           left: 0;
+           content: "B2G4";
+           width: 150px;
+         }
+         .t4s-announcement-bar__item {
+           visibility: hidden;
+           position: relative;
+         }
+         .t4s-announcement-bar__item:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Buy 2 Get 4 [Code: FKAB2GF]";
+           font-size: 12px;
+           width: max-content;
+         }
+         .bottom-rightext {
+           display: none;
+         }
+       {%endif%}
+
        {% if collection.url contains 'zomato-buy-1-get-1'%}
          .bottom-leftext {
            visibility: hidden;
@@ -1548,7 +1670,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "B2G1";
+           content: "B3G5";
            width: 150px;
          }
          .bottom-rightext {
@@ -1559,15 +1681,15 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            visibility: visible;
            position: absolute;
            top: 0;
-           left: 0;
-           content: "Free SPF";
+           left: -50px;
+           content: "Free Jewelry Box";
            width: 150px;
          }
-         .t4s-announcement-bar__item {
+         /* .t4s-announcement-bar__item {
            visibility: hidden;
            position: relative;
-         }
-         .t4s-announcement-bar__item:after {
+         } */
+         /* .t4s-announcement-bar__item:after {
            visibility: visible;
            position: absolute;
            top: 50%;
@@ -1576,7 +1698,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            content: "Buy 2 Get 2 [Code: SPF]";
            font-size: 12px;
            width: max-content;
-         }
+         } */
        {%endif%}
 
        {% if collection.url contains 'new-exclusive-special-1'%}
@@ -1779,9 +1901,29 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           content: "Buy 2 get 2 Free [Code: B2G2ZOM19A-763]";
+           content: "Buy 2 get 4 Free [Code: B2GFZOM21B-985]";
            font-size: 12px;
            width: max-content;
+         }
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 4 Products and [Code: B2GFZOM21B-985]";
+           font-size: 15px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
          }
        {%endif%}
 
@@ -1843,7 +1985,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "GLOW25";
+           content: "B2G4";
          }
          .bottom-rightext {
            visibility: hidden;
@@ -1855,7 +1997,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            right: 0;
-           content: "Free Eye Mask";
+           content: "Free Gift";
          }
        {%endif%}
 
@@ -2282,7 +2424,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Monsoon Glow Essentials";
+           content: "WTFox Picks for Glow";
            font-size: 24px;
            font-weight: 500;
            line-height: 36px;
@@ -2370,7 +2512,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Summer Skin essentials ";
+           content: "Top Pick for Glow";
          }
        {%endif%}
 
@@ -2385,7 +2527,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
            position: absolute;
            top: 0;
            left: 0;
-           content: "Glow Essentials";
+           content: "Top Pick for Glow";
            font-size: 24px;
            font-weight: 500;
            line-height: 36px;
@@ -2656,7 +2798,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         }
        {%endif%}
 
-       {% if product.url contains 'brightening-under-eye-mask' %}
+       {% if product.url contains 'brightening-under-eye-mask' or product.url contains 'body-wash-floral-perfume' %}
          .t4s-product-form__variants, .t4s-sticky-atc {
            display: none !important;
          }
@@ -2666,7 +2808,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .new-offerbox {
           /* display: none !important; */
         }
-        div#shopify-section-announcement-bar {
+        div#shopify-section-announcement-bar, .offerbox-two {
           display: none !important;
         }
         .muktailayout-template .t4s-sticky-atc {
@@ -2682,7 +2824,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .new-offerbox {
           /* display: none !important; */
         }
-        div#shopify-section-announcement-bar {
+        div#shopify-section-announcement-bar, .offerbox-two {
           display: none !important;
         }
         .muktailayout-template .t4s-sticky-atc {
@@ -2698,7 +2840,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .new-offerbox {
           /* display: none !important; */
         }
-        div#shopify-section-announcement-bar {
+        div#shopify-section-announcement-bar, .offerbox-two {
           display: none !important;
         }
         .muktailayout-template .t4s-sticky-atc {
@@ -2714,7 +2856,7 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
         .new-offerbox {
           /* display: none !important; */
         }
-        div#shopify-section-announcement-bar {
+        div#shopify-section-announcement-bar, .offerbox-two {
           display: none !important;
         }
         .muktailayout-template .t4s-sticky-atc {
@@ -2727,21 +2869,21 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
        {%endif%}
       
        {% if product.handle contains 'happy-hydration-duo' %}
-        div#shopify-section-announcement-bar {
+        div#shopify-section-announcement-bar  {
           display: none !important;
         }
-        .customGroupProduct-template .two-productscampaign .offer-2-row {
+        /* .customGroupProduct-template .two-productscampaign .offer-2-row {
           display: flex !important;
-        }
+        } */
        {%endif%}
 
        {% if product.handle contains 'radiance-ritual-duo' %}
         div#shopify-section-announcement-bar {
           display: none !important;
         }
-        .customGroupProduct-template .two-productscampaign .offer-2-row {
+        /* .customGroupProduct-template .two-productscampaign .offer-2-row {
           display: flex !important;
-        }
+        } */
        {%endif%}
 
        @media (min-width: 768px) {
@@ -2828,6 +2970,12 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
          {% if product.handle contains 'skin-radiance-mask' %}
            .customproduct1-template .result-section .result-section-content {
              grid-template-columns: 1fr !important;
+           }
+         {%endif%}
+
+         {% if product.handle contains 'body-wash-floral-perfume' %}
+           .offer-section-main {
+             display: none !important;
            }
          {%endif%}
          

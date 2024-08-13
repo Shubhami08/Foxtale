@@ -1,12 +1,23 @@
 <style>
+
+  @media (min-width : 1200px){
+    .cus-collswrapper .slick-track{
+    margin: 0px !important;
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+  }
+  }
+  
   .cus-collswrapper .heading-all {
-    margin: 50px 0 62px 112px;
+    margin: 10px 0 46px 122px;
   }
   .cus-collswrapper {
     position: relative;
-    padding: 10px 0 30px;
+    padding: 10px 0 48px;
     width: 100%;
   }
+
   .sbc {
     padding: 0 66px;
   }
@@ -98,11 +109,18 @@
   }
 
   @media(max-width: 768px) {
+    .heading-all h3{
+        color: #292930;
+        font-size: 20px;
+        font-weight: 500 !important;
+        line-height: 100% !important;
+        letter-spacing: -0.5px !important;
+    }
     .cus-collswrapper {
       padding: 0px 0 25px 0;
     }
     .cus-collswrapper .heading-all {
-      margin: 35px 0 29px 16px;
+      margin: 24px 0px 24px 18px;
     }
     .cus-head {
       font-size: 24px;
@@ -150,11 +168,18 @@
       padding: 0 98px 0 0 !important;
     }
     .cus-collswrapper .slick-slide {
-      margin: 0 0 0 16px;
+      margin: 0 0 0 14px;
     }
     .cus-single a img {
       width: 124px;
       height: 124px;
+    }
+  }
+
+  @media screen and (max-width: 400px) and (min-width: 330px) {
+    .cus-title p {
+    font-size : 13px !important;
+    letter-spacing : 0em !important;
     }
   }
 </style>
