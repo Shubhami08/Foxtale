@@ -601,30 +601,31 @@
           "type": "image",
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
             "collection_handle": "frontpage"
           }
         },
         "image_y7LGnz": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Sheet_mask_Sleek_banner_web_828731ad-72a8-4e1a-8944-269798092580.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Sheet_mask_sleek_banner_mobile_c3592bc5-b02b-40ab-93da-b110f491bf5e.jpg",
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
             "collection_handle": "new-exclusive-special"
           }
         },
         "image_ijCda9": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/POUCH_Sleek_banner_web_copy.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/POUCH_sleek_banner_mobile_copy.jpg",
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
             "collection_handle": "exclusive-sale"
           }
         },
         "image_bYRpxE": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/SCRUB_Sleek_banner_web_f6ec3567-9a93-4c3d-9ca7-09d6eb234eb5.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/SCRUB_sleek_banner_mobile_f7de872d-1e08-430d-ab09-bf4dc872a523.jpg",
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
             "collection_handle": "secret-flash-sale"
           }
         }
