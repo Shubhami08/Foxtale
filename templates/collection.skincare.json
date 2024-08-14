@@ -9,667 +9,6 @@
 */
 {
   "sections": {
-    "timer_QgwT4a": {
-      "type": "timer",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "8a75fd64-3ace-4ae7-8966-dfa4df542871": {
-      "type": "slideshow-collection",
-      "blocks": {
-        "f9965015-912a-4ab1-a6b9-60456f64c9c9": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_72.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
-            "collection_handle": "shop"
-          }
-        },
-        "56f1ef1a-a3ff-4b88-b644-a461bad11dc4": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Collection-_Banner-_B2_799_-04.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Collection-_Banner-_B2_799_-03.jpg",
-            "collection_handle": "buy2-799"
-          }
-        },
-        "b0000dba-a032-4f67-899a-dce9c6aca32b": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_desktop_header_e7f557f3-81c6-43e3-be4b-842521eb3e98.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_header_3b3357da-da51-4025-b7a6-a022d3b815f0.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review2.jpg",
-            "collection_handle": "blemish-prone"
-          }
-        },
-        "92025d9e-d9bf-46d0-882d-5d1d52195879": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_desktop_header_e7f557f3-81c6-43e3-be4b-842521eb3e98.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_header_3b3357da-da51-4025-b7a6-a022d3b815f0.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review2.jpg",
-            "collection_handle": "acne-collection"
-          }
-        },
-        "b6933a21-3e72-4d6f-b576-7f5ec9b463b3": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_24.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_22.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_25.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_21.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_23.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_20.jpg",
-            "collection_handle": "dullness"
-          }
-        },
-        "0473c907-2e07-4fab-a914-5d726fd04822": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_18.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_17.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_19.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_16.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_17.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_14.jpg",
-            "collection_handle": "fine-lines"
-          }
-        },
-        "52070fc7-449e-4643-b57f-57d8f07b467c": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_14.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_11.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_15.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_12.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_16.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_13.jpg",
-            "collection_handle": "dehydration"
-          }
-        },
-        "293424e1-fafd-4849-96cf-d45d71201f14": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_20.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_15.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_21.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_19.jpg",
-            "image_3_desktop": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_desktop_copy_22.jpg",
-            "image_3_mobile": "shopify:\/\/shop_images\/Collection_Banner_V2_Home_page_Mobile_copy_18.jpg",
-            "collection_handle": "hyperpigmentation"
-          }
-        },
-        "a6f55990-39a5-4ae9-957d-ba08788864d2": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/With_code_website_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/With_code_mobile_1.jpg",
-            "collection_handle": "early-access"
-          }
-        },
-        "image_rUk9y3": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WTFox_sale-_Website_banner_without_code_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFox_sale-_Mobile_banner_without_code_copy.jpg",
-            "collection_handle": "affiliate-secret-sale"
-          }
-        },
-        "387e416d-e96a-42bf-b73f-10452683ddf3": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WTFox_sale-_Website_banner_without_code_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFox_sale-_Mobile_banner_without_code_copy.jpg",
-            "collection_handle": "affiliate-early-access"
-          }
-        },
-        "image_HHVRJP": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_200-01.jpg",
-            "collection_handle": "flat-200-off-phonepe"
-          }
-        },
-        "image_AGT3Fx": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
-            "collection_handle": "gpay-free-eye-mask"
-          }
-        },
-        "5957fc45-38e1-4660-b466-c79aa595062a": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02_79a5c446-2caf-4c28-811f-b36c934c6722.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01_4ca43641-583d-4487-a778-e3a41db7b968.jpg",
-            "collection_handle": "free-face-wash-gpay"
-          }
-        },
-        "26003c4f-26c3-4086-9cb0-b7c059dd74a7": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
-            "collection_handle": "flat-400-off-gpay"
-          }
-        },
-        "b12ee519-3c23-4b62-b07e-45bb584fce0b": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
-            "collection_handle": "flat-300-off-gpay"
-          }
-        },
-        "e370bd45-9005-4f18-9d4f-a36cfaa962f6": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DE-tan_desktop_banner.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/D-TAN_SCRUB_MOBILE_banner.jpg",
-            "collection_handle": "paytm-flat-400-off"
-          }
-        },
-        "a224c502-f6dd-449b-9851-0323713ff2d4": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02_79a5c446-2caf-4c28-811f-b36c934c6722.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01_4ca43641-583d-4487-a778-e3a41db7b968.jpg",
-            "collection_handle": "phonepe-flat-400-off"
-          }
-        },
-        "c0529620-f32d-4d51-b4d1-61bc608923fd": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_FLAT_300-01.jpg",
-            "collection_handle": "flat-300-off-phonepe"
-          }
-        },
-        "cd1def4f-3372-48b8-9243-a308be778a94": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Short_banner_desktop_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Short_banner_mobile_1.jpg",
-            "collection_handle": "gpay-b2g2"
-          }
-        },
-        "c3847c8b-b98d-4d16-a83f-a048462d953e": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/FTGPAY_WEBSITE.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/FTGPAY_MOBILE.jpg",
-            "collection_handle": "buy-1-get-1-free-gpay"
-          }
-        },
-        "3dc3c72d-6f4a-4601-a52a-38f7fd83601a": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_B2G2-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_B2G2-01.jpg",
-            "collection_handle": "paytm-b2g2"
-          }
-        },
-        "201e8bcf-2465-4228-81fe-317ca78d387a": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B2G2-02_1a3df152-ceda-463e-be9f-28c3e96595ee.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B2G2-01_b4a7e6f3-9403-49f5-9754-3f43c8558c50.jpg",
-            "collection_handle": "phonepe-b2g2"
-          }
-        },
-        "d5a2ffe9-14a6-4651-be91-d3d378b6b7ee": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B1G1-02.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B1G1-01.jpg",
-            "collection_handle": "buy-1-get-1-phonepe"
-          }
-        },
-        "5b7203a3-1364-4353-873a-23c9957991ce": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Banners_Home_page_desktop_copy_15_7e34f545-8e4a-4e6d-b92a-099daa4b5092.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Banners_Home_page_Mobile_copy_12_3482fc40-d12e-44c3-8b09-79d4f2dca05b.jpg",
-            "collection_handle": "new-sale"
-          }
-        },
-        "b5f18b27-d1ac-4ced-9f37-fcabc8d57992": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/website.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/mobile_65.jpg",
-            "collection_handle": "midnight-sale"
-          }
-        },
-        "1ed0757d-1e6a-4d93-86b6-96a3aaeee593": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
-            "collection_handle": "birthday-special-sale"
-          }
-        },
-        "35952e72-8bd4-4162-8485-8e4d3072771e": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP-1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile-without-CTA.jpg",
-            "collection_handle": "birthday-sale"
-          }
-        },
-        "image_hHzUFn": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_8.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_10.jpg",
-            "collection_handle": "secret-party"
-          }
-        },
-        "image_DcEBMA": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Artboard_1.png",
-            "image_1_mobile": "shopify:\/\/shop_images\/Artboard_3.png",
-            "collection_handle": "affiliate-vday-sale"
-          }
-        },
-        "image_eFYPxy": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_19.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_21.jpg",
-            "collection_handle": "cashkaro-offer-1"
-          }
-        },
-        "image_8rkW9n": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_20.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_22.jpg",
-            "collection_handle": "cashkaro-buy-2-at-799"
-          }
-        },
-        "image_8XaUmT": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/SUNSCREEN-DESKTOP.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/SUNSCREEN-MOBILE.jpg",
-            "collection_handle": "phonepe-sunscreen-offer"
-          }
-        },
-        "image_T889YE": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_f44f183f-7e2b-4b88-bbfc-8473b59c301b.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_19d4ad90-2134-4f7f-82ec-235815eaef8c.jpg",
-            "collection_handle": "affiliate-slash-sale"
-          }
-        },
-        "image_AiRhnc": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_38.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_39.jpg",
-            "collection_handle": "partnerships-slash-sale"
-          }
-        },
-        "image_jyAbkd": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_39.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_40.jpg",
-            "collection_handle": "gpay-offer-free-sunscreen"
-          }
-        },
-        "image_Ui8z8E": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Media.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Media_1.jpg",
-            "collection_handle": "adnetwork-exclusive-offer"
-          }
-        },
-        "image_dQPKpa": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_19.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_21.jpg",
-            "collection_handle": "admittad-199-offer"
-          }
-        },
-        "image_xRxqVx": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_53.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_53.jpg",
-            "collection_handle": "zomato-flat-400-offer"
-          }
-        },
-        "image_699Jnh": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/Early_Access_Web_1.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/Early_access_banners-01_1.jpg",
-            "image_2_desktop": "shopify:\/\/shop_images\/De-tan_scrub-02_1.jpg",
-            "image_2_mobile": "shopify:\/\/shop_images\/De-tan_scrub-01.jpg",
-            "collection_handle": "new-special-sale"
-          }
-        },
-        "image_C3wNkH": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02_3d509756-5e18-45a0-bbbe-fadab1b6a894.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01_625c7846-5f7f-4a3b-98e1-8adc96b15af7.jpg",
-            "collection_handle": "shop-gpay-b2g2"
-          }
-        },
-        "image_dFPLTm": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_19.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_21.jpg",
-            "collection_handle": "adnetwork-bestsellers-199-offer"
-          }
-        },
-        "image_kFzf3z": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_62.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_63.jpg",
-            "collection_handle": "clovia-flat-400-offer"
-          }
-        },
-        "image_a6Wbjh": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_56.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
-            "collection_handle": "toners"
-          }
-        },
-        "image_cqQgUp": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/CRED-MONSOON-DESKTOP.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/CRED-MONSOON-MOBILE_VERSION.jpg",
-            "collection_handle": "cred-b2-749"
-          }
-        },
-        "6d8021f0-4407-4ee6-8b3f-f473639bd67a": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
-            "collection_handle": "frontpage"
-          }
-        },
-        "e4200243-e18e-45ee-a588-07aa2db63a66": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
-            "collection_handle": "new-exclusive-special"
-          }
-        },
-        "7bff029f-c157-4639-b953-a7fab9d4bdeb": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
-            "collection_handle": "exclusive-sale"
-          }
-        },
-        "image_xHTBA4": {
-          "type": "image",
-          "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
-            "collection_handle": "secret-flash-sale"
-          }
-        }
-      },
-      "block_order": [
-        "f9965015-912a-4ab1-a6b9-60456f64c9c9",
-        "56f1ef1a-a3ff-4b88-b644-a461bad11dc4",
-        "b0000dba-a032-4f67-899a-dce9c6aca32b",
-        "92025d9e-d9bf-46d0-882d-5d1d52195879",
-        "b6933a21-3e72-4d6f-b576-7f5ec9b463b3",
-        "0473c907-2e07-4fab-a914-5d726fd04822",
-        "52070fc7-449e-4643-b57f-57d8f07b467c",
-        "293424e1-fafd-4849-96cf-d45d71201f14",
-        "a6f55990-39a5-4ae9-957d-ba08788864d2",
-        "image_rUk9y3",
-        "387e416d-e96a-42bf-b73f-10452683ddf3",
-        "image_HHVRJP",
-        "image_AGT3Fx",
-        "5957fc45-38e1-4660-b466-c79aa595062a",
-        "26003c4f-26c3-4086-9cb0-b7c059dd74a7",
-        "b12ee519-3c23-4b62-b07e-45bb584fce0b",
-        "e370bd45-9005-4f18-9d4f-a36cfaa962f6",
-        "a224c502-f6dd-449b-9851-0323713ff2d4",
-        "c0529620-f32d-4d51-b4d1-61bc608923fd",
-        "cd1def4f-3372-48b8-9243-a308be778a94",
-        "c3847c8b-b98d-4d16-a83f-a048462d953e",
-        "3dc3c72d-6f4a-4601-a52a-38f7fd83601a",
-        "201e8bcf-2465-4228-81fe-317ca78d387a",
-        "d5a2ffe9-14a6-4651-be91-d3d378b6b7ee",
-        "5b7203a3-1364-4353-873a-23c9957991ce",
-        "b5f18b27-d1ac-4ced-9f37-fcabc8d57992",
-        "1ed0757d-1e6a-4d93-86b6-96a3aaeee593",
-        "35952e72-8bd4-4162-8485-8e4d3072771e",
-        "image_hHzUFn",
-        "image_DcEBMA",
-        "image_eFYPxy",
-        "image_8rkW9n",
-        "image_8XaUmT",
-        "image_T889YE",
-        "image_AiRhnc",
-        "image_jyAbkd",
-        "image_Ui8z8E",
-        "image_dQPKpa",
-        "image_xRxqVx",
-        "image_699Jnh",
-        "image_C3wNkH",
-        "image_dFPLTm",
-        "image_kFzf3z",
-        "image_a6Wbjh",
-        "image_cqQgUp",
-        "6d8021f0-4407-4ee6-8b3f-f473639bd67a",
-        "e4200243-e18e-45ee-a588-07aa2db63a66",
-        "7bff029f-c157-4639-b953-a7fab9d4bdeb",
-        "image_xHTBA4"
-      ],
-      "settings": {
-        "slider_height_mobile": "100%"
-      }
-    },
-    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e": {
-      "type": "collection_best_seller",
-      "settings": {
-        "best_seller_section_heading": "Featured Products"
-      }
-    },
-    "c3efaaee-55b3-4a51-93e2-4de6760e9eb4": {
-      "type": "collection-image-banner",
-      "blocks": {
-        "8f49b14c-bce1-4e1d-9511-a892b0d7d219": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
-            "collection_handle": "acne-collection"
-          }
-        },
-        "8ed0aba5-abdd-4669-8797-afb5bee07b30": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_education.jpg",
-            "collection_handle": "blemish-prone"
-          }
-        },
-        "f685fcb0-5ed0-4f13-809c-8e9c5146d0a3": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Eye_Mask_Free_Sleek_Banner-04.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Eye_Mask_Free_Sleek_Banner-03.jpg",
-            "collection_handle": "paytm-flat-400-off"
-          }
-        },
-        "image_bY63Te": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Secret_Flash_Sale_Web.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Secret_Flash_Sale_Mob.jpg",
-            "collection_handle": "secret-flash-sale"
-          }
-        },
-        "image_MzVJCd": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/habit-Journal-_892X299_de9df7ea-64df-46b2-b887-d6fe68de7945.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/habit-Journal-_1500X502_19984b8b-e1d2-4c6b-ab9c-fc70cbc438de.jpg",
-            "collection_handle": "secret-party"
-          }
-        },
-        "image_mDrPfz": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/EYE-MASK-_1500X500_3ff65d13-ec11-4829-ba26-35671b4d68bd.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/EYE-MASK-_892X299_d1348964-7444-4920-9d96-34942b24851d.jpg",
-            "collection_handle": "gpay-free-eye-mask"
-          }
-        },
-        "image_Fjzxj9": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_12.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_14_b6191aa6-dfa2-4023-b337-8eb56ee30b9a.jpg",
-            "collection_handle": "frontpage"
-          }
-        },
-        "image_Xxdnpj": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/SLEEK_BANNER_2-01.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/SLEEK_BANNER_2-02.jpg",
-            "collection_handle": ""
-          }
-        },
-        "image_HmryPz": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_10.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_12.jpg",
-            "collection_handle": "affiliate-secret-sale"
-          }
-        },
-        "image_6xYcN7": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_1_1.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_1_2.jpg",
-            "collection_handle": "affiliate-early-access"
-          }
-        },
-        "image_6nNydB": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_sleek_banner_Web_4.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Lip_Mask_B1G1_Lip_Mask_Sleek_banner_mobile_1.jpg",
-            "collection_handle": ""
-          }
-        },
-        "image_nE8V4k": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Sleek_banner_website.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Sleek_banner_mobile.jpg",
-            "collection_handle": "frontpage"
-          }
-        },
-        "image_Kmgt76": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
-            "collection_handle": "frontpage"
-          }
-        },
-        "image_y7LGnz": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
-            "collection_handle": "new-exclusive-special"
-          }
-        },
-        "image_ijCda9": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
-            "collection_handle": "exclusive-sale"
-          }
-        },
-        "image_bYRpxE": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_73.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOBILE_72.jpg",
-            "collection_handle": "secret-flash-sale"
-          }
-        }
-      },
-      "block_order": [
-        "8f49b14c-bce1-4e1d-9511-a892b0d7d219",
-        "8ed0aba5-abdd-4669-8797-afb5bee07b30",
-        "f685fcb0-5ed0-4f13-809c-8e9c5146d0a3",
-        "image_bY63Te",
-        "image_MzVJCd",
-        "image_mDrPfz",
-        "image_Fjzxj9",
-        "image_Xxdnpj",
-        "image_HmryPz",
-        "image_6xYcN7",
-        "image_6nNydB",
-        "image_nE8V4k",
-        "image_Kmgt76",
-        "image_y7LGnz",
-        "image_ijCda9",
-        "image_bYRpxE"
-      ],
-      "settings": {
-      }
-    },
-    "collection_image_banner_VUnneE": {
-      "type": "collection-image-banner",
-      "blocks": {
-        "image_FM3zxY": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_website.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/OGM_VItc_sleek_banner_Mobile.jpg",
-            "collection_handle": "frontpage"
-          }
-        }
-      },
-      "block_order": [
-        "image_FM3zxY"
-      ],
-      "disabled": true,
-      "settings": {
-      }
-    },
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf": {
       "type": "featured_collection_owl",
       "disabled": true,
@@ -977,7 +316,7 @@
         "single-double": true,
         "acne-control": true,
         "anti-ageing": true,
-        "affiliate-secret-sale": false,
+        "affiliate-secret-sale": true,
         "best-selling": false,
         "bestselling-combos": false,
         "cleanser-routines": false,
@@ -1038,243 +377,374 @@
         "pd_mb": ""
       }
     },
-    "24356143-4ff5-4ebf-aef7-e0a21d813634": {
-      "type": "collection-image-banner",
+    "6b74da85-3b73-4c32-ad47-62ea04675904": {
+      "type": "slideshow-collection",
       "blocks": {
-        "image_iLcaQy": {
+        "image_xjWFnn": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_56.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/without_CTA.jpg",
-            "collection_handle": "toners"
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_72.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
+            "collection_handle": "products"
           }
         },
-        "b1644dee-5995-46e7-abfc-1e2ed8d5e4f7": {
+        "image_LRQy7A": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review2.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review1.jpg",
-            "collection_handle": "acne-collection"
+            "image_1_desktop": "shopify:\/\/shop_images\/banners_new30-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/banners_new30-01.jpg",
+            "collection_handle": "new30"
           }
         },
-        "512acbe4-1c45-49f5-8c8f-9652d34f81f9": {
+        "896ab793-fd74-47fd-999e-0520b9c09b47": {
           "type": "image",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review2.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Acne_trio_collection_page_v1_review1.jpg",
-            "collection_handle": "blemish-prone"
+            "image_1_desktop": "shopify:\/\/shop_images\/short_banner_Desktop_1.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/short_banner-02.png",
+            "collection_handle": "shop-1"
           }
         },
-        "a38f36c3-9314-4b18-b1f2-222f9c6190d3": {
+        "image_UibMeG": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Love-bomb-desktop-_1099_1.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/LOVE-BOMB-MOBILE-_1099_1.jpg",
-            "collection_handle": "frontpage"
+            "image_1_desktop": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-05_3.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2G3_april_slashprice_web_banners-06_3.jpg",
+            "collection_handle": "shop-2"
           }
         },
-        "image_ieFrxn": {
+        "image_GetAYE": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Love-bomb-desktop-_1099_1.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/LOVE-BOMB-MOBILE-_1099_1.jpg",
-            "collection_handle": "exclusive-sale"
+            "image_1_desktop": "shopify:\/\/shop_images\/1800x606_8c9af17f-aa0e-4605-8c7d-be8bee1c6433.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/3176x1979.jpg",
+            "collection_handle": "shop-3"
+          }
+        },
+        "cd98f790-df57-40d4-8b04-7e959afda723": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01.jpg",
+            "collection_handle": "google-pay-b2g2-1"
+          }
+        },
+        "1aa2a5f0-e416-4022-a189-f89b7e1237fb": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-02.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B1G1_BANNER-01.jpg",
+            "collection_handle": "buy-1-get-1-free-gpay-1"
+          }
+        },
+        "5a5e4eaf-e7bf-431c-b02d-534132ded685": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flat-400-off-gpay"
+          }
+        },
+        "bcf56be1-ad2a-4624-b6ea-95f1504c5199": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Desktop_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Mobile_1.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/Desktop-_2.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/Mobile_2.jpg",
+            "collection_handle": "new-frontpage"
+          }
+        },
+        "3e054972-6a13-4eda-9144-1cacc230d754": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_21.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_23.jpg",
+            "collection_handle": "flat-200-off-gpay"
+          }
+        },
+        "040dca29-acdb-4004-909b-5fe9000b3f52": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PAYTM_FLAT_200-02.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/PAYTM_FLAT_200-01.png",
+            "collection_handle": "paytm-flat-200"
+          }
+        },
+        "image_N3EabB": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/midmight_sale_banners-01-01.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/midmight_sale_banners-01-02.jpg",
+            "collection_handle": "offer-b1g1"
+          }
+        },
+        "image_EzERLW": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DEKSTOP.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_35.jpg",
+            "collection_handle": "products-1"
+          }
+        },
+        "image_gpitR8": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/1800X606_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/767X464_1.jpg",
+            "collection_handle": "b2g2-detan"
+          }
+        },
+        "image_KehdyY": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Last-chance_DESKTOP-banner.gif",
+            "image_1_mobile": "shopify:\/\/shop_images\/last-chance-MOBILE-banner.gif",
+            "image_2_desktop": "shopify:\/\/shop_images\/Last-chance-routine-banner.gif",
+            "image_2_mobile": "shopify:\/\/shop_images\/Last-chanceROUTINE-BANNER_Mobile.gif",
+            "collection_handle": "new-exclusive-special-1"
+          }
+        },
+        "image_jQBqGm": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/MONSOON_BANNER_MOBILE.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MONSOON_BANNER_MOBILE.jpg",
+            "collection_handle": "monsoon-offer"
+          }
+        },
+        "image_fRfLeA": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Sleek_banner_adc62361-d2ce-4c5e-af84-dbe1da68abca.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Slik_banner-03.jpg",
+            "collection_handle": "monsoon-offer-1"
+          }
+        },
+        "image_AjAedA": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ef88f819-4b8f-4406-94c0-94d283b959a9.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_79906ff3-1164-4f8a-8326-1eb4c65e674f.jpg",
+            "collection_handle": "products-shop-1"
+          }
+        },
+        "image_8T9LR7": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_ZOMATO_B2G2.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/MOBILE_ZOMATO_B2G2.jpg",
+            "collection_handle": "zomato-b2g2"
+          }
+        },
+        "image_mbLQPf": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Phonepe_b1g1_website_banner.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Phonepe_b1g1_mobile_banner.jpg",
+            "collection_handle": "buy-1-get-1-phonepe"
+          }
+        },
+        "image_j4rAdE": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/Phonepe_b1g1_website_banner_FOXPPFB1G1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Phonepe_b1g1_mobile_bannerFOXPPFB1G1.jpg",
+            "collection_handle": "buy-1-get-1-phonepe-f"
+          }
+        },
+        "image_diC8eN": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "zomato-buy-1-get-1"
+          }
+        },
+        "image_Mi7646": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flipkart-buy-1-get-1"
+          }
+        },
+        "image_639wHV": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "flipkart-buy-2-get-2"
+          }
+        },
+        "image_mwg7HA": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "gpay-buy-2-get-4"
+          }
+        },
+        "image_VcXYcX": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "cred-buy-1-get-1-lip-mask"
+          }
+        },
+        "image_tQzyAP": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/PHONEPAY_B2G2-02_1a3df152-ceda-463e-be9f-28c3e96595ee.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/PHONEPAY_B2G2-01_b4a7e6f3-9403-49f5-9754-3f43c8558c50.jpg",
+            "collection_handle": "phonepe-b2g2"
+          }
+        },
+        "image_88kBRm": {
+          "type": "image",
+          "settings": {
+            "collection_handle": "phonepe-b2g2-f"
           }
         }
       },
       "block_order": [
-        "image_iLcaQy",
-        "b1644dee-5995-46e7-abfc-1e2ed8d5e4f7",
-        "512acbe4-1c45-49f5-8c8f-9652d34f81f9",
-        "a38f36c3-9314-4b18-b1f2-222f9c6190d3",
-        "image_ieFrxn"
+        "image_xjWFnn",
+        "image_LRQy7A",
+        "896ab793-fd74-47fd-999e-0520b9c09b47",
+        "image_UibMeG",
+        "image_GetAYE",
+        "cd98f790-df57-40d4-8b04-7e959afda723",
+        "1aa2a5f0-e416-4022-a189-f89b7e1237fb",
+        "5a5e4eaf-e7bf-431c-b02d-534132ded685",
+        "bcf56be1-ad2a-4624-b6ea-95f1504c5199",
+        "3e054972-6a13-4eda-9144-1cacc230d754",
+        "040dca29-acdb-4004-909b-5fe9000b3f52",
+        "image_N3EabB",
+        "image_EzERLW",
+        "image_gpitR8",
+        "image_KehdyY",
+        "image_jQBqGm",
+        "image_fRfLeA",
+        "image_AjAedA",
+        "image_8T9LR7",
+        "image_mbLQPf",
+        "image_j4rAdE",
+        "image_diC8eN",
+        "image_Mi7646",
+        "image_639wHV",
+        "image_mwg7HA",
+        "image_VcXYcX",
+        "image_tQzyAP",
+        "image_88kBRm"
       ],
       "settings": {
+        "slider_height_mobile": "100%"
       }
     },
-    "accordion_JjiJhp": {
-      "type": "accordion",
+    "slideshow_collection_t8cPwb": {
+      "type": "slideshow-collection",
       "blocks": {
-        "accor_item_M7ifWP": {
-          "type": "accor_item",
+        "image_8CQCi6": {
+          "type": "image",
           "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq1.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq1content.value }}<\/p>"
-          }
-        },
-        "accor_item_WPFNw7": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq2.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq2content.value }}<\/p>"
-          }
-        },
-        "accor_item_ggKLtD": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq3.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq3content.value }}<\/p>"
-          }
-        },
-        "accor_item_3CaJTi": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq4.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq4content.value }}<\/p>"
-          }
-        },
-        "accor_item_7zQ3TL": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq5.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq5content.value }}<\/p>"
-          }
-        },
-        "accor_item_pxnETL": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq6.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq6content.value }}<\/p>"
-          }
-        },
-        "accor_item_jq6Wdd": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq7.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq7content.value }}<\/p>"
-          }
-        },
-        "accor_item_gtKfYh": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq8.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq8content.value }}<\/p>"
-          }
-        },
-        "accor_item_HYXmzF": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq9.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq9content.value }}<\/p>"
-          }
-        },
-        "accor_item_UYFakm": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq10.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq10content.value }}<\/p>"
-          }
-        },
-        "accor_item_8bGdbt": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq11.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq11content.value }}<\/p>"
-          }
-        },
-        "accor_item_h7Ttqy": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq12.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq12content.value }}<\/p>"
-          }
-        },
-        "accor_item_FpfTwU": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq13.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq13content.value }}<\/p>"
-          }
-        },
-        "accor_item_yFUpFF": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq14.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq14content.value }}<\/p>"
-          }
-        },
-        "accor_item_qdwdYq": {
-          "type": "accor_item",
-          "settings": {
-            "icon": "none",
-            "title": "{{ collection.metafields.custom.faq15.value }}",
-            "content": "<p>{{ collection.metafields.custom.faq15content.value }}<\/p>"
+            "image_1_desktop": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-02_3d509756-5e18-45a0-bbbe-fadab1b6a894.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/GPAY_B2G2_BANNER-01_625c7846-5f7f-4a3b-98e1-8adc96b15af7.jpg",
+            "collection_handle": "shop-gpay-b2g2"
           }
         }
       },
       "block_order": [
-        "accor_item_M7ifWP",
-        "accor_item_WPFNw7",
-        "accor_item_ggKLtD",
-        "accor_item_3CaJTi",
-        "accor_item_7zQ3TL",
-        "accor_item_pxnETL",
-        "accor_item_jq6Wdd",
-        "accor_item_gtKfYh",
-        "accor_item_HYXmzF",
-        "accor_item_UYFakm",
-        "accor_item_8bGdbt",
-        "accor_item_h7Ttqy",
-        "accor_item_FpfTwU",
-        "accor_item_yFUpFF",
-        "accor_item_qdwdYq"
+        "image_8CQCi6"
       ],
       "settings": {
-        "design_heading": "1",
-        "heading_align": "t4s-text-start",
-        "top_heading": "FAQs",
-        "icon_heading": "las la-gem",
-        "top_subheading": "",
-        "tophead_mb": 30,
-        "accor_des": "1",
-        "title_cl": "#222222",
-        "bg_title_cl": "#f6f6f8",
-        "title_active_cl": "#000000",
-        "bg_title_active_cl": "#f6f6f8",
-        "content_cl": "#878787",
-        "bg_content_cl": "#ffffff",
-        "content_align": "t4s-text-start",
-        "auto_active": true,
-        "layout": "t4s-container-wrap",
-        "custom_width": 1000,
-        "cl_bg": "",
-        "cl_bg_gradient": "",
-        "mg": ",,50px,",
-        "pd": "",
-        "mg_mb": ",,30px,",
-        "pd_mb": "",
-        "use_cus_css": false,
-        "code_cus_css": ""
+        "slider_height_mobile": "100%"
       }
     },
-    "read_more_text_AbNdG8": {
-      "type": "read-more-text",
+    "c91beaae-dd54-4644-bf80-185c464fd99c": {
+      "type": "custom-roundscroll",
+      "blocks": {
+        "2c6bc074-5f62-4c76-97a2-a37b159012b2": {
+          "type": "text",
+          "settings": {
+            "collekt": "serums-and-treatments",
+            "txter": "Moisturizers",
+            "mdlpik": "shopify:\/\/shop_images\/2_f63f3bba-b43c-497b-abc8-99033661ba5e.png",
+            "smlpik": "shopify:\/\/shop_images\/2_f63f3bba-b43c-497b-abc8-99033661ba5e.png",
+            "grid-heading": "Moisturisers",
+            "grid-subheading": "Protected skin barrier & a boost of hydration"
+          }
+        },
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a": {
+          "type": "text",
+          "settings": {
+            "collekt": "facewash-cleanser",
+            "txter": "Cleansers",
+            "mdlpik": "shopify:\/\/shop_images\/5_02a4cc9b-abca-46eb-866b-f5c9b4af20a8.png",
+            "smlpik": "shopify:\/\/shop_images\/5_02a4cc9b-abca-46eb-866b-f5c9b4af20a8.png",
+            "grid-heading": "Facewash & Cleansers",
+            "grid-subheading": "Gets rid of dirt, grime, and excess oil build-up"
+          }
+        },
+        "41032556-7266-498e-8778-32e63d300c6d": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-serums-and-treatments",
+            "txter": "Serums",
+            "mdlpik": "shopify:\/\/shop_images\/1_a5c31f83-53c8-4081-b5fc-85ffc537d376.png",
+            "smlpik": "shopify:\/\/shop_images\/1_a5c31f83-53c8-4081-b5fc-85ffc537d376.png",
+            "grid-heading": "Serums and Treatments",
+            "grid-subheading": "Targeted solutions for all skin concerns"
+          }
+        },
+        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-sunscreens",
+            "txter": "Sunscreens",
+            "mdlpik": "shopify:\/\/shop_images\/4_66308176-b7cf-4d13-8980-51d213801066.png",
+            "smlpik": "shopify:\/\/shop_images\/4_66308176-b7cf-4d13-8980-51d213801066.png",
+            "grid-heading": "Sunscreens",
+            "grid-subheading": "Ultimate protection from UVA & UVB rays"
+          }
+        },
+        "text_BXQdrR": {
+          "type": "text",
+          "settings": {
+            "collekt": "sp-masks",
+            "txter": "Masks",
+            "mdlpik": "shopify:\/\/shop_images\/3_2e5bf331-25a6-48b0-bec5-a34d44fdeec5.png",
+            "smlpik": "shopify:\/\/shop_images\/3_2e5bf331-25a6-48b0-bec5-a34d44fdeec5.png",
+            "grid-heading": "Masks",
+            "grid-subheading": "High-powered masks to deliver instant benefits"
+          }
+        },
+        "text_GEPPAV": {
+          "type": "text",
+          "settings": {
+            "collekt": "tb-toners",
+            "txter": "Toners",
+            "mdlpik": "shopify:\/\/shop_images\/6.png",
+            "smlpik": "shopify:\/\/shop_images\/6.png",
+            "grid-heading": "Toners",
+            "grid-subheading": "Tone it up for that glowing skin! "
+          }
+        },
+        "text_qnPjLP": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "collekt": "tb-bodycare",
+            "txter": "Bodycare",
+            "mdlpik": "shopify:\/\/shop_images\/BODY-LOTION.png",
+            "smlpik": "shopify:\/\/shop_images\/BODY-LOTION.png",
+            "grid-heading": "Bodycare",
+            "grid-subheading": ""
+          }
+        }
+      },
+      "block_order": [
+        "2c6bc074-5f62-4c76-97a2-a37b159012b2",
+        "fef43bcb-d73b-4c7f-8f0d-082414be522a",
+        "41032556-7266-498e-8778-32e63d300c6d",
+        "e83bb14a-ca74-440d-8a0d-6a9d0d5a9c96",
+        "text_BXQdrR",
+        "text_GEPPAV",
+        "text_qnPjLP"
+      ],
       "settings": {
+        "heading": ""
       }
     }
   },
   "order": [
-    "timer_QgwT4a",
-    "8a75fd64-3ace-4ae7-8966-dfa4df542871",
-    "fde7dfaf-6042-4f71-b8f7-efdb65e3629e",
-    "c3efaaee-55b3-4a51-93e2-4de6760e9eb4",
-    "collection_image_banner_VUnneE",
     "7b83345a-3fd0-4c32-a0a1-eb800e29bcaf",
     "top",
     "heading_template",
@@ -1282,8 +752,8 @@
     "168067683513ea2f90",
     "sidebar",
     "main",
-    "24356143-4ff5-4ebf-aef7-e0a21d813634",
-    "accordion_JjiJhp",
-    "read_more_text_AbNdG8"
+    "6b74da85-3b73-4c32-ad47-62ea04675904",
+    "slideshow_collection_t8cPwb",
+    "c91beaae-dd54-4644-bf80-185c464fd99c"
   ]
 }
