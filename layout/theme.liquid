@@ -2836,6 +2836,28 @@ t4sp-theme t4s-wrapper__{{settings.general_layout}} rtl_{{isRTL}} swatch_color_s
           body.secretsale .saleBar.secretsale{
             display:block !important;
           }
+         #t4s-mini_cart .t4s-drawer__bottom #custom-cart-value {
+           background-color: #ffe1d7;
+         }
+         .saleBar {
+           visibility: hidden;
+           position: relative;
+         }
+         .saleBar:after {
+           visibility: visible;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           content: "Add 2 Products to the cart and Use Code: B1G1 at checkout to get 1 Product Free";
+           font-size: 12px;
+           width: max-content;     
+           line-height: 1.2;
+           color: #000;
+           font-weight: 400;
+           width: 100%;
+           padding: 15px;
+         }
        {%endif%}
 
        {% if collection.url contains 'new-exclusive-special' %}
