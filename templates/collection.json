@@ -111,16 +111,16 @@
         "image_rUk9y3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WTFox_sale-_Website_banner_without_code_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFox_sale-_Mobile_banner_without_code_copy.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
             "collection_handle": "affiliate-secret-sale"
           }
         },
         "387e416d-e96a-42bf-b73f-10452683ddf3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/WTFox_sale-_Website_banner_without_code_copy.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFox_sale-_Mobile_banner_without_code_copy.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
             "collection_handle": "affiliate-early-access"
           }
         },
