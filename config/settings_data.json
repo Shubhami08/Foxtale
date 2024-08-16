@@ -158,12 +158,15 @@
     "6_landing_prod_success_message": "Free Jewelry Box unlocked! Use code: <strong>[[CODE]]<\/strong> at checkout.",
     "6_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to unlock <strong>[[CODE]]<\/strong>",
     "7_landing_page_list": [
-
+      "new-exclusive-special"
     ],
-    "7_landing_cart_ribbon_discount_code": "B1G1ZOM20B-874",
+    "7_l_trigger_price_1": 1,
+    "7_l_gift_product_1": "body-wash-floral-perfume",
+    "7_l_free_gift_v1_trigger_qty_1": 4,
+    "7_landing_cart_ribbon_discount_code": "WTFB1G1",
     "7_landing_prod_success_count": 2,
     "7_landing_prod_success_message": "Use Code: <strong>[[CODE]]<\/strong> at the checkout!",
-    "7_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy 1 Get 1<\/strong>",
+    "7_landing_prod_before_success_message": "Add <strong>[[PRODUCT]]<\/strong> more product to avail <strong>Buy 1 Get 1.<\/strong>",
     "8_landing_page_list": [
 
     ],
