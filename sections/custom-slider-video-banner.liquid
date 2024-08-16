@@ -1,0 +1,232 @@
+<div class="parent-slider">
+  
+{% for block in section.blocks %}
+<div class="hp-video-section">
+  {% if  block.settings.desktop_video != blank %}
+  {{ block.settings.desktop_video | video_tag: loop: true, autoplay: true, muted: true, controls: false, class: 'desktop-video' , id: 'my-video' }}
+  {% else %}
+  <img src="{{ block.settings.desktop_gif | img_url:'master' }}" alt="" class="desktop-video" id='my-video' width='100%;'>
+  {% endif %}
+  {% if block.settings.mobile_video != blank %}
+  {{ block.settings.mobile_video | video_tag: loop: true, autoplay: true, muted: true, controls: false, class: 'mobile-video', id: 'my-video' }} 
+  {% else %}
+  <img src="{{ block.settings.mobile_gif | img_url:'master' }}" alt="" class="mobile-video" id='my-video' width='100%;'>
+  {% endif %}
+
+  {% unless block.settings.button_text == blank %}
+  <a href="{{ block.settings.button_url }}" class="explore-now">{{ block.settings.button_text }}</a>
+  {% endunless %}
+
+</div> 
+{% endfor %}
+
+</div>
+
+
+<style>
+
+  body.new-index-template .breadcrumbs {
+    display: none !important;
+  }
+
+  body.skincare-template .breadcrumbs {
+    display: none !important;
+  }
+
+  body.template-page .breadcrumbs {
+    display: none !important;
+  }
+  
+  
+.hp-video-section {
+  position: relative;
+}
+
+.hp-video-section video {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.hp-video-section .desktop-video {
+  display: block;
+}
+
+.hp-video-section .mobile-video {
+  display: none;
+}
+
+.hp-video-section .explore-now {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 23px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius : 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing : 1.5px;
+}
+  @media screen and (max-width: 1024px) {
+    main#MainContent {
+        margin-top: -60px;
+    }
+    body.template-page #MainContent {
+        margin-top: 0 !important;
+    }
+    .t4s-header__wrapper {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .t4s-header__wrapper .t4s-container {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    
+  }
+
+@media screen and (max-width: 767px) {
+  .hp-video-section .desktop-video {
+    display: none;
+  }
+  .hp-video-section .mobile-video {
+    display: block;
+  }
+}
+
+  @media screen and (min-width: 767px){
+    .hp-video-section .explore-now {
+      padding : 15px 30px;
+      letter-spacing : 3px;
+    }
+  }
+  
+</style>
+
+<style>
+.parent-slider {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    display: flex;
+    overflow-x: auto; /* Allow scrolling */
+    scroll-snap-type: x mandatory; /* Ensures the snapping behavior */
+    scroll-behavior: smooth; /* Smooth transition between slides */
+}
+
+.parent-slider::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.hp-video-section {
+    scroll-snap-align: start; /* Aligns each slide at the start */
+    flex: 0 0 100%; /* Ensures each slide takes up 100% of the viewport width */
+    user-select: none; /* Prevent text selection during dragging */
+    -webkit-user-drag: none; /* Disable default dragging in WebKit browsers */
+}
+
+
+</style>
+
+<script>
+  $(document).ready(function() {
+      var isDragging = false;
+      var startX, scrollLeft;
+
+      // On mouse down, start the dragging
+      $('.parent-slider .hp-video-section').on('mousedown', function(e) {
+          isDragging = true;
+          startX = e.pageX - $(this).offset().left;
+          scrollLeft = $(this).parent().scrollLeft(); // Scroll the parent element
+          $(this).css('cursor', 'grabbing');
+          e.preventDefault(); // Prevent text selection during drag
+      });
+
+      // On mouse up, stop the dragging
+      $(document).on('mouseup', function() {
+          isDragging = false;
+          $('.parent-slider .hp-video-section').css('cursor', 'grab');
+      });
+
+      // Handle the mouse move event for dragging
+      $('.parent-slider .hp-video-section').on('mousemove', function(e) {
+          if (!isDragging) return;
+          var x = e.pageX - $(this).offset().left;
+          var walk = (x - startX) * 2; // Adjust scroll speed (2x in this case)
+          $(this).parent().scrollLeft(scrollLeft - walk); // Scroll the parent element
+      });
+
+      // Stop dragging when the mouse leaves the document
+      $(document).on('mouseleave', function() {
+          if (isDragging) {
+              isDragging = false;
+              $('.parent-slider .hp-video-section').css('cursor', 'grab');
+          }
+      });
+
+      // Allow normal scrolling (no need to disable touchmove or any default scroll behaviors)
+      $('.parent-slider').on('scroll', function() {
+          // Optional: You can add custom behavior here if needed when the user scrolls manually
+      });
+  });
+</script>
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Video Section Custom",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Slider",
+      "name": "Slide",
+      "settings": [
+    {
+      "type": "video",
+      "id": "desktop_video",
+      "label": "Desktop Video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "Mobile Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_gif",
+      "label": "Desktop GIF"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_gif",
+      "label": "Mobile GIF"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    }
+  ],
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage video banner Custom"
+    }
+  ]
+}
+{% endschema %}
