@@ -566,6 +566,8 @@
           "type": "image",
           "disabled": true,
           "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/DESKTOP_10.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/MOBILE_12.jpg",
             "collection_handle": "affiliate-secret-sale"
           }
         },
