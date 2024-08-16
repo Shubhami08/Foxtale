@@ -11,6 +11,7 @@
   "sections": {
     "heading": {
       "type": "heading-template",
+      "disabled": true,
       "settings": {
         "use_specify_image": true,
         "parallax": false,
@@ -30,6 +31,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "layout": "t4s-container-wrap",
         "cl_bg": "",
@@ -65,11 +67,37 @@
         "sidebar_bdr": 5,
         "sidebar_pd": 10
       }
+    },
+    "custom_slider_video_banner_FKFdrK": {
+      "type": "custom-slider-video-banner",
+      "blocks": {
+        "slider_AXncJz": {
+          "type": "Slider",
+          "settings": {
+            "desktop_gif": "shopify:\/\/shop_images\/EYE_CREAME_PRE_LAUNCH-01.jpg",
+            "mobile_gif": "shopify:\/\/shop_images\/EYE_CREAME_PRE_LAUNCH-02.jpg",
+            "button_url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_AXncJz"
+      ],
+      "settings": {
+      }
+    },
+    "new_launch_form_8eYVyg": {
+      "type": "new-launch-form",
+      "settings": {
+      }
     }
   },
   "order": [
     "heading",
     "main",
-    "sidebar-page"
+    "sidebar-page",
+    "custom_slider_video_banner_FKFdrK",
+    "new_launch_form_8eYVyg"
   ]
 }
