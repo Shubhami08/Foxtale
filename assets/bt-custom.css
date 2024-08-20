@@ -5763,7 +5763,7 @@ footer .widget .widget-title:after {
 
 .product-info .product-title,
 .product-info .fx-tags-shop {
-  min-height: 20px !important;
+  min-height: 15px !important;
   padding: 0 8px;
   overflow: hidden;
   text-overflow: ellipsis;
