@@ -9,10 +9,19 @@
     {% endif %}
   <div class="bottom-ex">
     {% if product.metafields.custom.b_a_day_1_text != blank %}
-    <div class="fex" data-id="1" style="display:none;">
-      <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/DAY1.png?v=1715844267">
-      <h4>{{ product.metafields.custom.b_a_day_1_text }}</h4>
-    </div>
+      
+      {% if product.url == "super-glow-moisturizer-with-vitamin-c-v3" %}
+        <div class="fex" data-id="1" style="display:none;">
+        <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/1_4b8afcec-147b-4105-adf4-533b38461772.jpg?v=1724240489">
+        <h4>{{ product.metafields.custom.b_a_day_1_text }}</h4>
+      </div>
+      {% else %}
+      <div class="fex" data-id="1" style="display:none;">
+        <img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/files/DAY1.png?v=1715844267">
+        <h4>{{ product.metafields.custom.b_a_day_1_text }}</h4>
+      </div>
+      {% endif %}
+      
     {% endif %}
     {% if product.metafields.custom.b_a_day_15_text != blank %}
     <div class="fex" data-id="2">
