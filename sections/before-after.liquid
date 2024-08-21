@@ -7,7 +7,7 @@
     {% if product.metafields.custom.b_a_sub_heading != blank %}
     <p>{{ product.metafields.custom.b_a_sub_heading }}</p>
     {% endif %}
-  <div class="bottom-ex">
+  <div {{ product.url }} class="bottom-ex">
     {% if product.metafields.custom.b_a_day_1_text != blank %}
       
       {% if product.url == "super-glow-moisturizer-with-vitamin-c-v3" %}
