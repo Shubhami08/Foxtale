@@ -52,6 +52,46 @@
             "animation_delay": 30
           }
         },
+        "image_parent_FPQPAg": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOPjpg.jpg",
+            "image_mb": "shopify:\/\/shop_images\/LONG_BANNER_e57ab6c7-2979-40cb-8e2d-8d6996b0b542.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "shopify:\/\/products\/brightening-under-eye-cream",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "center",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#fff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222",
+            "br_bg": "#fff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f": {
           "type": "image_parent",
           "settings": {
@@ -259,6 +299,7 @@
       },
       "block_order": [
         "164602873867eb3815-0",
+        "image_parent_FPQPAg",
         "168f536a-74c5-4eea-8794-ee5d44ce4f4f",
         "cdb6a4ef-5e7c-46c0-93eb-ff1457c40c95",
         "65500d1b-7a9b-4077-85dd-8287413d749c",
