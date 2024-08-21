@@ -287,7 +287,7 @@
     "magic_trigger_count_23": 4,
     "magic_gift_product_23": "sunglass",
     "magic_link_lifetime_23": 10,
-    "magic_enable_24": false,
+    "magic_enable_24": true,
     "magic_link_key_24": "free_speaker",
     "magic_trigger_collection_24": "shop",
     "magic_trigger_count_24": 4,
