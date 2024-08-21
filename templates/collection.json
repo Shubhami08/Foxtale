@@ -111,8 +111,10 @@
         "image_rUk9y3": {
           "type": "image",
           "settings": {
-            "image_1_desktop": "shopify:\/\/shop_images\/DESKTOP_74.jpg",
-            "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_SALE_WITH_USE_CODE-05.jpg",
+            "image_1_desktop": "shopify:\/\/shop_images\/Affiliate_website_copy.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/Affiliate_mobile_copy.jpg",
+            "image_2_desktop": "shopify:\/\/shop_images\/AFFILIATE_EYE_CREAM_2-12.jpg",
+            "image_2_mobile": "shopify:\/\/shop_images\/AFFILIATE_EYE_CREAM_2-10.jpg",
             "collection_handle": "affiliate-secret-sale"
           }
         },
