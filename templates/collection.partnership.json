@@ -542,6 +542,14 @@
             "image_1_mobile": "shopify:\/\/shop_images\/B1G1_MOBILE_BANNER_1.jpg",
             "collection_handle": "timesprime-b1g1"
           }
+        },
+        "image_RKqEt9": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B2G2_DESKTOP_BANNER_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B2G2_MOBILE_BANNER_2.jpg",
+            "collection_handle": "timesprime-b2g2"
+          }
         }
       },
       "block_order": [
@@ -565,7 +573,8 @@
         "image_L9hTy4",
         "image_pLmUfH",
         "image_GkVDKM",
-        "image_FfxfMz"
+        "image_FfxfMz",
+        "image_RKqEt9"
       ],
       "settings": {
         "slider_height_mobile": "100%"
