@@ -2,3 +2,47 @@
 {% if product.metafields.custom.keybenefits != blank %}
  {{ product.metafields.custom.keybenefits }}
 {% endif %}
+
+<script>
+    
+function showSection(index) {
+        var overlayDiv = document.getElementsByClassName('t4s-close-overlay')[0];
+        var sections = document.getElementsByClassName('description-section');
+        var buttons = document.getElementsByClassName('categories');
+        var htmlElement = document.documentElement;
+    
+         overlayDiv.classList.add('is--visible');
+        htmlElement.classList.add('t4s-lock-scroll');
+        
+        
+    
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].classList.remove('description-section-active');
+          buttons[i].classList.remove('active');
+        }
+    
+        sections[index].classList.add('description-section-active');
+        buttons[index].classList.add('active');
+    
+          var modal = document.getElementById("vitaminCModal");
+          var closeBtn = document.getElementsByClassName("close-btn")[0];
+          
+              if (modal && closeBtn) {
+                console.log("It is found ::::")
+                modal.style.display = "block";
+    
+                // Close the modal when the close button is clicked
+                closeBtn.onclick = function() {
+                    modal.style.display = "none";
+                    overlayDiv.classList.remove('is--visible');
+                    htmlElement.classList.remove('t4s-lock-scroll');
+                }
+    
+                buttons[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    
+            } else {
+                console.error("Modal or close button not found.");
+            }
+      }
+        
+</script>
