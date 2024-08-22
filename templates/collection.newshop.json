@@ -593,6 +593,14 @@
           "settings": {
             "collection_handle": "phonepe-b2g2-f"
           }
+        },
+        "image_FqHwEh": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B1G1_DESKTOP_BANNER_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B1G1_MOBILE_BANNER_1.jpg",
+            "collection_handle": "timesprime-b1g1"
+          }
         }
       },
       "block_order": [
@@ -623,7 +631,8 @@
         "image_mwg7HA",
         "image_VcXYcX",
         "image_tQzyAP",
-        "image_88kBRm"
+        "image_88kBRm",
+        "image_FqHwEh"
       ],
       "settings": {
         "slider_height_mobile": "100%"
