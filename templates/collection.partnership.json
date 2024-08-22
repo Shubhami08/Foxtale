@@ -404,12 +404,6 @@
             "collection_handle": "paytm-flat-200"
           }
         },
-        "image_8T9LR7": {
-          "type": "image",
-          "settings": {
-            "collection_handle": ""
-          }
-        },
         "image_mbLQPf": {
           "type": "image",
           "settings": {
@@ -540,13 +534,20 @@
             "image_1_mobile": "shopify:\/\/shop_images\/WTFOX_sale_Flipkart_mobile.jpg",
             "collection_handle": "flipkart-buy-2-get-4"
           }
+        },
+        "image_FfxfMz": {
+          "type": "image",
+          "settings": {
+            "image_1_desktop": "shopify:\/\/shop_images\/B1G1_DESKTOP_BANNER_1.jpg",
+            "image_1_mobile": "shopify:\/\/shop_images\/B1G1_MOBILE_BANNER_1.jpg",
+            "collection_handle": "timesprime-b1g1"
+          }
         }
       },
       "block_order": [
         "5a5e4eaf-e7bf-431c-b02d-534132ded685",
         "3e054972-6a13-4eda-9144-1cacc230d754",
         "040dca29-acdb-4004-909b-5fe9000b3f52",
-        "image_8T9LR7",
         "image_mbLQPf",
         "image_j4rAdE",
         "image_diC8eN",
@@ -563,7 +564,8 @@
         "image_PRPFf4",
         "image_L9hTy4",
         "image_pLmUfH",
-        "image_GkVDKM"
+        "image_GkVDKM",
+        "image_FfxfMz"
       ],
       "settings": {
         "slider_height_mobile": "100%"
