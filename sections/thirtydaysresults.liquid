@@ -4,28 +4,7 @@
   {% endif %}
 </div>
 
-<script>
-    function showAboutTab(index) {
-      var sections = document.getElementsByClassName('about-description');
-      var buttons = document.getElementsByClassName('categories-about');
 
-      for (var i = 0; i < sections.length; i++) {
-        sections[i].classList.remove('about-description-active');
-        buttons[i].classList.remove('active');
-      }
-
-      sections[index].classList.add('about-description-active');
-      buttons[index].classList.add('active');
-
-      buttons[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-
-    }
-
-
-      document.addEventListener('DOMContentLoaded', function() {
-        showAboutTab(0);
-  });
-</script>
 
 {% schema %}
   {
